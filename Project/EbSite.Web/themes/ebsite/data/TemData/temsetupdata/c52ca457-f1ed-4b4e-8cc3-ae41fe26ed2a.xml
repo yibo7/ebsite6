@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Templates>
+  <TemName>某个投票展示页</TemName>
+  <Themes>ebsite</Themes>
+  <TempFileName>voteview.aspx</TempFileName>
+  <TemType>4</TemType>
+  <IsNoSysTem>True</IsNoSysTem>
+  <ModelClassID>00000000-0000-0000-0000-000000000000</ModelClassID>
+  <AddDate>2014/3/28 11:27:18</AddDate>
+</Templates>

@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15FBBE5E-FCF5-4A38-9077-FAD9F60F18F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EbSite.Base</RootNamespace>
+    <AssemblyName>EbSite.Base</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\libbin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\libbin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\log4\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.BLL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Control, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Control.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Data.Interface, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Data.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Data.User.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Data.User.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Entity, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=2.4.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=1.7.0.4714, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\mongodbDriver1.7\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=1.7.0.4714, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\mongodbDriver1.7\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.5.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu">
+      <HintPath>..\..\libbin\pangu\PanGu.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.HighLight">
+      <HintPath>..\..\libbin\pangu\PanGu.HighLight.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.Lucene.Analyzer">
+      <HintPath>..\..\libbin\pangu\PanGu.Lucene.Analyzer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LuceneUtils\Content.cs" />
+    <Compile Include="LuceneUtils\FieldConfig\CreateBLL.cs" />
+    <Compile Include="LuceneUtils\FieldConfig\CreateEntity.cs" />
+    <Compile Include="LuceneUtils\FieldConfig\SearchBLL.cs" />
+    <Compile Include="LuceneUtils\FieldConfig\SearchEntity.cs" />
+    <Compile Include="LuceneUtils\FieldEntity.cs" />
+    <Compile Include="LuceneUtils\IInstance.cs" />
+    <Compile Include="LuceneUtils\IndexHelp.cs" />
+    <Compile Include="LuceneUtils\KeyWordField.cs" />
+    <Compile Include="LuceneUtils\SearchModel.cs" />
+    <Compile Include="Modules\ModuleStartInit.cs" />
+    <Compile Include="AppStartInit.cs" />
+    <Compile Include="BLL\BLLBaseUser.cs" />
+    <Compile Include="Cart\CartManger.cs" />
+    <Compile Include="Cart\CartItem.cs" />
+    <Compile Include="Configs\BaseCinfigs\ConfigsControl.cs" />
+    <Compile Include="Configs\BaseCinfigs\ConfigsInfo.cs" />
+    <Compile Include="Configs\ConfigsBase\ConfigManager.cs" />
+    <Compile Include="Configs\ConfigsBase\IConfigInfo.cs" />
+    <Compile Include="Configs\ConfigsBase\ListConfigManager.cs" />
+    <Compile Include="Configs\CustomOneConfig.cs" />
+    <Compile Include="Configs\ContentSet\ConfigsControl.cs" />
+    <Compile Include="Configs\ContentSet\ConfigsInfo.cs" />
+    <Compile Include="Configs\CustumData\ConfigsControl.cs" />
+    <Compile Include="Configs\CustumData\ConfigsInfo.cs" />
+    <Compile Include="Configs\EmailSend\ConfigsControl.cs" />
+    <Compile Include="Configs\EmailSend\ConfigsInfo.cs" />
+    <Compile Include="Configs\HtmlConfigs\ConfigsControl.cs" />
+    <Compile Include="Configs\HtmlConfigs\ConfigsInfo.cs" />
+    <Compile Include="Configs\HtmlConfigs\MakeHtmlInfo.cs" />
+    <Compile Include="Configs\Model\ConfigsControl.cs" />
+    <Compile Include="Configs\PicConfigs\ConfigsControl.cs" />
+    <Compile Include="Configs\PicConfigs\ConfigsInfo.cs" />
+    <Compile Include="Configs\ReachPayConfigs\ConfigsControl.cs" />
+    <Compile Include="Configs\ReachPayConfigs\ConfigsInfo.cs" />
+    <Compile Include="Configs\SchedulTask\ConfigsControl.cs" />
+    <Compile Include="Configs\SchedulTask\ConfigsInfo.cs" />
+    <Compile Include="Configs\SysConfigs\ConfigsControl.cs" />
+    <Compile Include="Configs\SysConfigs\ConfigsInfo.cs" />
+    <Compile Include="Configs\UserSetConfigs\ConfigsControl.cs" />
+    <Compile Include="Configs\UserSetConfigs\ConfigsInfo.cs" />
+    <Compile Include="ControlPage\ContentExtBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPage\UserControlBaseListAll.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPage\CtrBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPage\SearchParameter.cs" />
+    <Compile Include="ControlPage\UserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPage\UserControlBaseListGv.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPage\UserControlBaseSave.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlPage\UserControlBaseShow.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BLL\OtherColumn.cs" />
+    <Compile Include="CustomCssJs.cs" />
+    <Compile Include="DataProfile\DbHelperBase.cs" />
+    <Compile Include="DataProfile\DbHelperCms.cs" />
+    <Compile Include="DataProfile\DbHelperCmsWrite.cs" />
+    <Compile Include="DataProfile\DbHelperUser.cs" />
+    <Compile Include="DataProfile\DbHelperUserWrite.cs" />
+    <Compile Include="DataProfile\IDbProvider.cs" />
+    <Compile Include="DataProfile\IDbProviderAccess.cs" />
+    <Compile Include="DataProfile\IDbProviderMySql.cs" />
+    <Compile Include="DataProfile\IDbProviderSqlServer.cs" />
+    <Compile Include="DataProfile\SplitPages.cs" />
+    <Compile Include="EntityAPI\DataFiled.cs" />
+    <Compile Include="EntityAPI\EmailPoolModel.cs" />
+    <Compile Include="EntityAPI\KuaiDi.cs" />
+    <Compile Include="EntityAPI\ListItemSimple.cs" />
+    <Compile Include="EntityAPI\UserGroupProfileShort.cs" />
+    <Compile Include="EntityCustom\SeoSite.cs" />
+    <Compile Include="Messaging\MSMQBase.cs" />
+    <Compile Include="Messaging\MessagingBase.cs" />
+    <Compile Include="Modules\MPUCBaseListForUserRpBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MPageForUerBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MPUCBaseShowMobile.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MPUCBaseSaveForUserMobile.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MPUCBaseListForUserRpMobile.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MPageForUerMobile.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plugin\Default\EBCacheRaw.cs" />
+    <Compile Include="Plugin\ICache.cs" />
+    <Compile Include="TimeOutBase.cs" />
+    <Compile Include="Page\ILCSBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\ManagePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plugin\Default\IpToArea.cs" />
+    <Compile Include="Plugin\IIPToArea.cs" />
+    <Compile Include="Plugin\ISearchEngine.cs" />
+    <Compile Include="Plugin\Default\SearchEg.cs" />
+    <Compile Include="MainWebServiceBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EntityAPI\ListItemModel.cs" />
+    <Compile Include="HostProfile.cs" />
+    <Compile Include="HostUser.cs" />
+    <Compile Include="HostUtils.cs" />
+    <Compile Include="HostLinkMobile.cs" />
+    <Compile Include="HostLinkPc.cs" />
+    <Compile Include="EBSiteEventArgs\CustomOrderInfo.cs" />
+    <Compile Include="EntityCustom\AlearInfo.cs" />
+    <Compile Include="EntityCustom\ClassInfo.cs" />
+    <Compile Include="LoginStatus.cs" />
+    <Compile Include="CusttomTable\Interfaces.cs" />
+    <Compile Include="CusttomTable\Providers\XmlProviders.cs" />
+    <Compile Include="CusttomTable\SerializableStringDictionary.cs" />
+    <Compile Include="CusttomTable\StringDictionaryBehavior.cs" />
+    <Compile Include="Datastore\XMLProviderBaseInt.cs" />
+    <Compile Include="Datastore\XMLProviderBase.cs" />
+    <Compile Include="EntityAPI\ShortUserInfo.cs" />
+    <Compile Include="EntityAPI\EmailManagerInfo.cs" />
+    <Compile Include="EntityAPI\MembershipUserEb.cs" />
+    <Compile Include="EntityAPI\MobileMsg.cs" />
+    <Compile Include="EntityAPI\AdminRoleInfo.cs" />
+    <Compile Include="Entity\Base.cs" />
+    <Compile Include="Entity\XmlEntityBase.cs" />
+    <Compile Include="Entity\EntityBase.cs" />
+    <Compile Include="EBSiteEvents.cs" />
+    <Compile Include="Extension\ExtensionAttribute.cs" />
+    <Compile Include="Extension\Manager\ManagerExtBase.cs" />
+    <Compile Include="Extension\Manager\ExtensionParameter.cs" />
+    <Compile Include="Extension\Manager\ExtensionSettings.cs" />
+    <Compile Include="Extension\Manager\ManagedExtension.cs" />
+    <Compile Include="Extension\Manager\Manager.cs" />
+    <Compile Include="Extension\ServingEventArgs.cs" />
+    <Compile Include="ExtWidgets\Base.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtWidgets\DataBLLBase.cs" />
+    <Compile Include="ExtWidgets\EditBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtWidgets\HomeWidgetManage\DataBLL.cs" />
+    <Compile Include="ExtWidgets\ModelCtr\DataBLL.cs" />
+    <Compile Include="ExtWidgets\ModelCtr\ModelCtrlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtWidgets\ModelCtr\ModelCtrlEditBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtWidgets\ShowBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtWidgets\WidGetEntity.cs" />
+    <Compile Include="ExtWidgets\WidgetSettings.cs" />
+    <Compile Include="ExtWidgets\WidgetsManage\DataBLL.cs" />
+    <Compile Include="ExtWidgets\WidgetsManage\WidgetBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtWidgets\WidgetsManage\WidgetEditBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtWidgets\WidgetsManage\--WidgetZone.cs" />
+    <Compile Include="Host.cs" />
+    <Compile Include="Json\JsonResponse.cs" />
+    <Compile Include="PageLink\BaseLinks.cs" />
+    <Compile Include="PageLink\ILinkTags.cs" />
+    <Compile Include="PageLink\ILinkSpecial.cs" />
+    <Compile Include="PageLink\ILinkOrther.cs" />
+    <Compile Include="PageLink\ILinkClass.cs" />
+    <Compile Include="PageLink\IBase.cs" />
+    <Compile Include="PageLink\ILinkContent.cs" />
+    <Compile Include="PageLink\IMobileHref.cs" />
+    <Compile Include="Plugin\IDataImport.cs" />
+    <Compile Include="Plugin\IDataExport.cs" />
+    <Compile Include="RegStatus.cs" />
+    <Compile Include="Modules\BLLBaseModules.cs" />
+    <Compile Include="Modules\Configs\Configs.cs" />
+    <Compile Include="Modules\Configs\ConfigsBaseInfo.cs" />
+    <Compile Include="Modules\Configs\ConfigsControl.cs" />
+    <Compile Include="Modules\--ModuleGlobalBase.cs" />
+    <Compile Include="Modules\MPUCBaseListForUserRp.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MPUCBaseSaveForUser.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MPUCBaseListForUser.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\ListItemModel.cs" />
+    <Compile Include="Modules\ModuleAttribute.cs" />
+    <Compile Include="Modules\MPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MPageForUer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MPUCBaseList.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MPUCBaseSave.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\MPUCBaseShow.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Settings.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageLink\ILink.cs" />
+    <Compile Include="Page\BasePageMobile.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plugin\IUserLoginApi.cs" />
+    <Compile Include="Plugin\Manager\PaymentUseing.cs" />
+    <Compile Include="SecurityContext.cs" />
+    <Compile Include="Static\BatchCreatManager\MakeUtils.cs" />
+    <Compile Include="Static\BatchCreatManager\ProgressBase.cs" />
+    <Compile Include="Static\BatchCreatManager\ProgressInfo.cs" />
+    <Compile Include="Static\BatchCreatManager\Special.cs" />
+    <Compile Include="Static\BatchCreatManager\TagList.cs" />
+    <Compile Include="Static\BatchCreatManager\TagSearchList.cs" />
+    <Compile Include="Static\BatchCreatManager\WebClass.cs" />
+    <Compile Include="Static\BatchCreatManager\WebContent.cs" />
+    <Compile Include="Static\HtmlPool.cs" />
+    <Compile Include="Static\OneCreatManager\Base\HtmlBase.cs" />
+    <Compile Include="Static\OneCreatManager\IndexCreate.cs" />
+    <Compile Include="Static\OneCreatManager\NewsClass.cs" />
+    <Compile Include="Static\OneCreatManager\NewsContent.cs" />
+    <Compile Include="Static\OneCreatManager\Special.cs" />
+    <Compile Include="Static\OneCreatManager\TagList.cs" />
+    <Compile Include="Static\OneCreatManager\TagSearchList.cs" />
+    <Compile Include="ThemeType.cs" />
+    <Compile Include="ThreadPoolManager.cs" />
+    <Compile Include="WebServiceBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Page\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EBSiteEventArgs\EventArgs.cs" />
+    <Compile Include="BLL\Base.cs" />
+    <Compile Include="BLL\BLLBaseCms.cs" />
+    <Compile Include="Page\MPForSpace.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\TemPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\CustomPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\MasterPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\UserPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\SearchBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BLL\BLLBaseModules.cs" />
+    <Compile Include="Page\WebPartInterfaceBase.cs" />
+    <Compile Include="Plugin\Base\InvalidConfigurationException.cs" />
+    <Compile Include="Plugin\Base\IProvider.cs" />
+    <Compile Include="Plugin\Base\--ProviderInfo.cs" />
+    <Compile Include="Plugin\IDelivery.cs" />
+    <Compile Include="Plugin\IPayment.cs" />
+    <Compile Include="Plugin\ITimerTask.cs" />
+    <Compile Include="Plugin\Factory.cs" />
+    <Compile Include="Plugin\IEmailManager.cs" />
+    <Compile Include="Plugin\IMobileSend.cs" />
+    <Compile Include="Plugin\Manager\Collectors.cs" />
+    <Compile Include="Plugin\Manager\PluginManager.cs" />
+    <Compile Include="Plugin\Manager\ProviderCollector.cs" />
+    <Compile Include="Plugin\Manager\ProviderLoader.cs" />
+    <Compile Include="EBProfileBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

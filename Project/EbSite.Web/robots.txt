@@ -1,0 +1,16 @@
+﻿User-agent: *
+Disallow:/widget/
+Disallow:/CustomPages/
+Disallow:/images/
+Disallow:/ajaxget/
+Disallow:/themes/
+Disallow:/list.aspx*
+Disallow:/content.aspx*
+Disallow:/js/
+Disallow:/Api/
+Disallow:/AdminHt/
+Disallow:/themes/
+Disallow:/themesm/
+Disallow:/*.ashx
+Disallow:/*.ashx*
+Disallow: /*?* 

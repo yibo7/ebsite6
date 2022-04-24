@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WidgetBoxStyle>
+  <StyleColorPram />
+  <StyleCssNamePram />
+  <StyleName>银白边框</StyleName>
+  <StyleTemp>&lt;div class="box-p"&gt;            
+                            &lt;div  class="box-s"&gt; 
+                            &lt;div class="box-title" &gt;{Title}&lt;/div&gt;
+                                &lt;div class="box-content" style="padding-left:20px;" &gt;
+                                   
+                                    {Content}
+
+                                &lt;/div&gt;       				    
+                		
+                           &lt;/div&gt;
+                &lt;/div&gt;</StyleTemp>
+  <ThemeID>0</ThemeID>
+  <StyleClass>0</StyleClass>
+  <id>9ef32aa3-b038-4a4b-bb93-c2adf2550c2a</id>
+</WidgetBoxStyle>

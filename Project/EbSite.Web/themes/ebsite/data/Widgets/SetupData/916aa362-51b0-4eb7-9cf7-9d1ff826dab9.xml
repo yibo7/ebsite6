@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="tem" Value="00000000-0000-0000-0000-000000000000" />
+    <DictionaryEntry Key="top" Value="10" />
+    <DictionaryEntry Key="issetid" Value="0" />
+    <DictionaryEntry Key="classitem" Value="0" />
+    <DictionaryEntry Key="drptype" Value="n" />
+    <DictionaryEntry Key="siteid" Value="0" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

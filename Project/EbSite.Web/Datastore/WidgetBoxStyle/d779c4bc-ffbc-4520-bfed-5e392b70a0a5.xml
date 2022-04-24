@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WidgetBoxStyle>
+  <StyleColorPram />
+  <StyleCssNamePram />
+  <StyleName>无标题圆角矩形</StyleName>
+  <StyleTemp>&lt;div class="ui-widget"&gt;
+				&lt;div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0pt 0.7em;"&gt; 
+					&lt;p&gt;&lt;span class="ui-icon ui-icon-info" style="float: left; margin-right: 0.3em;"&gt;&lt;/span&gt;
+				{Content}&lt;/p&gt;
+				&lt;/div&gt;
+
+			&lt;/div&gt;</StyleTemp>
+  <ThemeID>0</ThemeID>
+  <StyleClass>0</StyleClass>
+  <id>d779c4bc-ffbc-4520-bfed-5e392b70a0a5</id>
+</WidgetBoxStyle>

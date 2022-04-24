@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="listmodel" Value="1" />
+    <DictionaryEntry Key="counttitle" Value="10" />
+    <DictionaryEntry Key="temtitle" Value="" />
+    <DictionaryEntry Key="isshownum" Value="True" />
+    <DictionaryEntry Key="countimg" Value="1" />
+    <DictionaryEntry Key="temimg" Value="" />
+    <DictionaryEntry Key="drptype" Value="3" />
+    <DictionaryEntry Key="isgetsub" Value="False" />
+    <DictionaryEntry Key="classid" Value="-2" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<widgets>
+  <widget id="ead114fc-9c70-4837-be41-cbc294ec5ecb" IsNoSysTem="False" title="单行文件控件-必填-无验证">TextBox</widget>
+  <widget id="32088a7e-13c4-49da-af02-f18caf92b7ca" IsNoSysTem="False" title="单行文件控件-可为空-无验证">TextBox</widget>
+  <widget id="d5ff6180-0bb8-4665-99e1-83df57760746" IsNoSysTem="False" title="简单型HTML编辑器">HtmlBox</widget>
+  <widget id="42be44b3-0062-470e-b341-0fc474ef221c" IsNoSysTem="False" title="文章内容HTML编辑器">HtmlBox</widget>
+  <widget id="8c6b7cb7-1fa2-496e-8ebe-8e9f5182680c" IsNoSysTem="False" title="公司的人数控件">DropList</widget>
+  <widget id="690bf237-35cb-4399-b683-68465ac9f491" IsNoSysTem="False" title="是否选择框(系统使用中不要删除)">CheckBox</widget>
+  <widget id="06f03d9b-0547-4179-8d1e-942d9808e996" IsNoSysTem="False" title="点击率">TextBox</widget>
+  <widget id="df00ebc7-4295-4eda-8a40-58d1c393f11d" IsNoSysTem="False" title="首页模板列表">TemListBox</widget>
+  <widget id="57fbc60a-0fe3-4934-a97e-1d48ae9f8321" IsNoSysTem="False" title="分类页模板列表">TemListBox</widget>
+  <widget id="fccd3217-55dd-4ab8-acad-04f59d7953c2" IsNoSysTem="False" title="内容页模板列表">TemListBox</widget>
+  <widget id="f98e51b1-6bbd-453e-9551-379157afee7a" IsNoSysTem="False" title="专题页模板列表">TemListBox</widget>
+  <widget id="9f7e612e-a6fd-40c2-bb59-02f990fb05b1" IsNoSysTem="False" title="分类模型列表">ModelListBox</widget>
+  <widget id="009c1902-703f-4f2e-9f89-1d3c4c11be8c" IsNoSysTem="False" title="内容模型列表">ModelListBox</widget>
+  <widget id="050d33d0-4d7b-43c0-b625-d5beea701b4f" IsNoSysTem="False" title="用户模型列表">ModelListBox</widget>
+  <widget id="f423731b-e401-4752-a58d-117163feb6d2" IsNoSysTem="False" title="备注简介类控件">TextBox</widget>
+  <widget id="1c3e9067-989f-46a0-b4f1-23baacef103f" IsNoSysTem="False" title="首字母控件">DropList</widget>
+  <widget id="f8edab0f-fb25-4d82-ad7d-b84d94ef0434" IsNoSysTem="False" title="文章内容缩略图上传控件">Upload</widget>
+  <widget id="71579f18-a40c-42fb-aa8c-73ee820ad3f3" IsNoSysTem="False" title="分类列表控件模板">CtrTemListBox</widget>
+  <widget id="5c125a7b-d5f1-4c7a-aecd-03955c982529" IsNoSysTem="False" title="获取分类列表-带全部选项">ClassListBox</widget>
+  <widget id="8429e021-525d-401f-b39c-e9a37cb9260c" IsNoSysTem="False" title="分类模型列表-数据整理">ModelListBox</widget>
+  <widget id="6a2e4d61-0152-452a-97fc-d214bd759087" IsNoSysTem="False" title="分类模板-数据整理">TemListBox</widget>
+  <widget id="984bf82e-c06d-4f7f-9c45-7d78c336ebf6" IsNoSysTem="False" title="内容模型-数据整理">ModelListBox</widget>
+  <widget id="b7a8434a-00d5-4851-a19c-58838f13b4e3" IsNoSysTem="False" title="内容模板-数据整理">TemListBox</widget>
+  <widget id="6b5a08c3-09f4-4f03-be4d-126c2a45f422" IsNoSysTem="False" title="模型控件列表">CtrListBox</widget>
+  <widget id="327f0ac7-c9bf-49aa-a7da-8a58c6b2d56a" IsNoSysTem="False" title="内容表字段列表">DropList</widget>
+  <widget id="f0703d50-830c-48c1-b546-0d6909ad4dc1" IsNoSysTem="False" title="分类表字段列表">DropList</widget>
+  <widget id="e878b3c7-6edc-466a-95da-61cb910cec68" IsNoSysTem="False" title="控件模板-内容">CtrTemListBox</widget>
+  <widget id="bdec2947-cc6b-4e9a-abf2-56cb7d77387e" IsNoSysTem="False" title="控件模板-部件其他">CtrTemListBox</widget>
+  <widget id="1cc0fd08-8ffa-4eb6-902e-811f2253af83" IsNoSysTem="False" title="控件模板-专题">CtrTemListBox</widget>
+  <widget id="9552eabc-b186-432f-8384-f8266d986eef" IsNoSysTem="False" title="控件模板-用户">CtrTemListBox</widget>
+  <widget id="78740116-ad37-412a-bed3-988fea974d0a" IsNoSysTem="False" title="插入分类连接－模板用">ClassListBox</widget>
+  <widget id="d8705cdc-3501-43b3-9cc4-8ba9608d315b" IsNoSysTem="False" title="插入专题连接－模板用">SpecialListBox</widget>
+  <widget id="e0e3acd0-a7ba-426e-9baa-3223b763cf84" title="分类模型列表-可选择">ModelListBox</widget>
+  <widget id="6d84d961-8fba-4bcc-82fe-f0f9043f8fc5" title="分类模板列表-可选择">TemListBox</widget>
+  <widget id="af2d45eb-0e3a-4deb-bbe2-4a97c5b54dee" title="内容模型列表-可选择">ModelListBox</widget>
+  <widget id="8693da83-38f3-4fc0-9eea-714de639227c" title="内容模板列表-可选择">TemListBox</widget>
+  <widget id="aefbce9a-e742-4112-96f9-3e95dd2ae5a6" title="金额输入控件" modulid="00000000-0000-0000-0000-000000000000">TextBox</widget>
+  <widget id="5e4977f6-d14e-4b54-acdd-03c58428423f" title="性别" modulid="00000000-0000-0000-0000-000000000000">RadioButtonList</widget>
+  <widget id="e98f23d1-afa2-4bc6-9f1c-cf8e6ef37907" title="生日日期控件" modulid="00000000-0000-0000-0000-000000000000">DatePicker</widget>
+  <widget id="ccb94d75-52c7-4487-8716-0ddd80ae9f94" title="DatePicker" modulid="00000000-0000-0000-0000-000000000000">DatePicker</widget>
+  <widget id="18ecdf5b-967a-4df7-ab96-cedac7d06940" title="会员组选择" modulid="00000000-0000-0000-0000-000000000000">UserLevel</widget>
+</widgets>

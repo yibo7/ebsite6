@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>61</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/Orders.aspx</ParentUrl>
+  <FileName>ListForSend.ascx</FileName>
+  <PageName>已发货(待收货)</PageName>
+  <ParentID>5f770597-e2bd-4c19-b206-97eebadb573a</ParentID>
+  <OrderID>5</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>5db611f6-7984-49e1-95dc-e4fe8f1d1f65</id>
+</ModulePageInfo>

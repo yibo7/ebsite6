@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<OrderBoxInfo>
+  <Title>第四步选择汽车年款</Title>
+  <Tips>为了能精准报价，请选择您爱车的年款，如果是新车，一般年款为购车当年，如:2005年买的车，请选择2005</Tips>
+  <Items />
+  <DefaultParentClassID>1</DefaultParentClassID>
+  <OrderID>4</OrderID>
+  <StepType>2</StepType>
+  <Seltip>请您选择年款</Seltip>
+  <Utem>我选择的年款是#用户输入#</Utem>
+  <ValidationRule>0</ValidationRule>
+  <IsNullText>1</IsNullText>
+  <SoureTable>2</SoureTable>
+  <FieldName>carmodelinfo</FieldName>
+  <id>9</id>
+</OrderBoxInfo>

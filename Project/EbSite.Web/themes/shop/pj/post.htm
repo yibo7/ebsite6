@@ -1,0 +1,188 @@
+﻿<style>
+    td
+    {
+        font-size: 12px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .star
+    {
+        background-image: url(newicon.png);
+        background-repeat: no-repeat;
+    }
+    .star
+    {
+        width: 75px;
+        display: inline-block;
+        height: 14px;
+    }
+    .sa5
+    {
+        background-position: -109px -239px;
+    }
+    .sa4
+    {
+        background-position: -124px -239px;
+    }
+    .sa3
+    {
+        background-position: -139px -239px;
+    }
+    .sa2
+    {
+        background-position: -154px -239px;
+    }
+    .sa1
+    {
+        background-position: -169px -239px;
+    }
+    .sa0
+    {
+        background-position: -184px -239px;
+    }
+    
+    .starSt
+    {
+        float: left;
+        width: 140px;
+    }
+    .starSt2
+    {
+        clear: both;
+        float: left;
+        width: 140px;
+    }
+</style>
+<table>
+    <tr>
+        <td style=" width:80px;" align="right">
+            标题：
+        </td>
+        <td>
+            <input type="text" id="txtTitle" name="txtTitle" style="height: 20px; width: 300px;" />
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            评分：
+        </td>
+        <td>
+            <div class="starSt">
+                <input id="RdScore_0" type="radio" name="RdScore" value="5" /><label for="RdScore_0"><span
+                    class="star sa5"></span>(5分)</label>
+            </div>
+            <div class="starSt">
+                <input id="RdScore_1" type="radio" name="RdScore" value="4" /><label for="RdScore_1"><span
+                    class="star sa4"></span> (4分)</label>
+            </div>
+            <div class="starSt2">
+                <input id="RdScore_2" type="radio" name="RdScore" value="3" /><label for="RdScore_2"><span
+                    class="star sa3"></span> (3分)</label>
+            </div>
+            <div class="starSt">
+                <input id="RdScore_3" type="radio" name="RdScore" value="2" /><label for="RdScore_3"><span
+                    class="star sa2"></span> (2分)</label>
+            </div>
+            <div class="starSt2">
+                <input id="RdScore_4" type="radio" name="RdScore" value="1" /><label for="RdScore_4"><span
+                    class="star sa1"></span> (1分)</label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            使用心得：
+        </td>
+        <td>
+            <textarea name="txtExperience" rows="2" cols="20" id="txtExperience" style="height: 50px;
+                width: 300px;"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            优点：
+        </td>
+        <td>
+            <input name="txtAdvantage" type="text" maxlength="100" id="txtAdvantage" style="height: 20px;
+                width: 300px;" />
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            不足：
+        </td>
+        <td>
+            <input name="txtDefect" id="txtDefect" type="text" value=" 暂时还没有发现缺点哟！" style="height: 20px;
+                width: 300px;" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align: center;">
+            <input type="button" value=" 提 交 " onclick="toAddEvaluate()" />
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+    //获取url?号后的参数
+    function GetUrlParams(ParamName) {
+        var URLParams = new Object();
+        var aParams = document.location.search.substr(1).split('&');
+        for (i = 0; i < aParams.length; i++) {
+            var aParam = aParams[i].split('=');
+            URLParams[aParam[0]] = aParam[1];
+        }
+
+        var sValue = URLParams[ParamName];
+        if (sValue == undefined)
+            return "";
+        return sValue;
+    }
+    function getScore() {
+        var value = "";
+        var radio = document.getElementsByName("RdScore");
+        for (var i = 0; i < radio.length; i++) {
+            if (radio[i].checked == true) {
+                value = radio[i].value;
+                break;
+            }
+        }
+        return value;
+    }
+    function toAddEvaluate() {
+        var stxtTitle = document.getElementById("txtTitle").value;
+        var sCid = GetUrlParams("cid");
+        var sMK = GetUrlParams("mk");
+        var ipage = GetUrlParams("p");
+        
+        var stxtExperience = document.getElementById("txtExperience").value;
+        var stxtAdvantage = document.getElementById("txtAdvantage").value;
+        var stxtDefect = document.getElementById("txtDefect").value;
+        var sRdScore = getScore();
+        if (stxtTitle == "") {
+            alert("请添写标题！");
+            return;
+        }
+        if (stxtExperience == "") {
+            alert("请添写使用心得！");
+            return;
+        }
+        if (stxtAdvantage == "") {
+            alert("请添写优点！");
+            return;
+        }
+        if (stxtDefect == "") {
+            alert("请添写不足！");
+            return;
+        }
+        if (sRdScore == "") {
+            alert("请选择评价分数！");
+            return;
+        }
+       
+       // parent.PjAddPost(stxtTitle, sMK, stxtExperience, stxtAdvantage, stxtDefect, sCid, sRdScore);
+
+    }
+
+  
+   
+</script>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="width" Value="100" />
+    <DictionaryEntry Key="heigth" Value="300" />
+    <DictionaryEntry Key="items" Value="hhh&#xD;&#xA;ddd&#xD;&#xA;hhhh&#xD;&#xA;yyy&#xD;&#xA;ddd&#xD;&#xA;gggg&#xD;&#xA;ddddd" />
+    <DictionaryEntry Key="selectionmode" Value="1" />
+    <DictionaryEntry Key="defaultselect" Value="hhhh,ddddd" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

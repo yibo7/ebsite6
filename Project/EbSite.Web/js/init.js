@@ -1,0 +1,1 @@
+﻿var SiteConfigs ={id: 1,UrlIISPath: "/",UrlUcc: "/UccIndex.html",UrlLogin: "/login.html",UrlLostpassword: "/lostpassword.html",UrlReg: "/reg.html",UrlSearch: "/Search.html",Urluhome: "/home.html",LogOut: "/LogOut.aspx",DomainName: "http://localhost:2015",MobileIndex: "http://localhost:2015/m/mindex.html",ThemePath: "/themes/ebsite/",IsShowSql: "0"};

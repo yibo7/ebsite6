@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>94</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/ReturnManage.aspx</ParentUrl>
+  <FileName>Show.ascx</FileName>
+  <PageName>处理退换货</PageName>
+  <ParentID>ad7e3f51-6ed9-4459-b0f3-652e989033f1</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>aba63951-1e49-4d1d-997c-2daf5cb12f84</id>
+</ModulePageInfo>

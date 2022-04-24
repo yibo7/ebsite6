@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>客服聊天窗口</title>
+    <meta content="text/html; charset=gb2312" http-equiv="Content-Type">
+    <link rel="stylesheet" type="text/css" href="chatadmin.css" />
+    <script type='text/javascript' src='/js/jquery.js'></script>
+    <script type='text/javascript' src='/js/json2.js'></script> 
+    <script type='text/javascript' src='/js/customtags.js'></script>
+    <script type='text/javascript' src='allchat.js'></script>   
+    <script type="text/javascript">        var UploadPluginPath = '/js/plugin/swfupload/';</script>
+    <script src="/js/plugin/swfupload/swfupload.js" type="text/javascript"></script>
+    <script src="/js/plugin/swfupload/SWFUploadUp.js" type="text/javascript"></script>
+    <link type="text/css" href="/js/plugin/swfupload/sikn/css.css" rel="stylesheet" />
+    <script type='text/javascript' src='../js/chatsetting.js'></script>
+    <script type='text/javascript' src='chatforadmin.js'></script>
+    <script type='text/javascript' src='plugins.js'></script>
+    <script type='text/javascript' src='/js/tinybox.js'></script>
+</head>
+<body >
+    <table class="bigbox" cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="2" class="banner">
+                <div><img src="logo.png" /></div>
+                <div id="userinfo" class="userinfo">
+                  
+                </div>
+            </td>
+        </tr>
+         <tr>
+            <td style="width:100%;  background:#fff; border:1px solid #CCD5CA;border-top:none; vertical-align:top;">
+               <div class="lbox-top"></div>
+                <div class="divmsgbox" id="divmsgbox"></div>
+                 <div id="pSWFUPBox" class='pSWFUP'>
+                        <table class='SWFUP' cellpadding="0" cellspacing="0">
+                         <tr>
+                                <td colspan="2" >
+                                    上传文件格式只支持 png,gif,jpg,docx,doc,xls,txt,rar,zip
+                                </td>
+                            </tr>
+                            <tr>
+                            <td>
+                            <input name="txtMdPath$fltxtMdPath" type="text" readonly="readonly" id="txtMdPath_fltxtMdPath"   />
+                            <input type="hidden" name="txtMdPath$sptxtMdPath" id="txtMdPath_sptxtMdPath" />
+                            <input type="hidden" name="txtMdPath$oltxtMdPath" id="txtMdPath_oltxtMdPath" />
+                            <input type="hidden" name="txtMdPath$fidtxtMdPath" id="txtMdPath_fidtxtMdPath" />
+                            </td>
+                            <td class="uploadselbtn">                   
+                            <span  id="AddtxtMdPath"  ></span>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td colspan="2">
+                            <div class='SWFUPprogressBar' id="ProctxtMdPath">
+                            <span>0%</span>
+                            <div id="SWFUPprogress" style="width:1px;"></div>
+                            </div>
+                            </td>
+                            </tr>
+                        
+                         </table>
+               </div>
+                 <div id="toolbar" class="toolbar">
+                     <div class="btns" >
+                          <li title="微笑"   src="/images/bq/smile.gif" style="background-position:-15px -163px;"></li> 
+                           <li title="憨笑"  src="/images/bq/laugh.gif" style="background-position:-45px -163px;"></li> 
+                           <li title="再见" src="/images/bq/byb.gif" style="background-position:-75px -162px;"></li> 
+                           <li title="悲伤"  src="/images/bq/sad.gif" style="background-position:-105px -163px;"></li> 
+                           <li title="花" src="/images/bq/rose.gif" style="background-position:-135px -163px;"></li> 
+                           <li title="不懂"  src="/images/bq/question.gif" style="background-position:-163px -164px;"></li>
+                           <span id="changetoauto">切换导购</span> 
+                          <!-- <li style="background-position:-102px -134px;;  width:30px; padding-left:25px; line-height:25px;">保存</li> 
+                           <li style="background-position:-200px -165px;  width:50px; padding-left:25px; line-height:25px;">切换导购</li> -->
+                           <span id="btnShowOrCloseUpload" isshow="0" class="uploadfilebtn">发送图片或文件</span>
+                     </div>
+                 </div>
+                 <div class="inputbox">
+                        <textarea id="message"  cols="10"></textarea>
+                 </div>
+            </td>
+             <td style="width:350px;background:#DDE5DC; padding-left:15px;  ">
+                 <div id="plugin-tabs" class="plugin-tabs">
+                       
+                 </div>
+                 <div  class="rbox">
+                       <iframe id="chatplugin"    frameborder="0" width="100%"  height="400" onload="iFrameHeight()"  scrolling="yes" ></iframe>
+                 </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="bannerbtm">                
+                <div id="btnsend" class="btnsend">发送</div>
+                <div id="btnclose" class="btnclose">关闭</div>
+                <div id="btncustomword" class="btnclose">常用语</div>
+            </td>
+        </tr>
+    </table>
+   <!-- <div id="con43" class="custtomword" style="display: block; z-index: 3; position: absolute; top: 50%; left: 50%;
+        margin-left: -180px; margin-top: -130px; width:340px; height:200px; background-color:White; border:10px solid #878787">
+        
+       
+        
+        </div>  -->       
+</body>
+</html>

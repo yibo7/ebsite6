@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Sites>
+  <IsNoSys>False</IsNoSys>
+  <OrderID>0</OrderID>
+  <ParentID>0</ParentID>
+  <SiteName>eBSite网站管理系统5.0</SiteName>
+  <SiteFolder />
+  <IsClassContent>False</IsClassContent>
+  <IndexTemID>068160b1-d925-4a42-8b00-a519005a87c7</IndexTemID>
+  <LinkTypeContent>3</LinkTypeContent>
+  <LinkTypeClass>3</LinkTypeClass>
+  <LinkTypeOrther>3</LinkTypeOrther>
+  <LinkTypeSpecial>3</LinkTypeSpecial>
+  <LinkTypeTags>1</LinkTypeTags>
+  <MobileTheme>default</MobileTheme>
+  <AdminTheme>green</AdminTheme>
+  <PageTheme>ebsite</PageTheme>
+  <id>1</id>
+</Sites>

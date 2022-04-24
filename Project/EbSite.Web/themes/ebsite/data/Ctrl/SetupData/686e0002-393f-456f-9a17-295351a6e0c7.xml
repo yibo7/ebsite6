@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="valuerule" Value="" />
+    <DictionaryEntry Key="textrule" Value="" />
+    <DictionaryEntry Key="classnum" Value="" />
+    <DictionaryEntry Key="onchange" Value="" />
+    <DictionaryEntry Key="customitems" Value="" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>获取列表-按排序号-电脑版</Title>
+  <GetCode>&lt;%= EbSite.Base.Host.Instance.GetClassHref_OrderBy(int iID, int Index, int OrderBy)%&gt;</GetCode>
+  <Author>EbSite</Author>
+  <Demo> /// &lt;summary&gt;
+ /// 获取列表-按排序号
+ /// &lt;/summary&gt;
+  /// &lt;param name="iID"&gt;分类ID&lt;/param&gt;
+  /// &lt;param name="Index"&gt;页码&lt;/param&gt;
+  /// &lt;param name="OrderBy"&gt;排序，0默认按ID排序，1按点击率排序，2按收藏排序，3按评论数排序，4好评或星级或顶一下排序，5按发布日期排序&lt;/param&gt;
+        </Demo>
+  <id>9555114e-4ed0-4ce4-b354-a69ee05be951</id>
+</TemMethodInfo>

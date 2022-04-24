@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<OrderBoxInfo>
+  <Title>第六步输入手机号</Title>
+  <Tips>感谢您的配合，我们将以短信的方式给您报价，请留下您的手机码号，用来接收报价短信。</Tips>
+  <Items />
+  <DefaultParentClassID>0</DefaultParentClassID>
+  <OrderID>6</OrderID>
+  <StepType>100</StepType>
+  <Seltip>手机号码,如:13568987878</Seltip>
+  <Utem>恭喜，您的订单已经提交成功，在正常工作时间内(9:00-18:00)您将10分钟内收到我们的报价信息，感谢您的使用，再见。</Utem>
+  <ValidationRule>1</ValidationRule>
+  <IsNullText>1</IsNullText>
+  <SoureTable>1</SoureTable>
+  <FieldName>phonenum</FieldName>
+  <CloseNum>1</CloseNum>
+  <id>7</id>
+</OrderBoxInfo>

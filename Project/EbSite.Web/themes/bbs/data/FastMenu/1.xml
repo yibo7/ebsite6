@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<FastMenu>
+  <Title>百度搜索</Title>
+  <Url>http://www.baidu.com</Url>
+  <Target>1</Target>
+  <OrderID>1</OrderID>
+  <UserID>1</UserID>
+  <ImageUrl />
+  <ClassId>0</ClassId>
+  <ClassName />
+  <RoleId>0</RoleId>
+  <id>1</id>
+</FastMenu>

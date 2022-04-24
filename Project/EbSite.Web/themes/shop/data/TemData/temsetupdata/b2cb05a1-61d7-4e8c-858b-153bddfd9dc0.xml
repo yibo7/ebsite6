@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Templates>
+  <TemName>默认专题模板</TemName>
+  <Themes>shop</Themes>
+  <TempFileName>special.aspx</TempFileName>
+  <TemType>3</TemType>
+  <IsNoSysTem>False</IsNoSysTem>
+  <ModelClassID>00000000-0000-0000-0000-000000000000</ModelClassID>
+  <AddDate>2013/10/9 18:43:48</AddDate>
+</Templates>

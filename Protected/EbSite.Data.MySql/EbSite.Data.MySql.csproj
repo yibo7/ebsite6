@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3109BA22-46E8-4B8A-A502-4042D0D08348}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EbSite.Data.MySql</RootNamespace>
+    <AssemblyName>EbSite.Data.MySql</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\libbin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\libbin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\log4\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\log4\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Base">
+      <HintPath>..\..\libbin\EbSite.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.BLL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Core, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Data.Interface">
+      <HintPath>..\..\libbin\EbSite.Data.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Data.User.Interface">
+      <HintPath>..\..\libbin\EbSite.Data.User.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Entity">
+      <HintPath>..\..\libbin\EbSite.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\log4\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.0.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Area.cs" />
+    <Compile Include="ClassConfigs.cs" />
+    <Compile Include="ClassSetConfig.cs" />
+    <Compile Include="CusstomFileds\Content.cs" />
+    <Compile Include="CusstomFileds\Interface.cs" />
+    <Compile Include="Exam\exam_answer.cs" />
+    <Compile Include="NewsContentSplitTable.cs" />
+    <Compile Include="eborderbox\order.cs" />
+    <Compile Include="Exam\exam_questions.cs" />
+    <Compile Include="Exam\exam_questionsclass.cs" />
+    <Compile Include="Exam\exam_testresult.cs" />
+    <Compile Include="goods_visite.cs" />
+    <Compile Include="Logs.cs" />
+    <Compile Include="Invite.cs" />
+    <Compile Include="outlinks.cs" />
+    <Compile Include="RemarkSublist.cs" />
+    <Compile Include="MySqlProvider.cs" />
+    <Compile Include="Adminer\AdminUser.cs" />
+    <Compile Include="Adminer\Permission.cs" />
+    <Compile Include="Adminer\Role.cs" />
+    <Compile Include="Comm\Custom.cs" />
+    <Compile Include="FriendList.cs" />
+    <Compile Include="Menus.cs" />
+    <Compile Include="MenusForUser.cs" />
+    <Compile Include="NewsClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remark.cs" />
+    <Compile Include="--SearchCustom.cs" />
+    <Compile Include="searchword.cs" />
+    <Compile Include="Space\SpaceSetting.cs" />
+    <Compile Include="Space\SpaceTabs.cs" />
+    <Compile Include="Space\SpaceTabWidget.cs" />
+    <Compile Include="Space\SpaceThemeClass.cs" />
+    <Compile Include="Space\SpaceThemes.cs" />
+    <Compile Include="SpecialClass.cs" />
+    <Compile Include="SpecialNews.cs" />
+    <Compile Include="spiderlog.cs" />
+    <Compile Include="TagKey.cs" />
+    <Compile Include="TagRelateClass.cs" />
+    <Compile Include="TagRelateNews.cs" />
+    <Compile Include="TagRelateUser.cs" />
+    <Compile Include="Tool_ChatList.cs" />
+    <Compile Include="uploadfiles.cs" />
+    <Compile Include="UserNews.cs" />
+    <Compile Include="User\DbRoleProvider.cs" />
+    <Compile Include="User\RecentVisitors.cs" />
+    <Compile Include="User\--SecUtility.cs" />
+    <Compile Include="User\UserGroupProfile.cs" />
+    <Compile Include="User\UserProfile.cs" />
+    <Compile Include="Vote\vote.cs" />
+    <Compile Include="Vote\voteclass.cs" />
+    <Compile Include="Vote\voteitem.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

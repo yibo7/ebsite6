@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="uploadmodel" Value="1" />
+    <DictionaryEntry Key="txtallowtype" Value="rar,zip,mp3,mp4" />
+    <DictionaryEntry Key="txtallowsize" Value="1024" />
+    <DictionaryEntry Key="savefolder" Value="metal" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>20</Permission>
+  <ModuleID>4e0edb7e-1b30-41ad-9f74-d63c80458c35</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/wenda/data/Modules/ModuleList/wenda/AdminPages/UserHelp.aspx</ParentUrl>
+  <FileName>UserHelpShow.ascx</FileName>
+  <PageName>用户查看</PageName>
+  <ParentID>8e62fafd-d79e-4c9f-abfa-b874afc8abc5</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>63f6bee2-15bf-4f34-8620-68a35783df9f</id>
+</ModulePageInfo>

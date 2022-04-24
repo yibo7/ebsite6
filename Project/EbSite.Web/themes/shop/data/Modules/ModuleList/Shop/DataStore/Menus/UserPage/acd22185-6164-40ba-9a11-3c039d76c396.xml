@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl />
+  <FileName>/themes/shop/data/Modules/ModuleList/shop/UserPages/OrderManage.aspx</FileName>
+  <PageName>我的交易记录</PageName>
+  <ParentID>00000000-0000-0000-0000-000000000000</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>acd22185-6164-40ba-9a11-3c039d76c396</id>
+</ModulePageInfo>

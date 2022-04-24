@@ -1,0 +1,23 @@
+﻿{
+  
+  "ReportName": "用户日增长",
+  "IcoPath": "/images/Menus/2011050909131288_easyicon_cn_16.png",
+  "OrderId": 3,
+  "Ctrs": [
+    {
+      "Text": "开始时间",
+      "Value": "c2c71bbf-fd5e-4f68-ac5d-3b5c1b8fc79f"
+    },
+    {
+      "Text": "结束时间",
+      "Value": "bea5bcc0-41bf-4ba8-bcae-f88c7151fded"
+    }
+  ],
+  "QuerySql": "SELECT DATE_FORMAT(CreateDate,'%Y-%m-%d') 日期,COUNT(*) 用户数量 FROM eb_users WHERE CreateDate BETWEEN DATE_FORMAT('c2c71bbf-fd5e-4f68-ac5d-3b5c1b8fc79f','%Y-%m-%d') AND DATE_FORMAT('bea5bcc0-41bf-4ba8-bcae-f88c7151fded','%Y-%m-%d') GROUP BY 日期 ORDER BY 日期 DESC",
+  "DefaultSql": "SELECT DATE_FORMAT(CreateDate,'%Y-%m-%d') 日期,COUNT(*) 用户数量 FROM eb_users WHERE CreateDate BETWEEN DATE_FORMAT(DATE_ADD(now(),INTERVAL -30 DAY),'%Y-%m-%d') AND DATE_FORMAT(DATE_ADD(now(),INTERVAL -1 DAY),'%Y-%m-%d') GROUP BY 日期 ORDER BY 日期 DESC",
+
+  "PermissionId": "322",
+  "DalType": 1,
+  "DefaultTips": "默认载入最近30天数据",
+   "ShowType": 0
+}

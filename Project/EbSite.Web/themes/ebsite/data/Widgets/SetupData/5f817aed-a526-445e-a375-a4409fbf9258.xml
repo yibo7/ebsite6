@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="txtcount" Value="/api/jsontext" />
+    <DictionaryEntry Key="endc" Value="0" />
+    <DictionaryEntry Key="txttem" Value="00000000-0000-0000-0000-000000000000" />
+    <DictionaryEntry Key="postget" Value="GET" />
+    <DictionaryEntry Key="txtjsonurl" Value="http://localhost:2015/api/jsontext" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

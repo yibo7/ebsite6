@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>30</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/Gift.aspx</ParentUrl>
+  <FileName>AddGift.ascx</FileName>
+  <PageName>赠品添加</PageName>
+  <ParentID>0bcded68-1ba7-43cc-9bf0-d1fbb1d5436f</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>c6b3db56-6e5e-4e22-9677-df37fb2589df</id>
+</ModulePageInfo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="ptype" Value="1" />
+    <DictionaryEntry Key="pitems" Value="11,10,55,56" />
+    <DictionaryEntry Key="specialid" Value="11" />
+    <DictionaryEntry Key="subtem" Value="a3948d63-1223-41c2-ad0b-330a6ff47eef" />
+    <DictionaryEntry Key="tem" Value="6c3ea9e6-ddb5-47ab-ae6d-d007ad7cf1dd" />
+    <DictionaryEntry Key="stop" Value="10" />
+    <DictionaryEntry Key="ptop" Value="" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

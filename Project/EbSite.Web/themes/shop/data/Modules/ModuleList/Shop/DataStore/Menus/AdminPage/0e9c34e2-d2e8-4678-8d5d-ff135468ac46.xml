@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/Orders.aspx</ParentUrl>
+  <FileName>ListForNew.ascx</FileName>
+  <PageName>新订单(待审核)</PageName>
+  <ParentID>5f770597-e2bd-4c19-b206-97eebadb573a</ParentID>
+  <OrderID>2</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>0e9c34e2-d2e8-4678-8d5d-ff135468ac46</id>
+</ModulePageInfo>

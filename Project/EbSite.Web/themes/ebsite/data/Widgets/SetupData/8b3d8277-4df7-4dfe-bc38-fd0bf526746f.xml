@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="chatonline" Value="/ly.aspx" />
+    <DictionaryEntry Key="isclose" Value="True" />
+    <DictionaryEntry Key="float" Value="right" />
+    <DictionaryEntry Key="themes" Value="orange" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

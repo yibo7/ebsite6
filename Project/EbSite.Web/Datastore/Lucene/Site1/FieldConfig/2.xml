@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CreateEntity>
+  <FieldName>ClassID</FieldName>
+  <FieldType>System.Int32</FieldType>
+  <SearchType>3</SearchType>
+  <SearchTypeName>不可搜索但能存取,如Url</SearchTypeName>
+  <id>2</id>
+</CreateEntity>

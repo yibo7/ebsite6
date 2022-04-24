@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="txtcount" Value="10" />
+    <DictionaryEntry Key="ordertype" Value="1" />
+    <DictionaryEntry Key="txttem" Value="00000000-0000-0000-0000-000000000000" />
+    <DictionaryEntry Key="datatype" Value="0" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

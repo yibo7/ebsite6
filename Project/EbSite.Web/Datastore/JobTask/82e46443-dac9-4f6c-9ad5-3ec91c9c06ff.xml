@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<JobTask>
+  <IsNoSys>True</IsNoSys>
+  <TaskName>定期添加内容到专题</TaskName>
+  <TaskParam />
+  <CronExpressionString>0 * * * * ?</CronExpressionString>
+  <CronRemark />
+  <AssemblyName>api/tospecial</AssemblyName>
+  <ClassName />
+  <RunType>0</RunType>
+  <Status>1</Status>
+  <CreatedTime>2016/12/15 17:46:08</CreatedTime>
+  <ModifyTime>2016/12/15 18:19:56</ModifyTime>
+  <RecentRunTime>2022/4/24 10:38:00</RecentRunTime>
+  <NextFireTime>2022/4/24 0:52:00</NextFireTime>
+  <Remark>每分钟添加内容到专题</Remark>
+  <IsDelete>0</IsDelete>
+  <RunUrl>http://localhost:2015/api/tospecial?key=82e46443-dac9-4f6c-9ad5-3ec91c9c06ff&amp;tk=a48f47443ba023a4530ac15f9786b44c</RunUrl>
+  <LastRezult>任务启动于:2022/4/24 10:38:49并且成功进入排期队列</LastRezult>
+  <id>82e46443-dac9-4f6c-9ad5-3ec91c9c06ff</id>
+</JobTask>

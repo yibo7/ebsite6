@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<OrderBoxInfo>
+  <Title>第三步选择汽车排量</Title>
+  <Tips>不一样的排量对应的汽车配件也不一样，所以请您认真选择您的汽车排量</Tips>
+  <Items />
+  <DefaultParentClassID>2</DefaultParentClassID>
+  <OrderID>3</OrderID>
+  <StepType>2</StepType>
+  <Seltip>请您选择排量</Seltip>
+  <Utem>我选择的排量是#用户输入#</Utem>
+  <ValidationRule>0</ValidationRule>
+  <IsNullText>1</IsNullText>
+  <SoureTable>2</SoureTable>
+  <FieldName>carmodelinfo</FieldName>
+  <id>10</id>
+</OrderBoxInfo>

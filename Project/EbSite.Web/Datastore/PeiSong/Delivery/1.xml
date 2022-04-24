@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<PsDelivery>
+  <ModeName>顺丰快递</ModeName>
+  <PsCompanyIds>1</PsCompanyIds>
+  <ShippingTemplatesId>1</ShippingTemplatesId>
+  <Content>顺丰速运（集团）有限公司，初期的业务为顺德与香港之间的即日速递业务，随着客户需求的增加，顺丰的服务网络延伸至中山、番禺、江门和佛山等地。在1996年，随着客户数量的不断增长和国内经济的蓬勃发展，顺丰将网点进一步扩大到广东省以外的城市。至2006年初，顺丰的速递服务网络已经覆盖国内20多个省及直辖市，101个地级市，包括香港地区，成为中国速递行业中民族品牌的佼佼者之一。2011年10月8日起，对部分线路快件价格进行小幅调整，平均调幅2%-4%。 </Content>
+  <IsCod>True</IsCod>
+  <IsPercent>True</IsPercent>
+  <UseMoney>15</UseMoney>
+  <id>1</id>
+</PsDelivery>

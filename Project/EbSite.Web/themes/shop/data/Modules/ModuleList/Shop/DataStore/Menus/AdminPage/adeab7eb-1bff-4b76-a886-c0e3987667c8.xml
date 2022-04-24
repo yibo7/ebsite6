@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>45</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/Promotions.aspx</ParentUrl>
+  <FileName>FullDiscount.ascx</FileName>
+  <PageName>满额打折</PageName>
+  <ParentID>488df078-d362-4c1a-8519-5b9b8c31c6df</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>adeab7eb-1bff-4b76-a886-c0e3987667c8</id>
+</ModulePageInfo>

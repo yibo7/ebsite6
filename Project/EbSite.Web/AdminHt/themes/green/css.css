@@ -1,0 +1,539 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+*{ margin:0; padding:0; }
+body
+{
+	MARGIN: 0px ;
+	SCROLLBAR-FACE-COLOR: #dee3e7;
+	FONT-SIZE: 12px;
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR: #dee3e7;
+	COLOR: #000000;
+	SCROLLBAR-3DLIGHT-COLOR: #d1d7dc;
+	SCROLLBAR-ARROW-COLOR: #006699;
+	SCROLLBAR-TRACK-COLOR: #efefef;
+	FONT-FAMILY: 宋体;
+	SCROLLBAR-DARKSHADOW-COLOR: #98aab1;
+	font-weight: normal;
+	font-size: 12px;
+	word-spacing: normal;
+	text-transform: none;
+	font-family: Verdana, Helvetica, sans-serif;
+	letter-spacing: normal;
+	color:#000000;
+	background:#F6F6F6 !important;
+}
+
+/*让图标360旋转*/
+@keyframes rotating{
+    from{transform:rotate(0)}
+    to{transform:rotate(360deg)}
+}
+.spinner{display:inline-block;-webkit-animation:rotation 1s linear infinite;-o-animation:rotation 1s linear infinite;animation:rotating 1.2s linear infinite}
+/*end*/
+
+.table {
+    border: solid 1px #18547D
+}
+a:link, a:visited {
+    color: #656D77;
+    text-decoration: none;
+}
+a:hover, a:active {
+	color:#333;
+	text-decoration:underline;
+}
+img{ border:0px;}
+
+a{ cursor:pointer;}
+/* GridView 列表*/
+.GridView
+{	width:100%;
+	background:#ffffff;
+	border:solid 1px #D8E0E8;
+
+
+}
+.GridViewHeader
+{
+	text-align:center;
+	font-weight:bold;
+	background-image:url(grid3-hrow.gif);
+}
+.GridView tr
+{
+	height:28px;
+
+}
+.GridView tr:hover
+{
+	background:#F1F2F4;
+
+}
+.GridView tr td
+{
+	text-align:center!important;
+	height:35px;
+	line-height:35px;
+	font-size:14px;
+
+}
+.GridView tr td:first-child
+{
+	width:30%;
+	text-align:left!important;
+	padding-left:5px;
+
+}
+.GridView th{text-align:center!important;}
+.AlternatingRow
+{
+	background-color:#FFF9E6;
+}
+
+.gvfisrtTD
+{
+	text-align:left!important;
+
+}
+.GridMouseOver
+{
+	background:#E8D18B;
+}
+.GridMouseOut
+{
+}
+/* end GridView 列表*/
+
+.mt10{margin-top:10px;}
+.mr10 {
+    margin-right: 10px;
+}
+.ml10 {
+    margin-right: 10px;
+}
+.pd10{padding:10px;}
+
+/*top*/
+#line{padding-top: 20px;color: #fff;margin-left: 180px; font-size: 14px;
+	line-height: 15px;
+	padding: 17px 14px 17px 13px;
+}
+    #line span.current {
+        padding: 17px 14px 17px 13px;
+        background: #FF7142;
+        color: #FFFFFF;
+    }
+#line span{
+	padding: 17px 14px 17px 13px;
+}
+#line span:hover{
+	/*padding: 17px 0 17px 0;*/
+	padding: 17px 14px 17px 13px;
+	background: #27A6E6;
+}
+/*end top*/
+
+
+
+#PagesMain
+{
+	width:100%;
+}
+#PagesMain  div
+{
+	text-align:center;
+
+}
+
+table td{
+	font-size:12px; height:40px;
+}
+/*---OA皮肤样式---*/
+
+#top_logo {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    top: 0px;
+    background: #008EE0;
+}
+#top_logo #logo {
+	background-image: url(logo.png);
+	background-repeat: no-repeat;
+	height:28px;
+	width:45px;
+	position: absolute;
+	top: 8px;
+	left: 20px;
+	padding-left:120px;
+	padding-top:8px;
+}
+
+
+#top_logo #logoRight {
+	height: 40px;
+	position: absolute;
+	text-align:right;
+	top: 10px;
+	right: 10px;
+	color:Green;
+}
+#top_menu {
+	background: #A84819;
+	height: 36px;
+	width: 100%;
+	text-align: center;
+	line-height: 36px;
+}
+#MenuBox {
+	text-align:left;
+	height:36px;
+	width:100%;
+}
+#tbmemus{ margin-bottom: -5px;}
+#MenuBox .Item { cursor:pointer; }
+#MenuBox .Item img {
+	vertical-align:middle;
+	margin-right:5px;
+}
+#MenuBox .Item div {
+	margin-top:2px;
+	display:block;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	text-decoration:none;
+	background: #2664A4;
+	margin-left: 5px;
+}
+
+#MenuBox .Item div span {
+	padding:0 10px 0 10px;
+	display:block;
+	_padding-top:8px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+
+#MenuBox .Item div.hover
+{
+	background: #EBF0F5;
+
+}
+#MenuBox .Item div.hover  span{
+	color: #21841D;
+}
+
+.itemMainmenuSpirt {
+	background-image: url(spirtlines.gif);
+	width:8px;
+	background-repeat: no-repeat;
+	background-position: center 8px;
+}
+.top_sub_menu {
+	height: 35px;
+	width: 100%;
+	background:#EBF0F5;
+	cursor:default;
+	border-bottom: 1px solid #DEDEDE;
+}
+.returnIndex {
+	height: 35px;
+	width: 96px;
+	text-align: center;
+	line-height: 33px;
+
+}
+.exitSystem {
+	height: 35px;
+	width: 95px;
+	text-align: center;
+	line-height: 33px;
+}
+#tree_menu img { vertical-align:middle; }
+.treeview_focus {
+	background-image: url(index_blue_menu_05.gif);
+	clear:none;
+	height:29px;
+	text-indent: 10px;
+	width:100%;
+	cursor:pointer;
+}
+.treeview_unfocus {
+	background: #EBEBEB;
+	clear:none;
+	height:35px;
+	text-indent: 10px;
+	width:100%;
+	cursor:pointer;
+	border-bottom:#D6D6D6 1px solid;
+}
+.treeview_unfocus2 {
+	background-image: url(index_blue_menu_06.gif);
+	clear:none;
+	height:35px; line-height:35px;
+	text-indent: 10px;
+	width:100%;
+	font-weight:bold;
+	text-align:center;
+	cursor:pointer;
+}
+
+.BasicinfoShow {
+	margin-top:10px;
+	display:block;
+	margin-top:6px;
+}
+.BasicinfoShow img {
+	vertical-align:middle;
+	margin-right:5px;
+}
+.BasicinfoShow ul li {
+	height:24px;
+	line-height:24px;
+}
+.BasicinfoShow ul li a {
+	display:block;
+	padding-left:20px;
+	height:24px;
+	line-height:24px;
+	_padding-top:4px;
+}
+.BasicinfoShow .menulines {
+	background:url(/images/menulines.gif) no-repeat;
+	height:4px;
+	width:100%;
+}
+.BasicinfoHide { display:none; }
+.BasicinfoShow li a:hover {
+	background:url(f1.gif) no-repeat;
+	text-decoration:none;
+}
+.selectThisItemsStyle {
+	background:url(f1.gif) no-repeat;
+	text-decoration:none;
+}
+.sp_m_over { background-image: url(/images/collapsebarOver.gif); }
+.resizeBar {
+	background-image:url(resizeBar.gif);
+	width:8px;
+	cursor:pointer;
+}
+.top_splitline{background:url(/images/split_topleft.gif) no-repeat 1 2;width:8px;display:inline-table;}
+
+.Themes{float:right; margin-top:-28px; cursor:pointer;}
+.Themes td
+{
+	border:solid 1px #fff;  height:10px; width:10px;
+
+}
+
+
+/*后台登录*/
+
+
+.adminlogin_banner {
+	height: 40px;
+	width: 100%;
+	top: 0px;
+	/*background-image: url(wd-header.png);*/
+	background: #092130;
+	border-bottom:1px solid #12405E;
+}
+.adminlogin_banner #logo {
+	background-image: url(logo.svg);
+	background-repeat: no-repeat;
+	height: 34px;
+	width:120px;
+	position: absolute;
+	top: 8px;
+	left: 20px;
+	padding-left:120px;
+	padding-top:8px;
+}
+
+.adminlogin_banner #logoRight {
+	height: 40px;
+	position: absolute;
+	text-align:right;
+	top: 10px;
+	right: 10px;
+	color:Green;
+}
+
+
+.loginbox-p{border:solid 1px #18547D; text-align:center; vertical-align:middle; color:#ffffff;
+	background:#0B2638; height:auto; width:400px; margin:20px 0px 10px 0px;}
+.loginbox-s{text-align:left; padding-left:10px; padding-right:10px; padding-bottom:10px;
+	margin-top:8px; font-weight:bold;}
+.loginbox-title
+{   height:20px;
+	text-align:left; padding-left:10px;  margin-top:8px; font-weight:bold;
+}
+.loginbox-content
+{
+	border:solid 1px #003C78;
+	background:#E1EAF2;padding-bottom:10px;color:#52514E;
+}
+
+.adminlogin_loginform{
+	width:100%; height:500px;padding-top: 150px;
+	background:#0F344D;
+	text-align:center!important;
+
+}
+
+/*工具条*/
+img{ border: 0pt; }
+
+
+#vista_toolbar {
+	float:left;
+	font:normal 12px 'Trebuchet MS','Arial';
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+
+#vista_toolbar ul {
+	background:#EBEBEB;
+	float:left;
+	line-height:32px;
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+
+#vista_toolbar li {
+	display:inline;
+	padding:0;
+}
+#vista_toolbar li input {
+	border:1px solid #B2AEAD;
+	height:19px;
+	margin-top:5px;
+}
+#vista_toolbar li select {
+	border:1px solid #B2AEAD;
+	margin-top:6px;
+}
+
+#vista_toolbar a {
+	color:#000; /* need because it will use default link color */
+	float:left;
+	padding:0 3px 0 3px; /* left 3 px because of left.png image */
+	text-decoration:none;
+}
+
+#vista_toolbar a span {
+	display:block;
+	float:none;
+	padding:0 3px 0 2px;
+}
+
+#vista_toolbar a span img {
+	border:none;
+	margin:8px 4px 0 0;
+}
+
+/* show picture when mouse over link */
+#vista_toolbar a:hover{
+	background: url(btnleft.png) no-repeat left center;
+}
+
+#vista_toolbar a:hover span {
+	background:url(btnright.png) no-repeat right center;
+}
+
+#vista_toolbar a.right {
+	float:right; /* for help button - just add class "right" ->  <a class="right"... */
+}
+
+#vista_toolbar .bline
+{
+	background-image:url(line.gif);
+	width:2px;
+	height:22px;
+	margin-top:5px;
+}
+/*end 工具条*/
+.main-title {
+    background: #EBEBEB;
+    padding: 8px;
+    border-bottom: 1px solid #dadada !important;
+}
+/*box*/
+.boxheader h3 {
+	/*text-align: center;*/
+	text-align: left !important;
+	font-size: 20px !important;
+}
+.boxheader{
+	width: 100%!important;
+	border-bottom: 1px solid #dadada!important;
+	padding-bottom:5px;padding-top:8px;
+}
+ 
+ .cbrowbox-tab {
+        border-left: 1px solid #dadada !important;
+        border-right: 1px solid #dadada !important;
+        border-bottom: 1px solid #dadada !important;
+        background: #ffffff !important;
+        padding: 8px;
+    }
+.cbrowbox {
+    width: 98% !important;
+    margin: 20px auto 0 !important;
+    border: 1px solid #dadada !important;
+    background: #ffffff !important;
+    border-radius: 5px
+}
+.form-group{
+	width: 100%!important;
+	height:100px!important;
+	border-bottom: 1px dashed #dadada!important;
+}
+.content{
+	margin-top: 30px!important;
+	padding-bottom: 50px!important;
+}
+/*end box*/
+/*对bootstar的扩展*/
+.dropdown-menu {
+	background-color: #e5f7ff !important;
+}
+.btn-toolbar{background: #EEEEEE;height: 50px; padding-top: 8px;}
+.btn-group{margin-left: 10px;}
+.btn-primary{background: #19B2FF !important;color: #105191 !important;}
+.headertips {
+    /*height: 58px !important;*/
+}
+.form-father1 {
+    width: 130px;
+    float: left;
+    line-height:30px;
+}
+.form-father2 {
+    float: left;
+}
+.form-group1{
+    overflow:hidden;
+    padding:8px;
+}
+.table{border:none;}
+.pagination li{
+	display:inline-block;
+	padding:8px;
+	border:solid 1px #dee3e7;
+	margin-left:5px;
+	min-width:37px;
+	text-align:center;
+}
+.pagination li :hover {
+ background-color: deepskyblue;
+}
+.pagination .active{
+	background-color:deepskyblue;
+} 

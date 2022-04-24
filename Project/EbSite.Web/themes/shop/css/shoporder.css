@@ -1,0 +1,273 @@
+body,div,ul,li,dl,dt,dd,form{ margin:0; padding:0; font-size:12px; list-style:none; background:none; border:0}
+a{ text-decoration:none; color:#000000}
+a img{ border:0}
+.clear{ clear:both}
+.top{ height:167px; background:url(images/top_bg1.jpg) repeat-x; overflow:hidden}
+.top_bg3{background:url(images/top_bg3.png) repeat-x;overflow:hidden; width:100%}
+.container{ width:990px; margin:0 auto}
+.container3{ width:100%;margin:0 auto;}
+.top_part1{ height:25px;}
+.rukou{ width:245px; float:left; height:20px;}
+.rukou li{ float:left}
+.rukou li a{ display:block; width:100px; float:left;  height:25px; float:left; line-height:25px; text-align:center; border-right:solid #E1E2E5 1px; color:#666666}
+.cur{background:#ECECED; border-left:solid #E1E2E5 1px }
+.denglu{ width:300px; text-align:right; padding-top:2px;}
+.denglu li{float:left; padding-left:7px;}
+.denglu li a{color:#076FA2;border-right:dotted #B6B6B6 1px; }
+
+.orther{ width:350px; float:right; margin-right:5px;}
+.orther ul li{ height:12px; width:73px; float:left; background:url(images/icon1.jpg) no-repeat 60px 0; padding-left:7px; border-right:solid #B6B6B6 1px; margin-top:6px;}
+.orther ul li.user{ width:auto; background:none}
+.orther ul li.kefu{ width:53px; background:none}
+.orther ul li.weibo{ background:url(images/icon2.jpg) no-repeat 7px 0px; border:0; height:16px; margin-top:4px; line-height:18px; overflow:hidden; text-align:right; float:right}
+.orther ul li a{ color:#5C5C5C}
+.recinfo{text-align:left;margin-left:20px; display:none;}
+.recinfo tr td b{color:red;}
+.orderRemakInfo{width:390px; height:50px;margin-left:10px; color:#CCCCCC; border:1px solid #CCCCCC; padding:3px;}
+.TextBoxDefault
+{
+	font-family:Arial, Helvetica, sans-serif; background-color: #fff; 
+	padding:0.2em 0;border:1px double #ccc; height:23px; line-height:23px;
+}    
+.errmsgdefault{ display:none; float:right;} 
+        
+td{ height:30px; line-height:30px;}
+
+.gbpic{background:url(order/jg.png) no-repeat 0 0;}
+
+
+.infook{width:21px;height:22px;background-position:-443px -7px; float:right;}
+.infono{width:21px;height:22px;background-position:-470px -7px;float:right; }
+
+.optionitems{background:#FFF5EB; border:1px solid #E8D6C3; padding:5px; display:none;}
+
+.topbg{background:url(order/bg1.png) repeat-x; height:25px;}
+
+.topbgl{ float:left; width:200px;}
+.topbgl ul li{ height:20px; width:65px; float:left; text-align:left; margin-top:6px;}
+.topbgl ul li a{ color:#5C5C5C}
+.starico{width:14px;height:16px;background-position:-417px -12px;text-align:right; float:left;line-height:20px;}
+
+ 
+.delogo{ float:left; height:90px; margin-left:0px;}
+.topbnrr{width:452px;height:29px;background-position:-13px -457px; float:right; margin-top:52px;}
+
+
+.center_x{ border:#CCCCCC solid 1px;  width:990px; overflow:auto; margin:0 auto; margin-bottom:60px; }
+.linbg{ background-color:#F3F3F3; border-bottom:#CCCCCC solid 1px; height:30px; padding-left:10px;}
+.linbg li{ line-height:28px;}
+.linbg li a{ color:#D67F1A;} 
+.raone{  margin-left:30px; margin-top:20px;}
+.raone li{font-size:12px; height:25px; color:#333333; }
+
+.tabinfo{ padding:10px;overflow:hidden; width:900px;}
+.tablidiv{float:left; width:120px; text-align:right; font-size:14px; }
+.tabinfo ul li{color:#333333;float:left; width:800px; height:40px;}
+.tabinfo ul li dd{ float:left; width:120px; text-align:right; font-size:14px; }
+.tabinfo ul li dl{ text-align:left; width:750px;}
+.tabinfo ul li dl img{ margin-right:5px; }
+.tabinfo ul li dl input{ margin-right:10px;} 
+
+.tabinfospan{color:#666666; font-size:14px; margin-left:0px;}
+.inp_dl{width:230px; height:22px; border:#E3E9EF  solid 1px; border-top-color:#ABADB3;} 
+.inp_dl2{width:230px; height:22px; border:#C7E2F1  solid 1px; border-top-color:#5794BF;}
+.inp_wid170{ width:170px;}
+.inp_wid300{ width:300px; background-color:#FFFFFF}
+
+.btn_save{width:152px;height:39px;background-position:-289px -295px; margin-left:35px;}
+.btnsaver{ line-height:40px; color:#666666;}
+
+.ratwo{ height:25px;}
+.ratwo li{ color:#CF7103;}
+.ratwo span{ color:#CCCCCC;}
+
+.ratre li{ color:#CF7103;}
+.ratre span{ color:#D52508;}
+
+.tabptkd{border:#EDD28B solid 1px; background-color:#FFFDEE; overflow:hidden; color:#A8A8A8; margin-left:15px; margin-bottom:15px; display:none;}
+.tabptkd li{line-height:28px; margin-left:10px;}
+
+.tabsfkd{ margin-left:16px; margin-top:10px;}
+.tabsfkd li{ margin-left:30px;color:#CCCCCC; margin-top:5px;}
+.tabsfkd li span{color:#FF6600;}
+
+.otherfree{outline:none;color:#246BA7; line-height:20px;}
+
+.tablist{border:#E6D5B7 solid 1px; overflow:hidden;width:888px; margin-top:30px; margin-left:60px;}
+
+.tablistbg{background:url(order/bg2.png) no-repeat; height:42px;}
+.tablistone{ width:auto;}
+.tablistone li{ float:left;text-align:center; line-height:30px; font-size:14px}
+.tablistone li a{ color:#246BA7; }
+
+
+.tablist107{width:107px;}
+.tablist519{width:519px;}
+.tablist300{width:230px;}
+.tablist162{width:161px;}
+.tablist101{width:101px;}
+
+.tabbill{ width:890px; margin-bottom:40px; padding-left:30px; padding-top:25px; } 
+.billleft{float:left; width:500px;}
+ 
+.billone{ margin-bottom:15px;}
+.billone a{color:#246BA7; }
+.billone li{ margin-left:5px;}
+
+.radbill{ height:25px;}
+.radbill li{ float:left; }
+.fptitle{ margin-left:10px;}
+
+.billtwo{ border:#CCCCCC solid 1px; background-color:#FAFAFA; width:456px; overflow:hidden; margin-top:40px; margin-bottom:60px;}
+.billtwo input{ margin-left:20px;}
+.billtwo span{ line-height:20px; margin-left:2px;}
+.billtwoline1{ height:20px; padding-top:8px; padding-left:5px; padding-right:3px;}
+.billtwoline1 li{ float:left; height:20px; line-height:20px; width:160px;}
+
+.billright{ float:right;}
+.tabproinfo { width:200px; margin-left:30px;}
+.tabproinfo li{ color:#898989; line-height:24px;}
+.tabprotitle{float:left; width:110px; text-align:right;} 
+.tabpro_1{line-height:35px; color:#990000; font-weight:bold; font-size:14px;}
+.btnsave{background:url(order/btn.png) no-repeat; width:241px; height:51px; float:left; margin-top:10px; margin-bottom:10px; border:none; cursor:pointer;}
+
+
+.color63{ color:#333333;}
+.color6c{ color:#CCCCCC;}
+.color66{ color:#666666;}
+.color654{ color:#545454;}
+.colorc0{color:#CC0000; font-size:14px}
+.color00a{color:#379309; font-size:18px; font-family:"黑体"}
+.magb10{ margin-bottom:10px;}
+
+
+.orderok{ background-color:#F6FDF6; height:100px; padding-left:30px; padding-top:30px;}
+.orinfook li{ line-height:30px; letter-spacing:1px;}
+.orokimg{width:49px;height:44px;background-position:-390px -38px; float:left; margin-right:10px;}
+.orline{border-right:solid #B6B6B6 1px; margin-right:10px; margin-left:10px;}
+
+
+.myshopcart{width:440px;height:28px;background-position:-3px -6px; float:right; margin-top:53px;}
+
+.zfbank{width:895px; margin-left:40px; margin-bottom:10px;}
+.zfbaktitle{ margin-top:25px;}
+.zfbaktitle li{ line-height:18px; font-family:"新宋体"; margin-bottom:18px;}
+.zfbaktitle li span{ color:#005A9D}
+.syhelp{width:18px;height:19px;background-position:-450px -12px; float:left; }
+
+
+.bankimg{ border:#FF6600 solid 1px; overflow:hidden; background-color:#FFFDEE; }
+.bakimtitle{ background-color:#FFFFFF; border-bottom:1px solid #EDD28B; height:28px;}
+.bakimtitle li{ border-right:#EDD28B 1px solid; float:left; height:28px; line-height:25px; padding-left:10px; padding-right:10px; font-size:14px; font-weight:bold; color:#666666; }
+.bakimtitle li.cur{ background:#FFFDEE; height:29px; line-height:29px; border-bottom:none; color:#FF6600}
+
+.banklist{ padding:30px;width:834px;}
+.banklist img{ border:1px solid #F0EEE0;}
+.banklist1{ margin-bottom:25px;}
+
+.bakkjzf{ overflow:hidden; margin-bottom:20px; width:830px;}
+.bakkjzf li{ float:left; height:55px; line-height:45px; width:185px;}
+.bakkjzf li input{}
+.bakkjzf li img{ vertical-align:middle; margin-bottom:5px;}
+
+.zfwcline{ background-color:#F3F3F3; border-bottom:#CCCCCC solid 1px; height:35px; padding-left:10px;}
+.zfwcline li{ font-size:14px; line-height:35px;}
+.zfwcline li a{ color:#005A9D}
+
+
+
+
+.pinpaili{}
+.pplileft{float:left; width:110px; text-align:right;}
+
+.footer{ height:55px; background:#494949; margin-top:0}
+.youlian{ height:24px; line-height:34px; color:#FFFFFF; height:24px; overflow:hidden}
+.youlian ul li{ float:left;color:#FFFFFF}
+.youlian ul li a{ color:#FFFFFF; padding:0 5px; }
+.copy{ float:left; padding-left:200px; height:24px; overflow:hidden}
+.copy ul li{ color:#C2C2C2; line-height:24px}
+.copy ul li a{ color:#C2C2C2}
+
+
+
+
+
+
+.combo {
+	BORDER-BOTTOM: #a4bed4 1px solid; BORDER-LEFT: #a4bed4 1px solid; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: inline-block; WHITE-SPACE: nowrap; BACKGROUND: #fff; FONT-SIZE: 12px; BORDER-TOP: #a4bed4 1px solid; BORDER-RIGHT: #a4bed4 1px solid; PADDING-TOP: 0px
+}
+.combo-text {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 18px; BORDER-RIGHT-WIDTH: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; HEIGHT: 18px; FONT-SIZE: 12px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 0px; _height: 18px; _line-height: 18px
+}
+.combo-arrow {
+	FILTER: alpha(opacity=60); WIDTH: 18px; DISPLAY: inline-block; BACKGROUND: url(images/combo_arrow.gif) #e0ecf9 no-repeat 3px 4px; HEIGHT: 20px; VERTICAL-ALIGN: top; OVERFLOW: hidden; CURSOR: pointer; opacity: 0.6
+}
+
+
+.panel {
+	FONT-SIZE: 12px; OVERFLOW: hidden
+}
+.combo-panel {
+	BACKGROUND: #fff; OVERFLOW: auto
+}
+.combobox-item {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 3px
+}
+.combobox-item-hover {
+	BACKGROUND: #fafafa
+}
+.combobox-item-selected {
+	BACKGROUND: #fbec88
+}
+
+.panel-body {
+	BORDER-BOTTOM: #99bbe8 1px solid; BORDER-LEFT: #99bbe8 1px solid; OVERFLOW: auto; BORDER-TOP: #99bbe8 0px solid; BORDER-RIGHT: #99bbe8 1px solid
+}
+
+.panel-body-noheader {
+	BORDER-TOP-WIDTH: 1px
+}
+.panel-body-noborder {
+	BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+
+.shopingcartbox
+{	width:100%;
+	background:#fff;
+	border:solid 1px #D8E0E8;
+	
+	
+}
+.cartboxHeader
+{
+	text-align:center;	
+	font-weight:bold;
+	background-image:url(grid3-hrow.gif);
+}
+.shopingcartbox tr
+{
+	height:28px;
+	
+}
+
+.shopingcartbox tr td
+{
+	 text-align:center; height:35px; line-height:35px; font-size:14px;
+	
+}
+.shopingcartbox tr td:first-child  
+{
+	width:30%;
+	 text-align:left;
+	 padding-left:5px;
+	
+}
+.DiscountInfo span{ margin-left:5px; color:Blue;}
+
+.tipetitle {
+    margin:10px;
+    text-align:center;
+    font-size:14px;
+    font-weight:bold;
+    color:#102e42;
+}

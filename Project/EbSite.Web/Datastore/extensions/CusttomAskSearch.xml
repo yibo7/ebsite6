@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ManagedExtension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="CusttomAskSearch">
+  <BaseType />
+  <Version>1.0</Version>
+  <Priority>999</Priority>
+  <Description>订制搜索条件</Description>
+  <Author>&lt;a href="http://www.ebsite.net"&gt;小菜菜&lt;/a&gt;</Author>
+  <AdminPage />
+  <Enabled>true</Enabled>
+  <ShowSettings>true</ShowSettings>
+</ManagedExtension>

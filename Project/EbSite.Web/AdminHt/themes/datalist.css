@@ -1,0 +1,179 @@
+﻿*{ margin:0;padding:0;}
+.erp_table {
+    border-collapse:collapse;
+    font-size:12px;
+    margin:5px;
+    width:100%;
+    color:#333;
+    background-color:#fff;
+}
+.erp_table thead tr th,.erp_table thead tr td,.erp_table tbody tr td
+{
+    height:30px;
+    line-height:25px;
+    font-weight: 700;
+    text-align:center;
+    border:solid 1px #808080;
+}
+.erp_table thead tr th,.erp_table thead tr td
+{
+    background-color:#ddd;
+}
+.erp_table tbody tr td 
+{
+    font-weight:normal;
+    text-align:left;
+    padding-left:5px;
+}
+.erp_table tbody tr td a:hover {
+     color:#ff0000;
+}
+.erp_table tbody tr {
+
+}
+.erp_table tbody tr:hover{
+    background-color:#dde2dd;
+}
+.erp_table tbody tr td.num {
+    width:50px;
+    text-align:center;
+}
+
+
+.log_status {
+width: 30px;
+background: url("ico_status.gif") -56px center no-repeat;
+}
+.log_status_first {
+background: url("ico_status.gif") -6px center no-repeat;
+}
+.log_status_wait {
+background: url("ico_status.gif") -106px center no-repeat;
+}
+.log_status_end {
+background: url("ico_status.gif") -156px center no-repeat;
+}
+.log_result_info {
+    position: relative;
+    width: 100%;
+    border-collapse:collapse;
+    border:none;
+}
+.log_result_info tr td{
+    height:40px;
+    border-bottom:solid 1px #D8D8D8;
+}
+    .log_result_info tr td.log_row1 {
+        width:150px;
+        text-align:right;
+    }
+
+.ReturnOrder {
+    width:300px;
+    height:150px;
+    border:1px solid #2664A4;
+    position:absolute;
+    display:none;
+    z-index:10000;
+}
+.ReturnOrder div.addtitle {
+    background-color:#2664A4;
+    width:100%;
+    height:30px;
+    color:#fff;
+    line-height:30px;
+    vertical-align:middle;
+    font-size:14px;
+    font-weight:bold;
+    font-family:'Microsoft YaHei';
+
+}
+.ReturnOrder div.addbody {
+    width:100%;
+    height:80px;
+    line-height:60px;
+    text-align:center;
+    vertical-align:middle;
+    background-color:#fff;
+    background-color:#F8FFEB;
+    text-align:center;
+}
+.ReturnOrder div.addbody textarea{
+    margin-top:5px;
+    width:230px;
+    height:70px;
+    padding:3px;
+}
+.ReturnOrder div.addbtn {
+    width:100%;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    vertical-align:middle;
+    background-color:#fff;
+    border-radius:10px;
+    background-color:#F8FFEB;
+}
+
+.btnspan {
+    cursor:pointer;
+    color:#0000FF;
+}
+
+/*--分页样式--*/
+.gpxPagination
+{
+    float: right;
+    text-align: right;
+}
+.gpxPagination li
+{
+    float: left;
+    margin-right: 10px;
+    list-style-type:none;   
+}
+.gpxPagination li a:hover
+{
+    color: #ff0000;
+}
+ .queryBox
+{
+    text-align: left;
+    border:none;
+    border-bottom: 1px dashed #333;
+    padding: 3px 0;
+    width: 100%;
+}
+.queryBox select {
+    height:25px;
+}
+.splitpages {
+
+}
+.queryBox
+{
+    text-align: left;
+    border-bottom: 1px dashed #333;
+    padding: 3px 0;
+    width: 100%;
+}
+#PagesMain .queryBox, .groupbox
+{
+   
+    text-align: left;
+    margin-bottom: 8px;
+}
+.groupbox_title
+{
+    background-color: #dddddd;
+    color: #1e6abd;
+    display: inline-block;
+    font-weight: 700;
+    height: 25px;
+    line-height: 21px;
+    margin-left: 6px;
+    margin-top: -13px;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<JobTask>
+  <IsNoSys>True</IsNoSys>
+  <TaskName>定时更新Lucene索引</TaskName>
+  <TaskParam />
+  <CronExpressionString>0 0 * * * ? *</CronExpressionString>
+  <CronRemark />
+  <AssemblyName>api/jobupdatelucene</AssemblyName>
+  <ClassName />
+  <RunType>0</RunType>
+  <Status>1</Status>
+  <CreatedTime>2016/12/15 17:46:08</CreatedTime>
+  <ModifyTime>2016/12/16 15:02:45</ModifyTime>
+  <RecentRunTime>2022/4/24 10:00:00</RecentRunTime>
+  <NextFireTime>2022/3/20 20:00:00</NextFireTime>
+  <Remark>每小时定时更新Lucene索引</Remark>
+  <IsDelete>0</IsDelete>
+  <RunUrl>http://localhost:2015/api/jobupdatelucene?key=bd5d7b2a-991f-4066-885a-c345c2dbafa5&amp;tk=10db7ef2df8fc7feae767f34472638d3</RunUrl>
+  <LastRezult>任务启动于:2022/4/24 10:38:49并且成功进入排期队列</LastRezult>
+  <id>bd5d7b2a-991f-4066-885a-c345c2dbafa5</id>
+</JobTask>

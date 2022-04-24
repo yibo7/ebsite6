@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Templates>
+  <TemName>列表页</TemName>
+  <Themes>shop</Themes>
+  <TempFileName>list.aspx</TempFileName>
+  <TemType>1</TemType>
+  <IsNoSysTem>True</IsNoSysTem>
+  <ModelClassID>1c0a3fe3-fd47-4361-89b1-ef2352f95354</ModelClassID>
+  <AddDate>2013/7/31 15:47:30</AddDate>
+</Templates>

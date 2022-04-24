@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>1</Permission>
+  <ModuleID>b3eef4b1-6c2c-4528-9e15-ad33716238ce</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/bbs/data/Modules/ModuleList/bbs/AdminPages/PostManage.aspx</ParentUrl>
+  <FileName>List.ascx</FileName>
+  <PageName>回帖列表</PageName>
+  <ParentID>d90673ea-e25f-4356-b16a-aac8c021c162</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>b1afa924-63d6-478d-acef-7e395e822378</id>
+</ModulePageInfo>

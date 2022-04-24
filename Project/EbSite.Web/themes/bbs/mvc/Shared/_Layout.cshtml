@@ -1,0 +1,122 @@
+﻿@using EbSite.Web.EbMvc
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title> 
+    @Styles.Render("~/themescss"+Html.GetSiteID())
+    @Scripts.Render("~/themesjs8")
+
+</head>
+<body>
+
+    <div class="toolbar">
+        <div class="clearfix">
+            <ul id="topLinks" class="accesslink">
+                <li>
+                    <a href="@Html.IISPath()">
+                        <span>首页</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="@Html.HostApi().MGetIndexHref()" target="_blank">
+                        <span>手机版</span>
+                    </a>
+                </li>
+
+            </ul>
+            <div id="login_info" class="userbar">
+                <a href="@Html.HostApi().LoginRw">登录</a>
+                <a href="@Html.HostApi().RegRw">注册</a>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="clearfix">
+            <div class="brand"><a href="/" rel="home"><img src="@Html.ThemeCss()images/logo.png"></a></div>
+
+        </div>
+        <div class="mobileimg">
+            <table>
+                <tr>
+                    <td>
+                        <img src="@Html.HostApi().MobileBarcode"></img>
+                    </td>
+                    <td>
+                        手机扫一扫
+                        <br />访问手机版
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="majornav">
+            <div class="majornav-inner">
+                <ul class="majornav-list">
+                    <li><a class="current" href="/"><span>社区首页</span></a></li>
+                    <li>
+                        <a href="/16-1-0c/"><span>佛教故事</span></a>
+                    </li>
+                    <li>
+                        <a href="/6-1-0c/">
+                            <span>佛教原文</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="extranav">
+                <div class="subnav-wrap">
+                    <div class="subnav">
+                        <div class="subnav-inner">
+                            <div class="crumbnav">
+                                <a class="crumbnav-label" href="javascript:void(0)" id="forumboard_menu" title="页面导航">
+                                    <span>页面导航:操作</span>
+                                </a>
+                               
+                            </div>
+                            <div style="float: right;">
+                                <div class="forumstatus">
+                                    <form onsubmit="return ChkSo(this);" method="get" action="@Html.HostApi().SearchRw">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" name="k" onclick="this.value=''" value="输入问题关键词" id="k" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" style="display:none;" name="site" value="@Html.GetSiteID()" />
+                                                    <input type="submit" id="btnSearch" value=" 搜 索 " />
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@RenderBody()
+
+    <div class="footer">
+        <asp:Literal ID="llFootInfo" runat="server"></asp:Literal>
+
+        <div>
+            <img style="height: 80px;border: 1px solid #ccc;" src="@Html.HostApi().MobileBarcode"></img>
+        </div>
+        <div>扫一扫访问手版</div>
+
+    </div>
+</body>
+</html>

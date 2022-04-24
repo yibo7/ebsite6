@@ -1,0 +1,179 @@
+﻿.w {
+	MARGIN: 0px auto; WIDTH: 990px
+}
+.main {
+	PADDING-BOTTOM: 50px
+}
+.left {
+	WIDTH: 770px; FLOAT: left
+}
+
+.right {
+	WIDTH: 210px; FLOAT: right
+}
+.main {
+	PADDING-BOTTOM: 50px
+}
+.m {
+	ZOOM: 1; OVERFLOW: hidden;margin-top:5px;
+}
+.mt {
+	CURSOR: default
+}
+#list-img {
+	border: 1px solid rgb(208, 228, 194); overflow: hidden;
+}
+#list-img .mt {
+	background: rgb(255, 255, 255); height: 30px; overflow: hidden;
+}
+#list-img .mt h2 {
+	padding: 6px 0px 0px 8px; font-weight: normal; float: left;
+}
+#list-img .mt span {
+	padding-top: 11px; float: left;  
+}
+#list-img .mc {
+	padding: 10px 0px 20px; 
+}
+#list-img .mc ul {
+	padding: 0px 0px 0px 10px; overflow: hidden; zoom: 1;
+}
+#list-img .mc li {
+	margin: 0px 9px 10px 0px; width: 90px; text-align: center; line-height: 0; font-size: 0px; float: left; position: relative; _display: inline;
+}
+#list-img .mc li b {
+	background: rgba(0, 0, 0, 0.4); font: 12px/18px simsun; left: 4px; width: 72px; height: 18px; bottom: 4px; color: rgb(255, 255, 255); display: block; filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#8c000000', EndColorStr='#8c000000'); position: absolute; font-size-adjust: none; font-stretch: normal;
+}
+:root #list-img .mc li b {
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+:root #list-img .mc li b {
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+#list-img .mc li img {
+	margin: 1px; padding: 18px; border: 1px solid rgb(221, 221, 221); position: relative; z-index: 1; cursor: pointer;
+}
+#list-img .mc li:hover img {
+	margin: 0px; border: 2px solid rgb(208, 228, 194);
+}
+#list-img .mc .hover img {
+	margin: 0px; border: 2px solid rgb(208, 228, 194);
+}
+#list-img .mb {
+	background: url("i/bigimg_t.gif") no-repeat 0px -34px; height: 3px; overflow: hidden; display: none;
+}
+#list-img .iloading {
+	width: 80px;
+}
+#list-img .pagin {
+	padding-left: 40px;
+}
+#list-img .pagin .prev b {
+	left: 8px;
+}
+#list-img .pagin .prev-disabled b {
+	left: 8px;
+}
+#list-img .pagin .next b {
+	right: 8px;
+}
+#list-img .pagin .next-disabled b {
+	right: 8px;
+}
+#list-img .pagin .text {
+	padding: 4px 0px; width: 60px; text-align: center;
+}
+#list-img .pagin .next {
+	line-height: 0; font-size: 0px;
+}
+#list-img .pagin .prev {
+	line-height: 0; font-size: 0px;
+}
+#list-img .pagin .next-disabled {
+	line-height: 0; font-size: 0px;
+}
+#list-img .pagin .prev-disabled {
+	line-height: 0; font-size: 0px;
+}
+.hover#biger .control {
+	DISPLAY: block
+}
+.o-m-1 {
+	background: rgb(247, 247, 247); padding: 0px 8px; border: 1px solid rgb(221, 221, 221); height: 35px; line-height: 35px; overflow: hidden;
+}
+.o-m-1 .p-sort {
+	background: url("images/label.gif") no-repeat; height: 23px; float: left;
+}
+.o-m-1 .p-sort span {
+	background: url("images/label.gif") no-repeat; height: 23px; float: left;
+}
+.o-m-1 .p-sort {
+	background: rgb(228, 57, 60); padding: 0px 10px; text-align: center; line-height: 23px; font-weight: bold; margin-top: 6px; margin-right: 10px;
+}
+.o-m-1 .p-sort span {
+	background-position: -143px -23px; width: 7px; display: none;
+}
+.o-m-1 .p-sort a:link {
+	color: rgb(255, 255, 255);
+}
+.o-m-1 .p-sort a:visited {
+	color: rgb(255, 255, 255);
+}
+.o-m-1 h1 {
+	font: 14px/35px "微软雅黑"; height: 35px; font-size-adjust: none; font-stretch: normal;
+}
+.g-0 {
+	WIDTH: 100%
+}
+
+#link-return {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; MARGIN: 5px 0px 0px 5px; PADDING-LEFT: 21px; WIDTH: 69px; PADDING-RIGHT: 0px; FLOAT: right; HEIGHT: 22px; PADDING-TOP: 3px
+}
+#link-return:link {
+	BACKGROUND: url(images/bigimg_14.gif) no-repeat; COLOR: #000
+}
+#link-return:visited {
+	BACKGROUND: url(images/bigimg_14.gif) no-repeat; COLOR: #000
+}
+.dt {
+	float: left;
+}
+.dd {
+	float: left; 
+}
+
+#biger {
+	width: 770px;  text-align: center; overflow: hidden; position: relative;
+}
+#biger img {
+	max-width: 770px; _width: 770px;
+}
+.marginbottom {
+    margin-bottom: 10px;
+}
+
+
+#biger .control {
+	border: currentColor; top: 0px; width: 340px; height: 800px; line-height: 3000px; display: none; position: absolute;
+}
+#biger .control span {
+	width: 20px; height: 31px; overflow: hidden; margin-top: 385px; display: block; cursor: pointer; background-image: url("i/20130507B.png"); background-repeat: no-repeat;
+}
+#biger .prev {
+	left: 0px; padding-left: 50px;
+}
+#biger .next {
+	right: 0px; padding-right: 50px;
+}
+#biger .prev span {
+	background-position: 0px -37px; float: left;
+}
+#biger .next span {
+	background-position: -20px -37px; float: right;
+}
+#biger .prev-disabled span {
+	
+}
+#biger .next-disabled span {
+	background-position: -20px 0px;
+}

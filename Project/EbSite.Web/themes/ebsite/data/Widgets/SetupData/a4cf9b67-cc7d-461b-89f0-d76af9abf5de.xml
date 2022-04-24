@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="counttitle" Value="39" />
+    <DictionaryEntry Key="issetid" Value="0" />
+    <DictionaryEntry Key="temtitle" Value="bbd4b9d6-36ec-4642-bb49-52225770bab5" />
+    <DictionaryEntry Key="drptype" Value="2" />
+    <DictionaryEntry Key="classid" Value="0" />
+    <DictionaryEntry Key="temimg" Value="00000000-0000-0000-0000-000000000000" />
+    <DictionaryEntry Key="listmodel" Value="1" />
+    <DictionaryEntry Key="isshownum" Value="False" />
+    <DictionaryEntry Key="countimg" Value="2" />
+    <DictionaryEntry Key="isgetsub" Value="False" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

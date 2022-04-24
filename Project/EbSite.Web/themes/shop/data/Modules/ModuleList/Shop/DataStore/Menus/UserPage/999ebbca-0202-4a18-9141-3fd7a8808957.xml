@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/UserPages/OrderRepair.aspx</ParentUrl>
+  <FileName>Add.ascx</FileName>
+  <PageName>申请售后服务</PageName>
+  <ParentID>33785853-143d-45f0-82a7-0a6e55034cd8</ParentID>
+  <OrderID>2</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>999ebbca-0202-4a18-9141-3fd7a8808957</id>
+</ModulePageInfo>

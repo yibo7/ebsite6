@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  Inherits="EbSite.Web.Pagesm.uccmodulectr" %>
+<%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
+<%@ Import Namespace="EbSite.BLL.GetLink"%>
+<!doctype html>
+<html>
+<head runat="server">
+    <title></title>
+</head>
+<body>
+     <!--#include file="header.inc" -->
+    <form id="form1" runat="server">
+    <asp:ContentPlaceHolder ID="ctphBody" runat="server"/>
+    </form>
+    
+ <!--#include file="foot.inc" -->  
+</body>
+</html>

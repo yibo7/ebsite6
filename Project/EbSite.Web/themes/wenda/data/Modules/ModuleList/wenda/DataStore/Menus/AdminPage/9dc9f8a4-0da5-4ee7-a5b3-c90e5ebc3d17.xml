@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>12</Permission>
+  <ModuleID>4e0edb7e-1b30-41ad-9f74-d63c80458c35</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/wenda/data/Modules/ModuleList/Wenda/AdminPages/AskConfig.aspx</ParentUrl>
+  <FileName>AskConfig.ascx</FileName>
+  <PageName>系统配置</PageName>
+  <ParentID>0d8c8736-2215-4999-9d41-aab7305904a5</ParentID>
+  <OrderID>6</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>9dc9f8a4-0da5-4ee7-a5b3-c90e5ebc3d17</id>
+</ModulePageInfo>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>84</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/CreditProduct.aspx</ParentUrl>
+  <FileName>AddProduct.ascx</FileName>
+  <PageName>积分商品添加</PageName>
+  <ParentID>625dcf9b-4a6b-4ff8-9254-7ea7fa8e80f6</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>4fd3510b-014b-4ad9-989c-d550dee2ada2</id>
+</ModulePageInfo>

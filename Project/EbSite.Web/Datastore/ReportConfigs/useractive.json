@@ -1,0 +1,19 @@
+﻿{
+  
+  "ReportName": "活跃用户",
+  "IcoPath": "/images/Menus/2011050909131288_easyicon_cn_16.png",
+  "OrderId": 4,
+  "Ctrs": [
+    {
+      "Text": "检索数量",
+      "Value": "06f03d9b-0547-4179-8d1e-942d9808e996"
+    }
+  ],
+  "QuerySql": "SELECT UserId 用户ID,UserName 用户账号,NiName 用户昵称, LastLoginDate 最后登录时间 FROM eb_users ORDER BY LastLoginDate DESC LIMIT 06f03d9b-0547-4179-8d1e-942d9808e996",
+  "DefaultSql": "SELECT UserId 用户ID,UserName 用户账号,NiName 用户昵称, LastLoginDate 最后登录时间 FROM eb_users ORDER BY LastLoginDate DESC LIMIT 100",
+
+  "PermissionId": "322",
+  "DalType": 1,
+  "DefaultTips": "默认载入前100条数据",
+   "ShowType": 0
+}

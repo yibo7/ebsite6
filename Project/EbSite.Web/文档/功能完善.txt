@@ -1,0 +1,185 @@
+﻿1.模块重写目录 和 手机目录或子域 不能相同   (解决)
+
+2.手机模板 添加完成后，报错 未能找到路径“E:\web\EbSite3.0\Project\EbSite.Web\themes\data\TemData\temsetupdata\78843bff-71fb-4444-89a6-3263c2bc3ad3.xml”的一部分。 [完成 2014-1-6]
+
+3.<XS:SWFUpload   runat="server"></XS:SWFUpload> 控件在google下不能正确获取上传路径，导致所有使用此控件地方在google无法运行。
+
+EbSite.Base.Modules.MPage
+override void BindTopTags()
+
+4.用户级别 加到 表中去。因为是所有站点是共用的、(完成)
+
+5.【模块代码生成器】中 有 【1. 插件开发助手 2.动态组件开发助手 | 没有后置代码只有页面】 3.常用工具（已在站长工具中有）。此功能 还需要吗？
+
+6.问答Lucene  索引创建 添加 annex21[整型] 生成 报错。 (完成)
+
+------------------------分表调整------------------------
+eb_tagrelateclass  加上 tableid  [OK]
+eb_tagrelatenews   加上 ClassID  [OK]
+eb_specialnews     加上 ModelID  [有用]   ClassID  [OK]   
+
+eb_goods_visite    加上 ClassID  [OK]
+
+tableid默认表为0
+以下存储过程需要复制一分这p_tablename 参数 
+UploadIsGood  -----------------[OK]
+GetRelatedList-----------------[OK]
+
+
+
+EbSite.Base.Static.OneCreatManager.WebContent  静态页生成有问题
+
+
+部件： GetContent  -----------------[OK]
+       GetContentByUser-------------[OK]---有待于验证
+	   GetReletedContent------------[OK]
+	   GetTag           ------------[OK] 
+	   ReletedContent ---- ---------[OK]
+	   SpecialList -----------------[OK]
+
+
+
+top.aspx  repeater 绑定数据------[OK]
+
+前台 专题 列表 页 调数据 难度大 同时 查 newscontent+分表  ------[OK]
+
+标签 从表TagRelateNews 中查询，加上ClassID 就搞定----[OK]
+
+
+******************************
+专题  在查看内容时 ，最好 能默认 选 上的-------------[OK]
+
+*******************************
+内容管理---管理内容 默认选择上 模型 。---------------[OK]
+
+
+
+
+2014-2-10
+实现了 字段的动态添加 后，模型复制 就有问题了。---解决方案【连同 表一起复制】   ------------------[OK]
+**复制时 检测 表名是否 存在。如原表 newscontent ==>newscontent_copy 若newscontent_copy 存在 就是 newscontent_copy1  依次类推
+
+
+web服务里的这个方法存在问题
+public bool AddFavorite(int contentId, int classId, int favType, int userId) ----同下方第11 个问题---[OK]
+
+
+GetCount.ashx 有问题，不能写死
+接下文 ajaxget/GetCount.ashx? 中 没有classid cid=<%=Model.ClassID %>|  ajaxget/GetCount.ashx?id=<%=Model.ID %>&t=0  
+方案：添加 classid 参数
+
+1.后台  Lucene搜索引擎--》索引管理-》生成所有索引  bug 
+**解决方案 - 生成Lucene时 加上 分类id 的标实 
+注意 ：做为生成索引的数据源为 选中专题的表。
+       而 内容管理-》数据调整-》为所有的内容表做为数据源==========================[蔡OK]
+
+2.首页 内容的默认查询 同时 查 newscontent+分表 ----------------------[ok] 放弃原来 GetListForListPage 改 为 Un_GetListPages
+
+3.专题 页面的查询   special.aspx --------------------------------------[ok]
+
+4.标签 页面的查询  tagv.aspx ------------------------------------------[ok]
+
+方案详解：通过 标签id 得到当前标签页的 文章id和文章classid 
+          下一步是 数据整合 ，通过 classid 确定出 表的名称。
+		  然后整理出 表名，ids的 对象。
+		  最后 去联合查询 
+          测试结果：A 一个表中 有38000条时 ， 一个表 200条 联合查询  0.0468001
+		            
+					B一个表中 有368579条时 ， 一个表 200条  联合查询 0.0312
+
+
+					C一个表中 有368579条时 ， 一个表 415853条  联合查询 TIME: 0.0156
+
+          
+		  结论此方法 在 30万时联合查询时 不用担心效率问题。2014-2-14 YHL 
+
+
+
+
+
+5.UserInfo.aspx  查找用户所发的所有文章 ------------------------------[ok]
+
+
+6.部件 SpecialList 得到专题的 所有内容 ----------------[ok]
+
+7.部件 SearchKeyWordMatch   --------------------------[ok]
+
+8.MainWebServiceBase.cs   AddFavorite 方法 //站点不能写死
+
+9.Favorite 收藏表 中 是否加 modelid 或classid   ====>  添加ContentClassId  ---[OK]
+
+=============9-1.Favorite 收藏表 有LinkUrl 在 下方 11 中 方法中 没有LinkUrl的添加。----得测试
+
+10.MainWebServiceBase.cs 中 LikeOrNo 增加 Classid 参数 {调用此方法 记得加上 cid}------[ok]
+       
+11.MainWebServiceBase.cs 中 AddFavorite 增加 CID 参数 ---------[OK]
+
+12.前台 查看所有标签时 地址栏 要加上 siteid。用来区分 站点下的标签。----------不用加了，业务层 已经加上SiteID了。-----【OK】
+
+13.实现在 表字段的动态扩展，存在一个隐患 若多个表联合查询时 ，就会有bug.字段不致。-- 【方案 查所有时，只查原表字段 】---[ok]
+
+
+
+
+ 
+14.业务层 NewsClass 1045行  GetOrderTree_pic 出现 【 Annex8='" + 0 + 】[ok]
+
+15.eb_goods_visite  以前是用id 检查是否已经存在当前记录的统计数据 ,现在 是在多个表的环境中，还得加上classid 来区分是否添加过。---【OK】
+   方案：只查当前分类中的记录。不跨表了。
+
+
+16.系统增加 一键导出 站点的功能【发布后的站点】。 以后完善。2014-2-14
+
+17.表eb_remark 加入classid与contentid后做出调整，还有以下页面未调整过来
+	页面
+	AskRemark.aspx 
+	EvaluatePg.aspx
+	部件
+	EvaluatePg
+	RemarkAskPg
+18.收藏与发表评论，内容点击率，分类点击率，访问记录统计虽然已经完成，但未测试
+
+
+19.分类的移动，分类的合并 要区别 是否同一个模型。---2014-2-26  -----【OK】
+
+
+20. Remark 页面中的IsCloseSend 不明确 ，请再次 确认。---2014-3-5 --[OK]
+                  的CountScore 不明确
+
+   方案：删除了。
+
+
+    BLL 层  //添加后触发的事件
+            RemarkEventArgs Argsed = new RemarkEventArgs(Mark);
+	    	楼层式==前台的分页 要测试下。
+
+
+21. 快递单 的功能，图片路径 不能写上 后台 目录的地址，这样不好。2014-3-13 【ok】 2014-3-20完成 放到根目录images/kuaidi/  中了。
+
+
+22.系统 启动时【AppStartInit】载入表名称对应的模型关系数据，key 为 【表名-siteid】 ---没有用处 -2014-4-2 
+   导致 同一个表有多个模型时，就不会 载入内存中。
+   GetModelClassByTableName(string TableName,int SiteID) 通过表名 和 站点 id 得到 模型,此方法在 数据层NewsContentSplitTable.cs  1028行 有用到。
+
+   List<ColumFiledConfigs> 是最早 为了 扩多字段而用的。现在 字段可以保存在 表中了。原来 这个是保存在 xml中的、
+
+   我测试了一下，一个表 对应两个模型 添加和修改。分别显示的是正确的。----2014-4-1
+   以上 正确的是和 这个没有关系的。添加和修改 是按分类的内容模型来初使化的。
+
+23.模型，分类,分类配置关系
+	1.分类配置里绑定了模型
+	2.分类关系了分类配置
+	3.一个分类配置可以应用于多个分类	
+	4.添加分类时默认匹配与用户选择的模型关系的分类配置,多个默认获取第一个，当然，这项过程是在用户添加完成分类后在后面进行匹配
+	5.添加子分类时，默认关系其父级分类的分类配置
+	6.修改分类配置时如果此分类配置已经应用于多个分类，请告诉用户是全部覆盖还是从新创建。
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="listmodel" Value="3" />
+    <DictionaryEntry Key="counttitle" Value="5" />
+    <DictionaryEntry Key="temtitle" Value="bbd4b9d6-36ec-4642-bb49-52225770bab5" />
+    <DictionaryEntry Key="isshownum" Value="False" />
+    <DictionaryEntry Key="countimg" Value="2" />
+    <DictionaryEntry Key="issetid" Value="0" />
+    <DictionaryEntry Key="temimg" Value="78993b08-27a1-453b-91f1-8099d58547af" />
+    <DictionaryEntry Key="drptype" Value="2" />
+    <DictionaryEntry Key="tem" Value="~/Pages/Control/tem/ClassList_Good.ascx" />
+    <DictionaryEntry Key="isgetsub" Value="False" />
+    <DictionaryEntry Key="classid" Value="0" />
+    <DictionaryEntry Key="count" Value="16" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

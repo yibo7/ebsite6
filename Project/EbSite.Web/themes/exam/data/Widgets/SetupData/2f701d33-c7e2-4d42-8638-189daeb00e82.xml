@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="siteid" Value="2" />
+    <DictionaryEntry Key="tem" Value="00000000-0000-0000-0000-000000000000" />
+    <DictionaryEntry Key="classitem" Value="0,12980,12981,12982,12983,12984,12985,12986,12987,12988" />
+    <DictionaryEntry Key="indextxt" Value="首页" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

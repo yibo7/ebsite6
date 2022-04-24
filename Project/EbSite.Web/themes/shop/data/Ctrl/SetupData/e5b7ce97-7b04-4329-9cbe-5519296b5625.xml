@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="width" Value="" />
+    <DictionaryEntry Key="heigth" Value="" />
+    <DictionaryEntry Key="items" Value="aaa&#xD;&#xA;bbb&#xD;&#xA;ccc&#xD;&#xA;dddd&#xD;&#xA;bbb&#xD;&#xA;ggg" />
+    <DictionaryEntry Key="defaultselect" Value="ccc" />
+    <DictionaryEntry Key="repeatcolumns" Value="3" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

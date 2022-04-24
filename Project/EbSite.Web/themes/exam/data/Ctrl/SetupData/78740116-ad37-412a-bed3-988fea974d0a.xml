@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="valuerule" Value="&lt;a href=&quot;&lt;%= EbSite.BLL.GetLink.HrefFactory.GetInstance().GetClassHref({0},0)%&gt;&quot; target=&quot;_self&quot;&gt;{1}&lt;/a&gt;" />
+    <DictionaryEntry Key="textrule" Value="" />
+    <DictionaryEntry Key="classnum" Value="1000" />
+    <DictionaryEntry Key="onchange" Value="InserField(this)" />
+    <DictionaryEntry Key="customitems" Value="选择分类," />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

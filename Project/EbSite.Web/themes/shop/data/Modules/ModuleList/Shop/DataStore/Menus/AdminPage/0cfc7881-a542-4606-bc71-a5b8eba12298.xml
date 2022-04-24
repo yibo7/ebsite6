@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>61</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/SelReport.aspx</ParentUrl>
+  <FileName>SaleTop.ascx</FileName>
+  <PageName>销售排行</PageName>
+  <ParentID>28263e81-6239-4253-91c1-941f2a080f1a</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>0cfc7881-a542-4606-bc71-a5b8eba12298</id>
+</ModulePageInfo>

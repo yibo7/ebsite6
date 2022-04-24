@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AFE6BB30-E0BD-4744-B0F4-23BC8EFCBFD8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EbSite.Control</RootNamespace>
+    <AssemblyName>EbSite.Control</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\libbin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\libbin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\log4\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.BLL, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Core, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Entity, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Upload\WebUploaderFile.cs" />
+    <Compile Include="Upload\UploadImg.cs" />
+    <Compile Include="UMEditor.cs" />
+    <Compile Include="UEditor.cs" />
+    <Compile Include="Button.cs" />
+    <Compile Include="CheckBox.cs" />
+    <Compile Include="CheckBoxList.cs" />
+    <Compile Include="ColorPicker.cs" />
+    <Compile Include="AreaList.cs" />
+    <Compile Include="CodeMirror.cs" />
+    <Compile Include="AutoCompleteJs.cs" />
+    <Compile Include="--UploadMobile.cs" />
+    <Compile Include="ToolBarMobile.cs" />
+    <Compile Include="Widget缓存版.cs" />
+    <Compile Include="RepeaterList.cs" />
+    <Compile Include="AreaSelector.cs" />
+    <Compile Include="SelectSingle.cs" />
+    <Compile Include="DropDownListMore.cs" />
+    <Compile Include="HiddenField.cs" />
+    <Compile Include="Jqzoom.cs" />
+    <Compile Include="WidgetMove.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomTagsBase.cs" />
+    <Compile Include="CustomTagsBox.cs" />
+    <Compile Include="CustomTagsDiv.cs" />
+    <Compile Include="EasyuiDialog.cs" />
+    <Compile Include="Editor.cs" />
+    <Compile Include="DatePicker.cs" />
+    <Compile Include="IUserContrlBase.cs" />
+    <Compile Include="Upload\SWFUpload.cs" />
+    <Compile Include="Upload\SWFUploadMore.cs" />
+    <Compile Include="TextBoxVl.cs" />
+    <Compile Include="ToolBar.cs" />
+    <Compile Include="UcReNameRule.cs" />
+    <Compile Include="Repeater.cs" />
+    <Compile Include="Widget.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WinBox.cs" />
+    <Compile Include="LinkButton.cs" />
+    <Compile Include="CustomTags.cs" />
+    <Compile Include="DataList.cs" />
+    <Compile Include="DropDownList.cs" />
+    <Compile Include="GridView.cs" />
+    <Compile Include="Notes.cs" />
+    <Compile Include="HProgressBar.cs" />
+    <Compile Include="ListBox.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadioButtonList.cs" />
+    <Compile Include="TextBox.cs" />
+    <Compile Include="--UpMediaFile.cs" />
+    <Compile Include="WebControl.cs" />
+    <Compile Include="xsPage\cAspxPages.cs" />
+    <Compile Include="xsPage\cReWritPages.cs" />
+    <Compile Include="xsPage\cAutoHtmlPages.cs" />
+    <Compile Include="xsPage\HtmlPages.cs" />
+    <Compile Include="xsPage\PagesFactory.cs" />
+    <Compile Include="xsPage\XsPage.cs" />
+    <Compile Include="DDLCtrTem.cs" />
+    <Compile Include="ExtensionsCtrls.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

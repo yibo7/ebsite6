@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>6</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/UserPages/OrderRepair.aspx</ParentUrl>
+  <FileName>repairlist.ascx</FileName>
+  <PageName>申请列表</PageName>
+  <ParentID>33785853-143d-45f0-82a7-0a6e55034cd8</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>13fd55f1-e4d6-41f6-934d-0b436c926d5d</id>
+</ModulePageInfo>

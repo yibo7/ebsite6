@@ -1,0 +1,1 @@
+{"IsUpdate":false,"PathUrl":"http:\/\/www.ebsite.net\/update2.0.zip","UpdateTime":"\/Date(1320419534738+0800)\/","Version":"2.0.0","WebUrl":"http:\/\/www.ebsite.net"}

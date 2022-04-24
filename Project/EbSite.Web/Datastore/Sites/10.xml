@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Sites>
+  <IsNoSys>True</IsNoSys>
+  <OrderID>0</OrderID>
+  <ParentID>1</ParentID>
+  <SiteName>eBSite问答</SiteName>
+  <SiteFolder>wenda</SiteFolder>
+  <IsClassContent>False</IsClassContent>
+  <IndexTemID>068160b1-d925-4a42-8b00-a519005a87c7</IndexTemID>
+  <LinkTypeContent>3</LinkTypeContent>
+  <LinkTypeClass>3</LinkTypeClass>
+  <LinkTypeOrther>0</LinkTypeOrther>
+  <LinkTypeSpecial>3</LinkTypeSpecial>
+  <LinkTypeTags>0</LinkTypeTags>
+  <MobileTheme>wenda</MobileTheme>
+  <AdminTheme>green</AdminTheme>
+  <PageTheme>wenda</PageTheme>
+  <id>10</id>
+</Sites>

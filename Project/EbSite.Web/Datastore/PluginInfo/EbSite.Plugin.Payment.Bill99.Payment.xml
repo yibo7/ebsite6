@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ManagedExtension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="EbSite.Plugin.Payment.Bill99.Payment">
+  <BaseType>IPayment</BaseType>
+  <Version>1.0</Version>
+  <Priority>999</Priority>
+  <Description>快钱在线支付</Description>
+  <Author>&lt;a href="http://www.ebsite.net"&gt;小菜菜&lt;/a&gt;</Author>
+  <AdminPage />
+  <Enabled>true</Enabled>
+  <Settings>
+    <Index>0</Index>
+    <Name>EbSite.Plugin.Payment.Bill99.Payment</Name>
+    <Help>上海快钱信息服务有限公司是国内第一家提供基于EMAIL和手机号码的网上收付款服务的互联网企业。快钱已同中国建设银行、中国银联、中国农业银行、中国银行、招商银行、交通银行、华夏银行、中国光大银行、中信银行、深圳发展银行、广东发展银行等结成战略合作并推出网上交易的收付款服务，服务覆盖国内外27亿张银行卡。（网址：http://www.99bill.com） &lt;a href="http://agent.99bill.com/agent/jsp/agent/onlineprotocol/agentProtocol.do?act=check&amp;agentno=shwb01" target=_blank&gt;&lt;font color="#ff0000"&gt;&lt;strong&gt;立即申请&lt;/strong&gt;&lt;/font&gt;&lt;/a&gt; </Help>
+    <Delimiter>44</Delimiter>
+    <Parameters>
+      <Name>ID</Name>
+      <Label>唯一ID</Label>
+      <MaxLength>20</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>Account</Name>
+      <Label>帐号</Label>
+      <MaxLength>100</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>PrivateKey</Name>
+      <Label>交易安全校验码</Label>
+      <MaxLength>100</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>ImgUpload</Name>
+      <Label>支付按钮图片</Label>
+      <MaxLength>200</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <ParamType>Upload</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <KeyField>ID</KeyField>
+    <IsScalar>true</IsScalar>
+    <Hidden>false</Hidden>
+    <ShowAdd>true</ShowAdd>
+    <ShowEdit>true</ShowEdit>
+    <ShowDelete>true</ShowDelete>
+  </Settings>
+  <ShowSettings>true</ShowSettings>
+</ManagedExtension>

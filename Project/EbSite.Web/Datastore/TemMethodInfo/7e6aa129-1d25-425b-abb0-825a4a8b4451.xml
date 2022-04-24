@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>获取标签列表地址-用来获取分类，生成静态面页用-电脑版</Title>
+  <GetCode>&lt;%=EbSite.Base.Host.Instance.TagsList(int p)%&gt;</GetCode>
+  <Author>EbSite</Author>
+  <Demo>/// &lt;summary&gt;
+        /// 获取标签列表地址-用来获取分类，生成静态面页用
+        /// &lt;/summary&gt;
+        /// &lt;param name="p"&gt;&lt;/param&gt;</Demo>
+  <id>7e6aa129-1d25-425b-abb0-825a4a8b4451</id>
+</TemMethodInfo>

@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>EbSite.BLL</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EbSite.BLL</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\libbin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\libbin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\libbin\log4\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Base, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Control, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Control.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.ControlData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.ControlData.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Core, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Data.Interface, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Data.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Data.User.Interface, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Data.User.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Entity, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\..\libbin\Quartz\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.5549.42486, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor, Version=1.4.1.0, Culture=neutral, PublicKeyToken=f8b4b81ec75097e2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\Yahoo.Yui.Compressor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountMoney\AccountMoneyLog.cs" />
+    <Compile Include="AccountMoney\AccountMoneyType.cs" />
+    <Compile Include="AccountMoney\PayLog.cs" />
+    <Compile Include="AccountMoney\WithdrawList.cs" />
+    <Compile Include="Address.cs" />
+    <Compile Include="Adminer\AdminPrincipal.cs" />
+    <Compile Include="Adminer\AccountsTool.cs" />
+    <Compile Include="Adminer\AdminUser.cs" />
+    <Compile Include="Adminer\Permissions.cs" />
+    <Compile Include="Adminer\Role.cs" />
+    <Compile Include="ClassSetConfig.cs" />
+    <Compile Include="FastMenuClass.cs" />
+    <Compile Include="HttpHandlers\DownRemoteImgBase64.cs" />
+    <Compile Include="HttpHandlers\UploadImgByUrls.cs" />
+    <Compile Include="HttpHandlers\UpSingleFile.cs" />
+    <Compile Include="HttpHandlers\web404.cs" />
+    <Compile Include="HttpHandlers\rss.cs" />
+    <Compile Include="HttpHandlers\avatar.cs" />
+    <Compile Include="HttpHandlers\barcode.cs" />
+    <Compile Include="HttpHandlers\chatevent.cs" />
+    <Compile Include="HttpHandlers\yzm.cs" />
+    <Compile Include="HttpHandlers\loginapi.cs" />
+    <Compile Include="HttpHandlers\gotopay.cs" />
+    <Compile Include="HttpHandlers\appstart.cs" />
+    <Compile Include="HttpHandlers\uploadcheck.cs" />
+    <Compile Include="HttpHandlers\uico.cs" />
+    <Compile Include="HttpHandlers\msgevent.cs" />
+    <Compile Include="HttpHandlers\IsNewsMsg.cs" />
+    <Compile Include="HttpHandlers\GetCount.cs" />
+    <Compile Include="HttpHandlers\email.cs" />
+    <Compile Include="HttpHandlers\CurrentUser.cs" />
+    <Compile Include="HttpHandlers\count.cs" />
+    <Compile Include="HttpHandlers\jscss.cs" />
+    <Compile Include="HttpHandlers\log.cs" />
+    <Compile Include="HttpHandlers\mobile.cs" />
+    <Compile Include="HttpHandlers\username.cs" />
+    <Compile Include="HttpHandlers\ValidateCode.cs" />
+    <Compile Include="Jobs\JobTriggerListener.cs" />
+    <Compile Include="Jobs\QuartzHelper.cs" />
+    <Compile Include="LogProvider.cs" />
+    <Compile Include="Messaging\Remark.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ClassConfigs.cs" />
+    <Compile Include="ContentTem.cs" />
+    <Compile Include="AreaInfo.cs" />
+    <Compile Include="Count\ClassHits.cs" />
+    <Compile Include="Count\ContentBase.cs" />
+    <Compile Include="Exam\exam_answer.cs" />
+    <Compile Include="NewsContentSplitTable.cs" />
+    <Compile Include="Count\GoodsVisite.cs" />
+    <Compile Include="eborderbox\order.cs" />
+    <Compile Include="emailsendpool.cs" />
+    <Compile Include="Exam\exam_questions.cs" />
+    <Compile Include="Exam\exam_questionsclass.cs" />
+    <Compile Include="Exam\exam_testuser.cs" />
+    <Compile Include="goods_visite.cs" />
+    <Compile Include="outlinks.cs" />
+    <Compile Include="ReportConfigBll .cs" />
+    <Compile Include="JobTask.cs" />
+    <Compile Include="spiderlog.cs" />
+    <Compile Include="StartupTasks\InitSites.cs" />
+    <Compile Include="TimeOutExecutePost.cs" />
+    <Compile Include="TimeOutPost.cs" />
+    <Compile Include="searchword.cs" />
+    <Compile Include="SeoSites.cs" />
+    <Compile Include="Coupons\CouponItems.cs" />
+    <Compile Include="Coupons\Coupons.cs" />
+    <Compile Include="GetLink\Mobile\cMReWriteHref.cs" />
+    <Compile Include="GetLink\Mobile\cMAspxHref.cs" />
+    <Compile Include="IISLOG\SpiderBll.cs" />
+    <Compile Include="IISLOG\IISLOGBll.cs" />
+    <Compile Include="IISLOG\IISLOGEntity.cs" />
+    <Compile Include="IISLOG\SpiderEntity.cs" />
+    <Compile Include="Logs.cs" />
+    <Compile Include="Log\Web040Log.cs" />
+    <Compile Include="OrderOption\OrderOptionItems.cs" />
+    <Compile Include="OrderOption\OrderOptions.cs" />
+    <Compile Include="OrderOption\OrderOptionValue.cs" />
+    <Compile Include="GetLink\ClassLink\cAspxHref.cs" />
+    <Compile Include="GetLink\ClassLink\cAutoHtmlHref.cs" />
+    <Compile Include="GetLink\ClassLink\cHtmlHref.cs" />
+    <Compile Include="GetLink\ClassLink\cReWriteHref.cs" />
+    <Compile Include="GetLink\ContentLink\cAspxHref.cs" />
+    <Compile Include="GetLink\ContentLink\cAutoHtmlHref.cs" />
+    <Compile Include="GetLink\ContentLink\cHtmlHref.cs" />
+    <Compile Include="GetLink\ContentLink\cReWriteHref.cs" />
+    <Compile Include="GetLink\Instance.cs" />
+    <Compile Include="GetLink\IInstance.cs" />
+    <Compile Include="GetLink\TagsLink\cAspxHref.cs" />
+    <Compile Include="GetLink\TagsLink\cAutoHtmlHref.cs" />
+    <Compile Include="GetLink\TagsLink\cHtmlHref.cs" />
+    <Compile Include="GetLink\TagsLink\cReWriteHref.cs" />
+    <Compile Include="GetLink\SpecialLink\cAspxHref.cs" />
+    <Compile Include="GetLink\SpecialLink\cAutoHtmlHref.cs" />
+    <Compile Include="GetLink\SpecialLink\cHtmlHref.cs" />
+    <Compile Include="GetLink\SpecialLink\cReWriteHref.cs" />
+    <Compile Include="GetLink\OrtherLink\cAspxHref.cs" />
+    <Compile Include="GetLink\OrtherLink\cAutoHtmlHref.cs" />
+    <Compile Include="GetLink\OrtherLink\cHtmlHref.cs" />
+    <Compile Include="GetLink\OrtherLink\cReWriteHref.cs" />
+    <Compile Include="Invite.cs" />
+    <Compile Include="ExtContent.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="AccountMoney\PayPass.cs" />
+    <Compile Include="PayMent\PayTypeInfo.cs" />
+    <Compile Include="PeiSong\SendArea.cs" />
+    <Compile Include="PeiSong\Shippers.cs" />
+    <Compile Include="PeiSong\Express.cs" />
+    <Compile Include="PeiSong\PsCompany.cs" />
+    <Compile Include="PeiSong\PsDelivery.cs" />
+    <Compile Include="PeiSong\PsFreight.cs" />
+    <Compile Include="PeiSong\StoreHouse.cs" />
+    <Compile Include="RemarkSublist.cs" />
+    <Compile Include="FastMenu.cs" />
+    <Compile Include="DataSettings\Content.cs" />
+    <Compile Include="DataSettings\Category.cs" />
+    <Compile Include="ModelBll\CusstomFileds\HrefFactory.cs" />
+    <Compile Include="ModelBll\CusstomFileds\CusttomFiledsBLLForm.cs" />
+    <Compile Include="ModelBll\FormModel.cs" />
+    <Compile Include="SiteMap.cs" />
+    <Compile Include="Space\SpaceTabDefaultWidget.cs" />
+    <Compile Include="Templates\TemplatesMobile.cs" />
+    <Compile Include="Templates\TemplatesBase.cs" />
+    <Compile Include="Templates\TempFactory.cs" />
+    <Compile Include="Themes\--ThemeType.cs" />
+    <Compile Include="Tool_ChatList.cs" />
+    <Compile Include="UploadFileInfoBLL.cs" />
+    <Compile Include="User\TheThirdLoginCode.cs" />
+    <Compile Include="UserLevel.cs" />
+    <Compile Include="MenusForUserRole.cs" />
+    <Compile Include="FavoriteClass.cs" />
+    <Compile Include="ErrInfo.cs" />
+    <Compile Include="GetLink\暂时兼容旧版\cAspxHref.cs" />
+    <Compile Include="GetLink\暂时兼容旧版\cAutoHtmlHref.cs" />
+    <Compile Include="GetLink\暂时兼容旧版\cHtmlHref.cs" />
+    <Compile Include="GetLink\暂时兼容旧版\cReWriteHref.cs" />
+    <Compile Include="GetLink\暂时兼容旧版\HrefFactory.cs" />
+    <Compile Include="Log\CusttomLog.cs" />
+    <Compile Include="Log\--XMLProvider\CusttomLog.cs" />
+    <Compile Include="ModelBll\CusstomFileds\CusttomFiledsBLL.cs" />
+    <Compile Include="ModelBll\CusstomFileds\CusttomFiledsBLLClass.cs" />
+    <Compile Include="ModelBll\CusstomFileds\CusttomFiledsBLLContent.cs" />
+    <Compile Include="ModelBll\CusstomFileds\CusttomFiledsBLLUser.cs" />
+    <Compile Include="ModelBll\CusstomFileds\ICusttomFiledsBLL.cs" />
+    <Compile Include="SearchCustom\Edit.cs" />
+    <Compile Include="Sites.cs" />
+    <Compile Include="TagColor.cs" />
+    <Compile Include="TagRelateClass.cs" />
+    <Compile Include="TemMethod.cs" />
+    <Compile Include="Themes\ThemesMobile.cs" />
+    <Compile Include="Themes\ThemesAdmin.cs" />
+    <Compile Include="Themes\ThemesPC.cs" />
+    <Compile Include="Themes\ThemesBase.cs" />
+    <Compile Include="User\SiteIdentity.cs" />
+    <Compile Include="Base\--BLLEventEventArgs.cs" />
+    <Compile Include="Menus.cs" />
+    <Compile Include="MenusForUser.cs" />
+    <Compile Include="ModulesBll\LimitRoleForUser.cs" />
+    <Compile Include="ModulesBll\LimitRoleForAdminer.cs" />
+    <Compile Include="ModulesBll\LimitsForUser.cs" />
+    <Compile Include="ModulesBll\LimitsForAdminer.cs" />
+    <Compile Include="ModulesBll\MenusForAdminer.cs" />
+    <Compile Include="ModulesBll\LimitRole.cs" />
+    <Compile Include="ModulesBll\Limits.cs" />
+    <Compile Include="ModulesBll\ModuleMenu.cs" />
+    <Compile Include="ModulesBll\Modules.cs" />
+    <Compile Include="ModulesBll\MenusForUser.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Space\WidgetBoxStyle.cs" />
+    <Compile Include="Space\HomeWidget.cs" />
+    <Compile Include="Space\LayoutPane.cs" />
+    <Compile Include="Space\SpaceSetting.cs" />
+    <Compile Include="Space\SpaceTabs.cs" />
+    <Compile Include="Space\SpaceTabsDefault.cs" />
+    <Compile Include="Space\SpaceTabWidget.cs" />
+    <Compile Include="Space\SpaceThemeClass.cs" />
+    <Compile Include="Space\SpaceThemes.cs" />
+    <Compile Include="Space\WidgetMoveForHome.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateInc\TemplateInc.cs" />
+    <Compile Include="TemplateInc\XMLProvider.cs" />
+    <Compile Include="Count\ContentCommentNum.cs" />
+    <Compile Include="Count\ContentFavorableNum.cs" />
+    <Compile Include="Count\ContentHits.cs" />
+    <Compile Include="Count\CountBase.cs" />
+    <Compile Include="Count\Strategy\CookieStrategy.cs" />
+    <Compile Include="Count\Strategy\IStrategyPrevent.cs" />
+    <Compile Include="Count\Strategy\SessionStrategy.cs" />
+    <Compile Include="Count\Strategy\StrategyFactory.cs" />
+    <Compile Include="Count\ClassCommentNum.cs" />
+    <Compile Include="Count\ClassFavorableNum.cs" />
+    <Compile Include="Ctrtem\TemClass.cs" />
+    <Compile Include="Base\BusinessBase.cs" />
+    <Compile Include="Ctrtem\TemList.cs" />
+    <Compile Include="SearchCustom\Enum.cs" />
+    <Compile Include="SearchCustom\Utils.cs" />
+    <Compile Include="SearchKeepWord\Utis.cs" />
+    <Compile Include="User\EBPrincipal.cs" />
+    <Compile Include="User\FriendList.cs" />
+    <Compile Include="User\MembershipUserEb.cs" />
+    <Compile Include="User\ProfileProvider.cs" />
+    <Compile Include="User\UserNews.cs" />
+    <Compile Include="User\RecentVisitors.cs" />
+    <Compile Include="ClassCustom\Provider\Factory.cs" />
+    <Compile Include="ClassCustom\Provider\IClassCustom.cs" />
+    <Compile Include="ClassCustom\XMLProvider\ClassCustom.cs" />
+    <Compile Include="ModelBll\ClassModel.cs" />
+    <Compile Include="ModelBll\ModelBase.cs" />
+    <Compile Include="ModelBll\UserModel.cs" />
+    <Compile Include="Log\AdminLoginLog.cs" />
+    <Compile Include="Log\AppErrLog.cs" />
+    <Compile Include="Log\HTMLLog.cs" />
+    <Compile Include="Log\--Provider\Factory.cs" />
+    <Compile Include="Log\--XMLProvider\AppErrLog.cs" />
+    <Compile Include="Log\--XMLProvider\AdminLoginLog.cs" />
+    <Compile Include="Log\--XMLProvider\HTMLLog.cs" />
+    <Compile Include="Log\--Provider\ILog.cs" />
+    <Compile Include="Msg.cs" />
+    <Compile Include="Templates\XMLProvider.cs" />
+    <Compile Include="Templates\TemplatesPC.cs" />
+    <Compile Include="ModelBll\WebModel.cs" />
+    <Compile Include="Email\EmailBLL.cs" />
+    <Compile Include="Email\--EmailFactory.cs" />
+    <Compile Include="Email\--EmailModel.cs" />
+    <Compile Include="Email\--ISendEmail.cs" />
+    <Compile Include="Email\--SysEmail.cs" />
+    <Compile Include="Favorite.cs" />
+    <Compile Include="HtmlReNameRule.cs" />
+    <Compile Include="KeyValueModel.cs" />
+    <Compile Include="GetTreeData.cs" />
+    <Compile Include="Remark.cs" />
+    <Compile Include="Base\SavedEventArgs.cs" />
+    <Compile Include="RemarkClass.cs" />
+    <Compile Include="SpecialClass.cs" />
+    <Compile Include="SpecialNews.cs" />
+    <Compile Include="NewsContent.cs" />
+    <Compile Include="NewsClass.cs" />
+    <Compile Include="TagKey.cs" />
+    <Compile Include="TagRelateNews.cs" />
+    <Compile Include="TagRelateUser.cs" />
+    <Compile Include="User\UserGroupProfile.cs" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="User\UserOnlineUpdate.cs" />
+    <Compile Include="User\UserProfile.cs" />
+    <Compile Include="Chat.cs" />
+    <Compile Include="User\UserOnline.cs" />
+    <Compile Include="User\UserIdentity.cs" />
+    <Compile Include="Vote\vote.cs" />
+    <Compile Include="Vote\voteclass.cs" />
+    <Compile Include="Vote\voteitem.cs" />
+    <Compile Include="WidgetsData\WidgetsDataBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

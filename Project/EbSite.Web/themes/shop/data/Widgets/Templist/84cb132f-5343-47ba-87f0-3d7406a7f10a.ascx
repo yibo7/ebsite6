@@ -1,0 +1,1 @@
+<dd> <a href="<%#EbSite.Base.Host.Instance.GetContentLink(Eval("ID"),Eval("HtmlName"),Eval("classid"))%>"  target="_blank"><%#Eval("newstitle")%></a></dd>

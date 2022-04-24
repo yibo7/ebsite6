@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>获取当前分类的样式</Title>
+  <GetCode>&lt;%=EbSite.Common.GetCurrentClass(object ob, string sCurrentClassName)%&gt;</GetCode>
+  <Author>EbSite</Author>
+  <Demo>/// &lt;summary&gt;
+        /// 获取当前分类的样式
+        /// &lt;/summary&gt;
+        /// &lt;param name="ob"&gt;当前分类ID&lt;/param&gt;
+        /// &lt;param name="sCurrentClassName"&gt;当前样式名称&lt;/param&gt;</Demo>
+  <id>5a5eaa2b-8658-45fd-8b8c-153baea3b386</id>
+</TemMethodInfo>

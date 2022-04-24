@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WidgetBoxStyle>
+  <StyleColorPram />
+  <StyleCssNamePram />
+  <StyleName>默认边框</StyleName>
+  <StyleTemp>&lt;div class="widget-headerdefautl" &gt;&lt;span class='widgettitle_text'&gt;{Title}&lt;span&gt;&lt;/div&gt;&lt;div class="widget-content"&gt;{Content}&lt;/div&gt;</StyleTemp>
+  <ThemeID>0</ThemeID>
+  <StyleClass>0</StyleClass>
+  <id>4c83643a-ba83-4ce7-a524-ac91427e1209</id>
+</WidgetBoxStyle>

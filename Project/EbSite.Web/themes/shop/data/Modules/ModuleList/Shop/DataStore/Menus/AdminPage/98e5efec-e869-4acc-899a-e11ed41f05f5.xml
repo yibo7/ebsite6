@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>17</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/SalesActivities.aspx</ParentUrl>
+  <FileName>GroupBuy.ascx</FileName>
+  <PageName>团购活动</PageName>
+  <ParentID>cbd1d47f-d9f4-4bf3-8e62-f12b3c1131df</ParentID>
+  <OrderID>2</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>98e5efec-e869-4acc-899a-e11ed41f05f5</id>
+</ModulePageInfo>

@@ -1,0 +1,628 @@
+﻿*******************2014-03-11*********************
+商城系统 产品 必须用 News_Content 来装载。
+
+这样 取 产品内容页 时，分类id 可以给0.就可以进入页面，
+
+要不 ，OrderItem中 只有 产品id  没有分类id.
+
+*******************2013-01-15*********************
+
+
+
+商品 在添加/修改 完成时，返回到 添加页面 有两个小bug 
+
+1.商品属性 没有绑定上。
+
+2.使用指南 没有绑定上。
+
+
+**************************************************
+
+
+一.商品分类，由ebsite分类功能完成，安装时生成分类模型,模型内容有:
+   1.分类名称--ClassName
+   2.选择商品类型--Annex8
+   100.货号前辍----Annex2
+   3.是否在首页显示--Annex3(真对eBShop商城用的字段)
+   4.售后保障 ---现在所有产品售后保障一样，这样同一类 的售后保障一样。---YHL 2013-11-14 (未完成)
+
+   用模型id来查找 【5.标实分类---annex9 【1.产品 2.文章 】 所有的分类模型 都要用Annex9来标实。】
+
+二.商品内容,由ebsite内容功能完成，安装时生成内容模型,模型内容有:
+   1.[NewsTitle]商品名称
+   2.[Annex1]商品编号(自动生成，但可以编辑)(在没有开户规格的情况下使用)     说明 ：YHL 2013-07-31 若开启了规格 此字段中 存的是 所有规格中 价格最低的 那个型号的商品编号
+   100.[Annex8] 商品类型
+   5.[Annex2]市场价
+   3.[Annex16]销售价(在没有开户规格的情况下使用)   说明 ：YHL 2013-07-31 若开启了规格 此字段中 存的是 所有规格中 价格最低的 那个型号销售价
+   4.[Annex17]成本价(在没有开户规格的情况下使用)   说明 ：YHL 2013-07-31 若开启了规格 此字段中 存的是 所有规格中 价格最低的 那个型号的成本
+   5.[Annex7]供货商ID                                                            ------2013-07-30 YHL 原来是 Annex11 这个 不是查询条件可以错开一下。
+   6.[Annex18]商品重量(KG 关联到运费的计算)(在没有开户规格的情况下使用)   说明 ：YHL 2013-07-31 若开启了规格 此字段中 存的是 所有规格中 价格最低的 那个型号的重量
+   7.[Annex12]库存量(在没有开户规格的情况下使用)                          说明 ：YHL 2013-07-31 若开启了规格 此字段中 存的是 所有规格中 价格最低的 那个型号的库存量
+   8.[Annex3]单位 (可以自定义,在这里由下拉选择)
+  
+   13.[Annex6]兑换积分(大于0,表示可以使用积分兑换)  由是否控件是否积分兑换()展示(改成购买可得积分)
+   14.是否换购商品  
+		[Annex14]a.订单满足金额 
+		[Annex15]b.换购价格   
+		此次购物订单金额满足a,即可以以b的价格购买此产品，并且兑换价格不能大于 出售价格  (具体可以参照v5)
+   
+   16.[SmallPic]缩略图，不上传时，默认取图片里的第一个图片
+  
+   
+   19.商品简单介绍(delete)
+   20.商品详细介绍[ContentInfo]
+   21.[Annex11]商品品牌                                                                ------2013-07-30 YHL 原来是 Annex7 是字符串 不利于查询
+   22.[Annex5]默认规格ID，可以为空，表示当前商品没有启用规格  276_1-3--2-4   说明 ：YHL 2013-07-31 若开启了规格 此字段中 存的是 所有规格中 价格最低的 那个型号的规格号
+   待定功能:
+    9.[Annex13]库存警告（0 表示不开启，大于0表示 低于此数量时会发出预警） 由是否控件(是否库存警告)展示   
+	   11.[Annex4]每次最小购买数量(默认为1)
+	   12.[Annex5]每次最大购买数量(0表示不限制)
+
+   非显示字段
+    15.商品图片（见商品图片表）============================================（完成）
+    17.[Annex10]相关商品，每一个字段保存ID，ID用逗号分开
+	15.配件 （保存商品ID集合，用逗号分开）
+	18.相关文章，每一个字段保存ID，ID用逗号分开
+		
+   第三切换卡================================================（完成）
+		16.[与表关系]商品属性(也叫商品类型,来自商品类型表，一旦选择了属性表，将载入此属性下的字段,及字段对应的输出控件,详见属性表(商品类型列表))
+
+   第四切换卡 ===============================================(完成)
+		17.商品规格(这个比较复杂，算法参照v5)
+
+
+
+
+   23.[Annex21] 产品销量
+
+   24.[Annex22] int 1:开启规格 作用：在关联赠品时 查询 没有规格的产品，才可做为 赠品的数据源。 2013-09-04 YHL
+   25.[Annex9] varchar  产品状态  0.无  hot.热卖   bk.爆款  jbj.惊爆价   tj.特价   zj.直降
+
+ 【 XXXXX del 不用了==分表完成了   26.[Annex25] int 标实分类【1.产品 2.文章 】 所有的内容模型 都要用Annex25来标实。】
+
+---------------------以下为模块自定义表------------------
+
+
+   三，商品类型(三个表,也可以叫产品参数,由于不同类型的商品其参数不一样，如服装类与电子商品类等是不一样的，所以有必要定义规范） --------------（完成）
+        1.商品类别表--TypeNames(主键 ID)
+		     a.[TypeName]商品类别名称(string 50)
+			 b.[OrderID]排序编号(int)
+			 c.[BrandIDs]关联品牌ID,逗号分开(string 200)
+			 d.[IsSpecial] 是否关联专题 。{2013-07-29 添加}
+	    
+		2.商品扩展属性
+
+				1.商品类别属性表--TypeNameValue(主键 ID)
+					 a.[ValueName]属性名称(string 50)
+					 b.[OrderID]排序编号(int)
+					 c.[IsMoreSel]属性值录入方式(在后台展示为单选(下拉)，或多选两种)(bool)  0：单选（下拉框）    1：支持多选
+					 d.[IsSele]能否检索(是否可能在前台分类里检索，如果检索红色,产品)(bool)
+					 e.[DefaultValues]属性值(如果是下拉选择，将添加时设置好下拉选项，用逗号分开选项)(string 300)
+					 f.[TypeNameID]商品类别表对应ID(int)
+
+				2.属性与属性值关联表--TypeNameValues(主键 ID)
+					 a.[TypeValueName]属性名称,与表 TypeNameValue 中的ValueName对应，也可自定义(string 50)
+					 b.[OrderID]排序编号(int)
+					 c.[TValues]属性值,保存的值 对应TypeNameValue表中的 DefaultValues,如果InputType为多选，这里用逗号分开(string 100)
+					 d.[TypeNameValueID]属性ID与表 TypeNameValue 中的ID对应(int)（注：当自定义的属性，此ID为0）
+					 e.[ProductID]与产品表关联的ID(int)，自定义的属性要与商品关联
+
+	        	3.商品与属性值关联表--TypeRelationProduct(主键 ID)
+					 a.[attributeId]属性ID
+					 b.[usageMode]单选多选              0：单选（下拉框）    1：支持多选
+					 c.[item]属性值,保存的值            说明：YHL 2013-07-31 原来字符串的  3|10 保存 ，这样不利于前台的检索，所以改为int.如：3|10 将保存为两条数据。
+					 d.[ProductID]与产品表关联的ID(int)
+		
+		3.商品规格表
+				1.规格主表--Norms(主键 ID)
+					a.[NormsName]规格名称(string 50)
+					b.[Demo]规格备注(string 300)
+					c.[OrderID]规格排序号(int)
+					d.[TypeNameID]商品类别表对应ID(int)
+					e.[IsImg]是否图片展示规格(bool)
+
+				2.规格值表--NormsValue(主键 ID)
+				   a.[NormsValueName]规格值名称(string 50)
+				   b.[NormsIco]展示图标 (当Norms表中的IsImg为true时保存值)(string 250)
+				   c.[OrderID]排序ID(int)
+				   e.[NormID]关联规格主表Norms的ID (int)
+
+				3.商品与规格值对应表--NormRelationProduct(主键 ID)
+				  a.[PNumber]货号(string 30)
+				  b.[Stocks]库存(int)
+				  c.[SalePrice]销售价(decimal)
+				  e.[CostPrice]成本价(decimal)
+				  f.[MarketPrice]市场价(decimal)
+				  g.[Weight]重量(decimal)
+				  i.[ProductID]商品ID(int)
+				  j.[NormsValues]规格名称集合，用逗号分开（通过多个属性值交叉计算,所以这里显示多个属性名称,格式为:产品ID_规格主表ID-规格ID--规格主表ID-规格ID）(string 300)
+
+
+	五.商品图片表--ProductsImg(主键 ID)
+	    a.商品名称--[ProductName](string 100)
+		b.商品ID--[ProductID]  如商品表的ID对应(int)
+		c.大图片地址--[BigImg](string 250)
+		e.缩略图片地址--[SmallImg](string 250)
+		f.图片说明--[Title](string 250) 如，正面，侧面
+
+	六.供货商--Supplier(主键 ID)  ----------------------------------------------------(完成)
+		a.供货商名称[SupplierName](string 50)
+		b.联系人[ContactUser](string 20)
+		c.手机号[Phone](string 10)
+		d.电话[Tel](string 10)
+		e.地址[Adres](string 200)
+[  YHL 2013-12-2 发现库中没有 这三个表 
+	七.配件表(最佳组合或最佳拍档)--ProductParts(主键 ID)
+	八.相关商品表（同类商品推荐）--RelateProduct(主键 ID)
+	九.相关文章表--RelateNews(主键 ID)
+]
+---------------------------------------------------------------------------------------------------------------------------------
+	十.降价通知--CutPriceTips(主键 ID)==============================================完成
+	   [ProductID](int)
+	   [Email](string 30)
+	   [Mobile](string 15)
+	   [UserID](int)
+	   [AddDateTime](datetime)
+	   [IsNotice](tinyint) 是否已通知 ----- 2013-09-03 yhl 添加
+	十一.订单选项=========【转移到 主站上去了】
+		  a.订单选项列表主表--OrderOptions(主键 ID)
+			  [OptionName](string 100) 订单选项名称 
+			  [SelectMode] (int) 选择模式 0为列表模式 1为下拉模块
+			  [Description](string 500) 描述
+		 b.订单选项列表设置从表--OrderOptionItems(主键 ID)
+			  [OrderOptionID] (int) 关联OrderOptions中的ID
+			  [ItemName] (string 100) 选项名称
+			  [IsUserInputRequired] (bool) 是否允许用户输入
+			  [UserInputTitle] (string 50) 提示用户输入的名称 
+			  [AppendMoney]  (decimal) 当CalculateMode为0时:固定金额,为1时:购物车金额百分比
+			  [CalculateMode](int) 费用计算模式 0.固定金额 1.购物车金额百分比 
+			  [Remark](string 300) 备注
+		  c.订单选项值--OrderOptionValue  下单后将定单对应的费用写入此表(主键 ID)
+		      [OrderId] (string 50) 定单编号
+			  [OrderOptionId]      对应表OrderOptions的ID  
+			  [OrderOptionItemId] 对应表OrderOptionItems的ID
+			  [ListDescription]   对应表OrderOptions的OptionName  
+			  [ItemDescription] 对应表OrderOptionItems的ItemName  
+			  [AdjustedPrice] 费用
+			  [CustomerTitle] 客户输入标题 对应表OrderOptionItems UserInputTitle
+			  [CustomerDescription] 客户输入内容
+
+
+	十二.团购 ================================================完成
+		a.团购主表--GroupBuy(主键 ID)
+			[ProductID](int)
+			[NeedPrice](decimal) 违约金
+			[StartDate](datetime) 开始日期
+			[EndDate](datetime)  结束日期
+			[MaxCount](int) 限购总数量
+			[Content] (string max) 活动说明
+			[Status] (int) 0.正在进行中 1.成功结束 2.失败结束 3.还未开始 4.结束未处理 
+			[OrderID](int) 显示顺序
+			新加字段:
+			[Price](decimal) 市场价格
+			[Title](string) 标题
+			[SmallImg] (string) 缩略图
+			[BuyCount] 团购满足数量-------------------新加
+			[BuyPrice] 团购价格-----------------------新加
+
+		
+			[GroupBuyId] 关联GroupBuy表的ID
+			[BuyCount] 团购满足数量
+			[BuyPrice] 团购价格
+
+			[sdateline]    开始时间 int 型
+			[edateline]    结束时间 int 型
+
+		    [Buyed]  int 已经购买的人数  -----------------YHL 2013-09-18
+			[BuySumOrder]  int 购买产品总数量-------------YHL 2013-09-18
+
+    十三.优惠券================================================完成
+		a.优惠券主表--Coupons(主键 ID)
+		[CouponName] (string 50)  优惠券名称
+		[EndDateTime] (datetime) 结束日期
+		[Amount] (decimal) 满足金额 满足金额只能是数值，0.01-10000000，且不能超过2位小数
+		[DiscountPrice] (decimal) 可抵扣金额 可抵扣金额只能是数值，0.01-10000000，且不能超过2位小数
+		[Description](string 500) 描述
+		[SentCount] (int) 导出数量 导出数量只能是数字，必须大于等于O,0表示不导出
+		[UsedCount] (int) 已经使用数量
+		[NeedPoint] (int) 兑换需积分 兑换所需积分只能是数字，必须大于等于O,0表示不能兑换
+		
+		b.优惠券从表--CouponItems(主键 ID)
+		[CouponId](int)  Coupons对应的ID
+		[LotNumber] (guid) 优惠券批次号
+		[ClaimCode](string 32) 优惠券号码
+		[UserId]  (int)  可以使用的用户ID
+		[EmailAddress](string 150) 可以使用的用户Email
+		[AddDateTime] (datetime) 生成时间
+
+	十四.促销活动(主键 ID)  ==========================================完成
+	    a.促销活动主表--Promotions
+		  [TitleName] (string 100) 促销活动的名称 
+		  [PromoteType]（int） 促销活动类型 1.满额打折 2.买几送几 3.满额免费用 4.批发打折 
+		  [Description](string 500) 描述
+       
+		b.促销活动主表关联用户角色表--PromotionsRole
+		  [PromotionsID]  (int)关联表Promotions的ID
+		  [UserRoleID]  (int)关联用户角色ID
+
+	    c.促销活动主表关联商品ID表--PromotionProduct
+		  [PromotionsID]  (int)关联表Promotions的ID
+		  [ProductID]  (int)关联产品ID
+
+		  明细设置表:1.满额打折 2.买几送几 3.满额免费用 4.批发打折  
+
+				1.关联 满额打折设置明细表--PromotionFullPriceCut
+				  [PromotionsID](int)关联表Promotions的ID
+				  [Amount] (decimal)满足金额
+				  [DiscountValue] (int) (ValueType=0优惠金额)/(ValueType=1折扣率) 
+				  [ValueType](int)打折方式： 0.优惠金额 1.折扣率 
+
+				2.关联 买几送几设置明细表--PromotionFullNumGive
+				  [PromotionsID](int)关联表Promotions的ID
+				  [BuyQuantity] (int) 满足购买数量
+				  [GiveQuantity] (int) 赠送数量 
+		  
+				3.关联 满额免费用设置明细表--PromotionPriceFree
+				  [PromotionsID](int)关联表Promotions的ID
+				  [Amount] 满足金额
+				  [FreightFree] 是否选择运费
+				  [ServiceFree] 是否选择 订单可选项产生的费用
+				  [PayFee] 是否选择支付手续费
+
+				4.关联 批发打折设置明细表--PromotionWholesale
+				  [PromotionsID](int)关联表Promotions的ID
+				  [Quantity](int)  购买数量
+				  [DiscountValue](int) 折扣值1-100之间
+
+	十五.限时抢购(主键 ID)--CountDownBuy ===========================================完成
+	  [ProductId] (int) 关联产品ID
+      [StartDate] (datetime) 开始日期时间
+      [EndDate]   (datetime) 结束日期时间
+      [Content]   (string max) 活动说明
+      [OrderID]   (int) 显示顺序
+      [CountDownPrice] (decimal) 限时抢购价格
+	  新加字段:
+	  [Price](decimal) 市场价格
+	  [Title](string) 标题
+	  [SmallImg] (string) 缩略图
+
+	  [Status] int 状态
+	  [Buyed]  int 已经购买的人数
+	  
+
+	十六.赠品--Gift (主键 ID) -----------------------------------------------------(界面画出,功能完成90% ，选择商品 不是太理想，商品多了就换成分页的)
+	     [BuyProductId] (int) 关联购买产品ID
+		 [GiftProductId] (int) 关联赠品产品ID
+		 [Quantity](int)  赠送数量
+		 [EndDateTime](datetime)  结束日期  如果不选择，将永远不过期
+
+		 b.下单时关联购车的赠品表  GiftCartProduct(主键 ID)	,即使管理修改Gift也不受影响	
+		 [CartItemID] (long 12) 关联购物车数据项ID
+		 [BuyProductId] (int) 关联购买产品ID
+		 [GiftProductId] (int) 关联赠品产品ID
+		 [Quantity](int)  赠送数量
+		 [BuyCount] (int) 购买商品的数量(可能暂时用不上,直接从商品计算，免得还得更新此值)
+		 [BuyUserID](int)
+		 [ProductName](string 50)
+		 [SmallImg](string 300)
+
+		  c.提交定单时关联订单的赠品表 GiftOrderProduct(主键 ID),即使管理修改Gift也不受影响		
+		 [OrderID] (int) 关联订单自增ID
+		 [OrderNumber] (string 50) 关联订单号
+		 [OrderItemID] (int) 关联订单产品明细ID
+		 [BuyProductId] (int) 关联购买产品ID
+		 [GiftProductId] (int) 关联赠品产品ID
+		 [Quantity](int)  赠送数量
+		 [BuyCount] (int) 购买商品的数量
+
+
+	十七.商品费用选项 有些商品可能要设置一些附加费用选项，如  选择延保期限： 1年：￥89.00 2年：￥119.00 3年：￥169.00  还有包装费用
+			
+			商品费用选项与定单费用选项区别在于，前者与某个商品关联，后者与所有商品关联，也就是所有商品都可以使用
+	      
+		  a.订单选项列表主表--ProductOptions(主键 ID)
+			  [ProductID](int) 关联商品ID
+			  [OptionName](string 100) 选项名称 
+			  [Description](string 500) 描述
+		 b.订单选项列表设置从表--ProductOptionItems(主键 ID)
+			  [ProductOptionID] (int) 关联OrderOptions中的ID
+			  [ItemName] (string 100) 选项名称
+			  [IsGive] (bool) 赠送(有些服务默认为赠送) 
+			  [AppendMoney]  (decimal) 当CalculateMode为0时:固定金额,为1时:购物车金额百分比
+			  [CalculateMode](int) 费用计算模式 0.固定金额 1.当前商品金额百分比 
+			  [Remark](string 300) 备注
+
+		  c.订单选项值(购车临时用)--CartProductOptionValue  加入购物车时将定单对应的费用写入此表,即使管理修改ProductOptionItems也不受影响(主键 ID)
+		      [CartItemID] (long 12) 关联购物车数据项ID
+		      [ProductID] (int) 商品ID  
+			  [ProductOptionId]      对应表ProductOptions的ID  
+			  [ProductOptionItemId] 对应表ProductOptionItems的ID
+			  [OptionName]   对应表ProductOptions的OptionName  
+			  [ItemName] 对应表ProductOptionItems的ItemName  
+			  [IsGive] (bool) 赠送(有些服务默认为赠送) 
+			  [AppendMoney]  (decimal) 当CalculateMode为0时:固定金额,为1时:购物车金额百分比
+			  [CalculateMode](int) 费用计算模式 0.固定金额 1.当前商品金额百分比 
+			  [BuyUserID](int)
+			  [Quantity](int)  购买商品数量(可能暂时用不上,直接从商品计算，免得还得更新此值)
+			  [ProductPrice](decimal)  商品价格(可能暂时用不上,直接从商品计算，免得还得更新此值)
+			  此表应该定时匹配表ebshop_buy_cartitem清理过期数据
+			 
+
+			d.订单选项值(提交订单后用)--OrderProductOptionValue  即使管理修改ProductOptionItems也不受影响,提交订单时将定单对应的费用写入此表(主键 ID)
+			  [OrderID] (int) 订单自增ID
+			  [OrderNumber] (string 50) 订单编号
+		      [OrderItemID] (int) 关联定单明细项ID
+		      [ProductID] (int) 商品ID   
+			  [ProductOptionId]      对应表ProductOptions的ID  
+			  [ProductOptionItemId] 对应表ProductOptionItems的ID
+			  [OptionName]   对应表ProductOptions的OptionName  
+			  [ItemName] 对应表ProductOptionItems的ItemName  
+			  [IsGive] (bool) 赠送(有些服务默认为赠送) 
+			  [AppendMoney]  (decimal) 当CalculateMode为0时:固定金额,为1时:购物车金额百分比
+			  [CalculateMode](int) 费用计算模式 0.固定金额 1.当前商品金额百分比 
+			  [Quantity](int)  购买商品数量(可能暂时用不上,直接从商品计算，免得还得更新此值)
+			  [ProductPrice](decimal)  商品价格(可能暂时用不上,直接从商品计算，免得还得更新此值)
+			 
+
+
+   十八.订单表(Buy_Orders 主键 ID)
+			  [OrderId]				nvarchar(50) 订单ID
+			  [Remark]				nvarchar(4000) 订单留言
+			  [MerchandiserMarkID]			int 标准图标号
+			  [MerchandiserRemark]		nvarchar(4000) 标注备忘录
+			  [AdjustedDiscount]	money 涨价或减价(元)：  为负代表折扣，为正代表涨价  (管理员在后台修改价格)
+			  [OrderStatus]			int 订单状态  0.提交订单 (1.审核订单-货到付款 2.等待付款-在线支付  21.已支付)  3.已发货 4.确认收货 5.交易完成 6.回收站  			                                    
+			  [CloseReason]			nvarchar(4000) 关闭订单时填写的理由，一般由1.联系不到买家  2.买家不想买了 3.已经同城见面交易 4.暂时缺货 5.其他原因   （过期没付款，自动关闭 这个是由系统自动更新）
+			  [OrderAddDate]	    datetime 下单日期
+			  [PayDate]				datetime 付款日期,没有付款为 NULL
+			  [SendDate]		    datetime 发货日期 
+			  [FinishDate]			datetime  订单完成日期
+			  [UserId]				int   购买用户ID-来自注册信息 
+			  [Username]			nvarchar(64)  购买用户帐号-来自注册信息
+			  [EmailAddress]		nvarchar(255) 购买用户Email地址-来自注册信息
+			  [RealName]			nvarchar(50)  购买用户真实姓名-来自注册信息
+			  [QQ]					nvarchar(20)    购买用户QQ-来自注册信息
+			  [Wangwang]			nvarchar(20) 购买用户旺旺-来自注册信息
+			  [MSN]					nvarchar(128) 购买用户MSN-来自注册信息
+			  [SendRegion]		nvarchar(300) 收货区域 如:浙江省，杭州市，下城区 即用户下单时选择的下拉
+			  [Address]				nvarchar(300) 收货地址
+			  [ZipCode]				nvarchar(20) 收货邮编
+			  [SendToUserName]		nvarchar(50) 收货人姓名
+			  [TelPhone]			nvarchar(50) 收货电话
+			  [CellPhone]			nvarchar(50) 收货手机
+			  [ShippingModeId]		int 配送方式ID
+			  [ModeName]			nvarchar(50) 配送方式
+			  [RealShippingModeId]  int 实际配送方式ID-在后台点发货时可以修改
+			  [RealModeName]		nvarchar(50) 实际配送方式名称-在后台点发货时可以修改
+			  [RegionId]			int 区域ID 在配送方式设置时添加的区域，如华东，西北
+			  [Freight]				money 运费
+			  [AdjustedFreight]		money 调整运费 实际运费 因为运费无法计算得十分准确，这个是实际运费
+			  [DeliveryOrderNumber]		nvarchar(50) 快递运单号
+			  [Weight]				int 订单总重量
+			  [ExpressCompanyName]  nvarchar(500) 快递公司 对应ShippingModeId 关联下的快递公司，由管理员在后台发货时选择
+			  [ExpressCompanyAbb]	nvarchar(500) 快递100Code
+			  [PaymentTypeId]		int 支付接口的ID
+			  [PaymentType]			nvarchar(100) 支付接口类型  如 支付宝即时到帐
+			  [PayFree]				money 支付接口手续费
+			  [AdjustedPayFree]		money 调整支付接口手续费-实际支付接口手续费 由管理员在后台修改订单价格时可以操作
+			  [RefundStatus]		int (只有在发货后才可以退款,退款时间为FinishDate)退货操作选项 1.我已经跟买家联系，使用线下操作完成退款,2.使用预付款功能退款到买家的预付款账户。
+			  [RefundAmount]		money 退款金额(退款金额不得大于订单总金额.已发货订单允许全额或部分退款,退款后订单自动变为交易成功状态。)
+			  [RefundRemark]		nvarchar(4000) 在这里您可以填写相关买家的银行信息及相关退款事宜，以便日后查询。
+			  [OrderTotal]			money 订单总价格(产品价格Amount+加费用-折扣)
+			  [OrderPoint]			int 订单可得积分
+			  [OrderCostPrice]		money 订单成本价格
+			  [OrderProfit]			money 订单成本利润价格
+			  [ActualFreight]		money 实际运费,未使用
+			  [OtherCost]			money 其他成本,未使用
+			  [OptionPrice]			money 订单选项费用
+			  [Amount]				money 订单产品价格(只是产品)
+			  [ActivityId]			int 满额免费用活动ID
+			  [ActivityName]		nvarchar(200) 满额免费用活动名称
+			  [EightFree]			bit 满额免费用--运费(1代表免0代表不免)
+			  [PayFreeFree]			bit 满额免费用--支付手续费(1代表免0代表不免)
+			  [OrderOptionFree]		bit 满额免费用--订单可选项产生的费用(1代表免0代表不免)
+			  [DiscountId]			int 满额打折活动ID
+			  [DiscountName]		nvarchar(200) 满额打折活动名称
+			  [DiscountValue]		money 满额打折活动值 对应 DiscountValueType 0为实际金额,1为打折率
+			  [DiscountValueType]	int 满额打折活动值类型,0为实际优惠金额,1为打折率8折为80.00
+			  [DiscountAmount]		money 满额打折折扣金额 Amount(订单产品价格)*((100-DiscountValue)/100)
+			  [CouponName]			nvarchar(100) 优惠券
+			  [CouponCode]			nvarchar(50) 优惠券号码
+			  [CouponAmount]		money 优惠券满足金额
+			  [CouponValue]			money 优惠券可抵扣金额
+			  [GroupId]			    int 团购ID
+			  [GroupPrice]			money 团购价格
+			  [GroupBuyStatus]		int 团购状态
+			  [GatewayOrderId]		nvarchar(100)  ?
+			  [IsPrinted]			int  是否已经打印订单 (每一位代表一个打印状态，1代表未打印，2代表已打印 左起第一位代表：快递单，左起第二位：购货单，左起第三位：配送单)
+			  [TaobaoOrderId]		nvarchar(50) 淘宝订单ID?
+
+			  [TimeNumber]          加一个字段来存放 下单日期OrderAddDate （完成）
+			  [ReviewedOrderDate]   date 审核订单时间
+			  [SureReceiptDate]     date 确认收货时间
+			  [DelOrderDate]        date 回收站日期
+			  [PanicBuyingId]      抢购id 
+			  [UserBalance]        money 使用余款 （使当前账户中的余额）
+			  [iCome]              int  来源 0：pc 1:手机
+              
+	
+
+
+	 十八-（二）.订单从表(Buy_orderitem 主键 ID)
+	          [OrderId]                bigint
+			  [WholesaleDiscountId]    int   批发折扣ID
+			  [WholesaleDiscountName]  varchar(50) 批发折扣名称
+			  [IsGift]                 bit   是否赠品
+			  [SKUContent]             varchar(50) 商品的规格 如 尺码：XXL; 颜色：卡其;
+			  [ThumbnailsUrl]          varchar(200) 缩略图
+			  [SKU]                    varchar(50) 商品货号
+			  [Quantity]               int      订购数量
+			  [MemberPrice]			   decimal(18,0) 会员价，销售价
+			  [ProductName]            varchar(50) 商品名称
+			  [ClassName]              varchar(50)分类名称
+			  [MarketPrice]            decimal(18,0) 市场价
+			  [CategoryId]             int  分类ID
+			  [ProductId]              int   商品ID，对应ebsite的内容ID，自增
+			  [BuyUserID]              int  购买用户的ID
+			  [IsBuy]                   bit 是否已经下单，分为两种情况，一种只是放到购物车，一种是已经下单 已经分表，不使用
+			  [AddDateTime]            datetime 购买时间
+		      [Weight]                 decimal  商品重量
+			  [NormIDs]                varchar(50)  规格值ID,对应SKUContent
+			  [CostPrice]              decimal(18,0)  成本价格
+			  [Points]                 int   购买此商品可得积分
+			  [GiveQuantity]           int   赠送数量,目前此字段只要应用于促销活动中的，买几送几,不计算到价格
+			  [AdjustedPrice]           decimal(18,0)  调整后的价格 与批发折扣关联，折扣率*MemberPrice
+			  [PurchaseGiftId]         int   满几送几的ID
+			  [PurchaseGiftName]       varchar(100)  满几送几的名称
+			  [ExpressCompanyID]       int 物流公司ID
+			  [OrderItemKey]           bigint 事务【 赠品关联id】
+			   
+		      [CostPrice]              成本价格
+			  [Points]                  可得积分
+			  [GiveQuantity]            赠送数量
+			  [AdjustedPrice]           调整后的价格
+			  [PurchaseGiftId]          满几送几的ID
+			  [PurchaseGiftName]        满几送几的名称
+
+			  [ServiceType]            服务类型（换货=0,退货=1,维修=2）
+			  [SubmitQuantity]         提交数量
+			  [ApplyProof]             申请凭证（有发票有检测报告=0,有发票无检测报告=1,有检测报告无发票=2）
+			  [QuestionDesc]           问题描述
+			  [ReturnDate]             返回日期
+			  [ItemStatus]             状态（正常=0,审核中=1,审核通过 = 2,审核失败 = 3,已完成=4）
+			  [Reason]                 varchar 500 审核退货订单处理的结果，给客户看的。
+  
+			
+
+二十.P_BestGroup 推荐配件 最佳组合
+            
+			id                int
+			ProductID         int            产品ID（父类）
+			GoodsID           int            推荐配件或最佳组合 的对应产品ID
+			OrderiD           int            排序
+			GoodsName         nvarchar(100)  GoodsID对应的 商品名称
+			GoodsAvatarSmall  nvarchar(100)  小图路径
+			TypeID            int            1 ：最佳组合 2.推荐配件
+
+二十一.P_UserBook  使用指南
+       
+	   Title        nvarchar(100)    标题
+	   Url          nvarchar(100)    路径
+	   ProductID    int              产品ID（父类）
+	   OrderID      int              排序
+
+
+
+二十二.RequestGroup  求团购
+	   UserID，      请求人ID
+	   UserName,     请求人用户帐号
+	   ProductID,    商品ID
+	   RequestPrice, 期望团购价格
+	   AddDateTime,  请求时间
+	   Mobile,       请求人手机  如果达成，将会发送手机短信通知
+	   Email         请求人email  如果达成，将会email通知
+
+
+二十三.ebshop_creditproduct 积分商城商品表
+	  ProductName,	商品名称
+	  SmallImg,		商品小图
+	  BigImg,		商品大图
+	  Unit,			计量单位
+	  CostPrice,	成本价格
+	  MarketPrice,  市参考价格
+	  Credit,		需要积分
+	  Outline,		简单介绍
+	  SeoDes,		页面描述
+	  SeoKeyWord,	页面关键词
+	  SeoTitle,		页面标题
+	  Info,			商品详细介绍
+	  AddTime,		添加日期时间
+	  AddUserID,	添加用户ID
+	  IsSaling		(int 1上架,0 下架)是否上架
+	  Stock		    商品数量 数量为0 自动下架 。
+	  ClassID	    积分分类ID 对应ebshop_creditproductClass
+	  ExchangeNum   兑换次数
+
+二十四.ebshop_creditproductClass 积分商城分类表
+	ClassName,		分类名称
+	AddTime,		添加时间日期
+	OrderID			排序ID
+
+二十五.ebshop_CreditProductOrder 积分商城 关联订单表
+
+    [OrderId]         bigint 订单ID
+	CreditProductID, 关联积分商品的ID
+	UserID           下单的用户ID
+	Quantity         数量
+	AddTime,		添加时间日期
+	Credit          消费积分
+
+提示:商城的安装数据库要与主站数据库放在一起,不得分开模块数据库，因为商城使用了与主站表间的事务处理
+
+
+
+二十六.ebshop_pointdetails 积分日志表  （没有加到系统中 由于 若加 附加字段Annex1 来标实 是 订单号，这个得加 siteid，可能 这个点 Annex1代表意思不同。还得在后台实现 附加字段的定义）
+      
+	   UserId         用户id
+	   TradeType      类型  1.兑换礼品 2.购物奖励
+	   Increased      增加积分
+	   Reduced        减少积分
+	   Points         目前总积分
+	   TradeDate      日期
+	   OrderId        订单号
+
+
+二十七.ebshop_buy_orderlog 订单操作日志表   （主要记录对订单的操作，用optype来区分操作的类型）
+    
+	   orderid     订单号
+	   opctent     内容
+	   optype      操作类型  （0:全部显示  1:前台显示）
+	   opuserid    操作人ID
+	   opusername  操作人姓名
+	   opdate	   操作日期
+
+
+
+二十八.ebshop_productlog 产品进销存日志
+
+       id   int 
+	   ProductId   int 产品id
+	   PNumber     varchar 货号名称
+	   UserID	   操作人ID
+	   UserName    操作人用户名
+	   AddDate	   操作日期
+	   Content     内容   如：订单号：2011111111  出库3条胎
+	   Number      数量 入库或 出库  -3 
+
+
+二十九.ebshop_buy_orderitem_img 退货上传图片表
+
+       id             int 
+	   orderitemid    int  对应 ebshop_buy_orderitem 表 自增id
+	   bigimg         varchar  200  大图
+	   smallimg       varchar  200  小图
+	   typeid         int      暂时没有用 
+	     
+
+    
+******************************************
+【下单时】 要使用事务。
+
+【退款时】 要使用事务。
+
+
+*****************************************
+
+注意【赠品】是没有开启 商品规格的。因为 在giftprodctorder表中没  商品编码 ，只有 商品id. -----------YHL
+
+****************************************
+
+
+【关闭订单】过滤 哪些订单符合关闭条件 0提交订单  1审核订单 2等待付款
+
+****************************************
+
+
+
+
+

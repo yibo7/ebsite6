@@ -1,0 +1,253 @@
+﻿
+
+.shopingcart
+{
+    width: 99%;
+}
+.shopingcart td{ padding-left:10px;}
+.clickable
+{
+    cursor: pointer;
+}
+.quantity div{ padding-top:25px;}
+.quantity span
+{
+    float: left;
+}
+.quantity input{ height:20px; line-height:20px; width:35px; border:1px solid #ccc; margin-left:5px; margin-right:5px; text-align:center; background-color:#fff;}
+.caraddico
+{
+    cursor: pointer;
+    display: block;
+    margin-top: 15px;
+    width: 9px;
+    height: 9px;
+    background: url(add.gif);
+}
+.carremoveico
+{
+    cursor: pointer;
+    display: block;
+    margin-top: 15px;
+    width: 9px;
+    height: 9px;
+    background: url(remove.gif);
+}
+.carredelico
+{
+     cursor: pointer;
+    display: block;
+    margin-top: 3px;
+    margin-left:5px;
+    width: 16px;
+    height: 16px;
+    background: url(off.gif);
+}
+.footjiesuan
+{
+    float: right;
+}
+.gdListContent .price{ color:#ff0000;}
+.gdListContent .cost{ color:#ff0000; font-weight:bold;}
+.gdListContent .cost span{ color:#ccc; font-weight:normal;}
+
+
+.carfoot
+{
+    width:100%;
+    text-align:right;
+ }
+ .carcount{ width:100%; clear:both;}
+ .carcount{ text-align: right; margin-top:10px;  }
+ .carcount div{font-size:14px; }
+ .carcount div span{ color:#ff0000;}
+.carcount .clearshopcar
+{  
+    background: url(icon.gif) no-repeat 0 0;
+    width:100px;height:25px; line-height:27px;
+    background-position:-74px -165px; font-size:12px; text-align:center;
+}
+.carcount .clearshopcar a{ margin-left:8px;}
+
+.btnsgotobuy{ margin-top:13px;}
+.btnsgotobuy .btncontinubuy{background-color:#145907; height:30px; line-height:30px; padding-left:25px;padding-right:25px; border:1px solid #0C3604;color:#fff; cursor:pointer;}
+.btnsgotobuy .btngotopay{ background-color:#B60808; height:30px; line-height:30px;padding-left:25px;padding-right:25px; border:1px solid #870606; color:#fff;cursor:pointer;} 
+/* 添加 商品类别 流程  开始*/
+.Pg_45 {
+	PADDING-LEFT: 45px;
+}
+ .Steps {
+	PADDING-BOTTOM: 15px; HEIGHT: 30px; PADDING-TOP: 15px
+}
+ .Steps LI {
+	TEXT-ALIGN: center; LINE-HEIGHT: 31px; LIST-STYLE-TYPE: none; FLOAT: left; HEIGHT: 30px
+}
+ .Steps .huang {
+	WIDTH: 161px; BACKGROUND: url(icon.gif) no-repeat; margin-left:10px;
+}
+ .Steps .fui {
+	WIDTH: 161px; BACKGROUND: url(icon.gif) no-repeat 0px -34px;margin-left:10px;
+}
+ 
+/* 添加 商品类别 流程 end */
+
+ 
+/* 添加 商品类别 流程 第2步 begin */
+    #tablist
+    {
+        width: 700px;
+        padding: 0;
+        margin: 0;
+    }
+    th
+    {
+        color: #4f6b72;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 6px 6px 6px 12px;
+        background: #CAE8EA no-repeat;
+    }
+    td
+    {
+        font-size: 11px;
+        padding: 6px 6px 6px 12px;
+        color: #4f6b72;
+    }
+    .SKUValue
+    {
+        position: relative;
+        margin-top: 3px;
+        display: block;
+        white-space: nowrap;
+        float: left;
+        margin-left: 3px;
+        margin-right: 3px;
+        height: 30px;
+    }
+    .SKUValue SPAN.span1
+    {
+        padding-bottom: 0px;
+        margin: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
+    .SKUValue SPAN.span1 A
+    {
+        border-bottom: #b2b2b2 1px solid;
+        border-left: #b2b2b2 1px solid;
+        padding-bottom: 0px;
+        margin: 0px 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: nowrap;
+        float: left;
+        color: #000;
+        border-top: #b2b2b2 1px solid;
+        border-right: #b2b2b2 1px solid;
+        padding-top: 0px;
+    }
+    .SKUValue SPAN.span1 A:hover
+    {
+        border-bottom: #ff6701 1px solid;
+        border-left: #ff6701 1px solid;
+        color: #f00;
+        border-top: #ff6701 1px solid;
+        border-right: #ff6701 1px solid;
+    }
+    .SKUValue SPAN.span2
+    {
+        z-index: 99;
+        position: absolute;
+        text-indent: 30px;
+        width: 10px;
+        height: 10px;
+        overflow: hidden;
+        right: 7px;
+        top: 1px;
+    }
+    .SKUValue SPAN.span2 A
+    {
+        display: block;
+        background: url(tOver.gif) #f2f2f2 no-repeat -8px -7px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .SKUValue SPAN.span2 A:hover
+    {
+        background: url(tOn.gif) no-repeat -8px -7px;
+        overflow: hidden;
+    }
+    
+    .layerArea
+    {
+        z-index: 1001;
+        border-bottom: #ccc 1px solid;
+        position: absolute;
+        border-left: #ccc 1px solid;
+        margin-top: -220px;
+        width: 680px;
+        background: #f2f2f2;
+        height: 300px;
+        margin-left: 10px;
+        border-top: #ccc 1px solid;
+        border-right: #ccc 1px solid;
+        top: 50%;
+        left: 20%;
+    }
+    .layerArea .closeBotton
+    {
+        text-align: right;
+        padding-right: 10px;
+        clear: both;
+    }
+ 
+/* 添加 商品类别 流程 第二步 end */
+
+/*用户前台退换货申请*/
+.btnappliy {
+    width:50px;
+    height:16px;
+    background-color:#FCE9C9;
+    border:1px solid #F4C36D;
+    padding:3px 10px;
+    font-size:12px;
+}
+.btnnoappliy {
+    width:50px;
+    height:16px;
+    background-color:#FCFCFC;
+    border:1px solid #E7E7E7;
+    color:#CCCCCC;
+    padding:3px 10px;
+    font-size:12px;
+    cursor:not-allowed;
+}
+
+/*退换货详情*/
+.thhdetail {
+    margin-top:10px;
+    width:100%;
+    background-color:#E6E6E6;
+    border-collapse:separate;
+    border-spacing:1px;
+}
+    .thhdetail tbody tr th {
+        background-color:#fff;
+        padding:10px;
+        width:60px;
+        font-size:12px;
+    }
+    .thhdetail tbody tr td {
+        background-color:#fff;
+         padding:10px;
+         font-size:12px;
+    }
+        .thhdetail tbody tr td span {
+            color:red;
+            font-weight:bold;
+        }
+        .thhdetail tbody tr td ul li {
+            float:left; margin-left:10px;
+        }

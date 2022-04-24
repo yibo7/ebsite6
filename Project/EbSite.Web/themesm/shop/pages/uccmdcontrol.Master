@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="uccmdcontrol.master.cs" Inherits="EbSite.Web.Pagesm.uccmdcontrol" %>
+<%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
+<%@ Import Namespace="EbSite.BLL.GetLink"%>
+<!doctype html>
+<html>
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <div id="page">
+        <div class="cont">
+    <div class="toolbar " id="toolbar">
+  <span class="button fl backpage" >返回</span>
+  <h2 class="title" >
+    <%=MTitle %>
+    </h2>
+ <a class="selclass"> <span class="button fr"  > 菜单&#9660;</span></a>
+</div>
+    <form id="form1" runat="server">
+        
+        <asp:ContentPlaceHolder ID="ctphBody" runat="server"/>
+    
+    </form>
+    </div>
+      <div   class="panel modelmenus" >
+      <asp:Repeater ID="rpSubMenus" runat="server"  >
+            <ItemTemplate>                                   
+                 <a href="<%#GetMenuUrl(Eval("id"))%>"><%#Eval("PageName")%></a>
+                 <br/>
+            </ItemTemplate>
+     </asp:Repeater>  
+     </div>
+ <!--#include file="foot.inc" -->  
+    
+    </div>
+    
+    
+<script type="text/javascript">    toggleright("selclass", "panel", "cont", "right");</script>
+
+</body>
+</html>

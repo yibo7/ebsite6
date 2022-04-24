@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ServiceInfo>
+  <ServiceName>刘春阳</ServiceName>
+  <PostName>销售代表</PostName>
+  <Phone>010-51689881-8011</Phone>
+  <Mobile>15210507728</Mobile>
+  <Email>1426538078@qq.com</Email>
+  <IsEabled>True</IsEabled>
+  <OrderID>11</OrderID>
+  <UserID>26</UserID>
+  <UserName>flz</UserName>
+  <UserNiName>冯留振</UserNiName>
+  <Info />
+  <IsOnline>False</IsOnline>
+  <LastDateTime>0001/1/1 0:00:00</LastDateTime>
+  <ClassID>1</ClassID>
+  <StarFive>1</StarFive>
+  <StarFour>1</StarFour>
+  <StarThree>0</StarThree>
+  <StarTwo>0</StarTwo>
+  <StarOne>0</StarOne>
+  <id>8</id>
+</ServiceInfo>

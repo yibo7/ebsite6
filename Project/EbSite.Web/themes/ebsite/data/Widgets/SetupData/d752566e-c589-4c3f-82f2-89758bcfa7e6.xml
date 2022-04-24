@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="customdropdownlistpram" Value="ui-state-error^up" />
+    <DictionaryEntry Key="content" Value="&lt;img src=&quot;/UploadFile/ad.jpg&quot; alt=&quot;&quot; /&gt;" />
+    <DictionaryEntry Key="customtextboxpram" Value="" />
+    <DictionaryEntry Key="boxstyleid" Value="d40a49fa-02d1-484c-9792-b36605065a60" />
+    <DictionaryEntry Key="boxtype" Value="0" />
+    <DictionaryEntry Key="customcolor" Value="" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

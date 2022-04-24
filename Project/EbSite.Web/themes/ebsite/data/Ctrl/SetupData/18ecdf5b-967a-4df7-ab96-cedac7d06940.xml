@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="userdatasourcetype" Value="0" />
+    <DictionaryEntry Key="usershowmodel" Value="0" />
+    <DictionaryEntry Key="ismustchoose" Value="0" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<FastMenu>
+  <Title>生成首页 </Title>
+  <Url>http://localhost:8088/AdminHt/admin_Index.aspx?mpid=bd85cd0d-40e5-40bb-863f-19b355a8ea68&amp;msid=dd231a18-aad5-4af4-856b-0d9e49a85703</Url>
+  <Target>0</Target>
+  <OrderID>1</OrderID>
+  <id>2</id>
+</FastMenu>

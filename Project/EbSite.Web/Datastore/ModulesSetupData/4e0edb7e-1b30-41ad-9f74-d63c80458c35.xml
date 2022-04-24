@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModuleInfo>
+  <SiteID>10</SiteID>
+  <LastVersionUrl />
+  <UpdateUrl />
+  <IsClose>False</IsClose>
+  <Demo />
+  <SetupPath>/themes/wenda/data/Modules/ModuleList/wenda/</SetupPath>
+  <AccessFile />
+  <SqlScript />
+  <ModuleName>问答</ModuleName>
+  <Version>1.0.0</Version>
+  <Author>ebsite</Author>
+  <AuthorUrl>www.ebsite.net</AuthorUrl>
+  <id>4e0edb7e-1b30-41ad-9f74-d63c80458c35</id>
+</ModuleInfo>

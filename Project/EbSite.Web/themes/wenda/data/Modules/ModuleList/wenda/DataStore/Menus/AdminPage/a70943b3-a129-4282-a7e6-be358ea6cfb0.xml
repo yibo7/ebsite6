@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>17</Permission>
+  <ModuleID>4e0edb7e-1b30-41ad-9f74-d63c80458c35</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/wenda/data/Modules/ModuleList/wenda/AdminPages/AskOperate.aspx</ParentUrl>
+  <FileName>UserHelpAdd.ascx</FileName>
+  <PageName>页面名称</PageName>
+  <ParentID>5f51d71f-c91c-42a9-b6d4-ba0dc5913b94</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>a70943b3-a129-4282-a7e6-be358ea6cfb0</id>
+</ModulePageInfo>

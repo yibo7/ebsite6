@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="txtcount" Value="10" />
+    <DictionaryEntry Key="txtlimit" Value="5000" />
+    <DictionaryEntry Key="txttem" Value="" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

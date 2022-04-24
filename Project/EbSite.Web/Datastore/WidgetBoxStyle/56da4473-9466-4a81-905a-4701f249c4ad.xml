@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WidgetBoxStyle>
+  <StyleColorPram>边框颜色|标题背景色|背景渐变开始色|背景渐变结束色</StyleColorPram>
+  <CustomDropDownListPram />
+  <CustomTextBoxPram>菜单1=0*23*50|菜单2=1*50*300*请输入您想要的菜单名称用逗号分开</CustomTextBoxPram>
+  <StyleName>渐变内容表格</StyleName>
+  <StyleTemp>菜单1：{菜单1}&lt;br&gt;菜单2:{菜单2}
+&lt;table style=" width:100%;" cellpadding="0" cellspacing="0"&gt;
+            &lt;tr&gt;
+                &lt;td style=" border:1px solid #{边框颜色}; text-align:left; padding:5px; background:#{标题背景色}"&gt;{Title}&lt;/td&gt;
+            &lt;/tr&gt;
+             &lt;tr&gt;
+                &lt;td style=" border:1px solid #{边框颜色}; text-align:left;padding:5px; filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#{背景渐变开始色},endcolorstr=#{背景渐变结束色},gradientType=1); background: -moz-linear-gradient(left, #{背景渐变开始色}, #{背景渐变结束色}); "&gt;
+                    {Content}
+                &lt;/td&gt;
+            &lt;/tr&gt;
+       &lt;/table&gt;</StyleTemp>
+  <ThemeID>0</ThemeID>
+  <StyleClass>0</StyleClass>
+  <id>56da4473-9466-4a81-905a-4701f249c4ad</id>
+</WidgetBoxStyle>

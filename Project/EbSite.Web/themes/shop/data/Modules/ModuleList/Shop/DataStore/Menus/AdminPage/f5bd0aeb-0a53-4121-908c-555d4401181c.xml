@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>34</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/GoodsManage.aspx</ParentUrl>
+  <FileName>EditAttributeValues.ascx</FileName>
+  <PageName>编辑扩展属性</PageName>
+  <ParentID>3343f409-e2f1-4be6-b009-fbdf0cdcd533</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>f5bd0aeb-0a53-4121-908c-555d4401181c</id>
+</ModulePageInfo>

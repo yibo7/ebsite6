@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>5</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/UserPages/OrderManage.aspx</ParentUrl>
+  <FileName>MyComment.ascx</FileName>
+  <PageName>商品评价</PageName>
+  <ParentID>acd22185-6164-40ba-9a11-3c039d76c396</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>34394338-7ff6-480e-a478-e6809d8d7546</id>
+</ModulePageInfo>

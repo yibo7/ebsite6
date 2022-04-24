@@ -1,0 +1,93 @@
+﻿一.考试分类，由ebsite分类功能完成，安装时生成分类模型,模型内容有:
+   1.分类名称--ClassName
+二.试卷表,由ebsite内容表构成		
+		NewsTitle(string) 试卷名称
+		Annex11(int)	考试时间,分钟
+		Annex16(decimal) 优秀最低分数线
+		Annex17(decimal)  中等最低分数线
+		Annex18(decimal) 差评最低分数线
+		Annex4(string) 优秀评语
+		Annex3(string)  中等评语
+		Annex2(string) 差生评语
+		Annex12(int) 优秀人数总计
+		Annex13(int)  中等人数总计
+		Annex14(int) 差评人数总计
+		ContentInfo 试卷介绍
+		SmallPic    预览缩略图	
+
+
+
+	十六.exam_questionsclass(考题类别)
+		ExamID(int)
+		ClassName(string)
+		AddUserID
+		AddDateTime(date)	
+
+	十七.exam_questions(考题)
+		ExamID(int) 试卷ID
+		ClassID(int) 分类ID
+		QuestionsType(int) 考题类型 0 为单选题,1为多选题,2为填空题 3.问答题 4.判断题
+		Questions(string) 考题名称
+		AnswerInput(string) 填空题，问题考生填写内容
+		AnswerJudge(bool) 判断题答案，是否正确
+
+		AnswerA(string)  选择题答案A
+		AnswerB(string)  选择题答案B
+		AnswerC(string)  选择题答案C
+		AnswerD(string)  选择题答案D
+		AnswerE(string)  选择题答案E
+		AnswerF(string)  选择题答案F
+		AnswerG(string)  选择题答案G
+
+		RightABC(char 7) 选择题正确答案单选就一个字条A,如果是多选则多个字符用逗号分开，如 D,G,F
+		Analysis(text) 答案解析
+
+		AddDateTimeInt(int) 添加时间
+		AddUserID
+		AddUserNiName
+
+		RightUserCount(int) 正确人数总计
+		ErrorUserCount(int) 错误人数总计
+
+	十八.exam_testuser
+		ExamID(int)试卷ID
+		UserID(int) 
+		UserNiName(string)
+		Score(int) 得分
+		ScoreLevel 得分级别,0差，1中等，2优秀		
+		Comment(text) 得分评语
+		AddDateTimeInt(int) 添加时间
+		AddDateTime(string) 添加时间
+
+	 十九.voteclass
+		  ClassName(string)
+		  AddUserID
+		  AddDateTime(date)
+
+
+		  十五.exam_class(试卷分类--已经由分类表替换)	
+		  ClassName(string)
+		  AddUserID
+		  AddDateTime(date)
+		  ParentID
+		  OrderID
+
+	十五.exam_ination(试卷--(已经由内容表替换))	
+		ClassID(int) 试卷分类ID
+		Title(string) 试卷名称
+		TimeOut(int)	考试时间,分钟
+		GreatMinimum(int) 优秀最低分数线
+		MiddleMinimum(int)  中等最低分数线
+		PoorMinimum(int) 差评最低分数线
+		GreatInfo(string) 优秀评语
+		MiddleInfo(string)  中等评语
+		PoorInfo(string) 差生评语
+		AddDateTime(date) 添加时间
+		AddDateTimeInt(int) 添加时间
+		AddUserID
+		AddUserNiName
+
+		GreatUserCount(int) 优秀人数总计
+		MiddleUserCount(int)  中等人数总计
+		PoorUserCount(int) 差评人数总计
+		OrderID	

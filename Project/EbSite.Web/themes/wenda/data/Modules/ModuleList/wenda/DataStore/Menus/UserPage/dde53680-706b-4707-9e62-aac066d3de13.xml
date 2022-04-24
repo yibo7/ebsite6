@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>4e0edb7e-1b30-41ad-9f74-d63c80458c35</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/wenda/data/Modules/ModuleList/wenda/UserPages/ExpertAsk.aspx</ParentUrl>
+  <FileName>ExAskList.ascx</FileName>
+  <PageName>我的答疑</PageName>
+  <ParentID>90578fcd-0254-4d01-a8a1-e9dd6a64fdea</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>dde53680-706b-4707-9e62-aac066d3de13</id>
+</ModulePageInfo>

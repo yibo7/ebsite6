@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl />
+  <FileName>/themes/shop/data/Modules/ModuleList/shop/AdminPages/ExportData.aspx</FileName>
+  <PageName>数据导出导入</PageName>
+  <ParentID>00000000-0000-0000-0000-000000000000</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>02250f53-79cc-43fd-ac7a-a4209ca04c4e</id>
+</ModulePageInfo>

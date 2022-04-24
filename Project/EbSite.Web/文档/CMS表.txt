@@ -1,0 +1,93 @@
+﻿1.分类(newsclass)
+  自增					ID int(11) NOT NULL AUTO_INCREMENT
+  分类名称				ClassName varchar(100) DEFAULT NULL
+  排序Id				OrderID int(11) DEFAULT NULL
+  父Id					ParentID int(11) DEFAULT NULL
+  静态名称				HtmlName varchar(100) DEFAULT NULL  (静态目录或静态文件名称或重写目录,相对目录，不要在前面加/)
+  分类简介				Info longtext
+  标题样式				TitleStyle varchar(50) DEFAULT NULL (没有强制使用,可作为备用字段)
+  SEO标题				SeoTitle longtext					(根据规则生成)
+  每天点击量			dayHits int(11) DEFAULT NULL		(每天清零)
+  每周点击量			weekHits int(11) DEFAULT NULL		(每周清零)
+  每月点击量			monthhits int(11) DEFAULT NULL		(每月清零)
+  最后点击时间			lasthitstime datetime DEFAULT NULL   (每天，周，月清零用)
+  总点击				hits int(11)	DEFAULT NULL
+  SEO关键词				SeoKeyWord varchar(100) DEFAULT NULL	(根据规则生成)
+  SEO描述				SeoDescription varchar(300) DEFAULT NULL	(根据规则生成)
+  外部链接				OutLike varchar(100) DEFAULT NULL		(目前没有强制使用，可做为备用字段)
+  备用字段1				Annex1 varchar(100) DEFAULT NULL
+  备用字段2				Annex2 varchar(200) DEFAULT NULL
+  备用字段3				Annex3 varchar(300) DEFAULT NULL
+  备用字段4				Annex4 varchar(400) DEFAULT NULL
+  备用字段5				Annex5 varchar(500) DEFAULT NULL
+  备用字段6				Annex6 varchar(600) DEFAULT NULL
+  备用字段7				Annex7 varchar(700) DEFAULT NULL
+  备用字段8				Annex8 varchar(800) DEFAULT NULL
+  备用字段9				Annex9 varchar(900) DEFAULT NULL
+  备用字段10			Annex10 varchar(1000) DEFAULT NULL
+  备用字段11			Annex11 int(11) NOT NULL DEFAULT '0'
+  备用字段12			Annex12 int(11) NOT NULL DEFAULT '0'
+  备用字段13			Annex13 int(11) NOT NULL DEFAULT '0'
+  备用字段14			Annex14 int(11) DEFAULT '0'
+  备用字段15			Annex15 float(112) unsigned NOT NULL DEFAULT '0.00'
+  备用字段16			Annex16 int(11) DEFAULT NULL
+  备用字段17			Annex17 int(11) DEFAULT NULL
+  评论数				CommentNum int(11) DEFAULT NULL     (有时要针对某个分类做评论，可启用)
+  收藏数				FavorableNum int(11) DEFAULT NULL	(有时要让用户收藏分类，比如将分类做为内容时)
+  添加用户Id			UserID int(11) DEFAULT NULL
+  添加用户账号			UserName varchar(40) DEFAULT NULL
+  添加用户昵称			UserNiName varchar(50) DEFAULT NULL
+  添加时间				AddTime datetime DEFAULT NULL
+  是否用户皮肤			IsUserTheme tinyint(4) DEFAULT NULL
+  是否审核通过			IsAuditing tinyint(4) DEFAULT NULL	(有时将分类作为内容时，可以启用)
+  所在站点Id			SiteID tinyint(2) DEFAULT NULL
+  随机数				RandNum int(11) DEFAULT NULL
+  添加时间整数			NumberTime int(11) DEFAULT NULL
+  下级子分类数			SubClassNum int(11) DEFAULT NULL
+  父级Id集合			ParentIDs varchar(100) DEFAULT NULL
+  是否重写分类目录		IsHtmlNameReWrite tinyint(4) DEFAULT NULL (启用会将HtmlName设置的名称重写到此分类地址)
+  内容目录(相对)		ContentHtmlPath varchar(100) DEFAULT NULL  (相对目录，不要在前面加/,最好不要多级，目前只测试过一级)					
+  是否重写内容目录		IsHtmlNameReWriteContent tinyint(4) DEFAULT NULL  (启用会将此分类下的内容页面重写到ContentHtmlPath设置的目录名称下)
+  主键索引:
+  PRIMARY KEY (ID
+  KEY ClassParentID (ParentID) USING BTREE
+  KEY ClassSiteID (SiteID) USING BTREE
+
+2.classconfigs(分类配置表)
+  自增Id						id int(11) NOT NULL AUTO_INCREMENT,
+  内容静态页面规则				ContentHtmlName varchar(100) DEFAULT NULL,
+  分类静态页面规则				ClassHtmlNameRule varchar(100) DEFAULT NULL,
+  是否允许添加内容				IsCanAddContent tinyint(4) DEFAULT NULL,
+  内容模型Id					ContentModelID char(36) DEFAULT NULL,
+  内容模板Id					ContentTemID char(36) DEFAULT NULL,
+  分类模板Id					ClassTemID char(36) DEFAULT NULL,
+  分类模型Id					ClassModelID char(36) DEFAULT NULL,
+  子分类的添加提示名称			SubClassAddName varchar(50) DEFAULT NULL,
+  子分类模板Id					SubClassTemID char(36) DEFAULT NULL,   (默认添加子分类所附属的分类模板Id)
+  子分类模型Id					SubClassModelID char(36) DEFAULT NULL,
+  子分类默认内容模型Id			SubDefaultContentModelID char(36) DEFAULT NULL,
+  子分类默认内容模板Id			SubDefaultContentTemID char(36) DEFAULT NULL,
+  子分类是否可以添加子分类		SubIsCanAddSub tinyint(2) DEFAULT NULL,
+  子分类是否可以添加内容		SubIsCanAddContent tinyint(2) DEFAULT NULL,
+  当前分类是否可以添加子分类	IsCanAddSub tinyint(2) DEFAULT NULL,
+  当前分类后台列表模板			ListTemID char(36) DEFAULT NULL,	(后台管理内容列表模板，可以通过指定模板来改变后台列表)
+  前台内容列表分页数			PageSize tinyint(3) DEFAULT NULL,
+  此分类关联模块Id				ModuleID char(36) DEFAULT NULL,(内容扩展选项来自所选模块下的ExtContent扩展文件(为.ascx)当eBsite内容表字段不足够使用时 可以对当前分类下的内容表扩展保存数据)
+  关联分类Id					ClassID int(11) DEFAULT NULL,(已经不使用)
+  添加时间						AddTime datetime DEFAULT NULL,
+  移动版本的分类模板			ClassTemIdMobile char(36) DEFAULT NULL,
+  移动版本的内容模板			ContentTemIdMobile char(36) DEFAULT NULL,
+  所属站点Id					SiteID int(11) DEFAULT NULL,
+  是否为默认分类配置			IsDefault tinyint(4) DEFAULT NULL,(如果默认，那么添加分类时，如果没有选择配置，将默认选择)
+  主键索引:
+  PRIMARY KEY (id)
+  KEY indexClassID (ClassID)
+  KEY indexSiteID (SiteID)
+  KEY classmodelid (ClassModelID) USING BTREE
+
+  3.classsetconfig(分类配置表)
+  自增Id		Id int(11) NOT NULL AUTO_INCREMENT,
+  分类Id		ClassId int(11) DEFAULT NULL,
+  配置Id		ConfigId int(11) DEFAULT NULL,
+  主键：
+  PRIMARY KEY (Id)

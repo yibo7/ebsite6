@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WidgetBoxStyle>
+  <StyleColorPram />
+  <CustomDropDownListPram>风格=黄色&amp;ui-state-highlight,红色&amp;ui-state-error|方面=向上&amp;up,向下&amp;dow</CustomDropDownListPram>
+  <StyleName>无标题警告</StyleName>
+  <StyleTemp> &lt;div class="ui-widget"&gt;
+				&lt;div class="{风格}  ui-corner-all" style="padding: 0pt 0.7em;"&gt; 
+					&lt;p&gt;&lt;span  style="float: left; margin-right: 0.3em;"&gt;&lt;/span&gt; 
+					
+                    {Content}
+                    
+                    &lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;</StyleTemp>
+  <ThemeID>0</ThemeID>
+  <StyleClass>0</StyleClass>
+  <id>d40a49fa-02d1-484c-9792-b36605065a60</id>
+</WidgetBoxStyle>

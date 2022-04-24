@@ -1,0 +1,54 @@
+﻿<form id="fUserLogin">
+
+<div class="sj_top"  >
+					<li tid="0" name="lg_username" class="cur" ><a >账户登录</a></li>
+					<li tid="1" name="lg_emailmobile" style=" width:120px;" ><a>手机或邮箱登录</a></li>
+					<li tid="2" name="lg_emailmobile" style=" width:120px; "   ><a style="color:#ff0000;">快速注册</a></li>
+				</div>
+			  <div id="con1" style="padding-left:10px;">
+                    <div  style="background:#FFFBF7; color:#BDBDBD; font-size:12px; border:1px dotted #F5F1ED; margin-top: 8px;">老用户直接登录，如果您是新用户，请点快速注册来快速生成帐号！</div>
+					<table  border="0" cellpadding="0" cellspacing="0" class="sj_tab" >
+						  <tr id="lg_username">
+							<td  height="77" width="80" align="right">账号：</td>
+							<td width="242"><input style="height: 28px;line-height: 28px; width: 200px;" id="login_username" name="login_username"  type="text" value="您的帐号" class="inp_name"  /></td>
+							<td width="171"><span id="errlogin_username" style="color:#ccc; font-size:12px;"></span></td>
+					    </tr>
+                        <tr id="lg_emailmobile" style="display:none;">
+							<td  height="77" align="right">邮箱/手机号：</td>
+							<td width="242"><input style="height: 28px;line-height: 28px; width: 200px;" id="login_em" name="login_em" type="text" value="电子邮箱/手机号" class="inp_name"  /></td>
+							<td width="171"><span id="errlogin_em" style="color:#ccc; font-size:12px;"></span></td>
+					    </tr>
+						  <tr>
+							<td align="right">密码：</td>
+							<td><input style="height: 28px;line-height: 28px; width: 200px;" type="password" value="11111" id="login_pwd" name="login_pwd" class="inp_name" /></td>
+							<td><span id="errlogin_pwd" style="color:#ccc; font-size:12px;"></span></td>
+							</tr>
+                          <tr style="display:none;" id="show_yzm">
+                            <td align="right" height="59">验证码：</td>
+                            <td><input style="height: 28px;line-height: 28px; width: 200px;" type="text" name="login_yzm" id="login_yzm" class="inp_yzm2" style="float:left" />
+                             <img id="ValidateCode" class="ValidateCode" src="/ValidateCode.ashx?" onclick="this.src+=Math.random()"   style="float:left; cursor: pointer; height:30px;" /></td>
+                            <td><a onclick="$('.ValidateCode').click();" style="color:#076FA2;cursor: pointer;">看不清？<span style="text-decoration:underline">换一张</span></a></td>
+                            </tr>
+                            <tr style="display:none;" id="errshow_yzm">
+                                <td height="19">&nbsp;</td>
+                                <td style="font-size:12px;"><span id="errlogin_yzm" style="color:#ccc"></span></td>
+                                <td>&nbsp;</td>
+                             </tr>
+						  <tr id="lostpasswordreme">
+							<td height="32">&nbsp;</td>
+							<td style="font-size:12px;">
+                            <a href="/lostpassword.ashx">忘记密码</a></td>
+							<td>&nbsp;</td>
+							</tr>
+						  <tr>
+							<td height="132">&nbsp;</td>
+							<td><input type="submit" value=" 快速登录 " id="btnOpLoginUser"   />
+                               
+                                <a style=" font-size:12px; display:none" href="/reg.ashx">注册新用户</a>
+                            </td>
+							<td>&nbsp;</td>
+							</tr>
+					</table>
+				</div>
+            
+</form>

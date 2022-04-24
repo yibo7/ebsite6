@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>3</Permission>
+  <ModuleID>8961c5b2-43f2-4298-8145-f0965aff70a0</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/ebsite/data/Modules/ModuleList/UserBaseInfo/AdminPages/Splace.aspx</ParentUrl>
+  <FileName>ThemesList.ascx</FileName>
+  <PageName>皮肤列表</PageName>
+  <ParentID>629719d5-76f2-49f5-a2db-1a998e7672fd</ParentID>
+  <OrderID>2</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>1c4b9237-eb79-478e-8735-6f5ea50d8d54</id>
+</ModulePageInfo>

@@ -1,0 +1,48 @@
+.ui-panel{position:absolute;display:block;}.ui-panel-contentWrap{position:relative;z-index:1;}.ui-panel.ui-panel-right{right:0;}.ui-panel.ui-panel-left{left:0;}.ui-panel.ui-panel-push{z-index:999;}.ui-panel.ui-panel-overlay{z-index:1001;}.ui-panel.ui-panel-reveal{z-index:0;}.ui-panel-animate{-webkit-transition:-webkit-transform 350ms ease;}.ui-panel-dismiss{position:absolute;z-index:1000;height:100%;top:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+/*---分类页右则面板---*/
+.rightpanel h2 {
+    color: white; 
+    padding-left: 20px;
+    padding-top:10px;
+}
+.rightpanel h2 a {
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+}
+    .rightpanel div.duanxian {
+        width: 100%;
+         height: 2px; 
+         margin-top: 10px; 
+         background-color: #514f4f; 
+         z-index: 1;
+    }
+     .rightpanel div.changxian {
+         height: 2px;
+          width: 108px;
+           margin: 0px; 
+           padding: 0px; 
+           background-color: #b7b7b7; 
+           z-index: 999;
+    }
+.rightpanel ul {
+    padding:0px;
+    margin:0px;
+}
+.rightpanel ul li {
+    list-style:none;
+    color:#fff;
+    font-size:14px;
+    font-weight:normal;
+    border-bottom:1px solid #585858;
+    padding:0px;
+    padding-left:10px;
+    padding-top:15px;
+    padding-bottom:10px;
+}
+.rightpanel ul li a{
+    color:#fff;
+    font-size:14px;
+    font-weight:normal;text-decoration:none;
+}

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SpiderEntity>
+  <SpiderCnName>百度</SpiderCnName>
+  <SpiderEnName>Baiduspider</SpiderEnName>
+  <SpiderCount>0</SpiderCount>
+  <id>1</id>
+</SpiderEntity>

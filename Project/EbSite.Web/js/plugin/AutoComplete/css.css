@@ -1,0 +1,26 @@
+﻿/* 提示框样式 */
+	.ac_results {position: absolute;z-index: 10000;display: none;border: 3px solid #666; padding:2px; font-size:12px;width:200px; background-color:#fff;}
+	.ac_results ul{padding:0px; margin:0px; list-style:none;}
+	.ac_results li {padding: 4px 5px;white-space: nowrap;color: #101010;text-align: left; position:relative; }
+	.ac_results li em { position:absolute; right:0px; top:0;padding: 4px 5px; font-style:normal; }
+
+	.ac_header{ background:#666;color:#fff; line-height:25px; padding-left:5px; margin-bottom:2px; }
+	.ac_footer{ background:#666;color:#fff; line-height:25px; padding-left:5px; margin-top:2px;}
+	.ac_over {cursor: pointer;background-color: #ccc; color:#fff;	}
+	
+	/* 热门提示框样式 */
+	.ac_hotResults 	{position: absolute;z-index: 10000;display: none;border: 3px solid #FF8000; padding:2px; font-size:12px;width:200px; background-color:#fff; }
+	.ac_hotResults ul{padding:0px; margin:0px; list-style:none;}
+	.ac_hotResults li {padding: 2px 5px;white-space: nowrap;color: #101010;text-align: left; }
+	.ac_hotResults li em { display:none; }
+
+	.ac_hotHeader{ clear:both;background:#FF8000; color:#fff; line-height:25px; padding-left:5px; margin-bottom:2px;}
+	.ac_hotFooter{ clear:both;background:#FF8000; color:#fff; line-height:25px; padding-left:5px; margin-top:2px;}
+	.ac_hotOver{cursor: pointer;background-color: #ff8000; color:#FFF;}
+
+    /* 匹配上文本样式 */
+	.ac_match {text-decoration: underline;color: #a40000;}	
+	/* 文本框为默认值时样式 */
+	.ac_inputDefaultValueClass{ color:#aaa;}
+	
+	#displayHot{ cursor:pointer; text-decoration:underline;}	

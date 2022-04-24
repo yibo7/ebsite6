@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>93</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/StockAlarm.aspx</ParentUrl>
+  <FileName>ProductLog.ascx</FileName>
+  <PageName>商品进出库查询</PageName>
+  <ParentID>10dd48c8-d4f9-46c7-83c1-1c80d0dfe214</ParentID>
+  <OrderID>3</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>9de5a73a-2f0a-408c-bff8-0aff8a7b3b30</id>
+</ModulePageInfo>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/Orders.aspx</ParentUrl>
+  <FileName>ListForsuccess.ascx</FileName>
+  <PageName>交易完成</PageName>
+  <ParentID>5f770597-e2bd-4c19-b206-97eebadb573a</ParentID>
+  <OrderID>7</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>7981d558-83ce-4197-8e9b-5c145a8d93c4</id>
+</ModulePageInfo>

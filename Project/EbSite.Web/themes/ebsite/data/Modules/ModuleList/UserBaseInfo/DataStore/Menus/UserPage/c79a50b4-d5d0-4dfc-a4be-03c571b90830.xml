@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>7</Permission>
+  <ModuleID>8961c5b2-43f2-4298-8145-f0965aff70a0</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/ebsite/data/Modules/ModuleList/UserBaseInfo/UserPages/AccountMoney.aspx</ParentUrl>
+  <FileName>MoneyIn.ascx</FileName>
+  <PageName>预付款充值</PageName>
+  <ParentID>c65f0059-b345-4c0b-a437-37363f2fa4e9</ParentID>
+  <OrderID>2</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>c79a50b4-d5d0-4dfc-a4be-03c571b90830</id>
+</ModulePageInfo>

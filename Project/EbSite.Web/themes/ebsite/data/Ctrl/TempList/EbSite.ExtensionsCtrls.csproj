@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35F7B282-CEB7-409E-A556-6732187FDC43}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EbSite.ExtensionsCtrls</RootNamespace>
+    <AssemblyName>EbSite.ExtensionsCtrls</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EbSite.Base, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\libbin\EbSite.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.BLL, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\libbin\EbSite.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Control, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\libbin\EbSite.Control.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Core, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\libbin\EbSite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Entity, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\libbin\EbSite.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AreaList\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AreaList\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AreaList\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AreaList\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBoxList\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckBoxList\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBoxList\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckBoxList\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBox\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckBox\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBox\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckBox\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ClassListBox\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClassListBox\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ClassListBox\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClassListBox\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ColorPicker\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ColorPicker\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CtrListBox\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CtrListBox\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CtrListBox\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CtrListBox\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CtrTemListBox\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CtrTemListBox\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CtrTemListBox\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CtrTemListBox\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DatePicker\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatePicker\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DatePicker\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatePicker\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DropListValue\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DropListValue\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DropListValue\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DropListValue\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DropList\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DropList\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DropList\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DropList\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UEditor\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UEditor\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UEditor\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UEditor\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlBox\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HtmlBox\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlBox\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HtmlBox\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ListBox\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListBox\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ListBox\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListBox\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelListBox\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModelListBox\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelListBox\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModelListBox\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadioButtonList\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RadioButtonList\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="RadioButtonList\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RadioButtonList\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialListBox\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SpecialListBox\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialListBox\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SpecialListBox\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemListBox\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemListBox\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemListBox\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemListBox\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TextBox\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TextBox\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TextBox\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TextBox\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadImg\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadImg\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadImg\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadImg\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUpFile\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUpFile\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUpFile\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUpFile\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserLevel\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLevel\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserLevel\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLevel\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AreaList\areadme.txt" />
+    <Content Include="AreaList\Ctrl.ascx" />
+    <Content Include="AreaList\Edit.ascx" />
+    <Content Include="CheckBoxList\areadme.txt" />
+    <Content Include="CheckBoxList\Ctrl.ascx" />
+    <Content Include="CheckBoxList\Edit.ascx" />
+    <Content Include="CheckBox\areadme.txt" />
+    <Content Include="CheckBox\Ctrl.ascx" />
+    <Content Include="CheckBox\Edit.ascx" />
+    <Content Include="ClassListBox\areadme.txt" />
+    <Content Include="ClassListBox\Ctrl.ascx" />
+    <Content Include="ClassListBox\Edit.ascx" />
+    <Content Include="ColorPicker\areadme.txt" />
+    <Content Include="ColorPicker\Ctrl.ascx" />
+    <Content Include="ColorPicker\Edit.ascx" />
+    <Content Include="CtrListBox\areadme.txt" />
+    <Content Include="CtrListBox\Ctrl.ascx" />
+    <Content Include="CtrListBox\Edit.ascx" />
+    <Content Include="CtrTemListBox\areadme.txt" />
+    <Content Include="CtrTemListBox\Ctrl.ascx" />
+    <Content Include="CtrTemListBox\Edit.ascx" />
+    <Content Include="DatePicker\areadme.txt" />
+    <Content Include="DatePicker\Ctrl.ascx" />
+    <Content Include="DatePicker\Edit.ascx" />
+    <Content Include="DropListValue\areadme.txt" />
+    <Content Include="DropListValue\Ctrl.ascx" />
+    <Content Include="DropListValue\Edit.ascx" />
+    <Content Include="DropList\areadme.txt" />
+    <Content Include="DropList\Ctrl.ascx" />
+    <Content Include="DropList\Edit.ascx" />
+    <Content Include="UEditor\areadme.txt" />
+    <Content Include="UEditor\Ctrl.ascx" />
+    <Content Include="UEditor\Edit.ascx" />
+    <Content Include="HtmlBox\areadme.txt" />
+    <Content Include="HtmlBox\Ctrl.ascx" />
+    <Content Include="HtmlBox\Edit.ascx" />
+    <Content Include="ListBox\areadme.txt" />
+    <Content Include="ListBox\Ctrl.ascx" />
+    <Content Include="ListBox\Edit.ascx" />
+    <Content Include="ModelListBox\areadme.txt" />
+    <Content Include="ModelListBox\Ctrl.ascx" />
+    <Content Include="ModelListBox\Edit.ascx" />
+    <Content Include="RadioButtonList\areadme.txt" />
+    <Content Include="RadioButtonList\Ctrl.ascx" />
+    <Content Include="RadioButtonList\Edit.ascx" />
+    <Content Include="SpecialListBox\areadme.txt" />
+    <Content Include="SpecialListBox\Ctrl.ascx" />
+    <Content Include="SpecialListBox\Edit.ascx" />
+    <Content Include="TemListBox\areadme.txt" />
+    <Content Include="TemListBox\Ctrl.ascx" />
+    <Content Include="TemListBox\Edit.ascx" />
+    <Content Include="TextBox\areadme.txt" />
+    <Content Include="TextBox\Ctrl.ascx" />
+    <Content Include="TextBox\edit.ascx" />
+    <Content Include="UploadImg\areadme.txt" />
+    <Content Include="UploadImg\Ctrl.ascx" />
+    <Content Include="UploadImg\Edit.ascx" />
+    <Content Include="WebUpFile\areadme.txt" />
+    <Content Include="WebUpFile\Ctrl.ascx" />
+    <Content Include="WebUpFile\Edit.ascx" />
+    <Content Include="UserLevel\areadme.txt" />
+    <Content Include="UserLevel\Ctrl.ascx" />
+    <Content Include="UserLevel\Edit.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+    <None Include="Properties\PublishProfiles\abc.pubxml" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5608</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

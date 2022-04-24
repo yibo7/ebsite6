@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>2</Permission>
+  <ModuleID>b3eef4b1-6c2c-4528-9e15-ad33716238ce</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/bbs/data/Modules/ModuleList/bbs/AdminPages/ImitatePost.aspx</ParentUrl>
+  <FileName>ImitatePostUser.ascx</FileName>
+  <PageName>模块发帖用户</PageName>
+  <ParentID>fb9b578d-2571-40d3-8c9a-53a00461eb52</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>8401883f-b7d3-4602-af3f-70960b4cbe84</id>
+</ModulePageInfo>

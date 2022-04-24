@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>22</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/RobBuy.aspx</ParentUrl>
+  <FileName>RobBuyAdd.ascx</FileName>
+  <PageName>抢购添加</PageName>
+  <ParentID>8bab1cba-435f-4314-b8ab-fa11893af8ad</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>fcfac864-9d8b-4473-84a3-0aa0fff20a47</id>
+</ModulePageInfo>

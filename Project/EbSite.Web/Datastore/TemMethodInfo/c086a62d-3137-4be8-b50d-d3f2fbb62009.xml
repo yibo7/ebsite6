@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>获取分类连接地址-手机版</Title>
+  <GetCode>&lt;%= EbSite.Base.Host.Instance.MGetClassHref(object iID,, int pIndex)%&gt;</GetCode>
+  <Author>EbSite</Author>
+  <Demo> /// &lt;summary&gt;
+        /// 获取分类连接地址
+        /// &lt;/summary&gt;
+        /// &lt;param name="iID"&gt;分类ID&lt;/param&gt;
+        /// &lt;param name="pIndex"&gt;页码&lt;/param&gt;</Demo>
+  <id>c086a62d-3137-4be8-b50d-d3f2fbb62009</id>
+</TemMethodInfo>

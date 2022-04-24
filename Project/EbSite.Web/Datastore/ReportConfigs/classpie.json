@@ -1,0 +1,19 @@
+﻿{
+  
+  "ReportName": "分类访问占比",
+  "IcoPath": "/images/Menus/Chart1.gif",
+  "OrderId": 4,
+  "Ctrs": [
+    {
+      "Text": "检索数量",
+      "Value": "06f03d9b-0547-4179-8d1e-942d9808e996"
+    }
+  ],
+  "QuerySql": "SELECT ClassName 分类名称,hits 访问数 FROM eb_newsclass ORDER BY hits DESC LIMIT 06f03d9b-0547-4179-8d1e-942d9808e996",
+  "DefaultSql": "SELECT ClassName 分类名称,hits 访问数 FROM eb_newsclass ORDER BY hits DESC LIMIT 10",
+
+  "PermissionId": "322",
+  "DalType": 1,
+  "DefaultTips": "默认载入前10条数据",
+   "ShowType": 3
+}

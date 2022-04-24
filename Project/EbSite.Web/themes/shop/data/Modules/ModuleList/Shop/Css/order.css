@@ -1,0 +1,110 @@
+﻿ .divpanel{width: 95%;height: auto;border: 1px solid #9BD88A;padding: 10px;margin: 10px;}
+ .headtitle{width: 98%;font-size: 14px;margin-bottom: 10px;font-weight: bold;padding-left: 10px;border: 1px solid #D7E9FC; background-color: #F0F7FE;height: 30px;line-height: 30px;vertical-align: middle;}
+ .commpanel{width:80%; margin-bottom:10px; padding:10px; height:auto; border:1px solid #D7E9FC;}
+
+.step{width:856px; height:28px; line-height:28px; vertical-align:middle; margin:5px; border-right:1px solid #D7E9FC;}
+.step ul{ margin:0px; padding:0px; width:100%; height:100%;}
+.step ul li{ width:189px; float:left; text-align:center;}
+.step ul li span{ font-size:14px; font-weight:bold;}
+.step ul li span b{ font-size:12px; font-weight:bold; color:#FF4800;}
+.licss{ color:White;}
+.licss span{ color:#FFFF00;}
+.licss span b{color:#FFFF00;}
+
+.step1{ background:url(step.png) no-repeat}
+.step2{ background:url(step.png) no-repeat 0px -28px;}
+.step3{ background:url(step.png) no-repeat 0px -58px;}
+.step4{ background:url(step.png) no-repeat 0px -88px;}
+
+.orderstate{ margin-left:20px; padding-top:10px;}
+.orderstate span{ font-size:14px; font-weight:bold; color:#FF7F00;}
+
+.btnedit{width:90px; height:25px; border:0px; background:url(icon.gif) no-repeat -123px -217px; padding-left:13px; color:#004380; outline:none; cursor:pointer;}
+.btnmark{width:65px; height:25px; border:0px; background:url(icon.gif) no-repeat -110px -113px; padding-left:13px; color:#004380; outline:none;cursor:pointer;}
+.btnclorder{width:100px; height:25px; border:0px; background:url(icon.gif) no-repeat -74px -165px; padding-left:13px; color:#004380; outline:none;cursor:pointer;}
+.btnrefundorder {width:60px; height:25px; border:0px; background:url(icon.gif) no-repeat -177px -165px; padding-left:13px; color:#004380; outline:none;cursor:pointer;}
+.btnclose {width:60px; height:25px; border:0px; background:url(icon.gif) no-repeat -240px -165px; padding-left:13px; color:#004380; outline:none;cursor:pointer;
+}
+.btnprint{ border:0px; background:url(icon.gif) no-repeat -109px -87px; width:102px;height: 24px;cursor:pointer;}
+
+.stepul li{list-style:none;
+}
+
+/*数据列表*/
+.datalist_orderitem{width:900px;}
+.datalist_orderitem thead tr{ background:url(bg.png) repeat-x 0px -388px; height:28px; line-height:28px; vertical-align:middle; }
+.datalist_orderitem thead tr th{text-align:left; padding:0px 10px; border:1px solid #E0DCCE; font-weight:normal;}
+.datalist_orderitem tbody tr td{ border-bottom:1px solid #E0DCCE; padding-left:10px;}
+.datalist_orderitem tbody tr td a{ color:Blue; text-decoration:underline;}
+.datalist_orderitem tbody tr td span{ color:#785540;}
+
+
+/*订单费用信息*/
+.orderpriceinfo{width:900px;}
+.orderpriceinfo tr td{ border-top:1px solid #E4E4E4;}
+
+
+/*连接样式*/
+.btnlink{ color:Blue; text-decoration:underline;}
+
+
+/*打印样式*/
+.printcss{width:100%; background-color:#E0DCCE; border-collapse:collapse;}
+.printcss tr th{ text-align:right;width:125px; background-color:#F6FAF1;}
+.printcss tr td{ text-align:left;padding:5px; background-color:White;}
+
+.printnocss{width:900px; border-collapse:collapse;}
+.printnocss tr th{ text-align:right;width:125px;}
+.printnocss tr td{ text-align:left;padding:5px;}
+
+.printtitle{width:100%;font-size: 14px;font-weight: bold;border: 1px solid #D7E9FC; background-color: #F0F7FE;height: 30px;line-height: 30px;vertical-align: middle;}
+.divclear{ height:5px; width:900px; border-bottom:1px solid black;}
+.writename{ height:30px; line-height:30px; vertical-align:middle; font-size:12px; font-weight:bold;}
+
+.printlist {
+width:900px;
+
+background-color:#373434;
+border-collapse:separate;
+border-spacing:1px;
+}
+.printlist thead tr th {
+font-size:14px;
+font-weight:bold;
+text-align:center;
+background-color:#fff;
+padding:5px;
+}
+.printlist thead tr th.printlist_num {
+width:50px;
+}
+.printlist tbody tr td {
+font-size:12px;
+text-align:center;
+padding:5px;
+background-color:#fff;
+}
+.printlist tbody tr td.printlist_left {
+text-align:left;
+padding-left:10px;
+}
+.printlist tbody tr td table {background-color:#F0F7FE;width:900px;}
+.printlist tbody tr td table thead tr th {font-size:12px; font-weight:normal;background-color:#F0F7FE;}
+.printlist tbody tr td table tbody tr td {background-color:#F0F7FE;}
+
+    .printlist tr th {
+        font-size:12px;
+text-align:center;
+padding:5px;
+background-color:#fff;
+    }
+
+
+#btnaddcount {
+    background:url(addFile.gif) no-repeat 0px -15px;
+    cursor:pointer;
+}
+#btnacccount {
+    background:url(addFile.gif) no-repeat 0px -48px;
+    cursor:pointer;
+}

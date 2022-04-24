@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/Orders.aspx</ParentUrl>
+  <FileName>ListForClose.ascx</FileName>
+  <PageName>回收站</PageName>
+  <ParentID>5f770597-e2bd-4c19-b206-97eebadb573a</ParentID>
+  <OrderID>8</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>6e44c9fd-c2ea-4a42-964f-d9e8aed81f26</id>
+</ModulePageInfo>

@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title> 
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.1&services=true"></script>
+    <style type="text/css">
+        .content {
+           width:512px; height:320px;text-align:center;margin-top:10px
+        }
+
+            .content table {
+                width: 100%;
+            }
+
+                .content table td {
+                    vertical-align: middle;
+                }
+
+        #city, #address {
+            height: 21px;
+            background: #FFF;
+            border: 1px solid #d7d7d7;
+            line-height: 21px;
+        }
+
+        #city {
+            width: 60px;
+        }
+
+        #address {
+            width: 130px;
+        }
+
+        #is_dynamic_label span {
+            vertical-align: middle;
+            margin: 3px 0px 3px 3px;
+        }
+
+        #is_dynamic_label input {
+            vertical-align: middle;
+            margin: 3px 3px 3px 50px;
+        }
+    </style>
+</head>
+<body onload="">
+    <div class="content">
+        <table>
+            <tr>
+                <td>城市:</td>
+                <td><input id="city" type="text" />中国</td>
+                <td>地址:</td>
+                <td><input id="address" type="text" value="" /></td>
+                <td><button onclick="doSearch()" id="mapsearch">搜索</button> <button onclick="    addMap()" id="addMap">插入地图</button></td>
+
+            </tr>
+        </table>
+        <div style="width:100%;height:300px;border:1px solid gray" id="container"></div>
+
+    </div>
+    <script type="text/javascript">
+    var map = new BMap.Map("container"),marker,point,styleStr;
+    map.enableScrollWheelZoom();
+    map.enableContinuousZoom();
+    function doSearch(){
+        if (!document.getElementById('city').value) {
+            alert(lang.cityMsg);
+            return;
+        }
+        var search = new BMap.LocalSearch(document.getElementById('city').value, {
+            onSearchComplete: function (results){
+                if (results && results.getNumPois()) {
+                    var points = [];
+                    for (var i=0; i<results.getCurrentNumPois(); i++) {
+                        points.push(results.getPoi(i).point);
+                    }
+                    if (points.length > 1) {
+                        map.setViewport(points);
+                    } else {
+                        map.centerAndZoom(points[0], 13);
+                    }
+                    point = map.getCenter();
+                    marker.setPoint(point);
+                } else {
+                    alert(lang.errorMsg);
+                }
+            }
+        });
+        search.search(document.getElementById('address').value || document.getElementById('city').value);
+    }
+    //获得参数
+    function getPars(str,par){
+        var reg = new RegExp(par+"=((\\d+|[.,])*)","g");
+        return reg.exec(str)[1];
+    }
+
+    function addMap() {
+        var center = map.getCenter();
+        var zoom = map.zoomLevel;
+        var size = map.getSize();
+        var mapWidth = size.width;
+        var mapHeight = size.height;
+        var point = marker.getPoint();
+        var url = "http://api.map.baidu.com/staticimage?center=" + center.lng + ',' + center.lat +
+                    "&zoom=" + zoom + "&width=" + size.width + '&height=' + size.height + "&markers=" + point.lng + ',' + point.lat;
+
+        callback(url);
+    }
+
+    function init(){
+        point = new BMap.Point(116.404, 39.915);    // 创建点坐标
+        marker = new BMap.Marker(point);
+        map.addControl(new BMap.NavigationControl());
+        map.centerAndZoom(point, 10);                     // 初始化地图,设置中心点坐标和地图级别。
+        marker.enableDragging();
+        map.addOverlay(marker);
+    }
+  
+
+    document.getElementById('mapsearch').onkeydown = function (evt) {
+        evt = evt || event;
+        if (evt.keyCode == 13) {
+            doSearch();
+        }
+    };
+    
+    document.getElementById("address").focus();
+
+    init();
+
+    </script>
+
+
+</body>
+</html>

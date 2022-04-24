@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>8961c5b2-43f2-4298-8145-f0965aff70a0</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/ebsite/data/Modules/ModuleList/UserBaseInfo/UserPages/Chat.aspx</ParentUrl>
+  <FileName>ChatOnline.ascx</FileName>
+  <PageName>即时聊天窗口</PageName>
+  <ParentID>eb1e11de-5307-469d-b350-4035c4621dae</ParentID>
+  <OrderID>5</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>f546355f-b540-4082-8ce0-674be18a117b</id>
+</ModulePageInfo>

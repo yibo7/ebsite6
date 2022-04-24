@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="width" Value="100" />
+    <DictionaryEntry Key="heigth" Value="20" />
+    <DictionaryEntry Key="items" Value="男&#xD;&#xA;女" />
+    <DictionaryEntry Key="defaultselect" Value="男" />
+    <DictionaryEntry Key="repeatcolumns" Value="3" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

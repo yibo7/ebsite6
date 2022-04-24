@@ -1,0 +1,1824 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0A4BE07D-AE27-4213-963E-183155F9DC98}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EbSite.Modules.Shop</RootNamespace>
+    <AssemblyName>EbSite.Modules.Shop</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\log4\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Base, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.BLL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Control, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Control.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Core, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Data.Interface, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Data.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Data.User.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Data.User.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Entity, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.0.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPages\BrandManage.aspx.cs">
+      <DependentUpon>BrandManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\BrandManage.aspx.designer.cs">
+      <DependentUpon>BrandManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\BrandManage\BestGroup.ascx.cs">
+      <DependentUpon>BestGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\BrandManage\BestGroup.ascx.designer.cs">
+      <DependentUpon>BestGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\BrandManage\BrandList.ascx.cs">
+      <DependentUpon>BrandList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\BrandManage\BrandList.ascx.designer.cs">
+      <DependentUpon>BrandList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\BrandManage\BrandAdd.ascx.cs">
+      <DependentUpon>BrandAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\BrandManage\BrandAdd.ascx.designer.cs">
+      <DependentUpon>BrandAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\BrandManage\FreeItems.ascx.cs">
+      <DependentUpon>FreeItems.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\BrandManage\FreeItems.ascx.designer.cs">
+      <DependentUpon>FreeItems.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\BrandManage\RecommendPart.ascx.cs">
+      <DependentUpon>RecommendPart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\BrandManage\RecommendPart.ascx.designer.cs">
+      <DependentUpon>RecommendPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\BrandManage\UserBook.ascx.cs">
+      <DependentUpon>UserBook.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\BrandManage\UserBook.ascx.designer.cs">
+      <DependentUpon>UserBook.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\CreditProduct\AddProduct.ascx.cs">
+      <DependentUpon>AddProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\CreditProduct\AddProduct.ascx.designer.cs">
+      <DependentUpon>AddProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\CreditProduct\AddClass.ascx.cs">
+      <DependentUpon>AddClass.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\CreditProduct\AddClass.ascx.designer.cs">
+      <DependentUpon>AddClass.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\CreditProduct\ListClass.ascx.cs">
+      <DependentUpon>ListClass.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\CreditProduct\ListClass.ascx.designer.cs">
+      <DependentUpon>ListClass.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\CreditProduct\ListProduct.ascx.cs">
+      <DependentUpon>ListProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\CreditProduct\ListProduct.ascx.designer.cs">
+      <DependentUpon>ListProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\DownNotice\DownList.ascx.cs">
+      <DependentUpon>DownList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\DownNotice\DownList.ascx.designer.cs">
+      <DependentUpon>DownList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\DownNotice\SendMsg.ascx.cs">
+      <DependentUpon>SendMsg.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\DownNotice\SendMsg.ascx.designer.cs">
+      <DependentUpon>SendMsg.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\DownNotice\ShowDown.ascx.cs">
+      <DependentUpon>ShowDown.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\DownNotice\ShowDown.ascx.designer.cs">
+      <DependentUpon>ShowDown.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ExportData\taobaoin.ascx.cs">
+      <DependentUpon>taobaoin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ExportData\taobaoin.ascx.designer.cs">
+      <DependentUpon>taobaoin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ExportData\paipaiin.ascx.cs">
+      <DependentUpon>paipaiin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ExportData\paipaiin.ascx.designer.cs">
+      <DependentUpon>paipaiin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ExportData\ExportBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ExportData\paipaiout.ascx.cs">
+      <DependentUpon>paipaiout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ExportData\paipaiout.ascx.designer.cs">
+      <DependentUpon>paipaiout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ExportData\taobaoout.ascx.cs">
+      <DependentUpon>taobaoout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ExportData\taobaoout.ascx.designer.cs">
+      <DependentUpon>taobaoout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\AddFloor.ascx.cs">
+      <DependentUpon>AddFloor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\AddFloor.ascx.designer.cs">
+      <DependentUpon>AddFloor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\MobileDesignFloor.ascx.cs">
+      <DependentUpon>MobileDesignFloor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\MobileDesignFloor.ascx.designer.cs">
+      <DependentUpon>MobileDesignFloor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\DesignFloor.ascx.cs">
+      <DependentUpon>DesignFloor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\DesignFloor.ascx.designer.cs">
+      <DependentUpon>DesignFloor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\List.ascx.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\List.ascx.designer.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\MobileList.ascx.cs">
+      <DependentUpon>MobileList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\MobileList.ascx.designer.cs">
+      <DependentUpon>MobileList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\SetFloorBigClass.ascx.cs">
+      <DependentUpon>SetFloorBigClass.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\SetFloorBigClass.ascx.designer.cs">
+      <DependentUpon>SetFloorBigClass.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\SetFloorChildClass.ascx.cs">
+      <DependentUpon>SetFloorChildClass.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\SetFloorChildClass.ascx.designer.cs">
+      <DependentUpon>SetFloorChildClass.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\SetAdvGoods.ascx.cs">
+      <DependentUpon>SetAdvGoods.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\SetAdvGoods.ascx.designer.cs">
+      <DependentUpon>SetAdvGoods.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\SetGoodsList.ascx.cs">
+      <DependentUpon>SetGoodsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\SetGoodsList.ascx.designer.cs">
+      <DependentUpon>SetGoodsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\SetBrandList.ascx.cs">
+      <DependentUpon>SetBrandList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\SetBrandList.ascx.designer.cs">
+      <DependentUpon>SetBrandList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\SetAdvLink.ascx.cs">
+      <DependentUpon>SetAdvLink.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\SetAdvLink.ascx.designer.cs">
+      <DependentUpon>SetAdvLink.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\BigClassList.ascx.cs">
+      <DependentUpon>BigClassList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\BigClassList.ascx.designer.cs">
+      <DependentUpon>BigClassList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\ChildClassList.ascx.cs">
+      <DependentUpon>ChildClassList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\ChildClassList.ascx.designer.cs">
+      <DependentUpon>ChildClassList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\AdvLinkList.ascx.cs">
+      <DependentUpon>AdvLinkList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\AdvLinkList.ascx.designer.cs">
+      <DependentUpon>AdvLinkList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\AdvGoodsList.ascx.cs">
+      <DependentUpon>AdvGoodsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\AdvGoodsList.ascx.designer.cs">
+      <DependentUpon>AdvGoodsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\BrandList.ascx.cs">
+      <DependentUpon>BrandList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\BrandList.ascx.designer.cs">
+      <DependentUpon>BrandList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\GoodsList.ascx.cs">
+      <DependentUpon>GoodsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\GoodsList.ascx.designer.cs">
+      <DependentUpon>GoodsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\AddMFloor.ascx.cs">
+      <DependentUpon>AddMFloor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\AddMFloor.ascx.designer.cs">
+      <DependentUpon>AddMFloor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\MAdvLinkList.ascx.cs">
+      <DependentUpon>MAdvLinkList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\MAdvLinkList.ascx.designer.cs">
+      <DependentUpon>MAdvLinkList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\MSetAdvLink.ascx.cs">
+      <DependentUpon>MSetAdvLink.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\MSetAdvLink.ascx.designer.cs">
+      <DependentUpon>MSetAdvLink.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\MAdvChildList.ascx.cs">
+      <DependentUpon>MAdvChildList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\MAdvChildList.ascx.designer.cs">
+      <DependentUpon>MAdvChildList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\MSetAdvChild.ascx.cs">
+      <DependentUpon>MSetAdvChild.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\FloorSet\MSetAdvChild.ascx.designer.cs">
+      <DependentUpon>MSetAdvChild.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\Ad2GoodsType.ascx.cs">
+      <DependentUpon>Ad2GoodsType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\Ad2GoodsType.ascx.designer.cs">
+      <DependentUpon>Ad2GoodsType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\Ad3GoodsType.ascx.cs">
+      <DependentUpon>Ad3GoodsType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\Ad3GoodsType.ascx.designer.cs">
+      <DependentUpon>Ad3GoodsType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Gift\AddGift.ascx.cs">
+      <DependentUpon>AddGift.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Gift\AddGift.ascx.designer.cs">
+      <DependentUpon>AddGift.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\EditAttributeValuesAdd.ascx.cs">
+      <DependentUpon>EditAttributeValuesAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\EditAttributeValuesAdd.ascx.designer.cs">
+      <DependentUpon>EditAttributeValuesAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\EditGoodsType.ascx.cs">
+      <DependentUpon>EditGoodsType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\EditGoodsType.ascx.designer.cs">
+      <DependentUpon>EditGoodsType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\AdGoodsType.ascx.cs">
+      <DependentUpon>AdGoodsType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\AdGoodsType.ascx.designer.cs">
+      <DependentUpon>AdGoodsType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\EditAttributeValues.ascx.cs">
+      <DependentUpon>EditAttributeValues.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\EditAttributeValues.ascx.designer.cs">
+      <DependentUpon>EditAttributeValues.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\EditNormsValue.ascx.cs">
+      <DependentUpon>EditNormsValue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\EditNormsValue.ascx.designer.cs">
+      <DependentUpon>EditNormsValue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\EditNormsValueAdd.ascx.cs">
+      <DependentUpon>EditNormsValueAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\EditNormsValueAdd.ascx.designer.cs">
+      <DependentUpon>EditNormsValueAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\EditNormsValueAddPic.ascx.cs">
+      <DependentUpon>EditNormsValueAddPic.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\EditNormsValueAddPic.ascx.designer.cs">
+      <DependentUpon>EditNormsValueAddPic.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Gift\Gift.ascx.cs">
+      <DependentUpon>Gift.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Gift\Gift.ascx.designer.cs">
+      <DependentUpon>Gift.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\GoodsType.ascx.cs">
+      <DependentUpon>GoodsType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\GoodsManage\GoodsType.ascx.designer.cs">
+      <DependentUpon>GoodsType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\AllList.ascx.cs">
+      <DependentUpon>AllList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\AllList.ascx.designer.cs">
+      <DependentUpon>AllList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\BaseOrderList.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\CloseOrder.ascx.cs">
+      <DependentUpon>CloseOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\CloseOrder.ascx.designer.cs">
+      <DependentUpon>CloseOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\OrderLog.ascx.cs">
+      <DependentUpon>OrderLog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\OrderLog.ascx.designer.cs">
+      <DependentUpon>OrderLog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\RefundOrder.ascx.cs">
+      <DependentUpon>RefundOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\RefundOrder.ascx.designer.cs">
+      <DependentUpon>RefundOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\MarkedOrder.ascx.cs">
+      <DependentUpon>MarkedOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\MarkedOrder.ascx.designer.cs">
+      <DependentUpon>MarkedOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\OrderDetail.ascx.cs">
+      <DependentUpon>OrderDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\OrderDetail.ascx.designer.cs">
+      <DependentUpon>OrderDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\EditAddress.ascx.cs">
+      <DependentUpon>EditAddress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\EditAddress.ascx.designer.cs">
+      <DependentUpon>EditAddress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\EditSendType.ascx.cs">
+      <DependentUpon>EditSendType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\EditSendType.ascx.designer.cs">
+      <DependentUpon>EditSendType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\EditPayType.ascx.cs">
+      <DependentUpon>EditPayType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\EditPayType.ascx.designer.cs">
+      <DependentUpon>EditPayType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\EditOrderPrice.ascx.cs">
+      <DependentUpon>EditOrderPrice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\EditOrderPrice.ascx.designer.cs">
+      <DependentUpon>EditOrderPrice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\PrintKDD.ascx.cs">
+      <DependentUpon>PrintKDD.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\PrintKDD.ascx.designer.cs">
+      <DependentUpon>PrintKDD.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\PrintGHD.ascx.cs">
+      <DependentUpon>PrintGHD.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\PrintGHD.ascx.designer.cs">
+      <DependentUpon>PrintGHD.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\PrintPSD.ascx.cs">
+      <DependentUpon>PrintPSD.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\PrintPSD.ascx.designer.cs">
+      <DependentUpon>PrintPSD.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\SendOrder.ascx.cs">
+      <DependentUpon>SendOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\SendOrder.ascx.designer.cs">
+      <DependentUpon>SendOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\OrderRefund.ascx.cs">
+      <DependentUpon>OrderRefund.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\HelpPage\OrderRefund.ascx.designer.cs">
+      <DependentUpon>OrderRefund.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForAudit.ascx.cs">
+      <DependentUpon>ListForAudit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForAudit.ascx.designer.cs">
+      <DependentUpon>ListForAudit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForClose.ascx.cs">
+      <DependentUpon>ListForClose.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForClose.ascx.designer.cs">
+      <DependentUpon>ListForClose.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForsuccess.ascx.cs">
+      <DependentUpon>ListForsuccess.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForsuccess.ascx.designer.cs">
+      <DependentUpon>ListForsuccess.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForSended.ascx.cs">
+      <DependentUpon>ListForSended.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForSended.ascx.designer.cs">
+      <DependentUpon>ListForSended.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForSend.ascx.cs">
+      <DependentUpon>ListForSend.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForSend.ascx.designer.cs">
+      <DependentUpon>ListForSend.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForPay.ascx.cs">
+      <DependentUpon>ListForPay.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForPay.ascx.designer.cs">
+      <DependentUpon>ListForPay.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForNew.ascx.cs">
+      <DependentUpon>ListForNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\ListForNew.ascx.designer.cs">
+      <DependentUpon>ListForNew.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\BuySome.ascx.cs">
+      <DependentUpon>BuySome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\BuySome.ascx.designer.cs">
+      <DependentUpon>BuySome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\FullDiscount.ascx.cs">
+      <DependentUpon>FullDiscount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\FullDiscount.ascx.designer.cs">
+      <DependentUpon>FullDiscount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\QuotaFree.ascx.cs">
+      <DependentUpon>QuotaFree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\QuotaFree.ascx.designer.cs">
+      <DependentUpon>QuotaFree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\FullDiscountAdd.ascx.cs">
+      <DependentUpon>FullDiscountAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\FullDiscountAdd.ascx.designer.cs">
+      <DependentUpon>FullDiscountAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\BuySomeAdd.ascx.cs">
+      <DependentUpon>BuySomeAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\BuySomeAdd.ascx.designer.cs">
+      <DependentUpon>BuySomeAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\QuotaFreeAdd.ascx.cs">
+      <DependentUpon>QuotaFreeAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\QuotaFreeAdd.ascx.designer.cs">
+      <DependentUpon>QuotaFreeAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\RequestGroup\RequestList.ascx.cs">
+      <DependentUpon>RequestList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\RequestGroup\RequestList.ascx.designer.cs">
+      <DependentUpon>RequestList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\RequestGroup\RequestShow.ascx.cs">
+      <DependentUpon>RequestShow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\RequestGroup\RequestShow.ascx.designer.cs">
+      <DependentUpon>RequestShow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ReturnManage\Show.ascx.cs">
+      <DependentUpon>Show.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ReturnManage\Show.ascx.designer.cs">
+      <DependentUpon>Show.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ReturnManage\List.ascx.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ReturnManage\List.ascx.designer.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SelReport\Transformation.ascx.cs">
+      <DependentUpon>Transformation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SelReport\Transformation.ascx.designer.cs">
+      <DependentUpon>Transformation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SelReport\SaleTop.ascx.cs">
+      <DependentUpon>SaleTop.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SelReport\SaleTop.ascx.designer.cs">
+      <DependentUpon>SaleTop.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SelReport\SaleTargets.ascx.cs">
+      <DependentUpon>SaleTargets.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SelReport\SaleTargets.ascx.designer.cs">
+      <DependentUpon>SaleTargets.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SelReport\SaleDetails.ascx.cs">
+      <DependentUpon>SaleDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SelReport\SaleDetails.ascx.designer.cs">
+      <DependentUpon>SaleDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SelReport\OrderStatistics.ascx.cs">
+      <DependentUpon>OrderStatistics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SelReport\OrderStatistics.ascx.designer.cs">
+      <DependentUpon>OrderStatistics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SelReport\salereport.ascx.cs">
+      <DependentUpon>salereport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SelReport\salereport.ascx.designer.cs">
+      <DependentUpon>salereport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\StockAlarm\AlarmList.ascx.cs">
+      <DependentUpon>AlarmList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\StockAlarm\AlarmList.ascx.designer.cs">
+      <DependentUpon>AlarmList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\StockAlarm\Add.ascx.cs">
+      <DependentUpon>Add.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\StockAlarm\Add.ascx.designer.cs">
+      <DependentUpon>Add.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\StockAlarm\ProductLog.ascx.cs">
+      <DependentUpon>ProductLog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\StockAlarm\ProductLog.ascx.designer.cs">
+      <DependentUpon>ProductLog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\StockAlarm\NoNormsAlarmList.ascx.cs">
+      <DependentUpon>NoNormsAlarmList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\StockAlarm\NoNormsAlarmList.ascx.designer.cs">
+      <DependentUpon>NoNormsAlarmList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Supplier\SuppliersShow.ascx.cs">
+      <DependentUpon>SuppliersShow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Supplier\SuppliersShow.ascx.designer.cs">
+      <DependentUpon>SuppliersShow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Supplier\Suppliers.ascx.cs">
+      <DependentUpon>Suppliers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Supplier\Suppliers.ascx.designer.cs">
+      <DependentUpon>Suppliers.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Supplier\SuppliersEdit.ascx.cs">
+      <DependentUpon>SuppliersEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Supplier\SuppliersEdit.ascx.designer.cs">
+      <DependentUpon>SuppliersEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SalesActivities\GroupBuy.ascx.cs">
+      <DependentUpon>GroupBuy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SalesActivities\GroupBuy.ascx.designer.cs">
+      <DependentUpon>GroupBuy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\PromoAddProduct.ascx.cs">
+      <DependentUpon>PromoAddProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\PromoAddProduct.ascx.designer.cs">
+      <DependentUpon>PromoAddProduct.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\Promotions.ascx.cs">
+      <DependentUpon>Promotions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\Promotions.ascx.designer.cs">
+      <DependentUpon>Promotions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\RobBuy\RobBuy.ascx.cs">
+      <DependentUpon>RobBuy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\RobBuy\RobBuy.ascx.designer.cs">
+      <DependentUpon>RobBuy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\PromotionsAdd.ascx.cs">
+      <DependentUpon>PromotionsAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Promotions\PromotionsAdd.ascx.designer.cs">
+      <DependentUpon>PromotionsAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SalesActivities\GroupBuyEdit.ascx.cs">
+      <DependentUpon>GroupBuyEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\SalesActivities\GroupBuyEdit.ascx.designer.cs">
+      <DependentUpon>GroupBuyEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\RobBuy\RobBuyAdd.ascx.cs">
+      <DependentUpon>RobBuyAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\RobBuy\RobBuyAdd.ascx.designer.cs">
+      <DependentUpon>RobBuyAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\FloorSet.aspx.cs">
+      <DependentUpon>FloorSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\FloorSet.aspx.designer.cs">
+      <DependentUpon>FloorSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\CreditProduct.aspx.cs">
+      <DependentUpon>CreditProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\CreditProduct.aspx.designer.cs">
+      <DependentUpon>CreditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\RequestGroup.aspx.cs">
+      <DependentUpon>RequestGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\RequestGroup.aspx.designer.cs">
+      <DependentUpon>RequestGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\ExportData.aspx.cs">
+      <DependentUpon>ExportData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\ExportData.aspx.designer.cs">
+      <DependentUpon>ExportData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\SelReport.aspx.cs">
+      <DependentUpon>SelReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\SelReport.aspx.designer.cs">
+      <DependentUpon>SelReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\DownNotice.aspx.cs">
+      <DependentUpon>DownNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\DownNotice.aspx.designer.cs">
+      <DependentUpon>DownNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Gift.aspx.cs">
+      <DependentUpon>Gift.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Gift.aspx.designer.cs">
+      <DependentUpon>Gift.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\GoodsManage.aspx.cs">
+      <DependentUpon>GoodsManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\GoodsManage.aspx.designer.cs">
+      <DependentUpon>GoodsManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Promotions.aspx.cs">
+      <DependentUpon>Promotions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Promotions.aspx.designer.cs">
+      <DependentUpon>Promotions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\RobBuy.aspx.cs">
+      <DependentUpon>RobBuy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\RobBuy.aspx.designer.cs">
+      <DependentUpon>RobBuy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\SalesActivities.aspx.cs">
+      <DependentUpon>SalesActivities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\SalesActivities.aspx.designer.cs">
+      <DependentUpon>SalesActivities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\StockAlarm.aspx.cs">
+      <DependentUpon>StockAlarm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\StockAlarm.aspx.designer.cs">
+      <DependentUpon>StockAlarm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Supplier.aspx.cs">
+      <DependentUpon>Supplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Supplier.aspx.designer.cs">
+      <DependentUpon>Supplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\ReturnManage.aspx.cs">
+      <DependentUpon>ReturnManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\ReturnManage.aspx.designer.cs">
+      <DependentUpon>ReturnManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajaxget\AjaxHelp\NormPriceInfo.cs" />
+    <Compile Include="Ajaxget\api.asmx.cs">
+      <DependentUpon>api.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CusttomControls\BatchProduct.cs" />
+    <Compile Include="CusttomControls\BatchProductPg.aspx.cs">
+      <DependentUpon>BatchProductPg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CusttomControls\BatchProductPg.aspx.designer.cs">
+      <DependentUpon>BatchProductPg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CusttomControls\SelectProductPg.aspx.cs">
+      <DependentUpon>SelectProductPg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CusttomControls\SelectProductPg.aspx.designer.cs">
+      <DependentUpon>SelectProductPg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CusttomControls\SelectProduct.cs" />
+    <Compile Include="ExtContent\ProductGG.ascx.cs">
+      <DependentUpon>ProductGG.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtContent\ProductGG.ascx.designer.cs">
+      <DependentUpon>ProductGG.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtContent\ProductImg.ascx.cs">
+      <DependentUpon>ProductImg.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtContent\ProductImg.ascx.designer.cs">
+      <DependentUpon>ProductImg.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtContent\ProductSX.ascx.cs">
+      <DependentUpon>ProductSX.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtContent\ProductSX.ascx.designer.cs">
+      <DependentUpon>ProductSX.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\Brand\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\Brand\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\Brand\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\Brand\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\GoodsNumber\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\GoodsNumber\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\GoodsNumber\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\GoodsNumber\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\Supplier\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\Supplier\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\Supplier\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\Supplier\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\TypeNames\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\TypeNames\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\TypeNames\Edit.ascx.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\TypeNames\Edit.ascx.designer.cs">
+      <DependentUpon>Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleCore\BLL\buy_orderitem_img.cs" />
+    <Compile Include="ModuleCore\BLL\buy_orderlog.cs" />
+    <Compile Include="ModuleCore\BLL\Buy_Orders.cs" />
+    <Compile Include="ModuleCore\BLL\Buy_CartItem.cs" />
+    <Compile Include="ModuleCore\BLL\cartproductoptionvalue.cs" />
+    <Compile Include="ModuleCore\BLL\Buy_CreditCartItem.cs" />
+    <Compile Include="ModuleCore\BLL\creditproduct.cs" />
+    <Compile Include="ModuleCore\BLL\creditproductclass.cs" />
+    <Compile Include="ModuleCore\BLL\creditproductorder.cs" />
+    <Compile Include="ModuleCore\BLL\FloorSet.cs" />
+    <Compile Include="ModuleCore\BLL\giftcartproduct.cs" />
+    <Compile Include="ModuleCore\BLL\giftorderproduct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\BLL\GRShow\Rush.cs" />
+    <Compile Include="ModuleCore\BLL\GRShow\Group.cs" />
+    <Compile Include="ModuleCore\BLL\GRShow\IBase.cs" />
+    <Compile Include="ModuleCore\BLL\pointdetails.cs" />
+    <Compile Include="ModuleCore\BLL\productlog.cs" />
+    <Compile Include="ModuleCore\BLL\MFloorSet.cs" />
+    <Compile Include="ModuleCore\Cart\CartManger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Cart\CartProfileProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Cart\CreditCartManger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Cart\GroupCart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Cart\ProfileCommon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Cart\RushCart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\ExMobileClassPageLoadEvent.cs" />
+    <Compile Include="ModuleCore\DALInterface\IBuy_CreditCartItem.cs" />
+    <Compile Include="ModuleCore\DALInterface\Ibuy_orderitem_img.cs" />
+    <Compile Include="ModuleCore\DALInterface\Ibuy_orderlog.cs" />
+    <Compile Include="ModuleCore\DALInterface\Icartproductoptionvalue.cs" />
+    <Compile Include="ModuleCore\DALInterface\Icreditproductorder.cs" />
+    <Compile Include="ModuleCore\DALInterface\Igiftcartproduct.cs" />
+    <Compile Include="ModuleCore\DALInterface\Igiftorderproduct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\DALInterface\Ipointdetails.cs" />
+    <Compile Include="ModuleCore\DALInterface\Iproductlog.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\buy_orderitem_img.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\buy_orderlog.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\cartproductoptionvalue.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\Buy_CreditCartItem.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\creditproductorder.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\giftcartproduct.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\giftorderproduct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\DAL\MySql\pointdetails.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\productlog.cs" />
+    <Compile Include="ModuleCore\Entity\Buy_CreditCartItem.cs" />
+    <Compile Include="ModuleCore\Entity\buy_orderitem_img.cs" />
+    <Compile Include="ModuleCore\Entity\buy_orderlog.cs" />
+    <Compile Include="ModuleCore\Entity\cartproductoptionvalue.cs" />
+    <Compile Include="ModuleCore\Entity\creditproductorder.cs" />
+    <Compile Include="ModuleCore\Entity\FloorSet.cs" />
+    <Compile Include="ModuleCore\Entity\giftcartproduct.cs" />
+    <Compile Include="ModuleCore\Entity\giftorderproduct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Entity\pointdetails.cs" />
+    <Compile Include="ModuleCore\Entity\productlog.cs" />
+    <Compile Include="ModuleCore\Entity\MFloorSet.cs" />
+    <Compile Include="ModuleCore\ExClassPageLoadEvent.cs" />
+    <Compile Include="ModuleCore\BLL\GoodsBrand.cs" />
+    <Compile Include="ModuleCore\BLL\P_BestGroup.cs" />
+    <Compile Include="ModuleCore\BLL\P_RecommedParts.cs" />
+    <Compile Include="ModuleCore\BLL\P_UserBook.cs" />
+    <Compile Include="ModuleCore\BLL\requestgroup.cs" />
+    <Compile Include="ModuleCore\BLL\TypeNameValues.cs" />
+    <Compile Include="ModuleCore\BLL\PromotionsType.cs" />
+    <Compile Include="ModuleCore\BLL\Buy_OrderItem.cs" />
+    <Compile Include="ModuleCore\BLL\CountDownBuy.cs" />
+    <Compile Include="ModuleCore\BLL\CutPriceTips.cs" />
+    <Compile Include="ModuleCore\BLL\Gift.cs" />
+    <Compile Include="ModuleCore\BLL\GroupBuy.cs" />
+    <Compile Include="ModuleCore\BLL\NormRelationProduct.cs" />
+    <Compile Include="ModuleCore\BLL\Norms.cs" />
+    <Compile Include="ModuleCore\BLL\NormsValue.cs" />
+    <Compile Include="ModuleCore\BLL\Payment.cs" />
+    <Compile Include="ModuleCore\BLL\ProductOptionItems.cs" />
+    <Compile Include="ModuleCore\BLL\ProductOptions.cs" />
+    <Compile Include="ModuleCore\BLL\ProductsImg.cs" />
+    <Compile Include="ModuleCore\BLL\PromotionFullNumGive.cs" />
+    <Compile Include="ModuleCore\BLL\PromotionFullPriceCut.cs" />
+    <Compile Include="ModuleCore\BLL\PromotionPriceFree.cs" />
+    <Compile Include="ModuleCore\BLL\PromotionProduct.cs" />
+    <Compile Include="ModuleCore\BLL\Promotions.cs" />
+    <Compile Include="ModuleCore\BLL\PromotionsRole.cs" />
+    <Compile Include="ModuleCore\BLL\PromotionWholesale.cs" />
+    <Compile Include="ModuleCore\BLL\Supplier.cs" />
+    <Compile Include="ModuleCore\BLL\TypeNames.cs" />
+    <Compile Include="ModuleCore\BLL\TypeNameValue.cs" />
+    <Compile Include="ModuleCore\BLL\TypeRelationProduct.cs" />
+    <Compile Include="ModuleCore\BLL\WebSiteXmlDemo.cs" />
+    <Compile Include="ModuleCore\Core.cs" />
+    <Compile Include="ModuleCore\Ctrls\OrderOptions.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Ctrls\SeleteBand.cs" />
+    <Compile Include="ModuleCore\DALInterface\IBuy_CartItem.cs" />
+    <Compile Include="ModuleCore\DALInterface\IBuy_Orders.cs" />
+    <Compile Include="ModuleCore\DALInterface\Icreditproduct.cs" />
+    <Compile Include="ModuleCore\DALInterface\Icreditproductclass.cs" />
+    <Compile Include="ModuleCore\DALInterface\Igoodsbrand.cs" />
+    <Compile Include="ModuleCore\DALInterface\IP_BestGroup.cs" />
+    <Compile Include="ModuleCore\DALInterface\IP_RecommedParts.cs" />
+    <Compile Include="ModuleCore\DALInterface\IP_UserBook.cs" />
+    <Compile Include="ModuleCore\DALInterface\Irequestgroup.cs" />
+    <Compile Include="ModuleCore\DALInterface\ITypeNameValues.cs" />
+    <Compile Include="ModuleCore\DALInterface\IBuy_OrderItem.cs" />
+    <Compile Include="ModuleCore\DALInterface\ICountDownBuy.cs" />
+    <Compile Include="ModuleCore\DALInterface\ICutPriceTips.cs" />
+    <Compile Include="ModuleCore\DALInterface\IGift.cs" />
+    <Compile Include="ModuleCore\DALInterface\IGroupBuy.cs" />
+    <Compile Include="ModuleCore\DALInterface\INormRelationProduct.cs" />
+    <Compile Include="ModuleCore\DALInterface\INorms.cs" />
+    <Compile Include="ModuleCore\DALInterface\INormsValue.cs" />
+    <Compile Include="ModuleCore\DALInterface\IPayment.cs" />
+    <Compile Include="ModuleCore\DALInterface\IProductOptionItems.cs" />
+    <Compile Include="ModuleCore\DALInterface\IProductOptions.cs" />
+    <Compile Include="ModuleCore\DALInterface\IProductsImg.cs" />
+    <Compile Include="ModuleCore\DALInterface\IPromotionFullNumGive.cs" />
+    <Compile Include="ModuleCore\DALInterface\IPromotionFullPriceCut.cs" />
+    <Compile Include="ModuleCore\DALInterface\IPromotionPriceFree.cs" />
+    <Compile Include="ModuleCore\DALInterface\IPromotionProduct.cs" />
+    <Compile Include="ModuleCore\DALInterface\IPromotions.cs" />
+    <Compile Include="ModuleCore\DALInterface\IPromotionsRole.cs" />
+    <Compile Include="ModuleCore\DALInterface\IPromotionWholesale.cs" />
+    <Compile Include="ModuleCore\DALInterface\ISupplier.cs" />
+    <Compile Include="ModuleCore\DALInterface\ITypeNames.cs" />
+    <Compile Include="ModuleCore\DALInterface\ITypeNameValue.cs" />
+    <Compile Include="ModuleCore\DALInterface\ITypeRelationProduct.cs" />
+    <Compile Include="ModuleCore\DAL\DataProfile\DalFactory.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\Buy_OrderItem.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\Buy_Orders.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\Buy_CartItem.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\creditproduct.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\creditproductclass.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\goodsbrand.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\P_BestGroup.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\P_RecommedParts.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\P_UserBook.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\requestgroup.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\TypeNameValues.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\CountDownBuy.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\CutPriceTips.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\Gift.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\GroupBuy.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\Helper\Utils.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\NormRelationProduct.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\Norms.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\NormsValue.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\Payment.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\ProductOptionItems.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\ProductOptions.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\ProductsImg.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\PromotionFullNumGive.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\PromotionFullPriceCut.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\PromotionPriceFree.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\PromotionProduct.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\Promotions.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\PromotionsRole.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\PromotionWholesale.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\Supplier.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\TypeNames.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\TypeNameValue.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\TypeRelationProduct.cs" />
+    <Compile Include="ModuleCore\Entity\Activities.cs" />
+    <Compile Include="ModuleCore\Entity\Buy_OrderItem.cs" />
+    <Compile Include="ModuleCore\Entity\Buy_Orders.cs" />
+    <Compile Include="ModuleCore\Entity\Buy_CartItem.cs" />
+    <Compile Include="ModuleCore\Entity\creditproduct.cs" />
+    <Compile Include="ModuleCore\Entity\creditproductclass.cs" />
+    <Compile Include="ModuleCore\Entity\GoodsBrand.cs" />
+    <Compile Include="ModuleCore\Entity\P_BestGroup.cs" />
+    <Compile Include="ModuleCore\Entity\P_RecommedParts.cs" />
+    <Compile Include="ModuleCore\Entity\P_UserBook.cs" />
+    <Compile Include="ModuleCore\Entity\requestgroup.cs" />
+    <Compile Include="ModuleCore\Entity\TypeNameValues.cs" />
+    <Compile Include="ModuleCore\Entity\CountDownBuy.cs" />
+    <Compile Include="ModuleCore\Entity\CutPriceTips.cs" />
+    <Compile Include="ModuleCore\Entity\Gift.cs" />
+    <Compile Include="ModuleCore\Entity\GroupBuy.cs" />
+    <Compile Include="ModuleCore\Entity\ListItemModel.cs" />
+    <Compile Include="ModuleCore\Entity\NormRelationProduct.cs" />
+    <Compile Include="ModuleCore\Entity\Norms.cs" />
+    <Compile Include="ModuleCore\Entity\NormsValue.cs" />
+    <Compile Include="ModuleCore\Entity\Payment.cs" />
+    <Compile Include="ModuleCore\Entity\ProductOptionItems.cs" />
+    <Compile Include="ModuleCore\Entity\ProductOptions.cs" />
+    <Compile Include="ModuleCore\Entity\ProductsImg.cs" />
+    <Compile Include="ModuleCore\Entity\PromotionFullNumGive.cs" />
+    <Compile Include="ModuleCore\Entity\PromotionFullPriceCut.cs" />
+    <Compile Include="ModuleCore\Entity\PromotionPriceFree.cs" />
+    <Compile Include="ModuleCore\Entity\PromotionProduct.cs" />
+    <Compile Include="ModuleCore\Entity\Promotions.cs" />
+    <Compile Include="ModuleCore\Entity\PromotionsRole.cs" />
+    <Compile Include="ModuleCore\Entity\PromotionWholesale.cs" />
+    <Compile Include="ModuleCore\Entity\Supplier.cs" />
+    <Compile Include="ModuleCore\Entity\TypeNames.cs" />
+    <Compile Include="ModuleCore\Entity\TypeNameValue.cs" />
+    <Compile Include="ModuleCore\Entity\TypeRelationProduct.cs" />
+    <Compile Include="ModuleCore\GetLinks.cs" />
+    <Compile Include="ModuleCore\Pages\BasePageM.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mcontent_product.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mlist_product.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mmgroupshow.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mmrushshow.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mjifenneirong.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mjifen.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mmactfullquantity.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mmgrouplist.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mmrushlist.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\morderinfo.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mmshoppingcar3.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mmshoppingcar2.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mmshoppingcar1.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mtradecomment.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\GRShowBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\jifenneirong.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\jifen.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\forgroup.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mactfullquantity.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mactfullmoney.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mcompare.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mrushshow.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mrushlist.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mgroupshow.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mgrouplist.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mreduceprice.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mshoppingcar3.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mshoppingcar2.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mshoppingcar1.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\MshoppingcarBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\orderinfo.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\productphotobox.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\orderprint.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\SystemEnum.cs" />
+    <Compile Include="AppStart.cs" />
+    <Compile Include="Configs.cs" />
+    <Compile Include="SettingInfo.cs" />
+    <Compile Include="Setting.ascx.cs">
+      <DependentUpon>Setting.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setting.ascx.designer.cs">
+      <DependentUpon>Setting.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ModuleCore\DAL\DataProfile\DBHelper.cs" />
+    <Compile Include="ModuleCore\BLL\Base\BLLBase.cs" />
+    <Compile Include="TestDd.Master.cs">
+      <DependentUpon>TestDd.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestDd.Master.designer.cs">
+      <DependentUpon>TestDd.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\MOrderManage\Orderlist.ascx.cs">
+      <DependentUpon>Orderlist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\MOrderManage\Orderlist.ascx.designer.cs">
+      <DependentUpon>Orderlist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderManage\MyChangeCoupons.ascx.cs">
+      <DependentUpon>MyChangeCoupons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderManage\MyChangeCoupons.ascx.designer.cs">
+      <DependentUpon>MyChangeCoupons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderManage\MyCloseOrder.ascx.cs">
+      <DependentUpon>MyCloseOrder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderManage\MyCloseOrder.ascx.designer.cs">
+      <DependentUpon>MyCloseOrder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderManage\MyComment.ascx.cs">
+      <DependentUpon>MyComment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderManage\MyComment.ascx.designer.cs">
+      <DependentUpon>MyComment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderManage\MyCoupons.ascx.cs">
+      <DependentUpon>MyCoupons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderManage\MyCoupons.ascx.designer.cs">
+      <DependentUpon>MyCoupons.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderManage\MyCredits.ascx.cs">
+      <DependentUpon>MyCredits.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderManage\MyCredits.ascx.designer.cs">
+      <DependentUpon>MyCredits.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderManage\orderlist.ascx.cs">
+      <DependentUpon>orderlist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderManage\orderlist.ascx.designer.cs">
+      <DependentUpon>orderlist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderRepair\Add.ascx.cs">
+      <DependentUpon>Add.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderRepair\Add.ascx.designer.cs">
+      <DependentUpon>Add.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderRepair\repairlist.ascx.cs">
+      <DependentUpon>repairlist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderRepair\repairlist.ascx.designer.cs">
+      <DependentUpon>repairlist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderRepair\repairrecord.ascx.cs">
+      <DependentUpon>repairrecord.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderRepair\repairrecord.ascx.designer.cs">
+      <DependentUpon>repairrecord.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderRepair\Show.ascx.cs">
+      <DependentUpon>Show.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\OrderRepair\Show.ascx.designer.cs">
+      <DependentUpon>Show.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\MOrderManage.aspx.cs">
+      <DependentUpon>MOrderManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\MOrderManage.aspx.designer.cs">
+      <DependentUpon>MOrderManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\OrderManage.aspx.cs">
+      <DependentUpon>OrderManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\OrderManage.aspx.designer.cs">
+      <DependentUpon>OrderManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\OrderRepair.aspx.cs">
+      <DependentUpon>OrderRepair.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\OrderRepair.aspx.designer.cs">
+      <DependentUpon>OrderRepair.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\IndexDay\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\IndexDay\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\IndexDay\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\IndexDay\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\PjLeftInfo\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\PjLeftInfo\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\PjLeftInfo\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\PjLeftInfo\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetProduct\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetProduct\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetProduct\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetProduct\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\IndexClass\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\IndexClass\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\IndexClass\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\IndexClass\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\MobileFlash\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\MobileFlash\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\MobileFlash\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\MobileFlash\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPages\BrandManage.aspx" />
+    <Content Include="AdminPages\Controls\BrandManage\BestGroup.ascx" />
+    <Content Include="AdminPages\Controls\BrandManage\BrandList.ascx" />
+    <Content Include="AdminPages\Controls\BrandManage\BrandAdd.ascx" />
+    <Content Include="AdminPages\Controls\BrandManage\FreeItems.ascx" />
+    <Content Include="AdminPages\Controls\BrandManage\RecommendPart.ascx" />
+    <Content Include="AdminPages\Controls\BrandManage\UserBook.ascx" />
+    <Content Include="AdminPages\Controls\CreditProduct\AddProduct.ascx" />
+    <Content Include="AdminPages\Controls\CreditProduct\AddClass.ascx" />
+    <Content Include="AdminPages\Controls\CreditProduct\ListClass.ascx" />
+    <Content Include="AdminPages\Controls\CreditProduct\ListProduct.ascx" />
+    <Content Include="AdminPages\Controls\DownNotice\DownList.ascx" />
+    <Content Include="AdminPages\Controls\DownNotice\SendMsg.ascx" />
+    <Content Include="AdminPages\Controls\DownNotice\ShowDown.ascx" />
+    <Content Include="AdminPages\Controls\ExportData\taobaoin.ascx" />
+    <Content Include="AdminPages\Controls\ExportData\paipaiin.ascx" />
+    <Content Include="AdminPages\Controls\ExportData\paipaiout.ascx" />
+    <Content Include="AdminPages\Controls\ExportData\taobaoout.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\AddFloor.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\MobileDesignFloor.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\DesignFloor.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\List.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\MobileList.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\SetFloorBigClass.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\SetFloorChildClass.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\SetAdvGoods.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\SetGoodsList.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\SetBrandList.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\SetAdvLink.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\BigClassList.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\ChildClassList.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\AdvLinkList.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\AdvGoodsList.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\BrandList.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\GoodsList.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\AddMFloor.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\MAdvLinkList.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\MSetAdvLink.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\MAdvChildList.ascx" />
+    <Content Include="AdminPages\Controls\FloorSet\MSetAdvChild.ascx" />
+    <Content Include="AdminPages\Controls\GoodsManage\Ad2GoodsType.ascx" />
+    <Content Include="AdminPages\Controls\GoodsManage\Ad3GoodsType.ascx" />
+    <Content Include="AdminPages\Controls\Gift\AddGift.ascx" />
+    <Content Include="AdminPages\Controls\GoodsManage\EditAttributeValuesAdd.ascx" />
+    <Content Include="AdminPages\Controls\GoodsManage\EditGoodsType.ascx" />
+    <Content Include="AdminPages\Controls\GoodsManage\AdGoodsType.ascx" />
+    <Content Include="AdminPages\Controls\GoodsManage\EditAttributeValues.ascx" />
+    <Content Include="AdminPages\Controls\GoodsManage\EditNormsValue.ascx" />
+    <Content Include="AdminPages\Controls\GoodsManage\EditNormsValueAdd.ascx" />
+    <Content Include="AdminPages\Controls\GoodsManage\EditNormsValueAddPic.ascx" />
+    <Content Include="AdminPages\Controls\Gift\Gift.ascx" />
+    <Content Include="AdminPages\Controls\GoodsManage\GoodsType.ascx" />
+    <Content Include="AdminPages\Controls\Orders\AllList.ascx" />
+    <Content Include="AdminPages\Controls\ReturnManage\Show.ascx" />
+    <Content Include="AdminPages\Controls\ReturnManage\List.ascx" />
+    <Content Include="AdminPages\Controls\StockAlarm\Add.ascx" />
+    <Content Include="AdminPages\Controls\StockAlarm\ProductLog.ascx" />
+    <Content Include="AdminPages\Controls\StockAlarm\NoNormsAlarmList.ascx" />
+    <Content Include="AdminPages\FloorSet.aspx" />
+    <Content Include="AdminPages\ReturnManage.aspx" />
+    <Content Include="Css\0001.gif" />
+    <Content Include="Css\0002.gif" />
+    <Content Include="Css\0003.gif" />
+    <Content Include="Css\Floor.png" />
+    <Content Include="Css\mobilefloor.png" />
+    <Content Include="js\comm_list.js" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\CloseOrder.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\OrderLog.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\printermode.swf" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\RefundOrder.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\MarkedOrder.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\OrderDetail.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\EditAddress.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\EditSendType.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\EditPayType.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\EditOrderPrice.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\PrintKDD.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\PrintGHD.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\PrintPSD.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\SendOrder.ascx" />
+    <Content Include="AdminPages\Controls\Orders\HelpPage\OrderRefund.ascx" />
+    <Content Include="AdminPages\Controls\Orders\ListForAudit.ascx" />
+    <Content Include="AdminPages\Controls\Orders\ListForClose.ascx" />
+    <Content Include="AdminPages\Controls\Orders\ListForsuccess.ascx" />
+    <Content Include="AdminPages\Controls\Orders\ListForSended.ascx" />
+    <Content Include="AdminPages\Controls\Orders\ListForSend.ascx" />
+    <Content Include="AdminPages\Controls\Orders\ListForPay.ascx" />
+    <Content Include="AdminPages\Controls\Orders\ListForNew.ascx" />
+    <Content Include="AdminPages\Controls\Promotions\BuySome.ascx" />
+    <Content Include="AdminPages\Controls\Promotions\FullDiscount.ascx" />
+    <Content Include="AdminPages\Controls\Promotions\QuotaFree.ascx" />
+    <Content Include="AdminPages\Controls\Promotions\FullDiscountAdd.ascx" />
+    <Content Include="AdminPages\Controls\Promotions\BuySomeAdd.ascx" />
+    <Content Include="AdminPages\Controls\Promotions\QuotaFreeAdd.ascx" />
+    <Content Include="AdminPages\Controls\RequestGroup\RequestList.ascx" />
+    <Content Include="AdminPages\Controls\RequestGroup\RequestShow.ascx" />
+    <Content Include="AdminPages\Controls\SelReport\Transformation.ascx" />
+    <Content Include="AdminPages\Controls\SelReport\SaleTop.ascx" />
+    <Content Include="AdminPages\Controls\SelReport\SaleTargets.ascx" />
+    <Content Include="AdminPages\Controls\SelReport\SaleDetails.ascx" />
+    <Content Include="AdminPages\Controls\SelReport\OrderStatistics.ascx" />
+    <Content Include="AdminPages\Controls\SelReport\salereport.ascx" />
+    <Content Include="AdminPages\Controls\StockAlarm\AlarmList.ascx" />
+    <Content Include="AdminPages\Controls\Supplier\SuppliersShow.ascx" />
+    <Content Include="AdminPages\Controls\Supplier\Suppliers.ascx" />
+    <Content Include="AdminPages\Controls\Supplier\SuppliersEdit.ascx" />
+    <Content Include="AdminPages\Controls\SalesActivities\GroupBuy.ascx" />
+    <Content Include="AdminPages\Controls\Promotions\PromoAddProduct.ascx" />
+    <Content Include="AdminPages\Controls\Promotions\Promotions.ascx" />
+    <Content Include="AdminPages\Controls\RobBuy\RobBuy.ascx" />
+    <Content Include="AdminPages\Controls\Promotions\PromotionsAdd.ascx" />
+    <Content Include="AdminPages\Controls\SalesActivities\GroupBuyEdit.ascx" />
+    <Content Include="AdminPages\Controls\RobBuy\RobBuyAdd.ascx" />
+    <Content Include="AdminPages\CreditProduct.aspx" />
+    <Content Include="AdminPages\RequestGroup.aspx" />
+    <Content Include="AdminPages\ExportData.aspx" />
+    <Content Include="AdminPages\Orders.aspx" />
+    <Content Include="AdminPages\SelReport.aspx" />
+    <Content Include="AdminPages\DownNotice.aspx" />
+    <Content Include="AdminPages\Gift.aspx" />
+    <Content Include="AdminPages\GoodsManage.aspx" />
+    <Content Include="AdminPages\Promotions.aspx" />
+    <Content Include="AdminPages\RobBuy.aspx" />
+    <Content Include="AdminPages\SalesActivities.aspx" />
+    <Content Include="AdminPages\StockAlarm.aspx" />
+    <Content Include="AdminPages\Supplier.aspx" />
+    <Content Include="Ajaxget\api.asmx" />
+    <Content Include="Css\ht.css" />
+    <Content Include="UserPages\Controls\MOrderManage\Orderlist.ascx" />
+    <Content Include="UserPages\Controls\OrderManage\MyChangeCoupons.ascx" />
+    <Content Include="UserPages\Controls\OrderManage\MyCloseOrder.ascx" />
+    <Content Include="UserPages\Controls\OrderManage\MyComment.ascx" />
+    <Content Include="UserPages\Controls\OrderManage\MyCoupons.ascx" />
+    <Content Include="UserPages\Controls\OrderManage\MyCredits.ascx" />
+    <Content Include="UserPages\Controls\OrderManage\orderlist.ascx" />
+    <Content Include="UserPages\Controls\OrderRepair\Add.ascx" />
+    <Content Include="UserPages\Controls\OrderRepair\repairlist.ascx" />
+    <Content Include="UserPages\Controls\OrderRepair\repairrecord.ascx" />
+    <Content Include="UserPages\Controls\OrderRepair\Show.ascx" />
+    <Content Include="UserPages\MOrderManage.aspx" />
+    <Content Include="UserPages\OrderManage.aspx" />
+    <Content Include="UserPages\OrderRepair.aspx" />
+    <Content Include="Widgets\IndexDay\areadme.txt" />
+    <Content Include="Widgets\IndexDay\edit.ascx" />
+    <Content Include="Widgets\IndexDay\widget.ascx" />
+    <Content Include="Widgets\PjLeftInfo\areadme.txt" />
+    <Content Include="Widgets\PjLeftInfo\edit.ascx" />
+    <Content Include="Widgets\PjLeftInfo\widget.ascx" />
+    <Content Include="Widgets\GetProduct\areadme.txt" />
+    <Content Include="Widgets\GetProduct\edit.ascx" />
+    <Content Include="Widgets\GetProduct\widget.ascx" />
+    <Content Include="Widgets\IndexClass\areadme.txt" />
+    <Content Include="Widgets\IndexClass\edit.ascx" />
+    <Content Include="Widgets\IndexClass\widget.ascx" />
+    <Content Include="Widgets\MobileFlash\areadme.txt" />
+    <Content Include="Widgets\MobileFlash\edit.ascx" />
+    <Content Include="Widgets\MobileFlash\widget.ascx" />
+    <Content Include="未完成.txt" />
+    <Content Include="Css\addFile.gif" />
+    <Content Include="Css\bg.png" />
+    <Content Include="Css\GoodsType.css" />
+    <Content Include="Css\icon.gif" />
+    <Content Include="Css\order.css" />
+    <Content Include="Css\step.png" />
+    <Content Include="Css\tOn.gif" />
+    <Content Include="Css\tOver.gif" />
+    <Content Include="CusttomControls\BatchProductPg.aspx" />
+    <Content Include="CusttomControls\SelectProductPg.aspx" />
+    <Content Include="ExtContent\areadme.txt" />
+    <Content Include="ExtContent\ProductGG.ascx" />
+    <Content Include="ExtContent\ProductImg.ascx" />
+    <Content Include="ExtContent\ProductSX.ascx" />
+    <Content Include="ExtensionsCtrls\Brand\areadme.txt" />
+    <Content Include="ExtensionsCtrls\Brand\Ctrl.ascx" />
+    <Content Include="ExtensionsCtrls\Brand\Edit.ascx" />
+    <Content Include="ExtensionsCtrls\GoodsNumber\areadme.txt" />
+    <Content Include="ExtensionsCtrls\GoodsNumber\Ctrl.ascx" />
+    <Content Include="ExtensionsCtrls\GoodsNumber\Edit.ascx" />
+    <Content Include="ExtensionsCtrls\GoodsType\areadme.txt" />
+    <Content Include="ExtensionsCtrls\Supplier\areadme.txt" />
+    <Content Include="ExtensionsCtrls\Supplier\Ctrl.ascx" />
+    <Content Include="ExtensionsCtrls\Supplier\Edit.ascx" />
+    <Content Include="ExtensionsCtrls\TypeNames\areadme.txt" />
+    <Content Include="ExtensionsCtrls\TypeNames\Ctrl.ascx" />
+    <Content Include="ExtensionsCtrls\TypeNames\Edit.ascx" />
+    <Content Include="js\order.js" />
+    <Content Include="js\shoppingcar.js" />
+    <Content Include="js\shop-core.js" />
+    <Content Include="js\jQuery.Hashtable.js" />
+    <Content Include="js\jQuery-powerFloat-min.js" />
+    <Content Include="js\GoodsType.js" />
+    <Content Include="开发文件档.txt" />
+    <Content Include="Css\add.gif" />
+    <Content Include="Css\index.css" />
+    <Content Include="Css\off.gif" />
+    <Content Include="Css\oktobuy.gif" />
+    <Content Include="Css\remove.gif" />
+    <Content Include="DataStore\Limits_Adminer.txt" />
+    <Content Include="DataStore\Limits_User.txt" />
+    <Content Include="js\comm.js" />
+    <Content Include="Readme.txt" />
+    <Content Include="Setting.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataStore\Configs\Setting.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataStore\Attachments\Help\" />
+    <Folder Include="DataStore\Limits\LimitGroup\" />
+    <Folder Include="DataStore\Limits\LimitRole\" />
+    <Folder Include="DataStore\Menus\AdminPage\" />
+    <Folder Include="DataStore\Menus\UserPage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestDd.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataStore\Configs\Base.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6798</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

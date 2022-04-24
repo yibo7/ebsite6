@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>获取专题连接-手机版</Title>
+  <GetCode>&lt;%=EbSite.Base.Host.Instance.MGetSpecialHref(object iID, int Index)%&gt;</GetCode>
+  <Author>EbSite</Author>
+  <Demo>/// &lt;summary&gt;
+        /// 获取专题连接
+        /// &lt;/summary&gt;
+        /// &lt;param name="iID"&gt;专题ID&lt;/param&gt;
+        /// &lt;param name="Index"&gt;分页码&lt;/param&gt;</Demo>
+  <id>5bf0ed54-609c-4826-8ae1-6169aad68319</id>
+</TemMethodInfo>

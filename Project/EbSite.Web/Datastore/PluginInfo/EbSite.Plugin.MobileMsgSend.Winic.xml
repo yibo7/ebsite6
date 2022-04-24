@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ManagedExtension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="EbSite.Plugin.MobileMsgSend.Winic">
+  <BaseType>IMobileSend</BaseType>
+  <Version>1.0</Version>
+  <Priority>999</Priority>
+  <Description>253.COM手机短信发送组件</Description>
+  <Author>&lt;a href="http://www.ebsite.net"&gt;亿博团队&lt;/a&gt;</Author>
+  <AdminPage />
+  <Enabled>true</Enabled>
+  <Settings>
+    <Index>0</Index>
+    <Name>EbSite.Plugin.MobileMsgSend.Winic</Name>
+    <Help>
+&lt;div&gt;
+  &lt;b&gt;使用帮助:&lt;/b&gt;&lt;br/&gt;
+  &lt;ul&gt;
+    &lt;li&gt;签名可能要到短信平台申请通过才能发送成功，开启日志记录会将短信发送结果写入后台的综合日志。&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+      </Help>
+    <Delimiter>44</Delimiter>
+    <Parameters>
+      <Name>ID</Name>
+      <Label>唯一ID</Label>
+      <MaxLength>20</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <Values>0534b66d-a440-4257-a734-10e1c5ad0be2</Values>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>susername</Name>
+      <Label>用户帐号</Label>
+      <MaxLength>100</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <Values>N4736646</Values>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>spass</Name>
+      <Label>用户密码</Label>
+      <MaxLength>200</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <Values>62bkcKlCHSc29d</Values>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>strcode</Name>
+      <Label>签名文字</Label>
+      <MaxLength>200</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <Values>253云通讯</Values>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>isopenlog</Name>
+      <Label>开启日志</Label>
+      <MaxLength>200</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <Values>True</Values>
+      <ParamType>Boolean</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <KeyField>ID</KeyField>
+    <IsScalar>true</IsScalar>
+    <Hidden>false</Hidden>
+    <ShowAdd>true</ShowAdd>
+    <ShowEdit>true</ShowEdit>
+    <ShowDelete>true</ShowDelete>
+  </Settings>
+  <ShowSettings>true</ShowSettings>
+</ManagedExtension>

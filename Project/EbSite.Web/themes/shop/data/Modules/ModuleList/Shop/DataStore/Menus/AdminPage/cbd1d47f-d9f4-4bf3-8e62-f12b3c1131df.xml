@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl />
+  <FileName>/themes/shop/data/Modules/ModuleList/shop/AdminPages/SalesActivities.aspx</FileName>
+  <PageName>团购活动</PageName>
+  <ParentID>00000000-0000-0000-0000-000000000000</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>cbd1d47f-d9f4-4bf3-8e62-f12b3c1131df</id>
+</ModulePageInfo>

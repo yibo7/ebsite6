@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>61</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/SelReport.aspx</ParentUrl>
+  <FileName>Transformation.ascx</FileName>
+  <PageName>购买转化率</PageName>
+  <ParentID>28263e81-6239-4253-91c1-941f2a080f1a</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>4ac8e669-0596-4c87-8552-fbdf716f0ced</id>
+</ModulePageInfo>

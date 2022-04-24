@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<OrderBoxInfo>
+  <Title>第二步选择车型</Title>
+  <Tips>谢谢您的配合，接下来请选择您爱车的车型</Tips>
+  <Items />
+  <DefaultParentClassID>0</DefaultParentClassID>
+  <OrderID>2</OrderID>
+  <StepType>1</StepType>
+  <Seltip>请选择车型</Seltip>
+  <Utem>我选择的车型是#用户输入#</Utem>
+  <ValidationRule>0</ValidationRule>
+  <IsNullText>1</IsNullText>
+  <SoureTable>1</SoureTable>
+  <FieldName>carmodelinfo</FieldName>
+  <CloseNum>1</CloseNum>
+  <id>6</id>
+</OrderBoxInfo>

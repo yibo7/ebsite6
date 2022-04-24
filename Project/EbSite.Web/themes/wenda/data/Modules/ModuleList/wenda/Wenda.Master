@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Wenda.Master.cs" Inherits="EbSite.Modules.Wenda.BmAsk" %>
+<%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    	<div>
+	<div id="top">
+	</div>
+	<div id="content">
+	  <div id="contenttop">
+	    <div id="contenttopleft">
+        </div>
+        <div id="contentright">
+            <div id="buttondiv1">
+                <input class="topinput" type="text" />
+            </div>
+            <div id="buttondiv2">
+                <input class="topinput2" type="button" value="搜索答案" />
+            </div>
+            <div id="buttondiv3">
+                <input class="topinput3" type="button" value="我要提问" />
+            </div>
+        </div>
+	  </div>
+	  <div id="contentmenu">
+	    <div id="menuleft">
+            <div id="menulefttop"></div>
+            <div id="menuleftcenter"></div>
+            <div id="menuleftbottom"></div>
+        </div>
+	    <div id="menumiddle"></div>
+	    <div id="menuright">
+            <div id="menurightttop"></div>
+            <div id="menurighttcenter"></div>
+            <div id="menurighttbottom"></div>
+        </div>
+	  </div>
+	  
+    
+   <asp:ContentPlaceHolder ID="ctphBody" runat="server"/>
+   <div id="bottom" />
+    </div>
+    </div>
+    </form>
+</body>
+</html>
+

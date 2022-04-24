@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ManagedExtension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="EbSite.Plugin.Payment.AlipayBankPay_ICBCBTB.Payment">
+  <BaseType>IPayment</BaseType>
+  <Version>1.0</Version>
+  <Priority>999</Priority>
+  <Description>支付宝即时到帐网银支付-中国工商企业银行</Description>
+  <Author>&lt;a href="http://www.ebsite.net"&gt;小菜菜&lt;/a&gt;</Author>
+  <AdminPage />
+  <Enabled>true</Enabled>
+  <Settings>
+    <Index>0</Index>
+    <Name>EbSite.Plugin.Payment.AlipayBankPay_ICBCBTB.Payment</Name>
+    <Help>无需登录支付宝，直接进入网银支付。</Help>
+    <Delimiter>44</Delimiter>
+    <Parameters>
+      <Name>ID</Name>
+      <Label>唯一ID</Label>
+      <MaxLength>20</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>PayID</Name>
+      <Label>支付宝帐号：</Label>
+      <MaxLength>100</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>ValCode</Name>
+      <Label>交易安全校验码</Label>
+      <MaxLength>100</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>PartnerID</Name>
+      <Label>合作者身份</Label>
+      <MaxLength>100</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <KeyField>ID</KeyField>
+    <IsScalar>true</IsScalar>
+    <Hidden>false</Hidden>
+    <ShowAdd>true</ShowAdd>
+    <ShowEdit>true</ShowEdit>
+    <ShowDelete>true</ShowDelete>
+  </Settings>
+  <ShowSettings>true</ShowSettings>
+</ManagedExtension>

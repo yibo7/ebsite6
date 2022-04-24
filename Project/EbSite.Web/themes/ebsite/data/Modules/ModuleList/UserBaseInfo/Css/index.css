@@ -1,0 +1,19 @@
+﻿     .chatbox{width:100%;text-align: left;border: 1px solid #C8D3DE;}
+    .chatuserbox{ border: 1px solid #F0F0F0;background: #F7F7F7;}
+    .chatuserbox dt{margin-top: 8px;}
+    .chatuserbox b{color: #ff0000;font-size: 14px;}
+    .chatuserbox textarea{ border: 1px solid #EDEDED;}
+    .chatuserbox  .title{background: #3B3B3B;width: 100%;overflow: hidden; }
+    .chatuserbox  .title li{ padding: 8px; padding-left: 15px;background: #3B3B3B;float: left;color: #fff;}
+     .chatuserbox  .title li.current{ background: #F7F7F7;color: #000; }
+     #ChatList{scrollbar-face-color: #f1f1f1;scrollbar-shadow-color: #ffffff; scrollbar-highlight-color:#ffffff; scrollbar-3dlight-color: #ffffff;  scrollbar-darkshadow-color: #ffffff; scrollbar-track-color:#ffffff; 
+	                        scrollbar-arrow-color: ffffff;
+	                        overflow:scroll;
+	                        overflow-x:hidden; 
+	                        height:230px;
+	                        padding-left:10px;
+	                        width:99%;
+                        }
+      #ChatList .msgtitle{color:Red;}
+      #ChatList .msgcontent{color:Blue;}
+      #ChatList .msglist{ }

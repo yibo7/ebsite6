@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>1</Permission>
+  <ModuleID>8961c5b2-43f2-4298-8145-f0965aff70a0</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/ebsite/data/Modules/ModuleList/UserBaseInfo/UserPages/HomeSet.aspx</ParentUrl>
+  <FileName>PlaceSetting.ascx</FileName>
+  <PageName>我的站点设置</PageName>
+  <ParentID>fd7ba88c-ee87-4865-8ff5-6f9c871a9cbb</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>af371bdd-f674-4077-a9ed-e2896fb4c857</id>
+</ModulePageInfo>

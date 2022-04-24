@@ -1,0 +1,1197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EBAddContentAudit" xml:space="preserve">
+    <value>用户添加的内容是否审核</value>
+  </data>
+  <data name="EBAllowDelContent" xml:space="preserve">
+    <value>是否允许删除内容</value>
+  </data>
+  <data name="EBAllowMdfContent" xml:space="preserve">
+    <value>是否允许修改内容</value>
+  </data>
+  <data name="EBCanAddCc" xml:space="preserve">
+    <value>可添加内容的分类</value>
+  </data>
+  <data name="EBCategoryName" xml:space="preserve">
+    <value>分类名称</value>
+  </data>
+  <data name="EBClassName" xml:space="preserve">
+    <value>分类名称</value>
+  </data>
+  <data name="EBClose" xml:space="preserve">
+    <value>关 闭</value>
+  </data>
+  <data name="EBConfirm" xml:space="preserve">
+    <value>确认生成首页</value>
+  </data>
+  <data name="EBConfirmPass" xml:space="preserve">
+    <value>确认密码</value>
+  </data>
+  <data name="EBContentQuan" xml:space="preserve">
+    <value>可添加内容条数</value>
+  </data>
+  <data name="EBEmailList" xml:space="preserve">
+    <value>Email列表</value>
+  </data>
+  <data name="EBExit" xml:space="preserve">
+    <value>退出管理</value>
+  </data>
+  <data name="EBIntegrationLowerL" xml:space="preserve">
+    <value>积分下线</value>
+  </data>
+  <data name="EBIntegrationUpL" xml:space="preserve">
+    <value>积分上线</value>
+  </data>
+  <data name="EBLogRegDir" xml:space="preserve">
+    <value>登录注册定向</value>
+  </data>
+  <data name="EBMailContent" xml:space="preserve">
+    <value>邮件内容</value>
+  </data>
+  <data name="EBMailObject" xml:space="preserve">
+    <value>邮件发送对象</value>
+  </data>
+  <data name="EBMailTitle" xml:space="preserve">
+    <value>邮件标题</value>
+  </data>
+  <data name="EBMobileWay" xml:space="preserve">
+    <value>移动方式</value>
+  </data>
+  <data name="EBModifyMaterial" xml:space="preserve">
+    <value>修改资料</value>
+  </data>
+  <data name="EBModifyPassword" xml:space="preserve">
+    <value>修改密码</value>
+  </data>
+  <data name="EBMsgContent" xml:space="preserve">
+    <value>信息内容</value>
+  </data>
+  <data name="EBMsgFileBox" xml:space="preserve">
+    <value>短信文件箱</value>
+  </data>
+  <data name="EBMsgTitle" xml:space="preserve">
+    <value>信息标题</value>
+  </data>
+  <data name="EBNameTheColor" xml:space="preserve">
+    <value>名称颜色</value>
+  </data>
+  <data name="EBNotNewV" xml:space="preserve">
+    <value>目前没有新版本可升级</value>
+  </data>
+  <data name="EBOpenIndex" xml:space="preserve">
+    <value>网站首页</value>
+  </data>
+  <data name="EBParentClass" xml:space="preserve">
+    <value>父分类</value>
+  </data>
+  <data name="EBPassword" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="EBRcvEmailUname" xml:space="preserve">
+    <value>接收邮件用户名称</value>
+  </data>
+  <data name="EBRcvMsgUsergrp" xml:space="preserve">
+    <value>接收短消息的用户组</value>
+  </data>
+  <data name="EBRegister" xml:space="preserve">
+    <value>注册用户</value>
+  </data>
+  <data name="EBRegToRev" xml:space="preserve">
+    <value>注册会员是否要通过审核</value>
+  </data>
+  <data name="EBSave" xml:space="preserve">
+    <value>保 存</value>
+  </data>
+  <data name="EBSaveConfig" xml:space="preserve">
+    <value>保存配置</value>
+  </data>
+  <data name="EBSend" xml:space="preserve">
+    <value>发送</value>
+  </data>
+  <data name="EBSendMail" xml:space="preserve">
+    <value>发送邮件</value>
+  </data>
+  <data name="EBSendUserName" xml:space="preserve">
+    <value>发送用户名称</value>
+  </data>
+  <data name="EBSourceEp" xml:space="preserve">
+    <value>源版块</value>
+  </data>
+  <data name="EBTargetEp" xml:space="preserve">
+    <value>目标板块</value>
+  </data>
+  <data name="EBTheCurrentAdministrator" xml:space="preserve">
+    <value>当前管理员</value>
+  </data>
+  <data name="EBUNameList" xml:space="preserve">
+    <value>用户名称列表</value>
+  </data>
+  <data name="EBUserGroup" xml:space="preserve">
+    <value>用户组</value>
+  </data>
+  <data name="EBUserGroupName" xml:space="preserve">
+    <value>用户组名称</value>
+  </data>
+  <data name="EBUserModel" xml:space="preserve">
+    <value>用户模型</value>
+  </data>
+  <data name="EBUserName" xml:space="preserve">
+    <value>用户名称</value>
+  </data>
+  <data name="Menu00ad3973" xml:space="preserve">
+    <value>动态组件</value>
+  </data>
+  <data name="Menu0714edf8" xml:space="preserve">
+    <value>系统配置</value>
+  </data>
+  <data name="Menu0b955817" xml:space="preserve">
+    <value>CNZZ统计</value>
+  </data>
+  <data name="Menu0d10ac38" xml:space="preserve">
+    <value>模板分类</value>
+  </data>
+  <data name="Menu13813c56" xml:space="preserve">
+    <value>静态生成</value>
+  </data>
+  <data name="Menu180dc666" xml:space="preserve">
+    <value>添加管理员</value>
+  </data>
+  <data name="Menu187c298e" xml:space="preserve">
+    <value>邮件发送</value>
+  </data>
+  <data name="Menu1894f9aa" xml:space="preserve">
+    <value>系统异常</value>
+  </data>
+  <data name="Menu1abebebf" xml:space="preserve">
+    <value>后台菜单</value>
+  </data>
+  <data name="Menu1b108482" xml:space="preserve">
+    <value>内容管理</value>
+  </data>
+  <data name="Menu1faeedfe" xml:space="preserve">
+    <value>管理角色</value>
+  </data>
+  <data name="Menu272574e0" xml:space="preserve">
+    <value>支付设置</value>
+  </data>
+  <data name="Menu2a9e96bb" xml:space="preserve">
+    <value>组件开发助手</value>
+  </data>
+  <data name="Menu2d4b9bfe" xml:space="preserve">
+    <value>管 理 员</value>
+  </data>
+  <data name="Menu3704b5ce" xml:space="preserve">
+    <value>系统设置</value>
+  </data>
+  <data name="Menu3b4a8b59" xml:space="preserve">
+    <value>配送设置</value>
+  </data>
+  <data name="Menu3dc9bf9a" xml:space="preserve">
+    <value>水印缩图</value>
+  </data>
+  <data name="Menu3f29cdbb" xml:space="preserve">
+    <value>合并分类</value>
+  </data>
+  <data name="Menu41086e3c" xml:space="preserve">
+    <value>页面模板</value>
+  </data>
+  <data name="Menu44d460f7" xml:space="preserve">
+    <value>用户配置</value>
+  </data>
+  <data name="Menu46465ac8" xml:space="preserve">
+    <value>添加控件</value>
+  </data>
+  <data name="Menu46d3d83e" xml:space="preserve">
+    <value>邮件配置</value>
+  </data>
+  <data name="Menu560120b9" xml:space="preserve">
+    <value>内容模型</value>
+  </data>
+  <data name="Menu5d44526b" xml:space="preserve">
+    <value>日志管理</value>
+  </data>
+  <data name="Menu5ec7e82e" xml:space="preserve">
+    <value>添加一级分类</value>
+  </data>
+  <data name="Menu602cb7f6" xml:space="preserve">
+    <value>管理讨论区</value>
+  </data>
+  <data name="Menu62319daa" xml:space="preserve">
+    <value>管理部件</value>
+  </data>
+  <data name="Menu6295f7d4" xml:space="preserve">
+    <value>管理控件</value>
+  </data>
+  <data name="Menu64744248" xml:space="preserve">
+    <value>数据调整</value>
+  </data>
+  <data name="Menu6637d926" xml:space="preserve">
+    <value>部件模板管理</value>
+  </data>
+  <data name="Menu68e046c9" xml:space="preserve">
+    <value>访问统计</value>
+  </data>
+  <data name="Menu6a93374e" xml:space="preserve">
+    <value>订单管理</value>
+  </data>
+  <data name="Menu6c48bd38" xml:space="preserve">
+    <value>添加模板</value>
+  </data>
+  <data name="Menu6d8a8492" xml:space="preserve">
+    <value>安装组件</value>
+  </data>
+  <data name="Menu6f4c34ce" xml:space="preserve">
+    <value>界面样式</value>
+  </data>
+  <data name="Menu705f7490" xml:space="preserve">
+    <value>模块管理</value>
+  </data>
+  <data name="Menu73d1efac" xml:space="preserve">
+    <value>已锁定用户</value>
+  </data>
+  <data name="Menu74b2841e" xml:space="preserve">
+    <value>添加一级专题</value>
+  </data>
+  <data name="Menu754750ee" xml:space="preserve">
+    <value>插件开发助手</value>
+  </data>
+  <data name="Menu75cb38f5" xml:space="preserve">
+    <value>添加会员</value>
+  </data>
+  <data name="Menu785b8c38" xml:space="preserve">
+    <value>移动菜单</value>
+  </data>
+  <data name="Menu7ac29d42" xml:space="preserve">
+    <value>网站管理</value>
+  </data>
+  <data name="Menu7ba7df55" xml:space="preserve">
+    <value>审核讨论</value>
+  </data>
+  <data name="Menu7d99f35a" xml:space="preserve">
+    <value>注册会员管理</value>
+  </data>
+  <data name="Menu7e0a42b7" xml:space="preserve">
+    <value>管理模板</value>
+  </data>
+  <data name="Menu7ff3e17a" xml:space="preserve">
+    <value>部件分类</value>
+  </data>
+  <data name="Menu80284f3d" xml:space="preserve">
+    <value>管理连接</value>
+  </data>
+  <data name="Menu8125b6f7" xml:space="preserve">
+    <value>定时设置</value>
+  </data>
+  <data name="Menu817e382f" xml:space="preserve">
+    <value>管理内容</value>
+  </data>
+  <data name="Menu81ec104a" xml:space="preserve">
+    <value>添加内容</value>
+  </data>
+  <data name="Menu81f3def4" xml:space="preserve">
+    <value>管理标签</value>
+  </data>
+  <data name="Menu823afb19" xml:space="preserve">
+    <value>插件管理</value>
+  </data>
+  <data name="Menu835d8856" xml:space="preserve">
+    <value>管理权限</value>
+  </data>
+  <data name="Menu8696def8" xml:space="preserve">
+    <value>公共模板</value>
+  </data>
+  <data name="Menu86c2d755" xml:space="preserve">
+    <value>CNZZ配置</value>
+  </data>
+  <data name="Menu8ba0d17f" xml:space="preserve">
+    <value>上传文件跟踪</value>
+  </data>
+  <data name="Menu8ce17a56" xml:space="preserve">
+    <value>文件上传</value>
+  </data>
+  <data name="Menu8ecf3518" xml:space="preserve">
+    <value>安装模块</value>
+  </data>
+  <data name="Menu8f324cf5" xml:space="preserve">
+    <value>网站制作</value>
+  </data>
+  <data name="Menu914aa857" xml:space="preserve">
+    <value>使用中的文件</value>
+  </data>
+  <data name="Menu91d05a0d" xml:space="preserve">
+    <value>模板与样式</value>
+  </data>
+  <data name="Menu9305c1a5" xml:space="preserve">
+    <value>管理会员组</value>
+  </data>
+  <data name="Menu947b810f" xml:space="preserve">
+    <value>商品类型</value>
+  </data>
+  <data name="Menu955687a6" xml:space="preserve">
+    <value>移动专题</value>
+  </data>
+  <data name="Menu95a097cc" xml:space="preserve">
+    <value>系统管理</value>
+  </data>
+  <data name="Menu98b57c9b" xml:space="preserve">
+    <value>管理登录</value>
+  </data>
+  <data name="Menu99c870bf" xml:space="preserve">
+    <value>模型管理</value>
+  </data>
+  <data name="Menu9a4b9825" xml:space="preserve">
+    <value>合并专题</value>
+  </data>
+  <data name="Menu9b7a4d5f" xml:space="preserve">
+    <value>安装插件</value>
+  </data>
+  <data name="Menu9dbc4341" xml:space="preserve">
+    <value>数据调整</value>
+  </data>
+  <data name="Menu9f0bc254" xml:space="preserve">
+    <value>添加连接</value>
+  </data>
+  <data name="Menua3c02db0" xml:space="preserve">
+    <value>控件分类</value>
+  </data>
+  <data name="Menua8508c75" xml:space="preserve">
+    <value>审核会员</value>
+  </data>
+  <data name="Menuaa9847a5" xml:space="preserve">
+    <value>管理专题表格模式</value>
+  </data>
+  <data name="Menuae1cc14a" xml:space="preserve">
+    <value>数据调整</value>
+  </data>
+  <data name="Menuae47f341" xml:space="preserve">
+    <value>组件列表</value>
+  </data>
+  <data name="Menub55ba49a" xml:space="preserve">
+    <value>部件管理</value>
+  </data>
+  <data name="Menub7638408" xml:space="preserve">
+    <value>模型控件管理</value>
+  </data>
+  <data name="Menub8299e3f" xml:space="preserve">
+    <value>模块开发助手</value>
+  </data>
+  <data name="Menubb33d5ce" xml:space="preserve">
+    <value>分类管理</value>
+  </data>
+  <data name="Menubd85cd0d" xml:space="preserve">
+    <value>首页管理</value>
+  </data>
+  <data name="Menuc4a2273a" xml:space="preserve">
+    <value>添加分组</value>
+  </data>
+  <data name="Menuc533af4c" xml:space="preserve">
+    <value>模块与插件</value>
+  </data>
+  <data name="Menucc7e5f3f" xml:space="preserve">
+    <value>添加部件</value>
+  </data>
+  <data name="Menuce45900d" xml:space="preserve">
+    <value>专题管理</value>
+  </data>
+  <data name="Menud2074409" xml:space="preserve">
+    <value>管理讨论</value>
+  </data>
+  <data name="Menud38f4672" xml:space="preserve">
+    <value>错误生成</value>
+  </data>
+  <data name="Menud4119787" xml:space="preserve">
+    <value>管理会员</value>
+  </data>
+  <data name="Menud8a79012" xml:space="preserve">
+    <value>临时上传文件</value>
+  </data>
+  <data name="Menud9322f9c" xml:space="preserve">
+    <value>审核内容</value>
+  </data>
+  <data name="Menudd231a18" xml:space="preserve">
+    <value>生成首页</value>
+  </data>
+  <data name="Menudfe66df5" xml:space="preserve">
+    <value>用户管理</value>
+  </data>
+  <data name="Menue062c898" xml:space="preserve">
+    <value>添加菜单</value>
+  </data>
+  <data name="Menue0ffb1af" xml:space="preserve">
+    <value>用户模型</value>
+  </data>
+  <data name="Menue1d27554" xml:space="preserve">
+    <value>菜单管理</value>
+  </data>
+  <data name="Menue2d323c8" xml:space="preserve">
+    <value>程序整合</value>
+  </data>
+  <data name="Menue5040469" xml:space="preserve">
+    <value>分类模型</value>
+  </data>
+  <data name="Menue7838628" xml:space="preserve">
+    <value>插件设置</value>
+  </data>
+  <data name="Menueabb6dbe" xml:space="preserve">
+    <value>扩展功能</value>
+  </data>
+  <data name="Menueac8e169" xml:space="preserve">
+    <value>分类管理表格模式</value>
+  </data>
+  <data name="Menuebdedc65" xml:space="preserve">
+    <value>地区设置</value>
+  </data>
+  <data name="Menued2395bd" xml:space="preserve">
+    <value>SEO优化</value>
+  </data>
+  <data name="Menueec169d9" xml:space="preserve">
+    <value>模块列表</value>
+  </data>
+  <data name="Menuef1b98a1" xml:space="preserve">
+    <value>管理类别</value>
+  </data>
+  <data name="Menuf2963217" xml:space="preserve">
+    <value>短信发送</value>
+  </data>
+  <data name="Menuf470b787" xml:space="preserve">
+    <value>管理讨论区</value>
+  </data>
+  <data name="Menuf638479c" xml:space="preserve">
+    <value>移动分类</value>
+  </data>
+  <data name="Menuf79b9e66" xml:space="preserve">
+    <value>购物管理</value>
+  </data>
+  <data name="Menufb1cf690" xml:space="preserve">
+    <value>插件列表</value>
+  </data>
+  <data name="Menufd115a02" xml:space="preserve">
+    <value>系统管理员</value>
+  </data>
+  <data name="Menufe6a5269" xml:space="preserve">
+    <value>审核连接</value>
+  </data>
+  <data name="Menuff18e036" xml:space="preserve">
+    <value>友情连接</value>
+  </data>
+  <data name="EBAddContenToS" xml:space="preserve">
+    <value>添加内容到专题</value>
+  </data>
+  <data name="EBAntiCheatingS" xml:space="preserve">
+    <value>防作弊策略</value>
+  </data>
+  <data name="EBAutomaticStatic" xml:space="preserve">
+    <value>自动静态</value>
+  </data>
+  <data name="EBBottomCopyright" xml:space="preserve">
+    <value>底部版权</value>
+  </data>
+  <data name="EBComment" xml:space="preserve">
+    <value>评论</value>
+  </data>
+  <data name="EBCtrParam" xml:space="preserve">
+    <value>控件参数</value>
+  </data>
+  <data name="EBCurrntMonth" xml:space="preserve">
+    <value>本月</value>
+  </data>
+  <data name="EBCurrntWeek" xml:space="preserve">
+    <value>本周</value>
+  </data>
+  <data name="EBDefaultGrp" xml:space="preserve">
+    <value>会员注册默认会员组</value>
+  </data>
+  <data name="EBDefualtUsIntegral" xml:space="preserve">
+    <value>默认新注册用户积分</value>
+  </data>
+  <data name="EBDomainName" xml:space="preserve">
+    <value>网站域名</value>
+  </data>
+  <data name="EBDynamic" xml:space="preserve">
+    <value>动态</value>
+  </data>
+  <data name="EBDynamicRewrite" xml:space="preserve">
+    <value>动态重写</value>
+  </data>
+  <data name="EBErrLogHmtLock" xml:space="preserve">
+    <value>错误登录多少次后锁定</value>
+  </data>
+  <data name="EBErrLogInLock" xml:space="preserve">
+    <value>错误登录锁定</value>
+  </data>
+  <data name="EBFileName" xml:space="preserve">
+    <value>文件名称</value>
+  </data>
+  <data name="EBFileUploadPath" xml:space="preserve">
+    <value>文件上上传路径</value>
+  </data>
+  <data name="EBGeneratSpeed" xml:space="preserve">
+    <value>生成速度</value>
+  </data>
+  <data name="EBHyperlinksWay" xml:space="preserve">
+    <value>超链接方式</value>
+  </data>
+  <data name="EBIndexTemplate" xml:space="preserve">
+    <value>首页模板</value>
+  </data>
+  <data name="EBInitAllClass" xml:space="preserve">
+    <value>初始化所有分类默认配置</value>
+  </data>
+  <data name="EBLanguage" xml:space="preserve">
+    <value>语言设置</value>
+  </data>
+  <data name="EBMakeDataReset" xml:space="preserve">
+    <value>将数据归零</value>
+  </data>
+  <data name="EBManualStatic" xml:space="preserve">
+    <value>手动静态</value>
+  </data>
+  <data name="EBMbLogValidCode" xml:space="preserve">
+    <value>会员登陆是否需要验证码</value>
+  </data>
+  <data name="EBNewUserReg" xml:space="preserve">
+    <value>是否允许新用户注册</value>
+  </data>
+  <data name="EBNotAllowRegNotice" xml:space="preserve">
+    <value>不允许新用户注册通知</value>
+  </data>
+  <data name="EBOperation" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="EBPraise" xml:space="preserve">
+    <value>好评</value>
+  </data>
+  <data name="EBPwdEncryptMode" xml:space="preserve">
+    <value>密码加密模式</value>
+  </data>
+  <data name="EBRegNeedKnow" xml:space="preserve">
+    <value>会员IP登陆限制</value>
+  </data>
+  <data name="EBRegUsActWay" xml:space="preserve">
+    <value>注册用户激活方式</value>
+  </data>
+  <data name="EBSaveField" xml:space="preserve">
+    <value>保存字段</value>
+  </data>
+  <data name="EBSortID" xml:space="preserve">
+    <value>排序ID</value>
+  </data>
+  <data name="EBSourceClass" xml:space="preserve">
+    <value>选择源分类</value>
+  </data>
+  <data name="EBSubmit" xml:space="preserve">
+    <value>提 交</value>
+  </data>
+  <data name="EBSysBackendDirN" xml:space="preserve">
+    <value>系统后台存放目录名称</value>
+  </data>
+  <data name="EBTargetClass" xml:space="preserve">
+    <value>目标分类</value>
+  </data>
+  <data name="EBTitle" xml:space="preserve">
+    <value>标题名称</value>
+  </data>
+  <data name="EBEBClickRateTotal" xml:space="preserve">
+    <value>访问率(总)</value>
+  </data>
+  <data name="EBUsGrpMech" xml:space="preserve">
+    <value>用户组机制</value>
+  </data>
+  <data name="EBVirtualDirectory" xml:space="preserve">
+    <value>虚拟目录</value>
+  </data>
+  <data name="EBWebsiteName" xml:space="preserve">
+    <value>网站名称</value>
+  </data>
+  <data name="EBCancel" xml:space="preserve">
+    <value>取 消</value>
+  </data>
+  <data name="EBCateCvtCnt" xml:space="preserve">
+    <value>分类内容化</value>
+  </data>
+  <data name="EBCateRule" xml:space="preserve">
+    <value>分类页面生成路径及命名规则</value>
+  </data>
+  <data name="EBCmntModer" xml:space="preserve">
+    <value>是否审核评论</value>
+  </data>
+  <data name="EBCookieDom" xml:space="preserve">
+    <value>Cookie的域</value>
+  </data>
+  <data name="EBCtntPgRule" xml:space="preserve">
+    <value>内容页面生成路径及命名规则</value>
+  </data>
+  <data name="EBDftNOfTPg" xml:space="preserve">
+    <value>默认页面名称</value>
+  </data>
+  <data name="EBHowLongTimUpd" xml:space="preserve">
+    <value>点击率更新时长</value>
+  </data>
+  <data name="EBInstallPath" xml:space="preserve">
+    <value>安装路径</value>
+  </data>
+  <data name="EBInteApWs" xml:space="preserve">
+    <value>整合网站的ApiKey</value>
+  </data>
+  <data name="EBInteSiteAddress" xml:space="preserve">
+    <value>整合网站的访问地址</value>
+  </data>
+  <data name="EBInteSiteKey" xml:space="preserve">
+    <value>整合网站的密钥</value>
+  </data>
+  <data name="EBInteWebSite" xml:space="preserve">
+    <value>整合网站</value>
+  </data>
+  <data name="EBIubsDir" xml:space="preserve">
+    <value>模块重写目录</value>
+  </data>
+  <data name="EBLogStateLT" xml:space="preserve">
+    <value>登录状态保存时长</value>
+  </data>
+  <data name="EBOpAdLgLog" xml:space="preserve">
+    <value>是否开启管理员登录日志</value>
+  </data>
+  <data name="EBOpDisverCode" xml:space="preserve">
+    <value>是否开启讨论验证码</value>
+  </data>
+  <data name="EBOpEnSysLog" xml:space="preserve">
+    <value>是否开启系统异常日志</value>
+  </data>
+  <data name="EBOpverCode" xml:space="preserve">
+    <value>是否开启登录验证码</value>
+  </data>
+  <data name="EBRegMebKnow" xml:space="preserve">
+    <value>会员注册需知</value>
+  </data>
+  <data name="EBRemark" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="EBSpPgRule" xml:space="preserve">
+    <value>专题页面生成路径及命名规则</value>
+  </data>
+  <data name="EBSptPage" xml:space="preserve">
+    <value>页码分隔符</value>
+  </data>
+  <data name="EBStaPgTime" xml:space="preserve">
+    <value>静态页面过期时间</value>
+  </data>
+  <data name="EBTagListPath" xml:space="preserve">
+    <value>标签内容存放路径</value>
+  </data>
+  <data name="EBTagSearchPath" xml:space="preserve">
+    <value>标签搜索列表存放路径</value>
+  </data>
+  <data name="EBAdjustOrderBf" xml:space="preserve">
+    <value>调整顺序到目标分类前</value>
+  </data>
+  <data name="EBAdminVisible" xml:space="preserve">
+    <value>管理员可见</value>
+  </data>
+  <data name="EBAftAdded" xml:space="preserve">
+    <value>添加完毕进入编辑</value>
+  </data>
+  <data name="EBAll" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="EBAppType" xml:space="preserve">
+    <value>适用类型</value>
+  </data>
+  <data name="EBAuditCont" xml:space="preserve">
+    <value>是否审核内容</value>
+  </data>
+  <data name="EBAvailFieldSet" xml:space="preserve">
+    <value>可用字段设置</value>
+  </data>
+  <data name="EBBackPgStyle" xml:space="preserve">
+    <value>后台页面样式</value>
+  </data>
+  <data name="EBBaseDefTem" xml:space="preserve">
+    <value>以默认模板为基础</value>
+  </data>
+  <data name="EBCatePgTem" xml:space="preserve">
+    <value>分类页模板</value>
+  </data>
+  <data name="EBClasListPgConAddrR" xml:space="preserve">
+    <value>分类列表页连接地址相对</value>
+  </data>
+  <data name="EBClassSeoTitRul" xml:space="preserve">
+    <value>分类Seo标题规则</value>
+  </data>
+  <data name="EBCluInterQue" xml:space="preserve">
+    <value>群发队列间隔</value>
+  </data>
+  <data name="EBCluNumOfPar" xml:space="preserve">
+    <value>群发并行数</value>
+  </data>
+  <data name="EBCntntDesRu" xml:space="preserve">
+    <value>内容Seo描述规则</value>
+  </data>
+  <data name="EBCntntSeoKwRu" xml:space="preserve">
+    <value>内容Seo关键词规则</value>
+  </data>
+  <data name="EBConnAddrRelPg" xml:space="preserve">
+    <value>首页连接地址相对</value>
+  </data>
+  <data name="EBContAddrRel" xml:space="preserve">
+    <value>内容显示连接地址相对</value>
+  </data>
+  <data name="EBCtntSeoTitRu" xml:space="preserve">
+    <value>内容Seo标题规则</value>
+  </data>
+  <data name="EBCtrCategory" xml:space="preserve">
+    <value>控件类别</value>
+  </data>
+  <data name="EBDescription" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="EBDirctCtrName" xml:space="preserve">
+    <value>模块菜单ID</value>
+  </data>
+  <data name="EBDisplayName" xml:space="preserve">
+    <value>显示名称</value>
+  </data>
+  <data name="EBEptSysCache" xml:space="preserve">
+    <value>清空系统缓存</value>
+  </data>
+  <data name="EBFieldName" xml:space="preserve">
+    <value>字段名称</value>
+  </data>
+  <data name="EBFounderAcc" xml:space="preserve">
+    <value>创始人帐号</value>
+  </data>
+  <data name="EBFrontDeskPgStyle" xml:space="preserve">
+    <value>前台页面样式</value>
+  </data>
+  <data name="EBFrtPgDesRuS" xml:space="preserve">
+    <value>首页Seo描述规则</value>
+  </data>
+  <data name="EBFrtPgSeoKeyR" xml:space="preserve">
+    <value>首页Seo关键词规则</value>
+  </data>
+  <data name="EBFrtPgTitSeoRule" xml:space="preserve">
+    <value>首页Seo标题规则</value>
+  </data>
+  <data name="EBGroupId" xml:space="preserve">
+    <value>用户组ID</value>
+  </data>
+  <data name="EBIcon" xml:space="preserve">
+    <value>图标</value>
+  </data>
+  <data name="EBInitAllDefualt" xml:space="preserve">
+    <value>初始化所有分类默认配置</value>
+  </data>
+  <data name="EBIntro" xml:space="preserve">
+    <value>简介</value>
+  </data>
+  <data name="EBIpLimit" xml:space="preserve">
+    <value>会员IP登陆限制</value>
+  </data>
+  <data name="EBLblListSize" xml:space="preserve">
+    <value>标签内容每页显示条数</value>
+  </data>
+  <data name="EBMenuName" xml:space="preserve">
+    <value>菜单名称</value>
+  </data>
+  <data name="EBModelName" xml:space="preserve">
+    <value>模型名称</value>
+  </data>
+  <data name="EBOpenWmarkImg" xml:space="preserve">
+    <value>是否启用图片水印功能</value>
+  </data>
+  <data name="EBOpLogverCode" xml:space="preserve">
+    <value>是否开启登录验证码</value>
+  </data>
+  <data name="EBOpThuFun" xml:space="preserve">
+    <value>是否启用缩略图功能</value>
+  </data>
+  <data name="EBOutCtnerId" xml:space="preserve">
+    <value>输出容器ID</value>
+  </data>
+  <data name="EBPageListSize" xml:space="preserve">
+    <value>分类列表每页显示条数</value>
+  </data>
+  <data name="EBPermisId" xml:space="preserve">
+    <value>权限ID</value>
+  </data>
+  <data name="EBRandomName" xml:space="preserve">
+    <value>随机命名</value>
+  </data>
+  <data name="EBRearSortId" xml:space="preserve">
+    <value>重新排列排序ID</value>
+  </data>
+  <data name="EBRoleName" xml:space="preserve">
+    <value>角色名称</value>
+  </data>
+  <data name="EBRoleOp" xml:space="preserve">
+    <value>角色操作</value>
+  </data>
+  <data name="EBSelect" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="EBSendEmailAddr" xml:space="preserve">
+    <value>发送邮箱地址</value>
+  </data>
+  <data name="EBSendMailName" xml:space="preserve">
+    <value>发送邮件名称</value>
+  </data>
+  <data name="EBSeoDesRulc" xml:space="preserve">
+    <value>分类Seo描述规则</value>
+  </data>
+  <data name="EBSeoKwRul" xml:space="preserve">
+    <value>分类Seo关键词规则</value>
+  </data>
+  <data name="EBSeoKwTagListRu" xml:space="preserve">
+    <value>标签内容Seo关键词规则</value>
+  </data>
+  <data name="EBSmtpSvrName" xml:space="preserve">
+    <value>smtp服务器名称</value>
+  </data>
+  <data name="EBSpcListPg" xml:space="preserve">
+    <value>专题列表每页显示条数</value>
+  </data>
+  <data name="EBSpeDesSeoRu" xml:space="preserve">
+    <value>专题Seo描述规则</value>
+  </data>
+  <data name="EBSpePgLkAddr" xml:space="preserve">
+    <value>专题页连接地址相对</value>
+  </data>
+  <data name="EBSpeSeoKwRu" xml:space="preserve">
+    <value>专题Seo关键词规则</value>
+  </data>
+  <data name="EBSpeSeoTitRu" xml:space="preserve">
+    <value>专题Seo标题规则</value>
+  </data>
+  <data name="EBSubClass" xml:space="preserve">
+    <value>所属分类</value>
+  </data>
+  <data name="EBSysDataLay" xml:space="preserve">
+    <value>系统的数据层组件的名字</value>
+  </data>
+  <data name="EBSysDbConnStr" xml:space="preserve">
+    <value>系统数据库连接串</value>
+  </data>
+  <data name="EBSysDTabPrefix" xml:space="preserve">
+    <value>系统数据表前缀</value>
+  </data>
+  <data name="EBTagListAddrRel" xml:space="preserve">
+    <value>标签内容页连接地址相对</value>
+  </data>
+  <data name="EBTagListDesRu" xml:space="preserve">
+    <value>标签内容Seo描述规则</value>
+  </data>
+  <data name="EBTagListRu" xml:space="preserve">
+    <value>标签内容Seo标题规则</value>
+  </data>
+  <data name="EBTagPgDesRu" xml:space="preserve">
+    <value>标签大全Seo描述规则</value>
+  </data>
+  <data name="EBTagPgSeoKwRu" xml:space="preserve">
+    <value>标签大全Seo关键词规则</value>
+  </data>
+  <data name="EBTagPgTitRu" xml:space="preserve">
+    <value>标签大全Seo标题规则</value>
+  </data>
+  <data name="EBTagSearPgAddrRel" xml:space="preserve">
+    <value>标签搜索页地址相对</value>
+  </data>
+  <data name="EBTagSearSize" xml:space="preserve">
+    <value>标签搜索每页显示条数</value>
+  </data>
+  <data name="EBTarget" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="EBTemClass" xml:space="preserve">
+    <value>模板分类</value>
+  </data>
+  <data name="EBTempFileName" xml:space="preserve">
+    <value>模板文件名称</value>
+  </data>
+  <data name="EBThuHeight" xml:space="preserve">
+    <value>缩略图高度</value>
+  </data>
+  <data name="EBThuWidth" xml:space="preserve">
+    <value>缩略图宽度</value>
+  </data>
+  <data name="EBTmeplateName" xml:space="preserve">
+    <value>模板名称</value>
+  </data>
+  <data name="EBUploadFileFmtDef" xml:space="preserve">
+    <value>默认允许上传文件格式</value>
+  </data>
+  <data name="EBUploadFileMaxSize" xml:space="preserve">
+    <value>默认最大文件上传大小</value>
+  </data>
+  <data name="EBUploadPicQua" xml:space="preserve">
+    <value>上传图片质量</value>
+  </data>
+  <data name="EBUserVisible" xml:space="preserve">
+    <value>用户可见</value>
+  </data>
+  <data name="EBUsrDConnStr" xml:space="preserve">
+    <value>用户数据库连接串</value>
+  </data>
+  <data name="EBUsrDLayAssNm" xml:space="preserve">
+    <value>用户数据层程序集名称</value>
+  </data>
+  <data name="EBUsrDtPrefix" xml:space="preserve">
+    <value>用户数据表前缀</value>
+  </data>
+  <data name="EBWmarkImgPst" xml:space="preserve">
+    <value>水印图片位置</value>
+  </data>
+  <data name="EBWmarkPath" xml:space="preserve">
+    <value>水印图片路径</value>
+  </data>
+  <data name="EBWmarkTrans" xml:space="preserve">
+    <value>水印图片透明度</value>
+  </data>
+  <data name="EBAcIdupcn" xml:space="preserve">
+    <value>根据分类ID重新更新分类名称</value>
+  </data>
+  <data name="EBAdminLock" xml:space="preserve">
+    <value>管理员锁定</value>
+  </data>
+  <data name="EBAllDSetNoRecomm" xml:space="preserve">
+    <value>将所有数据置为不推荐</value>
+  </data>
+  <data name="EBClickRateMonth" xml:space="preserve">
+    <value>访问率(本月)</value>
+  </data>
+  <data name="EBClickRateToday" xml:space="preserve">
+    <value>今日</value>
+  </data>
+  <data name="EBClickRateToday1" xml:space="preserve">
+    <value>访问率(今日)</value>
+  </data>
+  <data name="EBClickRateTodayWeek" xml:space="preserve">
+    <value>访问率(本周)</value>
+  </data>
+  <data name="EBClickRateTotal" xml:space="preserve">
+    <value>访问率(总)</value>
+  </data>
+  <data name="EBCollection" xml:space="preserve">
+    <value>收藏</value>
+  </data>
+  <data name="EBcontrDescri" xml:space="preserve">
+    <value>控件描述</value>
+  </data>
+  <data name="EBFlag" xml:space="preserve">
+    <value>标志ID</value>
+  </data>
+  <data name="EBGeClZero" xml:space="preserve">
+    <value>生成分类ID等于0的分类</value>
+  </data>
+  <data name="EBInitAllCtntDefualt" xml:space="preserve">
+    <value>初始化所有内容默认配置</value>
+  </data>
+  <data name="EBLastLogin" xml:space="preserve">
+    <value>最后登录时间</value>
+  </data>
+  <data name="EBPath" xml:space="preserve">
+    <value>路径</value>
+  </data>
+  <data name="EBPermisName" xml:space="preserve">
+    <value>权限名称</value>
+  </data>
+  <data name="EBStartReset" xml:space="preserve">
+    <value>开始重置</value>
+  </data>
+  <data name="EBUserOperation" xml:space="preserve">
+    <value>用户操作</value>
+  </data>
+  <data name="EBAuthor" xml:space="preserve">
+    <value>作者</value>
+  </data>
+  <data name="EBCode" xml:space="preserve">
+    <value>代码</value>
+  </data>
+  <data name="EBConfig" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="EBLoginDate" xml:space="preserve">
+    <value>登录时间</value>
+  </data>
+  <data name="EBLogTitle" xml:space="preserve">
+    <value>日志标题</value>
+  </data>
+  <data name="EBMenuID" xml:space="preserve">
+    <value>菜单ID</value>
+  </data>
+  <data name="EBName" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="EBPermID" xml:space="preserve">
+    <value>权限标识</value>
+  </data>
+  <data name="EBPriority" xml:space="preserve">
+    <value>优先级</value>
+  </data>
+  <data name="EBResID" xml:space="preserve">
+    <value>资源ID</value>
+  </data>
+  <data name="EBSelectModu" xml:space="preserve">
+    <value>选择模块文件</value>
+  </data>
+  <data name="EBSelectPlug" xml:space="preserve">
+    <value>选择插件文件</value>
+  </data>
+  <data name="EBState" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="EBStorFold" xml:space="preserve">
+    <value>存放文件夹</value>
+  </data>
+  <data name="EBStrtInstall" xml:space="preserve">
+    <value>开始安装</value>
+  </data>
+  <data name="EBVersion" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="EBContFldName" xml:space="preserve">
+    <value>内容字段名称</value>
+  </data>
+  <data name="EBAsTagerClass" xml:space="preserve">
+    <value>作为目标分类的子分类</value>
+  </data>
+  <data name="EBLinkPath" xml:space="preserve">
+    <value>链接路径</value>
+  </data>
+  <data name="ReWritePath" xml:space="preserve">
+    <value>重写目录</value>
+  </data>
+  <data name="EBSendEmailPass" xml:space="preserve">
+    <value>发送邮箱密码</value>
+  </data>
+  <data name="EBSourMenu" xml:space="preserve">
+    <value>源菜单</value>
+  </data>
+  <data name="EBTargMenu" xml:space="preserve">
+    <value>目标菜单</value>
+  </data>
+  <data name="EBNoteClass1" xml:space="preserve">
+    <value>合并分类后将删除源分类与它的子分类</value>
+  </data>
+  <data name="EBNoteClass2" xml:space="preserve">
+    <value>分类的合并包括源分类下的所有数据及其子分类下所有数据</value>
+  </data>
+  <data name="ManageIndex" xml:space="preserve">
+    <value>管理首页</value>
+  </data>
+</root>

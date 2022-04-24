@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>100</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/DownNotice.aspx</ParentUrl>
+  <FileName>SendMsg.ascx</FileName>
+  <PageName>发送短信</PageName>
+  <ParentID>1910b4e5-699a-4638-914e-a5eb02eeba56</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>e3109f57-a6bc-41b2-8c9f-35b64acaa511</id>
+</ModulePageInfo>

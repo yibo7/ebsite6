@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script type="text/javascript" src="../../../../../js/init.js"></script>
+    <script type="text/javascript" src="../../../../../js/jquery.js"></script>
+    <style>
+        body{ font-size: 12px;}
+         .BoxImg{width:100%;}
+        .BoxImg img{ width: 150px;height: 150px;cursor: pointer}
+        .BoxImg li{ float: left;margin: 5px; list-style: none}
+         .BoxImg li div{ text-align: center;background: #F0F0F0;}
+         .imgselborder{ border: 10px solid #ff0000;}
+    </style>
+</head>
+<body> 
+        <table>
+            <tr>
+                
+                <td><input id="city" value="ebsite" onkeydown="EnterPress(event)" style="width: 300px" type="text" /></td>
+
+                <td><button onclick="doSearch(1) "   id="mapsearch">搜索</button> 
+                <button onclick="addPic()" id="addMap">添加所选图片</button></td>
+
+            </tr>
+        </table>
+<div class="BoxImg" id="container">
+
+</div>
+
+<div style="text-align: center">
+    <input type="button" style="width: 300px;" onclick="getnext()" value="下一页"/>
+</div>
+
+<script type="text/javascript">
+         
+
+    function doSearch(pageindex) {
+       
+            var urlApi = SiteConfigs.UrlIISPath+"api/searchpic?key=" + $("#city").val() + "&pageindex=" + pageindex;
+            
+            $("#container").html("正在查询...");
+            $.ajax({
+                url: urlApi,
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    if (data != null && data.length > 0) {
+                        $("#container").html("");
+                        for (var i = 0; i < data.length; i++) {
+                            var model = data[i]; 
+                            $("#container").append("<li><div><img onclick='selimg(this)' src='" + model.ImgUrl + "'/></div><div><a target=_blank href='" + model.ImgUrl + "'>查看源图</a></div></li>");
+                            //$("#container").append(model.ImgUrl);
+                        }
+                    }
+                }
+            });
+
+        }
+
+        var thispageindex = 1;
+        function getnext() {
+            thispageindex++;
+            doSearch(thispageindex);
+        }
+        function EnterPress(e) {
+            var e = e || window.event;
+            if (e.keyCode == 13) {
+                doSearch(1);
+            }
+        }
+
+        function selimg(obj) {
+            var issel = $(obj).attr("issel");
+            if (!issel) {
+                $(obj).addClass("imgselborder");
+                $(obj).width(130);
+                $(obj).height(130);
+                $(obj).attr("issel", "1");
+            } else {
+                $(obj).removeAttr("issel");
+                $(obj).removeClass("imgselborder");
+                $(obj).width(150);
+                $(obj).height(150);
+            }
+        }
+
+        function addPic() {
+            var urls = [];
+            $("#container img[issel=1]").each(function(i) {
+                
+                urls.push($(this).attr("src"));
+            });
+            
+            callback(urls);
+        }
+
+    </script>
+
+
+</body>
+</html>

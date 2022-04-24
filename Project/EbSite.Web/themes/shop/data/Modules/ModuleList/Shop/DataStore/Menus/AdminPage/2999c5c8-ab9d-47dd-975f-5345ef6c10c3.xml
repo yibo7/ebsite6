@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>91</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/StockAlarm.aspx</ParentUrl>
+  <FileName>AlarmList.ascx</FileName>
+  <PageName>报警商品</PageName>
+  <ParentID>10dd48c8-d4f9-46c7-83c1-1c80d0dfe214</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>2999c5c8-ab9d-47dd-975f-5345ef6c10c3</id>
+</ModulePageInfo>

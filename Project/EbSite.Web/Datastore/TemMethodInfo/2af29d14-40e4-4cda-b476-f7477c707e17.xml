@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>得到自定义字段</Title>
+  <GetCode>&lt;%=EbSite.Common.GetCustomFiled(object ob, string FiledName)%&gt;</GetCode>
+  <Author>EbSite</Author>
+  <Demo> /// &lt;summary&gt;
+        /// 得到自定义字段
+        /// &lt;/summary&gt;
+        /// &lt;param name="ob"&gt;&lt;/param&gt;
+        /// &lt;param name="FiledName"&gt;&lt;/param&gt;</Demo>
+  <id>2af29d14-40e4-4cda-b476-f7477c707e17</id>
+</TemMethodInfo>

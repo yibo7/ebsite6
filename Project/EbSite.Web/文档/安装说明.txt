@@ -1,0 +1,70 @@
+﻿
+-----------环境要求-------------------------------------
+
+操作系统要求
+
+Windows Server 2008(推荐)、Windows Server 2003(推荐)
+
+语言及数据库支撑环境要求
+
+安装 EbSite 需要装有如下软件： 
+
+
+IIS 5.0、IIS6.0(推荐),IIS7.0(推荐)及以上版本 
+
+.NET Framework 4.0 及以上版本 
+
+MySQL 5.6(推荐) 及以上版本 
+
+如果您租用虚拟主机，请咨询虚拟主机提供商，您的空间服务器是否已安装了上述软件。
+
+如果您安装的是 MySQL版本，保证您的 MySQL 数据库账号应当拥有"当前数据库管理员"权限。 
+
+EbSite 的数据表具有前缀设计，因此通常情况下可以将 EbSite 与其他软件安装在同一个数据库中,或者可以在同一个数据库里安装多个EbSite网站（表前缀不一样）。
+
+安装可能用到的工具软件
+
+如果您通过网络将 EbSite 软件上传到服务器上，您将可能需要一个 FTP 客户端软件。通过您的服务器 FTP 账号，
+使用该 FTP 客户端软件将相关文件上传到服务器上。
+
+-------------安装EbSite 3.0-------------------------------------
+
+第 1 步：上传或解压程序包
+
+		使用 FTP 软件登录您的服务器，建立一个单独的目录，或选择合适的位置，确保存放在此位置的文件能够被 web 请求所访问到，
+		并且该目录中具有执行 aspx 代码的权限。
+		将 EbSite 文件包的 ./upload_files 目录中的全部文件和目录结构上传到服务器
+		（注意是上传 upload_files 目录中的文件和目录，而不是上传包含 upload_files 目录本身的目录和结构）；
+		或者使用Winrar、Winzip等软件解压程序包并存放到您的磁盘目录上。
+
+第 2 步：设置目录权限
+
+		安装 EbSite 时请使用NTFS磁盘格式，否则在安装中可能出现异常。 
+
+		Windows Server 2003:请您在安装EbSite前给网站根目录添加IIS来宾帐号（IUSR_Hostname）的只读权限，以及Network Service组的读写修改权限。 
+
+		Windows Server 2000:请您在安装EbSite前给网站根目录添加IIS来宾帐号（IUSR_Hostname）的只读权限，以及ASP.NET帐号的读写修改权限。 
+
+		Windows XP:请您在安装EbSite前给网站根目录添加Network Service组的读写修改权限。 
+
+		详细权限设置请参考http://www.ebsite.net/。
+
+		设置完毕目录权限后，我们需要在Windows控制面板 -> 管理工具 -> Internet 信息服务(IIS)管理器中进行IIS站点的建立及配置。
+		
+                详细说明可见 http://www.ebsite.net/904content.ashx。
+
+		EbSite 是 MySQL 版本，需要创建数据库，详细说明可见http://www.ebsite.cn/showforum-3.aspx。
+
+		虚拟主机的用户请联系虚拟主机商进行目录权限设置更改。 
+
+第 3 步：访问安装向导进行安装
+
+		请在浏览器中运行 根目录/install/index.aspx，即访问 http://您的域名/install/index.aspx ，然后按照提示操作完成最后的安装。
+
+		详细权限设置请参考 http://www.ebsite.net/903content.ashx。
+
+第 4 步：创建网站		
+        
+		至此，安装完毕,可以进入访问首页，或后台。
+		 
+https://www.cnblogs.com/zengpeng/p/10909841.html

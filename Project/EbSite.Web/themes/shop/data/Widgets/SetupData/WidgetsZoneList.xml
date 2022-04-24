@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widgets>
+  <widget id="d752566e-c589-4c3f-82f2-89758bcfa7e6" IsNoSysTem="False" title="网站的公告" showTitle="True" demo="">TextBox</widget>
+  <widget id="f7f48d75-468d-4449-8499-1ba6da16edaa" IsNoSysTem="False" title="最新新闻" showTitle="True" demo="">NewRss</widget>
+  <widget id="071a90cd-f96d-45bf-9712-da048f800afc" IsNoSysTem="False" title="首页推荐数据-图片" showTitle="True" demo="">GetContent</widget>
+  <widget id="3fc1675f-ba6c-43c8-8617-2b1e9921ccc1" IsNoSysTem="False" title="分类总排行-自动适应分类ID" showTitle="True" demo="">GetContent</widget>
+  <widget id="e5b4a14e-c699-488b-9a4e-217600f21f61" IsNoSysTem="False" title="分类页推荐数据" showTitle="True" demo="">GetContent</widget>
+  <widget id="a5d1abbf-fb10-4594-9aa5-04267cae008f" IsNoSysTem="False" title="分类导航" showTitle="True" demo="">ClassList</widget>
+  <widget id="fba403c7-73f6-446e-ba24-12f420c8deff" IsNoSysTem="False" title="首页最新数据" showTitle="True" demo="">GetContent</widget>
+  <widget id="30bacbea-a83b-4bd5-a19d-3bb6c021aa28" IsNoSysTem="False" title="排行数据-收藏排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="449af40c-5bad-4f1c-9edd-dbdca9edd4e2" IsNoSysTem="False" title="首页分类列表集合" showTitle="True" demo="">ClassListMore</widget>
+  <widget id="c825775f-5a4b-45b4-8556-2edb65fc1000" IsNoSysTem="False" title="排行数据-总排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="a4cf9b67-cc7d-461b-89f0-d76af9abf5de" IsNoSysTem="False" title="首页推荐数据-标题" showTitle="True" demo="">GetContent</widget>
+  <widget id="1e99dc56-3a30-445c-994e-37d15f45cbaa" IsNoSysTem="False" title="专题导航-全部" showTitle="True" demo="">SpecialDh</widget>
+  <widget id="25478d2e-5192-4f00-9fc5-ab9f87f8bca2" IsNoSysTem="False" title="专题-自动适应ID" showTitle="True" demo="">SpecialList</widget>
+  <widget id="7f0c1852-85ce-4538-8068-cbe9f26db929" IsNoSysTem="False" title="分类主页导航-左则" showTitle="True" demo="">ClassTreeDh</widget>
+  <widget id="b1b6cf9a-a16b-4b2b-89f9-f94687d4da93" IsNoSysTem="False" title="分类首页集合列表" showTitle="True" demo="">ClassListMore</widget>
+  <widget id="38c43a3c-8d34-4d0a-a429-e0920b10ea2e" IsNoSysTem="False" title="最近来访" showTitle="True" demo="">GetUsers</widget>
+  <widget id="fca2312d-e6c7-491d-a7ff-b3e05c6ed1f0" IsNoSysTem="False" title="我的好友" showTitle="True" demo="">GetUsers</widget>
+  <widget id="e7dabe3c-c336-4f8a-9791-88bc0e9815bc" IsNoSysTem="False" title="个人动态（足迹）" showTitle="True" demo="">GetUsers</widget>
+  <widget id="97e6c0b8-6531-410c-976c-b7ce60a3e09a" IsNoSysTem="False" title="好友动态（足迹）" showTitle="True" demo="">GetUsers</widget>
+  <widget id="09ec3e6b-04a2-494b-9448-34c356585eba" IsNoSysTem="False" title="网站公告" showTitle="True" demo="">Bulletin</widget>
+  <widget id="db1da758-1a2c-4d48-91a7-d1a9e8e55070" IsNoSysTem="False" title="最新注册用户" showTitle="True" demo="">GetUsers</widget>
+  <widget id="bd45722a-643d-4018-905a-2f29eb66d627" IsNoSysTem="False" title="常见问题" showTitle="True" demo="">GetContent</widget>
+  <widget id="510cb179-f693-4cc7-8a17-0d6b32b79ec9" IsNoSysTem="False" title="获取最新标签" showTitle="True" demo="">GetTags</widget>
+  <widget id="48a468fb-c0ba-4ebe-ad6b-b7e3f555f865" IsNoSysTem="False" title="获取热门标签" showTitle="True" demo="">GetTags</widget>
+  <widget id="bafa9309-e4df-4913-aa54-3e468e5c07a2" IsNoSysTem="False" title="分类总排行-自动适应内容ID" showTitle="True" demo="">GetContent</widget>
+  <widget id="d3bfcde7-5984-45bd-9c22-32bb11e3efd1" IsNoSysTem="False" title="相关内容" showTitle="True" demo="">RelateContent</widget>
+  <widget id="56b0edec-9a1c-473b-84a6-558cde9718c4" IsNoSysTem="False" title="首页幻灯片" showTitle="True" demo="">FlashPic</widget>
+  <widget id="c0a213e8-75c3-46c6-a61b-35ec670d6ace" IsNoSysTem="False" title="图片内容" showTitle="True" demo="">GetContent</widget>
+  <widget id="ffad2b70-3a04-4870-baa4-3f4db96d06df" IsNoSysTem="False" title="排行数据-今日排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="c108121c-c159-4fea-b800-6ecf849801e0" IsNoSysTem="False" title="排行数据-本周排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="1fa1925c-cfbf-46a8-a5ac-df42332ae271" IsNoSysTem="False" title="排行数据-本月排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="9e75952f-8875-467d-bcff-ea907bc07316" IsNoSysTem="False" title="排行数据-按评论最多排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="b66021a1-9bda-4204-8e69-e9da45c4e40b" IsNoSysTem="False" title="排行数据-按好评(被顶)最多排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="7b3d17e7-08c0-4e83-9a35-9944adc80a9b" IsNoSysTem="False" title="分类总排行(获取子分类)-自动适应分类ID" showTitle="True" demo="">GetContent</widget>
+  <widget id="013dd3f1-98df-41f0-8c67-045491c32ee0" IsNoSysTem="False" title="网站调查" showTitle="True" demo="">Vote</widget>
+  <widget id="80866937-d04a-4d3f-834d-b5a1de06b677" IsNoSysTem="False" title="头部广告-banner-450-60" showTitle="True" demo="">TextBox</widget>
+  <widget id="916aa362-51b0-4eb7-9cf7-9d1ff826dab9" IsNoSysTem="False" title="获取某个分类下的子分类" showTitle="True" demo="">GetSubClass</widget>
+  <widget id="e54759d9-ad7c-4950-93c6-61f55979f0fa" IsNoSysTem="False" title="首页广告-680-90" showTitle="True" demo="">TextBox</widget>
+  <widget id="2bcce252-d807-49aa-b04f-9dfdb216f3cb" title="新手上路" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="dd80c913-27da-4829-8fb9-39022dfdf0ff" title="支付方式" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="47b2ffb9-1999-49dc-bd92-0458c97345dd" title="交易指南" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="704bf2e2-a97b-48e9-9e55-62421a48e8a3" title="交易保障" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="c5314c19-86a8-4454-bdad-6dcb675fef81" title="首页幻灯片JS版" modulid="00000000-0000-0000-0000-000000000000">BannerPic</widget>
+  <widget id="8e13c534-d4e3-46de-b1d1-d313e0131546" title="分类页-商品属性" modulid="cfccc599-4585-43ed-ba31-fdb50024714b">ClassSXList</widget>
+  <widget id="e270a8ba-af11-4e38-a23f-18206eb1f94a" title="产品页面一问一答" modulid="00000000-0000-0000-0000-000000000000">RemarkAskPg</widget>
+  <widget id="5ede103d-9cec-4e6c-bbf4-3c02ba67d50c" title="首页专题分类" modulid="00000000-0000-0000-0000-000000000000">SpecialDh</widget>
+  <widget id="5e8263fb-3d3c-4b27-b945-43117c9d2211" title="首页所有商品分类" modulid="cfccc599-4585-43ed-ba31-fdb50024714b">IndexClass</widget>
+  <widget id="d58bc246-4fd0-472c-8258-dd4a812feda5" title="分类页推荐商品" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="c8bf8fd1-7dcf-4060-9075-5c52a47685e3" title="产品页评价部件" modulid="00000000-0000-0000-0000-000000000000">EvaluatePg</widget>
+  <widget id="e14c3789-2fd2-4a53-a5b6-84e1fab53e88" title="产品页售后保障" modulid="00000000-0000-0000-0000-000000000000">TextBox</widget>
+  <widget id="7dd3d5f7-36dd-46a6-bfc1-3a399c7ed444" title="帮助中心-交易保障" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="3f1a98e6-1e4b-4543-9948-e88015b3f809" title="帮助中心-新手上路" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="8fe43768-3c5d-42dd-8551-4319a74d16f9" title="帮助中心-交易指南" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="c7bc00cc-c7e1-4e75-83f9-7be66f9ecb4d" title="帮助中心-支付方式" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="beb571f9-4f9e-4fc2-8220-379c2ce81f57" title="手机页面获取某个分类下的子分类" modulid="00000000-0000-0000-0000-000000000000">GetSubClass</widget>
+  <widget id="d83850af-3b66-4944-a1f0-cf23431d5064" title="手机-获取子专题" modulid="00000000-0000-0000-0000-000000000000">GetSubSpecial</widget>
+  <widget id="0ce8f581-5a2e-4b02-b329-eeef3494d5cc" title="首页_常见问题" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="f39ab589-1dd9-4aa8-baf8-c6128b8b2768" title="首页_购物保障" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="a040f55f-fc66-44e1-9e70-cc6686141dfc" title="首页-限时抢购" modulid="cfccc599-4585-43ed-ba31-fdb50024714b">IndexDay</widget>
+  <widget id="dd5fc3e0-67aa-4c0b-b8e8-d624c556ea80" title="列表首页幻灯片" modulid="00000000-0000-0000-0000-000000000000">FlashPic</widget>
+  <widget id="9764d0a2-f4c8-4fa7-bca6-cd596c00e322" title="列表主页-推荐商品" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="836a959c-e84f-4f8a-8def-709f85eed62c" title="列表主页-新品到货" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="c9d7682a-62a5-4fa9-a4ec-8f863025c316" title="分类首页-直降商品" modulid="cfccc599-4585-43ed-ba31-fdb50024714b">GetProduct</widget>
+  <widget id="b8cdb98c-ca6d-4729-a61d-0dbcdccbd940" title="分类首页-热卖商品" modulid="cfccc599-4585-43ed-ba31-fdb50024714b">GetProduct</widget>
+  <widget id="41520cfe-a30d-4060-aa2a-eeb243437b9e" title="分类首页-待价商品" modulid="cfccc599-4585-43ed-ba31-fdb50024714b">GetProduct</widget>
+  <widget id="2fdbcfb2-982a-46d3-8a55-b44871be0c9f" title="首页-最新上架产品" modulid="cfccc599-4585-43ed-ba31-fdb50024714b">IndexDay</widget>
+  <widget id="65d77746-785d-417c-9dfd-fe17c96a7e18" title="首页-推荐产品" modulid="cfccc599-4585-43ed-ba31-fdb50024714b">IndexDay</widget>
+  <widget id="7a424789-5011-459c-80ed-3171089a165a" title="首页-热卖商品" modulid="cfccc599-4585-43ed-ba31-fdb50024714b">IndexDay</widget>
+  <widget id="6717b06c-4d0c-45a2-b2f7-3d7b476e1e7a" title="首页-团购" modulid="cfccc599-4585-43ed-ba31-fdb50024714b">IndexDay</widget>
+  <widget id="8f13f347-f06e-4068-a351-3cd5eca4f4ca" title="商品评价-左则商品信息" modulid="cfccc599-4585-43ed-ba31-fdb50024714b">PjLeftInfo</widget>
+  <widget id="450291f5-eabd-41cc-9c4b-45487e58da55" title="手机版首页图片切换" modulid="cfccc599-4585-43ed-ba31-fdb50024714b">MobileFlash</widget>
+  <widget id="a0e663d0-bf74-4d59-b438-d1f6824d8275" title="复制-首页友情连接" modulid="00000000-0000-0000-0000-000000000000">Links</widget>
+  <widget id="f3e10534-b269-422c-927c-038c83d8781e" title="首页友情连接" modulid="00000000-0000-0000-0000-000000000000">FrdLink</widget>
+</widgets>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>获取某个用户的管理主页-需要修改-电脑版</Title>
+  <GetCode>&lt;%=EbSite.Common.GetUserHomePageHref(string sUserName, string sUserNiName, string target)%&gt;</GetCode>
+  <Author>EbSite</Author>
+  <Demo> /// &lt;summary&gt;
+        /// 获取某个用户的管理主页-需要修改
+        /// &lt;/summary&gt;
+        /// &lt;param name="sUserName"&gt;&lt;/param&gt;</Demo>
+  <id>753880d5-5e50-4b4b-97b1-b072a2020aa6</id>
+</TemMethodInfo>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ServiceInfo>
+  <ServiceName>王淑英</ServiceName>
+  <PostName>销售代表</PostName>
+  <Phone>010-51689881-663</Phone>
+  <Mobile>18601256308</Mobile>
+  <Email>993799828@qq.com</Email>
+  <IsEabled>True</IsEabled>
+  <OrderID>10</OrderID>
+  <UserID>1</UserID>
+  <UserName>admin</UserName>
+  <UserNiName>寒路</UserNiName>
+  <Info />
+  <IsOnline>False</IsOnline>
+  <LastDateTime>0001/1/1 0:00:00</LastDateTime>
+  <ClassID>1</ClassID>
+  <StarFive>2</StarFive>
+  <StarFour>0</StarFour>
+  <StarThree>0</StarThree>
+  <StarTwo>0</StarTwo>
+  <StarOne>0</StarOne>
+  <id>5</id>
+</ServiceInfo>

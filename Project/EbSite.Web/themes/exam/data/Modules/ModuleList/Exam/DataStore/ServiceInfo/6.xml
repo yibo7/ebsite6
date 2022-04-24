@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ServiceInfo>
+  <ServiceName>彭向超</ServiceName>
+  <PostName>销售代表</PostName>
+  <Phone>010-51689881-645</Phone>
+  <Mobile>13381361018</Mobile>
+  <Email>961119845@qq.com</Email>
+  <IsEabled>False</IsEabled>
+  <OrderID>12</OrderID>
+  <UserID>22</UserID>
+  <UserName>cqs263</UserName>
+  <UserNiName>cqs263</UserNiName>
+  <Info />
+  <IsOnline>False</IsOnline>
+  <LastDateTime>0001/1/1 0:00:00</LastDateTime>
+  <ClassID>0</ClassID>
+  <StarFive>0</StarFive>
+  <StarFour>0</StarFour>
+  <StarThree>0</StarThree>
+  <StarTwo>0</StarTwo>
+  <StarOne>0</StarOne>
+  <id>6</id>
+</ServiceInfo>

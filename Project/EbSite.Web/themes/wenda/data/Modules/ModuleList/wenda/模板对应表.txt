@@ -1,0 +1,150 @@
+
+
+
+1.分类模型  eb_newsclass
+  
+   ClassName :简称
+   Annex1：Sql库中的ID
+   Annex2: 首字母
+   Annex3：
+   Annex4：图片
+   Annex5：父级ID
+   Annex6
+   Annex7: 分类全称（用来匹配，Rss和导入数据）
+   Annex8
+   Annex9:=4 二级品牌
+   Annex10：标实 是否一级分类 1：是 0：不是
+  
+  2.内容表 eb_newscontent  【索引 userid】
+    
+	NewsTitle:标题  
+	SmallPic: 缩略图  
+	TitleStyle:标题样式 
+	ContentInfo:内容  
+	Annex22:     悬赏分    原来是 annex1
+	Annex2:     扩展属性：用来标实来源  
+    Annex21:    问题状态 1.未解决 2.已 3.无满意  [原来是Annex4]字符串类型 不利于索引
+	Annex6:     发表日期 
+	Annex8:     如果您一次追加悬赏 20 分以上（含 20 分）操作时间   
+	Annex9:     到期日期（发表+30天） 
+	Annex10:    解决时间 
+
+	Annex11:    回答问题的总个数  
+    IsAuditing:  (用系统的)                                            //Annex12:    验证1：验证通过 0：不通过 
+	Annex13:    如果您一次追加悬赏 20 分以上（含 20 分）标记  
+	Annex14:    是否匿名发表问题 1：匿名 0：不是  
+	Annex15:    同问总个数  
+
+	Annex12:   用来代表 是 从订单中导过来 或 用手工 提出的。 1：代表 从订单导过来的。0：手工录入的。
+
+3.ask_expandanswers 追问表
+
+         int? _answerid     回答ID
+		 string _ctent      追问内容 或 回答
+		 DateTime? _tdate    操作时间
+		 int? _uid           用户ID
+		 int? _typeid        0: 追问 1： 回答
+		 int? _eid          回答 对应的 expandanswers_id （问，答 关系）
+	
+4.ask_answers   回答表
+   
+        private int _qid;        问题ID
+		private int _quserid;    提问用户ID
+		private int _answeruserid;  回答用户ID
+		private string _answercontent;  回答内容
+		private bool _isadoption;      是否被 采纳 1:采纳 0: 没有
+		private DateTime? _answertime;  回复时间
+		private bool _isdel;             是否被删除 1:删除 0:没有
+		private string _answerip;           回复者IP
+		private string _referbook;    参考资料
+		private bool _isanonymity;   是否匿名 1:匿名 0: 不匿名
+		private DateTime? _answerupdatetime;  回答者修改时间
+		private int? _score;        本次得分
+	    private int? _goodask;       对人有帮助的总个数
+	    private int? _isapproved;  审核 1：通过 0：拒绝
+	    private string _thanksinfo;  感言
+
+5.ask_expandcontent  补充内容表
+        
+	    private int? _cid;        文章id
+		private int?  _classid    分类id --【新加的】
+		private DateTime? _tdate;   补充问题时间
+        private string _ctent;      补充内容
+
+6.ask_expertask   向专家提问（也可以向注册会提问）  -----2014-3-26 现在 向用户提问 存到 eb_msg中 不利于 查询。应该也存到 这个表中。 api 269行
+      
+	    private int? _qid;    问题id
+		private int?  _classid    分类id --【新加的】
+		private int? _userid;  用户ID
+		private int? _state;    状态
+		private DateTime? _optime;  提问时间
+
+		private bool _isask; 是否回答
+
+7.ask_samequestion   同问
+
+        private int? _userid;       用户ID
+		private int? _cid;          文章ID
+		private DateTime? _tdate;   操作日期
+
+8.ask_userhelp  用户统计表
+   
+        private int _userid;        用户id
+		private int _qcount;        提问总数
+		private int _acount;         回答总数
+		private int _adoptioncount;   采纳总数
+		private string _likeaskclass;  喜欢回答的类型,可以做为推荐用
+	    private long _TotalScore;           【无用，系统有一个总分】
+		Accept                       采纳率   
+	    HelpUserCount	             帮助人数
+
+
+/********Begin**************/
+ 2014-3-21 
+ ask_class_article 的存在原由：前提是没有 分表，newscontent 中数据 混乱。
+                               固 把问题也存到 ask_class_article中。效率提高了。 
+ 然而今天 实现了分表 ，就不用启用 ask_class_article 了。
+
+/*********End***********/
+9.ask_class_article 每3天 抓取 每个分类 中 最新的前50条问答数据。
+
+    id               问答id
+	classname        分类名称
+	newstitle        标题
+	userid           发表人id
+	contentinfo      内容
+	htmlname,
+	addtime
+	classid
+
+
+
+
+
+<script>
+
+    //右侧的模糊查询
+    $("#NewsTitle").keyup(function () {
+        var tt = $("#NewsTitle").val();
+        if (tt == "") {
+            $("#xcrtalli").css("visibility", "visible");
+            $("#xcrtalli").css("height", "100%");
+            $("#appenttit").html("");
+        }
+        else {
+
+            $("#xcrtalli").css("visibility", "hidden");
+            $("#xcrtalli").css("height", "0");
+            $("#appenttit").html("");
+
+            var pram = { "likeTitle": $("#NewsTitle").val() };
+            runws("4e0edb7e-1b30-41ad-9f74-d63c80458c35", "GetLikeAnswer", pram, GetLikeInfo);
+
+        }
+    });
+    function GetLikeInfo(result) {
+        $("#appenttit").append(result.d);
+    }
+
+
+</script>

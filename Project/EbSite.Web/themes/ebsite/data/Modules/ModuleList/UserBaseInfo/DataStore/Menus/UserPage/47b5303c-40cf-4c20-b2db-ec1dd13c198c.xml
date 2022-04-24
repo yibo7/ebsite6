@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>8961c5b2-43f2-4298-8145-f0965aff70a0</ModuleID>
+  <HelpHtml />
+  <ParentUrl />
+  <FileName>/themes/ebsite/data/Modules/ModuleList/UserBaseInfo/UserPages/InviteUser.aspx</FileName>
+  <PageName>邀请好友</PageName>
+  <ParentID>00000000-0000-0000-0000-000000000000</ParentID>
+  <OrderID>2</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>47b5303c-40cf-4c20-b2db-ec1dd13c198c</id>
+</ModulePageInfo>

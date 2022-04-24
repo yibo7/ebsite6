@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="columns" Value="NewsTitle|标题,ContentInfo|内容" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

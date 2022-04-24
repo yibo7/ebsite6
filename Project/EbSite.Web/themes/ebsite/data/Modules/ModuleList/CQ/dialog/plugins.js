@@ -1,0 +1,1 @@
+﻿var plugins = [ {  id: 1, title: "聊天记录",url:"chathistory.aspx"}] ;

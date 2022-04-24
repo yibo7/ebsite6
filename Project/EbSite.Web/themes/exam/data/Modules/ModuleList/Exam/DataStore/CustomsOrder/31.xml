@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CustomOrderInfo>
+  <StepsID>4</StepsID>
+  <ClassName>大众</ClassName>
+  <ClassID>3</ClassID>
+  <ServiceName>冯留振</ServiceName>
+  <ServiceID>8</ServiceID>
+  <TimeStamp>eb5ad0e5-e538-4725-8f73-5b3e715b2b65</TimeStamp>
+  <OpDateTime>2013/5/17 18:42:07</OpDateTime>
+  <OrderNum>201351718427171</OrderNum>
+  <UserID>1</UserID>
+  <FieldName>brandinfo</FieldName>
+  <Ip>127.0.0.1</Ip>
+  <id>31</id>
+</CustomOrderInfo>

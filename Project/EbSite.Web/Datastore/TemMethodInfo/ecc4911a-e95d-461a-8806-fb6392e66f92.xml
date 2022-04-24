@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>获取内容页面连接地址- 手机版</Title>
+  <GetCode>&lt;%= EbSite.Base.Host.Instance.MGetContentLink(object iID)%&gt;</GetCode>
+  <Author>EbSite</Author>
+  <Demo> /// &lt;summary&gt;
+        /// 获取内容页面连接地址
+        /// &lt;/summary&gt;
+</Demo>
+  <id>ecc4911a-e95d-461a-8806-fb6392e66f92</id>
+</TemMethodInfo>

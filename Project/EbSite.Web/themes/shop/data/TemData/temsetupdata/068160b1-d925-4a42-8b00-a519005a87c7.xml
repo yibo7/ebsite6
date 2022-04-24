@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Templates>
+  <TemName>默认首页模板</TemName>
+  <Themes>shop</Themes>
+  <TempFileName>index.aspx</TempFileName>
+  <TemType>0</TemType>
+  <IsNoSysTem>False</IsNoSysTem>
+  <ModelClassID>00000000-0000-0000-0000-000000000000</ModelClassID>
+</Templates>

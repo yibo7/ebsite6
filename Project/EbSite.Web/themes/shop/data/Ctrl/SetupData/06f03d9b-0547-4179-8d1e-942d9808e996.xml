@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="txtheight" Value="18" />
+    <DictionaryEntry Key="txtwidth" Value="50" />
+    <DictionaryEntry Key="cbiscannull" Value="必填" />
+    <DictionaryEntry Key="defaultvalue" Value="0" />
+    <DictionaryEntry Key="drpboxtype" Value="0" />
+    <DictionaryEntry Key="drprequiredfieldtype" Value="15" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

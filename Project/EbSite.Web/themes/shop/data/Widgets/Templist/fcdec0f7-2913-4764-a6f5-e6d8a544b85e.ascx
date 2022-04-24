@@ -1,0 +1,1 @@
+<li><a href="<%#EbSite.Base.Host.Instance.MGetClassHref(Eval("id"),1,0)%>"><%# Eval("classname")%></a></li>

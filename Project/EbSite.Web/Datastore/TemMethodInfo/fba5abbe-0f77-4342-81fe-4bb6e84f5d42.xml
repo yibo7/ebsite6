@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>获取标签搜索结果列表地址-手机版</Title>
+  <GetCode>&lt;%=EbSite.Common.MTagsSearchList(object id, int p)%&gt;</GetCode>
+  <Author>EbSite</Author>
+  <Demo> /// &lt;summary&gt;
+        /// 获取标签搜索结果列表地址
+        /// &lt;/summary&gt;
+        /// &lt;param name="id"&gt;标签ID&lt;/param&gt;
+        /// &lt;param name="p"&gt;页码&lt;/param&gt;
+    </Demo>
+  <id>fba5abbe-0f77-4342-81fe-4bb6e84f5d42</id>
+</TemMethodInfo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="count" Value="12" />
+    <DictionaryEntry Key="tem" Value="00000000-0000-0000-0000-000000000000" />
+    <DictionaryEntry Key="listmodel" Value="2" />
+    <DictionaryEntry Key="cid" Value="-1" />
+	    <DictionaryEntry Key="siteid" Value="0" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

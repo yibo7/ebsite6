@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModuleInfo>
+  <SiteID>8</SiteID>
+  <LastVersionUrl />
+  <UpdateUrl />
+  <ModuleDLLName>EbSite.Modules.BBS.dll</ModuleDLLName>
+  <IsClose>False</IsClose>
+  <Demo />
+  <SetupPath>/themes/bbs/data/Modules/ModuleList/bbs/</SetupPath>
+  <AccessFile />
+  <SqlScript />
+  <ModuleName>官方论坛</ModuleName>
+  <Version>1.5.0</Version>
+  <Author>eBSite</Author>
+  <AuthorUrl>www.ebsite.net</AuthorUrl>
+  <id>b3eef4b1-6c2c-4528-9e15-ad33716238ce</id>
+</ModuleInfo>

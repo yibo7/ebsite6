@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<PsDelivery>
+  <ModeName>普通快递</ModeName>
+  <PsCompanyIds>8,11,12,13,14,15,16,17,22,24,25,26,27</PsCompanyIds>
+  <ShippingTemplatesId>3</ShippingTemplatesId>
+  <Content>我们会根据您的具体情况安排最适合您的物流，做到最快最省钱。</Content>
+  <IsCod>False</IsCod>
+  <IsPercent>False</IsPercent>
+  <UseMoney>0</UseMoney>
+  <id>2</id>
+</PsDelivery>

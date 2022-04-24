@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="uploadmodel" Value="1" />
+    <DictionaryEntry Key="txtheight" Value="80" />
+    <DictionaryEntry Key="txtwidth" Value="80" />
+    <DictionaryEntry Key="txtallowsize" Value="1024" />
+    <DictionaryEntry Key="txtallowtype" Value="jpg,jpeg,png,gif" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

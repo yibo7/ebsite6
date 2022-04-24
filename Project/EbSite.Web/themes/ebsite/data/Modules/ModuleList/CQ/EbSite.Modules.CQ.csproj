@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD03429A-F509-4269-ABD9-F7C3DCCAC56F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EbSite.Modules.CQ</RootNamespace>
+    <AssemblyName>EbSite.Modules.CQ</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EbSite.Base">
+      <HintPath>..\..\..\..\..\..\bin\EbSite.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.BLL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\bin\EbSite.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Control">
+      <HintPath>..\..\..\..\..\..\bin\EbSite.Control.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.ControlData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\bin\EbSite.ControlData.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Core">
+      <HintPath>..\..\..\..\..\..\bin\EbSite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Data.Interface">
+      <HintPath>..\..\..\..\..\..\bin\EbSite.Data.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Entity, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\bin\EbSite.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RestSharp, Version=104.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\bin\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPages\Controls\CustomWord\Add.ascx.cs">
+      <DependentUpon>Add.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\CustomWord\Add.ascx.designer.cs">
+      <DependentUpon>Add.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\CustomWord\List.ascx.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\CustomWord\List.ascx.designer.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Setting\ChatList.ascx.cs">
+      <DependentUpon>ChatList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Setting\ChatList.ascx.designer.cs">
+      <DependentUpon>ChatList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\MsgHistorys\ComplainList.ascx.cs">
+      <DependentUpon>ComplainList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\MsgHistorys\ComplainList.ascx.designer.cs">
+      <DependentUpon>ComplainList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Setting\Configs.ascx.cs">
+      <DependentUpon>Configs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Setting\Configs.ascx.designer.cs">
+      <DependentUpon>Configs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\MsgHistorys\Chathistorys.ascx.cs">
+      <DependentUpon>Chathistorys.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\MsgHistorys\Chathistorys.ascx.designer.cs">
+      <DependentUpon>Chathistorys.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Options\CustomItemAdd.ascx.cs">
+      <DependentUpon>CustomItemAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Options\CustomItemAdd.ascx.designer.cs">
+      <DependentUpon>CustomItemAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Options\CustomItems.ascx.cs">
+      <DependentUpon>CustomItems.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Options\CustomItems.ascx.designer.cs">
+      <DependentUpon>CustomItems.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\MsgHistorys\MsgList.ascx.cs">
+      <DependentUpon>MsgList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\MsgHistorys\MsgList.ascx.designer.cs">
+      <DependentUpon>MsgList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Plugins\PluginsAdd.ascx.cs">
+      <DependentUpon>PluginsAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Plugins\PluginsAdd.ascx.designer.cs">
+      <DependentUpon>PluginsAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Plugins\PluginsList.ascx.cs">
+      <DependentUpon>PluginsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Plugins\PluginsList.ascx.designer.cs">
+      <DependentUpon>PluginsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\OrderList.ascx.cs">
+      <DependentUpon>OrderList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Orders\OrderList.ascx.designer.cs">
+      <DependentUpon>OrderList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Service\ServiceClass.ascx.cs">
+      <DependentUpon>ServiceClass.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Service\ServiceClass.ascx.designer.cs">
+      <DependentUpon>ServiceClass.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Service\ServiceClassAdd.ascx.cs">
+      <DependentUpon>ServiceClassAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Service\ServiceClassAdd.ascx.designer.cs">
+      <DependentUpon>ServiceClassAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\UseCorde\Corde.ascx.cs">
+      <DependentUpon>Corde.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\UseCorde\Corde.ascx.designer.cs">
+      <DependentUpon>Corde.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Service\ServiceAdd.ascx.cs">
+      <DependentUpon>ServiceAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Service\ServiceAdd.ascx.designer.cs">
+      <DependentUpon>ServiceAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Service\ServiceList.ascx.cs">
+      <DependentUpon>ServiceList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Service\ServiceList.ascx.designer.cs">
+      <DependentUpon>ServiceList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\OrderBox\OrderBoxAdd.ascx.cs">
+      <DependentUpon>OrderBoxAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\OrderBox\OrderBoxAdd.ascx.designer.cs">
+      <DependentUpon>OrderBoxAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\OrderBox\OrderBoxList.ascx.cs">
+      <DependentUpon>OrderBoxList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\OrderBox\OrderBoxList.ascx.designer.cs">
+      <DependentUpon>OrderBoxList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\UserOnline\List.ascx.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\UserOnline\List.ascx.designer.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Setting.aspx.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Setting.aspx.designer.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Options.aspx.cs">
+      <DependentUpon>Options.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Options.aspx.designer.cs">
+      <DependentUpon>Options.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\MsgHistorys.aspx.cs">
+      <DependentUpon>MsgHistorys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\MsgHistorys.aspx.designer.cs">
+      <DependentUpon>MsgHistorys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Plugins.aspx.cs">
+      <DependentUpon>Plugins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Plugins.aspx.designer.cs">
+      <DependentUpon>Plugins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\UseCorde.aspx.cs">
+      <DependentUpon>UseCorde.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\UseCorde.aspx.designer.cs">
+      <DependentUpon>UseCorde.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Service.aspx.cs">
+      <DependentUpon>Service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Service.aspx.designer.cs">
+      <DependentUpon>Service.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\CustomWord.aspx.cs">
+      <DependentUpon>CustomWord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\CustomWord.aspx.designer.cs">
+      <DependentUpon>CustomWord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\UserOnline.aspx.cs">
+      <DependentUpon>UserOnline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\UserOnline.aspx.designer.cs">
+      <DependentUpon>UserOnline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\OrderBox.aspx.cs">
+      <DependentUpon>OrderBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\OrderBox.aspx.designer.cs">
+      <DependentUpon>OrderBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajaxget\api.asmx.cs">
+      <DependentUpon>api.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ajaxget\servstatejs.ashx.cs">
+      <DependentUpon>servstatejs.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\chathistory.aspx.cs">
+      <DependentUpon>chathistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialog\chathistory.aspx.designer.cs">
+      <DependentUpon>chathistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dialog\saveorder.aspx.cs">
+      <DependentUpon>saveorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialog\saveorder.aspx.designer.cs">
+      <DependentUpon>saveorder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleCore\BLL\Barcode.cs" />
+    <Compile Include="ModuleCore\BLL\ChatBll.cs" />
+    <Compile Include="ModuleCore\BLL\ChatTarget.cs" />
+    <Compile Include="ModuleCore\BLL\Complaincs.cs" />
+    <Compile Include="ModuleCore\BLL\ChatPlugin.cs" />
+    <Compile Include="ModuleCore\BLL\CustomItems.cs" />
+    <Compile Include="ModuleCore\BLL\ServiceClass.cs" />
+    <Compile Include="ModuleCore\BLL\Customer.cs" />
+    <Compile Include="ModuleCore\BLL\CustomOrder.cs" />
+    <Compile Include="ModuleCore\BLL\CustomWord.cs" />
+    <Compile Include="ModuleCore\BLL\Service.cs" />
+    <Compile Include="ModuleCore\BLL\OrderBox.cs" />
+    <Compile Include="ModuleCore\BLL\Vote.cs" />
+    <Compile Include="ModuleCore\BLL\VoteItem.cs" />
+    <Compile Include="ModuleCore\Configs\SvConfigsControl.cs" />
+    <Compile Include="ModuleCore\Configs\SvConfigsInfo.cs" />
+    <Compile Include="ModuleCore\Entity\BarcodeInfo.cs" />
+    <Compile Include="ModuleCore\Entity\ChatMsg.cs" />
+    <Compile Include="ModuleCore\Entity\ComplainInfo.cs" />
+    <Compile Include="ModuleCore\Entity\ChatPlugin.cs" />
+    <Compile Include="ModuleCore\Entity\CustomItemsInfo.cs" />
+    <Compile Include="ModuleCore\Entity\ServiceClass.cs" />
+    <Compile Include="ModuleCore\Entity\CustomOrderInfo.cs" />
+    <Compile Include="ModuleCore\Entity\ServiceModel.cs" />
+    <Compile Include="ModuleCore\Entity\CustomWord.cs" />
+    <Compile Include="ModuleCore\Entity\ServiceInfo.cs" />
+    <Compile Include="ModuleCore\Entity\OrderBoxInfo.cs" />
+    <Compile Include="ModuleCore\Entity\tool_chatlist.cs" />
+    <Compile Include="ModuleCore\Entity\VoteInfo.cs" />
+    <Compile Include="ModuleCore\Entity\VoteItem.cs" />
+    <Compile Include="ModuleCore\Utils.cs" />
+    <Compile Include="ModuleGlobal.cs" />
+    <Compile Include="SettingInfo.cs" />
+    <Compile Include="Setting.ascx.cs">
+      <DependentUpon>Setting.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setting.ascx.designer.cs">
+      <DependentUpon>Setting.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ModuleCore\DAL\Access\Sys\AccessProvider.cs" />
+    <Compile Include="ModuleCore\DAL\SqlServer\Sys\SqlServerProvider.cs" />
+    <Compile Include="ModuleCore\DAL\SqlServer\Sys\Utils.cs" />
+    <Compile Include="ModuleCore\DAL\Access\Sys\Utils.cs" />
+    <Compile Include="ModuleCore\DAL\DataProfile\DBHelper.cs" />
+    <Compile Include="ModuleCore\BLL\Base\BLLBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPages\Controls\CustomWord\Add.ascx" />
+    <Content Include="AdminPages\Controls\CustomWord\List.ascx" />
+    <Content Include="AdminPages\Controls\Setting\ChatList.ascx" />
+    <Content Include="AdminPages\Controls\MsgHistorys\ComplainList.ascx" />
+    <Content Include="AdminPages\Controls\Setting\Configs.ascx" />
+    <Content Include="AdminPages\Controls\MsgHistorys\Chathistorys.ascx" />
+    <Content Include="AdminPages\Controls\Options\CustomItemAdd.ascx" />
+    <Content Include="AdminPages\Controls\Options\CustomItems.ascx" />
+    <Content Include="AdminPages\Controls\MsgHistorys\MsgList.ascx" />
+    <Content Include="AdminPages\Controls\Plugins\PluginsAdd.ascx" />
+    <Content Include="AdminPages\Controls\Plugins\PluginsList.ascx" />
+    <Content Include="AdminPages\Controls\Orders\OrderList.ascx" />
+    <Content Include="AdminPages\Controls\Service\ServiceClass.ascx" />
+    <Content Include="AdminPages\Controls\Service\ServiceClassAdd.ascx" />
+    <Content Include="AdminPages\Controls\UseCorde\Corde.ascx" />
+    <Content Include="AdminPages\Controls\Service\ServiceAdd.ascx" />
+    <Content Include="AdminPages\Controls\Service\ServiceList.ascx" />
+    <Content Include="AdminPages\Controls\OrderBox\OrderBoxAdd.ascx" />
+    <Content Include="AdminPages\Controls\OrderBox\OrderBoxList.ascx" />
+    <Content Include="AdminPages\Controls\UserOnline\List.ascx" />
+    <Content Include="AdminPages\Setting.aspx" />
+    <Content Include="AdminPages\Options.aspx" />
+    <Content Include="AdminPages\Orders.aspx" />
+    <Content Include="AdminPages\MsgHistorys.aspx" />
+    <Content Include="AdminPages\Plugins.aspx" />
+    <Content Include="AdminPages\UseCorde.aspx" />
+    <Content Include="AdminPages\Service.aspx" />
+    <Content Include="AdminPages\CustomWord.aspx" />
+    <Content Include="AdminPages\UserOnline.aspx" />
+    <Content Include="AdminPages\OrderBox.aspx" />
+    <Content Include="Ajaxget\api.asmx" />
+    <Content Include="文档.txt" />
+    <Content Include="Css\index.css" />
+    <Content Include="DataStore\Limits_Adminer.txt" />
+    <Content Include="DataStore\Limits_User.txt" />
+    <Content Include="dialog\chat.htm" />
+    <Content Include="dialog\chat.css" />
+    <Content Include="dialog\chathistory.aspx" />
+    <Content Include="dialog\chatorder.js" />
+    <Content Include="dialog\chatadmin.htm" />
+    <Content Include="dialog\chatadmin.css" />
+    <Content Include="dialog\chat2.htm" />
+    <Content Include="dialog\chat2.css" />
+    <Content Include="dialog\allchat.js" />
+    <Content Include="dialog\customword\index.html" />
+    <Content Include="dialog\kf01.png" />
+    <Content Include="dialog\plugins.js" />
+    <Content Include="dialog\float.css" />
+    <Content Include="dialog\ico.png" />
+    <Content Include="dialog\leftico.png" />
+    <Content Include="dialog\preload.gif" />
+    <Content Include="dialog\saveorder.aspx" />
+    <Content Include="dialog\selbg.png" />
+    <Content Include="js\chatcf.js" />
+    <Content Include="dialog\chatforadmin.js" />
+    <Content Include="js\comm.js" />
+    <Content Include="dialog\chat.js" />
+    <Content Include="js\chatsetting.js" />
+    <Content Include="js\jquery.messager.js" />
+    <Content Include="js\serviceclass.js" />
+    <Content Include="js\odc.js" />
+    <Content Include="Readme.txt" />
+    <Content Include="Setting.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataStore\Configs\Base.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataStore\Configs\Setting.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataStore\Attachments\Help\" />
+    <Folder Include="DataStore\Limits\LimitGroup\" />
+    <Folder Include="DataStore\Limits\LimitRole\" />
+    <Folder Include="DataStore\Menus\AdminPage\" />
+    <Folder Include="DataStore\Menus\UserPage\" />
+    <Folder Include="dialog\chatupload\" />
+    <Folder Include="ExtContent\" />
+    <Folder Include="ExtensionsCtrls\" />
+    <Folder Include="qrimg\" />
+    <Folder Include="UserPages\Controls\" />
+    <Folder Include="Widgets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataStore\Configs\SvConfigs.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajaxget\servstatejs.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5617</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

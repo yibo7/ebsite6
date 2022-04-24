@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>37</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/BrandManage.aspx</ParentUrl>
+  <FileName>BrandList.ascx</FileName>
+  <PageName>品牌管理</PageName>
+  <ParentID>2b276c1a-02ae-4b83-936c-6ba32ceda379</ParentID>
+  <OrderID>2</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>9f7358b1-d95d-495d-aee7-1d6ab33c34dc</id>
+</ModulePageInfo>

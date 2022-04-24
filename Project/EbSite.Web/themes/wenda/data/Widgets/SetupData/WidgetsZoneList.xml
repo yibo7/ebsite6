@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widgets>
+  <widget id="d752566e-c589-4c3f-82f2-89758bcfa7e6" IsNoSysTem="False" title="网站的公告" showTitle="True" demo="">TextBox</widget>
+  <widget id="f7f48d75-468d-4449-8499-1ba6da16edaa" IsNoSysTem="False" title="最新新闻" showTitle="True" demo="">NewRss</widget>
+  <widget id="071a90cd-f96d-45bf-9712-da048f800afc" IsNoSysTem="False" title="首页推荐数据-图片" showTitle="True" demo="">GetContent</widget>
+  <widget id="0883ae74-c912-4a00-a3a3-2b0dd42d55d0" IsNoSysTem="False" title="首页友情连接" showTitle="True" demo="">Links</widget>
+  <widget id="3fc1675f-ba6c-43c8-8617-2b1e9921ccc1" IsNoSysTem="False" title="分类总排行-自动适应分类ID" showTitle="True" demo="">GetContent</widget>
+  <widget id="e5b4a14e-c699-488b-9a4e-217600f21f61" IsNoSysTem="False" title="分类页推荐数据" showTitle="True" demo="">GetContent</widget>
+  <widget id="a5d1abbf-fb10-4594-9aa5-04267cae008f" IsNoSysTem="False" title="分类导航" showTitle="True" demo="">ClassList</widget>
+  <widget id="fba403c7-73f6-446e-ba24-12f420c8deff" IsNoSysTem="False" title="首页最新数据" showTitle="True" demo="">GetContent</widget>
+  <widget id="30bacbea-a83b-4bd5-a19d-3bb6c021aa28" IsNoSysTem="False" title="排行数据-收藏排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="449af40c-5bad-4f1c-9edd-dbdca9edd4e2" IsNoSysTem="False" title="首页分类列表集合" showTitle="True" demo="">ClassListMore</widget>
+  <widget id="c825775f-5a4b-45b4-8556-2edb65fc1000" IsNoSysTem="False" title="排行数据-总排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="a4cf9b67-cc7d-461b-89f0-d76af9abf5de" IsNoSysTem="False" title="首页推荐数据-标题" showTitle="True" demo="">GetContent</widget>
+  <widget id="1e99dc56-3a30-445c-994e-37d15f45cbaa" IsNoSysTem="False" title="专题导航-全部" showTitle="True" demo="">SpecialDh</widget>
+  <widget id="25478d2e-5192-4f00-9fc5-ab9f87f8bca2" IsNoSysTem="False" title="专题-自动适应ID" showTitle="True" demo="">SpecialList</widget>
+  <widget id="7f0c1852-85ce-4538-8068-cbe9f26db929" IsNoSysTem="False" title="分类导航-列表左则" showTitle="True" demo="">ClassTreeDh</widget>
+  <widget id="b1b6cf9a-a16b-4b2b-89f9-f94687d4da93" IsNoSysTem="False" title="分类首页集合列表" showTitle="True" demo="">ClassListMore</widget>
+  <widget id="38c43a3c-8d34-4d0a-a429-e0920b10ea2e" IsNoSysTem="False" title="最近来访" showTitle="True" demo="">GetUsers</widget>
+  <widget id="fca2312d-e6c7-491d-a7ff-b3e05c6ed1f0" IsNoSysTem="False" title="我的好友" showTitle="True" demo="">GetUsers</widget>
+  <widget id="e7dabe3c-c336-4f8a-9791-88bc0e9815bc" IsNoSysTem="False" title="个人动态（足迹）" showTitle="True" demo="">GetUsers</widget>
+  <widget id="97e6c0b8-6531-410c-976c-b7ce60a3e09a" IsNoSysTem="False" title="好友动态（足迹）" showTitle="True" demo="">GetUsers</widget>
+  <widget id="09ec3e6b-04a2-494b-9448-34c356585eba" IsNoSysTem="False" title="网站公告" showTitle="True" demo="">Bulletin</widget>
+  <widget id="db1da758-1a2c-4d48-91a7-d1a9e8e55070" IsNoSysTem="False" title="最新注册用户" showTitle="True" demo="">GetUsers</widget>
+  <widget id="bd45722a-643d-4018-905a-2f29eb66d627" IsNoSysTem="False" title="常见问题" showTitle="True" demo="">GetContent</widget>
+  <widget id="510cb179-f693-4cc7-8a17-0d6b32b79ec9" IsNoSysTem="False" title="获取最新标签" showTitle="True" demo="">GetTags</widget>
+  <widget id="48a468fb-c0ba-4ebe-ad6b-b7e3f555f865" IsNoSysTem="False" title="获取热门标签" showTitle="True" demo="">GetTags</widget>
+  <widget id="bafa9309-e4df-4913-aa54-3e468e5c07a2" IsNoSysTem="False" title="分类总排行-自动适应内容ID" showTitle="True" demo="">GetContent</widget>
+  <widget id="d3bfcde7-5984-45bd-9c22-32bb11e3efd1" IsNoSysTem="False" title="相关内容" showTitle="True" demo="">RelateContent</widget>
+  <widget id="56b0edec-9a1c-473b-84a6-558cde9718c4" IsNoSysTem="False" title="首页幻灯片" showTitle="True" demo="">FlashPic</widget>
+  <widget id="c0a213e8-75c3-46c6-a61b-35ec670d6ace" IsNoSysTem="False" title="图片内容" showTitle="True" demo="">GetContent</widget>
+  <widget id="ffad2b70-3a04-4870-baa4-3f4db96d06df" IsNoSysTem="False" title="排行数据-今日排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="c108121c-c159-4fea-b800-6ecf849801e0" IsNoSysTem="False" title="排行数据-本周排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="1fa1925c-cfbf-46a8-a5ac-df42332ae271" IsNoSysTem="False" title="排行数据-本月排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="9e75952f-8875-467d-bcff-ea907bc07316" IsNoSysTem="False" title="排行数据-按评论最多排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="b66021a1-9bda-4204-8e69-e9da45c4e40b" IsNoSysTem="False" title="排行数据-按好评(被顶)最多排行" showTitle="True" demo="">GetContent</widget>
+  <widget id="7b3d17e7-08c0-4e83-9a35-9944adc80a9b" IsNoSysTem="False" title="分类总排行(获取子分类)-自动适应分类ID" showTitle="True" demo="">GetContent</widget>
+  <widget id="013dd3f1-98df-41f0-8c67-045491c32ee0" IsNoSysTem="False" title="网站调查" showTitle="True" demo="">Vote</widget>
+  <widget id="80866937-d04a-4d3f-834d-b5a1de06b677" IsNoSysTem="False" title="头部广告-banner-450-60" showTitle="True" demo="">TextBox</widget>
+  <widget id="916aa362-51b0-4eb7-9cf7-9d1ff826dab9" IsNoSysTem="False" title="获取某个分类下的子分类" showTitle="True" demo="">GetSubClass</widget>
+  <widget id="e54759d9-ad7c-4950-93c6-61f55979f0fa" IsNoSysTem="False" title="首页广告-680-90" showTitle="True" demo="">TextBox</widget>
+  <widget id="07cec6c6-e5eb-4665-a16d-8c6ae01f1c53" title="数据表演示" showTitle="True" demo="">CustomDataTable</widget>
+  <widget id="0df48d0d-4626-480f-8ed3-2d37bfa5d741" title="搜索测试" showTitle="True" demo="">CustomSearch</widget>
+  <widget id="1ace645d-a038-4e36-84b3-423bc6fae5fc" title="SearchKeepWord" showTitle="True" demo="">SearchKeepWord</widget>
+  <widget id="8b3d8277-4df7-4dfe-bc38-fd0bf526746f" title="qq客服" showTitle="True" demo="">CustomerService</widget>
+  <widget id="b909858a-a2fb-4949-8aef-2c786e198edb" title="采集网易新闻" showTitle="True" demo="">LocoySpider</widget>
+  <widget id="04c1b7c1-6b30-48ef-9ade-ee0858885da8" title="TQ客服" showTitle="True" demo="">FilesManager</widget>
+  <widget id="59e58f6f-1e6e-492d-a6c3-ea489517f2bd" title="Bulletin" modulid="00000000-0000-0000-0000-000000000000">Bulletin</widget>
+  <widget id="721c4613-c7bc-4798-983a-aa4a29d98ba9" title="ebsite导航" modulid="00000000-0000-0000-0000-000000000000">ClassList</widget>
+  <widget id="985f9d0f-3a15-4588-9e25-f92bb3a4dcf9" title="网站的公告" modulid="00000000-0000-0000-0000-000000000000">TextBox</widget>
+  <widget id="70f022c8-c7b0-4c82-9288-edca89ea2101" title="小贴板" modulid="00000000-0000-0000-0000-000000000000">TextBox</widget>
+  <widget id="14ceb56b-dc7c-4e81-8728-35891b81dcb7" title="调用个人空间子分类" modulid="8961c5b2-43f2-4298-8145-f0965aff70a0">HomeClass</widget>
+  <widget id="ce25a976-00fd-41d9-b570-d8f37a496cac" title="获取某个用户发布的内容" modulid="00000000-0000-0000-0000-000000000000">GetContentByUser</widget>
+  <widget id="d482d626-838b-4d6c-af83-601978144ceb" title="基于站群的菜单主导航" modulid="00000000-0000-0000-0000-000000000000">ClassListSite</widget>
+  <widget id="21222fdd-843d-4141-8704-220b99cf4063" title="网站logo" modulid="00000000-0000-0000-0000-000000000000">TextBox</widget>
+  <widget id="cbe17869-3939-4814-8d44-e64d28b238a9" title="友情连接" modulid="305e034e-0925-4c16-995d-a7ca05095791">FriendLiks</widget>
+  <widget id="b8de9121-5831-41f7-9bac-aa13cd71ff41" title="测试文本显示" modulid="00000000-0000-0000-0000-000000000000">TextBox</widget>
+  <widget id="2f701d33-c7e2-4d42-8638-189daeb00e82" title="导航一级分类" modulid="00000000-0000-0000-0000-000000000000">ClassList</widget>
+  <widget id="a78e3164-cec7-4d74-968a-ba6f9a3b0d6c" title="问题首页-精彩推荐" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="fba4dec0-e009-41cc-827e-eb47424f4bed" title="问答首页-车友们在问什么" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="30876013-70fe-4dba-99c4-69615a4cef60" title="问答首页-赏金求答案" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="d82d6a02-e75d-48ff-9666-43dd5f5a9b0d" title="问答首页-已解决问题" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="9b25032f-7a8a-4b97-be43-181701bc347b" title="问答首页-总排行" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="969a2538-f545-4c3a-9069-f0c5c63e7dda" title="问答首页-周点击排行" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="b2913fa5-7823-49dc-9190-dbd604eb1b8a" title="右侧菜单" modulid="00000000-0000-0000-0000-000000000000">ClassListMore</widget>
+  <widget id="b67401c2-ac15-46be-9647-c6aa83e4c7de" title="积分达人榜" modulid="00000000-0000-0000-0000-000000000000">GetUsers</widget>
+  <widget id="c62b600a-5222-4622-8862-b9b895c24ecc" title="积分达人榜列表" modulid="00000000-0000-0000-0000-000000000000">GetUsers</widget>
+  <widget id="a90b7fe5-12ca-4c0b-a2cf-89b7b315d143" title="发表问题页面-获取已解决问题的标题" modulid="7aaf9c89-d0bc-421b-9045-cdd6ba76c27a">GetSolveAsk</widget>
+  <widget id="c3caec92-9bcd-4a05-b804-1dc915cc65dd" title="问答首页专家" modulid="4e0edb7e-1b30-41ad-9f74-d63c80458c35">GetExpertList</widget>
+  <widget id="eb9138d9-6133-45ba-b812-146a54245380" title="问答-获取子级分类" modulid="00000000-0000-0000-0000-000000000000">GetSubClass</widget>
+  <widget id="7f68736e-8ae1-4572-a156-f78780336a62" title="发表问题页面-获取已解决问题的标题" modulid="4e0edb7e-1b30-41ad-9f74-d63c80458c35">GetSolveAsk</widget>
+  <widget id="70bf38f6-09e2-488b-a472-1db985b7802a" title="ExpertAsk" modulid="4e0edb7e-1b30-41ad-9f74-d63c80458c35">ExpertAsk</widget>
+  <widget id="da8775b1-7e30-4523-bc43-7a72a4371728" title="获得问题内容和补充" modulid="4e0edb7e-1b30-41ad-9f74-d63c80458c35">GetAskCtent</widget>
+  <widget id="b374ae57-66cb-4815-bef6-cd1e5689d095" title="最佳答案" modulid="4e0edb7e-1b30-41ad-9f74-d63c80458c35">GetBestAnswer</widget>
+  <widget id="06156f7c-6440-4429-bb3a-4cfe1c1c2def" title="内容页-回答列表(未解决)" modulid="4e0edb7e-1b30-41ad-9f74-d63c80458c35">GetAnswerList</widget>
+  <widget id="0c9b0e87-8402-463a-bf99-abce253715ad" title="内容页-回答列表(已解决)" modulid="4e0edb7e-1b30-41ad-9f74-d63c80458c35">GetAnswerList</widget>
+  <widget id="2452c568-4bb1-41a4-81e8-b07fbee5aba3" title="内容页-回答列表(已关闭)" modulid="4e0edb7e-1b30-41ad-9f74-d63c80458c35">GetAnswerList</widget>
+  <widget id="89729002-a39b-46f0-9308-d9565a76e648" title="问答相关" modulid="00000000-0000-0000-0000-000000000000">GetTags</widget>
+  <widget id="dee29e26-d68c-4afc-bca5-e03a69e05c5a" title="NewRss-首页交易保障" modulid="00000000-0000-0000-0000-000000000000">NewRss</widget>
+  <widget id="99ea208a-0117-4969-bf06-21c346e5b993" title="NewRss-首页新手上路" modulid="00000000-0000-0000-0000-000000000000">NewRss</widget>
+  <widget id="54e6c6ea-1f6c-4117-a3a9-d6b89796a931" title="NewRss-首页交易指南" modulid="00000000-0000-0000-0000-000000000000">NewRss</widget>
+  <widget id="2cdfd406-44e5-4bd4-9d24-abf254eda169" title="NewRss-首页支付方式" modulid="00000000-0000-0000-0000-000000000000">NewRss</widget>
+  <widget id="04e21baf-72f6-439e-808c-7c0566daa22d" title="问答友情链接" modulid="00000000-0000-0000-0000-000000000000">CustomDataTable</widget>
+  <widget id="0060c01b-7a28-43eb-a2c2-23b2bba1b887" title="列表页 热门问题" modulid="00000000-0000-0000-0000-000000000000">GetContent</widget>
+  <widget id="cdd5349c-12b1-4745-92fd-c6bb96c82898" title="获取某个专题下的子专题" modulid="00000000-0000-0000-0000-000000000000">GetSubSpecial</widget>
+  <widget id="d68da10c-05e8-425c-bedd-b130976258c7" title="个人后台调最新消息" modulid="00000000-0000-0000-0000-000000000000">GetUserMsg</widget>
+  <widget id="bccff97b-0c20-480a-a622-19122c468d40" title="好评" modulid="00000000-0000-0000-0000-000000000000">EvaluatePg</widget>
+  <widget id="0f4197f0-1afd-4dc1-9985-aaac941c23a2" title="详细面右侧相关问题" modulid="00000000-0000-0000-0000-000000000000">GetRelatedContent</widget>
+  <widget id="b4bd4f0f-bb08-44ba-844a-9e96c57e7d7c" title="回答页相关问题" modulid="4e0edb7e-1b30-41ad-9f74-d63c80458c35">RealtedArticle</widget>
+  <widget id="f7caa9f8-3b86-4d97-b384-653d168524e9" title="首页最新问答6条" modulid="4e0edb7e-1b30-41ad-9f74-d63c80458c35">IndexNewAsk</widget>
+  <widget id="6b362001-9df9-459f-b878-ace2255b4be5" title="个人用户后台" modulid="4e0edb7e-1b30-41ad-9f74-d63c80458c35">UserHt</widget>
+</widgets>

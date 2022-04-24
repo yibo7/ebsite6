@@ -1,0 +1,324 @@
+﻿
+.tbline td {
+	border: 1px solid #C7C7C7
+} 
+a{ cursor:pointer;}
+/*CustomTips*/
+.ebcustom-tip{
+	position:absolute;
+	width:200px;
+	height:auto;
+	display:none;
+	z-index:9900000;
+}
+.ebcustom-tip-content{
+	display:inline-block;
+	position:absolute;
+	top:0px;
+	left:10px;
+	padding:3px 5px;
+	border:1px solid #CC9933;
+	background:#FFFFCC;
+	z-index:9900001;
+	font-size:12px;
+}
+.ebcustom-tip-pointer{
+	background:url('tips_pointer.gif') no-repeat left top;
+	display:inline-block;
+	width:10px;
+	height:19px;
+	position:absolute;
+	left:1px;
+	top:0px;
+	z-index:9900002;
+}
+.userweiboximg div{ border:1px solid #ccc; width:180px; height:180px;}
+.clear{ height: 0px;clear:both;}
+.GridView
+{	width:100%;
+	background:#F5FAFF;
+	border:solid 1px #D8E0E8;
+	
+	
+}
+.GridViewHeader
+{
+	text-align:center;	
+	font-weight:bold;
+	background-image:url(grid3-hrow.gif);
+}
+.GridView tr
+{
+	height:28px;
+	
+}
+.GridView tr:hover
+{
+	background:#E8A55A;
+	
+}
+.GridView tr td
+{
+	 text-align:center; height:35px; line-height:35px; font-size:14px;
+	
+}
+.GridView tr td:first-child  
+{
+	width:30%;
+	 text-align:left;
+	 padding-left:5px;
+	
+}
+.AlternatingRow
+{
+	background-color:#FFF9E6;
+}
+
+
+.gvfisrtTD
+{
+ text-align:left!important;	
+ 
+ }
+ .GridMouseOver
+{
+	background:#E8D18B;
+}
+.GridMouseOut
+{
+}
+.AdminButton 
+{
+	border:1px solid #919699; 
+	background:url(buttonbg.gif) repeat-x left bottom;
+	 text-align:center; text-decoration:none; 
+	 padding:2px 3px; cursor:pointer; 
+	 line-height:25px; margin-right:2px;
+	  
+}
+.TextBoxDefault
+{
+	font-family:Arial, Helvetica, sans-serif; background-color: #fff; 
+	padding:0.2em 0;border:1px double #ccc; height:23px; line-height:23px;
+}
+.TextBoxFocus 
+{
+	font-family:Arial, Helvetica, sans-serif; background-color: #FFFCF5; 
+	padding:0.2em 0;border:1px double #D69D00; height:23px; line-height:23px;
+}
+
+.fLeft {
+	float:left;
+}
+.fRight {
+	float:right;
+}
+#btnLoginUser{ border: none;}
+
+.txt-c
+{
+    
+    text-align: -moz-center !important;/*火狐*/
+    text-align: center;
+ }
+/* .tips1{ background-image:url(tip1.png);
+         background-repeat: no-repeat;
+	     background-position :center  top;
+	     height:auto; padding-top:55px; font-size:14px; color:#ff0000;
+         }
+.tips2{ background-image:url(tip2.png);
+         background-repeat: no-repeat;
+	     background-position :center  top;
+	     height:auto; padding-top:55px; font-size:14px; color:#ff0000;
+         }
+.tips3{ background-image:url(tip3.png);
+         background-repeat: no-repeat;
+	     background-position :center  top;
+	     height:auto; padding-top:55px; font-size:14px; color:#ff0000;
+         }*/
+ .box{border:solid 1px #E2E2E2; text-align:left;padding-left: 10px; 
+	 height:auto;  }
+	 
+/*闪烁样式*/	 
+.red{background:#ffe9e8; color:#d00;}
+input.red{background:#ffe9e8;}
+.box{ width:240px; height:26px; line-height:26px; background:#f0f0f0; border:1px solid #ddd; text-align:center; font-size:14px; margin:20px auto;}
+input.box{ width:240px; font-weight:900; color:#999; display:block; background:#fff; text-align:left;}
+	
+/*用户后台的tag*/	 
+.divtagbox
+{
+    border-bottom:1px solid #C8D3DE;
+    background-color:#ffffff;margin-top:8px;
+}
+.divtagbox-ul
+{
+	font-size:14px;
+    float:left;	
+    margin-bottom:-1px; 
+}
+
+.divtagbox-ul li
+{
+	float:left;
+	margin-left:5px;
+	
+}
+.divtagbox-ul a{ height: 25px;  }
+.divtagbox-ul a:link, .divtagbox-ul a:visited, .divtagbox-ul a:active {
+	background-color:#F5F5F5;
+	border:1px solid #C8D3DE;
+	color:#333333;
+	float:left;
+	letter-spacing:1px;
+	padding:5px 10px 3px;
+	text-decoration:none;	
+}
+.divtagbox-ul a.current_nav:link,.divtagbox-ul a.current_nav:visited,.topic_nav_block a.current_nav:active {
+	background-color:white;
+	border-color:#C8D3DE #C8D3DE white;
+	border-style:solid;
+	border-width:1px;
+	color:#333;
+	cursor:default;
+	font-weight:bold;
+	letter-spacing:0;
+	margin-top:0;
+	padding:5px 10px 3px;
+	
+}
+
+.divtagbox-ul li a:hover {
+	background-color:#E0E0E0;
+	border:1px solid #C8D3DE;
+	color:#333333;
+	float:left; 
+	letter-spacing:1px;
+	padding:5px 10px 3px;
+	text-decoration:none;	
+}
+
+
+ /*end用户后台的tag*/
+ 
+ /*tinybox.js样式*/
+.zxx_list_title{background:#eeeeee; border:1px solid #cccccc; padding:1em;}
+.zxx_list_content{padding:1em;}
+#tinybox{position:absolute; display:none; padding:10px; background:#ffffff url(preload.gif) no-repeat 50% 50%; border:10px solid #878787; z-index:2000;}
+#tinymask{position:absolute; display:none; top:0; left:0; height:100%; width:100%; background:#000000; z-index:1500;}
+#tinycontent{background:#ffffff; font-size:1.1em;}
+
+/*返回顶部*/
+
+p#back-to-top{
+	      position:fixed;
+	      bottom:208px;
+	      left:1270px;
+	      *left: expression(documentElement.clientWidth/2+495 + "px");
+	      _position: absolute;                                       /*IE6 用absolute模拟fixed*/
+          _top: expression(documentElement.scrollTop + 216 + "px"); /*IE6 动态设置top位置*/
+          _left: expression(documentElement.clientWidth/2+485 + "px");
+          
+	}
+	p#back-to-top a{
+	      text-align:center;
+	      text-decoration:none;
+	      color:#c1c1c1;
+	      display:block;
+	      width:60px;
+	 
+	      /*使用CSS3中的transition属性给跳转链接中的文字添加渐变效果*/
+	 
+	      -moz-transition:color 1s;
+	      -webkit-transition:color 1s;
+	      -o-transition:color 1s;
+	}
+	p#back-to-top a:hover{
+	      color:#979797;
+	}
+	p#back-to-top a span{ cursor:pointer;
+	      background:#fff url(arrow-up.png) no-repeat center center;
+	      border-radius:6px;
+	      display:block;
+	      height:60px;
+	      width:60px;
+	      margin-bottom:5px;
+	 
+	      /*使用CSS3中的transition属性给<span>标签背景颜色添加渐变效果*/
+	 
+	      -moz-transition:background 1s;
+	      -webkit-transition:background 1s;
+          -o-transition:background 1s;
+	}
+	#back-to-top a:hover span{
+	      background:#fff url(arrow-up.png) no-repeat center center;
+	}
+	/*end返回顶部*/
+	
+	/*登录*/
+#lbErrInfo { color:#ff3333;margin-left:60px}
+.login_ttl { background:url(lgbg_t.png); height:34px; width:100%; border:1px solid #ccc;}
+#btnOpLoginUser{border:1px solid #9C4300; padding:10px; background-color:#E66400; color:#ffffff; width:150px; font-size:14px; }
+.btn{border:1px solid #9C4300; padding:10px; background-color:#E66400; color:#ffffff;  font-size:14px; }
+
+.sj_top{height:33px; overflow:hidden; background:url(qhbj.png);}
+.sj_top li{  float:left; line-height:30px; width:100px; text-align:center; padding:0 15px; margin-left:10px; display:inline;color:#6A6162; font-weight:bold; font-size:14px; background:#FFFFFF;}
+.sj_top li.cur{border-top:solid #AEAEAE 1px;width:100px;border-left:solid #AEAEAE 1px; border-right:solid #AEAEAE 1px; line-height:35px;}
+                 
+/*通用div Repeater*/
+.gdList_title{ background:url(u-topbg.png); border-left:1px solid #C8D3DE; padding-left:5px;
+               border-right:1px solid #C8D3DE; height:30px; line-height:30px;
+                font-size:14px; font-weight:bold;
+               }
+.gdList_title div{ float:left; text-align:center; }
+
+.gdListContent{width: 100%;
+        clear:both;
+         height:32px; line-height:32px;
+        border-bottom: 1px dotted silver;}
+.gdListContent:hover{background:#F7F7F7;}
+.gdListContent div{ float:left;text-align:center;    }
+.gdListContent input{ margin-top:10px;}
+
+/*默认分页*/
+.PagesClass{ width:100%; text-align:right; clear:both;}
+.PagesClass table{ float:right; margin-right:20px;}
+.PagesClass td{ border:1px solid #ccc; padding:5px; padding-left:15px; padding-right:15px;}
+.CurrentPageCoder{ background:#E0E0E0;}
+
+.u_tipsbox{ height:30px; line-height:30px; width:98%; border:1px solid #E8E8E8; background:#F5F5F5; text-align:left; padding-left:10px; margin-top:5px;}
+.u_tipsbox a{ color:#CC0000; font-weight:bold;}
+.button{ padding:8px; border:1px solid #A80000; color:#fff; background-color:#CC0000; cursor:pointer;}
+
+.a-red a{ color:Red;}
+.a-blue a{ color:Blue;}
+input{border:1px solid #ccc;}
+.ebcur{ cursor: pointer;}
+
+/*默认嵌入式评论列表样式*/
+.remarktable{ width: 100%;margin-bottom: 10px;background: #F7F7F7;border: 1px solid #EDEDED;}
+.remarktitle{ background: #F2F2F2;color: #B5B5B5;line-height: 30px;text-indent: 10px;padding-right: 5px; }
+.remarktitle span{ float: right;}
+.replytile{ color: #B5B5B5;}
+.replytile span{ float: right;padding-right: 5px;}
+.postbody{ padding: 10px; margin-bottom: 10px;}
+.SubQuote{ color: #B0A28B;} 
+.replybody{ padding-bottom: 20px;}
+.postfoot{ padding-bottom: 20px;}
+.postfoot  input{ float: right;width: 100px;height: 30px;margin-left: 8px; }
+.replylist{ background: #FAF7F2;padding: 8px;border: solid 1px #F0EDE9;margin-left: 30px;margin-right: 30px;margin-bottom: 30px;}
+
+/*end*/ 
+.currentpi {color: #ff4500 !important;font-weight: bold;}
+.blockTips {
+	background: #ffffff !important;
+	color: #000000;
+	padding: 8px;
+	border-radius: 5px;
+	border: 1px solid #AEAEAE;
+	font-size: 16px;
+	min-height: 50px;
+	line-height: 50px;
+}
+ 
+@import url("not_gather.css");

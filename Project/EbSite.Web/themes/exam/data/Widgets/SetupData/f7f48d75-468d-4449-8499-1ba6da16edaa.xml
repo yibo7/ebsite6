@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="count" Value="5" />
+    <DictionaryEntry Key="tem" Value="" />
+    <DictionaryEntry Key="rssurl" Value="http://news.sohu.com/rss/pfocus.xml" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

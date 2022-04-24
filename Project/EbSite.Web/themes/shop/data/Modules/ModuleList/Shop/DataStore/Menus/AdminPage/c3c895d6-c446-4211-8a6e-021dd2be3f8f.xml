@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>2</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/GoodsManage.aspx</ParentUrl>
+  <FileName>AdGoodsType.ascx</FileName>
+  <PageName>商品类型添加</PageName>
+  <ParentID>3343f409-e2f1-4be6-b009-fbdf0cdcd533</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>c3c895d6-c446-4211-8a6e-021dd2be3f8f</id>
+</ModulePageInfo>

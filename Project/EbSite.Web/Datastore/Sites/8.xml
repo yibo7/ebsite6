@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Sites>
+  <IsNoSys>True</IsNoSys>
+  <OrderID>0</OrderID>
+  <ParentID>1</ParentID>
+  <SiteName>eBSite社区</SiteName>
+  <SiteFolder>bbs</SiteFolder>
+  <IsClassContent>False</IsClassContent>
+  <IndexTemID>068160b1-d925-4a42-8b00-a519005a87c7</IndexTemID>
+  <LinkTypeContent>1</LinkTypeContent>
+  <LinkTypeClass>3</LinkTypeClass>
+  <LinkTypeOrther>3</LinkTypeOrther>
+  <LinkTypeSpecial>3</LinkTypeSpecial>
+  <LinkTypeTags>3</LinkTypeTags>
+  <MobileTheme>bbs</MobileTheme>
+  <AdminTheme>green</AdminTheme>
+  <PageTheme>bbs</PageTheme>
+  <id>8</id>
+</Sites>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SeoSite>
+  <SeoSiteIndexTitle>{站点名称}_网站建设系统</SeoSiteIndexTitle>
+  <SeoSiteIndexKeyWord>{站点名称}，网站建设</SeoSiteIndexKeyWord>
+  <SeoSiteIndexDes>{站点名称}是一个功能强大的网站建设系统</SeoSiteIndexDes>
+  <SeoTagListTitle>{标签名称}_{站点名称}</SeoTagListTitle>
+  <SeoTagListKeyWord />
+  <SeoTagListDes />
+  <SeoTagIndexTitle>标签大全_{站点名称}</SeoTagIndexTitle>
+  <SeoTagIndexKeyWord />
+  <SeoTagIndexDes />
+  <SeoClassTitle>{分类名称}_{站点名称}</SeoClassTitle>
+  <SeoClassKeyWord />
+  <SeoClassDes />
+  <SeoSpecialTitle>{专题名称}_{站点名称}</SeoSpecialTitle>
+  <SeoSpecialKeyWord />
+  <SeoSpecialDes />
+  <SeoContentTitle>{内容标题}_{站点名称}</SeoContentTitle>
+  <SeoContentKeyWord />
+  <SeoContentDes />
+  <SiteID>8</SiteID>
+  <id>4</id>
+</SeoSite>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>6</Permission>
+  <ModuleID>8961c5b2-43f2-4298-8145-f0965aff70a0</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/ebsite/data/Modules/ModuleList/UserBaseInfo/UserPages/UserBaseInfo.aspx</ParentUrl>
+  <FileName>ChangePassWord.ascx</FileName>
+  <PageName>修改密码</PageName>
+  <ParentID>bf371bdd-f674-4077-a9ed-e2896fb4c857</ParentID>
+  <OrderID>2</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>af371bdd-f674-4077-a9ed-e2896f55c857</id>
+</ModulePageInfo>

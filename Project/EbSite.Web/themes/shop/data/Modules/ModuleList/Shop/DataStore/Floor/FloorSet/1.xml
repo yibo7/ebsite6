@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<FloorSet>
+  <FloorId>2</FloorId>
+  <FloorName>刹车系统</FloorName>
+  <FloorColor>a63785</FloorColor>
+  <FloorPic>/themes/default/data/Upload/20131101/qajxbgtiqs0.png</FloorPic>
+  <FloorPicUrl>www.ebsite.net</FloorPicUrl>
+  <TopClassItem>12624,12649,12650,12654,12661</TopClassItem>
+  <RightClassItem>12584,12586,12587,12588,12589</RightClassItem>
+  <ProductIds />
+  <id>1</id>
+</FloorSet>

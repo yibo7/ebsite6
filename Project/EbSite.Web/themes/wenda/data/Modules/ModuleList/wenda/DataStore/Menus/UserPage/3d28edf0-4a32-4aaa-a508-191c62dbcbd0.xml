@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>4e0edb7e-1b30-41ad-9f74-d63c80458c35</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/wenda/data/Modules/ModuleList/wenda/UserPages/MyAskManage.aspx</ParentUrl>
+  <FileName>MyAskList.ascx</FileName>
+  <PageName>我的提问</PageName>
+  <ParentID>b8db356c-9000-4e9a-8aaa-c508bc80c309</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>3d28edf0-4a32-4aaa-a508-191c62dbcbd0</id>
+</ModulePageInfo>

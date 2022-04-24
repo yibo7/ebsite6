@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="txtwidth" Value="" />
+    <DictionaryEntry Key="txtallowtype" Value=".bmp,.jpge,.jpg,.rar" />
+    <DictionaryEntry Key="txtheight" Value="" />
+    <DictionaryEntry Key="txtallowsize" Value="10" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

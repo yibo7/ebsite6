@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserPagesTem.Master.cs" Inherits="EbSite.Web.Pages.UserPagesTem" %>
+<%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1"  runat="server" >
+    <title>通用</title>
+</head>
+
+<body style="text-align:center;">
+<div class="bodycolor">
+<form id="form1" runat="server">
+
+<div class="all_wrap">
+	<div class="ic_body">
+		<div class="ic_top">
+				<div class="ic_nav">
+				<h1>
+                <a >
+                    <span>用户后台</span>
+                </a>
+                </h1>
+				<h2></h2>
+			</div>
+			<div class="top_op">
+				<map id="ic_nav">
+					<p class="top_nav">
+                    <a  id="a_infoCenter" href="../" >网站首页</a>                    
+                    <%if(UserID>0){ %>
+                        <a  href="<%= EbSite.Base.Host.Instance.UccIndexRw %>" >控制面板主页</a>
+                       
+                        <a class="logout" href="<% =EbSite.Base.AppStartInit.IISPath%>LogOut.aspx">退出</a> 
+                    <%} %>
+                    </p>
+				</map>
+			</div>
+		</div>	
+	</div>
+</div>
+<div class="mainuser" >
+<table style=" width:100%;">
+    <tr>
+        <td id="tbLeft" class="UserLeft" runat="server" >
+         <%if(UserID>0){ %>
+        <table>
+            <tr>
+                <td >
+                    <div style="background-color:#ccc; margin-right:8px; padding:6px;">
+                         <img id="AvatarBig"  onerror=this.onerror='';this.src='../images/nopic.gif'; width="80"   />                        
+                        <script>
+                            document.getElementById("AvatarBig").src = "<%=UserInfos.AvatarBig %>?" + Math.random()
+                        </script>
+                    </div>
+               
+                </td>
+                <td >
+                    <div style=" margin-left" >
+                    <b>名称:</b><%=UserInfos.NiName %><br>
+                    <b>积分:</b><%=UserInfos.Credits %><br>
+                    <%=HostApi.UserGroupNames%><br>
+                    <a href="<%=HostApi.CurrentSiteUrl%>" target="_blank" >我的主页</a>                    
+                    </div>                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a href="<%=HostApi.GetChangeUserICO%>"  title="修改头像">修改头像</a>　　
+				    <a href="<%=HostApi.GetBaseInfoUrl%>"  title="个人资料">修改资料</a>
+				    <br />
+				    <a href="<%=HostApi.GetNiNameUrl%>"  title="修改昵称">修改昵称</a>　　
+				    <a href="<%=HostApi.GetChangePassUrl%>"  title="修改密码">修改密码</a>
+                </td>
+            </tr>
+        </table>
+         <%} %>
+        <div  class="unfold_app_list1 " >
+						<div class="ic_title bbor">
+							<h3>应用模块</h3>
+							<div class="ic_title_op"></div>
+						</div>
+						<div class="app_link_list">
+							<div id="_AppListContainer" class="app_link_frame bbor">
+                            <ul id="AppListUL_0" class="">
+                             <asp:repeater id="rpMenus" runat="server">            
+                                <ItemTemplate>
+                                    <li class="bbor2 ">
+                                        <p> 
+                                            <a class="app_list_label"  href="<%#Eval("Url")%>"> 
+                                            <img src="<%#Eval("imageurl")%>" />
+                                            <span class="app_label"> <%#Eval("MenuName")%> </span>
+                                            </a>
+                                        </p>
+                                     </li>                   
+                                </ItemTemplate>
+                            </asp:repeater> 
+                          </ul>
+                        </div>
+                       
+						</div>
+					</div>
+           
+       
+        
+        </td>
+        <td class="UserRight" >
+            <XS:CustomTagsDiv ID="ctdTags" runat="server"/>
+            <div style=" padding-top:5px;">
+            <XS:Notes ID="ntTips"  Visible="false"    runat=server />
+            </div>            
+            <div class="UserRight_Main">                
+                <asp:ContentPlaceHolder ID="ctphBody" runat="server"/>
+            </div>
+            
+        </td>
+    </tr>
+</table>
+<div>
+<%=EbSite.Base.Configs.SysConfigs.ConfigsControl.Instance.Copyright %>
+</div>
+</div>
+</form>
+</div>
+</body>
+
+</html>

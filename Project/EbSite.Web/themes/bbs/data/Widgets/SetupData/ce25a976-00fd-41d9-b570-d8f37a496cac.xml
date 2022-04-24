@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="txttop" Value="10" />
+    <DictionaryEntry Key="txttem" Value="00000000-0000-0000-0000-000000000000" />
+    <DictionaryEntry Key="isimage" Value="False" />
+    <DictionaryEntry Key="userfrom" Value="1" />
+    <DictionaryEntry Key="drptype" Value="h" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

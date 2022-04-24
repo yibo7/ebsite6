@@ -1,0 +1,27 @@
+﻿一.WebApi的扩展
+	ebsite提供WEB服务与WebApi两种API扩展方式，Web服务扩展可以直接修改项目下的App_Code/ws.cs文件，在这里可以加入web服务方法
+	在这里主要讲讲WebApi的扩展，这个是基于MVC架构下的WebApi,扩展编写完成后可以通过“/api/我的扩展”来访问
+	这里以一个搜索百度图片的API为例，api允许传入一个关键词及页码（支持分页）来调用百度图片列表
+	扩展过程:
+		创建类searchpicController(这个类可以放在App_Code下，也可以放在其他类库)，继承自EbSite.Mvc.Controllers.ApiBaseController,
+		接下来就是正常的WebApi编写了:
+		public class searchpicController : ApiBaseController
+		{
+			/// <summary>
+			/// 根据关键词搜索相关的图片列表 前端访问地址 /api/searchpic?key=abc&pageindex=1
+			/// </summary>
+			/// <param name="key">关键词.</param>
+			/// <returns>System.String.</returns>
+			public List<ImgRz> Get(string key,int pageindex)
+			{
+				 //返回一个图片列表，略...
+			}
+		}
+
+二.MVC模块
+	目前MVC模块跟WebForm模块的区别在于，他与ebsite本身没有太大联系,当然你也可以在模块项目里引入ebsite的类库，与ebsite进行交互，又或者是通过web服务，
+	或者WebApi方式进行与ebsite交互,目前MVC项目的开发比较独立，不需要依赖ebsite类库或ebsite的规则，
+	，你只要将MVC模块编译成类库后，放到ebsite站点目录下的Modules里，在ebsite启动时会自动加载，MVC模块的视图也可以直接打包在
+	DLL类库里（当然，你要借自RazorGenerator），右键你项目中的视图文件-属性，在自定义工具里选择RazorGenerator（你要安装RazorGenerator的vs扩展）
+	在模块里，就像开发一个普通的MVC项目一样操作了，所以这里我不做过多说明，请学习MVC相关的开发教程，在调试方面也可以借自RazorGenerator进行单元测试。
+	

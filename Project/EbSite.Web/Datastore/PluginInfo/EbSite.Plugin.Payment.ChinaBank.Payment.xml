@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ManagedExtension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="EbSite.Plugin.Payment.ChinaBank.Payment">
+  <BaseType>IPayment</BaseType>
+  <Version>1.0</Version>
+  <Priority>999</Priority>
+  <Description>网银在线</Description>
+  <Author>&lt;a href="http://www.ebsite.net"&gt;小菜菜&lt;/a&gt;</Author>
+  <AdminPage />
+  <Enabled>true</Enabled>
+  <Settings>
+    <Index>0</Index>
+    <Name>EbSite.Plugin.Payment.ChinaBank.Payment</Name>
+    <Help>网银在线（北京）科技有限公司是2003年6月在中关村注册的高新技术企业，注册资金1000万人民币。自成立以来，凭借强大的技术实力和良好的服务理念，以“电子支付专家”为发展定位，联合中国银行、中国工商银行、中国农业银行、中国建设银行、招商银行等国内各大银行，以及VISA、MasterCard、JCB等国际信用卡组织，致力于为国内中小型企业提供完善的电子支付解决方案。     </Help>
+    <Delimiter>44</Delimiter>
+    <Parameters>
+      <Name>ID</Name>
+      <Label>唯一ID</Label>
+      <MaxLength>20</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>CusID</Name>
+      <Label>客户号</Label>
+      <MaxLength>300</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <ParamType>StringMax</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>PrivateKey</Name>
+      <Label>私钥</Label>
+      <MaxLength>300</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <ParamType>StringMax</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>ImgUpload</Name>
+      <Label>支付按钮图片</Label>
+      <MaxLength>300</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <ParamType>Upload</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <KeyField>ID</KeyField>
+    <IsScalar>true</IsScalar>
+    <Hidden>false</Hidden>
+    <ShowAdd>true</ShowAdd>
+    <ShowEdit>true</ShowEdit>
+    <ShowDelete>true</ShowDelete>
+  </Settings>
+  <ShowSettings>true</ShowSettings>
+</ManagedExtension>

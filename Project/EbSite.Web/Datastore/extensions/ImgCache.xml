@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ManagedExtension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="ImgCache">
+  <BaseType />
+  <Version>1.0</Version>
+  <Priority>999</Priority>
+  <Description>动态缓存缩略图</Description>
+  <Author>&lt;a href="http://www.ebsite.net"&gt;小菜菜&lt;/a&gt;</Author>
+  <AdminPage />
+  <Enabled>true</Enabled>
+  <Settings>
+    <Index>0</Index>
+    <Name>ImgCache</Name>
+    <Help />
+    <Delimiter>44</Delimiter>
+    <Parameters>
+      <Name>ID</Name>
+      <Label>唯一ID</Label>
+      <MaxLength>20</MaxLength>
+      <Required>true</Required>
+      <KeyField>true</KeyField>
+      <Values>b837ac5e-d2fa-4a60-9bf4-6d06d2eb2b29</Values>
+      <ParamType>String</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <Parameters>
+      <Name>imgwh</Name>
+      <Label>缩略图规格(一行一个,格式为:宽a高),第一个为移动版默认展出图片</Label>
+      <MaxLength>500</MaxLength>
+      <Required>true</Required>
+      <KeyField>false</KeyField>
+      <Values>300a300
+80a80
+120a120</Values>
+      <ParamType>StringMax</ParamType>
+      <SelectedValue />
+    </Parameters>
+    <KeyField>ID</KeyField>
+    <IsScalar>true</IsScalar>
+    <Hidden>false</Hidden>
+    <ShowAdd>true</ShowAdd>
+    <ShowEdit>true</ShowEdit>
+    <ShowDelete>true</ShowDelete>
+  </Settings>
+  <ShowSettings>true</ShowSettings>
+</ManagedExtension>

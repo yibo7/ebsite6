@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>21</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/RobBuy.aspx</ParentUrl>
+  <FileName>RobBuy.ascx</FileName>
+  <PageName>限时抢购</PageName>
+  <ParentID>8bab1cba-435f-4314-b8ab-fa11893af8ad</ParentID>
+  <OrderID>3</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>447a9c27-b3bf-4a98-a9ae-f35502df1838</id>
+</ModulePageInfo>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>获取当前登录用户的主页-电脑版</Title>
+  <GetCode>&lt;%=EbSite.Base.Host.Instance.GetUserHomePage()%&gt;</GetCode>
+  <Author>EbSite</Author>
+  <Demo> /// &lt;summary&gt;
+        /// 获取当前登录用户的主页
+        /// &lt;/summary&gt;</Demo>
+  <id>6bdf8c7b-4f4b-439f-b41f-81c9499c281c</id>
+</TemMethodInfo>

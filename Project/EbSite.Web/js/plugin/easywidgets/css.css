@@ -1,0 +1,104 @@
+/*widget*/
+.widgetmain
+{
+	width:100%; margin-top:-15px;
+}
+.widget-place {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 33.3%;
+  height: auto;
+  list-style: none;
+  min-height: 350px;
+}
+
+
+.widget-placeholder {
+  color: #000;
+  margin: 1em;
+  background-color: #FFFCF2;
+  border: #ff0000 dotted 1px;
+}
+
+.widget {
+  margin: 1em;
+  border: #BFA6A6 solid 1px;
+}
+
+  .widget-header {
+    color: #000;
+    padding:3px;
+    font-weight:bold;
+    background-color: #ebebeb; 
+    height:20px; 
+    line-height:20px;
+    border: #fff solid 3px;  
+  }
+
+    .widget-header img {
+      border: none;
+      vertical-align: middle;
+      
+    }
+
+    .widget-menu 
+    {
+    	 float:right;
+    	 
+    }
+
+      .widget-menu a {
+        margin: 0 0 0 0.5em;
+      }
+
+  .widget-editbox {
+    
+    
+  }
+
+  .widget-content {
+    padding: 0.5em;
+    background-color:#FFF;
+    vertical-align:top;
+  }
+  .widget-content div
+  {
+  	 
+  	  
+  }
+  .divlist div
+  {
+  	 
+  	 text-align:left;
+  	 height:28px;
+  	 line-height:28px;
+  	 
+	background-attachment: scroll;
+	background-image: url(title.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	
+	background-position: 0px 8px;
+	clear: both;
+	padding-left: 15px;
+
+	border-bottom:dotted 1px #ccc;
+	
+	
+  	 
+  }
+  .divlist div a
+  {
+  	text-decoration:none;
+  }
+
+      #wcl
+      {
+      	width: 65%;
+      }
+      #wcr
+      {
+      	width: 35%;
+      }
+/*endwidgets*/

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>50</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/Promotions.aspx</ParentUrl>
+  <FileName>QuotaFreeAdd.ascx</FileName>
+  <PageName>满额免费用添加</PageName>
+  <ParentID>488df078-d362-4c1a-8519-5b9b8c31c6df</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>3ee079ef-44f0-4ddc-9d37-fe50e1f09589</id>
+</ModulePageInfo>

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D310DE9D-1313-4B2A-85C5-F93E1D5C1AC4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EbSite.Plugin.Payment</RootNamespace>
+    <AssemblyName>EbSite.Plugin.Payment</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\libbin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\libbin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="com.yeepay, Version=1.0.2882.23660, Culture=neutral, PublicKeyToken=a5166d3256541220">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\com.yeepay.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AliPay.cs" />
+    <Compile Include="AlipayPaymentBase.cs" />
+    <Compile Include="Alipay_Instant\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alipay_Instant_Year\Payment.cs" />
+    <Compile Include="Alipay_Standard\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alipay_Standard_YearNew\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alipay_Standard_Year\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bank\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bill99\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChinaBank\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="COD\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AlipayBankPay_ICBCB2C\Payment.cs" />
+    <Compile Include="AlipayBankPay_CMB\Payment.cs" />
+    <Compile Include="AlipayBankPay_CCB\Payment.cs" />
+    <Compile Include="AlipayBankPay_BOCB2C\Payment.cs" />
+    <Compile Include="AlipayBankPay_ABC\Payment.cs" />
+    <Compile Include="AlipayBankPay_COMM\Payment.cs" />
+    <Compile Include="AlipayBankPay_PSBCDEBIT\Payment.cs" />
+    <Compile Include="AlipayBankPay_CEBBANK\Payment.cs" />
+    <Compile Include="AlipayBankPay_SPDB\Payment.cs" />
+    <Compile Include="AlipayBankPay_GDB\Payment.cs" />
+    <Compile Include="AlipayBankPay_CITIC\Payment.cs" />
+    <Compile Include="AlipayBankPay_CIB\Payment.cs" />
+    <Compile Include="AlipayBankPay_SDB\Payment.cs" />
+    <Compile Include="AlipayBankPay_CMBC\Payment.cs" />
+    <Compile Include="AlipayBankPay_BJBANK\Payment.cs" />
+    <Compile Include="AlipayBankPay_HZCBB2C\Payment.cs" />
+    <Compile Include="AlipayBankPay_SHBANK\Payment.cs" />
+    <Compile Include="AlipayBankPay_BJRCB\Payment.cs" />
+    <Compile Include="AlipayBankPay_SPABANK\Payment.cs" />
+    <Compile Include="AlipayBankPay_FDB\Payment.cs" />
+    <Compile Include="AlipayBankPay_WZCBB2CDEBIT\Payment.cs" />
+    <Compile Include="AlipayBankPay_NBBANK\Payment.cs" />
+    <Compile Include="AlipayBankPay_ICBCBTB\Payment.cs" />
+    <Compile Include="AlipayBankPay_CCBBTB\Payment.cs" />
+    <Compile Include="AlipayBankPay_SPDBB2B\Payment.cs" />
+    <Compile Include="AlipayBankPay_ABCBTB\Payment.cs" />
+    <Compile Include="PayPal\Constant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PayPal\NVPCodec.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PayPal\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShopCard\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TenpayNew\Payment.cs" />
+    <Compile Include="Tenpay\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserCard\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Yeepay\Payment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

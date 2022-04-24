@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>31</Permission>
+  <ModuleID>4e0edb7e-1b30-41ad-9f74-d63c80458c35</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/wenda/data/Modules/ModuleList/Wenda/AdminPages/ImitatePost.aspx</ParentUrl>
+  <FileName>AddPost.ascx</FileName>
+  <PageName>模拟发帖管理目录重写</PageName>
+  <ParentID>ba911e1f-d1a7-474d-a9f5-885252dab15b</ParentID>
+  <OrderID>2</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>82fa4686-66a7-4731-b5a1-e4ca71fb7a7e</id>
+</ModulePageInfo>

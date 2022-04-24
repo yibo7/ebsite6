@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>6</Permission>
+  <ModuleID>b3eef4b1-6c2c-4528-9e15-ad33716238ce</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/bbs/data/Modules/ModuleList/bbs/AdminPages/ImitatePost.aspx</ParentUrl>
+  <FileName>ImitatePostUserAdd.ascx</FileName>
+  <PageName />
+  <ParentID>fb9b578d-2571-40d3-8c9a-53a00461eb52</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>400ac069-2b3d-4807-880d-e6c9ed8c8030</id>
+</ModulePageInfo>

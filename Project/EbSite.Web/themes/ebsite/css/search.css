@@ -1,0 +1,60 @@
+﻿.searchbannerbox{background-color:#F4F4F4;width: 100%; border-bottom: 1px solid #ccc;}
+.searchbanner{width:990px;margin: 0 auto;position:relative; text-align: left; width: 100%;padding-left: 10px;}
+.smalllogo{width:100%;height:103px; float:right; margin-left:20px; padding-right: 10px;}
+.searchbox{float: right; text-align: left; width: 70%; margin-top: -40px;}
+.searchbox #k{height:28px; line-height:28px; width: 390px;padding-left: 5px;}
+.searchbox #btnSearch{height:30px; line-height:30px; background: #C71212;border: 1px solid #8C0D0D;width: 80px; color: #fff;}
+.searchcount{background: #F2ECE6; height: 30px; line-height: 30px;padding-left: 20px;}
+.searchbox #ty{height:28px; line-height:28px;}
+
+.cbox{
+	width:100%;
+	
+}
+.cbox dt a
+{
+	color:#03F;
+	 text-decoration:underline;
+}
+.stitle{
+	height:35px;
+	line-height:35px;
+	background-color:#f9f4ee;
+}
+.lightkeyword{
+	font-weight:bold;
+	color:#F00;
+}
+.slist{
+
+}
+.slist dl{
+	display:block;
+	margin:12px auto 0px;
+	padding-bottom:8px;
+    padding-left: 20px;
+}
+.slist dl dt a{
+	line-height:27px;
+	font-size:14px;
+	letter-spacing:1px;
+	/*font-weight:bold;*/
+}
+.slist dl dd p{
+	line-height:19px;
+	color:#444;
+	font-size:14px;
+	margin-left:5px;
+}
+.slist dl dd span{
+	font-size:12px;
+	line-height:23px;
+	color:#390;
+}
+.slist dl dd a{
+	color:#777;
+	text-decoration:none
+}
+.slist dl dd a:hover{
+	color:#F30;
+}

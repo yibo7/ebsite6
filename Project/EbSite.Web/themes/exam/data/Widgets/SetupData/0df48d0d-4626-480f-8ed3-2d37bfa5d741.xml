@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="columns" Value="eb_NewsContent.id,eb_NewsContent.ClassName,eb_NewsContent.classid,eb_NewsContent.NewsTitle,eb_NewsContent.ContentInfo,eb_NewsContent.Advs,eb_NewsContent.ClassName,eb_NewsContent.SmallPic,eb_NewsContent.dayHits,eb_NewsContent.IsGood,eb_NewsContent.OrderID,eb_NewsContent.TitleStyle,eb_NewsContent.weekHits,eb_NewsContent.IsComment,eb_NewsContent.hits,eb_NewsContent.monthhits,eb_NewsContent.ContentTemID,eb_NewsContent.UserID,eb_NewsContent.UserNiName,eb_NewsContent.UserName,eb_NewsContent.Addtime,eb_NewsContent.HtmlName,eb_NewsContent.Annex1,eb_NewsContent.Annex2,eb_NewsContent.Annex3,eb_NewsContent.Annex4,eb_NewsContent.Annex5,eb_NewsContent.Annex6,eb_NewsContent.Annex7,eb_NewsContent.Annex8,eb_NewsContent.Annex9,eb_NewsContent.Annex10" />
+    <DictionaryEntry Key="sopage" Value="/searchcustom.aspx" />
+    <DictionaryEntry Key="tables" Value="eb_NewsContent" />
+    <DictionaryEntry Key="searchtype" Value="2" />
+    <DictionaryEntry Key="submittype" Value="submit" />
+    <DictionaryEntry Key="method" Value="post" />
+    <DictionaryEntry Key="submittextorimgurl" Value="" />
+    <DictionaryEntry Key="onsubmit" Value="" />
+    <DictionaryEntry Key="pagesize" Value="2" />
+    <DictionaryEntry Key="tem" Value="" />
+    <DictionaryEntry Key="target" Value="_blank" />
+    <DictionaryEntry Key="isnewswindow" Value="True" />
+    <DictionaryEntry Key="tableconfigs" Value="内容表|eb_NewsContent&#xD;&#xA;id,ClassName,classid,NewsTitle,ContentInfo,Advs,ClassName,SmallPic,dayHits,IsGood,OrderID,TitleStyle,weekHits,IsComment,hits,monthhits,ContentTemID,UserID,UserNiName,UserName,Addtime,HtmlName,Annex1,Annex2,Annex3,Annex4,Annex5,Annex6,Annex7,Annex8,Annex9,Annex10&#xD;&#xA;分类表|eb_NewsClass&#xD;&#xA;id,ClassName,Info,monthhits,SubClassModelID,ListTemID,TitleStyle,SeoKeyWord,SubDefaultContentModelID,ClassModelID,SeoTitle,SeoDescription,SubDefaultContentTemID,ContentModelID,hits,OutLike,SubClassAddName,SubIsCanAddSub,ContentTemID,dayHits,IsCanAddContent,SubClassTemID,SubIsCanAddContent,ClassTemID,weekHits,IsCanAddSub,Annex1,Annex2,Annex3,Annex4,Annex5,Annex6,Annex7,Annex8" />
+    <DictionaryEntry Key="tablenames" Value="eb_NewsContent" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

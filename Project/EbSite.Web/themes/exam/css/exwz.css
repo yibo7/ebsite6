@@ -1,0 +1,117 @@
+﻿.exquan{ border:1px solid #6495ed; border-bottom:2px;  width:990px;}
+.sbian{ width:990px;  margin-left:0px;}
+.exsj{  background-image:url(exwz/exam1.png);  background-position:0px -90px; background-repeat:no-repeat; width:25px; height:25px; margin-left:25px;/* border:1px solid #F00;*/margin-top:6px; }
+.exji{   background-image:url(exwz/exam1.png);background-repeat:no-repeat;background-position:0px -40px;  width:990px; height:36px;  margin-left:0px}
+.exti{width:990px;  }
+/**.time{    width:258px; height:36px; text-align:center; color:Green; font-size:15px;margin-left:-35px;  }*/
+.exxia{  margin-left:185px; width:14px; height:36px; margin-top:-31px; background-image:url(exwz/exam1.png);background-repeat:no-repeat;background-position:-182px -88px;}
+.exjuan{ margin-left:200px;margin-top:-36px; height:36px; background-image:url(exwz/exam1.png);}
+.exks{ width:19px; margin-left:0px; height:35px;  background-image:url(exwz/exam1.png);  background-position:-182px -141px;}
+.exda{margin-left:19px; height:38; margin-top:-38px; text-align:center;}
+.exjs{ float:left;  height:36px;line-height:36px;  }
+
+
+
+
+li a{  margin-left:20px;}
+
+.exkj{ font-size:x-large;  color:#F00; text-align:center; margin-top:20px;}
+.exst{ color:#AAAAAA ; text-align:center;  }
+.exxz{ text-align:center; }
+
+.exwei{ width:940px; text-align:center;  }
+.exgong p{ margin-top:5px; margin-bottom:8px; height:20px;}
+
+.xia{ background:url(exwz/exam1.png);background-repeat:no-repeat;background-position:0px -838px; color:#FF8800; width:100px; height:30px;font-weight:bold; }
+.xia1{ background:url(exwz/exam1.png);background-repeat:no-repeat;background-position:0px -869px; color:#FF8800;  width:100px; height:30px;font-weight:bold;  }
+
+.exzdc{ float:left; border-bottom: 2px solid;  border-bottom-color:#0066FF;   margin-bottom:-2px;}
+.xuanz1{ border:0px solid #F00; background:url(exwz/exam1.png); background-repeat:no-repeat;background-position:0px -485px; width:100px; height:31px; }
+
+.xuanz{height:31px; background:url("exwz/exam1.png"); width:100px; background-position:0px -2px;}
+.xuanz2{ border:1px solid #FF8800;width:100px; height:31px;background-position:0px -2px;}
+.exshuom{ border:1px solid #DDDDDD ; height:100px; width:800px; margin-left:90px; margin-bottom:5px;}
+.biaot{ margin-left:160px; margin-top:20px;  margin-bottom:10px;  }
+table td{ text-align:left; width:200px; margin-left:80px; margin-top:40px; height:20px;}
+.shuo{ position:absolute; margin-left:-80px; margin-top:-28px; width:50px; height:30px; background-color:#FFFFFF;}
+.ding{ height:30px; border:0px solid #F00;}
+.ding2{ height:35px; border:0px solid #F00;}
+.exzan{ color:Green;}
+.exzan1{ color:Yellow;}
+.excuo{ float:right; margin-top:-20px; margin-right:40px;}
+.exbiao{ color:Green;}
+
+/*下面重新写的*/
+.excbiao{ border-top:3px solid #0b5b98; width:940px; height:50px;   margin-left:25px; margin-right:25px;  height:55px ;  line-height:22px; background-color:#CCEEFF;}
+.excbiao1{ width:940px; height:100%;  margin-left:25px;  }
+.excbiao2{ width:940px; height:100%;  margin-left:25px;  border:1px solid #6495ED  ; }
+.excbiao7{ width:940px; height:100%;  margin-left:25px; }
+.excbiaozj{ width:90%; float:left; margin-left:20px; margin-left:5%; margin-top:2%;}  
+.excdaan{ margin-left:20px; font-size:12px; text-indent: 2em; font-family:"微软雅黑"; height:35px;line-height:20px;}
+li{ float:left;}
+.excan{ width:67px; height:30px; background:url(exwz/exam1.png);background-repeat:no-repeat;background-position:0px -422px; background-color:transparent;border:0px;margin-left:1%; }
+.excan1{ width:67px; height:30px; background:url(exwz/exam1.png);background-repeat:no-repeat;background-position:0px -615px; background-color:transparent;border:0px;margin-left:1%; }
+.excan2{ width:67px; height:30px; background:url(exwz/exam1.png);background-repeat:no-repeat;background-position:-74px -422px; background-color:transparent;border:0px;margin-left:1%; }
+
+.excbeij{  height:30px;background-color:#DDDDDD; margin-bottom:5px; float:right;}
+.excbiaoj{ float:right; margin-top:5px;}
+.excjiucuo{ float:right;}
+.excxjiucuo{ background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:-184px -658px; text-decoration:none; text-align:center; height:35px; line-height:35px; padding-left:20px;}
+.shang{  width:100px; height:31px; color:#666;  font-weight:bold}
+
+
+.shang{ background:url(exwz/exam1.png);background-repeat:no-repeat;background-position:0px -644px;}
+.tt{ width:148px; height:40px; background:url(exwz/exam1.png);background-repeat:no-repeat;background-position:0px -526px; background-color:transparent;border:0px;}
+.tt1{ width:148px; height:40px; background:url(exwz/exam1.png);background-repeat:no-repeat;background-position:0px -572px; background-color:transparent;border:0px;}
+
+.hh{ color:#6495ED;width:940px; height:3px; }
+
+.zan{ color:#6495ED;  background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:-184px -304px; text-decoration:none; text-align:center; height:35px; line-height:35px; padding-left:20px; }
+.zan1{ color:#FF8800; background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:-184px -304px; text-decoration:none; text-align:center; height:35px; line-height:35px; padding-left:20px; }
+
+.exxux{width:940px;border-bottom:1px dashed #6495ED;}
+
+/* 字体缩进**/
+.excdi{ text-indent: 2em;}
+.c{ color:#666;  float:left; font-family:"微软雅黑"; font-size:14px; line-height:30px; text-align:left; vertical-align:50%}
+.excanniu{ font-size:14px; line-height:28px; text-align:left;}
+.exren{ font-size:14px; color:#6495ED;}
+.exxuhao{ color:Red; font-size:13px;}
+.exdi{ font-size:12px;}
+.exding{ height:20px; }
+.exgg{ font-size:16px; color:Red;}
+.exgong p{ color:#666; font-family:"微软雅黑"; font-size:14px;}
+.extimu{text-indent: 4em; font-size:13px;font-family:"微软雅黑";color:#666; line-height:20px; margin-bottom:5px; margin-top:10px;}
+/* 头部**/
+.extou{ width:990px;  background:url(exwz/exam1.png); background-position:0px 1px; background-repeat:repeat-x;}
+.tm1{  width:210px; height:39px; background:url(exwz/exam1.png); background-position:0px -38px; float:left;}
+.time{   width:30px; height:30px;  background:url(exwz/exam1.png); background-repeat:no-repeat;background-position:0px -86px;  margin-top:5px; margin-left:3px;}
+.exshijian{  margin-top:-25px;  width:150px; margin-left:35px; font-size:15px;  }
+.exxsj{color:#52b20c;}
+.kuang{ width:18px; background:url(exwz/exam1.png); background-position:-180px -88px; background-repeat:no-repeat; height:39px; float:right; margin-top:-32px;}
+.exshiti{font-family:"微软雅黑"; font-size:14px; color:Red; }
+.juan{ background:url(exwz/exam1.png);background-position:-176px -140px; background-repeat:no-repeat; display:inherit; width:auto; padding-left:28px; line-height:36px; float:left;font-family:"微软雅黑";  }
+.exjisuan{ height:39px;  width:50%;  float:right;}
+.exjisuan ul{ float:right;}
+.exjisuan ul li a{text-decoration:none; }
+.ex1{  background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:2px -146px; line-height:26px; height:26px;  margin-top:5px; border:#b3b3b3 1px solid;   margin-right:8px;  }
+.ex2{ background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:-184px -257px;line-height:26px; height:26px;   margin-top:5px; border:#b3b3b3 1px solid; margin-right:8px;}
+.ex3{  background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:-182px -229px; line-height:26px; height:26px;   margin-top:5px; border:#b3b3b3 1px solid;  margin-right:8px; }
+.ex4{ background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:-98px -175px;line-height:26px; height:26px;  margin-top:5px; border:#b3b3b3 1px solid; margin-right:8px;}
+.ex5{  background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:-185px -198px; line-height:26px; height:26px; margin-top:5px; border:#b3b3b3 1px solid;  margin-right:8px; }
+.ex6{ background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:-0px -307px;line-height:26px; height:26px; color:#333333;   margin-top:5px; border:#b3b3b3 1px solid;  margin-left:8px; width:79px;margin-right:8px; }
+.ex1-1{  background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:-99px -146px;  line-height:26px; height:26px;  margin-top:5px;  border:#FFAA33 1px solid;   margin-right:8px;  }
+.ex2-2{ background:url(exwz/exam1.png); background-repeat:no-repeat; background-position: 5px -257px;  line-height:26px; height:26px;   margin-top:5px; border:#FFAA33 1px solid; margin-right:8px;   }
+.ex3-3{ background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:4px -229px;  line-height:26px; height:26px;    margin-top:5px;border:#FFAA33 1px solid;  margin-right:8px; }
+.ex4-4{ background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:-98px -206px;   line-height:26px; height:26px;  margin-top:5px;  border:#FFAA33 1px solid; margin-right:8px; } 
+.ex5-5{ background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:7px -198px;  line-height:26px; height:26px;   margin-top:5px; border:#FFAA33 1px solid;  margin-right:8px; }
+.ex6-6{ background:url(exwz/exam1.png); background-repeat:no-repeat; background-position:-79px -307px;    line-height:26px; height:26px;    margin-top:5px;border:#FFAA33 1px solid;  margin-left:8px; width:79px;margin-right:8px;  }
+.a{ color:Black;}
+.aa{ color:#FFAA33;}
+.beij{ height:30px; display:block; border:1px solid red;}
+.beij a{ margin-bottom:10px;}
+.excbiaoj{ text-align:center; height:36px; line-height:36px; margin-top:-4px;}
+.exxux{ margin-bottom:20px;}
+.prov{ background-color:#FFAA33 ; width:90%; float:left; margin-left:20px; margin-left:5%; margin-top:2%; }
+                                     
+                                                                                                                                                                 

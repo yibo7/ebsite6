@@ -1,0 +1,323 @@
+﻿/*.link-addtd td
+{
+    height:30px;
+} */
+
+@import url("usercss.css");
+body{
+	margin:0 auto;	
+	text-align:center;
+	
+	font-size:12px;
+}
+#top{
+	width:100%;
+	height:29px;
+	background-image:url(firsttop.png);
+	background-repeat:repeat-x;
+	margin-left: auto;
+    margin-right: auto; 
+}
+#content{	
+	width:960px;
+	height:auto;    /* 高度让它自适应*/
+	text-align:left;
+	margin-left: auto;
+    margin-right: auto; 
+}
+#bottom{
+	width:960px;
+	height:50px;
+	/*border:1px solid maroon; */
+	text-align:center;
+	margin-left: auto;	
+    margin-right: auto;
+    margin-top:2px;
+    background:#fe611d;
+}
+#a {
+ width:221; 
+float:left; 
+background:#e6eae4;
+height:690px;    /*这里高度暂时给值*/
+}
+#b {
+ width:49%;
+float:left; 
+margin-left:5px; 
+background:#e6eae4;
+height:690px;   /*这里高度暂时给值*/
+} 
+#c {
+ width:251; 
+float:right; 
+background:#e6eae4;
+height:690px;   /*这里高度暂时给值*/
+}
+ 
+ #contenttop{
+	height:86px;
+	width:100%;
+}
+#contenttopleft
+{
+    background-image:url(logo.png);
+    background-repeat:no-repeat;
+    width:273px;
+    height:68px;
+    float:left;
+}
+ #contentmenu{
+	height:41px;
+	width:100%;
+	/*border:1px solid red;*/
+}
+#contentright
+{
+    width:600px;
+    height:40px;
+    float:right;
+    background:white;
+    vertical-align:middle;
+    margin-top:30px;
+    border:solid 1px #b0b1af;
+    /*border: solid 1px #94979c */
+}
+.topinput
+{
+    width:296px;
+    height:23px;
+    border:solid 1px red;    
+    margin-left:15px;
+    /*vertical-align:middle;*/
+}
+.topinput2
+{
+    width:116px;
+    height:28px;
+    /*margin-top:8px;
+    margin-left:10px;*/
+    /*background:#d4551e;*/
+    border:0px;
+    float:right;
+    background-image:url(selectpic.png);
+    /*vertical-align:middle;*/
+    font-size:14px;
+    font-weight:bold;
+    color:White;
+    vertical-align:middle;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+
+}
+.topinput3
+{
+    width:116px;
+    height:28px;
+    /*margin-top:8px;
+    margin-left:20px; */
+    /*background:#d18518;*/
+    border:0px;
+    background-image:url(askpic.png);
+    /*vertical-align:middle;*/
+    font-size:14px;
+    font-weight:bold;
+    color:White;
+}
+#buttondiv1 {
+ width:296px; 
+float:left; 
+height:30px;  
+margin-top:7px;
+}
+#buttondiv2 {
+ width:130px;
+float:left; 
+margin-left:20px; 
+height:30px;  
+/*background:yellow;*/
+margin-top:7px;
+} 
+#buttondiv3 {
+ width:120px; 
+float:right;
+/*margin-right:90px; */
+height:30px;   
+/*background:yellow; */
+margin-top:7px;
+}
+#menuleft {
+ width:16px; 
+float:left; 
+background:#f93;
+height:38px;    /*这里高度暂时给值*/
+}
+#menumiddle {
+ width:935px;
+float:left; 
+background-image:url(center.png);
+background-repeat:repeat-x;
+height:41px;
+overflow:hidden;
+margin-left:-3px;
+
+/*height:38px;   这里高度暂时给值*/
+} 
+#menuright {
+ 
+float:right; 
+background:#ccc;
+height:38px;   /*这里高度暂时给值*/
+
+}
+#menulefttop
+{
+    width:16px;
+    height:9px;
+    background-image:url(lefttop.png);
+}
+#menuleftcenter
+{
+    width:16px;
+    height:15px;
+    background-image:url(leftcenter.png);
+}
+#menuleftbottom
+{
+    width:16px;
+    height:17px;
+    background-image:url(leftbottom.png);
+}
+#menurightttop
+{
+    width:12px;
+    height:11px;
+    background-image:url(righttop.png);
+}
+#menurighttcenter
+{
+    width:12px;
+    height:15px;
+    background-image:url(rightcenter2.png);
+}
+#menurighttbottom
+{
+    width:12px;
+    height:15px;
+    float:right;
+    background-image:url(rightbottom2.png);
+}
+ #contentbottom{	
+	width:100%;
+	/*border:1px solid green;	*/
+	height:690px;
+	margin-top:2px;
+}
+#a1
+{
+    border:solid 1px #ffd29f;
+    width:220px;
+    height:140px;
+    background:white;
+}
+#a2
+{
+    border:solid 1px #ffd29f;
+    width:220px;
+    height:540px;
+    background:white;
+    margin-top:4px;
+}
+#b1
+{
+    border:solid 1px #ffd29f;
+    width:504px;
+    height:175px;
+    background:white;
+}
+#b2
+{
+    border:solid 1px #ffd29f;
+    width:504px;
+    height:275px;
+    background:white;
+    margin-top:4px;
+}
+#b3
+{
+    border:solid 1px #ffd29f;
+    width:504px;
+    height:225px;
+    background:white;
+    margin-top:4px;
+}
+#c1
+{
+    border:solid 1px #ffd29f;
+    width:220px;
+    height:140px;
+    background:white;
+}
+#c2
+{
+    border:solid 1px #ffd29f;
+    width:220px;
+    height:140px;
+    background:white;
+    margin-top:4px;
+}
+#c3
+{
+    border:solid 1px #ffd29f;
+    width:220px;
+    height:183px;
+    background:white;
+    margin-top:4px;
+}
+#c4
+{
+    border:solid 1px #ffd29f;
+    width:220px;
+    height:205px;
+    background:white;
+    margin-top:4px;
+}
+.a1title
+{
+    border-bottom:1px solid #fef1e9;
+    background:#ffffff;
+    width:220px;
+    height:38px;
+    vertical-align:middle;
+    line-height:38px;    
+}
+.b1title
+{
+    border-bottom:1px solid #fef1e9;
+    background:#ffffff;
+    width:503px;
+    height:38px;
+    vertical-align:middle;
+    line-height:38px;    
+}
+.sico
+{
+    background-image:url(smallico.png);
+    background-repeat:no-repeat;    
+    background-position:left;
+    width:3px;
+    height:13px;
+    margin-left:10px;
+    float:left;
+    margin-top:12px;
+    padding-right:5px;
+}
+.contentmagin
+{
+    margin-left:5px;
+    margin-top:5px;
+}
+.test
+{
+    font-size:14px;
+    font-weight:bold;
+}

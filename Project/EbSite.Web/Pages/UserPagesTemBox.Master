@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserPagesTemBox.master.cs" Inherits="EbSite.Web.Pages.UserPagesTemBox" %>
+<%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1"  runat="server" >
+    <title>通用</title>
+</head>
+
+<body >
+ <div  style=" background-color:#ffffff; text-align:left;">
+    <form id="form1" runat="server">
+   
+            <div style=" padding-bottom:10px;">
+            <XS:Notes ID="ntTips"  Visible="false"    runat=server />
+            </div>            
+            <div >                
+                <asp:ContentPlaceHolder ID="ctphBody" runat="server"/>
+            </div>
+    
+    </form>
+</div>
+</body>
+</html>

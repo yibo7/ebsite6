@@ -1,0 +1,76 @@
+﻿一.版块分类，由ebsite分类功能完成，安装时生成分类模型,模型内容有:
+   1.版块名称--ClassName
+   2.版主,用逗号分开--Annex5
+   3.可查看的用户组ID--Annex9
+   4.版块图标--Annex7
+   5.排序ID--OrderID
+   6.帖子总条数--Annex11
+   7.主题总数--Annex12
+   8.回复总条数--Annex13
+   9.今日帖子的总数量--Annex14
+   10.最后发表或回复主题的ID--Annex1
+   11.最后发表或回复主题的标题--Annex4
+   12.最后发表或回复主题人用户ID--Annex15
+   13.最后发表或回复主题人姓名--Annex2
+   14.最后发表或回复时间日期--Annex3
+   15.是否为分类版块--IsCanAddContent 分类版块要有子分类，不能发表主题
+
+二.帖子表,由ebsite内容功能完成，安装时生成内容模型,模型内容有:
+   1.帖子标题[NewsTitle]
+   2.帖子内容[ContentInfo]   
+   3.置顶排序[OrderID] 实现:获取当前分类下的max orderid+1;  
+   4.是否推荐(是否置顶)[IsGood] 
+   5.标题样式[titlestyle],要发布帖子时可以预置一些样式, 可以是这样的格式:<b>{#标题#}</b>,然后展示时替换   
+   7.回复总条数[CommentNum]
+   6.发帖人ip[Annex1]
+   17.最后回复人的昵称[Annex2] 
+   16.最后回复人的ID[Annex3] 
+   18.最后回复时间[AddTime]
+    8.帖子的发表时间[Annex4] 
+   8.帖子标题颜色[Annex5] 
+   8.帖子操人用户ID[Annex6]
+   12.最后修改人的Id[Annex7]
+   8.帖子标题字体[Annex8] 0取消设置 1标题加粗 2标题斜体
+   7.操作日志[Annex10] 比如，帖子由管理员移到**分类，由**标火，**送花...
+   7.支持人数[Annex11]
+   8.反对人数[Annex12]
+   8.帖子标记[Annex13]0为没有标记 1为精华贴，2.加火，3.标旗，4.加顶,5.红星,6.绿星,7.蓝监,8.送花
+   3.查看用户的级别[Annex14]
+   3.所有版块固定[Annex15] 0否(分类置顶)，1是,只有IsGood为true时启用
+    
+   11.是否开户投票[Annex19]
+   4.是否回复才能查看[20]
+  
+    4.是否有人回复给我Email提醒[21] 
+   
+   14.帖子的缩略图,也可以通过这个来判断是否为图片帖子[SmallPic]
+   15.是否通过审核[IsAuditing]
+   
+   ---------------扩展表---------------------
+三.帖子扩展表--PostSetting(放弃，不使用)
+	1.帖子ID[ContentID  int]
+	2.查看积分[Credits int]
+	3.查看用户的级别[UserLeval int]
+	4.是否回复才能查看[IsReply bool]
+	5.是否精华帖[IsCream bool]
+	6.所有版块固定[AllTop int] 实现思路:将些改这true,取所有内容的最大 max AllTop+1,此类帖子单独调用固定列表
+	7.支持人数[IsGoodCount   int]
+        8.反对人数[IsBadCount   int]
+	9.所有版块固定操作时间[AllTopDateTime datetime]
+	10.所有版块固定操作人ID[AllTopUserID  int]
+	11.是否开户投票[tag int]
+四.帖子回复表 TopicReplies(此表只是一个模板表，在创建分类的时候复制一份关联的回复表，所以此表无数据，但不能删除)
+      1.帖子ID[TopicID int]
+      2.发表人ID[UserID  int]
+      3.发表人帐号名称[UserName  varchar(200)]
+      4.支持人数[IsGoodCount   int]
+      5.反对人数[IsBadCount   int]
+      6.是否已经删除[DeleteFlag  int]
+      7.是否已经审核[AuditFlag   int]
+      8.回帖内容[ReplyContent  ntext]
+      9.是否引用回复[ReferenceFlag   int]
+      10.引用内容[ReferenceContent  ntext]
+      11.回复时间[CreatedTime   datetime]
+      12.回复人IP[CreatedIP  varchar(50)]
+      13.更新时间[UpdatedTime  datetime]
+ 五.模拟发帖用户imitateuser

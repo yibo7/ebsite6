@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="savefolder" Value="smallimg" />
+    <DictionaryEntry Key="extdes" Value="请选择图片" />
+    <DictionaryEntry Key="txtheight" Value="18" />
+    <DictionaryEntry Key="uploadmodel" Value="2" />
+    <DictionaryEntry Key="txtallowsize" Value="500" />
+    <DictionaryEntry Key="txtwidth" Value="300" />
+    <DictionaryEntry Key="txtallowtype" Value="bmp,jpge,jpg,gif" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

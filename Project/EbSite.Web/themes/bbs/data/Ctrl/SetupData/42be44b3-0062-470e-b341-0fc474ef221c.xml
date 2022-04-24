@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="savefolder" Value="Content" />
+    <DictionaryEntry Key="extmedia" Value="wmv,aiv" />
+    <DictionaryEntry Key="textimg" Value="gif,jpg,png" />
+    <DictionaryEntry Key="site" Value="12" />
+    <DictionaryEntry Key="cbdownfile" Value="True" />
+    <DictionaryEntry Key="extlink" Value="rar,txt,png,jpg" />
+    <DictionaryEntry Key="txtwidth" Value="600" />
+    <DictionaryEntry Key="txtheight" Value="300" />
+    <DictionaryEntry Key="extimg" Value="png,jpg,gif" />
+    <DictionaryEntry Key="size" Value="1024" />
+    <DictionaryEntry Key="extflash" Value="swf,fv" />
+    <DictionaryEntry Key="cbpicaddmak" Value="True" />
+    <DictionaryEntry Key="drpboxtype" Value="3" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="speed" Value="4" />
+    <DictionaryEntry Key="heith" Value="250" />
+    <DictionaryEntry Key="width" Value="785" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

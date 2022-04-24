@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>9</Permission>
+  <ModuleID>8961c5b2-43f2-4298-8145-f0965aff70a0</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/ebsite/data/Modules/ModuleList/UserBaseInfo/UserPages/MFavorite.aspx</ParentUrl>
+  <FileName>List.ascx</FileName>
+  <PageName>我的收藏</PageName>
+  <ParentID>aca406b7-8998-4396-8c9a-a1a881286aa0</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>13722dfd-79d6-452f-a050-9c98e0d7814b</id>
+</ModulePageInfo>

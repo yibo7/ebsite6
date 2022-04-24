@@ -1,0 +1,11 @@
+using System.Reflection;
+[assembly: AssemblyTitle("EbSite.IDAL")]
+[assembly: AssemblyDescription("EbSite.IDAL")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("EbSite.IDAL")]
+[assembly: AssemblyProduct("EbSite.IDAL")]
+[assembly: AssemblyCopyright("Copyright (C) Maticsoft 2004-2008")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+[assembly: AssemblyVersion(EbSite.Base.AppStartInit.ASSEMBLY_VERSION)]
+[assembly: AssemblyFileVersion(EbSite.Base.AppStartInit.ASSEMBLY_VERSION)]

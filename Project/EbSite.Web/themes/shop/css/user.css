@@ -1,0 +1,121 @@
+﻿/*登录*/
+
+.usercontainer{ width:990px; margin:0 auto}
+.top_part2{  width:100%; background:url(user/topbnr.png) no-repeat right;height:103px; float:right; margin-left:20px; padding-right: 10px;}
+.bmlogo{ width:220px; float:left;margin-right: 5px;}
+.logo{ float:left;line-height:103px; text-align:center; margin-top:10px; margin-left:10px;}
+.logofont{font-size:24px; line-height:50px; font-family:"微软雅黑";color:#666666; margin-top:18px;}
+.logofont span{ color:#FDB13E}
+.logofnt{ margin-left:220px; color:#888888;}
+
+.login_link{ float:right;}
+.login_link a{ padding-right:20px; font-size:14px; color:#984343; }
+.clear{ clear:both}
+.container2{ background:url(user/dl_bg.jpg) repeat-x}
+/*login reg*/
+.login{ width:840px; margin:0px auto;}
+.login_title{ height:35px; background:url(user/xu_1.jpg) repeat-x bottom}
+
+.dl_main{ width:574px; float:left; height:300px; border-right:#CCCCCC 1px dashed; margin-top:30px; margin-bottom:20px;}
+.xl_main{ width:989px;height:300px;  margin-bottom:20px; border:#CCCCCC 1px dashed; float:center; background:#FFFFFF}
+.qita{ width:260px; float:right}
+.usercontainer2{ background:url(user/dl_bg.jpg) repeat-x}
+.inp_name{ height:32px; width:212px; border:0; background:url(user/fm_bg.jpg) no-repeat; line-height:32px; padding:0 5px; color:#CCCCCC;}
+
+.inp_pwd{ height:32px; width:212px; border:0; background:url(user/fm_bg2.jpg) no-repeat; line-height:32px; padding:0 5px;}
+.inp_yzm{ height:32px; width:120px; border:0; background:url(user/yzm_bg.jpg) no-repeat; line-height:32px; padding:0 5px;}
+.inp_yzm2{ height:36px; width:120px; border:0; background:url(user/yzm2.gif) no-repeat; line-height:38px; padding:0 5px;}
+.inp_info{height:224px; width:527px;background:url(user/fm_info.jpg) no-repeat;}
+
+
+.reg1{ border:1px #CCCCCC dashed ; height:200px; width:500px; float:left; margin-top:35px; background-color:#F7F7F7}
+.reg1 li{float:left;width:245px; text-align:center; margin-top:60px;}
+
+/*控制面板*/
+.usertop{ background:url(user/u-topbg.png); height:31px; line-height:31px;}
+.u_leftptitile
+{
+    background:url(user/user.png) no-repeat 0 0;width:100%;height:33px;background-position:0 0;
+    text-align:left; color:#fff; font-size:14px; font-weight:bold; line-height:33px; padding-left:10px;
+ }
+ .u_leftptitile a{  color:#FFD1D1; padding-right:10px; padding-left:12px; font-size:12px; font-weight:normal;}
+.u_lefttitile
+{
+    margin-top:-2px;
+    background:url(user/user.png) no-repeat 0 0;width:100%;height:31px;background-position:-2px -38px;
+    text-align:left; font-size:14px; font-weight:bold; line-height:33px; padding-left:10px;
+    }
+.u_leftlist{ width:148px; border:1px solid #E6E6E6; margin-top:-2px; padding-bottom:10px;}
+.u_leftlist div{ text-align:left; padding-left:10px;padding-top:10px;}
+.UserRight_Title{ text-align:left; padding-left:10px; font-weight:bold; font-size:14px; width:98%; height:33px; line-height:33px; 
+                 border-bottom:2px solid #C30000;border-top:1px solid #E6E6E6;border-left:1px solid #E6E6E6;border-right:1px solid #E6E6E6;
+                 }
+td{ padding:5px;}
+.UserPhoto{ border:1px solid #E9E8E8; background:#F5F4F4; width:193px; height:220px;}
+.UserPhoto img{ width:165px; margin-top:10px;  }
+.UserPhoto div{ margin-top:8px;
+                background:url(../../pagebutton.png)  repeat-x -1px -431px;
+                    height:21px; line-height:21px; width:80px; border-left:1px solid #C9A032;border-top:1px solid #C9A032;border-right:1px solid #C9A032;
+                    
+                    margin-left:50px;
+                 }
+
+.UserGroup{background:url(images/btns.png) no-repeat 0 0;width:198px;height:39px; line-height:39px; font-size:14px; background-position:-12px -254px; margin-top:10px;}
+.IndexUserInfo{ vertical-align:top; text-align:left; }
+.IndexUserInfo div{ padding:10px;font-size:14px;}
+.IndexUserInfo div a{ color:#ccc;}
+.IndexUserInfo div span{ color:#ff0000;}
+
+.newmsgtitle{ padding:8px; text-align:left;}
+.newmsgtitleline{background:url(images/btns.png) no-repeat 0 0;width:343px;height:5px;background-position:-23px -304px;}
+.newmsgcontent{ width:343px;}
+.newmsgcontent div{ padding:5px; text-align:left;}
+.newmsgcontent span{ color:#ccc;}
+.newmsgtitle a{ color:#ccc;}
+
+.votelist a{ display: block;line-height: 30px;}
+
+#divVoteItems div{ height: 30px;line-height: 30px;}
+
+.uhomebox-l{float: left; width: 75%; text-align: left;background-color:#FFFFFF;border:1px solid #ccc;padding-bottom: 10px;}
+.uhomebox-l .title{border-bottom: 1px dotted #ccc; width: 100%; line-height: 30px; font-size: 14px; font-weight: bold;text-indent: 10px;background: #FAFAFA;}
+.uhomebox-r{float: right;width:200px;background-color:#FFFFFF;border:1px solid #ccc;padding-bottom: 10px;}
+.uhomebox-r .title{border-bottom: 1px solid #E6E6E6;background: #F2F2F2;padding-left: 8px;font-size: 14px;height: 28px;line-height: 28px;margin-top: 10px; }
+
+.UserContentInfo li{ list-style: none;padding: 8px;}
+.userhomeinfo{ padding: 8px;}
+
+.userlist li{ float: left;list-style: none;margin: 5px; }
+.userlist img{ width: 60px;}
+.userctrico{ margin-top: 10px;margin-bottom: 10px;}
+.userctrico span{ padding: 10px;}
+.userctrico span a{line-height: 10px;}
+
+.toolbar{ border-bottom:1px solid #E0E0E0; padding:3px;}
+#topLinks{ float:left;}
+#login_info{ float:right;}
+
+/*一问一答 样式 begin*/
+.all2pic{background:url(images/all.png) no-repeat 0 0;}
+.all3pic{background:url(user/all2.png) no-repeat 0 0;}
+.msfbtn{width:82px;height:30px;background-position:-66px 0;float:right; margin-right:5px; margin-bottom:20px;}
+.ifarea{ padding:3px; padding-right:10px; width:auto;}
+.ifline2{ border:#CCCCCC 1px solid; width:100%; height:115px; margin-bottom:10px; }
+.iflobtn{width:61px;height:27px;background-position:-5px -300px; float:left;}
+.inpborw{ border:#CCCCCC 1px solid; color:#CCCCCC; width:133px; height:23px; line-height:23px; padding-left:0px; margin-left:0px; color:Blue;}
+.iftab2{ background:#F1F4F7; width:auto;}
+.iftab2 li{ text-align:center; font-size:14px; font-weight:bold; color:#666666; line-height:35px;}
+.iftab3{ margin-top:15px;}
+.iftab3 li{float:left; margin-right:10px; line-height:30px;}
+.iftab3 a{ color:#1E50A2;}
+
+.ifzx{ overflow:hidden; margin-top:20px; margin-bottom:20px; padding-left:10px;}
+.ifzx li{ width:auto;}
+.ifzx li dd{ float:left; width:85%; line-height:25px;}
+.ifzx li dt{ float:right;width:10%; color:#666666}
+.clear{ clear:both}
+.ifline{ border-bottom:#D3D3D3 1px solid;}
+
+
+.moreque{width:230px;height:41px;margin-top:20px; margin-bottom:20px; margin-left:40%;background:url( user/more.png) no-repeat 0 0;}
+/*一问一答 样式 end*/

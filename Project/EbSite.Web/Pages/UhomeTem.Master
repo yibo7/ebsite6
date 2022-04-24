@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UhomeTem.Master.cs" Inherits="EbSite.Web.Pages.UhomeTem" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    
+<div id="topbar" style="left: 0px; top: 0px; position: absolute"></div>
+<div align="right" class="menu">
+    <div id="duser" width=100%>
+        <nobr>
+          <%if (UserID > 0){%>
+          <a href="<%=UccUrl %>" ><%=UserNiName %></a>
+          (<a href="<%=IISPath %>LogOut.aspx" >退出</a>)
+             &nbsp;|&nbsp;
+            <a href="<%=UccUrl %>" >管理面板</a>
+          <%}else{%>
+
+             <a href="<%=LoginUrl %>" >登录</a>
+             &nbsp;|&nbsp;
+            <a href="<%=RegUrl %>" >注册</a>
+            &nbsp;|&nbsp;
+            <a href="<%=IISPath %>">首页</a>
+          <%}%>
+           
+        </nobr>
+    </div>
+</div>    
+                                                                                                                                                                                                                                                                  
+<div id="doc">
+<div id="nhdrwrap">
+    <div id="nhdrwrapinner">
+        <div id="nhdrwrapsizer">
+            <div class="title"><h1><%=HomeTitle%></h1><span>
+            <a href="<%=HomeUrl %>"><%=HomeUrl%></a>
+    
+            </span>
+            </div>
+            <div class="subtitle"><%=HomeDemo%></div>        
+             <div id="new_user_demo" align="center">
+ 
+             </div>
+        </div> 
+
+    <div id="tabs">
+        <ul>
+        <li class="tab spacer">&nbsp;</li>
+        <asp:Repeater ID="rpTabs" runat="server"  >
+            <ItemTemplate> 
+            <li class="tab unselectedtab_l">&nbsp;</li>
+            <li id="tab2_view" class="tab <%#GetCurrentCss(Eval("id")) %>" style="display:block" >
+            <span id="tab2_view_title">
+                  <a href="?tab=<%#Eval("id")%>"><%#Eval("TabName")%></a>
+            </span>
+            </li>
+            <li class="tab unselectedtab_r">&nbsp;</li>
+            </ItemTemplate>
+        </asp:Repeater>
+
+        <%if (UserID > 0){%>
+        <li onclick="AddSpaceTab()" class="tab addtab">
+            添加分类
+        </li>
+        <li class="tab" id="addstuff">更换皮肤&nbsp;&nbsp;|&nbsp;&nbsp;更换版式&nbsp;&nbsp;|&nbsp;&nbsp;添加部件</li>
+        <%}%>
+        
+        </ul>
+    </div>
+
+
+</div>
+</div>
+
+
+<div id="modules">
+
+      
+</div>
+</div>
+<div id="footer">
+    <div id="copyright">Powered by EbSite 2.0 Inc</div>
+</div>
+<%if (UserID > 0){%>
+<div id="divAddClass" title="添加分类" style=" display:none; padding:30px;">
+    分类名称:<input type="text" id="txtPlaceClassName" size="15" />
+    <input type="hidden" id="txtPlaceUserID" value="<%=CurrentUserID%>" />
+</div>
+<%}%>
+</body>
+</html>

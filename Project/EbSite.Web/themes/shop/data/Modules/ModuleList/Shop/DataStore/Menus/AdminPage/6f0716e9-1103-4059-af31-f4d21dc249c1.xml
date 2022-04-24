@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>63</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/ExportData.aspx</ParentUrl>
+  <FileName>paipaiout.ascx</FileName>
+  <PageName>导出拍拍数据包</PageName>
+  <ParentID>02250f53-79cc-43fd-ac7a-a4209ca04c4e</ParentID>
+  <OrderID>2</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>6f0716e9-1103-4059-af31-f4d21dc249c1</id>
+</ModulePageInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<OrderBoxInfo>
+  <Title>第五步输入配件描述</Title>
+  <Tips>请输入您要购买的配件名称,如倒车镜，发动机，杀车盘等等。</Tips>
+  <Items />
+  <DefaultParentClassID>0</DefaultParentClassID>
+  <OrderID>5</OrderID>
+  <StepType>100</StepType>
+  <Seltip>比如:发动机，变速箱</Seltip>
+  <Utem>我要购买的配件：#用户输入#</Utem>
+  <ValidationRule>0</ValidationRule>
+  <IsNullText>0</IsNullText>
+  <SoureTable>1</SoureTable>
+  <FieldName>partinfo</FieldName>
+  <CloseNum>3</CloseNum>
+  <id>8</id>
+</OrderBoxInfo>

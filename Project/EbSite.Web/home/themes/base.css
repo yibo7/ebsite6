@@ -1,0 +1,76 @@
+﻿body,div,ul,li,h1,h2,h3,h4,h5,h6,form,textarea,p,td{margin:0;padding:0;}
+img{border:0;}
+fieldset,img{border:0;}
+ol,ul{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+body{background-color:#fff;font:13px arial,sans-serif;*font-size:small;*font:x-small;}
+table{font-size:inherit;font:100%;}
+iframe{border:0px;padding:0px;margin:0px;}
+#nhdrwrapsizer{padding-top:5px;}
+#doc3{margin:auto;text-align:left;width:auto;font-size:100%;overflow:hidden;}
+#noscript_box{background-color:#fad163;}
+#nhdrwrapsizer{text-align:center;}
+#footerwrap{border-top:1px #7aa5d6 solid;padding-bottom:5px;}
+#footer_promos{text-align:center;line-height:19px;margin-top:20px;font-size:93%;}
+#tabs{height:24px;overflow:hidden;}
+#tabs ul{width:100%;}
+#tabs li.addtab{font-weight:normal;margin-right:-3px;padding-bottom:0px; color:#ff0000; font-size:12px; cursor:pointer}
+.tab{float:left;height:23px;line-height:21px;border-bottom:1px #258DC9 solid;list-style:none;}
+.selectedtab,.unselectedtab{cursor:hand;cursor:pointer;}
+.tab.spacer{width:8px;}
+.tab span{display:inline;padding-left:10px;padding-right:10px; padding-bottom:5px;}
+.selectedtab{font-weight:bold;background-color:#fff;border:1px #258DC9 solid;border-bottom:0px;border-bottom:none;}
+.unselectedtab{background-color:#F5FAFE;border:1px #258DC9 solid;height:22px;}
+.selectedtab_l,.selectedtab_r,.unselectedtab_l,.unselectedtab_r{width:2px;}
+.tab_hover{background-color:#7aa5d6;}
+#selecttheme{padding:0px;}
+#addstuff{font-weight:bold;text-align:right;padding-right:10px;line-height:21px;float:none; font-size:12px;}
+#addstuff .new,.tab .lf{padding-right:0px;}
+#addstuff span{padding:0px;}
+
+
+
+/*widgetcustom*/
+.widget 
+{
+    margin: 5px;
+}
+.widget-place {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 33.3%;
+  height: auto;
+  list-style: none;
+  min-height: 350px;
+}
+.widget-header
+  {
+    border: 0px; 
+    text-align:left;
+    no-repeat right top;
+  }
+  .widget-header img {
+      border: none;
+      vertical-align:middle;      
+      
+    }
+    .widget-menu 
+    {
+    	 float:right; 
+    }
+
+      .widget-menu a {
+        margin: 0 0 0 0.5em;
+      }
+
+
+
+#float-toptools
+{ 
+    clear:both;
+        background:url(toptoolsbg.png);
+       width:100%;height:33px;border:1px solid #C0DBF8;position:relative;top:0;
+       line-height:33px;
+}
+#float-toptools input{ margin-left:10px;}

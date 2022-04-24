@@ -1,0 +1,25 @@
+﻿
+.dropdown {outline:none;display:inline-block;*display:inline;}
+.dropdown h4{cursor:default; text-indent:5px; margin:0; padding:0;}
+.dropdown * {-moz-user-select:none;}
+.dropdown h4.over {}
+.dropdown div {display:block; /*fix bug*/}
+.dropdown ul{position:absolute;display:none;margin:0;padding:0;float:left;clear:both;}
+.dropdown ul li{text-indent:5px;margin:0;padding:0;list-style:none;display:block;cursor:default;}
+.dropdown ul li.over{}
+
+/* write you style here */
+/*.dropselectbox {background:#DDD url(selectBg.png) repeat-x left top;}*/
+
+.dropdown h4{ font:12px/21px Arial, Helvetica, sans-serif; background-image:url(images/all.png) no-repeat right center;width:237px;height:30px;background-position:-9px -127px; FLOAT: left;PADDING-TOP: 5px;margin-left:3px;}
+
+.dropselectbox{background:url(images/all.png) no-repeat 0 0;width:237px;height:35px;background-position:-9px -127px; FLOAT: none;PADDING-TOP: 5px;}
+
+
+.dropdown h4.over{border-color:#369; background-image:url(images/all.png) no-repeat right center;width:237px;height:28px;background-position:-9px -127px; FLOAT: left;PADDING-TOP: 5px; margin-left:3px;}
+.dropdown h4.current{border-color:#003;}
+.dropdown ul{border:1px solid #AAA; background:#FFF;overflow: auto; height: 220px; margin-left:1px; margin-top:10px;  }
+.dropdown ul li{background:#FFF;height:23px;font:400 12px/19px Arial, Helvetica, sans-serif; width:auto;  }
+.dropdown ul li.over{background:#369; color:#FFF;}
+
+

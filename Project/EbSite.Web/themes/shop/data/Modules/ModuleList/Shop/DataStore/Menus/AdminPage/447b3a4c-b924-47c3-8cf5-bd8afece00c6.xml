@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>99</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/RequestGroup.aspx</ParentUrl>
+  <FileName>RequestShow.ascx</FileName>
+  <PageName>求团购查看</PageName>
+  <ParentID>22e7c75d-e376-4119-bc86-df73cb27f579</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>447b3a4c-b924-47c3-8cf5-bd8afece00c6</id>
+</ModulePageInfo>

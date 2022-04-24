@@ -1,0 +1,22 @@
+﻿1. 限时抢购 分类页  /themes/shop/pages/list_rushbuy.aspx          mrushlist.aspx
+2 .团购 分类页      /themes/shop/pages/list_groupbuy.aspx         mgrouplist.aspx
+3. 优惠活动 分类页  /themes/shop/pages/list_breaksActivity.aspx   mactfullquantity.aspx  mactfullmoney.aspx
+4. 积分商城 分类页  /themes/shop/pages/list_pointsMall.aspx       mjifen.aspx
+4-1:积分商城 内容页 jifenshow-3-3.ashx
+
+5.产品页面  content.aspx
+6.产品分类  list.aspx
+
+7.降价通知：mreduceprice.aspx
+
+8.求团购：forgroup.aspx
+
+9.对比： mcompare.aspx
+
+头部：
+<!--<div class="nav_box">
+  <div class="hide_sort_box" style="display:none;" onfocus=""  id="hmenu" on="">
+    <XS:Widget ID="Widget31" WidgetName="首页所有商品分类" WidgetID="5e8263fb-3d3c-4b27-b945-43117c9d2211"
+                        runat="server" />
+  </div>
+</div>-->

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>3</Permission>
+  <ModuleID>8961c5b2-43f2-4298-8145-f0965aff70a0</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/ebsite/data/Modules/ModuleList/UserBaseInfo/UserPages/Favorite.aspx</ParentUrl>
+  <FileName>ClassAdd.ascx</FileName>
+  <PageName>添加分类</PageName>
+  <ParentID>a9156956-8f57-4bce-b011-4f8107fcbb41</ParentID>
+  <OrderID>4</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>ce3670a8-c31b-4913-bb26-1214717f5df5</id>
+</ModulePageInfo>

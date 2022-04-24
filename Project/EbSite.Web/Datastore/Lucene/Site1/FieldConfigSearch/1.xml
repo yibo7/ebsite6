@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<SearchEntity>
+  <FieldName>NewsTitle</FieldName>
+  <FieldType>System.String</FieldType>
+  <id>1</id>
+</SearchEntity>

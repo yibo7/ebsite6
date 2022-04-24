@@ -1,0 +1,74 @@
+﻿
+    .datafrom
+    {
+        background: rgb(255, 255, 255);
+        margin: 1px 12px 0px;
+        padding: 2px;
+        border: 1px solid rgb(215, 233, 252);
+        width: 948px;
+    }
+    .PrintDataTable
+    {
+        border-width: 1px 1px medium;
+        border-style: solid solid none;
+        width: 100%;
+        color: rgb(51, 51, 51);
+    }
+    .PrintDataTable td
+    {
+        padding: 6px;
+        border-bottom-color: rgb(224, 220, 206);
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+    }
+    .PrintDataTable th
+    {
+        background: rgb(246, 250, 241);
+        padding: 6px;
+        text-align: right;
+        color: rgb(102, 102, 102);
+        border-right-color: rgb(236, 233, 216);
+        border-bottom-color: rgb(224, 220, 206);
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-right-style: solid;
+        border-bottom-style: solid;
+        white-space: nowrap;
+    }
+    .PrintDataTable th.leftb
+    {
+        width: 100px;
+        border-left-color: rgb(236, 233, 216);
+        border-left-width: 1px;
+        border-left-style: solid;
+        white-space: nowrap;
+    }
+    .ul2
+    {
+        float: left;
+    }
+    .ul1 select
+    {
+        margin-right: 10px;
+        float: left;
+        margin-top: 5px;
+    }
+    .printSub
+    {
+        color: #fff;
+        background: url("printSub.gif") no-repeat 0px 0px;
+        border: 0px currentColor;
+        width: 139px;
+        height: 36px;
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+        cursor: pointer;
+        border-top-color: currentColor;
+        border-right-color: currentColor;
+        border-bottom-color: currentColor;
+        border-left-color: currentColor;
+        border-top-width: 0px;
+        border-right-style: none;
+        border-left-style: none;
+        border-bottom-style: none;
+    }

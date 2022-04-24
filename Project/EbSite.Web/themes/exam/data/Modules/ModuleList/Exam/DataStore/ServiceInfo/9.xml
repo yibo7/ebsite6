@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ServiceInfo>
+  <ServiceName>开心</ServiceName>
+  <PostName>客服</PostName>
+  <Phone>010-23568952</Phone>
+  <Mobile>13266666666</Mobile>
+  <Email>df@22.cn</Email>
+  <IsEabled>True</IsEabled>
+  <OrderID>9</OrderID>
+  <UserID>23</UserID>
+  <UserName>yhl</UserName>
+  <UserNiName>yhl</UserNiName>
+  <Info />
+  <IsOnline>False</IsOnline>
+  <LastDateTime>0001/1/1 0:00:00</LastDateTime>
+  <ClassID>1</ClassID>
+  <StarFive>3</StarFive>
+  <StarFour>0</StarFour>
+  <StarThree>0</StarThree>
+  <StarTwo>0</StarTwo>
+  <StarOne>0</StarOne>
+  <id>9</id>
+</ServiceInfo>

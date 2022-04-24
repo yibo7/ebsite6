@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>8961c5b2-43f2-4298-8145-f0965aff70a0</ModuleID>
+  <HelpHtml />
+  <ParentUrl />
+  <FileName>/themes/ebsite/data/Modules/ModuleList/UserBaseInfo/AdminPages/Splace.aspx</FileName>
+  <PageName>空间站点管理</PageName>
+  <ParentID>00000000-0000-0000-0000-000000000000</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>629719d5-76f2-49f5-a2db-1a998e7672fd</id>
+</ModulePageInfo>

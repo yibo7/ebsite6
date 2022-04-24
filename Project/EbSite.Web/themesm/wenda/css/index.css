@@ -1,0 +1,134 @@
+﻿@import url("toolbar.css");
+@import url("toolbar.default.css");
+@import url("wenda.css");
+html,body{margin:0;padding:0;border:0}
+body{font-family:Arial,sans-serif;font-size:16px;background:#fff;color:#000;word-wrap:break-word;-webkit-text-size-adjust:none}
+ html
+        {
+            background: #EEE;
+        }
+body
+{
+            background: #EEE;
+            position: relative;
+            height: auto;
+            min-height: 420px;
+}
+a:link,a:visited{text-decoration:none;}
+a:hover,a:active{text-decoration:underline;}
+*:focus {outline: none;}
+.w-navigator
+{
+    border:1px solid #d4d3d3;background-color:#e5e5e5;border-top:0;line-height:42px;height:42px;
+    display:-webkit-box;text-align:center;margin-bottom:1px;-webkit-box-shadow:0 1px white;box-shadow:0 1px white
+}
+.w-navigator img{ margin-top: 5px;}
+ .w-navigator a{-webkit-box-flex:1;display:block;color:#969696}
+ .w-navigator a:first-child{color:#27a002}
+ .w-navigator b{display:block;color:#969696;font-size:13px;font-weight:normal}
+ .w-navigator .unread
+ {
+     display:inline-block;font-size:12px;position:absolute;visibility:hidden;line-height:14px;
+     background:#ff8402;border:1px solid #feb300;color:white;min-width:14px;border-radius:4px;margin-top:3px;right:10px
+ }
+ 
+ .w-home-search{padding:0 10px}
+ .w-home-search .input
+ {
+     border:1px solid #959595;border-right:0;
+     box-shadow:1px 1px 2px #cdcdcd inset;
+     -webkit-box-shadow:1px 1px 2px #cdcdcd inset;
+     border-radius:2px 0 0 2px;
+     margin-right:83px;background:white}
+ .w-home-search .input input, submit
+ {
+     height:45px;
+     border:0;
+     border-radius:0;
+     background:0;
+     -webkit-appearance:none;
+     font-size:16px;
+     vertical-align:middle;
+     width:100%;
+     padding-left:5px;
+     -webkit-box-sizing:border-box;
+     box-sizing:border-box; 
+     -webkit-tap-highlight-color:rgba(0,0,0,0); /*去除选中外框*/
+    
+ }
+ .w-home-search input[type=submit]
+ {
+     width:83px;float:right;border:1px solid #39a70a;
+     border-radius:0 2px 2px 0;
+     line-height:47px;
+     height:47px;font-weight:bold;font-size:16px;color:white;
+     text-shadow:0 -1px 1px #777;
+     -webkit-box-shadow:1px 1px 0 #6ed93b inset;
+     box-shadow:1px 1px 0 #6ed93b inset;
+     background:-webkit-gradient(linear,left top,left bottom,from(#48d109),to(#42c307))
+ }
+ .ui-input-mask{position:relative;z-index:9999}
+ 
+.ui-input-mask input{outline:0;}
+
+.ui-quickdelete-button{background:url(delete.png) no-repeat left top;
+                       -webkit-background-size:contain;visibility:hidden;position:absolute;cursor:pointer}
+ 
+.content{ line-height: 28px;} 
+.content h2
+{
+            margin: 20px auto 10px 20px;
+            font-weight: normal;
+            font-size: 14px;
+            color: #969696;
+        }
+.content h2 strong
+        {
+            color: #27a002;
+            font-weight: normal;
+        }
+
+
+.regbtn{border:solid #34B100;border-width:1px 1px 1px 0;background:#48D109;line-height:29px;height:30px;margin:5px 0 0 20px;padding:0 8px 0 6px; color:#ffffff; font-weight:bold;}
+.loginbtn{border:solid #34B100;border-width:1px 1px 1px 0;background:#48D109;line-height:29px;height:30px;margin:5px 0 0 20px;padding:0 8px 0 6px; color:#ffffff; font-weight:bold;}
+
+.foot{background-color:#DEDEDE; height:50px;text-align: center;border-top: 1px solid #C4C4C4;padding: 8px; }
+.foot div{padding: 2px;}
+
+
+
+.childre-listitem {
+    padding:0px;
+    margin:0px;
+    display:none;
+}
+.childre-listitem li {
+    list-style:none;
+    color:#27A002;
+    font-size:14px;
+    font-weight:normal;
+    border-bottom:none;
+    padding:0px;
+    padding-left:10px;
+    padding-top:10px;
+}
+.childre-listitem li a{
+    color:#27A002;
+    font-size:14px;
+    font-weight:normal;
+}
+.data-list li span.classname {
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    color:#194b23;
+}
+.panel-dir li a {
+    color: #fff; 
+}
+    .panel-dir li 
+    {
+        height: 28px;line-height: 28px;
+    }
+   .PagesClass{ display: block;}
+     .PagesClass td{ padding: 8px;}

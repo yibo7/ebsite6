@@ -1,0 +1,47 @@
+   提问 模型对应的表 必须是 newscontent.
+
+    内容页模板 启用的是 mcontent.aspx
+
+   页面对应模板
+
+1.问答首页 index.aspx
+2.发表问题 maskpost.aspx
+3.问题展示 mcontent.aspx
+
+4.所有分类 maskclasslist.aspx
+5.问题列表 list_askbrandlist.aspx
+6.专题列表 special.aspx
+7.热门话题 maskhot.aspx
+8.问答达人 mattractive.aspx
+
+9.问答搜索 Search.aspx
+
+10.回答最多  manswertop.aspx   
+
+11.最新注册 mreg.aspx
+
+12.列表专家 mexpert.aspx
+
+13.解答   mjieda.aspx
+
+14.我的提问 mtiwen.aspx
+
+15. 同问  mtongwen.aspx
+
+16.提问审核 mtiwencheck.aspx
+
+17向我的提问 mtmyasked.aspx
+
+/////////////////////////////////////////////////
+
+公共模板
+
+头部： header.inc
+底部： footer.inc
+
+
+///////////////改变站点 ==规纳 
+
+header.inc  里面有站点 数字 【搜索】
+
+search.aspx index.aspx 中 

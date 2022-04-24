@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>96</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/FloorSet.aspx</ParentUrl>
+  <FileName>DesignFloor.ascx</FileName>
+  <PageName>设计楼层</PageName>
+  <ParentID>474c0eda-f726-4cd9-b619-757798c233f1</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>a4de7dee-4d12-4738-ada0-f8b27960811f</id>
+</ModulePageInfo>

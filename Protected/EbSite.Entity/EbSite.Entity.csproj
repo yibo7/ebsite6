@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{53995DBB-9836-4647-AD22-865884FDEB9E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>EbSite.Entity</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EbSite.Entity</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\libbin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\libbin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EbSite.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.BLL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libbin\EbSite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\..\libbin\mongodbDriver1.7\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\..\libbin\mongodbDriver1.7\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountMoney\AccountMoneyLog.cs" />
+    <Compile Include="AccountMoney\PayLog.cs" />
+    <Compile Include="AccountMoney\WithdrawList.cs" />
+    <Compile Include="Address.cs" />
+    <Compile Include="AreaInfo.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ChartsConfig.cs" />
+    <Compile Include="ListItemModelIco.cs" />
+    <Compile Include="ClassConfigs.cs" />
+    <Compile Include="ClassSetConfig.cs" />
+    <Compile Include="ClientIpInfo.cs" />
+    <Compile Include="ContentPageInfo.cs" />
+    <Compile Include="ContentTbName.cs" />
+    <Compile Include="ContentTem.cs" />
+    <Compile Include="Coupons\CouponItems.cs" />
+    <Compile Include="Coupons\Coupons.cs" />
+    <Compile Include="eborderbox\order.cs" />
+    <Compile Include="emailsendpool.cs" />
+    <Compile Include="Exam\exam_answer.cs" />
+    <Compile Include="Exam\exam_questions.cs" />
+    <Compile Include="Exam\exam_questionsclass.cs" />
+    <Compile Include="Exam\exam_testresult.cs" />
+    <Compile Include="FastMenuClass.cs" />
+    <Compile Include="goods_visite.cs" />
+    <Compile Include="JobTask.cs" />
+    <Compile Include="OrderOption\OrderOptionItems.cs" />
+    <Compile Include="OrderOption\OrderOptions.cs" />
+    <Compile Include="OrderOption\OrderOptionValue.cs" />
+    <Compile Include="Invite.cs" />
+    <Compile Include="ExtContent.cs" />
+    <Compile Include="outlinks.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="AccountMoney\PayPass.cs" />
+    <Compile Include="PayMent\PayTypeInfo.cs" />
+    <Compile Include="PeiSong\SendArea.cs" />
+    <Compile Include="PeiSong\Shippers.cs" />
+    <Compile Include="PeiSong\Express.cs" />
+    <Compile Include="PeiSong\PsCompany.cs" />
+    <Compile Include="PeiSong\PsDelivery.cs" />
+    <Compile Include="PeiSong\PsFreight.cs" />
+    <Compile Include="PeiSong\StoreHouse.cs" />
+    <Compile Include="RemarkSublist.cs" />
+    <Compile Include="FastMenu.cs" />
+    <Compile Include="DataSettings.cs" />
+    <Compile Include="ReportConfig.cs" />
+    <Compile Include="searchword.cs" />
+    <Compile Include="Space\SpaceTabDefaultWidgetInfo.cs" />
+    <Compile Include="spiderlog.cs" />
+    <Compile Include="TheThirdLoginCode.cs" />
+    <Compile Include="Tool_ChatList.cs" />
+    <Compile Include="UploadFileInfo.cs" />
+    <Compile Include="UserLevel.cs" />
+    <Compile Include="ModelEntityBase.cs" />
+    <Compile Include="CustomProfileInfo.cs" />
+    <Compile Include="ErrInfo.cs" />
+    <Compile Include="ListItemModel.cs" />
+    <Compile Include="Help.cs" />
+    <Compile Include="Logs.cs" />
+    <Compile Include="Menus.cs" />
+    <Compile Include="MenusForUser.cs" />
+    <Compile Include="Module\LimitInfo.cs" />
+    <Compile Include="Module\LimitRole.cs" />
+    <Compile Include="Module\ModuleInfo.cs" />
+    <Compile Include="Module\ModulePageInfo.cs" />
+    <Compile Include="--Plugins\PluginInfo.cs" />
+    <Compile Include="--SearchCustom.cs" />
+    <Compile Include="Sites.cs" />
+    <Compile Include="Space\WidgetBoxStyle.cs" />
+    <Compile Include="Space\SpaceTabsDefault.cs" />
+    <Compile Include="Space\HomeWidgetInfo.cs" />
+    <Compile Include="Space\LayoutPaneInfo.cs" />
+    <Compile Include="Space\SpaceSetting.cs" />
+    <Compile Include="Space\SpaceTabs.cs" />
+    <Compile Include="Space\SpaceTabWidget.cs" />
+    <Compile Include="Space\SpaceThemeClass.cs" />
+    <Compile Include="Space\SpaceThemes.cs" />
+    <Compile Include="TagColorInfo.cs" />
+    <Compile Include="TagRelateClass.cs" />
+    <Compile Include="Themes.cs" />
+    <Compile Include="VersionInfo.cs" />
+    <Compile Include="ModelClass.cs" />
+    <Compile Include="CountData.cs" />
+    <Compile Include="Favorite.cs" />
+    <Compile Include="Remark.cs" />
+    <Compile Include="RemarkClass.cs" />
+    <Compile Include="SpecialClass.cs" />
+    <Compile Include="SpecialNews.cs" />
+    <Compile Include="NewsContent.cs" />
+    <Compile Include="NewsClass.cs" />
+    <Compile Include="TagKey.cs" />
+    <Compile Include="TagRelateNews.cs" />
+    <Compile Include="TagRelateUser.cs" />
+    <Compile Include="Templates.cs" />
+    <Compile Include="Vote\vote.cs" />
+    <Compile Include="Vote\voteclass.cs" />
+    <Compile Include="Vote\voteitem.cs" />
+    <Compile Include="WidgetShow.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CtrTemClass.cs" />
+    <Compile Include="CtrTemList.cs" />
+    <Compile Include="UserNews.cs" />
+    <Compile Include="RecentVisitors.cs" />
+    <Compile Include="FavoriteClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

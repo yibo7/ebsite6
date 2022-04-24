@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>5a2d821b-586c-4ac4-bdac-1567d5d1a515</ModuleID>
+  <HelpHtml />
+  <ParentUrl />
+  <FileName>/themes/exam/data/Modules/ModuleList/exam/AdminPages/Exam.aspx</FileName>
+  <PageName>考试系统</PageName>
+  <ParentID>00000000-0000-0000-0000-000000000000</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>52c1c091-eb45-431e-a880-f32e9c3593a7</id>
+</ModulePageInfo>

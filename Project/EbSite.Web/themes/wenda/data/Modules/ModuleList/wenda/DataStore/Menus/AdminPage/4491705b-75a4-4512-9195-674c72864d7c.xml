@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>27</Permission>
+  <ModuleID>4e0edb7e-1b30-41ad-9f74-d63c80458c35</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/wenda/data/Modules/ModuleList/Wenda/AdminPages/Experts.aspx</ParentUrl>
+  <FileName>AddExperts.ascx</FileName>
+  <PageName>添加专家</PageName>
+  <ParentID>3170e8a3-13be-4880-954c-05093c31e5ac</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>4491705b-75a4-4512-9195-674c72864d7c</id>
+</ModulePageInfo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="count" Value="4" />
+    <DictionaryEntry Key="tem" Value="01945c8c-31fd-41ed-a518-7d2272f3c242" />
+    <DictionaryEntry Key="rssurl" Value="http://www.beimai.com/api/Service.svc/GetRss?top=0&amp;itype=200&amp;iclassid=0&amp;SiteID=1" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

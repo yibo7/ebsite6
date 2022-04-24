@@ -1,0 +1,87 @@
+﻿/*CustomTips*/
+.ebcustom-tip{
+	position:absolute;
+	width:200px;
+	height:auto;
+	display:none;
+	z-index:9900000;
+}
+.ebcustom-tip-content{
+	display:inline-block;
+	position:absolute;
+	top:0px;
+	left:10px;
+	padding:3px 5px;
+	border:1px solid #CC9933;
+	background:#FFFFCC;
+	z-index:9900001;
+	font-size:12px;
+}
+.ebcustom-tip-pointer{
+	background:url('tips_pointer.gif') no-repeat left top;
+	display:inline-block;
+	width:10px;
+	height:19px;
+	position:absolute;
+	left:1px;
+	top:0px;
+	z-index:9900002;
+}
+
+.GridView
+{	width:100%;
+	background:#F5FAFF;
+	border:solid 1px #D8E0E8;
+	
+	
+}
+.GridViewHeader
+{
+	text-align:center;	
+	font-weight:bold;
+	background-image:url(grid3-hrow.gif);
+}
+.GridView tr
+{
+	height:28px;
+	
+}
+.GridView tr td
+{
+	 text-align:center;
+	
+}
+.GridView tr td:first-child  
+{
+	width:30%;
+	 text-align:left;
+	 padding-left:5px;
+	
+}
+.AlternatingRow
+{
+	background-color:#FFF9E6;
+}
+
+
+.gvfisrtTD
+{
+ text-align:left!important;	
+ 
+ }
+ .GridMouseOver
+{
+	background:#E8D18B;
+}
+.GridMouseOut
+{
+}
+.AdminButton 
+{
+	border:1px solid #919699; 
+	background:url(buttonbg.gif) repeat-x left bottom;
+	 text-align:center; text-decoration:none; 
+	 padding:2px 3px; cursor:pointer; 
+	 line-height:25px; margin-right:2px;
+	  
+}

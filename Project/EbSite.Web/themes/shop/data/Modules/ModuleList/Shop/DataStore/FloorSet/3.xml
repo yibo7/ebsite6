@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<FloorSet>
+  <FloorId>3</FloorId>
+  <FloorName>底盘</FloorName>
+  <FloorColor>5a719e</FloorColor>
+  <FloorPic>/themes/default/data/Upload/20131101/i5111evv3gd.gif</FloorPic>
+  <FloorPicUrl>www.ebsite.net</FloorPicUrl>
+  <TopClassItem>12643,12644,12646,12647,12648,12652,12653</TopClassItem>
+  <RightClassItem>12584,12586,12587,12588,12589</RightClassItem>
+  <ProductIds />
+  <id>3</id>
+</FloorSet>

@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BFBEFDF8-C1DA-45FC-AF69-99D9F0E7D8AB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EbSite.Modules.Wenda</RootNamespace>
+    <AssemblyName>EbSite.Modules.Wenda</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EbSite.Base">
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.BLL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Control">
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Control.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.ControlData">
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.ControlData.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Core, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Data.Interface, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Data.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Data.User.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Data.User.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Entity">
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\..\..\libbin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPages\AskConfig.aspx.cs">
+      <DependentUpon>AskConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\AskConfig.aspx.designer.cs">
+      <DependentUpon>AskConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\AskOperate.aspx.cs">
+      <DependentUpon>AskOperate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\AskOperate.aspx.designer.cs">
+      <DependentUpon>AskOperate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\AskOperate\AnswerShow.ascx.cs">
+      <DependentUpon>AnswerShow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\AskOperate\AnswerShow.ascx.designer.cs">
+      <DependentUpon>AnswerShow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Experts\AddExperts.ascx.cs">
+      <DependentUpon>AddExperts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Experts\AddExperts.ascx.designer.cs">
+      <DependentUpon>AddExperts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\AskOperate\AnswerList.ascx.cs">
+      <DependentUpon>AnswerList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\AskOperate\AnswerList.ascx.designer.cs">
+      <DependentUpon>AnswerList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\AskConfig\AskConfig.ascx.cs">
+      <DependentUpon>AskConfig.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\AskConfig\AskConfig.ascx.designer.cs">
+      <DependentUpon>AskConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Experts\ExpertsList.ascx.cs">
+      <DependentUpon>ExpertsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\Experts\ExpertsList.ascx.designer.cs">
+      <DependentUpon>ExpertsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\UserHelp\UserHelpList.ascx.cs">
+      <DependentUpon>UserHelpList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\UserHelp\UserHelpList.ascx.designer.cs">
+      <DependentUpon>UserHelpList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\DataExport\DataIndex.ascx.cs">
+      <DependentUpon>DataIndex.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\DataExport\DataIndex.ascx.designer.cs">
+      <DependentUpon>DataIndex.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ImitatePost\AddPost.ascx.cs">
+      <DependentUpon>AddPost.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ImitatePost\AddPost.ascx.designer.cs">
+      <DependentUpon>AddPost.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ImitatePost\IpRandom.ascx.cs">
+      <DependentUpon>IpRandom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ImitatePost\IpRandom.ascx.designer.cs">
+      <DependentUpon>IpRandom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ImitatePost\PostUserAdd.ascx.cs">
+      <DependentUpon>PostUserAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ImitatePost\PostUserAdd.ascx.designer.cs">
+      <DependentUpon>PostUserAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ImitatePost\PostUserList.ascx.cs">
+      <DependentUpon>PostUserList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ImitatePost\PostUserList.ascx.designer.cs">
+      <DependentUpon>PostUserList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Experts.aspx.cs">
+      <DependentUpon>Experts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Experts.aspx.designer.cs">
+      <DependentUpon>Experts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\ImitatePost.aspx.cs">
+      <DependentUpon>ImitatePost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\ImitatePost.aspx.designer.cs">
+      <DependentUpon>ImitatePost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\DataExport.aspx.cs">
+      <DependentUpon>DataExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\DataExport.aspx.designer.cs">
+      <DependentUpon>DataExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\UserHelp.aspx.cs">
+      <DependentUpon>UserHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\UserHelp.aspx.designer.cs">
+      <DependentUpon>UserHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajaxget\api.asmx.cs">
+      <DependentUpon>api.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Configs.cs" />
+    <Compile Include="ModuleCore\BLL\askcache.cs" />
+    <Compile Include="ModuleCore\DALInterface\IAskCache.cs" />
+    <Compile Include="ModuleCore\DAL\MySQL\askcache.cs" />
+    <Compile Include="ModuleCore\Entity\askcache.cs" />
+    <Compile Include="ModuleCore\Pages\mobileaskpost.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\MWenDaManage\MyAskList.ascx.cs">
+      <DependentUpon>MyAskList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\MWenDaManage\MyAskList.ascx.designer.cs">
+      <DependentUpon>MyAskList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\MWenDaManage.aspx.cs">
+      <DependentUpon>MWenDaManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\MWenDaManage.aspx.designer.cs">
+      <DependentUpon>MWenDaManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wenda.Master.cs">
+      <DependentUpon>Wenda.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wenda.Master.designer.cs">
+      <DependentUpon>Wenda.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrs\BmAskClass.cs" />
+    <Compile Include="CustomPage\AskClassSelect.aspx.cs">
+      <DependentUpon>AskClassSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomPage\AskClassSelect.aspx.designer.cs">
+      <DependentUpon>AskClassSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\AskClassLink\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\AskClassLink\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\AskClassLink\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\AskClassLink\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\AskScore\Ctrl.ascx.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\AskScore\Ctrl.ascx.designer.cs">
+      <DependentUpon>Ctrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\AskScore\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\AskScore\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleCore\AskCommon.cs" />
+    <Compile Include="ModuleCore\BLL\Answers.cs" />
+    <Compile Include="ModuleCore\BLL\Base\BLLBase.cs" />
+    <Compile Include="ModuleCore\BLL\Comment.cs" />
+    <Compile Include="ModuleCore\BLL\ConfigControl.cs" />
+    <Compile Include="ModuleCore\BLL\--class_article.cs" />
+    <Compile Include="ModuleCore\BLL\IpControl .cs" />
+    <Compile Include="ModuleCore\BLL\PostUserControl .cs" />
+    <Compile Include="ModuleCore\BLL\expandanswers.cs" />
+    <Compile Include="ModuleCore\BLL\ExpandContent.cs" />
+    <Compile Include="ModuleCore\BLL\expertAsk.cs" />
+    <Compile Include="ModuleCore\BLL\ExpertsControl .cs" />
+    <Compile Include="ModuleCore\BLL\SameQuestion.cs" />
+    <Compile Include="ModuleCore\BLL\UserHelp.cs" />
+    <Compile Include="ModuleCore\DALInterface\--class_article.cs" />
+    <Compile Include="ModuleCore\DALInterface\CusttomTable.cs" />
+    <Compile Include="ModuleCore\DALInterface\IAnswers.cs" />
+    <Compile Include="ModuleCore\DALInterface\IComment.cs" />
+    <Compile Include="ModuleCore\DALInterface\Iexpandanswers.cs" />
+    <Compile Include="ModuleCore\DALInterface\IExpandContent.cs" />
+    <Compile Include="ModuleCore\DALInterface\IexpertAsk.cs" />
+    <Compile Include="ModuleCore\DALInterface\ISameQuestion.cs" />
+    <Compile Include="ModuleCore\DALInterface\IUserHelp.cs" />
+    <Compile Include="ModuleCore\DAL\DataProfile\DalFactory.cs" />
+    <Compile Include="ModuleCore\DAL\DataProfile\DBHelper.cs" />
+    <Compile Include="ModuleCore\DAL\MySQL\Answers.cs" />
+    <Compile Include="ModuleCore\DAL\MySQL\Comment.cs" />
+    <Compile Include="ModuleCore\DAL\MySQL\--class_article.cs" />
+    <Compile Include="ModuleCore\DAL\MySQL\expandanswers.cs" />
+    <Compile Include="ModuleCore\DAL\MySQL\ExpandContent.cs" />
+    <Compile Include="ModuleCore\DAL\MySQL\expertAsk.cs" />
+    <Compile Include="ModuleCore\DAL\MySQL\Helper\Utils.cs" />
+    <Compile Include="ModuleCore\DAL\MySQL\SameQuestion.cs" />
+    <Compile Include="ModuleCore\DAL\MySQL\UserHelp.cs" />
+    <Compile Include="ModuleCore\Entity\Answers.cs" />
+    <Compile Include="ModuleCore\Entity\Comment.cs" />
+    <Compile Include="ModuleCore\Entity\ConfigInfo.cs" />
+    <Compile Include="ModuleCore\Entity\--class_article.cs" />
+    <Compile Include="ModuleCore\Entity\IpInfo.cs" />
+    <Compile Include="ModuleCore\Entity\PostUser.cs" />
+    <Compile Include="ModuleCore\Entity\expandanswers.cs" />
+    <Compile Include="ModuleCore\Entity\ExpandContent.cs" />
+    <Compile Include="ModuleCore\Entity\expertAsk.cs" />
+    <Compile Include="ModuleCore\Entity\Experts.cs" />
+    <Compile Include="ModuleCore\Entity\SameQuestion.cs" />
+    <Compile Include="ModuleCore\Entity\UserHelp.cs" />
+    <Compile Include="ModuleCore\GetLinks.cs" />
+    <Compile Include="ModuleCore\Pages\manswertop.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mexpert.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mreg.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mqht.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mcontent.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mtmyasked.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mtiwencheck.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mtongwen.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mjieda.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mattractivelistBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mtiwen.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mattractive.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\maskhot.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\maskpost.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\maskclasslist.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mfastTopics.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppStart.cs" />
+    <Compile Include="SettingInfo.cs" />
+    <Compile Include="Setting.ascx.cs">
+      <DependentUpon>Setting.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setting.ascx.designer.cs">
+      <DependentUpon>Setting.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserPages\Controls\ExpertAsk\ExAskList.ascx.cs">
+      <DependentUpon>ExAskList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\ExpertAsk\ExAskList.ascx.designer.cs">
+      <DependentUpon>ExAskList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\MyAskManage\MyAnswerList.ascx.cs">
+      <DependentUpon>MyAnswerList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\MyAskManage\MyAnswerList.ascx.designer.cs">
+      <DependentUpon>MyAnswerList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\MyAskManage\MyAskList.ascx.cs">
+      <DependentUpon>MyAskList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\MyAskManage\MyAskList.ascx.designer.cs">
+      <DependentUpon>MyAskList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\MyAskManage\MyFavoriteList.ascx.cs">
+      <DependentUpon>MyFavoriteList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\MyAskManage\MyFavoriteList.ascx.designer.cs">
+      <DependentUpon>MyFavoriteList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\Controls\MyAskManage\MySameAskList.ascx.cs">
+      <DependentUpon>MySameAskList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Controls\MyAskManage\MySameAskList.ascx.designer.cs">
+      <DependentUpon>MySameAskList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\ExpertAsk.aspx.cs">
+      <DependentUpon>ExpertAsk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\ExpertAsk.aspx.designer.cs">
+      <DependentUpon>ExpertAsk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\MyAskManage.aspx.cs">
+      <DependentUpon>MyAskManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\MyAskManage.aspx.designer.cs">
+      <DependentUpon>MyAskManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\--ExpertAsk\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\--ExpertAsk\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\--ExpertAsk\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\--ExpertAsk\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetAskCtent\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetAskCtent\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetAskCtent\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetAskCtent\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetClassListMore\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetClassListMore\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetClassListMore\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetClassListMore\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetExpertList\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetExpertList\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetExpertList\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetExpertList\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetHotList\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetHotList\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetHotList\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetHotList\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetMyCarFriend\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetMyCarFriend\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetMyCarFriend\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetMyCarFriend\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetSolveAsk\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetSolveAsk\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\GetSolveAsk\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\GetSolveAsk\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\IndexNewAsk\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\IndexNewAsk\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\IndexNewAsk\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\IndexNewAsk\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\NewAskList\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\NewAskList\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\NewAskList\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\NewAskList\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\RealtedArticle\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\RealtedArticle\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\RealtedArticle\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\RealtedArticle\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\UserHt\edit.ascx.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\UserHt\edit.ascx.designer.cs">
+      <DependentUpon>edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\UserHt\widget.ascx.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Widgets\UserHt\widget.ascx.designer.cs">
+      <DependentUpon>widget.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPages\AskConfig.aspx" />
+    <Content Include="AdminPages\AskOperate.aspx" />
+    <Content Include="AdminPages\Controls\AskOperate\AnswerShow.ascx" />
+    <Content Include="AdminPages\Controls\Experts\AddExperts.ascx" />
+    <Content Include="AdminPages\Controls\AskOperate\AnswerList.ascx" />
+    <Content Include="AdminPages\Controls\AskConfig\AskConfig.ascx" />
+    <Content Include="AdminPages\Controls\Experts\ExpertsList.ascx" />
+    <Content Include="AdminPages\Controls\UserHelp\UserHelpList.ascx" />
+    <Content Include="AdminPages\Controls\DataExport\DataIndex.ascx" />
+    <Content Include="AdminPages\Controls\ImitatePost\AddPost.ascx" />
+    <Content Include="AdminPages\Controls\ImitatePost\IpRandom.ascx" />
+    <Content Include="AdminPages\Controls\ImitatePost\PostUserAdd.ascx" />
+    <Content Include="AdminPages\Controls\ImitatePost\PostUserList.ascx" />
+    <Content Include="AdminPages\Experts.aspx" />
+    <Content Include="AdminPages\ImitatePost.aspx" />
+    <Content Include="AdminPages\DataExport.aspx" />
+    <Content Include="AdminPages\UserHelp.aspx" />
+    <Content Include="Ajaxget\api.asmx" />
+    <Content Include="Css\mindex.css" />
+    <Content Include="UserPages\Controls\MWenDaManage\MyAskList.ascx" />
+    <Content Include="UserPages\MWenDaManage.aspx" />
+    <Content Include="模板对应表.txt" />
+    <Content Include="Css\askpic.png" />
+    <Content Include="Css\center.png" />
+    <Content Include="Css\firsttop.png" />
+    <Content Include="Css\index.css" />
+    <Content Include="Css\leftbottom.png" />
+    <Content Include="Css\leftcenter.png" />
+    <Content Include="Css\lefttop.png" />
+    <Content Include="Css\logo.png" />
+    <Content Include="Css\rightbottom.png" />
+    <Content Include="Css\rightbottom2.png" />
+    <Content Include="Css\rightcenter.png" />
+    <Content Include="Css\rightcenter2.png" />
+    <Content Include="Css\righttop.png" />
+    <Content Include="Css\selectpic.png" />
+    <Content Include="Css\smallico.png" />
+    <Content Include="Css\usercss.css" />
+    <Content Include="CustomPage\AskClassSelect.aspx" />
+    <Content Include="DataStore\Limits_Adminer.txt" />
+    <Content Include="DataStore\Limits_User.txt" />
+    <Content Include="DataStore\SqlScript\Setup.txt" />
+    <Content Include="DataStore\SqlScript\Uninstall.txt" />
+    <Content Include="ExtensionsCtrls\AskClassLink\areadme.txt" />
+    <Content Include="ExtensionsCtrls\AskClassLink\Ctrl.ascx" />
+    <Content Include="ExtensionsCtrls\AskClassLink\edit.ascx" />
+    <Content Include="ExtensionsCtrls\AskScore\areadme.txt" />
+    <Content Include="ExtensionsCtrls\AskScore\Ctrl.ascx" />
+    <Content Include="ExtensionsCtrls\AskScore\edit.ascx" />
+    <Content Include="js\comm.js" />
+    <Content Include="Readme.txt" />
+    <Content Include="Setting.ascx" />
+    <Content Include="Widgets\--ExpertAsk\areadme.txt" />
+    <Content Include="Widgets\--ExpertAsk\edit.ascx" />
+    <Content Include="Widgets\--ExpertAsk\widget.ascx" />
+    <Content Include="Widgets\GetAskCtent\areadme.txt" />
+    <Content Include="Widgets\GetAskCtent\edit.ascx" />
+    <Content Include="Widgets\GetAskCtent\widget.ascx" />
+    <Content Include="Widgets\GetClassListMore\areadme.txt" />
+    <Content Include="Widgets\GetClassListMore\edit.ascx" />
+    <Content Include="Widgets\GetClassListMore\widget.ascx" />
+    <Content Include="Widgets\GetExpertList\areadme.txt" />
+    <Content Include="Widgets\GetExpertList\edit.ascx" />
+    <Content Include="Widgets\GetExpertList\widget.ascx" />
+    <Content Include="Widgets\GetHotList\areadme.txt" />
+    <Content Include="Widgets\GetHotList\edit.ascx" />
+    <Content Include="Widgets\GetHotList\widget.ascx" />
+    <Content Include="Widgets\GetMyCarFriend\areadme.txt" />
+    <Content Include="Widgets\GetMyCarFriend\edit.ascx" />
+    <Content Include="Widgets\GetMyCarFriend\widget.ascx" />
+    <Content Include="Widgets\GetSolveAsk\areadme.txt" />
+    <Content Include="Widgets\GetSolveAsk\edit.ascx" />
+    <Content Include="Widgets\GetSolveAsk\widget.ascx" />
+    <Content Include="Widgets\IndexNewAsk\areadme.txt" />
+    <Content Include="Widgets\IndexNewAsk\edit.ascx" />
+    <Content Include="Widgets\IndexNewAsk\widget.ascx" />
+    <Content Include="Widgets\NewAskList\areadme.txt" />
+    <Content Include="Widgets\NewAskList\edit.ascx" />
+    <Content Include="Widgets\NewAskList\widget.ascx" />
+    <Content Include="Widgets\RealtedArticle\areadme.txt" />
+    <Content Include="Widgets\RealtedArticle\edit.ascx" />
+    <Content Include="Widgets\RealtedArticle\widget.ascx" />
+    <Content Include="Widgets\UserHt\areadme.txt" />
+    <Content Include="Widgets\UserHt\edit.ascx" />
+    <Content Include="Widgets\UserHt\widget.ascx" />
+    <Content Include="开发文档.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataStore\Configs\Base.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataStore\Configs\Setting.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataStore\AccessDB\" />
+    <Folder Include="DataStore\Attachments\Help\" />
+    <Folder Include="DataStore\Limits\LimitGroup\" />
+    <Folder Include="DataStore\Limits\LimitRole\" />
+    <Folder Include="DataStore\Menus\AdminPage\" />
+    <Folder Include="DataStore\Menus\UserPage\" />
+    <Folder Include="ModuleCore\DAL\Access\Helper\" />
+    <Folder Include="ModuleCore\DAL\SqlServer\Helper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="setupendinfo.txt" />
+    <Content Include="UserPages\Controls\ExpertAsk\ExAskList.ascx" />
+    <Content Include="UserPages\Controls\MyAskManage\MyAnswerList.ascx" />
+    <Content Include="UserPages\Controls\MyAskManage\MyAskList.ascx" />
+    <Content Include="UserPages\Controls\MyAskManage\MyFavoriteList.ascx" />
+    <Content Include="UserPages\Controls\MyAskManage\MySameAskList.ascx" />
+    <Content Include="UserPages\ExpertAsk.aspx" />
+    <Content Include="UserPages\MyAskManage.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Wenda.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6813</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

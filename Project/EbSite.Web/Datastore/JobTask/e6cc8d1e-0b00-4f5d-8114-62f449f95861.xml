@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<JobTask>
+  <IsNoSys>True</IsNoSys>
+  <TaskName>定期审核文章</TaskName>
+  <TaskParam />
+  <CronExpressionString>0 * * * * ?</CronExpressionString>
+  <CronRemark />
+  <AssemblyName>api/auditingcontent</AssemblyName>
+  <ClassName />
+  <RunType>0</RunType>
+  <Status>1</Status>
+  <CreatedTime>2016/12/16 16:14:14</CreatedTime>
+  <ModifyTime>2016/12/16 16:15:39</ModifyTime>
+  <RecentRunTime>2022/4/24 10:38:00</RecentRunTime>
+  <NextFireTime>2022/4/24 10:30:00</NextFireTime>
+  <Remark>每分钟自动审核未通过文章</Remark>
+  <IsDelete>0</IsDelete>
+  <RunUrl>http://localhost:2015/api/auditingcontent?key=e6cc8d1e-0b00-4f5d-8114-62f449f95861&amp;tk=dc5f222b7ccf461ab03bf9334460c877</RunUrl>
+  <LastRezult>任务启动于:2022/4/24 10:38:49并且成功进入排期队列</LastRezult>
+  <id>e6cc8d1e-0b00-4f5d-8114-62f449f95861</id>
+</JobTask>

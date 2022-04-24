@@ -1,0 +1,22 @@
+﻿
+#ddlScore__jQSelect0 {outline:none;display:inline-block;*display:inline; }
+#ddlScore__jQSelect0 h4{cursor:default; text-indent:5px; margin:0; padding:0;}
+#ddlScore__jQSelect0 * {-moz-user-select:none;}
+#ddlScore__jQSelect0 h4.over {}
+#ddlScore__jQSelect0 div {display:block; /*fix bug*/}
+#ddlScore__jQSelect0 ul{position:absolute;display:none;margin:0;padding:0;float:left;clear:both;}
+#ddlScore__jQSelect0 ul li{text-indent:5px;margin:0;padding:0;list-style:none;display:block;cursor:default;}
+#ddlScore__jQSelect0 ul li.over{}
+
+/* write you style here */
+/*.dropselectbox {background:#DDD url(selectBg.png) repeat-x left top;}*/
+
+#ddlScore__jQSelect0  .dropdown h4{ font:12px/21px Arial, Helvetica, sans-serif; background-image:url(/images/all.png) no-repeat right center;width:237px;height:30px;background-position:-9px -127px; FLOAT: left;PADDING-TOP: 5px;margin-left:3px; }
+
+#ddlScore__jQSelect0 .dropselectbox{background:url(images/all.png) no-repeat 0 0;width:127px;height:35px;background-position:-272px -432px; FLOAT:left; color:#CCCCCC; padding-top:5px; padding-left:0px;}
+
+
+#ddlScore__jQSelect0  .dropselectbox h4.current{border-color:#000;}
+#ddlScore__jQSelect0  .dropselectbox ul{border:1px solid #AAA; background:#FFF;overflow: auto; height: 150px; margin-left:1px; margin-top:6px;   }
+
+

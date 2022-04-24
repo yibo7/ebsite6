@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="customdropdownlistpram" Value="" />
+    <DictionaryEntry Key="width" Value="800" />
+    <DictionaryEntry Key="heith" Value="250" />
+    <DictionaryEntry Key="boxstyleid" Value="00000000-0000-0000-0000-000000000000" />
+    <DictionaryEntry Key="customtextboxpram" Value="" />
+    <DictionaryEntry Key="customcolor" Value="" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

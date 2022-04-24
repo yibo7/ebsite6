@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F0AF5E5-8735-4BCD-994F-DE55391898CB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EbSite.Modules.BBS</RootNamespace>
+    <AssemblyName>EbSite.Modules.BBS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net, Version=2.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Base, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.BLL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Control">
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Control.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.ControlData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.ControlData.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Data.User.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Data.User.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Entity">
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="EbSite.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\libbin\EbSite.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\..\..\Protected\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\..\..\libbin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Protected\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Protected\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPages\Controls\ImitatePost\ImitatePostUser.ascx.cs">
+      <DependentUpon>ImitatePostUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ImitatePost\ImitatePostUser.ascx.designer.cs">
+      <DependentUpon>ImitatePostUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ImitatePost\ImitatePostUserAdd.ascx.cs">
+      <DependentUpon>ImitatePostUserAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\ImitatePost\ImitatePostUserAdd.ascx.designer.cs">
+      <DependentUpon>ImitatePostUserAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\PostManage\ListDels.ascx.cs">
+      <DependentUpon>ListDels.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\PostManage\ListDels.ascx.designer.cs">
+      <DependentUpon>ListDels.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Controls\PostManage\List.ascx.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Controls\PostManage\List.ascx.designer.cs">
+      <DependentUpon>List.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\ImitatePost.aspx.cs">
+      <DependentUpon>ImitatePost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\ImitatePost.aspx.designer.cs">
+      <DependentUpon>ImitatePost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\PostManage.aspx.cs">
+      <DependentUpon>PostManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\PostManage.aspx.designer.cs">
+      <DependentUpon>PostManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\postController.cs" />
+    <Compile Include="ExtensionsCtrls\SelectUsers\PgSelectUsers.aspx.cs">
+      <DependentUpon>PgSelectUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\SelectUsers\PgSelectUsers.aspx.designer.cs">
+      <DependentUpon>PgSelectUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsCtrls\SelectUsers\SelectUsers.cs" />
+    <Compile Include="Models\PostModel.cs" />
+    <Compile Include="ModuleCore\BLL\BBSClass.cs" />
+    <Compile Include="ModuleCore\BLL\imitateuser.cs" />
+    <Compile Include="ModuleCore\Comm.cs" />
+    <Compile Include="ModuleCore\DALInterface\Iimitateuser.cs" />
+    <Compile Include="ModuleCore\DAL\DataProfile\DalFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\DAL\DataProfile\DBHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\DAL\MySql\Helper\Utils.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\imitateuser.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\PostContent.cs" />
+    <Compile Include="ModuleCore\DAL\MySql\TopicReplies.cs" />
+    <Compile Include="ModuleCore\Entity\imitateuser.cs" />
+    <Compile Include="ModuleCore\GetLinks.cs" />
+    <Compile Include="ModuleCore\Pages\msavepostmobile.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\moperation.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\mreply.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\Pages\msavepost.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajaxget\api.asmx.cs">
+      <DependentUpon>api.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ModuleCore\RouteConfig.cs" />
+    <Compile Include="ModuleCore\StartupTaskRegRoute.cs" />
+    <Compile Include="AppStart.cs" />
+    <Compile Include="--ModuleGlobal.cs" />
+    <Compile Include="SettingInfo.cs" />
+    <Compile Include="Setting.ascx.cs">
+      <DependentUpon>Setting.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setting.ascx.designer.cs">
+      <DependentUpon>Setting.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ModuleCore\DAL\Access\Helper\Utils.cs" />
+    <Compile Include="ModuleCore\BLL\Base\BLLBase.cs" />
+    <Compile Include="ModuleCore\Entity\TopicReplies.cs" />
+    <Compile Include="ModuleCore\BLL\TopicReplies.cs" />
+    <Compile Include="ModuleCore\DALInterface\ITopicReplies.cs" />
+    <Compile Include="testUserInfo.ascx.cs">
+      <DependentUpon>testUserInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testUserInfo.ascx.designer.cs">
+      <DependentUpon>testUserInfo.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPages\Controls\ImitatePost\ImitatePostUser.ascx" />
+    <Content Include="AdminPages\Controls\ImitatePost\ImitatePostUserAdd.ascx" />
+    <Content Include="AdminPages\Controls\PostManage\ListDels.ascx" />
+    <Content Include="AdminPages\Controls\PostManage\List.ascx" />
+    <Content Include="AdminPages\ImitatePost.aspx" />
+    <Content Include="AdminPages\PostManage.aspx" />
+    <Content Include="DataStore\Limits\MenusForUser\02974e65-d289-4ac1-8e65-357db4655aa7.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\05825f7e-b868-42e6-83ae-c8b65b48835b.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\0c3c1458-d997-4698-84c0-ce1b3f223abd.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\14a5d34b-73c9-4156-871d-2a4c176dc8bf.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\14c26337-c100-4212-8363-79d7dcedcd31.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\16da2b9a-8713-44d1-a5d4-8a2d6f184187.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\1ab15b26-5b1d-4953-91cd-e0c2ea907988.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\2886e113-cc3b-4b62-b03e-da80089a1789.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\2b5d735a-29b9-42ec-88bc-395b07cfb238.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\2b777cb0-c411-466c-81bc-3f9b59cc33a1.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\3142c3d5-c25f-4700-af88-b97477c7e795.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\37cb5ee2-fb32-4564-a6fe-a8c8915b1364.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\3a057bb7-7ad1-48c8-9507-fdba49980ce9.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\3ae6803e-ebae-4490-ac81-5a91e58c73b7.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\3b9da8c3-ae63-43dc-b831-44f327badc19.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\3eb32833-343e-406d-8e2e-ab41f785591b.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\41f649f7-1d06-4243-8a80-41899c1b9bd3.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\459caa4d-e2bf-4236-8aeb-3dd5098c1073.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\45bc5706-4974-4ebd-9c1e-bbf84a7bc859.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\45fe4cbc-b446-4ba0-ad86-23c9a5500b47.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\474ac1ec-f663-4a6c-95e2-164fde3903cd.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\5558dc40-f986-41d2-9d78-cd53fa19bcce.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\5db799a6-1cd6-42f4-a844-2ae469345ecf.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\60b646e2-0e2b-41cd-83c9-f7a3e6efe354.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\63b2e665-48fc-4662-9692-ead6732e7f1a.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\65bdd9cd-d731-4807-9fe4-02e88ab343f0.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\6a3e7381-764e-446e-9f47-8099eade12ac.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\6c820f47-62fb-4909-bbbb-45bac5cca980.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\74238803-f511-47cb-8181-16c16feb2bf6.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\74649a61-b06e-48da-bc7c-1cb6b320fd9e.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\7626dc15-6ce8-45d4-8f11-9eb9aecd309d.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\7dc87b22-17f5-4d98-bc43-2aa21825752f.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\7f93ee19-934d-4b8e-995f-6fbe58a841b1.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\7faf11ca-738a-4866-b07f-099ab38f8649.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\84166d46-67a8-48ea-9d4a-39c37fad7e61.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\85a2a8a9-9662-4039-bdd1-4680d91f9b34.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\90ebb324-b045-4626-ac94-16921fa776e2.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\9569b298-87be-4c38-b9e7-6f2cb0be5c35.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\967bf2e9-075b-48e5-98f3-9c3a4f80013d.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\9acf2190-4f62-4781-8156-b93abd7334ad.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\9ca3d38d-c0a6-40f8-b1a4-2bf292a611d8.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\a2c738f6-8600-4582-9c8f-fba9d48b5f4f.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\a53b17eb-beb9-4c55-a570-5509b574abc8.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\a83df472-6421-474c-8e25-3ecd6761088e.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\a8edd501-38b2-4c98-a17b-acedf6a7c018.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\aaabdf9c-93bd-47ff-928f-a82c5dcbc14e.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\acdf5e80-be9d-410b-9f3c-76f81926c801.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\ae3334f2-7d75-4a92-af80-c7ed903d6e55.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\c6dad9da-320f-4c7e-8c0f-f6f71f6440df.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\cae56436-654f-4d49-bfb8-f1f48342ed7e.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\d74886ea-8c00-4a5c-931d-3d3eeca77cf5.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\dddab0a9-5ef7-4595-8ab9-4d172e26ed90.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\e12bda94-b368-4bac-be3a-b7132a917316.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\e269f978-b2ce-4062-9473-76c6d37cd21a.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\e28bffe8-009a-4eb2-9157-ffbd09e45737.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\e54804c7-5347-49f1-86ab-fcfc3faba2d4.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\e71175ec-231b-4ff0-a2de-eb4bda365371.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\e8cb7d38-0bb2-49ac-b992-92237396e7e4.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\ea553512-c2c5-4211-9de0-d6d1ebc26d8e.xml" />
+    <Content Include="DataStore\Limits\MenusForUser\f41a8c52-23e1-4888-b18a-149310647c5a.xml" />
+    <Content Include="ExtensionsCtrls\SelectUsers\areadme.txt" />
+    <Content Include="ExtensionsCtrls\SelectUsers\PgSelectUsers.aspx" />
+    <Content Include="Ajaxget\api.asmx" />
+    <Content Include="DataStore\Limits_Adminer.txt" />
+    <Content Include="DataStore\Limits_User.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="js\comm.js" />
+    <Content Include="Readme.txt" />
+    <Content Include="DataStore\Menus_Admin.txt" />
+    <Content Include="DataStore\Menus_User.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Setting.ascx" />
+    <Content Include="testUserInfo.ascx" />
+    <Content Include="开发文件档.txt" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataStore\Configs\Base.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataStore\Configs\Setting.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Css\" />
+    <Folder Include="DataStore\Attachments\Help\" />
+    <Folder Include="DataStore\Limits\LimitGroup\" />
+    <Folder Include="DataStore\Limits\LimitRole\" />
+    <Folder Include="DataStore\Menus\AdminPage\" />
+    <Folder Include="DataStore\Menus\UserPage\" />
+    <Folder Include="UserPages\Controls\" />
+    <Folder Include="Widgets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="setupendinfo.txt" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6791</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>1</Permission>
+  <ModuleID>5a2d821b-586c-4ac4-bdac-1567d5d1a515</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/exam/data/Modules/ModuleList/exam/AdminPages/Exam.aspx</ParentUrl>
+  <FileName>QuestionsList.ascx</FileName>
+  <PageName>所有考题</PageName>
+  <ParentID>52c1c091-eb45-431e-a880-f32e9c3593a7</ParentID>
+  <OrderID>2</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>75a5534f-e3be-4adb-a697-4978dccf5c53</id>
+</ModulePageInfo>

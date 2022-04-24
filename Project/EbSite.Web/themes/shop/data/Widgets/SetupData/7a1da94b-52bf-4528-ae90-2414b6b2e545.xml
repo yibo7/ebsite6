@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="temtitle" Value="00000000-0000-0000-0000-000000000000" />
+    <DictionaryEntry Key="countimg" Value="" />
+    <DictionaryEntry Key="issetid" Value="0" />
+    <DictionaryEntry Key="temmorelist" Value="00000000-0000-0000-0000-000000000000" />
+    <DictionaryEntry Key="classitem" Value="" />
+    <DictionaryEntry Key="drptype" Value="1" />
+    <DictionaryEntry Key="orderbysubclass" Value="z" />
+    <DictionaryEntry Key="counttitle" Value="5" />
+    <DictionaryEntry Key="temsubclass" Value="00000000-0000-0000-0000-000000000000" />
+    <DictionaryEntry Key="listmodel" Value="1" />
+    <DictionaryEntry Key="subclassorcontent" Value="0" />
+    <DictionaryEntry Key="temimg" Value="00000000-0000-0000-0000-000000000000" />
+    <DictionaryEntry Key="siteid" Value="2" />
+    <DictionaryEntry Key="countsubclass" Value="" />
+    <DictionaryEntry Key="isshownum" Value="False" />
+    <DictionaryEntry Key="isgetsub" Value="False" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>7</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/UserPages/OrderManage.aspx</ParentUrl>
+  <FileName>MyCloseOrder.ascx</FileName>
+  <PageName>关闭订单</PageName>
+  <ParentID>acd22185-6164-40ba-9a11-3c039d76c396</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>52c7482e-4d2d-4aa0-97f3-6cf05a59c2b2</id>
+</ModulePageInfo>

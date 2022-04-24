@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PagesCustomMini.master.cs" Inherits="EbSite.Web.AdminHt.PagesCustomMini" %>
+
+<%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
+<!DOCTYPE html>
+<html style="background: #fff !important;">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="Coderthemes">
+    <title>通用</title> 
+</head>
+ <!-- 这个母版页面主要应用于弹出窗之类-->
+<body style="background:#ffffff !important;">
+ 
+    <form runat="server">
+        <asp:ContentPlaceHolder ID="ctphBody" runat="server"></asp:ContentPlaceHolder>
+    </form>
+    <!-- END wrapper -->
+
+    <script>var resizefunc = [];</script>
+    <%--<script type="text/javascript" src="<% =AdminPath%>themes/Ubold/js/jquery.app.js"></script>--%>
+ 
+</body>
+</html>

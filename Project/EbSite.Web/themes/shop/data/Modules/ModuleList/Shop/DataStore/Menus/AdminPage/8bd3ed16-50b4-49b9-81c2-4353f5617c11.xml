@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>34</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/Promotions.aspx</ParentUrl>
+  <FileName>PromoAddProduct.ascx</FileName>
+  <PageName>选择促销商品</PageName>
+  <ParentID>488df078-d362-4c1a-8519-5b9b8c31c6df</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>8bd3ed16-50b4-49b9-81c2-4353f5617c11</id>
+</ModulePageInfo>

@@ -1,0 +1,1 @@
+<li><a href="<%#EbSite.Base.Host.Instance.MGetSpecialHref(Eval("ID").ToString(),1)%>"><%# Eval("SpecialName")%></a></li>

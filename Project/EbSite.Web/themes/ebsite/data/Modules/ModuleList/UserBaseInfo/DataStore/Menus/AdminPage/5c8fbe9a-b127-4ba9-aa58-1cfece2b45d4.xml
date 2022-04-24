@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>10</Permission>
+  <ModuleID>8961c5b2-43f2-4298-8145-f0965aff70a0</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/ebsite/data/Modules/ModuleList/UserBaseInfo/AdminPages/Splace.aspx</ParentUrl>
+  <FileName>LayoutPaneAdd.ascx</FileName>
+  <PageName />
+  <ParentID>629719d5-76f2-49f5-a2db-1a998e7672fd</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>5c8fbe9a-b127-4ba9-aa58-1cfece2b45d4</id>
+</ModulePageInfo>

@@ -1,0 +1,115 @@
+﻿@import url("toolbar.css");
+@import url("toolbar.default.css");
+
+html,body{margin:0;padding:0;border:0}
+body{font-family:Arial,sans-serif;font-size:16px;background:#fff;color:#000;word-wrap:break-word;-webkit-text-size-adjust:none}
+ html
+        {
+            background: #EEE;
+        }
+body
+{
+            background: #EEE;
+            position: relative;
+            height: auto;
+            min-height: 420px;
+}
+a:link,a:visited{text-decoration:none;}
+a:hover,a:active{text-decoration:underline;}
+*:focus {outline: none;}
+.w-navigator
+{
+    border:1px solid #d4d3d3;background-color:#e5e5e5;border-top:0;line-height:42px;height:42px;
+    display:-webkit-box;text-align:center;margin-bottom:1px;-webkit-box-shadow:0 1px white;box-shadow:0 1px white
+}
+.w-navigator img{ margin-top: 5px;}
+ .w-navigator a{-webkit-box-flex:1;display:block;color:#969696}
+ .w-navigator a:first-child{color:#5E1D00}
+ .w-navigator b{display:block;color:#969696;font-size:13px;font-weight:normal}
+ .w-navigator .unread
+ {
+     display:inline-block;font-size:12px;position:absolute;visibility:hidden;line-height:14px;
+     background:#ff8402;border:1px solid #feb300;color:white;min-width:14px;border-radius:4px;margin-top:3px;right:10px
+ }
+ 
+ 
+.content h2
+{
+            margin: 20px auto 10px 20px;
+            font-weight: normal;
+            font-size: 14px;
+            color: #969696;
+        }
+.content h2 strong
+        {
+            color: #5E1D00;
+            font-weight: normal;
+        }
+
+
+.regbtn{border:solid #34B100;border-width:1px 1px 1px 0;background:#912D00;line-height:29px;height:30px;margin:5px 0 0 20px;padding:0 8px 0 6px; color:#ffffff; font-weight:bold;}
+.loginbtn{border:solid #34B100;border-width:1px 1px 1px 0;background:#912D00;line-height:29px;height:30px;margin:5px 0 0 20px;padding:0 8px 0 6px; color:#ffffff; font-weight:bold;}
+
+.foot{background-color:#DEDEDE; height:50px;text-align: center;border-top: 1px solid #C4C4C4;padding: 8px; }
+.foot div{padding: 2px;}
+
+.post-title{ padding: 6px;font-weight: bold;background: #C1C7BF;color: #000; border-bottom: 1px solid #A1A69F;text-align: center; }
+.post-box{ padding: 8px;background: #fff; }
+
+.posttips{ font-size: 12px;font-weight: normal;background: #C1C7BF;padding: 3px;border-bottom: 1px solid #B0B5AE; border-top: 1px solid #B0B5AE;position: fixed;width: 100%; }
+.posttips span,.posttips span a{ padding-right: 15px;color: #6A7366; }
+
+.panel-dir li a {
+    color: #fff; 
+}
+    .panel-dir li 
+    {
+        height: 28px;line-height: 28px;
+    }
+
+.replycontent{ background: #EBE1CF;padding: 8px;border: 1px solid #D6CDBC;}
+ .PagesClass{ display: block;}
+ .PagesClass td{ padding: 5px;}
+ .PagesClass td a{ display: block;border: 1px solid #ccc; padding-left:15px; padding-right:15px;_display:inline-block;padding-top: 3px;padding-bottom: 3px;}
+.CurrentPageCoder a{ background:#F5F5F5;}
+
+#push-right {
+     display: inline-block;
+    position: relative;
+    padding-left: 8px;
+    text-align: center;
+    text-decoration: none;
+    background: #AC2F07;color: #fff;
+    text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+   
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+ 
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+ 
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
+
+.toolbar{ 
+    background: #5E1D00; border:#451500 solid 1px;
+    }
+     .toolbar .button{border:1px solid #A33200;  background-color:#B23700;}
+    .w-home-search input[type=submit],input[type=button] 
+ {
+     width:83px;float:right;border:1px solid #A33200;
+     border-radius:0 2px 2px 0;
+     line-height:47px;
+     height:47px;font-weight:bold;font-size:16px;color:white;
+     text-shadow:0 -1px 1px #777;
+     -webkit-box-shadow:1px 1px 0 #A33200 inset;
+     box-shadow:1px 1px 0 #B23700 inset;
+     background:-webkit-gradient(linear,left top,left bottom,from(#A33200),to(#B23700))
+ }
+ .PagesClass{ display: none;}

@@ -1,0 +1,87 @@
+﻿* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+HTML {
+	BACKGROUND-COLOR: #edf1f4; HEIGHT: 100%; FONT-SIZE: 12px; OVERFLOW: hidden
+}
+BODY {
+	BACKGROUND-COLOR: #edf1f4; HEIGHT: 100%; FONT-SIZE: 12px; OVERFLOW: hidden
+}
+UL {
+	LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none
+}
+A {
+	TEXT-DECORATION: none
+}
+
+ /*tinybox.js样式*/
+ .zxx_list_title{background:#eeeeee; border:1px solid #cccccc; padding:1em;}
+.zxx_list_content{padding:1em;}
+#tinybox{position:absolute; display:none; padding:10px; background:#ffffff url(preload.gif) no-repeat 50% 50%; border:10px solid #878787; z-index:2000;}
+#tinymask{position:absolute; display:none; top:0; left:0; height:100%; width:100%; background:#000000; z-index:1500;}
+#tinycontent{background:#ffffff; font-size:1.1em;}
+ /*end tinybox.js样式*/
+
+.bigbox{ width:100%; }
+.banner{background:url(leftico.png) repeat-x 0px 0px;height:81px; }
+.banner div{ float:left;}
+.bannerbtm{background:url(leftico.png) repeat-x -1px -85px;height:32px; }
+.rtitle{ height:30px; line-height:30px; font-size:14px;}
+
+.lbox-top{background:url(leftico.png) repeat-x -1px -126px;height:30px; width:100%;}
+.divmsgbox{ padding-left:10px; height:250px;overflow-y: auto;}
+.divmsgbox div{ width:100%;}
+.divmsgbox  .userspeak .title{ color:#008200;line-height:20px;}
+.divmsgbox  .userspeak .msg{ color:#8A0000;  padding-left:25px; width:90%; line-height:20px;}
+.divmsgbox  .myspeak .title{ color:#0000FF; line-height:20px;}
+.divmsgbox  .myspeak .msg{ color:#363636; padding-left:25px; width:90%; line-height:20px;}
+
+
+.toolbar{background:url(leftico.png) repeat-x 0 -165px;height:34px; }
+.toolbar .btns{}
+.toolbar .btns li{ float:left;background:url(adminico.png) no-repeat 0 0;height:23px; width:23px; margin-top:5px; list-style:none; margin-left:8px;cursor:pointer;}
+.inputbox{ width:100%; height:68px; }
+#message{border-style: none; height:68px; width:100%;overflow-x:hidden;overflow-y:hidden;}
+
+.bannerbtm{ padding-right:150px;}
+.bannerbtm div{background:url(adminico.png) no-repeat 0 0; float:right; margin-left:10px; margin-bottom:2px; text-align:center; line-height:23px; cursor:pointer;}
+.bannerbtm div.btnclose{height:23px;width:71px;background-position:-14px -101px;}
+.bannerbtm div.btnsend{width:85px;height:23px;background-position:-89px -101px;}
+
+.photobox{ clear:both; background:#CACFC9; border:1px solid #BBBFBA; padding:5px;  margin-top:10px;}
+.csinfo{ margin-top:5px; line-height:20px;}
+.csinfo li{ list-style:none;}
+.cpinfo{ color:#929587;line-height:20px;}
+.banner .tags{ margin-left:20px;}
+.banner .tags li{ float:left; list-style:none;  margin-top:51px; text-align:center; line-height:30px;margin-left:30px; color:#D7E1D2; cursor:pointer;}
+.banner .tags li.current{background:url(adminico.png) no-repeat 0 0;width:90px;height:30px;background-position:-207px -10px; color:#000;}
+#pSWFUPBox{ display:none; width:100%; border-top:1px solid #ccc; line-height:35px; padding-bottom:10px; background:#FFF8E3;}
+#pSWFUPBox input{ width:280px;}
+#selbox{ display:none;}
+#txtamsgboxstep{height:50px;  width:80%;overflow-x:hidden;overflow-y:hidden;}
+.uploadfilebtn{background:url(adminico.png) no-repeat 0 0; cursor:pointer; background-position:-102px -69px;  width:100px;height:25px; margin-top:3px; float:right; margin-right:2px; line-height:25px; text-align:center; color:#fff; display:block;}
+#txtparent input{ height:50px; padding:5px;}
+
+/*下拉样式开始*/
+.dropdown {outline:none;display:inline-block;*display:inline;}
+.dropdown h4{cursor:default; text-indent:5px; margin:0; padding:0;}
+.dropdown * {-moz-user-select:none;}
+.dropdown h4.over {}
+.dropdown div {display:block; /*fix bug*/}
+.dropdown ul{position:absolute;display:none;margin:0;padding:0;float:left;clear:both;}
+.dropdown ul li{text-indent:5px;margin:0;padding:0;list-style:none;display:block;cursor:default;}
+.dropdown ul li.over{}
+.dropselectbox {display:inline; float:left; margin-right:0px;overflow:hidden;}
+/* write you style here */
+
+.dropdown h4{font:12px/21px Arial, Helvetica, sans-serif; background:url(selbg.png) no-repeat right center; font-size:30px;height:45px; line-height:45px;}
+.dropdown h4.over{border-color:#369; background-image:url(selbg.png);}
+.dropdown h4.current{border-color:#5B7D1C;}
+.dropdown ul{border:1px solid #AAA; background:#FFF;overflow: auto; height: 380px;  }
+.dropdown ul li{background:#FFF;height:25px;  font:400 14px/19px Arial, Helvetica, sans-serif; line-height:25px; background-color: #FFC07A; }
+.dropdown ul li.over{background:#C46700; color:#FFF;}
+/*下拉样式结束*/
+
+.appraise div{ height:25px; line-height:25px;}
+.appraise .title{ font-weight:bold;}
+.appraise div.btns { height:80px; line-height:80px; margin-top:10px;}

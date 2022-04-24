@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<PsFreight>
+  <TemplateName>免邮费模板</TemplateName>
+  <StartWeight>100</StartWeight>
+  <AddWeight>0</AddWeight>
+  <StartPrice>0</StartPrice>
+  <AddPrice>0</AddPrice>
+  <id>2</id>
+</PsFreight>

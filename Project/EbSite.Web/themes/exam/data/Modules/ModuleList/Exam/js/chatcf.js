@@ -1,0 +1,1 @@
+﻿var chatcf = [ {  id: 9, realname: "开心",uid:"23", photo: "/ajaxget/uico.ashx?uid=23",gid:1},{  id: 8, realname: "刘春阳",uid:"26", photo: "/ajaxget/uico.ashx?uid=26",gid:1},{  id: 5, realname: "王淑英",uid:"1", photo: "/ajaxget/uico.ashx?uid=1",gid:1}] ;

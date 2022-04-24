@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<PsFreight>
+  <TemplateName>普通快递运费模板</TemplateName>
+  <StartWeight>500</StartWeight>
+  <AddWeight>250</AddWeight>
+  <StartPrice>15</StartPrice>
+  <AddPrice>5</AddPrice>
+  <id>3</id>
+</PsFreight>

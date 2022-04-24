@@ -1,0 +1,36 @@
+.ebvalidatebox-invalid{
+	background:#FFFFEE url('validatebox_warning.png') no-repeat right 1px;
+	 background-color:#FFD3AD;
+}
+.ebvalidatebox-ok{
+	background:#FFFFEE url('ok.gif') no-repeat right 1px;
+}
+
+.ebvalidatebox-tip{
+	position:absolute;
+	width:200px;
+	height:auto;
+	display:none;
+	z-index:9900000;
+}
+.ebvalidatebox-tip-content{
+	display:inline-block;
+	position:absolute;
+	top:0px;
+	left:10px;
+	padding:3px 5px;
+	border:1px solid #CC9933;
+	background:#FFFFCC;
+	z-index:9900001;
+	font-size:12px;
+}
+.ebvalidatebox-tip-pointer{
+	background:url('validatebox_pointer.gif') no-repeat left top;
+	display:inline-block;
+	width:10px;
+	height:19px;
+	position:absolute;
+	left:1px;
+	top:0px;
+	z-index:9900002;
+}

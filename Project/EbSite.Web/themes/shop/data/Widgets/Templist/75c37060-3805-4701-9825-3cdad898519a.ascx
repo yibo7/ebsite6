@@ -1,0 +1,1 @@
+<li class="">&#9654;<a href="<%#EbSite.Base.Host.Instance.GetContentLink(Eval("ID"),Eval("HtmlName"),Eval("classid"))%>" ><%# Eval("newstitle") %></a></li>

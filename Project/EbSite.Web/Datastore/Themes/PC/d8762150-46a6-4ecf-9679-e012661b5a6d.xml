@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Themes>
+  <SiteID>3</SiteID>
+  <FullPath>/themes/shop/</FullPath>
+  <ThemePath>shop</ThemePath>
+  <IndexUrl>/themes/shop/pages/index.aspx</IndexUrl>
+  <SmallImg>/themes/shop/SmallImg.jpg</SmallImg>
+  <BigImg>/themes/shop/BigImg.jpg</BigImg>
+  <AddDate>2012/12/14 16:13:53</AddDate>
+  <id>d8762150-46a6-4ecf-9679-e012661b5a6d</id>
+</Themes>

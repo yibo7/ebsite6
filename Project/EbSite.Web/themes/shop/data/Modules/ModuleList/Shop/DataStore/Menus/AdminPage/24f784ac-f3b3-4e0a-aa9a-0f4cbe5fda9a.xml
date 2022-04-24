@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>96</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/FloorSet.aspx</ParentUrl>
+  <FileName>MSetAdvLink.ascx</FileName>
+  <PageName>手机设置广告链接</PageName>
+  <ParentID>474c0eda-f726-4cd9-b619-757798c233f1</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>24f784ac-f3b3-4e0a-aa9a-0f4cbe5fda9a</id>
+</ModulePageInfo>

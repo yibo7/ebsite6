@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="txtcid" Value="2" />
+    <DictionaryEntry Key="txtsitename" Value="shop" />
+    <DictionaryEntry Key="siteid" Value="3" />
+    <DictionaryEntry Key="sitename" Value="shop" />
+    <DictionaryEntry Key="txtguid" Value="c2daaf44-7cec-4bb7-9ce3-8ea96e7c3b8b" />
+    <DictionaryEntry Key="radpage" Value="1" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

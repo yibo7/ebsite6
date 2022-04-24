@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>4e0edb7e-1b30-41ad-9f74-d63c80458c35</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/wenda/data/Modules/ModuleList/wenda/UserPages/MyAskManage.aspx</ParentUrl>
+  <FileName>MyMsg.ascx</FileName>
+  <PageName>我的消息</PageName>
+  <ParentID>b8db356c-9000-4e9a-8aaa-c508bc80c309</ParentID>
+  <OrderID>5</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>8cd05ba1-9b8d-4e03-96f4-c96433a0b496</id>
+</ModulePageInfo>

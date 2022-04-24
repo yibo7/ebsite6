@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>获取标签搜索结果列表地址-电脑版</Title>
+  <GetCode>&lt;%=EbSite.Base.Host.Instance.TagsSearchList(object id, int p)%&gt;</GetCode>
+  <Author>EbSite</Author>
+  <Demo> /// &lt;summary&gt;
+        /// 获取标签搜索结果列表地址
+        /// &lt;/summary&gt;
+        /// &lt;param name="id"&gt;标签ID&lt;/param&gt;
+        /// &lt;param name="p"&gt;页码&lt;/param&gt;</Demo>
+  <id>3cb45a54-55d3-4f5d-99f7-b3b3c7033d52</id>
+</TemMethodInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<OrderBoxInfo>
+  <Title>第一步选择品牌</Title>
+  <Tips>亲，我是客服#客服#,很高兴为您服务，我会在最短时间为您回复，请选择您的车品牌</Tips>
+  <Items />
+  <DefaultParentClassID>3,4,5,6</DefaultParentClassID>
+  <OrderID>1</OrderID>
+  <StepType>2</StepType>
+  <Seltip>请您选择车品牌</Seltip>
+  <Utem>我的车是#用户输入#车</Utem>
+  <ValidationRule>0</ValidationRule>
+  <IsNullText>1</IsNullText>
+  <SoureTable>1</SoureTable>
+  <FieldName>brandinfo</FieldName>
+  <CloseNum>3</CloseNum>
+  <id>4</id>
+</OrderBoxInfo>

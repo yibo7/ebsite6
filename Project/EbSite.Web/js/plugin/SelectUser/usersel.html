@@ -1,0 +1,130 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src="/js/init.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/inc.js" ></script>
+    <script type="text/javascript" src="/js/comm.js"></script>
+    <script type="text/javascript" src="/js/json2.js"></script>
+    <script type="text/javascript" src="/js/customctr.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <style>
+        body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td
+        {
+            margin: 0;
+            padding: 0;
+        }
+        html, body
+        {
+            height: 100%;
+        }
+        body
+        {
+            height: auto !important;
+            color: #666;
+            background-color: #FFFDF2;
+            font: 400 12px/150% Tahoma, Helvetica, Arial, sans-serif;
+            border: 1px solid #ADACA0;
+        }
+        .seluserlsit li
+        {
+            display: inline;
+            margin: 8px;
+            padding: 3px;
+            width: 80px;
+            font-size: 12px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .seluserlsit .current
+        {
+            background-color: #EBE9DF;
+            border: 1px solid #C7C6BD;
+            color: #ff0000;
+        }
+        .toolbar
+        {
+            border-bottom: 1px solid #C7C6BD;
+            color: #ff0000;
+            padding: 5px;
+            background-color: #D6D4C5;
+        }
+    </style>
+    <div class="toolbar">
+        <input id="usernamekey" type="text" size="20" />
+        <input id="btnsearch" type="button" value="检索" />
+    </div>
+    <div class="seluserlsit">
+        <ul>
+        </ul>
+    </div>
+    <script>
+
+        var istype = GetUrlParams("sType"); //0:多选 1：单选
+        $(function () {
+            loaddata("");
+            $("#btnsearch").click(function () {
+                var k = $("#usernamekey").val();
+                loaddata(k);
+            });
+        });
+        function loaddata(keyword) {
+            var igid = GetUrlParams("gid");
+            var pram = { gid: igid, k: keyword };
+            
+            runebws("GetUsers", pram, getdatacomp);
+        }
+        function getdatacomp(rzd) {
+            var rz = rzd.d;
+            var shtml = "";
+            if (rz.length > 0) {
+                for (var i = 0; i < rz.length; i++) {
+                    var obdata = rz[i];
+                    shtml += "<li un='" + obdata.UserName + "' uid=\"" + obdata.UserID + "\">" + obdata.UserNiName + "</li>";
+                }
+            }
+            $(".seluserlsit ul").html(shtml);
+
+            $(".seluserlsit li").click(function () {
+                $(".seluserlsit li").removeClass();
+                $(this).addClass("current");
+                var uid = $(this).attr("uid");
+                var uniname = $(this).text();
+                var uname = $(this).attr("un");
+                setuservalue(uname, uid, uniname);
+            });
+        }
+        function setuservalue(uname, uid, uniname) {
+            var obuname = $(parent.document.getElementById(GetUrlParams("obuname")));
+            var obuid = $(parent.document.getElementById(GetUrlParams("obuid")));
+            var obuniname = $(parent.document.getElementById(GetUrlParams("obuniname")));
+            if (istype == 0) {
+                if (obuname.val() == "") {
+                    obuname.val(uname);
+                }
+                else {
+                    obuname.val(obuname.val() + "," + uname);
+                }
+
+                if (obuid.val() == "") {
+                    obuid.val(uid);
+                }
+                else {
+                    obuid.val(obuid.val() + "," + uid);
+                }
+
+                if (obuniname.val() == "") {
+                    obuniname.val(uniname);
+                }
+                else {
+                    obuniname.val(obuniname.val() + "," + uniname);
+                }
+            }
+            else {
+                obuname.val(uname); obuid.val(uid); obuniname.val(uniname);
+            }
+        }
+    </script>
+</body>
+</html>

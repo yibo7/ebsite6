@@ -1,0 +1,62 @@
+﻿ /*防复制采集*/
+.hs_kw19::before {
+    content: "小";
+}
+.hs_kw18::before {
+    content: "很";
+}
+.hs_kw17::before {
+    content: "好";
+}
+.hs_kw16::before {
+    content: "着";
+}
+.hs_kw15::before {
+    content: "下";
+}
+.hs_kw14::before {
+    content: "低";
+}
+.hs_kw13::before {
+    content: "。";
+}
+.hs_kw12::before {
+    content: "高";
+}
+.hs_kw11::before {
+    content: "右";
+}
+.hs_kw10::before {
+    content: "左";
+}
+.hs_kw9::before {
+    content: "少";
+}
+.hs_kw8::before {
+    content: "上";
+}
+.hs_kw7::before {
+    content: "的";
+}
+.hs_kw6::before {
+    content: "是";
+}
+.hs_kw5::before {
+    content: "！";
+}
+.hs_kw4::before {
+    content: "不";
+}
+.hs_kw3::before {
+    content: "一";
+}
+.hs_kw2::before {
+    content: "，";
+}
+.hs_kw1::before {
+    content: "多";
+}
+.hs_kw0::before {
+    content: "了";
+}
+ 

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>95</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/FloorSet.aspx</ParentUrl>
+  <FileName>AdvLinkList.ascx</FileName>
+  <PageName>广告链接列表</PageName>
+  <ParentID>474c0eda-f726-4cd9-b619-757798c233f1</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>c8351c61-f68c-4d9c-a651-16870dcdd1ea</id>
+</ModulePageInfo>

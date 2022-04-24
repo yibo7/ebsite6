@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>33</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/Supplier.aspx</ParentUrl>
+  <FileName>SuppliersShow.ascx</FileName>
+  <PageName>供货商查看</PageName>
+  <ParentID>2f68985a-d70b-4eb4-8e61-974f6532f8ee</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>78a24363-95e5-4e81-bc6b-cab0d5744cf8</id>
+</ModulePageInfo>

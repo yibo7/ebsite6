@@ -1,0 +1,36 @@
+﻿379 .b{ border-bottom:#E6CCAE 1px dashed; _display:inline-block;}
+
+303 .pkpro2 li dl{ width:110px;}
+
+
+252 .tab3 li input{ color:#666; padding-left:5px; _padding-left:2px;line-height:30px;}
+
+448..tpl ul li dt{ float:left;text-align:center; width:90px;}
+
+55. .con1l{ float:left; width:200px; background:#F7F7F7; }  // overflow:hidden;
+
+121 .tab_ll{ float:left; margin-left:-1px;background-color: red;width: 201px;}//width: 201px;
+
+126 .protab li 
+{
+    float:left; 
+    width:160px;
+    height: 268px;
+   
+    padding-left:12px;
+    padding-right:8px;
+    _margin-left:2px;
+    _padding-right:4px;
+    margin-top:5px; 
+    text-align:left; 
+    line-height:18px;
+    border-right:#CCCCCC 1px solid;
+    border-bottom:#CCCCCC 1px solid;
+    }
+
+	92..pr_info{ width:242px;height: 130px; border-bottom:#C6C6C6 1px solid;border-right:#C6C6C6 1px solid; overflow:hidden; float:left;  padding-left:20px;padding-top:19px;padding-bottom:19px; }
+	//height: 130px;
+
+813 .kscjbtn{width:115px;height:45px;background-position: -330px -110px;}
+
+806. .jfinfol img{ border:#CCCCCC 1px solid; padding:9px; margin-right:10px; }

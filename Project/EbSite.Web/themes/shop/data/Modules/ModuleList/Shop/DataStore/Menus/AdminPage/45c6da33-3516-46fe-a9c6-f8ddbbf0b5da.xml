@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>87</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/CreditProduct.aspx</ParentUrl>
+  <FileName>ListClass.ascx</FileName>
+  <PageName>积分分类</PageName>
+  <ParentID>625dcf9b-4a6b-4ff8-9254-7ea7fa8e80f6</ParentID>
+  <OrderID>2</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>45c6da33-3516-46fe-a9c6-f8ddbbf0b5da</id>
+</ModulePageInfo>

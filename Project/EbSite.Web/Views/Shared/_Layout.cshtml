@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/content/skin.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="MobileOptimized" content="320" />
+    @Scripts.Render("~/bundles/jquery")
+
+</head>
+<body>
+<header class="header">
+    <div style="height: 15px; line-height: 15px;  position: absolute; left: 0; top: 5px; width: 30px;display: none " class="button black">
+        返回
+    </div>
+    <a href="/" class="logo"><img src="/images/logo.png" /></a>
+@using (Html.BeginForm("Index", "search", FormMethod.Get, new { @class = "header-search" }))
+{ 
+    <fieldset>
+        <legend>搜索表单</legend> 
+        <input type="text" id="key" name="key" value="@ViewBag.key" placeholder="请输入要搜索的配件" />
+        <input type="submit" id="search" value="搜索" />
+    </fieldset>
+}
+</header>
+    <section style="display: none" id="AutoComplateBox" class="main">
+        <ul class="ul-search">
+            <a href="/search?key=倒车镜"><li>倒车镜(约<font color="red">11872</font>)</li></a>
+            <a href="/search?key=发动机组件"><li>发动机组件(约<font color="red">137191</font>)</li></a>
+            <a href="/search?key=灯泡"><li>灯泡(约<font color="red">13276</font>)</li></a> 
+        </ul>
+    </section>
+@RenderBody()
+<!--底部 start-->
+<footer class="footer">
+    <ul class="ul-foot-nav">
+        <li @*class="on"*@><a href="/" class="f-1">首页</a></li>
+        <li><a href="/cl/peijianxuanzefenlei" class="f-2">分类</a></li>
+        <li><a href="/fb/index" class="f-3">快速闪购</a></li>
+        <li><a href="/cart/currentcart.action" class="f-4">购物车<span class="num-s">@ViewBag.CartCount</span></a></li>
+        <li><a href="/user/" class="f-5">个人中心</a></li>
+    </ul>
+</footer>
+
+<script>
+    $("#key").click(function () {
+        $("#AutoComplateBox").show();
+        $("header div").show();
+        $("header a").hide();
+    });
+    $("header div").click(function() {
+        $("#AutoComplateBox").hide();
+        $("header div").hide();
+        $("header a").show();
+    });
+    var oldkeyword = "";
+
+    $('#key').bind('input', function () {
+        var keyword = $.trim($("#key").val());
+        if (keyword != "" && oldkeyword != keyword) {
+            oldkeyword = keyword;
+            $(".ul-search").empty();
+            runajax("AutoComplate", { key: keyword }, function (data) {
+                if (data != undefined) {
+                    for (var i = 0; i < data.length; i++) {
+                        var model = data[i];
+                        $(".ul-search").append("<a href='/search?key=" + model.KeyWord + "'><li>" + model.KeyWord + "(约<font color=red>" + model.Count + "</font>)</li></a>");
+                    }
+                }
+
+            });
+        }
+    });
+    
+</script>
+<!--底部 end-->
+</body>
+</html>

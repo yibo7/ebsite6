@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="txtwidth" Value="" />
+    <DictionaryEntry Key="cbpicaddmak" Value="False" />
+    <DictionaryEntry Key="txtheight" Value="" />
+    <DictionaryEntry Key="cbdownfile" Value="False" />
+    <DictionaryEntry Key="drpboxtype" Value="0" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

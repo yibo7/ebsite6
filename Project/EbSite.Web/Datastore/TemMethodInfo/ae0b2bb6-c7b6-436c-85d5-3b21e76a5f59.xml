@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>获取当前内容选中的样式-电脑版</Title>
+  <GetCode>&lt;%=EbSite.Common.GetCurrentContent(object ob, string sCurrentClassName)%&gt;</GetCode>
+  <Author>IBM</Author>
+  <Demo> /// &lt;summary&gt;
+        ///获取当前内容选中的样式-电脑版       
+     /// &lt;/summary&gt;
+        /// &lt;param name="object ob"&gt;内容ID&lt;/param&gt;
+        /// &lt;param name=" sCurrentClassName"&gt;样式名称&lt;/param&gt;
+    </Demo>
+  <id>ae0b2bb6-c7b6-436c-85d5-3b21e76a5f59</id>
+</TemMethodInfo>

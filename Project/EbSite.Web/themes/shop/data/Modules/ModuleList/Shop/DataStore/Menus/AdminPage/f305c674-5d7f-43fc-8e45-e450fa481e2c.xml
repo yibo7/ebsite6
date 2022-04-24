@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>63</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/ExportData.aspx</ParentUrl>
+  <FileName>taobaoin.ascx</FileName>
+  <PageName>导入淘宝数据包</PageName>
+  <ParentID>02250f53-79cc-43fd-ac7a-a4209ca04c4e</ParentID>
+  <OrderID>3</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>f305c674-5d7f-43fc-8e45-e450fa481e2c</id>
+</ModulePageInfo>

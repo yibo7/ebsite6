@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TemMethodInfo>
+  <Title>获取分类连接地址-电脑版</Title>
+  <GetCode>&lt;%=EbSite.Base.Host.Instance.GetClassHref(object iID, object HtmlPath, int pIndex)%&gt;</GetCode>
+  <Author>EbSite</Author>
+  <Demo>/// &lt;summary&gt;
+/// 获取分类连接地址
+/// &lt;/summary&gt;
+/// &lt;param name="iID"&gt;分类ID&lt;/param&gt;
+/// &lt;param name="HtmlPath"&gt;html生成名称&lt;/param&gt;
+/// &lt;param name="pIndex"&gt;页码&lt;/param&gt;
+/// &lt;param name="OutLink"&gt;外部连接&lt;/param&gt;</Demo>
+  <id>75b36c68-a927-4a71-a69f-8c5e73cae824</id>
+</TemMethodInfo>

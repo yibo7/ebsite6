@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission />
+  <ModuleID>8961c5b2-43f2-4298-8145-f0965aff70a0</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/ebsite/data/Modules/ModuleList/UserBaseInfo/UserPages/MAddress.aspx</ParentUrl>
+  <FileName>Show.ascx</FileName>
+  <PageName />
+  <ParentID>df67a61e-9720-44d3-9b6f-77c6c4e2d3f6</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>6836309c-c063-4226-a39e-a8d71e7c527d</id>
+</ModulePageInfo>

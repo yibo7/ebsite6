@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  Inherits="EbSite.Web.Pages.UserPagesTem" %>
+<%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1"  runat="server" >
+    <title>通用</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+</head>
+<body style="text-align:center;">
+<div class="usertop">
+    <div class="content" style="width:990px; margin:auto; padding-left:5px;">
+    <div class="fLeft" >        
+        <a href="<% =EbSite.Base.Host.Instance.IISPath%>">网站首页</a> | <a>联系我们</a> 
+    </div>
+    <div class="fRight">
+        <span id="login_info"></span>
+    </div>
+</div>
+</div>
+<div style="width:auto; overflow:hidden;" >
+<form id="form1" runat="server">
+<div class="content" style="width:990px; margin:8px auto; overflow:hidden;margin-bottom:10px;">
+    <div class="fLeft" >        
+        <img height="60"  src="<% =EbSite.Base.Host.Instance.ThemePath%>css/images/smalllogo.gif" />
+    </div>
+</div>
+<div class="content" style="width:990px; margin:8px auto;">
+    <div class="fLeft" style="width:150px;" >
+    
+        <div class="u_leftptitile">
+            用户中心<a href="<% =EbSite.Base.Host.Instance.UccIndexRw%>">管理首页</a>
+        </div>
+        <div class="u_lefttitile">
+            我的应用ffff
+        </div>
+        <div class="u_leftlist">
+          <asp:repeater id="rpMenus" runat="server">            
+                                <ItemTemplate>
+                                    <div >      
+                                            <a class="app_list_label"  href="<%#Eval("Url")%>"> 
+                                            <img src="<%#Eval("imageurl")%>" />
+                                            <span class="ff"> <%#Eval("MenuName")%> </span>
+                                            </a>
+                                        
+                                     </div>                   
+                                </ItemTemplate>
+                            </asp:repeater> 
+        </div>
+        
+
+    </div>
+      <div class="fRight" style="width:820px;" >           
+                <XS:CustomTagsDiv ID="ctdTags" runat="server"/>
+                <XS:Notes ID="ntTips"  Visible="false"    runat=server />                 
+                <asp:ContentPlaceHolder ID="ctphBody" runat="server"/>            
+    </div>
+   
+</div>
+
+</form>
+</div> 
+<!--#include file="footer.inc" -->
+</body>
+
+</html>
+
+

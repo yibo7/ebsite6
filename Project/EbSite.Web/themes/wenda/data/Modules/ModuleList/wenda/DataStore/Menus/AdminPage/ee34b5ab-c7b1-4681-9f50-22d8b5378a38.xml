@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>False</IsAddToAdminMenus>
+  <Permission>33</Permission>
+  <ModuleID>4e0edb7e-1b30-41ad-9f74-d63c80458c35</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/wenda/data/Modules/ModuleList/wenda/AdminPages/ImitatePost.aspx</ParentUrl>
+  <FileName>PostUserAdd.ascx</FileName>
+  <PageName>模拟发帖用户添加</PageName>
+  <ParentID>ba911e1f-d1a7-474d-a9f5-885252dab15b</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>ee34b5ab-c7b1-4681-9f50-22d8b5378a38</id>
+</ModulePageInfo>

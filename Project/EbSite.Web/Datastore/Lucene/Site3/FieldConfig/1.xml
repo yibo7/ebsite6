@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CreateEntity>
+  <FieldName>NewsTitle</FieldName>
+  <FieldType>System.String</FieldType>
+  <SearchType>1</SearchType>
+  <SearchTypeName>分词搜索且能存取</SearchTypeName>
+  <id>1</id>
+</CreateEntity>

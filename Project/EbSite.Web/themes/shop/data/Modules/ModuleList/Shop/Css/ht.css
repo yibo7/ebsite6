@@ -1,0 +1,162 @@
+﻿   .admin_toobar fieldset legend span
+    {
+        color: Red;
+    }
+    #div_left
+    {
+        width:48%;
+        float: left;
+        height: 410px;
+        overflow: auto;
+        border: 1px solid #A1C295;
+        background-color: #E9FBE7;
+    }
+    #div_right
+    {
+        width: 48%;
+        float: right;
+        height: 410px;
+        overflow: auto;
+        border: 1px solid #A1C295;
+        background-color: #E9FBE7;
+    }
+    .left_fir_top
+    {
+        width: 95%;
+        height:80px;
+        line-height: 50px;
+        padding-left:10px;
+        vertical-align: middle;
+    }
+    .left_fir_top { height:40px;}
+    .left_fir_bottom
+    {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 355px;
+        background-color: White;
+        border: 1px solid #A1C295;
+    }
+     .left_fir_bottomex
+    {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 355px;
+        background-color: White;
+        border: 1px solid #A1C295;
+    }
+    .sec_prolist
+    {
+        width: 100%;
+        height: 320px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+    }
+    .sec_prolistex
+    {
+        width: 100%;
+        height:325px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+    }
+    .ptablist{ margin:0px; padding:0px;}
+    .ptablist li table{ width:100%; }
+    .ptablist li { padding: 8px;border-bottom: 1px solid #A1C295; }
+   
+  .sec_pagesplit{ border-top: 1px solid #ccc; background: #E6E6E6; }
+  .sec_pagesplit td{ padding: 8px; }
+    
+    
+    
+    /***销售报表样式* 开始*/
+    .dataarea{margin-top: 10px;}
+  .dataarea .bottomPageNumber {position:relative;height:40px;top:12px;top:0;}
+ .mainwidth{width:90%;}
+ .VIPbg{ background:#fff9ee; border:1px #fce5b7 solid; line-height:35px; margin-bottom:14px; overflow:hidden; padding-left:15px;}
+.VIPbg li{ float:left; padding-right:30px;}
+.VIPbg li a{ color:#0b5ba5;}
+.VIPbg li a:hover{text-decoration: underline;}
+.br_search{ border:1px #ddd solid; padding:10px 0px 10px 0px;  background:#fdfdfd;}
+
+.clearfix{clear:both;}
+/*数据区*/
+.dataarea,.databody{border:1px #ccc solid;border-top:none;padding:15px;overflow:auto;_overflow:visible;height:auto;_height:1px;}
+.dataarea .title{ font-size:14px; font-weight:700; padding-bottom:12px; border-bottom:1px #ccc solid; margin-bottom:12px;}
+.dataarea .searcharea ul{ overflow:hidden; width:930px;}
+.dataarea .searcharea li {float:left; padding-left:11px;line-height:30px;}
+.dataarea .searcharea li.clickTopX{background:url(next.gif) 0px 2px no-repeat;padding-left:25px;font-weight:bold;color:#666;font-size:14px;cursor:pointer;}
+.dataarea .searcharea li.clickTopS{background:url(top.gif) 0px 2px no-repeat;padding-left:25px;font-weight:bold;color:#666;font-size:14px;cursor:pointer;}
+.dataarea .searcharea li p a{color:#0b5ba5;}
+.dataarea .searcharea li .a{}
+.dataarea .searcharea li p a:hover{text-decoration:underline;}
+.dataarea .searcharea li span {display:block;float:left;_line-height:30px;}
+.dataarea .advanceSearchArea {height:20px;background:#ccc;width:100%;display:none;}
+.dataarea .functionHandleArea {background:#fafafa;border:1px solid #ddd;position:relative;padding-left:12px;padding-top:12px;padding-right:12px;padding-bottom:5px;overflow:auto;_overflow:visible;height:auto;_height:1px; margin-top:14px; border-bottom:none; background:url(distbg_03.gif) repeat-x bottom #fafafa;}
+.dataarea .functionHandleArea .pageHandleArea {_overflow:visible;height:30px;_height:1px;_width:300px;width:300px;overflow:visible;}
+.dataarea .functionHandleArea .pageHandleArea li {float:left;list-style:none;}
+.dataarea .functionHandleArea .paginalNum {_width:190px;}
+.dataarea .functionHandleArea .paginalNum span {display:block;float:left;line-height:21px;}
+.dataarea .functionHandleArea .paginalNum a {display:block;float:left;line-height:21px;height:21px;padding:0 3px;border:#c6c6c6 1px solid;background:white;text-align:center;margin-right:3px;color:#333;}
+.dataarea .functionHandleArea .paginalNum a:hover {border:#ff5400 1px solid;background:white;text-align:center;margin-right:3px;color:#ff5400;font-weight:700;}
+.dataarea .functionHandleArea .paginalNum .selectthis {display:block;float:left;line-height:21px;height:21px;padding:0 3px;background:white;text-align:center;margin-right:3px;color:#ff5400;font-weight:700;border:#ff5400 1px solid;}
+.databody{ background:#f0f7fe; border:1px #d7e9fc solid; padding:0px 0px 12px 0px;width:978px; overflow:hidden;_overflow:visible;}
+
+.a_none_left li {
+    list-style:none;
+}
+
+/*数据区 数据列表*/
+.dataarea .datalist {width:100%}
+.dataarea .datalist .icon{ float:left;cursor:pointer;}
+.databody .datalist .search{ padding:12px; overflow:hidden;}
+.databody .datalist .search li {float:left;margin-right:8px; line-height:28px;}
+.databody .datalist .search li span {display:block;float:left;_line-height:30px;}
+.dataarea .datalist table,.areacolumn .columnright .content table,.databody .list table{ width:100%;border:1px #e0dcce solid; color:#333;border-bottom:none;}
+.dataarea .datalist table td,.areacolumn .columnright .content table td,.databody .list table td{border-bottom:1px #e0dcce solid; padding:6px;}
+.dataarea .datalist table th,.databody .list table th{padding:6px;text-align:left;border-bottom:1px #e0dcce solid;border-left:1px #e0dcce solid;white-space:nowrap;}
+/*.dataarea .datalist table input{ border:0px;}*/
+.dataarea .datalist table .Name a,.areacolumn .columnright .content table .Name a,.databody .list table .Name a,.Goodsgifts table .Name a{ color:#0b5ba5; white-space:normal;}
+.dataarea .datalist table .Name a:hover,.areacolumn .columnright .content table .Name a:hover,.databody .list table .Name a:hover,.Goodsgifts table .Name a:hover{text-decoration: underline;}
+/*.dataarea .datalist table span,.dataarea .datalist table a,.databody .list table span{ display:block;}*/
+.dataarea .datalist table span,.databody .list table span{ display:block;}
+.dataarea .datalist table span.line{word-wrap:break-word;width:400px;}
+
+.databody .datalist,.databody .datamsg,.databody .datafrom,.databody .Purchase,.databody .list,.databody .Tempimg{width:948px;background:#fff; border:1px #d7e9fc solid;margin:1px 12px 0px 12px; padding:2px;}
+.databody .datalist .icon,.areacolumn .columnright .content .icon{ float:left;}
+.databody .datalist .logo{ border:1px #e0dcce solid; padding:1px; width:107px; height:28px;float:left;}
+.databody .datalist .logo_text{ color:#F00; line-height:32px; margin-left:10px; float:left;}
+.databody .shou{background:#fff; border:1px #d7e9fc solid; margin:12px 12px 0px 12px; height:60px;}
+.databody .shou a{color:#0b5ba5; font-weight:700;}
+.databody .shou span{ display:block; float:left; height:42px; padding-top:18px; line-height:28px;}
+.databody .shou span img{ margin-left:10px;}
+.datalist .table_title,.areacolumn .columnright .content .table_title,.databody .list .table_title{ background:url(bg.gif) repeat-x 0 -389px; height:16px; line-height:16px; color:#5c4a35;}
+.dataarea .datalist .page{ padding:4px 0px 10px 10px;}
+.dataarea .datalist .Img100_30{width:120px;height:50px;border:1px solid #aaa;padding:2px;background:#fff;cursor:pointer;} /*新增列表图像宽和高定义*/
+.dataarea .datalist .Img100_30:hover{border:1px solid #f60;padding:2px;background:#fff;}
+.votelenth{background:url(lenth.gif);height:15px;}
+
+/*字体颜色*/
+.colorA{ color:#ff0000!important;}
+.colorB{ color:#006b0a;}
+.colorC{ color:#785540;}
+.colorD{ color:#888; padding:10px 0px 0px 12px; }
+.colorE{ color:#ff7f00!important;}
+.colorF{ color:#666;}
+.colorG{ color:#ff4800;}
+.colorO{ color:#fff;}
+.colorP{ color:#ffff00;}
+.colorQ{ color:#666;}
+.colorR{ color:#888; line-height:30px;}
+.colorH{border-bottom: 1px solid #CCCCCC;font-size: 14px;line-height: 30px;margin: 20px 0; width: 745px;color: #FF7F00 !important;}
+
+
+.Pg_10{ margin-right:10px;}
+.searchbutton{height:25px;width:70px;background:url(icon.gif) no-repeat -230px -58px;border:none;color:white;text-align:left;padding-left:8px; font-size:12px; padding-top:1px;float:left;}
+.c_hidden{clear:both;display:none;background-color:#f6faf1;width:100%}
+
+
+/********后台 销售报表样式 结束*********/

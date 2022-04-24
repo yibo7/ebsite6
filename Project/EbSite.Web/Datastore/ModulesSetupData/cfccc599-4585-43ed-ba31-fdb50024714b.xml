@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModuleInfo>
+  <SiteID>3</SiteID>
+  <LastVersionUrl />
+  <UpdateUrl />
+  <IsClose>False</IsClose>
+  <Demo />
+  <SetupPath>/themes/shop/data/Modules/ModuleList/shop/</SetupPath>
+  <AccessFile />
+  <SqlScript />
+  <ModuleName>高级商城模块</ModuleName>
+  <Version>1.0.0</Version>
+  <Author>小菜</Author>
+  <AuthorUrl />
+  <id>cfccc599-4585-43ed-ba31-fdb50024714b</id>
+</ModuleInfo>

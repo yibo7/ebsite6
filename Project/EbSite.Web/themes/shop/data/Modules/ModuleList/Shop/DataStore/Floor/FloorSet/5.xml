@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<FloorSet>
+  <FloorId>1</FloorId>
+  <FloorName>常规保养件</FloorName>
+  <FloorColor>377da8</FloorColor>
+  <FloorPic>/themes/default/data/Upload/20131101/nna2etflylm.png</FloorPic>
+  <FloorPicUrl>www.ebsite.net</FloorPicUrl>
+  <TopClassItem>12560,12562,12581,12584</TopClassItem>
+  <RightClassItem>12562,12584,12586,12587,12588,12589,12596,12597,12598,12600</RightClassItem>
+  <ProductIds>350,349,392</ProductIds>
+  <id>5</id>
+</FloorSet>

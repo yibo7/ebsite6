@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>95</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/AdminPages/FloorSet.aspx</ParentUrl>
+  <FileName>List.ascx</FileName>
+  <PageName>PC版楼层设置</PageName>
+  <ParentID>474c0eda-f726-4cd9-b619-757798c233f1</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>281ad765-fe9a-4ae2-8f90-50a9193b3508</id>
+</ModulePageInfo>

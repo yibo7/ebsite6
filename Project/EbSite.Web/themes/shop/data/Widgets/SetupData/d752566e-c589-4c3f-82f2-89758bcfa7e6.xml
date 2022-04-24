@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="content" Value="&lt;p target=&quot;_blank&quot;&gt;&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;欢迎您使用EbSite，EbSite是一款功能非常强大的建站系统，&lt;span style=&quot;font-family:Times New Roman;&quot;&gt;采用ASp.net(C#)开发，理论上支持所有数据库。&lt;a href=&quot;http://www.ebsite.net&quot;&gt;&lt;span style=&quot;color:#f73809;&quot;&gt;点击这里了解更多...&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;&#xA;&lt;p&gt;&amp;nbsp;&lt;/p&gt;" />
+    <DictionaryEntry Key="boxstyleid" Value="d40a49fa-02d1-484c-9792-b36605065a60" />
+    <DictionaryEntry Key="customdropdownlistpram" Value="ui-state-error^up" />
+    <DictionaryEntry Key="customtextboxpram" Value="" />
+    <DictionaryEntry Key="customcolor" Value="" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

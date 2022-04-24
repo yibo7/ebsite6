@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableStringDictionary>
+  <SerializableStringDictionary>
+    <DictionaryEntry Key="txtcount" Value="16" />
+    <DictionaryEntry Key="siteid" Value="0" />
+    <DictionaryEntry Key="txtpid" Value="-1" />
+    <DictionaryEntry Key="iscurrent" Value="False" />
+    <DictionaryEntry Key="txttem" Value="00000000-0000-0000-0000-000000000000" />
+  </SerializableStringDictionary>
+</SerializableStringDictionary>

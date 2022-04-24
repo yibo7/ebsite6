@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<JobTask>
+  <IsNoSys>False</IsNoSys>
+  <TaskName>更新网站首页</TaskName>
+  <TaskParam />
+  <CronExpressionString>0 * * * * ?</CronExpressionString>
+  <CronRemark />
+  <AssemblyName>EbSite.Jobs</AssemblyName>
+  <ClassName>EbSite.Jobs.UpdateIndex</ClassName>
+  <RunType>1</RunType>
+  <Status>1</Status>
+  <CreatedTime>2016/12/15 16:19:57</CreatedTime>
+  <ModifyTime>2016/12/15 17:19:50</ModifyTime>
+  <RecentRunTime>2022/4/24 10:38:00</RecentRunTime>
+  <NextFireTime>2022/4/24 10:39:00</NextFireTime>
+  <Remark>每分钟更新网站首页</Remark>
+  <IsDelete>0</IsDelete>
+  <RunUrl />
+  <LastRezult>任务启动于:2022/4/24 10:38:49并且成功进入排期队列</LastRezult>
+  <id>daf176da-fa9f-4891-973c-fd56c91e0e55</id>
+</JobTask>

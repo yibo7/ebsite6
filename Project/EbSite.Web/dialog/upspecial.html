@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="/js/init.js"></script>
+    <script type="text/javascript" src="/js/inc.js" autoload="true" core="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/comm.js" autoload="true" core="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/customctr.js" autoload="true" core="/js/jquery.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <script language='javascript' src='/js/drplistbll.js'></script>
+    <span id="SpecialClass">
+        <input type="hidden" id="SpecialClass_hfValue" />
+        <input type="hidden" id="SpecialClass_hfValueP" />
+    </span>
+    <script>
+        InitAreaList("SpecialClass", 5, "SpecialClass_hfValue", "wcf", "GetSubSpecial", "", 8, SiteConfigs.id);
+    </script>
+    <div style="width: 100%; text-align: center; margin-top: 5px;">
+        <input class="btn" value="提交" type="button" onclick="AddSpecial()" />
+    </div>
+</body>
+</html>
+<script>
+    function AddSpecial() {
+
+        if (GetUrlParams("site") != "" && GetUrlParams("id") != "") {
+            var inewsId = GetUrlParams("id");
+            var ispecialClassId = $('#SpecialClass_hfValue').val();     
+            var pram = { "newsId": inewsId, "specialClassId": ispecialClassId };
+            runebws("IfSpecialNews", pram, bk_IfSpecialNews);
+        }
+    }
+    function bk_IfSpecialNews(rz) {
+        var result = rz.d;
+        if (result == true) {
+            var inewsId = GetUrlParams("id");
+            var ispecialClassId = $('#SpecialClass_hfValue').val();
+            var pram = { "newsId": inewsId, "specialClassId": ispecialClassId };
+            runebws("AddSpecialNews", pram, bk_IsAddSpecial);
+        }
+        else {
+            alert("已经添加过专题");    
+        }
+    }
+
+    function bk_IsAddSpecial(rz) {
+        var result = rz.d;
+        if (result == true) {
+            alert("操作成功");
+        }
+        else {
+            alert("操作失败")
+        }
+    }
+
+</script>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>1</Permission>
+  <ModuleID>cfccc599-4585-43ed-ba31-fdb50024714b</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/shop/data/Modules/ModuleList/shop/UserPages/MOrderManage.aspx</ParentUrl>
+  <FileName>orderlist.ascx</FileName>
+  <PageName>订单管理</PageName>
+  <ParentID>fd8177fb-66f3-4c32-936e-ca226a95549c</ParentID>
+  <OrderID>0</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>cef0a633-b792-49af-8a79-93af37651495</id>
+</ModulePageInfo>

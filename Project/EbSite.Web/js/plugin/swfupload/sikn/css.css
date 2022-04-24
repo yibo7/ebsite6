@@ -1,0 +1,98 @@
+.SWFUP td
+{
+	height:10px;
+}
+.SWFUPbtn{
+	cursor:pointer;
+	 padding-left:10px; padding-right:10px;
+}
+.SWFUPbtn span{
+	display:inline-block;
+	height:17px;
+	line-height:17px;
+	padding:2px;
+}
+.SWFUPbtn img{border:0;vertical-align:text-bottom;}
+.SWFUPbtn:hover{background:#E6B791}
+
+
+.SWFUPprogressBar{
+	/*position: relative;*/
+	border:1px solid #ccc;
+	padding:1px;
+	width:100%;
+}
+
+.SWFUPprogressBar #SWFUPprogress{
+	height:10px;
+	background:#8FB5E8 url(img/progressbg.gif);
+}
+.SWFUPprogressBar span{
+	position: absolute;
+	text-align: center;
+	width:100%;line-height:12px;
+	color:#396095;
+	font-size:8px;
+}
+.AspNetUpload{
+	/*position: relative;*/
+	width:164px;}
+.UploadNoShow{ display: none;}
+.AspNetUpFile{	cursor:pointer;position: absolute;top: 0px;left: 20px;width:180px;opacity:0;-ms-filter:'alpha(opacity=0)';filter:alpha(opacity=0);z-index: 1000002;
+              	}
+         
+.AspNetBtn{
+	/*position: absolute;
+	top: 0px;
+	left: 150px;*/
+	width:50px;
+	/*z-index: 10;*/
+	padding:0;
+
+}
+
+.AspNetUpText {position: absolute;width:150px;top: 0px;left: 0px;z-index: 1000003;}
+.AspNetUpHideArea{ position:absolute;top:-1000px;left:-1000px;visibility:hidden;}
+.AspNetUpTips{ height:50px;}
+
+.UploadBatchTable
+{		width:100%;
+	        background:#fff;
+	        border:solid 1px #D8E0E8;
+			 margin-top:2px;
+			 font-size:12px;
+	
+}
+.UploadBatchHeader
+{
+		 text-align:center;
+	        height:20px;
+	        font-weight:bold;
+	        background:#F2F2F2;
+}
+
+.UploadBatchTable tr
+{
+	        height:23px;
+
+}
+.UploadBatchTable tr td
+{
+	text-align:center;
+	
+}
+.UploadBatchTable tr td:first-child  
+{
+	         width:30%;
+	         text-align:left;
+	         padding-left:5px;
+	
+}
+.batchdel{ cursor:pointer;}
+.batchdown{cursor:pointer}
+.UploadBatchTable tr td span
+{
+	 margin-left:10px; cursor:pointer;
+}
+
+

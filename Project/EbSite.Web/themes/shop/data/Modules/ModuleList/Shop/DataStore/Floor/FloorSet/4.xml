@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<FloorSet>
+  <FloorId>5</FloorId>
+  <FloorName>传动系统</FloorName>
+  <FloorColor>53a637</FloorColor>
+  <FloorPic>/themes/default/data/Upload/20131101/02hops2aumn.png</FloorPic>
+  <FloorPicUrl>www.ebsite.net</FloorPicUrl>
+  <TopClassItem>12629,12630,12632,12635,12636</TopClassItem>
+  <RightClassItem>12584,12586,12587,12588,12589,12593</RightClassItem>
+  <ProductIds />
+  <id>4</id>
+</FloorSet>

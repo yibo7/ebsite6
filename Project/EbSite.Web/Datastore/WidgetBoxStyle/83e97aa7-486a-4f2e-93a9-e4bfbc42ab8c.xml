@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<WidgetBoxStyle>
+  <StyleColorPram />
+  <StyleCssNamePram />
+  <StyleName>简单表格</StyleName>
+  <StyleTemp>&lt;table style=" width:100%;" cellpadding="0" cellspacing="0"&gt;
+            &lt;tr&gt;
+                &lt;td style=" border-bottom:1px solid #D7D9D2; text-align:left; padding:5px; "&gt;●{Title}&lt;/td&gt;
+            &lt;/tr&gt;
+             &lt;tr&gt;
+                &lt;td style=" text-align:left;padding:5px;" &gt;
+                    {Content}
+                &lt;/td&gt;
+            &lt;/tr&gt;
+       &lt;/table&gt;</StyleTemp>
+  <ThemeID>0</ThemeID>
+  <StyleClass>0</StyleClass>
+  <id>83e97aa7-486a-4f2e-93a9-e4bfbc42ab8c</id>
+</WidgetBoxStyle>

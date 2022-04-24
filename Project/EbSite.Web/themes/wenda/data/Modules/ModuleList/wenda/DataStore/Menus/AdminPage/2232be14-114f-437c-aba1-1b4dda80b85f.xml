@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ModulePageInfo>
+  <ThemesType>1</ThemesType>
+  <IsAddToAdminMenus>True</IsAddToAdminMenus>
+  <Permission>35</Permission>
+  <ModuleID>4e0edb7e-1b30-41ad-9f74-d63c80458c35</ModuleID>
+  <HelpHtml />
+  <ParentUrl>/themes/wenda/data/Modules/ModuleList/Wenda/AdminPages/DataExport.aspx</ParentUrl>
+  <FileName>DataIndex.ascx</FileName>
+  <PageName>北迈问答数据导入</PageName>
+  <ParentID>ce89eeaf-020a-4c0e-8124-9e290d956bac</ParentID>
+  <OrderID>1</OrderID>
+  <EnableTagLink>True</EnableTagLink>
+  <id>2232be14-114f-437c-aba1-1b4dda80b85f</id>
+</ModulePageInfo>

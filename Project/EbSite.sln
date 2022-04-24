@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSite.Web", "EbSite.Web\EbSite.Web.csproj", "{472204C1-CA66-4DF8-B532-6527F2694780}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{3B2FCC0E-CEF3-43AC-8FA7-9B48AEC50247}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{68E3C14A-E1EA-4E1E-A860-9929695C909A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSite.Plugin.Email", "EbSite.Plugin.Email\EbSite.Plugin.Email.csproj", "{D18524B0-3EB7-4468-9A70-BB48CB63FC33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSite.Plugin.MobileMsgSend", "EbSite.Plugin.MobileMsgSend\EbSite.Plugin.MobileMsgSend.csproj", "{46D185A1-330E-41E1-8E02-DDFF6419424B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSite.Modules.Shop", "EbSite.Web\themes\shop\data\Modules\ModuleList\Shop\EbSite.Modules.Shop.csproj", "{0A4BE07D-AE27-4213-963E-183155F9DC98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSite.Modules.UserBaseInfo", "EbSite.Web\themes\ebsite\data\Modules\ModuleList\UserBaseInfo\EbSite.Modules.UserBaseInfo.csproj", "{71C3F98F-7C1D-4906-B305-174DAA27783A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D18524B0-3EB7-4468-9A70-BB48CB63FC33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D18524B0-3EB7-4468-9A70-BB48CB63FC33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D18524B0-3EB7-4468-9A70-BB48CB63FC33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D18524B0-3EB7-4468-9A70-BB48CB63FC33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46D185A1-330E-41E1-8E02-DDFF6419424B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D185A1-330E-41E1-8E02-DDFF6419424B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D185A1-330E-41E1-8E02-DDFF6419424B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D185A1-330E-41E1-8E02-DDFF6419424B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A4BE07D-AE27-4213-963E-183155F9DC98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4BE07D-AE27-4213-963E-183155F9DC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4BE07D-AE27-4213-963E-183155F9DC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4BE07D-AE27-4213-963E-183155F9DC98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71C3F98F-7C1D-4906-B305-174DAA27783A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71C3F98F-7C1D-4906-B305-174DAA27783A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71C3F98F-7C1D-4906-B305-174DAA27783A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71C3F98F-7C1D-4906-B305-174DAA27783A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0A4BE07D-AE27-4213-963E-183155F9DC98} = {3B2FCC0E-CEF3-43AC-8FA7-9B48AEC50247}
+		{71C3F98F-7C1D-4906-B305-174DAA27783A} = {3B2FCC0E-CEF3-43AC-8FA7-9B48AEC50247}
+		{D18524B0-3EB7-4468-9A70-BB48CB63FC33} = {68E3C14A-E1EA-4E1E-A860-9929695C909A}
+		{46D185A1-330E-41E1-8E02-DDFF6419424B} = {68E3C14A-E1EA-4E1E-A860-9929695C909A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

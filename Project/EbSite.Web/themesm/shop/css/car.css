@@ -1,0 +1,40 @@
+﻿li { list-style-type: none;}
+.all2{background:url(a1.png) no-repeat 0 0;}
+.jian{width:15px;height:15px;background-position:-2px -2px;float: left; }
+.jia{width:15px;height:15px;background-position:-2px -23px; float: left;  }
+.ItemCell2 {line-height: 18px; padding-bottom: 5px; margin-bottom: 5px; border-bottom-color: rgb(170, 170, 170); border-bottom-width: 1px; border-bottom-style: dotted;}
+.ProName2 {color: rgb(0, 102, 255);}
+.ProName2 .OrderNo {background: rgb(221, 221, 221); padding: 0px 2px; color: rgb(0, 0, 0); font-weight: bold; margin-right: 3px;}
+.NEPrice2 span {color: rgb(251, 61, 12); font-size: 14px; font-weight: bold;}
+ .ItemQty .QtyBtn {width: 25px; margin-right: 5px;}
+ .ItemQty .QtyInput {width: 30px;}
+ .Operation * {margin-right: 5px;}
+ 
+ .bankimg{  overflow:hidden; background-color:#FFFDEE;  }
+ .bankimg{ border:#EDD28B solid 1px; overflow:hidden; background-color:#FFFDEE;  }
+.bakimtitle{ background-color:#FFFFFF; border-bottom:1px solid #EDD28B; height:28px;}
+.bakimtitle li{  float:left; height:28px; line-height:25px; padding-left:30px; padding-right:30px; font-size:14px; font-weight:bold; color:#666666; border-left:none }
+.bakimtitle li.cur{ background:#FFFDEE; height:29px; line-height:29px; border-bottom:none; color:#FF6600;border-right:#EDD28B 1px solid;border-left:#EDD28B 1px solid; border-top:#EDD28B 1px solid;}
+ .cur{background:#ECECED; border-left:solid #E1E2E5 1px }
+ 
+ .magb10{ margin-bottom:10px;}
+.magb10 b{ font-weight: bold;color: #000000;}
+.color63{ color:#333333;}
+.color6c{ color:#CCCCCC;}
+.color66{ color:#666666;}
+.color654{ color:#545454;}
+.colorc0{color:#CC0000; font-size:14px}
+.color00a{color:#379309; font-size:18px; font-family:"黑体"}
+
+
+.orderok{ background-color:#F6FDF6; height:60px; padding-left:30px; padding-top:0px;}
+.orinfook li{ line-height:30px; letter-spacing:1px;}
+
+.banklist{ padding:30px;}
+.banklist img{ border:1px solid #F0EEE0;}
+
+
+.bakkjzf{ overflow:hidden; margin-bottom:20px; }
+.bakkjzf li{ float:left;  line-height:45px; width:185px;}
+.bakkjzf li input{}
+.bakkjzf li img{ vertical-align:middle; margin-bottom:5px;}
