@@ -3,7 +3,7 @@
  
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>网站搜索关键词</h3>
             </div>
             <div class="content">

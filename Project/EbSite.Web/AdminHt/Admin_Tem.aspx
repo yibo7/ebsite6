@@ -7,8 +7,8 @@
             
              <XS:Repeater ID="rpMenus" runat="server" >
                         <ItemTemplate>
-                            <li class="<%#GetCurrentClass(Eval("id")) %> tab">
-                <a href="<%#Eval("value") %>" >
+                            <li class="nav-item">
+                <a class="nav-link <%#GetCurrentClass(Eval("id")) %>" href="<%#Eval("value") %>" >
                     <span class="visible-xs"><i class="fa <%#Eval("Ico") %>"></i></span>
                     <span class="hidden-xs"><%#Eval("text") %></span>
                 </a>

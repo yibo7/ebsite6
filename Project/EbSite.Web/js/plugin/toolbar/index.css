@@ -3,8 +3,8 @@ img{ border: 0pt; }
 .toolbarbox { 
                     width:100%;
 	            min-width: 400px;
-	            overflow-x: auto;
-                overflow-y: hidden;
+	            /*overflow-x: auto;
+                overflow-y: hidden;*/
 	            }
 #vista_toolbar {
 float:left;
@@ -15,7 +15,7 @@ width:100%;
 min-width: 1200px;
 }
 
-    #vista_toolbar ul {
+ #vista_toolbar ul {
         border-top: 1px solid #dddddd;
         border-left: 1px solid #dddddd;
         border-right: 1px solid #dddddd;

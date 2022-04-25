@@ -7,11 +7,13 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace EbSite.Web.AdminHt.Controls.Admin_Frdlink {
-    
-    
-    public partial class LinkAdd {
-        
+namespace EbSite.Web.AdminHt.Controls.Admin_Frdlink
+{
+
+
+    public partial class LinkAdd
+    {
+
         /// <summary>
         /// SiteName 控件。
         /// </summary>
@@ -20,7 +22,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Frdlink {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::EbSite.Control.TextBoxVl SiteName;
-        
+
         /// <summary>
         /// Url 控件。
         /// </summary>
@@ -29,7 +31,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Frdlink {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::EbSite.Control.TextBoxVl Url;
-        
+
         /// <summary>
         /// LogoUrl 控件。
         /// </summary>
@@ -37,8 +39,8 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Frdlink {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::EbSite.Control.WebUploaderFile LogoUrl;
-        
+        protected global::EbSite.Control.UploadImg LogoUrl;
+
         /// <summary>
         /// QQ 控件。
         /// </summary>
@@ -47,7 +49,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Frdlink {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::EbSite.Control.TextBoxVl QQ;
-        
+
         /// <summary>
         /// Email 控件。
         /// </summary>
@@ -56,7 +58,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Frdlink {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::EbSite.Control.TextBoxVl Email;
-        
+
         /// <summary>
         /// Tel 控件。
         /// </summary>
@@ -65,7 +67,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Frdlink {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::EbSite.Control.TextBoxVl Tel;
-        
+
         /// <summary>
         /// Mobile 控件。
         /// </summary>
@@ -74,7 +76,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Frdlink {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::EbSite.Control.TextBoxVl Mobile;
-        
+
         /// <summary>
         /// Demo 控件。
         /// </summary>

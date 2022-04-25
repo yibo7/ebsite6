@@ -18,8 +18,8 @@ function InitImgUpload(ext,  folder, userid, size, valstr, filedata, fileList, i
     function getImgBox(width, height, src, info = '') {
         
         return $('<div  style="width:'+width+'px;height:'+height+'px  " class="file-item thumbnail">' +
-            '<img src="' + src+'" />' +
-            '<div class="info">' + info+'</div>' +
+            '<img data-toggle="tooltip" title=' + info+' src="' + src+'" />' +
+            //'<div class="info">' + info+'</div>' +
             '</div>');
     }
     // 初始化Web Uploader

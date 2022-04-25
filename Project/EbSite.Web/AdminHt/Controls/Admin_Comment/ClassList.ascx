@@ -4,7 +4,7 @@
 
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>管理讨论区数据</h3>
             讨论模块对应于当前站点，非所有站点通用
             </div>

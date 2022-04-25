@@ -3,7 +3,7 @@
 <%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
  <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>添加优惠券</h3>
             </div>
             <div class="content">

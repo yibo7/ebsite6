@@ -3,13 +3,17 @@
  
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
-                <h3>修改配置</h3>
+            <div class="boxheader">
+                <h3>分词测试</h3>
+                <div>                    
+                采用搜索插件:<asp:Literal ID="llSearchPlugin" runat="server"></asp:Literal>
+                </div>
             </div>
             <div class="content">
+                
 				<div>
-                采用搜索插件:<asp:Literal ID="llSearchPlugin" runat="server"></asp:Literal>
-            </div>
+                    输入需要分词的内容：
+                </div>
             <div>
                 <asp:TextBox Width="100%" Height="300" TextMode="MultiLine" ID="txtContent" runat="server"></asp:TextBox>
             </div>

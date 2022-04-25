@@ -3,7 +3,7 @@
  
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>文件上传但未提交的记录</h3>
             这些记录为用户异步上传文件后，还没真正提交的数据，可视为垃圾文件，可定期清理
             </div>

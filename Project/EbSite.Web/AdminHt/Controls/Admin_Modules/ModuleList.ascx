@@ -4,7 +4,7 @@
 
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>已安装模块管理</h3>
             </div>
             <div class="content">

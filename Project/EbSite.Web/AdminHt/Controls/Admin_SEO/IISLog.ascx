@@ -4,7 +4,7 @@
  
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>IIS日志管理</h3>
             请在iis的日志设置里将日志生成指定到本网站的根目录下的iislog/下即可统计日志数据,日志的后缀名必须为.log
             </div>

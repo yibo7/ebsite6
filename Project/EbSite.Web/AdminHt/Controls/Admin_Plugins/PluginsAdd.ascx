@@ -6,10 +6,12 @@
     <div class="col-sm-12 col-md-12 ">
         <div class="boxheader headertips">
                 <h3>安装插件</h3>
-            目前插件的安装包只支持.dll格式，可以从 <a href='http://www.ebsite.net' target=_blank><b>官方插件共享平台</b></a>下载更多插件！
+            目前插件的安装包只支持.dll格式！
             </div>
             <div class="content">
-				 <table cellpadding="0"  cellspacing="0">
+                考虑到安全性问题，ebsite 6.0.0后不再提供在后台上传插件。 您可以手动将你的插件放到根目录下的/Plugins/里，系统会自动加载并运行。
+                
+				 <%--<table cellpadding="0"  cellspacing="0">
                 <tr>
                         <td><%=Resources.lang.EBInstallPath%>:</td>
                         <td>
@@ -32,7 +34,7 @@
                         <XS:Button ID="bntSetup" Text="<%$Resources:lang,EBStrtInstall %>" runat="server" onclick="bntSetup_Click"  />
                     </td>
                 </tr>
-            </table>
+            </table>--%>
             </div>
     </div>
 </div>

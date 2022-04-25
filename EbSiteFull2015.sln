@@ -57,8 +57,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSite.Modules.UserBaseInfo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSite.ExtensionsCtrls", "Project\EbSite.Web\themes\ebsite\data\Ctrl\TempList\EbSite.ExtensionsCtrls.csproj", "{35F7B282-CEB7-409E-A556-6732187FDC43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSite.Web", "Project\EbSite.Web\EbSite.Web.csproj", "{472204C1-CA66-4DF8-B532-6527F2694780}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSite.Plugin.EBCache", "Project\EbSite.Plugin.EBCache\EbSite.Plugin.EBCache.csproj", "{7CB7E61A-372C-4680-8168-338C324750B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSiteTest", "Protected\EbSiteTest\EbSiteTest.csproj", "{1A278718-F225-44B5-ACD6-657DD7A707B8}"
@@ -78,6 +76,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSite.UEditor", "Protected\EbSite.UEditor\EbSite.UEditor.csproj", "{D6BD45C9-BF5C-4ED6-A2CF-E4A19A656AD0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSite.Modules.Shop", "Project\EbSite.Web\themes\shop\data\Modules\ModuleList\Shop\EbSite.Modules.Shop.csproj", "{0A4BE07D-AE27-4213-963E-183155F9DC98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbSite.Web", "Project\EbSite.Web\EbSite.Web.csproj", "{472204C1-CA66-4DF8-B532-6527F2694780}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -319,16 +319,6 @@ Global
 		{35F7B282-CEB7-409E-A556-6732187FDC43}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{35F7B282-CEB7-409E-A556-6732187FDC43}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{35F7B282-CEB7-409E-A556-6732187FDC43}.Release|x86.ActiveCfg = Release|Any CPU
-		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|Any CPU.Build.0 = Release|Any CPU
-		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|x86.ActiveCfg = Release|Any CPU
 		{7CB7E61A-372C-4680-8168-338C324750B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7CB7E61A-372C-4680-8168-338C324750B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CB7E61A-372C-4680-8168-338C324750B3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -445,6 +435,18 @@ Global
 		{0A4BE07D-AE27-4213-963E-183155F9DC98}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0A4BE07D-AE27-4213-963E-183155F9DC98}.Release|x86.ActiveCfg = Release|Any CPU
 		{0A4BE07D-AE27-4213-963E-183155F9DC98}.Release|x86.Build.0 = Release|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Debug|x86.Build.0 = Debug|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|x86.ActiveCfg = Release|Any CPU
+		{472204C1-CA66-4DF8-B532-6527F2694780}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -470,8 +472,8 @@ Global
 		{0A4BE07D-AE27-4213-963E-183155F9DC98} = {CBD04B59-06F4-4C01-9AC7-8A4E08B3ADF4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {633D2226-A235-4A93-80BB-70924EE5B5C3}
 		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {633D2226-A235-4A93-80BB-70924EE5B5C3}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = EbSiteFull.vsmdi

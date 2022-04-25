@@ -5,7 +5,7 @@
 <asp:PlaceHolder ID="phCtrList" runat="server">
     <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>后台加款操作</h3>
             </div>
             <div class="content">

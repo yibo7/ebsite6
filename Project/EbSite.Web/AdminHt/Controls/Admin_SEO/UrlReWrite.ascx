@@ -1,20 +1,23 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UrlReWrite.ascx.cs" Inherits="EbSite.Web.AdminHt.Controls.Admin_SEO.UrlReWrite" %>
 <%@ Import Namespace="EbSite.Base.Configs.ContentSet" %>
 <%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
+<style>
+    .cbrowbox-tab tr :hover{background-color:#dcf6ff}
+</style>
  <div   class="container-fluid main-title">
     注意，目前只接受以下5种后缀重写.aspx,.ashx,.dll,.do,.htm,.html,目录/,其中除了aspx与ashx其他后缀重写，请到iis服务器中将其映射到asp.net处理模块,如果您不知道怎么设置，请不要改动以下配置
 </div> 
 <div class="container-fluid mt10">
 	<div class="row-fluid"> 
         <ul class="nav nav-tabs">
-            <li class="active tab">
-                <a href="#tg1" data-toggle="tab" aria-expanded="false">
+            <li class="nav-item">
+                <a href="#tg1" class="nav-link active" data-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-laptop"></i></span>
                     <span class="hidden-xs">PC版</span>
                 </a>
             </li>
-            <li class="tab">
-                <a href="#tg2" data-toggle="tab" aria-expanded="false">
+            <li class="nav-item">
+                <a href="#tg2" class="nav-link" data-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-tablet"></i></span>
                     <span class="hidden-xs">手机版</span>
                 </a>

@@ -156,18 +156,18 @@
                             <%=Resources.lang.EBHowLongTimUpd%>：
                         
                         </td>
-                        <td>
-                            <XS:TextBoxVl ID="txtHitsUpdateTimeLength" HintInfo="访问量的统计过于频繁，系统采用了批更新方式，通过收集一定的访问数据后作一次性更新，所以里设置的是这个收集过程的时长,因此，如果您访问了某个页面，未能马上看到点击率的更新，这属于正常现象" IsAllowNull="false" ValidateType="匹配正整数" runat="server" Width="50"></XS:TextBoxVl>
-                            分钟
+                        <td class="form-inline">
+                            <XS:TextBoxVl ID="txtHitsUpdateTimeLength" HintInfo="访问量的统计过于频繁，系统采用了批更新方式，通过收集一定的访问数据后作一次性更新，所以里设置的是这个收集过程的时长,因此，如果您访问了某个页面，未能马上看到点击率的更新，这属于正常现象" IsAllowNull="false" ValidateType="匹配正整数" runat="server" Width="150"></XS:TextBoxVl>
+                             分钟
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <%=Resources.lang.EBLogStateLT%>：
                         </td>
-                        <td>
-                            <XS:TextBoxVl ID="txtLoginExpires" IsAllowNull="false" ValidateType="匹配正整数" HintInfo="将用户登录后的状态保存下来，方便用户再次到来时置于登录状态，这里保存的是保存的状态时长" runat="server" Width="50"></XS:TextBoxVl>
-                            分钟
+                        <td class="form-inline">
+                            <XS:TextBoxVl ID="txtLoginExpires" IsAllowNull="false" ValidateType="匹配正整数" HintInfo="将用户登录后的状态保存下来，方便用户再次到来时置于登录状态，这里保存的是保存的状态时长" runat="server" Width="150"></XS:TextBoxVl>
+                             分钟
                         </td>
                     </tr>
 

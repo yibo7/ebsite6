@@ -34,7 +34,7 @@
                         <%=Resources.lang.EBWmarkTrans%>：
                     </td>
                     <td>
-                        <XS:TextBox ID="Watermarktransparency" HintInfo="水印图片透明度,取值的0-10之间，10表示无透明" Width="50" RequiredFieldType="数据校验" runat="server"></XS:TextBox>
+                        <XS:TextBox ID="Watermarktransparency" HintInfo="水印图片透明度,取值的0-10之间，10表示无透明" Width="150" RequiredFieldType="数据校验" runat="server"></XS:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -42,7 +42,7 @@
                         <%=Resources.lang.EBUploadPicQua%>：
                     </td>
                     <td>
-                        <XS:TextBox ID="Imgquality" HintInfo="上传图片质量,取值的0-100之间，数字越大质量越好" Width="50" RequiredFieldType="数据校验" runat="server"></XS:TextBox>
+                        <XS:TextBox ID="Imgquality" HintInfo="上传图片质量,取值的0-100之间，数字越大质量越好" Width="150" RequiredFieldType="数据校验" runat="server"></XS:TextBox>
                     </td>
                 </tr>
                 <tr>

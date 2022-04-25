@@ -16,6 +16,9 @@ In.ready('customtags', function () {
     TopTags.InitOnclickInTags();
 
     TopTags.InitOnclick(0);
+
+    $("[data-toggle='tooltip']").tooltip();
+
 });
 
 //function InitTags()

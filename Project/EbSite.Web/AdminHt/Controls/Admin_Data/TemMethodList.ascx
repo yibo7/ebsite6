@@ -2,7 +2,7 @@
 <%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>函数管理</h3>
             函数库主要应用在页面模板与部件模板当中，方便制作模板时调用,如果是您自己开发的函数也应加到这里以方便调用
             </div>

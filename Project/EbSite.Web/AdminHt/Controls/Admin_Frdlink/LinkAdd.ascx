@@ -30,7 +30,7 @@
                     <td>logo 图片:
                     </td>
                     <td>
-                        <XS:SWFUpload ID="LogoUrl" AllowExt="jpg,gif,png"  UploadModel="SWFUpload组件"  AllowSize="1024" Width="300"  HintInfo="上传文件只允许上传图片文件哦，并且只能上传jpg,gif,png格式的图片" SaveFolder="LogoPic"  runat="server" />
+                        <XS:UploadImg ID="LogoUrl"    Ext="pg,gif,png"  Size="1024"      SaveFolder="LogoPic"  runat="server" />
 
                     </td>
                 </tr>

@@ -4,7 +4,7 @@
 
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>配送区域管理</h3>
             </div>
             <div class="content">

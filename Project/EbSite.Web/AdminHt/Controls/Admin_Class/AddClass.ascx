@@ -88,7 +88,7 @@
                         </td>
                         <td>
                             <XS:TextBox HintInfo="不要在前面加上/,如 填写ebsite/,分类访问路径为:http://域名/ebsite/" runat="server" Width="200" ID="HtmlName"></XS:TextBox>
-                            <asp:CheckBox ID="IsHtmlNameReWrite" ToolTip="默认情况重写连接模式下只调用seo里的设置,也可以到静态地址里批量生成这个设置,需要重启iis才能生效" Text="开启重写" runat="server" />
+                            <asp:CheckBox ID="IsHtmlNameReWrite" HintInfo="默认情况重写连接模式下只调用seo里的设置,也可以到静态地址里批量生成这个设置,需要重启iis才能生效" Text="开启重写" runat="server" />
                         </td>
                     </tr>
 
@@ -98,7 +98,7 @@
                         </td>
                         <td>
                             <XS:TextBox HintInfo="不要在前面加上/ 如 填写ebsite/,分类访问路径为:http://域名/ebsite/内容页面名称" runat="server" Width="200" ID="ContentHtmlPath"></XS:TextBox>
-                            <asp:CheckBox ID="IsHtmlNameReWriteContent" ToolTip="默认情况重写连接模式下只调用seo里的设置,开启后规则为:内容目录-id.html,需要重启iis才能生效" Text="开启重写" runat="server" />
+                            <asp:CheckBox ID="IsHtmlNameReWriteContent" HintInfo="默认情况重写连接模式下只调用seo里的设置,开启后规则为:内容目录-id.html,需要重启iis才能生效" Text="开启重写" runat="server" />
                         </td>
 
 

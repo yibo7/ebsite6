@@ -69,10 +69,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\libbin\log4\Common.Logging.Log4Net.dll</HintPath>
     </Reference>
-    <Reference Include="EbSite.ApiEntity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\libbin\EbSite.ApiEntity.dll</HintPath>
-    </Reference>
     <Reference Include="EbSite.Base, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\libbin\EbSite.Base.dll</HintPath>

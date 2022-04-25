@@ -3,7 +3,7 @@
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
         <div class="boxheader">
-                <h3>修改密码ff</h3>
+                <h3>修改密码</h3>
             </div>
             <div class="content">
 				 <table class="TableList">

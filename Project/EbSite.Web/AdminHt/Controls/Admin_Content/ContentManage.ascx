@@ -119,7 +119,7 @@
             <td>结束ID
             </td>
             <td>
-                <XS:TextBox ID="txtEndID" Width="50" ToolTip="如果不选择任何内容，将按起始ID生成" runat="server"></XS:TextBox>
+                <XS:TextBox ID="txtEndID" Width="50" HintInfo="如果不选择任何内容，将按起始ID生成" runat="server"></XS:TextBox>
             </td>
         </tr>
     </table>

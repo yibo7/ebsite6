@@ -71,7 +71,7 @@
                     <td>
                         <XS:UcReNameRule ID="rnHtmlName" Width="380" runat="server" />
                         <br/>
-                        <asp:CheckBox ID="cbIsCusttomRw" ToolTip="开启自定义也能用规则"   Text="自定义重写" runat="server"  />
+                        <asp:CheckBox ID="cbIsCusttomRw" HintInfo="开启自定义也能用规则"   Text="自定义重写" runat="server"  />
                     </td>
                 </tr>
                 

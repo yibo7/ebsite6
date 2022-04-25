@@ -5,6 +5,9 @@ using EbSite.Base.Plugin.Base;
 
 namespace EbSite.Base.Plugin
 {
+    /// <summary>
+    /// （已废弃）
+    /// </summary>
     public interface IDataImport : IProvider
     {
 

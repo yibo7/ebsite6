@@ -80,7 +80,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Modules
         protected override void BindToolBar()
         {
             base.BindToolBar(true,true,true,true,false);
-            ucToolBar.AddDialog(base.HostApi.GetModuleUrlForAdmin(new Guid("03fc411f-eed0-4afe-a5c2-b5c80d196b70"), new Guid("b1c484ee-90d7-427e-8a64-3f45d91f5515")), "下载模块", IISPath + "images/menus/menuDown.GIF");
+            //ucToolBar.AddDialog(base.HostApi.GetModuleUrlForAdmin(new Guid("03fc411f-eed0-4afe-a5c2-b5c80d196b70"), new Guid("b1c484ee-90d7-427e-8a64-3f45d91f5515")), "下载模块", IISPath + "images/menus/menuDown.GIF");
 
             lb.ID = "lb";
             lb.Text = "模块名称";

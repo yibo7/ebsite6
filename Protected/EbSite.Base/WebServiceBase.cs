@@ -60,11 +60,15 @@ namespace EbSite.Base
                return isok;
             
         }
+
         protected bool IsAllow(bool IsCheckUserLogin)
         {
             return IsAllow(IsCheckUserLogin,false);
         }
-
+        /// <summary>
+        /// 调用当前站点虚拟路径
+        /// </summary>
+        /// <returns></returns>
         [WebMethod]
         [SoapHeader("SecurityKey")]
         public string IISPath()
@@ -77,12 +81,20 @@ namespace EbSite.Base
         {
            return Host.Instance.UserName;
         }
+        /// <summary>
+        /// 调用当前用户ID，没有登录为0
+        /// </summary>
+        /// <returns></returns>
         [WebMethod]
         [SoapHeader("SecurityKey")]
         public int UserID()
         {
             return Host.Instance.UserID;
         }
+        /// <summary>
+        /// 调用当前管理员的id
+        /// </summary>
+        /// <returns></returns>
         [WebMethod(EnableSession = true)]
         [SoapHeader("SecurityKey")]
         public string GetManagerID()

@@ -60,14 +60,14 @@
                     <td>
                         <%=Resources.lang.EBCluInterQue%>：
                     </td>
-                    <td>
+                    <td class="form-inline">
                         <XS:TextBox ID="iTimeSpan" runat="server" Width="80" Text="2" RequiredFieldType="数据校验" HintInfo="群发邮件时，以队列式发送，一次发送可以发送多少分邮件,每次发送的时间间隔,以秒为单位，如果发送速度过快可能会被邮件接收服务器拒绝" CanBeNull="必填"></XS:TextBox>秒
                     </td>
                 </tr>
                 <tr>
                     <td>发送端口：
                     </td>
-                    <td>
+                    <td class="form-inline">
                         <XS:TextBoxVl ID="txtPort" runat="server" Width="50" Text="0" ValidateType="匹配正整数"></XS:TextBoxVl>
                         (默认为0,gmail的端口为587)
                     </td>

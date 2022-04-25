@@ -110,13 +110,13 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Themes
         protected override void BindToolBar()
         {
             base.BindToolBar(true, false, true, true, false);
-           
-            string ModuleMarketUrl = base.HostApi.GetModuleUrlForAdmin(ModuleID, MenuID);
-               if(ModuleMarketUrl.Equals(EbSite.Base.Host.Instance.GetTipsUrl(6)))
-                   ModuleMarketUrl = EbSite.Base.Host.Instance.GetTipsUrl(7);
-               ucToolBar.AddDialog(ModuleMarketUrl, MenuName, IISPath + "images/menus/Doc-Previous.gif");
 
-            ucToolBar.AddBnt("导出皮肤", IISPath + "images/menus/Doc-Next.gif", "putout");
+            //string ModuleMarketUrl = base.HostApi.GetModuleUrlForAdmin(ModuleID, MenuID);
+            //   if(ModuleMarketUrl.Equals(EbSite.Base.Host.Instance.GetTipsUrl(6)))
+            //       ModuleMarketUrl = EbSite.Base.Host.Instance.GetTipsUrl(7);
+            //   ucToolBar.AddDialog(ModuleMarketUrl, MenuName, IISPath + "images/menus/Doc-Previous.gif");
+
+            //ucToolBar.AddBnt("导出皮肤", IISPath + "images/menus/Doc-Next.gif", "putout");
             ucToolBar.AddBnt("刷新皮肤数据", IISPath + "images/menus/Doc-Next.gif", "refesh", "如果上传了新皮肤，那么要点这里刷新皮肤数据才会加载到这里来!");
             ucToolBar.AddLine();
 
@@ -144,10 +144,10 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Themes
                 //    }
 
                 //    break;
-                case "down":
-                    break;
-                case "putout":
-                    break;
+                //case "down":
+                //    break;
+                //case "putout":
+                //    break;
                 case "refesh":
                     ThemeBll.InitThemes();
                    

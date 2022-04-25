@@ -15,12 +15,12 @@ namespace EbSite.Web
     {
 
         /// <summary>
-        /// upFile 控件。
+        /// upImg 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::EbSite.Control.WebUploaderFile upFile;
+        protected global::EbSite.Control.UploadImg upImg;
     }
 }

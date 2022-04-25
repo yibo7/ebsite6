@@ -7,27 +7,11 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace EbSite.Web.AdminHt.Controls.Admin_Plugins {
-    
-    
-    public partial class PluginsAdd {
-        
-        /// <summary>
-        /// txtMdPath 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::EbSite.Control.SWFUpload txtMdPath;
-        
-        /// <summary>
-        /// bntSetup 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::EbSite.Control.Button bntSetup;
+namespace EbSite.Web.AdminHt.Controls.Admin_Plugins
+{
+
+
+    public partial class PluginsAdd
+    {
     }
 }

@@ -2,7 +2,7 @@
 <%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>常规日志</h3>
             此类日志为综合日志，在模块开发里调用的写日志接口写入的日志当归为此类
             </div>

@@ -4,7 +4,7 @@
  
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>网页访问错误记录</h3>
             要记录404日志请将404错误页面定向到网根目录下的errhttp.aspx页面,默认.net托管的404已经在web.config里开户,静态页请到iis里设置
             </div>

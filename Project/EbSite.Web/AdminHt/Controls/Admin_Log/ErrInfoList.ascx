@@ -3,7 +3,7 @@
  
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>错误日志列表</h3>
             您可以通过定向到/err[id].aspx 来访问这个提示页面,其中 id 为记录的ID，如/err1.aspx
             </div>

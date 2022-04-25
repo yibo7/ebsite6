@@ -2,7 +2,7 @@
 <%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %> 
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>支付插件管理</h3>
             如果没有适合您的支付插件，请自行开发，到插件管理中安装
             </div>

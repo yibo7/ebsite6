@@ -22,7 +22,7 @@
                     <%=Resources.lang.EBDftNOfTPg%>：        
                     </td>
                 <td>
-                    <XS:TextBox ID="txtDefualtName" runat="server" Width="80px"></XS:TextBox>
+                    <XS:TextBox ID="txtDefualtName" runat="server" Width="180px"></XS:TextBox>
                     为空时表示不启用默认文档，否则将此名称连接在静态页面命名规则后面
                 </td>
            </tr>
@@ -41,11 +41,11 @@
                     <%=Resources.lang.EBTagSearchPath%>：           
                 </td>
                 <td class="form-inline">
-                    <XS:TextBox ID="txtTagSearch" HintInfo="支持{#KeyID#}与{#TitleSpell#}替换" runat="server" Width="242px"></XS:TextBox>
+                    <XS:TextBox ID="txtTagSearch" HintInfo="支持{#KeyID#}与{#TitleSpell#}替换" runat="server" Width="350px"></XS:TextBox>
                     
                      &nbsp;&nbsp;
                     <XS:Button ID="btnTagSearchUpdateRule" runat="server" Text="更新到现在有数据" onclick="btnTagSearchUpdateRule_Click" />
-                    <XS:Button ID="btnTagSearchMakeName" runat="server" Text="重新生成页面名称" ToolTip="如果数据量大很点资源"
+                    <XS:Button ID="btnTagSearchMakeName" runat="server" Text="重新生成页面名称" HintInfo="如果数据量大很点资源"
                         onclick="btnTagSearchMakeName_Click"  />   
                         
                 </td> 
@@ -67,7 +67,7 @@
                     <XS:UcReNameRule Width="350" ID="rnrClass" runat="server" />
                     &nbsp;&nbsp;
                     <%--<XS:Button ID="bntUpdateClassRule" runat="server" Text="更新到现在有数据" onclick="bntUpdateClassRule_Click" />--%>
-                    <XS:Button ID="bntReMakeHtmlNameClass" runat="server" Text="重新生成页面名称" ToolTip="如果数据量大很点资源" onclick="bntReMakeHtmlNameClass_Click"  />   
+                    <XS:Button ID="bntReMakeHtmlNameClass" runat="server" Text="重新生成页面名称" HintInfo="如果数据量大很点资源" onclick="bntReMakeHtmlNameClass_Click"  />   
                 
                 </td>              
            </tr>
@@ -79,7 +79,7 @@
                     <XS:UcReNameRule Width="350" ID="rnrContent" runat="server" />
                     &nbsp;&nbsp;
                     <%--<XS:Button ID="bntUpdateContentRule" runat="server"  Text="更新到现在有数据" onclick="bntUpdateContentRule_Click" />--%>    
-                    <XS:Button ID="bntReMakeHtmlNameContent" runat="server" Text="重新生成页面名称" ToolTip="如果数据量大很点资源"
+                    <XS:Button ID="bntReMakeHtmlNameContent" runat="server" Text="重新生成页面名称" HintInfo="如果数据量大很点资源"
                         onclick="bntReMakeHtmlNameContent_Click"  />    
                 </td>              
            </tr>
@@ -91,7 +91,7 @@
                     <XS:UcReNameRule Width="350" ID="rnrSpecial" runat="server" />
                     &nbsp;&nbsp;
                     <XS:Button ID="bntUpdateSpecial" runat="server"  Text="更新到现在有数据" onclick="bntUpdateSpecial_Click" />    
-                    <XS:Button ID="bntReMakeHtmlNameSpecial" runat="server" Text="重新生成页面名称" ToolTip="如果数据量大很点资源"
+                    <XS:Button ID="bntReMakeHtmlNameSpecial" runat="server" Text="重新生成页面名称" HintInfo="如果数据量大很点资源"
                         onclick="bntReMakeHtmlNameSpecial_Click"  />    
                 </td>              
            </tr>

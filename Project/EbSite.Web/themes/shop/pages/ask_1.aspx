@@ -55,7 +55,7 @@
             <asp:PlaceHolder ID="IsOpenSafeCoder" runat="server">
 			<div style="float:right; margin-right:10px; margin-left:10px;" >
             验证码:<asp:TextBox ID="txtSafeCoder" runat="server" Width="80" class="inpborw" ></asp:TextBox>
-            <asp:Image ID="ImageCheck" runat="server" onClick="this.src+=Math.random()" Style="cursor: pointer;" ImageUrl="/ValidateCode.ashx?" ToolTip="图片看不清？点击重新得到验证码,不区分大小写!红色数字,黑色字母!"></asp:Image>
+            <asp:Image ID="ImageCheck" runat="server" onClick="this.src+=Math.random()" Style="cursor: pointer;" ImageUrl="/ValidateCode.ashx?" HintInfo="图片看不清？点击重新得到验证码,不区分大小写!红色数字,黑色字母!"></asp:Image>
             </div>
             </asp:PlaceHolder>
 
