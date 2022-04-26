@@ -5,7 +5,7 @@
 <div style="background:#FAFAFA" class="container-fluid main-title">
     <div  class="row">
     <div class="col-sm-12">
-        <h4 class="page-title">选择父级分类</h4>
+        <h3 class="page-title">选择父级分类</h3>
         <p class="text-muted page-title-alt">请选择父级分类然后点击[下一步]!</p>
     </div>
 </div>
@@ -48,15 +48,15 @@
                 if (isadd == 1) {
                     location.href = "?t=0&pid=" + selID;
                 } else {
-                    tips("所选分类不能添加下级子分类", 1, 3);
+                    tb_err("所选分类不能添加下级子分类");
                 }
             } else {
                 
-                tips("请选择一个分类", 1, 3);
+                tb_err("请选择一个分类");
             }
         } else {
              
-            tips("请选择一个分类", 1, 3);
+            tb_err("请选择一个分类");
         }
         
          

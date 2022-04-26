@@ -146,10 +146,10 @@ function bk_CloseAsk(result) {
         $("#EditQuestionDiv").hide();
         $("#UpScoreDiv").attr("display", "none");
         $("#UpScoreDiv").hide();
-        tips("问题成功关闭", 1, 2);
+        tb_err("问题成功关闭");
     }
     else {
-        tips("问题关闭失败", 2, 2);
+        tb_err("问题关闭失败");
     }
 }
 

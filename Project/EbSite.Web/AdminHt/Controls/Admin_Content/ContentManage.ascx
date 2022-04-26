@@ -7,8 +7,8 @@
         <ul id="tagModels" class="nav nav-tabs">
             <asp:Repeater ID="repWebModel" runat="server">
                 <ItemTemplate>
-                    <li class="<%#Equals(Guid.Parse(Eval("id").ToString()),ModelID)?"active":"" %> tab">
-                        <a href="<%#GetUrl %>&modelid=<%#Eval("id") %>">
+                    <li class="nav-item">
+                        <a class="<%#Equals(Guid.Parse(Eval("id").ToString()),ModelID)?"active":"" %> nav-link" href="<%#GetUrl %>&modelid=<%#Eval("id") %>">
                             <span class="visible-xs"><i class="fa fa-cube"></i></span>
                             <span data-toggle="tooltip" title="[表:<%#Equals(Eval("tablename"),null) ? "默认表" : Eval("tablename")%>]" class="hidden-xs"><%#Eval("ModelName")%></span>
 
@@ -211,7 +211,7 @@
             location.href = "?t=5&modelid=<%=ModelID %>&ids=" + ids.join(",");
         }
         else {
-            tips("请选择要移动的内容", 1, 3);
+            tb_err("请选择要移动的内容");
         }
 
 

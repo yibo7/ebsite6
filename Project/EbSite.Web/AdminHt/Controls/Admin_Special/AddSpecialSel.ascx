@@ -27,7 +27,7 @@
             location.href = "?t=0&pid=" + selID;
         }
         else {
-            tips("请选择父专题", 1, 3);
+            tb_err("请选择父专题", 1, 3);
         }
         
 

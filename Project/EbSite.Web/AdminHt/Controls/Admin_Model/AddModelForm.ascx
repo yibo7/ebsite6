@@ -24,7 +24,7 @@
                         <td>
                             模板名称：
                         </td>
-                        <td >                           
+                        <td class="form-inline">                           
                             form_<XS:TextBoxVl runat="server" IsAllowNull="false" ValidateType="匹配由26个英文字母组成的字符串"  ID="txtTempName"></XS:TextBoxVl>.aspx
                         </td>
                         

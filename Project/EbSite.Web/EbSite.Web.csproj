@@ -494,8 +494,6 @@
     <Content Include="contentmobile.aspx" />
     <Content Include="ddd.aspx" />
     <Content Include="errapp.aspx" />
-    <Content Include="fonts\demo.html" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="images\kuaidi\kuaidi.css" />
     <Content Include="images\outlink.gif" />
     <Content Include="Jobs\EbSite.Jobs.dll" />
@@ -633,10 +631,6 @@
     <Content Include="Base - 复制.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="JobsAuditingContent.ini" />
     <Content Include="robots.txt" />
     <Content Include="specialmobile.aspx" />

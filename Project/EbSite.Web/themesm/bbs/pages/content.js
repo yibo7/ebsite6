@@ -106,7 +106,7 @@ function addrepost() {
         });
     }
     else {
-        tips("请输入正确回复内容！", 1, 2);
+        tb_err("请输入正确回复内容！", 1, 2);
     }
 
 }

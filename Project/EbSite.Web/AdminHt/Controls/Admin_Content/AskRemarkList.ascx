@@ -6,8 +6,8 @@
         <ul class="nav nav-tabs">
              <XS:Repeater ID="rpRemarkClass" runat="server" >
                         <ItemTemplate>
-                             <li class="<%#GetCurrentClass(Eval("id")) %> tab">
-                        <a href="?t=6&remarkclass=<%#Eval("itype") %>&cid=<%#Eval("id") %>">
+                             <li class="nav-item">
+                        <a class="<%#GetCurrentClass(Eval("id")) %> nav-link" href="?t=6&remarkclass=<%#Eval("itype") %>&cid=<%#Eval("id") %>">
                             <span class="visible-xs"><i class="fa fa-comment-o"></i></span>
                             <span class="hidden-xs"><%#Eval("ClassName") %></span>
                         </a>

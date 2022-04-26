@@ -39,14 +39,14 @@ jQuery(function ($) {
             if (iupindex == 1 || iupindex == 2) {
 
                 if (ispostup) {
-                    tips("您已经操作过此主题！", 3);
+                    tb_err("您已经操作过此主题！");
                     return;
                 }
 
             } else {
                 if (ispostuphfs.contains(ipostid)) {
                     if (ispostup) {
-                        tips("您已经操作过此帖子！", 3);
+                        tb_err("您已经操作过此帖子！");
                         return;
                     }
                 }
@@ -139,7 +139,7 @@ function addrepost() {
         });
     }
     else {
-        tips("请输入正确回复内容！",1,2);
+        tb_err("请输入正确回复内容！");
     }
  
 }

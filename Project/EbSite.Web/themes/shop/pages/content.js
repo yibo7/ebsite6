@@ -91,7 +91,7 @@ jQuery(function ($) {
     $("#txtChangeBuyNum").change(function () {
         if (isint(this)) {
             CheckStocks();
-        } else { $(this).val(1); tips("数量必须是大于0的整数！"); }
+        } else { $(this).val(1); tb_err("数量必须是大于0的整数！"); }
 
 
     });
@@ -114,7 +114,7 @@ jQuery(function ($) {
 
         var i = $("#txtChangeBuyNum").val();
         if (i == 1) {
-            tips("对不起，数量最少为1个！", 1);
+            tb_err("对不起，数量最少为1个！");
         }
         else {
             $("#txtChangeBuyNum").val(i * 1 - 1);
@@ -340,14 +340,14 @@ function CheckStocks() {
         //如果商品库存不足,屏蔽购买按钮(flz 2013-12-13)
         //$("#btnpanel").html("<div onclick=\"KuCunMsg()\" class=\"btnbuy all\"></div><span onclick=\"KuCunMsg()\"><div class=\"btngwc all\"></div></span>");
         isCheckStocks = false;
-        tips("对不起，库存量不足" + iInputValue + "个，建议减少购买量，或联系我们客服人员！", 1);
+        tb_err("对不起，库存量不足" + iInputValue + "个，建议减少购买量，或联系我们客服人员！");
         $("#txtChangeBuyNum").val(iStocks);
     }
     return isCheckStocks;
 }
 function KuCunMsg()
 {
-    tips("对不起，库存量不足,请联系我们客服人员！", 1);
+    tb_err("对不起，库存量不足,请联系我们客服人员！");
 }
 
 function updateprice() {
@@ -439,7 +439,7 @@ function getshoppingcarurl() {
 function addtoshoppingcar() {
     var url = getshoppingcarurl();
     if (url != "") {
-        tips("正在执行", 1, 20);
+        tb_err("正在执行");
         location.href = url;
     }
 }
@@ -447,7 +447,7 @@ function addtoshoppingcar() {
 function addtoshoppingcarmore(csstag) {
     var url = getshoppingcarurl();
     if (url != "") {
-        tips("正在执行", 1, 20);
+        tb_err("正在执行");
         var pids = "";
         $("." + csstag).each(function (i) {
 

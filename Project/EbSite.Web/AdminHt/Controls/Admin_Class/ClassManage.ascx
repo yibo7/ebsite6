@@ -6,7 +6,7 @@
 <div style="background:#FAFAFA" class="container-fluid main-title">
     <div  class="row">
     <div class="col-sm-12">
-        <h4 class="page-title">管理分类-表格模式</h4>
+        <h3 class="page-title">管理分类-表格模式</h3>
         <p class="text-muted page-title-alt">提示：您也可以切换到<a href="admin_Class.aspx?mpid=bb33d5ce-094a-420c-8bf7-dccb77524a6a&msid=e93a5109-8da7-4342-9a97-288323a49379">列表模式来管理分类</a></p>
     </div>
 </div>

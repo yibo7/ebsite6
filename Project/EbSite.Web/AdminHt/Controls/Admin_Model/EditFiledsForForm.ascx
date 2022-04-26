@@ -88,14 +88,14 @@
             <div style="height: 500px;" class="modal-body">
                 <!--设置窗口高-->
                 <ul id="myTab" class="nav nav-tabs">
-                    <li class="active">
-                        <a href="#tg1" data-toggle="tab">字段参数
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#tg1" data-toggle="tab">字段参数
                         </a>
                     </li>
-                    <li><a href="#tg2" data-toggle="tab">其他参数</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="#tg2" data-toggle="tab">其他参数</a></li> 
                 </ul>
                 <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade in active" id="tg1">
+                    <div class="tab-pane active" id="tg1">
                     <table>
                         <tr style="display: none;">
                             <td>字段类型:</td>
@@ -134,19 +134,17 @@
                         <tr id="trFiledDataType">
                             <td>字段类型:</td>
                             <td class="form-inline">
-                                <div class="form-group">
-                                        <XS:DropDownList runat="server" ID="drpFiledDataType">
+                               <XS:DropDownList runat="server" ID="drpFiledDataType">
                                         </XS:DropDownList>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputfile">长度</label>
+                                &nbsp;
+                                 <label for="inputfile">长度</label> &nbsp;
                                         <XS:TextBoxVl ID="txtDataTypeLen" Width='50' ValidateType="整数" runat="server"></XS:TextBoxVl>
-                                    </div>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div class="tab-pane fade" id="tg2">
+                    <br />
                     <div class="alert alert-success">
                         注:在后台的管理表里是否显示此字段
                     </div>

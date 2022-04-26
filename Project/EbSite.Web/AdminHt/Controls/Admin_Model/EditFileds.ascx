@@ -91,14 +91,14 @@
             </div>
             <div style="height: 500px;" class="modal-body">
                 <ul id="myTab" class="nav nav-tabs">
-                    <li class="active">
-                        <a href="#tg1" data-toggle="tab">字段参数
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#tg1" data-toggle="tab">字段参数
                         </a>
                     </li>
-                    <li><a href="#tg2" data-toggle="tab">其他参数</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="#tg2" data-toggle="tab">其他参数</a></li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade in active" id="tg1">
+                    <div class="tab-pane active" id="tg1">
                         <table cellpadding="0" cellspacing="0">
                             <tr>
                                 <td>字段类型:</td>
@@ -150,6 +150,7 @@
                         </table>
                     </div>
                     <div class="tab-pane fade" id="tg2">
+                        <br />
                         <div class="alert alert-warning">注:以下参数如果不清楚，请不要修改</div>
                         <table cellpadding="0" cellspacing="0">
                             <tr>

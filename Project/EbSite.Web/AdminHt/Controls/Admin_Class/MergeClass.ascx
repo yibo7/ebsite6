@@ -1,9 +1,9 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MergeClass.ascx.cs"
     Inherits="EbSite.Web.AdminHt.Controls.Admin_Class.MergeClass" %>
 <%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
-<XS:Notes Text="合并分类后将删除源分类与它的子分类" </div>
+<XS:Notes runat="server" Text="合并分类后将删除源分类与它的子分类" />
 <br />
-<XS:Notes ID="Notes1" Text="分类的合并包括源分类下的所有数据及其子分类下所有数据" </div>
+<XS:Notes runat="server" ID="Notes1" Text="分类的合并包括源分类下的所有数据及其子分类下所有数据" />
 <br />
 <asp:PlaceHolder ID="phCtrList" runat="server">
     <div class="admin_toobar">

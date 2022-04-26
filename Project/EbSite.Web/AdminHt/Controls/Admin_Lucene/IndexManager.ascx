@@ -5,13 +5,10 @@
                 <div class="boxheader">
                     <h3>索引创建配置</h3>
                 </div>
-        <br />
+                <br />
                 <div class="alert alert-success">目前索引只尖对内容表（包括分表，请到：网站管理-内容管理-数据调整-选择分表作为 搜索、排行、专题、标签 的数据源，选择要生成的索引的分表）。</div>
-
-                <table class="table">
-                    <tr>
-                        <td class="form-inline">
-                            <XS:DropDownList AppendDataBoundItems="True" HintInfo="目前不支持自定义字段,其中ID与ClassID默认已经选择,可以直接在前台搜索模板直接调用" ID="drpContentFileds" runat="server">
+                <div class="form-inline">
+                    <XS:DropDownList AppendDataBoundItems="True" HintInfo="目前不支持自定义字段,其中ID与ClassID默认已经选择,可以直接在前台搜索模板直接调用" ID="drpContentFileds" runat="server">
                                 <asp:ListItem Value="" Text="选择字段"></asp:ListItem>
                             </XS:DropDownList>
                              &nbsp;
@@ -25,14 +22,10 @@
                              &nbsp;
                             <XS:Button ID="bntAddFiled" runat="server" Text="添加字段"
                                 OnClick="bntAddFiled_Click" />
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-
-                        <td colspan="2">
-                             
-                                <XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID">
+                </div>
+        <br />
+                <div>
+                    <XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID">
                                     <Columns>
                                         <asp:TemplateField HeaderText="字段名称" ItemStyle-CssClass="gvfisrtTD">
                                             <ItemTemplate>
@@ -48,12 +41,7 @@
                                         </asp:TemplateField>
                                     </Columns>
                                 </XS:GridView>
-                         
-
-                        </td>
-                    </tr>
-
-                </table>
+                </div>
                 <br />
                 <XS:Button ID="bntSave" runat="server" Text="生成所有索引" OnClick="bntSave_Click" />
                 <br />

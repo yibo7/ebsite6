@@ -11,7 +11,7 @@
 <div style="background:#FAFAFA" class="container-fluid main-title">
     <div  class="row">
     <div class="col-sm-12">
-        <h4 class="page-title">管理分类-列表模式</h4>
+        <h3 class="page-title">管理分类-列表模式</h3>
         <p class="text-muted page-title-alt">提示：您也可以切换到<a href="admin_Class.aspx?mpid=bb33d5ce-094a-420c-8bf7-dccb77524a6a&msid=eac8e169-ead9-485a-9dd3-e4ce31508fc4">表格模式来管理分类</a></p>
     </div>
 </div>
