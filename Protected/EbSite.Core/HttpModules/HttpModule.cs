@@ -326,13 +326,13 @@ namespace EbSite.Core
                                 //    sRealUrl = LinkContent.Instance.GetAspxInstance(SiteID).GetContentLink(ContentId);
                                 //}
 
-                                else if (UrlRules.SpecialRuleHtmlNames.ContainsKey(requestedPath))//分类目录自定义重写
+                                else if (UrlRules.SpecialRuleHtmlNames.ContainsKey(requestedPath))//专题自定义重写
                                 {
                                     int ClassId = UrlRules.SpecialRuleHtmlNames[requestedPath];
                                     int PageIndex = 1;
                                     sRealUrl = LinkSpecial.Instance.GetAspxInstance(SiteID).GetSpecialHref(ClassId, PageIndex);
                                 }
-                                else if (IsMatchSpecalUrlReWritPage(requestedPath, ref sRwRulePage, ref sRwPathName, ref iRwClassId)) //分类目录自定义重写-分页
+                                else if (IsMatchSpecalUrlReWritPage(requestedPath, ref sRwRulePage, ref sRwPathName, ref iRwClassId)) //专题目录自定义重写-分页
                                 {
                                     Match mc = Regex.Match(requestedPath, sRwRulePage);
                                     int PageIndex = 1;

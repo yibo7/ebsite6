@@ -33,7 +33,7 @@
                     <td >                        
                         <XS:CheckBoxList Width="" HintInfo="将向所选用户组里的用户发送手机短信" ID="cbReceiverGroupList" runat="server">
                         </XS:CheckBoxList>
-                        <XS:TextBox ID="txtReceiverUserList" HintInfo="一行一个" TextMode="MultiLine" Width="300" Height="100" runat="server"></XS:TextBox>
+                        <XS:TextBoxVl ID="txtReceiverUserList" IsAllowNull="false" HintInfo="一行一个" TextMode="MultiLine" Width="300" Height="100" runat="server"></XS:TextBoxVl>
                     </td>
                 </tr>
                 <tr>
@@ -41,7 +41,7 @@
                         短信内容：
                     </td>
                     <td>
-                        <XS:TextBox ID="txtMsg" Width="350" TextMode="MultiLine" Height="100" runat="server"></XS:TextBox>
+                        <XS:TextBoxVl   ID="txtMsg" IsAllowNull="false" Width="350" TextMode="MultiLine" Height="100" runat="server"></XS:TextBoxVl>
                     </td>
                 </tr>
                

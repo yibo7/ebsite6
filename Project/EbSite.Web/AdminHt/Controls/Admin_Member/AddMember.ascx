@@ -15,8 +15,7 @@
                         <font color='#E78A29'>*</font> <%=Resources.lang.EBUserName%>：
                     </td>
                     <td>
-                        <XS:TextBox ID="txtUserName" runat="server" CanBeNull="必填" HintInfo="用户名称，不能为空" HintShowType="down"
-                            HintTitle="提示" MaxLength="100"></XS:TextBox>
+                        <XS:TextBoxVl ID="txtUserName" runat="server" IsAllowNull="false" ValidateType="匹配由数字和26个英文字母组成的字符串" HintInfo="用户名称，不能为空"  ></XS:TextBoxVl>
                     </td>
                 </tr>
                 
@@ -25,7 +24,7 @@
                         <font color='#E78A29'>*</font> <%=Resources.lang.EBPassword%>：
                     </td>
                     <td>
-                        <XS:TextBox ID="PassWord" runat="server" TextMode="Password" CanBeNull="必填" ></XS:TextBox>
+                        <XS:TextBoxVl ID="PassWord" runat="server" TextMode="Password" IsAllowNull="false" ></XS:TextBoxVl>
                     </td>
                 </tr>
                 <tr>
@@ -33,7 +32,7 @@
                         <font color='#E78A29'>*</font> <%=Resources.lang.EBConfirmPass%>：
                     </td>
                     <td>
-                        <XS:TextBox ID="CfPassWord" runat="server" TextMode="Password" CanBeNull="必填" ></XS:TextBox>
+                        <XS:TextBoxVl ID="CfPassWord" runat="server" TextMode="Password" IsAllowNull="false" ></XS:TextBoxVl>
                     </td>
                 </tr>
                 <tr>
@@ -41,12 +40,12 @@
                         <font color='#E78A29'>*</font> Email：
                     </td>
                     <td>
-                        <XS:TextBox ID="Email" runat="server" RequiredFieldType="电子邮箱" CanBeNull="必填" ></XS:TextBox>
+                        <XS:TextBoxVl ID="Email" runat="server" ValidateType="电子邮箱email" IsAllowNull="false" ></XS:TextBoxVl>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2" style="text-align: center">
-                        <XS:Button ID="bntSave" runat="server" Text="<%$Resources:lang,EBRegister%>" />
+                        <XS:Button ID="bntSave" IsTipsButtonRight="true" runat="server" Text="<%$Resources:lang,EBRegister%>" />
                     </td>
                 </tr>
             </table>

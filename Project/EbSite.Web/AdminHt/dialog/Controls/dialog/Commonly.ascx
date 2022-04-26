@@ -4,7 +4,7 @@
     <div class="col-sm-12">
         <div class="card-box">
             <div class="table-responsive">
-          <table class="table" >
+          <table class="table table-hover" >
             <XS:Repeater ID="RepCommon" runat="server">
                 <HeaderTemplate>
                     <tr >

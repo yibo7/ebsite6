@@ -412,11 +412,16 @@ namespace EbSite.Modules.Shop.ModuleCore.BLL
 		{
             return GetListArray(string.Concat("ProductID=" , id));
 		}
-
-         public DataSet GetProductShowData(int id)
+	 
+		public DataSet GetProductShowData(int id)
          {
              return dalHelper.GetProductShowData(id);
          }
+
+		public bool ExistsContent(int id)
+		{
+			return dalHelper.ProductsImg_ExistsContent(id);
+		}
 		#endregion  自定义方法
 	}
 }

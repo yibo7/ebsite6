@@ -1,80 +1,106 @@
-img{ border: 0pt; }
-
-.toolbarbox { 
-                    width:100%;
-	            min-width: 400px;
-	            /*overflow-x: auto;
-                overflow-y: hidden;*/
-	            }
-#vista_toolbar {
-float:left;
-font:normal 12px 'Trebuchet MS','Arial';
-margin:0px;
-padding:0px;
-width:100%;
-min-width: 1200px;
-}
-
- #vista_toolbar ul {
-        border-top: 1px solid #dddddd;
-        border-left: 1px solid #dddddd;
-        border-right: 1px solid #dddddd;
-        background: #EBEBEB;
-        float: left;
-        line-height: 32px;
-        list-style: none;
-        margin: 0px;
-        padding: 0px;
-        width: 100%;
-        padding-top: 1px;
-        padding-left: 3px;
+     .toolbarbox { 
+    width:100%; 
+    /*overflow-x: auto;*/
+    /*overflow-y: hidden;*/
+    }
+    #vista_toolbar {
+        /*float:left;*/
+        font:normal 12px 'Trebuchet MS','Arial';
+        margin:0px;
+        padding:0px;
+        width:100%;
+        min-width: 1200px;
+         
     }
 
-#vista_toolbar li {
-display:inline;
-padding:0; 
-}
-#vista_toolbar li input {
-   border:1px solid #E6E6E6;
-   height:35px;
-   line-height:35px;
-    margin-top:1px;
-}
-#vista_toolbar li select {
-   border:1px solid #E6E6E6;
-   margin-top:1px;
-   height:35px;
-   line-height:35px;
-}
+     #vista_toolbar ul {
+            border-top: 1px solid #dddddd;
+            border-left: 1px solid #dddddd;
+            border-right: 1px solid #dddddd;
+            background: #EBEBEB;
+            float: left;
+            line-height: 40px;
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            /*padding-top: 1px;
+            padding-left: 3px;*/
+        }
 
-#vista_toolbar a {
-color:#000; /* need because it will use default link color */
-float:left;
-padding:0 5px 0 5px; /* left 3 px because of left.png image */ 
-text-decoration:none;
-}
+    #vista_toolbar li {
+        display:inline;
+        padding:0; 
+    }
+    #vista_toolbar li input {
+       border:1px solid #E6E6E6;
+       height:35px;
+       line-height:35px;
+        margin-top:1px;
+    }
+    #vista_toolbar li select {
+       border:1px solid #E6E6E6;
+       margin-top:1px;
+       height:35px;
+       line-height:35px;
+    }
 
-#vista_toolbar a span {
-display:block;
-float:none;
-padding:0 3px 0 2px;
-}
+    /*#vista_toolbar a {
+    color:#000;*/ /* need because it will use default link color */
+    /*float:left;
+    padding:0 5px 0 5px;*/ /* left 3 px because of left.png image */ 
+    /*text-decoration:none;
+    }*/
 
-#vista_toolbar a span img {
-border:none;
-margin:10px 5px 0 0;
-}
+    /*#vista_toolbar a span {
+    display:block;
+    float:none;
+    padding:0 3px 0 2px;
+    }
+
+    #vista_toolbar a span img {
+    border:none;
+    margin:10px 5px 0 0;
+    }*/
 
 
 
-#vista_toolbar a.right {
-float:right; /* for help button - just add class "right" ->  <a class="right"... */
-}
+    #vista_toolbar a.right {
+        float:right;  
+    }
+     
+      
 
-#vista_toolbar .bline
-{
-	 background-image:url(line.gif);
-	 width:2px;
-	 height:22px;
-	 margin-top:5px;
-}
+    #vista_toolbar a {
+    color: #000; /* need because it will use default link color */
+    float: left;
+    padding: 0 3px 0 3px; /* left 3 px because of left.png image */
+    text-decoration: none;
+    }
+
+    #vista_toolbar a span {
+        display: block;
+        float: none;
+        padding: 0 3px 0 2px;
+
+    }
+
+    #vista_toolbar a span img {
+        border: none;
+        margin: 11px 1px 0 0;
+    }
+    #vista_toolbar .bline {
+        background-image: url(line.gif);
+        width: 2px;
+        height: 30px;
+        margin-top: 5px;
+    }
+             
+    #vista_toolbar .btn:hover {
+        background: url(btnleft.png) no-repeat left center;
+    }
+
+#vista_toolbar .btn:hover span {
+            background: url(btnright.png) no-repeat right center;
+        } 
+

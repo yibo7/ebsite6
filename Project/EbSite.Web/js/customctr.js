@@ -415,7 +415,7 @@ function tb_div(divid, w, h) {
 }
 function tb_err(msg) {
     In.ready('tinybox', function () {
-        TINY.box.show({ html: msg, animate: false, close: false, boxid: 'error', top: 5 })
+        TINY.box.show({ html: msg, animate: false, close: false, boxid: 'error', top: 5, width:200 })
     });    
 }
 function tb_info(msg) {

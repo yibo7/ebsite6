@@ -186,7 +186,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Widgets
             //ucToolBar.AddBox("divPutin", "导入部件", "putin", IISPath + "images/menus/Doc-Previous.gif");
             //ucToolBar.AddBnt("导出部件", IISPath + "images/menus/Doc-Next.gif", "putout");
 
-            ucToolBar.AddDialog(base.HostApi.GetModuleUrlForAdmin(new Guid("03fc411f-eed0-4afe-a5c2-b5c80d196b70"), new Guid("b129a8d3-0171-4008-8def-157d8c63fd33")), "下载部件", IISPath + "images/menus/menuDown.GIF");
+            //ucToolBar.AddDialog(base.HostApi.GetModuleUrlForAdmin(new Guid("03fc411f-eed0-4afe-a5c2-b5c80d196b70"), new Guid("b129a8d3-0171-4008-8def-157d8c63fd33")), "下载部件", IISPath + "images/menus/menuDown.GIF");
 
 
             ucToolBar.AddLine();

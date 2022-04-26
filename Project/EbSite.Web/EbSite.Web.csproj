@@ -941,13 +941,6 @@
     <Content Include="js\mobile\inc.js" />
     <Content Include="js\mobile\init.js" />
     <Content Include="js\plugin\jquery.topfixed.js" />
-    <Content Include="js\plugin\toolbar\theme1\add.gif" />
-    <Content Include="js\plugin\toolbar\theme1\back.gif" />
-    <Content Include="js\plugin\toolbar\theme1\btnleft.png" />
-    <Content Include="js\plugin\toolbar\theme1\btnright.png" />
-    <Content Include="js\plugin\toolbar\theme1\index.css" />
-    <Content Include="js\plugin\toolbar\theme1\line.gif" />
-    <Content Include="js\plugin\toolbar\theme1\mail.gif" />
     <Content Include="js\userapireg.js" />
     <Content Include="js\userlogin.js" />
     <Content Include="js\userreg.js" />

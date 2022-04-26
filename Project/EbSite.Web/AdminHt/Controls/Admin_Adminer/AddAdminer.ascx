@@ -17,7 +17,7 @@
                         <%=Resources.lang.EBUserName%>：
                     </td>
                     <td>
-                        <XS:TextBoxVl ID="txtUserName" runat="server" IsAllowNull="False" HintInfo="用户名称，不能为空" HintShowType="down" MaxLength="100"></XS:TextBoxVl>
+                        <XS:TextBoxVl ID="txtUserName" runat="server" IsAllowNull="False" ValidateType="匹配由数字和26个英文字母组成的字符串" HintInfo="用户名称，不能为空" ></XS:TextBoxVl>
                     </td>
                 </tr>
                 <tr>
@@ -26,7 +26,7 @@
                          <%=Resources.lang.EBPassword%>：
                     </td>
                     <td>
-                        <XS:TextBoxVl ID="PassWord" runat="server"  TextMode="Password" IsAllowNull="False" ></XS:TextBoxVl>
+                        <XS:TextBoxVl ID="PassWord" runat="server"    TextMode="Password" IsAllowNull="False" ></XS:TextBoxVl>
                     </td>
                 </tr>
                 <tr>
@@ -44,7 +44,7 @@
                          Email：
                     </td>
                     <td>
-                        <XS:TextBoxVl ID="Email" runat="server" ValidateType="电子邮箱email"   IsAllowNull="False" ></XS:TextBoxVl>
+                        <XS:TextBoxVl ID="Email" runat="server"  ValidateType="电子邮箱email"    ></XS:TextBoxVl>
                     </td>
                 </tr> 
                      

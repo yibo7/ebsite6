@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="card-box">
-            <h4 class="m-t-0 m-b-20 header-title"><b> 您当前编辑的公共文件来自皮肤<font color="red">[<%=CurrentThemeName %>]</font></b></h4>
+            <h3 class="m-t-0 m-b-20 header-title"> 您当前编辑的公共文件来自皮肤<font color="red">[<%=CurrentThemeName %>]</font></h3>
             
 <XS:ToolBar ID="ucToolBar" runat="server"/>
 <div class="table-responsive" id="PagesMain">

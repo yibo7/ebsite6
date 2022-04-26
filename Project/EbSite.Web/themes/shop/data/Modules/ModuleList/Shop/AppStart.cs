@@ -1467,8 +1467,8 @@ namespace EbSite.Modules.Shop
 
         private static void On_ContentPageLoadEvent(object sender, ContentPageLoadEventArgs e)
         {
-            if (e.ContentID > 0)
-            {
+            if (e.ContentID > 0 && ProductsImg.Instance.ExistsContent(e.ContentID))
+            { 
                 DataSet ds = ModuleCore.BLL.ProductsImg.Instance.GetProductShowData(e.ContentID);
 
                 //-- 产品图片

@@ -545,7 +545,7 @@ namespace EbSite.Base
 
             foreach (var model in lstSpecal)
             {
-                if (model.IsCusttomRw)
+                if (model.IsCusttomRw) //这个地方可以不判断，因为取出来都是自定义的数据
                 {
                     if (!string.IsNullOrEmpty(model.HtmlName))
                     {

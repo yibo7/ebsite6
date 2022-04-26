@@ -48,8 +48,16 @@
     </div>
 </div>
 
-<div id="divPutin" title="导入控件"  style="display:none;" >
-    <div style=" margin:5px ;">
+<div class="modal fade" id="divPutin" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" >导入控件</h5>
+        <button type="button" class="close" data-dismiss="modal" >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <td>
@@ -74,8 +82,15 @@
                 </td>
             </tr>
         </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
     </div>
+  </div>
 </div>
+ 
 <script>
 
     function OnCtrTpChange(ob) {

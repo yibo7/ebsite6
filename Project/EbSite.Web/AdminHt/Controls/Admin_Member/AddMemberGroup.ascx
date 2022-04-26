@@ -10,14 +10,14 @@
  <div class="container-fluid mt10">
 	<div class="row-fluid"> 
         <ul class="nav nav-tabs">
-            <li class="active tab">
-                <a href="#tg1" data-toggle="tab" aria-expanded="false">
+            <li class="nav-item">
+                <a href="#tg1" class="nav-link active" data-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">添加/编辑用户组</span>
                 </a>
             </li>
-            <li class="tab">
-                <a href="#tg2" data-toggle="tab" aria-expanded="false">
+            <li class="tanav-item">
+                <a href="#tg2" class="nav-link" data-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">高级选项</span>
                 </a>

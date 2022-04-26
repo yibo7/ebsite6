@@ -2,7 +2,7 @@
 <%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
 <div class="admin_toobar">
     <fieldset>
-        <legend ><asp:Label runat="server" ID="tlName"></asp:Label></legend>
+        <legend><asp:Label runat="server" ID="tlName"></asp:Label></legend>
         <div>
             <table>
                 <tr>

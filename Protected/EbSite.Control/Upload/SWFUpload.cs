@@ -383,7 +383,7 @@ namespace EbSite.Control
                 {
                     return (EbUploadModel)objA;
                 }
-                return EbUploadModel.SWFUpload组件;
+                return EbUploadModel.Net默认组件;
             }
             set
             {

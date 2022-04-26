@@ -12,11 +12,14 @@ namespace EbSite.Core.HttpModules
         #region 电脑版规则
 
         public static string ContentCusttomRule { get; set; }
-
+        // 规则>专题ID
         public static Dictionary<string, int> SpecialRuleHtmlNames = new Dictionary<string, int>();
+        // 专题ID>规则
         public static Dictionary<int, string> SpecialRuleHtmlNames2 = new Dictionary<int, string>();
 
+        // 规则>分类ID
         public static Dictionary<string,int> ClassRuleHtmlNames  = new Dictionary<string,int>();
+        // 分类ID>规则
         public static Dictionary<int, string> ClassRuleHtmlNames2 = new Dictionary<int,string>();
 
         //public static Dictionary<string, int> ClassRuleHtmlNameForContentPre = new Dictionary<string, int>();

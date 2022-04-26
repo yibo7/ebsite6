@@ -37,7 +37,23 @@ namespace EbSite.Modules.Shop.ModuleCore.DAL.MySql
 
             return DB.Exists(strSql.ToString(), parameters);
         }
+        /// <summary>
+        /// 判断是否存在与内容newcontent相应的记录
+        /// </summary>
+        /// <param name="contentid"></param>
+        /// <returns></returns>
+        public bool ProductsImg_ExistsContent(int contentid)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.AppendFormat("select count(1) from {0}ProductsImg", sPre);
+            strSql.Append(" where ProductID=?ID ");
+            MySqlParameter[] parameters = {
+                    new MySqlParameter("?ID", MySqlDbType.Int32,4)};
+            parameters[0].Value = contentid;
 
+            return DB.Exists(strSql.ToString(), parameters);
+        }
+        
 
         /// <summary>
         /// 增加一条数据

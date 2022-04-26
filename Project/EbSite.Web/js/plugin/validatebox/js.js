@@ -44,10 +44,12 @@ function ValidateForm(obid) {
 
 		}
 		);
-		if (!VlAllIsOK) {
-		    if ($("#wCenterWindow").length > 0) {
-		        $("#wCenterWindow").html("提交失败，请确认输入的值是否正确，现在请按Esc键退出！");
-		    }
+    if (!VlAllIsOK) {
+        tb_err('提交失败，请确认输入的值是否正确');
+        //OpenTipsToCenter()
+		    //if ($("#wCenterWindow").length > 0) {
+		    //    $("#wCenterWindow").html("提交失败，请确认输入的值是否正确，现在请按Esc键退出！");
+		    //}
         }
 		return VlAllIsOK;
 }

@@ -22,7 +22,7 @@
             <div id="tg1" class="tab-pane active">
                 <XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
                 <div id="PagesMain">
-                    <table class="table"  style="border-style:None;border-collapse:collapse;">
+                    <table class="table table-hover" >
                         <XS:Repeater ID="rpList" runat="server">
                             <HeaderTemplate>
                                 <tr >

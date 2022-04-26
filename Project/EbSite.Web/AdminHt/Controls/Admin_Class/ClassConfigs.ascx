@@ -14,26 +14,26 @@
  <div class="container-fluid mt10">
 	<div class="row-fluid"> 
         <ul class="nav nav-tabs">
-            <li class="active tab">
-                <a href="#tg1" data-toggle="tab" aria-expanded="false">
+            <li class="nav-item">
+                <a class="nav-link active" href="#tg1" data-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">基础设置</span>
                 </a>
             </li>
-            <li class="tab">
-                <a href="#tg2" data-toggle="tab" aria-expanded="false">
+            <li class="nav-item">
+                <a class="nav-link"  href="#tg2" data-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">模型设置</span>
                 </a>
             </li> 
-            <li class="tab">
-                <a href="#tg3" data-toggle="tab" aria-expanded="false">
+            <li class="tanav-itemb">
+                <a class="nav-link"  href="#tg3" data-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">模板设置</span>
                 </a>
             </li> 
-            <li class="tab">
-                <a href="#tg4" data-toggle="tab" aria-expanded="false">
+            <li class="tanav-itemb">
+                <a class="nav-link" href="#tg4" data-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">子分类设置</span>
                 </a>

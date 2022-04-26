@@ -55,6 +55,7 @@ namespace EbSite.Control
                 {
                     getTipsStr = this.GetTipsStr;
                 }
+
                 if (!string.IsNullOrEmpty(this.ValidationGroup))
                 {
                     string sTipsjs = "if(!isok){ tips('某个输入格式不对',2);return  isok;};";
@@ -67,6 +68,7 @@ namespace EbSite.Control
                         getTipsStr = string.Format("javascript:var isok = ValidateGP('{0}');{1} tips('执行中...',1,300); return isok;", this.ValidationGroup, sTipsjs);
                     }
                 }
+
                 if (!string.IsNullOrEmpty(getTipsStr))
                 {
                     this.OnClientClick = getTipsStr;
@@ -106,10 +108,12 @@ namespace EbSite.Control
                 {
                     return string.Format("OpenTipsToCenter('','{0}',200,100)", Tips_Msg);
                     
+                    
                 }
                 else
                 {
-                    return string.Format("CustomTipsWithCl(this,'{0}')", this.Tips_Msg);
+                    return string.Empty;
+                    //return string.Format("CustomTipsWithCl(this,'{0}')", this.Tips_Msg);
                 }
                 
             }

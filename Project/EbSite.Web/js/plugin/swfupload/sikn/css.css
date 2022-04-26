@@ -1,10 +1,12 @@
-.SWFUP td
+/*.SWFUP td
 {
 	height:10px;
-}
-.SWFUPbtn{
-	cursor:pointer;
-	 padding-left:10px; padding-right:10px;
+}*/
+.SWFUPbtn {
+	cursor: pointer;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: absolute;
 }
 .SWFUPbtn span{
 	display:inline-block;
@@ -13,7 +15,7 @@
 	padding:2px;
 }
 .SWFUPbtn img{border:0;vertical-align:text-bottom;}
-.SWFUPbtn:hover{background:#E6B791}
+/*.SWFUPbtn:hover{background:#E6B791}*/
 
 
 .SWFUPprogressBar{
@@ -35,23 +37,49 @@
 	font-size:8px;
 }
 .AspNetUpload{
-	/*position: relative;*/
-	width:164px;}
-.UploadNoShow{ display: none;}
-.AspNetUpFile{	cursor:pointer;position: absolute;top: 0px;left: 20px;width:180px;opacity:0;-ms-filter:'alpha(opacity=0)';filter:alpha(opacity=0);z-index: 1000002;
-              	}
-         
-.AspNetBtn{
-	/*position: absolute;
-	top: 0px;
-	left: 150px;*/
-	width:50px;
-	/*z-index: 10;*/
-	padding:0;
+	position: relative;
+	/*width:164px;*/
 
 }
+.UploadNoShow{ display: none;}
+.AspNetUpFile {
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	width: 80px;
+	height:35px;
+	opacity: 0;
+	-ms-filter:'alpha(opacity=0)';
+	filter:alpha(opacity=0);
+	z-index: 10000;
+}
 
-.AspNetUpText {position: absolute;width:150px;top: 0px;left: 0px;z-index: 1000003;}
+.AspNetBtn {
+	position: absolute;
+	top: 0px;
+	/*left: 150px;*/
+	z-index: 10;
+	padding: 0;
+	width: 80px;
+	background-color:#1a7fed;
+	height: 37px !important;
+	display: inline-block !important;
+	/*margin-left: 8px;*/
+	text-align: center;
+	line-height: 37px !important;
+	border-radius:5px;
+	color:#ffffff;
+}
+ 
+
+	.AspNetUpText {
+		position: absolute;
+		width: 150px;
+		top: 0px;
+		left: 0px;
+		z-index: 1000003;
+	}
 .AspNetUpHideArea{ position:absolute;top:-1000px;left:-1000px;visibility:hidden;}
 .AspNetUpTips{ height:50px;}
 

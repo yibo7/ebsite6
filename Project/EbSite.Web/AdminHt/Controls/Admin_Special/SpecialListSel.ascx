@@ -18,23 +18,29 @@
             </div>
     </div>
 </div>
+ 
 
-<div class="modal" id="iflModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog" style="width: 800px;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">复制链接代码</h4>
-            </div>
-            <div style="height: 100px;" class="modal-body">
+
+<div class="modal fade" id="iflModal" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" >复制链接代码</h5>
+        <button type="button" class="close" data-dismiss="modal" >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="height:100px;" class="modal-body">
                 连接引用代码（可以在模板适当位置引用这个专题连接）：<br>
-                <textarea id="selbox" onclick="oCopy(this)" title="点击复制代码" style="width: 600px; height: 50px;"></textarea>
+                <textarea id="selbox" onclick="oCopy(this)" title="点击复制代码" style="width: 390px; height: 50px;"></textarea>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-            </div>
-        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button> 
+      </div>
     </div>
+  </div>
 </div>
 
 
@@ -60,15 +66,15 @@
                 var ulTag = $("<div class=\"btn-group\"><\/div>");
 
                 ulTag.append($(String.format("<a class='btn btn-primary' href='{0}'  target=\"_blank\">前台页面</a>", aMenus.Url)));
-                ulTag.append($(String.format("<a class='btn btn-default' onclick='addcontent({0})'>添加内容</a>", aMenus.id)));
+                ulTag.append($(String.format("<a class='btn btn-primary' onclick='addcontent({0})'>添加内容</a>", aMenus.id)));
                 ulTag.append($(String.format("<a class='btn btn-primary' href='{0}'>查看内容(<font color=\"#ff0000\">{1}</font>)</a>", aMenus.CtUrl,aMenus.CtCount)));
                 //ulTag.append($(String.format("<a class='btn btn-default' onclick='makehtml({0})'>生成静态页</a>", aMenus.id)));
                 //ulTag.append($(String.format("<a class='btn btn-primary' onclick='makehtmlsub({0})'>生成子专题页(<font color=\"#ff0000\">{1}</font>)</a>",  aMenus.id,aMenus.ChildCount)));
-                ulTag.append($(String.format("<a class='btn btn-default' onclick='delclass({0})'>删 除</a>", aMenus.id)));
-                ulTag.append($(String.format("<a  class='btn btn-default' onclick='copyclass({0})'>复 制</a>", aMenus.id)));
+                ulTag.append($(String.format("<a class='btn btn-primary' onclick='delclass({0})'>删 除</a>", aMenus.id)));
+                ulTag.append($(String.format("<a  class='btn btn-primary' onclick='copyclass({0})'>复 制</a>", aMenus.id)));
                 ulTag.append($(String.format("<a class='btn btn-primary' href='{0}'> 编 辑 </a>", aMenus.UrlEdit)));
 
-                var ulTagMore = $("<div class=\"btn-group\"><button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\">更多<span class=\"caret\"></span></button><ul class=\"dropdown-menu\"></ul><\/div>");
+                var ulTagMore = $("<div class=\"btn-group\"><button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\">更多<span class=\"caret\"></span></button><ul class=\"dropdown-menu\"></ul><\/div>");
 
                 var subObj = ulTagMore.find(".dropdown-menu");// $(ulTagMore, ".dropdown-menu");
                 subObj.append($(String.format("<li><a data-toggle=\"modal\" data-target=\"#iflModal\">{0}</a></li>", "链接代码")));

@@ -23,7 +23,7 @@ namespace EbSite.Control
             
             //test.Start();
             //base.HeaderStyle.CssClass = "GridViewHeader";
-            this.CssClass = "table m-0";
+            this.CssClass = "table table-hover";
             //base.RowCreated += new GridViewRowEventHandler(this.gvGrid_RowCreated);
             //base.AlternatingRowStyle.CssClass = "AlternatingRow";
             //base.AlternatingRowStyle.BorderWidth = 0;

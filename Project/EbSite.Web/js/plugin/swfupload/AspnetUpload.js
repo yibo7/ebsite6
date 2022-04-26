@@ -61,19 +61,20 @@ function AspNetUpload() {
         } 
         //设置控件长度
         var dWidth = parseInt($("#" + this.FileTextBoxID).css("width"));
-        if (dWidth) {
+        //if (dWidth) {
 
-            jNetBtn.css("left", dWidth);
-            jFile.css("left", dWidth - 140);
-        }
+        //    jNetBtn.css("left", dWidth);
+        //    jFile.css("left", dWidth);
+        //}
         jFile.click(function () {
 
             if (_this.IsUploading) {
                 alert("文件正在上传中...");
                 return false;
             }
-        });
+        }); 
         jFile.change(function () {
+            
             if (!_this.checkFileExt(jFile.val(), sExt)) {
 
                 return false;
@@ -82,8 +83,9 @@ function AspNetUpload() {
                 // 屏蔽提交
                 $("#" + _this.PostDataBntID).attr("disabled", true);
             }
+            
             var up_url = SiteConfigs.UrlIISPath + _this.upLoadurl + "&userid=" + _this.UserID + "&valstr=" + _this.ValStr;// + "&issmallimg" + _this.IsSmallImg;
-            console.log(up_url)
+            //console.log(up_url)
             var upload = new _this.html4Upload(jFile[0], up_url, _this.onUploadCallback);
             upload.start();
             _this.ShowProcess(function () { upload.remove(); });
@@ -106,7 +108,7 @@ function AspNetUpload() {
         var jForm = $('<form action="' + toUrl + '" target="' + idIO + '" method="post" enctype="multipart/form-data" class="AspNetUpHideArea"></form>').appendTo('body');
         var jOldFile = $(fromfile);
 
-        var jOldFile = $(fromfile), jNewFile = jOldFile.clone().attr('disabled', 'true');
+        var jOldFile = $(fromfile), jNewFile = jOldFile.clone();//.attr('disabled', 'true');
         jOldFile.before(jNewFile).appendTo(jForm);
 
         this.remove = function () {  //上传完成后去除

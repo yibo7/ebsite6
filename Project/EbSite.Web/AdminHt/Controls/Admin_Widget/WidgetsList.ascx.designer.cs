@@ -7,27 +7,11 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace EbSite.Web.AdminHt.Controls.Admin_Widgets {
-    
-    
-    public partial class WidgetsList {
-        
-        /// <summary>
-        /// SetPathUrl 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SetPathUrl;
-        
-        /// <summary>
-        /// txtMdPath 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::EbSite.Control.WebUploaderFile txtMdPath;
+namespace EbSite.Web.AdminHt.Controls.Admin_Widgets
+{
+
+
+    public partial class WidgetsList
+    {
     }
 }

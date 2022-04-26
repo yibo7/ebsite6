@@ -131,7 +131,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Ctr
             //ucToolBar.AddCtr(label);
             ucToolBar.AddBox("divPutin", "导入控件", "putin", IISPath + "images/menus/Doc-Previous.gif");
             ucToolBar.AddBnt("导出控件", IISPath + "images/menus/Doc-Next.gif", "putout");
-            ucToolBar.AddDialog(base.HostApi.GetModuleUrlForAdmin(new Guid("03fc411f-eed0-4afe-a5c2-b5c80d196b70"), new Guid("bdbd3f29-4e33-4c16-a261-f6a9e7631d2e")), "下载控件", IISPath + "images/menus/menuDown.GIF");
+            //ucToolBar.AddDialog(base.HostApi.GetModuleUrlForAdmin(new Guid("03fc411f-eed0-4afe-a5c2-b5c80d196b70"), new Guid("bdbd3f29-4e33-4c16-a261-f6a9e7631d2e")), "下载控件", IISPath + "images/menus/menuDown.GIF");
 
             ucToolBar.AddLine();
 

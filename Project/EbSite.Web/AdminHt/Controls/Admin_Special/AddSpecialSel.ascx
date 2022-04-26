@@ -6,7 +6,7 @@
 <div id="divsteptips" runat="server"  class="container-fluid main-title">第一步:请选择父级专题然后点击[下一步]</div>
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-									<h4 class="m-t-0 m-b-20 header-title"><b>添加子专题</b></h4>
+									<h3 class="m-t-0 m-b-20 header-title">添加子专题</h3>
 									 <XSD:SelectClass ID="selClass"  ApiFunctionName="GetSubSpecial" runat="server"></XSD:SelectClass>
         <br /><br />
 								</div>

@@ -21,6 +21,8 @@ namespace EbSite.Modules.Shop.ModuleCore.DALInterface
 		/// </summary>
 		bool ProductsImg_Exists(int ID);
 
+		bool ProductsImg_ExistsContent(int contentid);
+
 		/// <summary>
 		/// 增加一条数据
 		/// </summary>

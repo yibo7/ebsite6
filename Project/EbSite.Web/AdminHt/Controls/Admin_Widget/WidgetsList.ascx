@@ -37,7 +37,7 @@
     </div>
 </div>
 
-<div id="divPutin" title="导入部件"  style="display:none;" >
+<%--<div id="divPutin" title="导入部件"  style="display:none;" >
     <div style=" margin:5px ;">
         <table cellpadding="0" cellspacing="0">
             <tr>
@@ -64,7 +64,7 @@
             </tr>
         </table>
     </div>
-</div>
+</div>--%>
 <script>
 
     function OnTemTpChange(ob) {

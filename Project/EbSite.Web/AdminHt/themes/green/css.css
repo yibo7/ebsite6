@@ -46,7 +46,7 @@ img{ border:0px;}
 
 a{ cursor:pointer;}
 /* GridView 列表*/
-.GridView
+/*.GridView
 {	width:100%;
 	background:#ffffff;
 	border:solid 1px #D8E0E8;
@@ -88,20 +88,20 @@ a{ cursor:pointer;}
 .AlternatingRow
 {
 	background-color:#FFF9E6;
-}
+}*/
 
-.gvfisrtTD
+/*.gvfisrtTD
 {
 	text-align:left!important;
 
-}
-.GridMouseOver
+}*/
+/*.GridMouseOver
 {
 	background:#E8D18B;
 }
 .GridMouseOut
 {
-}
+}*/
 /* end GridView 列表*/
 
 .mt10{margin-top:10px;}
@@ -384,80 +384,6 @@ table td{
 
 }
 
-/*工具条*/
-img{ border: 0pt; }
-
-
-#vista_toolbar {
-	float:left;
-	font:normal 12px 'Trebuchet MS','Arial';
-	margin:0px;
-	padding:0px;
-	width:100%;
-}
-
-#vista_toolbar ul {
-	background:#EBEBEB;
-	float:left;
-	line-height:32px;
-	list-style:none;
-	margin:0px;
-	padding:0px;
-	width:100%;
-}
-
-#vista_toolbar li {
-	display:inline;
-	padding:0;
-}
-#vista_toolbar li input {
-	border:1px solid #B2AEAD;
-	height:19px;
-	margin-top:5px;
-}
-#vista_toolbar li select {
-	border:1px solid #B2AEAD;
-	margin-top:6px;
-}
-
-#vista_toolbar a {
-	color:#000; /* need because it will use default link color */
-	float:left;
-	padding:0 3px 0 3px; /* left 3 px because of left.png image */
-	text-decoration:none;
-}
-
-#vista_toolbar a span {
-	display:block;
-	float:none;
-	padding:0 3px 0 2px;
-}
-
-#vista_toolbar a span img {
-	border:none;
-	margin:8px 4px 0 0;
-}
-
-/* show picture when mouse over link */
-#vista_toolbar a:hover{
-	background: url(btnleft.png) no-repeat left center;
-}
-
-#vista_toolbar a:hover span {
-	background:url(btnright.png) no-repeat right center;
-}
-
-#vista_toolbar a.right {
-	float:right; /* for help button - just add class "right" ->  <a class="right"... */
-}
-
-#vista_toolbar .bline
-{
-	background-image:url(line.gif);
-	width:2px;
-	height:22px;
-	margin-top:5px;
-}
 /*end 工具条*/
 .main-title {
     background: #EBEBEB;
@@ -465,15 +391,20 @@ img{ border: 0pt; }
     border-bottom: 1px solid #dadada !important;
 }
 /*box*/
-.boxheader h3 {
+ h3 {
 	/*text-align: center;*/
 	text-align: left !important;
 	font-size: 20px !important;
 }
-.boxheader{
-	width: 100%!important;
-	border-bottom: 1px solid #dadada!important;
-	padding-bottom:5px;padding-top:8px;
+legend {
+	text-align: left !important;
+	font-size: 20px !important;
+}
+.boxheader {
+	width: 100% !important;
+	border-bottom: 1px solid #dadada !important;
+	padding-bottom: 5px;
+	padding-top: 8px;
 }
  
  .cbrowbox-tab {
@@ -536,4 +467,19 @@ img{ border: 0pt; }
 }
 .pagination .active{
 	background-color:deepskyblue;
-} 
+}
+.easyuidlgbtn {
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+	.easyuidlgbtn span {
+		border-radius: 5px;
+		display: inline-block;
+		background-color: #2996f3;
+		padding: 8px;
+		color: #ffffff;
+		box-shadow: 2px 2px 5px #666;
+	}
+.easyuidlgbtn span:hover {
+		background-color:#0f7bf1;
+	} 

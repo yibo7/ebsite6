@@ -6,8 +6,8 @@
             <ul class="nav nav-tabs">
                 <XS:Repeater ID="RepUserModel" runat="server">
                     <ItemTemplate>
-                        <li class="<%#Equals( Container.ItemIndex+1,1)?"active":"" %>">
-                            <a href="#tg<%#Container.ItemIndex+1 %>" data-toggle="tab"><%#Eval("ModelName")%></a>
+                        <li class="nav-item" >
+                            <a class="nav-link <%#Equals( Container.ItemIndex+1,1)?"active":"" %>" href="#tg<%#Container.ItemIndex+1 %>" data-toggle="tab"><%#Eval("ModelName")%></a>
                         </li>
                     </ItemTemplate>
                 </XS:Repeater>
@@ -16,9 +16,9 @@
             <div class="tab-content">
                 <XS:Repeater ID="RepUserAll" runat="server" OnItemDataBound="rpList_ItemDataBound">
                     <ItemTemplate>
-                        <div id="tg<%#Container.ItemIndex+1 %>" class="tab-pane fade <%#Equals( Container.ItemIndex+1,1)?"in active":"" %>">
+                        <div id="tg<%#Container.ItemIndex+1 %>" class="tab-pane <%#Equals( Container.ItemIndex+1,1)?"active":"" %>">
                             <div class="table-responsive">
-                            <table class="table">
+                            <table class="table table-hover">
                                 <XS:Repeater ID="RepUserField" runat="server">
                                     <HeaderTemplate>
                                         <tr class="GridViewHeader">
