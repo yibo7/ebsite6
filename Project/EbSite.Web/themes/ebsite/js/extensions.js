@@ -8,9 +8,7 @@ jQuery(function ($) {
 
 function gotoeba(iIndex) {
     In.ready('jqscroll', function () {
-
         $("#ebabox" + iIndex).ScrollTo(800);
-
     });
 }
 

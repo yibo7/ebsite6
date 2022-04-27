@@ -156,7 +156,7 @@ namespace EbSite.Web.Pages
                 }
                 else
                 {
-                    return Base.Configs.ContentSet.ConfigsControl.Instance.PageSizeClass;
+                    return Base.Configs.ContentSet.ConfigsControl.Instance.PageSizeIndex;
                 }
 
             }
@@ -167,7 +167,7 @@ namespace EbSite.Web.Pages
             if (!Equals(pgCtr, null))
             {
 
-                //这有点不好理解,以重构
+                //这有点不好理解,以后重构
                 if (string.IsNullOrEmpty(pgCtr.ReWritePatchUrl)) //外面可以自定义
                     pgCtr.ReWritePatchUrl = string.Concat(IISPath, "{0}-", Base.Configs.ContentSet.ConfigsControl.Instance.IndexPathRw); //{0} 页码
                 pgCtr.FirstPageUrl = IISPath;

@@ -51,7 +51,7 @@ namespace EbSite.Web.AdminHt
 
         protected override void InitStyle()
         {
-            AddStylesheetInclude(string.Concat(AppStartInit.AdminPath, "themes/blues/css.css"));
+            AddStylesheetInclude(string.Concat(AppStartInit.AdminPath, "themes/green/css.css"));
 
             //if (!Equals(CurrentSite, null))
             //{

@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Themes>
   <IsUsed>False</IsUsed>
-  <ThemesName>蓝色海洋</ThemesName>
-  <FullPath>/adminht/themes/blues/</FullPath>
-  <ThemePath>blues</ThemePath>
-  <IndexUrl>/adminht/themes/blues/pages/index.aspx</IndexUrl>
-  <SmallImg>/adminht/themes/blues/SmallImg.jpg</SmallImg>
-  <BigImg>/adminht/themes/blues/BigImg.jpg</BigImg>
+  <ThemesName>春天的故事</ThemesName>
+  <FullPath>/adminht/themes/green/</FullPath>
+  <ThemePath>green</ThemePath>
+  <IndexUrl>/adminht/themes/green/pages/index.aspx</IndexUrl>
+  <SmallImg>/adminht/themes/green/SmallImg.jpg</SmallImg>
+  <BigImg>/adminht/themes/green/BigImg.jpg</BigImg>
   <AddDate>2011-11-2 12:00:13</AddDate>
   <id>68ac48a7-15d4-4e3b-9dff-6c655f21560a</id>
 </Themes>

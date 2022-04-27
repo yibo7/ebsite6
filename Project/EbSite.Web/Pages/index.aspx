@@ -13,7 +13,7 @@
 
 <body >
 <!--#include file="/PageTemps/Inc/header.inc" -->
-<XSD:RepeaterIndex ID="rpGetClassList"   runat="server">
+<XSD:RepeaterIndex ID="rpGetClassList" RepeaterIndexType="分类列表"  runat="server">
         <ItemTemplate>    
       <div class="box col2" id="xs_<%#Eval("id")%>" uid="<%#Eval("UserID")%>" num-adv="<%#Eval("Advs")%>" num-pl="<%#Eval("CommentNum")%>" num-good="<%#Eval("FavorableNum")%>" >
         

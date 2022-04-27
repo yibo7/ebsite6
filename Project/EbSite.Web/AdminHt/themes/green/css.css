@@ -149,13 +149,13 @@ table td{
 	font-size:12px; height:40px;
 }
 /*---OA皮肤样式---*/
-
+#logoRight a{color:#ffffff;}
 #top_logo {
-    position: absolute;
-    height: 50px;
-    width: 100%;
-    top: 0px;
-    background: #008EE0;
+	position: absolute;
+	height: 50px;
+	width: 100%;
+	top: 0px;
+	background: #008EE0;
 }
 #top_logo #logo {
 	background-image: url(logo.png);
@@ -334,15 +334,16 @@ table td{
 
 
 .adminlogin_banner {
-	height: 40px;
+	height: 50px;
+	line-height: 50px;
 	width: 100%;
 	top: 0px;
 	/*background-image: url(wd-header.png);*/
-	background: #092130;
-	border-bottom:1px solid #12405E;
+	background: #1287b4;
+	border-bottom: 1px solid #12405E;
 }
 .adminlogin_banner #logo {
-	background-image: url(logo.svg);
+	background-image: url(logo.png);
 	background-repeat: no-repeat;
 	height: 34px;
 	width:120px;
@@ -363,18 +364,42 @@ table td{
 }
 
 
-.loginbox-p{border:solid 1px #18547D; text-align:center; vertical-align:middle; color:#ffffff;
-	background:#0B2638; height:auto; width:400px; margin:20px 0px 10px 0px;}
-.loginbox-s{text-align:left; padding-left:10px; padding-right:10px; padding-bottom:10px;
-	margin-top:8px; font-weight:bold;}
+.loginbox-p {
+	border: solid 1px #006699;
+	text-align: center;
+	vertical-align: middle;
+	color: #ffffff;
+	background: #2799c4;
+	height: auto;
+	width: 400px;
+	margin: 20px 0px 10px 0px;
+	display: inline-block;
+	border-radius:10px;
+}
+	.loginbox-p input {
+		border-radius: 5px;
+		border:solid 1px #dee3e7;
+		padding:5px;
+	}
+.loginbox-s {
+		text-align: left;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		margin-top: 8px;
+		font-weight: bold;
+	}
 .loginbox-title
 {   height:20px;
 	text-align:left; padding-left:10px;  margin-top:8px; font-weight:bold;
 }
 .loginbox-content
 {
-	border:solid 1px #003C78;
-	background:#E1EAF2;padding-bottom:10px;color:#52514E;
+	border-radius:5px;
+	border:solid 1px #006699;
+	background:#ffffff;
+	padding-bottom:10px;
+	color:#52514E;
 }
 
 .adminlogin_loginform{

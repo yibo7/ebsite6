@@ -7,15 +7,14 @@ namespace EbSite.Mvc.Controllers
 {
     public class ImageResult : FileStreamResult
     {
-        public ImageResult(Image input) : this(input, input.Width, input.Height) { }
-        public ImageResult(Image input, int width, int height) :
-           base(
-             GetMemoryStream(input, width, height, ImageFormat.Png),
-             "image/png")
-        { }
+        public ImageResult(Image input) : this(input, input.Width, input.Height) { 
+        }
+        public ImageResult(Image input, int width, int height) : base(GetMemoryStream(input, width, height, ImageFormat.Png),"image/png")
+        {
 
-        static MemoryStream GetMemoryStream(Image input, int width,
-                            int height, ImageFormat fmt)
+        }
+
+        static MemoryStream GetMemoryStream(Image input, int width, int height, ImageFormat fmt)
         {
             // maintain aspect ratio 
             if (input.Width > input.Height)

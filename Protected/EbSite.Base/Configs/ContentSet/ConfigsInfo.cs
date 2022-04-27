@@ -36,6 +36,23 @@ namespace EbSite.Base.Configs.ContentSet
         #endregion
 
         #region 分页PageSize
+
+        private int _PageSizeIndex;
+        /// <summary>
+        /// 首页一页默认显示多少条
+        /// </summary>
+        public int PageSizeIndex
+        {
+            get
+            {
+                return _PageSizeIndex;
+            }
+            set
+            {
+                _PageSizeIndex = value;
+            }
+        }
+
         private int _PageSizeClass;
         /// <summary>
         /// 分类面页一页显示多少条

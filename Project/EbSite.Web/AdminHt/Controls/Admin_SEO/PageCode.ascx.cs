@@ -35,9 +35,10 @@ namespace EbSite.Web.AdminHt.Controls.Admin_SEO
             ConfigsControl.Instance.PageSizeSpecail = int.Parse(txtPageSizeSpecial.Text.Trim());
             ConfigsControl.Instance.PageSizeTagList = int.Parse(txtPageSizeTag.Text.Trim());
             ConfigsControl.Instance.PageSizeTagValue = int.Parse(txtPageSizeTagValue.Text.Trim());
+            ConfigsControl.Instance.PageSizeIndex = int.Parse(txtPageSizeIndex.Text.Trim());
+            
 
-            
-            
+
             ConfigsControl.SaveConfig();
         }
 
@@ -51,7 +52,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_SEO
                 txtPageSizeTag.Text = ConfigsControl.Instance.PageSizeTagList.ToString();
                 txtPageSizeTagValue.Text = ConfigsControl.Instance.PageSizeTagValue.ToString();
 
-
+                txtPageSizeIndex.Text = ConfigsControl.Instance.PageSizeIndex.ToString();
 
             }
         }
