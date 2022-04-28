@@ -456,7 +456,6 @@
     <Content Include="AdminHt\themes\green\index_blue_top_09.jpg" />
     <Content Include="AdminHt\themes\green\line.gif" />
     <Content Include="AdminHt\themes\green\logo.png" />
-    <Content Include="AdminHt\themes\green\logo.svg" />
     <Content Include="AdminHt\themes\green\logo2.png" />
     <Content Include="AdminHt\themes\green\logo_2.png" />
     <Content Include="AdminHt\themes\green\mail.gif" />

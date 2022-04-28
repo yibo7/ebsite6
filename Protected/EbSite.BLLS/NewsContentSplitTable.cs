@@ -917,7 +917,26 @@ namespace EbSite.BLL
             }
 
         }
+        public int GetCountByUser(int UserId, int ClassID, bool IsAuditing, int SiteID)
+        {
+            int iCount = 0;
+            if (UserId>0)
+            {
+                StringBuilder sWhere = new StringBuilder();
 
+                sWhere.AppendFormat("UserID={0}", UserId);
+
+                if (ClassID > 0)
+                {
+                    sWhere.AppendFormat(" and classid={0}", ClassID);
+                }
+
+
+                iCount = DbProviderCms.GetInstance().NewsContent_GetCount(sWhere.ToString(), IsAuditing ? 1 : 0, SiteID, TableName);
+            }
+
+            return iCount;
+        }
         public int GetCountByUser(string sUserName, int ClassID, bool IsAuditing, int SiteID)
         {
             int iCount = 0;
