@@ -19,6 +19,8 @@ In.ready('jqmasonry','jqmasonry2', function () {
 //In.config('serial', true);
 //设置核心库，核心库会被所有模块依赖
 //In.config('core', '/js/comm.js');
+//一些jquery老插件需要依赖这个才能正常运行
+In.add('jquery-migrate', { path: SiteConfigs.UrlIISPath + 'js/plugin/jquery-migrate-1.2.1.min.js', type: 'js', charset: 'utf-8' });
 
 In.add('jquicss', { path: SiteConfigs.UrlIISPath + 'js/plugin/ui/jquery-ui.css' });
 In.add('jqui', { path: SiteConfigs.UrlIISPath + 'js/plugin/ui/jquery-ui.js', type: 'js', charset: 'utf-8', rely: ['jquicss'] }); //依赖
@@ -64,6 +66,8 @@ In.add('easywidgetscjs', { path: SiteConfigs.UrlIISPath + 'js/plugin/easywidgets
 //用于创建圆角的jQuery插件
 In.add('curvycorners', { path: SiteConfigs.UrlIISPath + 'js/plugin/curvycorners.js', type: 'js', charset: 'utf-8' });
 
+
+
 //一个效果不错的弹出框(蹦出效果)
 In.add('dlgzoom', { path: SiteConfigs.UrlIISPath + 'js/plugin/jquery.dlgzoom.js', type: 'js', charset: 'utf-8' });
 
@@ -101,7 +105,7 @@ In.add('raty', { path: SiteConfigs.UrlIISPath + 'js/plugin/raty/jquery.raty.js',
 
 //类似tinybox的弹出窗，但有带关闭按钮 jquery 1.9.1 不能使用了，所以要依赖于jquery-migrate来解决老版jquery的问题
 //其他插件如果有同样的问题也可以这样解决
-In.add('jquery-migrate', { path: SiteConfigs.UrlIISPath + 'js/plugin/jquery-migrate-1.2.1.min.js', type: 'js', charset: 'utf-8' });
+
 In.add('fancyboxcss', { path: SiteConfigs.UrlIISPath + 'js/plugin/fancybox/fancybox.css' });
 In.add('fancybox', { path: SiteConfigs.UrlIISPath + 'js/plugin/fancybox/fancyboxpack.js', type: 'js', charset: 'utf-8', rely: ['jquery-migrate','fancyboxcss'] }); //依赖
  

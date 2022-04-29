@@ -13,7 +13,7 @@
     <!--#include file="headerlist.inc" -->
 
     <div class="mainbox">
-
+        <XS:Widget WidgetName="专题导航-全部"  WidgetID="1e99dc56-3a30-445c-994e-37d15f45cbaa" runat="server"/>
         <div style="margin-top: 10px;" class="contentbox">
 
             <div style="width: 760px;" class="fLeft">

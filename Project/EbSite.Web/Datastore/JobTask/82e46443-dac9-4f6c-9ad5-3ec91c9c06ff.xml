@@ -11,11 +11,11 @@
   <Status>1</Status>
   <CreatedTime>2016/12/15 17:46:08</CreatedTime>
   <ModifyTime>2016/12/15 18:19:56</ModifyTime>
-  <RecentRunTime>2022/4/28 22:57:00</RecentRunTime>
+  <RecentRunTime>2022/4/28 22:58:00</RecentRunTime>
   <NextFireTime>2022/4/28 20:07:00</NextFireTime>
   <Remark>每分钟添加内容到专题</Remark>
   <IsDelete>0</IsDelete>
   <RunUrl>http://localhost:2015/api/tospecial?key=82e46443-dac9-4f6c-9ad5-3ec91c9c06ff&amp;tk=a48f47443ba023a4530ac15f9786b44c</RunUrl>
-  <LastRezult>在2022/4/28 22:57:00调用了远程地址http://localhost:2015/api/tospecial?key=82e46443-dac9-4f6c-9ad5-3ec91c9c06ff&amp;tk=a48f47443ba023a4530ac15f9786b44c,远程返回成功标记信息</LastRezult>
+  <LastRezult>在2022/4/28 22:58:00调用了远程地址http://localhost:2015/api/tospecial?key=82e46443-dac9-4f6c-9ad5-3ec91c9c06ff&amp;tk=a48f47443ba023a4530ac15f9786b44c,远程返回成功标记信息</LastRezult>
   <id>82e46443-dac9-4f6c-9ad5-3ec91c9c06ff</id>
 </JobTask>

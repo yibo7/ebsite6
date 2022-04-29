@@ -45,7 +45,7 @@ namespace EbSite.Widgets.SpecialList
                         if (!string.IsNullOrEmpty(sTem))
                         this.rpSpecialContent.ItemTemplate = LoadTemplate(sTem);
                     }
-                bool IsGetSuB = false;
+                    bool IsGetSuB = false;
                     if (settings.ContainsKey("IsGetSub") && !string.IsNullOrEmpty(settings["IsGetSub"]))
                     {
                          IsGetSuB = bool.Parse(settings["IsGetSub"]);
