@@ -36,7 +36,7 @@ namespace EbSite.Control.xsPage
             StringBuilder sb = new StringBuilder();
             if (iTotalCount > 0)
             {
-                sb.AppendFormat("<div class='text-right'><ul class='pagination'>", PageClassName);
+                sb.AppendFormat("<div class='ebtext-right'><ul class='pagination'>", PageClassName);
                 if (iCurrentPage > 1)
                 {
                     if (iCurrentPage > ShowCodeNum)

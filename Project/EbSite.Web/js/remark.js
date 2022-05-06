@@ -64,7 +64,10 @@ function replypostsub(postid) {
 }
 
 
-
+function openDiscuss(url) {
+    tb_iframe(url, 800, 600, function () { });
+    return false;
+}
 
 
 function ClientExecutePost(flag, postid, ob) {
@@ -98,10 +101,9 @@ function savepl(RemarkClassID,ClassID,ContentId) {
     }
         
 
-    var isNiName = $("#cbNiName").val();
-    var txtEvaluationScore = parseInt($("#txtEvaluationScore").val());
-   
-    var sdata = { msg: smsg, niname: isNiName==1?true:false, rmcid: RemarkClassID, classid: ClassID, contentid: ContentId, score: txtEvaluationScore };
+    var isNiName = $("input[id = 'cbNiName']:checked").val(); //$("#cbNiName").val();
+    var txtEvaluationScore = parseInt($("#txtEvaluationScore").val()); 
+    var sdata = { msg: smsg, niname: isNiName?true:false, rmcid: RemarkClassID, classid: ClassID, contentid: ContentId, score: txtEvaluationScore };
     runebws("SaveRemark", sdata, function (data) {
         if (data.d.Success) {
             if (data.d.Message != null && data.d.Message!="") {

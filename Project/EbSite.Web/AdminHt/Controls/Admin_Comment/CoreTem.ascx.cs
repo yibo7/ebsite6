@@ -161,8 +161,8 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Comment
 		    </ItemTemplate>
               <FooterTemplate>
                  <div style=""text-align: right;"">
-                     [<a target=""_brank"" rel=""nofollow""  href=""<%=HostApi.GetDiscussHref(""{评论分类ID}"",{评论模式ID}, GetSiteID,{评论类型ID},Model.ClassID,Model.ID )%>"">查看所有评论</a>]
-                 </div>               
+                     [<a  rel=""nofollow""  href=""javascript: openDiscuss('<%=HostApi.GetDiscussHref(""{评论分类ID}"",{评论模式ID}, GetSiteID,{评论类型ID},Model.ClassID,Model.ID )%>"">查看所有评论</a>]
+                  </div>               
                    <table style=""width:100%; margin-left:10px;"">
                   <tr>
                     <td colspan=""6"">
@@ -177,7 +177,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Comment
                                       size: 30,
                                       score: CountScore,
                                       click: function (score, evt) {
-                                          $(""#EvaluationScore"").val(score);
+                                          $(""#txtEvaluationScore"").val(score);
                                       }
                                   });
                               });
@@ -199,7 +199,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Comment
                             </tr>
                              <tr>
                                 <td>
-                                  是否匿名发表<input id=""cbNiName"" type=""checkbox"" /> 
+                                  是否匿名发表<input id=""cbNiName"" name=""cbNiName"" type=""checkbox"" /> 
                                 </td>
                             </tr>
                         </table>
