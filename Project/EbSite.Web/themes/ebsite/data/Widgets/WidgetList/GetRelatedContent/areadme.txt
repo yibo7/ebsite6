@@ -1,1 +1,1 @@
-﻿获取相关内容数据的部件，此部件只适合放的内容模板页，匹配当前内容的相关内容。(RelateContent 是通过 标签 )GetRelatedContent是取同一分类的随机数据。
+﻿随机获取同一分类下的内容数据的部件，此部件只适合放的内容模板页，匹配当前内容的相关内容。(RelateContent 是通过 标签 )GetRelatedContent是取同一分类的随机数据。

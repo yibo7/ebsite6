@@ -1316,7 +1316,9 @@ namespace EbSite.Core
         /// </summary>
         public static string CleanInput(string strIn)
         {
-            return Regex.Replace(strIn.Trim(), @"[^\w\.@-]", "");
+            if(!string.IsNullOrEmpty(strIn))
+                return Regex.Replace(strIn.Trim(), @"[^\w\.@-]", "");
+            return string.Empty;
         }
 
         /// <summary>
