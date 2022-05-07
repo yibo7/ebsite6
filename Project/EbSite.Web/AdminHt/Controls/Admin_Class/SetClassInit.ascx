@@ -3,7 +3,7 @@
  
 
 
-<div class="row cbrowbox">
+<%--<div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
         <div class="boxheader">
                 <h3>分类默认配置</h3>
@@ -14,7 +14,7 @@
                 <XS:Button ID="btnClearClassConfig" runat="server" Text="刷新分类设置" HintInfo="比如采集过来的分类，将其实设置到默认分类设置，如果是子类即设置到所在父分类一样的配置" Tips_Msg="如果分类数据量大可能要比较长的时间" Confirm="True" OnClick="btnClearClassConfig_Click" />
             </div>
     </div>
-</div>
+</div>--%>
 
 
 <div class="row cbrowbox">

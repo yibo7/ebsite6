@@ -178,7 +178,7 @@
     <Compile Include="Adminer\AdminUser.cs" />
     <Compile Include="Adminer\Permissions.cs" />
     <Compile Include="Adminer\Role.cs" />
-    <Compile Include="ClassSetConfig.cs" />
+    <Compile Include="--ClassSetConfig.cs" />
     <Compile Include="FastMenuClass.cs" />
     <Compile Include="HttpHandlers\DownRemoteImgBase64.cs" />
     <Compile Include="HttpHandlers\UploadImgByUrls.cs" />

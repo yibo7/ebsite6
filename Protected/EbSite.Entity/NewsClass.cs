@@ -634,6 +634,8 @@ namespace EbSite.Entity
 
         public string ContentHtmlPath { get; set; }
         public bool IsHtmlNameReWriteContent { get; set; }
+
+        public int ConfigId { get; set; }
         #endregion Model
 
 

@@ -154,7 +154,7 @@ namespace EbSite.Control
             {
                 object o = ViewState["PageSize"];
                 if (o == null)
-                    return 10;
+                    return 0;
                 else
                     return (int)o;
             }

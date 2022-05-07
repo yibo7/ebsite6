@@ -11,16 +11,25 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
 {
 
 
-    public partial class ClassConfigList
+    public partial class ConfigToClass
     {
 
         /// <summary>
-        /// txtLab 控件。
+        /// txtTips 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::EbSite.Control.Notes txtLab;
+        protected global::EbSite.Control.Notes txtTips;
+
+        /// <summary>
+        /// drpConfigs 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::EbSite.Control.ListBox drpConfigs;
     }
 }

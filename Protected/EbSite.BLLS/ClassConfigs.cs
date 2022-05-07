@@ -204,13 +204,34 @@ namespace EbSite.BLL
 		/// </summary>
 		override public List<Entity.ClassConfigs> GetListPages(int PageIndex, int PageSize, string strWhere, string Fileds,string oderby, out int RecordCount)
 		{
+            
 			return DbProviderCms.GetInstance().ClassConfigs_GetListPages( PageIndex,  PageSize,  strWhere,  Fileds, oderby, out  RecordCount);
 		}
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
-		public List<Entity.ClassConfigs> GetListPagesCache(int PageIndex, int PageSize, string strWhere, string Fileds,string oderby, out int RecordCount)
+		public List<Entity.ClassConfigs> GetListPagesCache(int PageIndex, int PageSize, string strWhere, string Fileds,string oderby, out int RecordCount,int SiteId)
 		{
+			//if (!string.IsNullOrEmpty(strWhere))
+			//{
+			//	strWhere = string.Format("{0} and (SiteId={1} or SiteId=0)", strWhere, SiteId);
+
+			//}
+			//else
+			//{
+			//	strWhere = string.Format(" (SiteId={0} or SiteId=0) ", SiteId);
+
+			//}
+			if (!string.IsNullOrEmpty(strWhere))
+			{
+				strWhere = string.Format(" {0} and SiteId={1} ", strWhere, SiteId);
+
+			}
+			else
+			{
+				strWhere = string.Format(" SiteId={0} ", SiteId);
+
+			}
 			string rawKey = string.Concat("GlPages-", PageIndex,PageSize,strWhere,Fileds,oderby);
 			string rawKeyCount = string.Concat("C-", rawKey);
             List<Entity.ClassConfigs> lstData = base.GetCacheItem<List<Entity.ClassConfigs>>(rawKey);
@@ -246,29 +267,29 @@ namespace EbSite.BLL
 		/// <summary>
 		/// 获得数据列表-分页
 		/// </summary>
-		public List<Entity.ClassConfigs> GetListPages(int PageIndex, int PageSize, out int RecordCount)
+		public List<Entity.ClassConfigs> GetListPages(int PageIndex, int PageSize, out int RecordCount, int SiteId)
 		{
-			return GetListPagesCache( PageIndex,  PageSize,  "",  "", "", out  RecordCount);
+			return GetListPagesCache( PageIndex,  PageSize,  "",  "", "", out  RecordCount, SiteId);
 		}
 		/// <summary>
 		/// 获得数据列表-分页
 		/// </summary>
-		public List<Entity.ClassConfigs> GetListPages(int PageIndex, int PageSize, string strWhere, string oderby, out int RecordCount)
+		public List<Entity.ClassConfigs> GetListPages(int PageIndex, int PageSize, string strWhere, string oderby, out int RecordCount, int SiteId)
 		{
-			return GetListPagesCache( PageIndex,  PageSize,  strWhere,  "", oderby, out  RecordCount);
+			return GetListPagesCache( PageIndex,  PageSize,  strWhere,  "", oderby, out  RecordCount, SiteId);
 		}
 		/// <summary>
 		/// 获得数据列表-分页
 		/// </summary>
-		public List<Entity.ClassConfigs> GetListPages(int PageIndex, int PageSize, string strWhere, string oderby)
+		public List<Entity.ClassConfigs> GetListPages(int PageIndex, int PageSize, string strWhere, string oderby, int SiteId)
 		{
 			int iCount = 0;
-			return GetListPagesCache(PageIndex, PageSize, strWhere, "", oderby, out iCount);
+			return GetListPagesCache(PageIndex, PageSize, strWhere, "", oderby, out iCount, SiteId);
 		}
 		/// <summary>
 		/// 搜索-分页
 		/// </summary>
-		public List<Entity.ClassConfigs> SearchLike(int PageIndex, int PageSize, string oderby, out int RecordCount, string sKeyWord, string ColumnName)
+		public List<Entity.ClassConfigs> SearchLike(int PageIndex, int PageSize, string oderby, out int RecordCount, string sKeyWord, string ColumnName, int SiteId)
 		{
 			string strWhere = "";
 			if (!string.IsNullOrEmpty(sKeyWord)) strWhere = string.Format("{0} like '%{1}%'", ColumnName, sKeyWord);
@@ -277,391 +298,30 @@ namespace EbSite.BLL
 			RecordCount = 0;
 			return null;
 			}
-			return GetListPagesCache(PageIndex, PageSize, strWhere, "", oderby, out  RecordCount);
-		}
-		/// <summary>
-		/// 修改时获取当前实例，并载入控件到PlaceHolder
-		/// </summary>
-		//public void InitModifyCtr(string id, PlaceHolder ph)
-		//{
-		//	if (!string.IsNullOrEmpty(id))
-		//	{
-		//		int ThisId = int.Parse(id);
-		//		Entity.ClassConfigs mdEt = GetEntity(ThisId);
-		//		foreach (System.Web.UI.Control uc in ph.Controls)
-		//		{
-		//			if (Equals(uc.ID, null)) continue;
-		//			string sValue = "";
-		//			if (Equals(uc.ID.ToLower(), "id".ToLower()))
-		//			{
-		//				sValue = mdEt.id.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "ContentHtmlName".ToLower()))
-		//			{
-		//				sValue = mdEt.ContentHtmlName.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "ClassHtmlNameRule".ToLower()))
-		//			{
-		//				sValue = mdEt.ClassHtmlNameRule.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "IsCanAddContent".ToLower()))
-		//			{
-		//				sValue = mdEt.IsCanAddContent.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "ContentModelID".ToLower()))
-		//			{
-		//				sValue = mdEt.ContentModelID.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "ContentTemID".ToLower()))
-		//			{
-		//				sValue = mdEt.ContentTemID.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "ClassTemID".ToLower()))
-		//			{
-		//				sValue = mdEt.ClassTemID.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "ClassModelID".ToLower()))
-		//			{
-		//				sValue = mdEt.ClassModelID.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "SubClassAddName".ToLower()))
-		//			{
-		//				sValue = mdEt.SubClassAddName.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "SubClassTemID".ToLower()))
-		//			{
-		//				sValue = mdEt.SubClassTemID.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "SubClassModelID".ToLower()))
-		//			{
-		//				sValue = mdEt.SubClassModelID.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "SubDefaultContentModelID".ToLower()))
-		//			{
-		//				sValue = mdEt.SubDefaultContentModelID.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "SubDefaultContentTemID".ToLower()))
-		//			{
-		//				sValue = mdEt.SubDefaultContentTemID.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "SubIsCanAddSub".ToLower()))
-		//			{
-		//				sValue = mdEt.SubIsCanAddSub.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "SubIsCanAddContent".ToLower()))
-		//			{
-		//				sValue = mdEt.SubIsCanAddContent.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "IsCanAddSub".ToLower()))
-		//			{
-		//				sValue = mdEt.IsCanAddSub.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "ListTemID".ToLower()))
-		//			{
-		//				sValue = mdEt.ListTemID.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "PageSize".ToLower()))
-		//			{
-		//				sValue = mdEt.PageSize.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "ModuleID".ToLower()))
-		//			{
-		//				sValue = mdEt.ModuleID.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "ClassID".ToLower()))
-		//			{
-		//				sValue = mdEt.ClassID.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "AddTime".ToLower()))
-		//			{
-		//				sValue = mdEt.AddTime.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "ClassTemIdMobile".ToLower()))
-		//			{
-		//				sValue = mdEt.ClassTemIdMobile.ToString();
-		//			}
-		//			else if (Equals(uc.ID.ToLower(), "ContentTemIdMobile".ToLower()))
-		//			{
-		//				sValue = mdEt.ContentTemIdMobile.ToString();
-		//			}
-  //                  else if (Equals(uc.ID.ToLower(), "SiteID".ToLower()))
-  //                  {
-  //                      sValue = mdEt.SiteID.ToString();
-  //                  }
-  //                  else if (Equals(uc.ID.ToLower(), "IsDefault".ToLower()))
-  //                  {
-  //                      sValue = mdEt.IsDefault.ToString();
-  //                  }
-		//		SetValueFromControl(uc, sValue);
-		//		}
-		//	}
-		//}
-		/// <summary>
-		/// 获取控件里的数据映射到一个实体，接着保存这个实例到数据
-		/// </summary>
-		//public void SaveEntityFromCtr(PlaceHolder ph)
-		//{
-		//		SaveEntityFromCtr(ph,null);
-		//}
-		/// <summary>
-		/// 获取控件里的数据映射到一个实体，接着保存这个实例到数据
-		/// </summary>
-		//public void SaveEntityFromCtr(PlaceHolder ph, List<EbSite.Base.BLL.OtherColumn> lstOtherColumn)
-		//{
-		//	Entity.ClassConfigs mdEntity = GetEntityFromCtr(ph);
-		//	if(!Equals(lstOtherColumn,null) && lstOtherColumn.Count>0)
-		//	{
-		//		foreach (EbSite.Base.BLL.OtherColumn column in lstOtherColumn)
-		//		{
-		//			if(Equals(column.ColumnName.ToLower(), "id".ToLower()))
-		//			{
-		//				mdEntity.id = int.Parse(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "ContentHtmlName".ToLower()))
-		//			{
-		//				mdEntity.ContentHtmlName = column.ColumnValue;
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "ClassHtmlNameRule".ToLower()))
-		//			{
-		//				mdEntity.ClassHtmlNameRule = column.ColumnValue;
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "IsCanAddContent".ToLower()))
-		//			{
-		//				mdEntity.IsCanAddContent = bool.Parse(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "ContentModelID".ToLower()))
-		//			{
-		//				mdEntity.ContentModelID = new Guid(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "ContentTemID".ToLower()))
-		//			{
-		//				mdEntity.ContentTemID = new Guid(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "ClassTemID".ToLower()))
-		//			{
-		//				mdEntity.ClassTemID = new Guid(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "ClassModelID".ToLower()))
-		//			{
-		//				mdEntity.ClassModelID = new Guid(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "SubClassAddName".ToLower()))
-		//			{
-		//				mdEntity.SubClassAddName = column.ColumnValue;
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "SubClassTemID".ToLower()))
-		//			{
-		//				mdEntity.SubClassTemID = new Guid(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "SubClassModelID".ToLower()))
-		//			{
-		//				mdEntity.SubClassModelID = new Guid(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "SubDefaultContentModelID".ToLower()))
-		//			{
-		//				mdEntity.SubDefaultContentModelID = new Guid(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "SubDefaultContentTemID".ToLower()))
-		//			{
-		//				mdEntity.SubDefaultContentTemID = new Guid(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "SubIsCanAddSub".ToLower()))
-		//			{
-		//				mdEntity.SubIsCanAddSub = bool.Parse(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "SubIsCanAddContent".ToLower()))
-		//			{
-		//				mdEntity.SubIsCanAddContent = bool.Parse(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "IsCanAddSub".ToLower()))
-		//			{
-		//				mdEntity.IsCanAddSub = bool.Parse(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "ListTemID".ToLower()))
-		//			{
-		//				mdEntity.ListTemID = new Guid(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "PageSize".ToLower()))
-		//			{
-		//				mdEntity.PageSize = int.Parse(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "ModuleID".ToLower()))
-		//			{
-		//				mdEntity.ModuleID = new Guid(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "ClassID".ToLower()))
-		//			{
-		//				mdEntity.ClassID = int.Parse(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "AddTime".ToLower()))
-		//			{
-		//				mdEntity.AddTime = DateTime.Parse(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "ClassTemIdMobile".ToLower()))
-		//			{
-		//				mdEntity.ClassTemIdMobile = new Guid(column.ColumnValue);
-		//			}
-		//			else if(Equals(column.ColumnName.ToLower(), "ContentTemIdMobile".ToLower()))
-		//			{
-  //                      mdEntity.ContentTemIdMobile = new Guid(column.ColumnValue);
-		//			}
-  //                  else if (Equals(column.ColumnName.ToLower(), "SiteID".ToLower()))
-  //                  {
-  //                      mdEntity.SiteID = int.Parse(column.ColumnValue);
-  //                  }
-  //                  else if (Equals(column.ColumnName.ToLower(), "IsDefault".ToLower()))
-  //                  {
-  //                      mdEntity.IsDefault = bool.Parse(column.ColumnValue);
-  //                  }
-		//		}
-		//	}
-		//	if (mdEntity.id>0)
-		//	{
-		//		Update(mdEntity);
-		//	}else{
-		//		 Add(mdEntity);
-		//	}
-		//}
-		/// <summary>
-		/// 从PlaceHolder中获取一个实例
-		/// </summary>
-		//public Entity.ClassConfigs GetEntityFromCtr(PlaceHolder ph)
-		//{
-		//	Entity.ClassConfigs mdEt = new Entity.ClassConfigs();
-		//	string sKeyID;
-		//	if (GetIDFromCtr(ph, out sKeyID))
-		//	{
-		//		mdEt = GetEntity(int.Parse(sKeyID));
-		//	}
-		//	foreach (System.Web.UI.Control uc in ph.Controls)
-		//	{
-		//		if (Equals(uc.ID, null)) continue;
-		//		string sValue = GetValueFromControl(uc);
-		//			if(Equals(uc.ID.ToLower(),"id".ToLower()))
-		//			{
-		//				mdEt.id = int.Parse(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"ContentHtmlName".ToLower()))
-		//			{
-		//				mdEt.ContentHtmlName = sValue;
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"ClassHtmlNameRule".ToLower()))
-		//			{
-		//				mdEt.ClassHtmlNameRule = sValue;
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"IsCanAddContent".ToLower()))
-		//			{
-		//				mdEt.IsCanAddContent = bool.Parse(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"ContentModelID".ToLower()))
-		//			{
-		//				mdEt.ContentModelID =new Guid(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"ContentTemID".ToLower()))
-		//			{
-		//				mdEt.ContentTemID = new Guid(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"ClassTemID".ToLower()))
-		//			{
-		//				mdEt.ClassTemID = new Guid(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"ClassModelID".ToLower()))
-		//			{
-		//				mdEt.ClassModelID = new Guid(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"SubClassAddName".ToLower()))
-		//			{
-		//				mdEt.SubClassAddName = sValue;
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"SubClassTemID".ToLower()))
-		//			{
-		//				mdEt.SubClassTemID = new Guid(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"SubClassModelID".ToLower()))
-		//			{
-		//				mdEt.SubClassModelID = new Guid(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"SubDefaultContentModelID".ToLower()))
-		//			{
-		//				mdEt.SubDefaultContentModelID = new Guid(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"SubDefaultContentTemID".ToLower()))
-		//			{
-		//				mdEt.SubDefaultContentTemID = new Guid(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"SubIsCanAddSub".ToLower()))
-		//			{
-		//				mdEt.SubIsCanAddSub = bool.Parse(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"SubIsCanAddContent".ToLower()))
-		//			{
-		//				mdEt.SubIsCanAddContent = bool.Parse(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"IsCanAddSub".ToLower()))
-		//			{
-		//				mdEt.IsCanAddSub = bool.Parse(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"ListTemID".ToLower()))
-		//			{
-		//				mdEt.ListTemID = new Guid(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"PageSize".ToLower()))
-		//			{
-		//				mdEt.PageSize = int.Parse(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"ModuleID".ToLower()))
-		//			{
-		//				mdEt.ModuleID = new Guid(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"ClassID".ToLower()))
-		//			{
-		//				mdEt.ClassID = int.Parse(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"AddTime".ToLower()))
-		//			{
-		//				mdEt.AddTime = DateTime.Parse(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"ClassTemIdMobile".ToLower()))
-		//			{
-		//				mdEt.ClassTemIdMobile = new Guid(sValue);
-		//			}
-		//			else if(Equals(uc.ID.ToLower(),"ContentTemIdMobile".ToLower()))
-		//			{
-  //                      mdEt.ContentTemIdMobile = new Guid(sValue);
-		//			}
-  //                  else if (Equals(uc.ID.ToLower(), "SiteID".ToLower()))
-  //                  {
-  //                      mdEt.SiteID = int.Parse(sValue);
-  //                  }
-  //                  else if (Equals(uc.ID.ToLower(), "IsDefault".ToLower()))
-  //                  {
-  //                      mdEt.IsDefault = bool.Parse(sValue);
-  //                  }
-		//	}
-		//return mdEt;
-		//}
+			return GetListPagesCache(PageIndex, PageSize, strWhere, "", oderby, out  RecordCount, SiteId);
+		} 
 
 		#endregion  成员方法
 		
 		#region  自定义方法
 
-        public Entity.ClassConfigs GetClassConfigs(int SiteID)
-        {
-            string CacheKey = string.Concat("GetClassConfigs_", SiteID);
-            Entity.ClassConfigs md = Host.CacheApp.GetCacheItem<Entity.ClassConfigs>(CacheKey, CacheName); 
-            if (Equals(md,null))
-            {
-               md =  DbProviderCms.GetInstance().GeClassConfigs(SiteID);
-               if (!Equals(md, null))
-                   Host.CacheApp.AddCacheItem(CacheKey, md, 1, ETimeSpanModel.T, CacheName);
-            }
-            return md;
-        }
+        //public Entity.ClassConfigs GetClassConfigs(int SiteID)
+        //{
+        //    string CacheKey = string.Concat("GetClassConfigs_", SiteID);
+        //    Entity.ClassConfigs md = Host.CacheApp.GetCacheItem<Entity.ClassConfigs>(CacheKey, CacheName); 
+        //    if (Equals(md,null))
+        //    {
+        //       md =  DbProviderCms.GetInstance().GeClassConfigs(SiteID);
+        //       if (!Equals(md, null))
+        //           Host.CacheApp.AddCacheItem(CacheKey, md, 1, ETimeSpanModel.T, CacheName);
+        //    }
+        //    return md;
+        //}
 
-        public bool IsHaveClassConfigs(int SiteID)
-	    {
-            return DbProviderCms.GetInstance().IsHaveClassConfigs(SiteID);
-	    }
+     //   public bool IsHaveClassConfigs(int SiteID)
+	    //{
+     //       return DbProviderCms.GetInstance().IsHaveClassConfigs(SiteID);
+	    //}
 
      //   public bool IsHaveClassConfigsByClassID(int ClassID)
 	    //{
@@ -705,7 +365,7 @@ namespace EbSite.BLL
                     {
                         if (!ClassTems.ContainsKey(ClassID))
                         {
-                            Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+                            Entity.ClassConfigs md = GetByClassID(ClassID);
 
                             ClassTems.Add(ClassID, md.ClassTemID);
 
@@ -730,7 +390,7 @@ namespace EbSite.BLL
                 {
                     if (!NewContentNames.ContainsKey(ClassID))
                     {
-                        Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+                        Entity.ClassConfigs md = GetByClassID(ClassID);
                         Guid moduleid = md.ContentModelID;
                         string tbName = EbSite.BLL.WebModel.Instance.GetTableName(moduleid);
                         NewContentNames.Add(ClassID, tbName);
@@ -753,7 +413,7 @@ namespace EbSite.BLL
                 {
                     if (!ContentTems.ContainsKey(ClassID))
                     {
-                        Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+                        Entity.ClassConfigs md = GetByClassID(ClassID);
 
                         ContentTems.Add(ClassID, md.ContentTemID);
                     }
@@ -777,7 +437,7 @@ namespace EbSite.BLL
                 {
                     if (!MClassTems.ContainsKey(ClassID))
                     {
-                        Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+                        Entity.ClassConfigs md = GetByClassID(ClassID);
 
                         MClassTems.Add(ClassID, md.ClassTemIdMobile);
                     }
@@ -798,7 +458,7 @@ namespace EbSite.BLL
                 {
                     if (!MContentTems.ContainsKey(ClassID))
                     {
-                        Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+                        Entity.ClassConfigs md = GetByClassID(ClassID);
 
                         MContentTems.Add(ClassID, md.ContentTemIdMobile);
                     }
@@ -809,37 +469,37 @@ namespace EbSite.BLL
 
 	    public Guid GetClassModelID(int ClassID)
 	    {
-            Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+            Entity.ClassConfigs md = GetByClassID(ClassID);
 
 	        return md.ClassModelID;
 	    }
         public Guid GetContentModelID(int ClassID)
         {
-            Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+            Entity.ClassConfigs md = GetByClassID(ClassID);
 
             return md.ContentModelID;
         }
         public string GetClassHtmlNameRule(int ClassID)
         {
-            Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+            Entity.ClassConfigs md = GetByClassID(ClassID);
 
             return md.ClassHtmlNameRule;
         }
         public string GetContentHtmlName(int ClassID)
         {
-            Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+            Entity.ClassConfigs md = GetByClassID(ClassID);
 
             return md.ContentHtmlName;
         }
         public bool GetIsCanAddContent(int ClassID)
         {
-            Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+            Entity.ClassConfigs md = GetByClassID(ClassID);
 
             return md.IsCanAddContent;
         }
         public Guid GetModuleID(int ClassID)
         {
-            Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+            Entity.ClassConfigs md = GetByClassID(ClassID);
 
             return md.ModuleID;
         }
@@ -847,170 +507,194 @@ namespace EbSite.BLL
 
         public Guid GetListTemID(int ClassID)
         {
-            Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+            Entity.ClassConfigs md = GetByClassID(ClassID);
 
             return md.ListTemID;
         }
         public bool GetIsCanAddSub(int ClassID)
         {
-            Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+            Entity.ClassConfigs md = GetByClassID(ClassID);
 
             return md.IsCanAddSub;
         }
         public Guid GetSubClassModelID(int ClassID)
         {
-            Entity.ClassConfigs md = GetClassConfigsByClassID(ClassID);
+            Entity.ClassConfigs md = GetByClassID(ClassID);
 
             return md.SubClassModelID;
         }
 
-	    
+		//private Entity.ClassConfigs GetClassConfigsFromClassID(int ClassId)
+  //      {
 
-	    public void DeleteByClassIDBySite(int SiteID)
-	    {
-	         List<EbSite.Entity.NewsClass> lst =  BLL.NewsClass.GetListArr("", SiteID);
+  //          string CacheKey = string.Concat("GeClassConfigsByClassID_", model.ConfigId);
+  //          Entity.ClassConfigs md = Host.CacheApp.GetCacheItem<Entity.ClassConfigs>(CacheKey, CacheName);
+  //          if (Equals(md, null))
+  //          {
+  //              md = DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassId);
+  //              if (!Equals(md, null))
+  //                  Host.CacheApp.AddCacheItem(CacheKey, md, 15, ETimeSpanModel.FZ, CacheName);
+  //          }
+  //          return md;
+  //      }
 
-	        foreach (var newsClass in lst)
-	        {
-                DeleteByClassID(newsClass.ID);
-	        }
-	    }
-
-	    public void DeleteByClassID(int ClassID)
-	    {
-            base.InvalidateCache();
-             DbProviderCms.GetInstance().DeleteByClassID(ClassID);
-	    }
-
-	    public void UpdateClassConfigs(Entity.ClassConfigs Model,int iClassId,int iSiteId,bool isChangeRule,bool isAddNew,bool isUpdateToSub,bool isDefault,bool IsSetTo)
+        public Entity.ClassConfigs GetByClassID(int ClassId)
         {
-	        if (isDefault)//站点的默认分类设置，所以要设置站点ID
-	        {
-	            Model.SiteID = iSiteId;
-	        }
-
-	        if (isAddNew)
-	        {
-                Model.SiteID = 0;
-                int cfid =  Add(Model);
-                EbSite.Entity.ClassSetConfig newConfig = new Entity.ClassSetConfig();
-	            newConfig.ClassId = iClassId;
-	            newConfig.ConfigId = cfid;
-                if (!IsSetTo)
-	            {
-	                BLL.ClassSetConfig.Instance.Add(newConfig);
-	            }
-	            else
-	            {
-                    BLL.ClassSetConfig.Instance.UpdateConfigId(newConfig);//更新条件是 ClassId,ConfigId
-                }
-	        }
-	        else
-	        {
-                Update(Model);
-            }
-            
-
-            //Entity.ClassConfigs mdOld = BLL.ClassConfigs.Instance.GetClassConfigsByClassID(iClassId);
-	        //bool isChangeRule = !Equals(Model.ClassHtmlNameRule, mdOld.ClassHtmlNameRule);
-            if (isChangeRule)
-	        {
-                //同时更新分类记录的
-               // List<Entity.NewsClass> mds = NewsClass.GetClassInIDs(Model.ClassID, Model.SiteID);
-                List<EbSite.Entity.NewsClass> mds = DbProviderCms.GetInstance().NewsClass_GetListArrayFormConfigId(Model.id);
-                foreach (var model in mds)
-                {
-                    model.HtmlName = HtmlReNameRule.GetName(Model.ClassHtmlNameRule, model.ClassName);//从当前规则转换文件名
-                    NewsClass.Update(model);
-                }
-
-            }
-
-
-            base.InvalidateCache();
-            
-        }
-
-
-        private Entity.ClassConfigs GetClassConfigsFromClassID(int ClassId)
-        {
-            //public List<Entity.ClassConfigs> GeClassConfigsByModuleId(int mid)
-
-            string CacheKey = string.Concat("GeClassConfigsByClassID_", ClassId);
-            Entity.ClassConfigs md = Host.CacheApp.GetCacheItem<Entity.ClassConfigs>(CacheKey, CacheName);
-            if (Equals(md, null))
+			var model = NewsClass.GetModelByCache(ClassId); 
+			Entity.ClassConfigs mConfigs = GetEntity(model.ConfigId);
+			if (Equals(mConfigs, null))
             {
-                md = DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassId);
-                if (!Equals(md, null))
-                    Host.CacheApp.AddCacheItem(CacheKey, md, 15, ETimeSpanModel.FZ, CacheName);
-            }
-            return md;
-        }
-
-	    public Entity.ClassConfigs GetClassConfigsByClassID(int ClassID)
-	    {
-          
-            Entity.ClassConfigs mConfigs = GetClassConfigsFromClassID(ClassID); 
-            if (Equals(mConfigs, null))
-            {
-
-                mConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID); 
-                if (Equals(mConfigs, null))
-                {
-                    throw new Exception(string.Format("当前站找不到默认分类设置数据，你登录后台切换到当前站点，执行以下操作即可正常访问:网站管理>分类管理>数据调整>更改分类默认设置>保存分类设置"));
-                }
-            } 
+				throw new Exception(string.Format("分类ID为【{0}】找不到相应的配置，请在后台添加分类设置，并将其设置到此分类下", ClassId));
+			}
 
             return mConfigs;
         }
 
-	    public Entity.ClassConfigs GetClassConfigsByClassID(int ClassID,out bool IsDefault,out int UsedClassCount,out bool IsSetTo)
-	    {
-	        IsSetTo = false;
-            IsDefault = false;
-            UsedClassCount = 0;
-            Entity.ClassConfigs mConfigs = GetClassConfigsFromClassID(ClassID);
-            Entity.ClassConfigs mDefaultConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
-            if (Equals(mConfigs, null))
-            {
+        //public void DeleteByClassIDBySite(int SiteID)
+        //{
+        //     List<EbSite.Entity.NewsClass> lst =  BLL.NewsClass.GetListArr("", SiteID);
 
-                mConfigs = mDefaultConfigs;
-                IsDefault = true;
-               
-                if (Equals(mConfigs, null))
-                {
-                    throw new Exception(string.Format("当前站找不到默认分类设置数据，你登录后台切换到当前站点，执行以下操作即可正常访问:网站管理>分类管理>数据调整>更改分类默认设置>保存分类设置"));
-                }
-            }
-            else
-            {
-                IsSetTo = true;
-                if (mConfigs.id == mDefaultConfigs.id)
-                {
-                    IsDefault = true;
-                }
-                UsedClassCount = BLL.ClassSetConfig.Instance.GetCountByConfigId(mConfigs.id);
-                
-            }
+        //    foreach (var newsClass in lst)
+        //    {
+        //           DeleteByClassID(newsClass.ID);
+        //    }
+        //}
 
-            return mConfigs;
+        //public void DeleteByClassID(int ClassID)
+        //{
+        //       base.InvalidateCache();
+        //        DbProviderCms.GetInstance().DeleteByClassID(ClassID);
+        //}
 
-            //if (IsHaveClassConfigsByClassID(ClassID))
-            //{
-            //    mConfigs = GeClassConfigsByClassID(ClassID);//DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassID);
-            //}
-            //else
-            //{
-            //    mConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
+        //public void UpdateClassConfigs(Entity.ClassConfigs Model,int iClassId,int iSiteId,bool isChangeRule,bool isAddNew,bool isUpdateToSub,bool isDefault,bool IsSetTo)
+        //   {
+        //    if (isDefault)//站点的默认分类设置，所以要设置站点ID
+        //    {
+        //        Model.SiteID = iSiteId;
+        //    }
 
-            //    if (Equals(mConfigs, null))
-            //    {
-            //        throw new Exception(string.Format("当前站找不到默认分类设置数据，你登录后台切换到当前站点，执行以下操作即可正常访问:网站管理>分类管理>数据调整>更改分类默认设置>保存分类设置"));
-            //    }
-            //}
-            //return mConfigs;
+        //    if (isAddNew)
+        //    {
+        //           Model.SiteID = 0;
+        //           int cfid =  Add(Model);
+        //           EbSite.Entity.ClassSetConfig newConfig = new Entity.ClassSetConfig();
+        //        newConfig.ClassId = iClassId;
+        //        newConfig.ConfigId = cfid;
+        //           if (!IsSetTo)
+        //        {
+        //            BLL.ClassSetConfig.Instance.Add(newConfig);
+        //        }
+        //        else
+        //        {
+        //               BLL.ClassSetConfig.Instance.UpdateConfigId(newConfig);//更新条件是 ClassId,ConfigId
+        //           }
+        //    }
+        //    else
+        //    {
+        //           Update(Model);
+        //       }
 
-        }
+
+        //       //Entity.ClassConfigs mdOld = BLL.ClassConfigs.Instance.GetClassConfigsByClassID(iClassId);
+        //    //bool isChangeRule = !Equals(Model.ClassHtmlNameRule, mdOld.ClassHtmlNameRule);
+        //       if (isChangeRule)
+        //    {
+        //           //同时更新分类记录的
+        //          // List<Entity.NewsClass> mds = NewsClass.GetClassInIDs(Model.ClassID, Model.SiteID);
+        //           List<EbSite.Entity.NewsClass> mds = DbProviderCms.GetInstance().NewsClass_GetListArrayFormConfigId(Model.id);
+        //           foreach (var model in mds)
+        //           {
+        //               model.HtmlName = HtmlReNameRule.GetName(Model.ClassHtmlNameRule, model.ClassName);//从当前规则转换文件名
+        //               NewsClass.Update(model);
+        //           }
+
+        //       }
+
+
+        //       base.InvalidateCache();
+
+        //   }
+
+
+        //   private Entity.ClassConfigs GetClassConfigsFromClassID(int ClassId)
+        //   {
+        //       //public List<Entity.ClassConfigs> GeClassConfigsByModuleId(int mid)
+
+        //       string CacheKey = string.Concat("GeClassConfigsByClassID_", ClassId);
+        //       Entity.ClassConfigs md = Host.CacheApp.GetCacheItem<Entity.ClassConfigs>(CacheKey, CacheName);
+        //       if (Equals(md, null))
+        //       {
+        //           md = DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassId);
+        //           if (!Equals(md, null))
+        //               Host.CacheApp.AddCacheItem(CacheKey, md, 15, ETimeSpanModel.FZ, CacheName);
+        //       }
+        //       return md;
+        //   }
+
+        //public Entity.ClassConfigs GetClassConfigsByClassID(int ClassID)
+        //{
+
+        //       Entity.ClassConfigs mConfigs = GetClassConfigsFromClassID(ClassID); 
+        //       if (Equals(mConfigs, null))
+        //       {
+
+        //           mConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID); 
+        //           if (Equals(mConfigs, null))
+        //           {
+        //               throw new Exception(string.Format("当前站找不到默认分类设置数据，你登录后台切换到当前站点，执行以下操作即可正常访问:网站管理>分类管理>数据调整>更改分类默认设置>保存分类设置"));
+        //           }
+        //       } 
+
+        //       return mConfigs;
+        //   }
+
+        //public Entity.ClassConfigs GetClassConfigsByClassID(int ClassID,out bool IsDefault,out int UsedClassCount,out bool IsSetTo)
+        //{
+        //    IsSetTo = false;
+        //       IsDefault = false;
+        //       UsedClassCount = 0;
+        //       Entity.ClassConfigs mConfigs = GetClassConfigsFromClassID(ClassID);
+        //       Entity.ClassConfigs mDefaultConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
+        //       if (Equals(mConfigs, null))
+        //       {
+
+        //           mConfigs = mDefaultConfigs;
+        //           IsDefault = true;
+
+        //           if (Equals(mConfigs, null))
+        //           {
+        //               throw new Exception(string.Format("当前站找不到默认分类设置数据，你登录后台切换到当前站点，执行以下操作即可正常访问:网站管理>分类管理>数据调整>更改分类默认设置>保存分类设置"));
+        //           }
+        //       }
+        //       else
+        //       {
+        //           IsSetTo = true;
+        //           if (mConfigs.id == mDefaultConfigs.id)
+        //           {
+        //               IsDefault = true;
+        //           }
+        //           UsedClassCount = BLL.ClassSetConfig.Instance.GetCountByConfigId(mConfigs.id);
+
+        //       }
+
+        //       return mConfigs;
+
+        //       //if (IsHaveClassConfigsByClassID(ClassID))
+        //       //{
+        //       //    mConfigs = GeClassConfigsByClassID(ClassID);//DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassID);
+        //       //}
+        //       //else
+        //       //{
+        //       //    mConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
+
+        //       //    if (Equals(mConfigs, null))
+        //       //    {
+        //       //        throw new Exception(string.Format("当前站找不到默认分类设置数据，你登录后台切换到当前站点，执行以下操作即可正常访问:网站管理>分类管理>数据调整>更改分类默认设置>保存分类设置"));
+        //       //    }
+        //       //}
+        //       //return mConfigs;
+
+        //   }
 
         /// <summary>
         /// 获取分类模型一样的分类配置
@@ -1022,116 +706,121 @@ namespace EbSite.BLL
              return DbProviderCms.GetInstance().GeClassConfigsByModuleId(mid);
         }
 
-
-        /// <summary>
-        /// 添加一级分类时，为分类分配分类配置
-        /// </summary>
-        /// <param name="ClassId">分类Id</param>
-        /// <param name="ModuleId">分类模型ID</param>
-        /// <returns>0，分配到默认分类配置，1分配到一个已有的相关分类模型的配置,2.添加一个新分类配置，这个时候往往需要去设置一下</returns>
-        public int AddClassToDefault(int ClassId, Guid ModuleId)
+		public void UpdateDefault(int id,int siteid)
         {
-            Entity.ClassConfigs mConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
+			DbProviderCms.GetInstance().UpdateDefault(id, siteid);
+			base.InvalidateCache();
+		}
 
-            if (mConfigs.ClassModelID != ModuleId) //如果默认的分类配置里设置的不是当前模型，那么就要新建
-            {
-                List<Entity.ClassConfigs> lsM = GeClassConfigsByModuleId(ModuleId);
-                if (lsM.Count > 0)
-                {
-                    Entity.ClassConfigs Model = lsM[0]; //默认取第一个
-                    //Model.ClassID = string.Concat(Model.ClassID, ",", ClassId);//追加一个分类ID
-                    //Update(Model);
+		///// <summary>
+		///// 添加一级分类时，为分类分配分类配置
+		///// </summary>
+		///// <param name="ClassId">分类Id</param>
+		///// <param name="ModuleId">分类模型ID</param>
+		///// <returns>0，分配到默认分类配置，1分配到一个已有的相关分类模型的配置,2.添加一个新分类配置，这个时候往往需要去设置一下</returns>
+		//public int AddClassToDefault(int ClassId, Guid ModuleId)
+		//{
+		//    Entity.ClassConfigs mConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
 
-                    Entity.ClassSetConfig mset = new Entity.ClassSetConfig();
-                    mset.ClassId = ClassId;
-                    mset.ConfigId = Model.id;
-                    BLL.ClassSetConfig.Instance.Add(mset);
-                    return 1;
+		//    if (mConfigs.ClassModelID != ModuleId) //如果默认的分类配置里设置的不是当前模型，那么就要新建
+		//    {
+		//        List<Entity.ClassConfigs> lsM = GeClassConfigsByModuleId(ModuleId);
+		//        if (lsM.Count > 0)
+		//        {
+		//            Entity.ClassConfigs Model = lsM[0]; //默认取第一个
+		//            //Model.ClassID = string.Concat(Model.ClassID, ",", ClassId);//追加一个分类ID
+		//            //Update(Model);
 
-                }
-                else //如果也不能使用默认配置，也没有存在相同分类模型的分配配置，那么复制一份默认的，修改分类ID，分类模型Id,添加，这种情况往往用户还需要配置一下其他设置
-                {
+		//            Entity.ClassSetConfig mset = new Entity.ClassSetConfig();
+		//            mset.ClassId = ClassId;
+		//            mset.ConfigId = Model.id;
+		//            BLL.ClassSetConfig.Instance.Add(mset);
+		//            return 1;
 
-                    mConfigs.ClassModelID = ModuleId;
-                    int id = Add(mConfigs);
+		//        }
+		//        else //如果也不能使用默认配置，也没有存在相同分类模型的分配配置，那么复制一份默认的，修改分类ID，分类模型Id,添加，这种情况往往用户还需要配置一下其他设置
+		//        {
 
-                    Entity.ClassSetConfig mset = new Entity.ClassSetConfig();
-                    mset.ClassId = ClassId;
-                    mset.ConfigId = id;
-                    BLL.ClassSetConfig.Instance.Add(mset);
+		//            mConfigs.ClassModelID = ModuleId;
+		//            int id = Add(mConfigs);
 
-                    return 2;
-                }
-            }
-            else  //2016-02-26  之前默认配置是没有添加分类与配置关系的，这样查不好查
-            {
-                Entity.ClassSetConfig mset = new Entity.ClassSetConfig();
-                mset.ClassId = ClassId;
-                mset.ConfigId = mConfigs.id;
-                BLL.ClassSetConfig.Instance.Add(mset);
-            }
+		//            Entity.ClassSetConfig mset = new Entity.ClassSetConfig();
+		//            mset.ClassId = ClassId;
+		//            mset.ConfigId = id;
+		//            BLL.ClassSetConfig.Instance.Add(mset);
 
-            return 0;
-        }
+		//            return 2;
+		//        }
+		//    }
+		//    else  //2016-02-26  之前默认配置是没有添加分类与配置关系的，这样查不好查
+		//    {
+		//        Entity.ClassSetConfig mset = new Entity.ClassSetConfig();
+		//        mset.ClassId = ClassId;
+		//        mset.ConfigId = mConfigs.id;
+		//        BLL.ClassSetConfig.Instance.Add(mset);
+		//    }
 
-	    public void AddSubClassToParentConfig(int PClassId,int subClassId)
-	    {
-	        Entity.ClassConfigs Model = GetClassConfigsByClassID(PClassId);
+		//    return 0;
+		//}
 
-            Entity.ClassSetConfig mset = new Entity.ClassSetConfig();
-            mset.ClassId = subClassId;
-            mset.ConfigId = Model.id;
-            BLL.ClassSetConfig.Instance.Add(mset);
+		//public void AddSubClassToParentConfig(int PClassId,int subClassId)
+		//{
+		//    Entity.ClassConfigs Model = GetClassConfigsByClassID(PClassId);
 
-            //   if (!string.IsNullOrEmpty(Model.ClassID))//默认配置不用添加Id
-            //{
-            //       Model.ClassID = string.Concat(Model.ClassID, ",", subClassId);//追加一个分类ID
-            //       Update(Model);
-            //   }
+		//       Entity.ClassSetConfig mset = new Entity.ClassSetConfig();
+		//       mset.ClassId = subClassId;
+		//       mset.ConfigId = Model.id;
+		//       BLL.ClassSetConfig.Instance.Add(mset);
 
-        }
+		//       //   if (!string.IsNullOrEmpty(Model.ClassID))//默认配置不用添加Id
+		//       //{
+		//       //       Model.ClassID = string.Concat(Model.ClassID, ",", subClassId);//追加一个分类ID
+		//       //       Update(Model);
+		//       //   }
+
+		//}
 
 
-        //public int AddClassListToDefault(string ClassIds, Guid ModuleId)
-        //{
-        //    Entity.ClassConfigs mConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
+		//public int AddClassListToDefault(string ClassIds, Guid ModuleId)
+		//{
+		//    Entity.ClassConfigs mConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
 
-        //    if (mConfigs.ClassModelID != ModuleId) //如果默认的分类配置里设置的不是当前模型，那么就要新建
-        //    {
-        //        List<Entity.ClassConfigs> lsM = GeClassConfigsByModuleId(ModuleId);
-        //        if (lsM.Count > 0)
-        //        {
-        //            Entity.ClassConfigs Model = lsM[0];//默认取第一个
-        //            Model.ClassID = string.Concat(Model.ClassID, ",", ClassIds);//追加一个分类ID
-        //            Update(Model);
-        //            return 1;
+		//    if (mConfigs.ClassModelID != ModuleId) //如果默认的分类配置里设置的不是当前模型，那么就要新建
+		//    {
+		//        List<Entity.ClassConfigs> lsM = GeClassConfigsByModuleId(ModuleId);
+		//        if (lsM.Count > 0)
+		//        {
+		//            Entity.ClassConfigs Model = lsM[0];//默认取第一个
+		//            Model.ClassID = string.Concat(Model.ClassID, ",", ClassIds);//追加一个分类ID
+		//            Update(Model);
+		//            return 1;
 
-        //        }
-        //        else //如果也不能使用默认配置，也没有存在相同分类模型的分配配置，那么复制一份默认的，修改分类ID，分类模型Id,添加，这种情况往往用户还需要配置一下其他设置
-        //        {
-        //            mConfigs.ClassID = ClassIds;
-        //            mConfigs.ClassModelID = ModuleId;
-        //            Add(mConfigs);
+		//        }
+		//        else //如果也不能使用默认配置，也没有存在相同分类模型的分配配置，那么复制一份默认的，修改分类ID，分类模型Id,添加，这种情况往往用户还需要配置一下其他设置
+		//        {
+		//            mConfigs.ClassID = ClassIds;
+		//            mConfigs.ClassModelID = ModuleId;
+		//            Add(mConfigs);
 
-        //            return 2;
+		//            return 2;
 
-        //        }
-        //    }
+		//        }
+		//    }
 
-        //    return 0;
-        //}
+		//    return 0;
+		//}
 
-        //public void AddSubClassListToParentConfig(int PClassId, string ClassIds)
-        //{
-        //    Entity.ClassConfigs Model = GetClassConfigsByClassID(PClassId);
-        //    if (!string.IsNullOrEmpty(Model.ClassID))//为空时，表示是默认配置，默认配置不用添加Id
-        //    {
-        //        Model.ClassID = string.Concat(Model.ClassID, ",", ClassIds);//追加一个分类ID
-        //        Update(Model);
-        //    }
-        //}
+		//public void AddSubClassListToParentConfig(int PClassId, string ClassIds)
+		//{
+		//    Entity.ClassConfigs Model = GetClassConfigsByClassID(PClassId);
+		//    if (!string.IsNullOrEmpty(Model.ClassID))//为空时，表示是默认配置，默认配置不用添加Id
+		//    {
+		//        Model.ClassID = string.Concat(Model.ClassID, ",", ClassIds);//追加一个分类ID
+		//        Update(Model);
+		//    }
+		//}
 
-        #endregion  自定义方法
-    }
+		#endregion  自定义方法
+	}
 }
 

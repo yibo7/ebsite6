@@ -831,6 +831,7 @@ namespace EbSite.Base.Configs.SysConfigs
                 _IsCacheJsCss = value;
             }
         }
+        
         /// <summary>
         /// ip转换区域名的程序插件
         /// </summary>
@@ -918,10 +919,25 @@ namespace EbSite.Base.Configs.SysConfigs
             {
                 _IsAutoUpdateDomain = value;
             }
-        } 
+        }
+        /// <summary>
+        /// 后台列表默认分页
+        /// </summary>
+        public int PageSize
+        {
+            get
+            {
+                return _PageSize;
+            }
+            set
+            {
+                _PageSize = value;
+            }
+        }
+        public int _PageSize = 50;
 
 
-}
+    }
 
     public enum LinkType
     {

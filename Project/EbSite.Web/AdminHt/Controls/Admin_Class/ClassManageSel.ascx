@@ -170,6 +170,6 @@
     }
 
     function configs(cid) {
-        location.href = "?t=5&id="+cid;
+        OpenIframe("?t=6&id=" + cid,"请选择分类设置后保存","保存设置")
     }
 </script>

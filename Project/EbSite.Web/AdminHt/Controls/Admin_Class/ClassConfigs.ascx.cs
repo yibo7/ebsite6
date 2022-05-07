@@ -29,35 +29,29 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
         //private Entity.NewsClass cm = null;
         override protected void InitModifyCtr()
         {
-            int iClassID = int.Parse(SID);
-            bool isDefault = false;
-            int iUsedClassCount = 0;
-            bool IsSetTo = false;
-            Entity.ClassConfigs Model = BLL.ClassConfigs.Instance.GetClassConfigsByClassID(iClassID,out isDefault,out  iUsedClassCount,out IsSetTo);
-            hfConfigId.Value = Model.id.ToString();
-            ViewState["ClassHtmlNameRule"] = Model.ClassHtmlNameRule;
-            ViewState["isDefault"] = isDefault;
-            ViewState["IsSetTo"] = IsSetTo;
-            if (isDefault)
-            {
-                cbIsAddNew.Visible = true;
-                bntSave.OnClientClick = "javascript:return confirm('此分类使用的是当前站点默认配置，更改可能会影响其他分类，如果不想影响别的分类设置，你可以选择保存到新的配置再保存，确认保存？')";
-            }
-            else if(iUsedClassCount > 1)
-            {
-                cbIsAddNew.Visible = true;
-                cbIsAddNew.Text =string.Format("javascript:return confirm('此配置已经被{0}个分类引用，更改可能会影响其他分类，如果不想影响别的分类设置，你可以选择保存到新的配置再保存，确认保存？')", iUsedClassCount) ;// string.Format("此配置已经被{0}个分类引用，更改可能会影响其他分类，是否保存到一个新分类配置", iUsedClassCount);
-            }
-
-            //if (BLL.ClassConfigs.Instance.IsHaveClassConfigsByClassID(iClassID))
+            int iConfigID = int.Parse(SID);
+            //bool isDefault = false;
+            //int iUsedClassCount = 0;
+            //bool IsSetTo = false;
+            //Entity.ClassConfigs Model = BLL.ClassConfigs.Instance.GetClassConfigsByClassID(iClassID, out isDefault, out iUsedClassCount, out IsSetTo);
+            Entity.ClassConfigs Model = BLL.ClassConfigs.Instance.GetEntity(iConfigID);
+            //hfConfigId.Value = Model.id.ToString();
+            //ViewState["ClassHtmlNameRule"] = Model.ClassHtmlNameRule;
+            //ViewState["isDefault"] = isDefault;
+            //ViewState["IsSetTo"] = IsSetTo;
+            //if (isDefault)
             //{
-            //    Model = BLL.ClassConfigs.Instance.GetClassConfigsByClassID(iClassID);    
+            //    cbIsAddNew.Visible = true;
+            //    bntSave.OnClientClick = "javascript:return confirm('此分类使用的是当前站点默认配置，更改可能会影响其他分类，如果不想影响别的分类设置，你可以选择保存到新的配置再保存，确认保存？')";
             //}
-            //else
+            //else if(iUsedClassCount > 1)
             //{
-            //    Model = BLL.ClassConfigs.Instance.GetClassConfigs(GetSiteID);    
+            //    cbIsAddNew.Visible = true;
+            //    cbIsAddNew.Text =string.Format("javascript:return confirm('此配置已经被{0}个分类引用，更改可能会影响其他分类，如果不想影响别的分类设置，你可以选择保存到新的配置再保存，确认保存？')", iUsedClassCount) ;// string.Format("此配置已经被{0}个分类引用，更改可能会影响其他分类，是否保存到一个新分类配置", iUsedClassCount);
             //}
 
+
+            txtConfigName.Text = Model.ConfigName;
 
             if (!string.IsNullOrEmpty(Model.ContentHtmlName))
             {
@@ -105,12 +99,12 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
         override protected void SaveModel()
         {
             Entity.ClassConfigs Model = new Entity.ClassConfigs();
-
+            Model.ConfigName = txtConfigName.Text.Trim();
             Model.ClassHtmlNameRule = rnHtmlName.Text.Trim();
             Model.ContentHtmlName = rnHtmlContent.Text.Trim();
 
             Model.PageSize = int.Parse(this.PageSize.Text.Trim());
-           // Model.ListTemID = new Guid(this.ListTemID.SelectedValue);
+            //Model.ListTemID = new Guid(this.ListTemID.SelectedValue);
             Model.ClassModelID = new Guid(this.ClassModelID.SelectedValue);
             Model.ClassTemID = new Guid(this.ClassTemID.SelectedValue);
             Model.ContentTemID = new Guid(this.ContentTemID.SelectedValue);
@@ -134,25 +128,31 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
             Model.ContentTemIdMobile = new Guid(ContentTemIDMobile.SelectedValue);
 
             Model.AddTime = DateTime.Now;
-            Model.id = int.Parse(hfConfigId.Value);
+            Model.id = Core.Utils.StrToInt(SID);// int.Parse(hfConfigId.Value);
+            Model.SiteID = GetSiteID;
+            Model.IsDefault = false;
+            //int iClassID = int.Parse(SID);
+            //string sClassHtmlNameRule = ViewState["ClassHtmlNameRule"] as string;//获取之前的classhtmlnamerule,可知是否则修改过
+            //bool isDefault = bool.Parse(ViewState["isDefault"].ToString());
+            //bool IsSetTo = bool.Parse(ViewState["IsSetTo"].ToString());
 
-            int iClassID = int.Parse(SID);
-            string sClassHtmlNameRule = ViewState["ClassHtmlNameRule"] as string;//获取之前的classhtmlnamerule,可知是否则修改过
-            bool isDefault = bool.Parse(ViewState["isDefault"].ToString());
-            bool IsSetTo = bool.Parse(ViewState["IsSetTo"].ToString());
-            EbSite.BLL.ClassConfigs.Instance.UpdateClassConfigs(Model, iClassID, GetSiteID, !Equals(Model.ClassHtmlNameRule, sClassHtmlNameRule), cbIsAddNew.Checked, cbConfigsToSub.Checked, isDefault, IsSetTo);
-
+            //EbSite.BLL.ClassConfigs.Instance.UpdateClassConfigs(Model, iClassID, GetSiteID, !Equals(Model.ClassHtmlNameRule, sClassHtmlNameRule), cbIsAddNew.Checked, cbConfigsToSub.Checked, isDefault, IsSetTo);
+            if (Model.id > 0)
+            {
+                EbSite.BLL.ClassConfigs.Instance.Update(Model);
+            }
+            else
+            {
+                EbSite.BLL.ClassConfigs.Instance.Add(Model);
+            }
+            
             Response.Redirect(Request.RawUrl);
         }
         override protected void InitDivsteptips()
         {
             if (!Equals(divsteptips, null))
-            {
-                Entity.NewsClass cm = null;
-                if (!string.IsNullOrEmpty(SID))
-                    cm = BLL.NewsClass.GetModel(int.Parse(SID));
-
-                divsteptips.InnerHtml = string.Format("正在设置分类:<b>{0}</b> [<a onclick=\"javascript:history.go(-1);\">返回</a>]",Equals(cm,null)?"新添加分类默认设置": cm.ClassName);
+            { 
+                divsteptips.InnerHtml = string.Format("<b>{0}</b> [<a onclick=\"javascript:history.go(-1);\">返回</a>]",string.IsNullOrEmpty(SID) ?"添加分类设置": "修改分类设置");
             }
                 
         }
@@ -166,55 +166,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
         {
             if (!IsPostBack)
             {
-
-                
-
-                //if (string.IsNullOrEmpty(SID))
-                //{
-
-                //    if (EbSite.BLL.ClassConfigs.Instance.IsHaveClassConfigs(GetSiteID))
-                //    {
-                //        Entity.ClassConfigs Model = EbSite.BLL.ClassConfigs.Instance.GetClassConfigs(GetSiteID);
-
-
-                //        rnHtmlContent.Text = Model.ContentHtmlName;
-
-                //        rnHtmlName.Text = Model.ClassHtmlNameRule;
-
-                //        rnHtmlContent.Text = Model.ContentHtmlName;
-
-                //        cbConfigsToSub.Visible = true;
-
-
-                //        this.PageSize.Text = Model.PageSize.ToString();
-                //       // this.ListTemID.SelectedValue = Model.ListTemID.ToString();
-                //        this.ClassModelID.SelectedValue = Model.ClassModelID.ToString();
-                //        this.ClassTemID.SelectedValue = Model.ClassTemID.ToString();
-                //        this.ContentTemID.SelectedValue = Model.ContentTemID.ToString();
-                //        this.ContentModelID.SelectedValue = Model.ContentModelID.ToString();
-                //        this.IsCanAddSub.Checked = Model.IsCanAddSub;
-                //        this.IsCanAddContent.Checked = Model.IsCanAddContent;
-
-
-                //        //子分类
-                //        this.SubClassAddName.Text = Model.SubClassAddName;
-                //        SubClassTemID.SelectedValue = Model.SubClassTemID.ToString();
-                //        SubClassModelID.SelectedValue = Model.SubClassModelID.ToString();
-                //        SubIsCanAddSub.Checked = Model.SubIsCanAddSub;
-                //        SubIsCanAddContent.Checked = Model.SubIsCanAddContent;
-                //        SubDefaultContentTemID.SelectedValue = Model.SubDefaultContentTemID.ToString();//子分类内容模板ID
-                //        SubDefaultContentModelID.SelectedValue = Model.SubDefaultContentModelID.ToString();//子分类内容模型ID
-                //        BingModule.SelectedValue = Model.ModuleID.ToString();
-
-                //        ClassTemIDMobile.SelectedValue = Model.ClassTemIdMobile.ToString();
-                //        ContentTemIDMobile.SelectedValue = Model.ContentTemIdMobile.ToString();
-                //    }
-                //    else
-                //    {
-                //        divsteptips.InnerHtml = "当前站点还没有创建默认分类配置，请点击保存";
-                //    }
-
-                //}
+                 
             }
             
         }
@@ -239,12 +191,12 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
             rnHtmlContent.Text = Base.Configs.HtmlConfigs.ConfigsControl.Instance.ContentHtmlRule;
         }
 
-        protected void lbDelete_Click(object sender, EventArgs e)
-        {
-            int classid = int.Parse(SID);
-            BLL.ClassConfigs.Instance.DeleteByClassID(classid);
+        //protected void lbDelete_Click(object sender, EventArgs e)
+        //{
+        //    int classid = int.Parse(SID);
+        //    BLL.ClassConfigs.Instance.DeleteByClassID(classid);
 
-            Response.Redirect(Request.RawUrl);
-        }
+        //    Response.Redirect(Request.RawUrl);
+        //}
     }
 }

@@ -428,7 +428,7 @@ legend {
 }
 .boxheader {
 	width: 100% !important;
-	border-bottom: 1px solid #dadada !important;
+	/*border-bottom: 1px solid #dadada !important;*/
 	padding-bottom: 5px;
 	padding-top: 8px;
 }
@@ -508,4 +508,12 @@ legend {
 	}
 .easyuidlgbtn span:hover {
 		background-color:#0f7bf1;
-	} 
+	}
+
+.EasyuiDialog{
+	background-color:#3375de;
+	color:#fff;
+	padding:10px;
+	border-radius:5px;
+	margin-left:8px;
+}

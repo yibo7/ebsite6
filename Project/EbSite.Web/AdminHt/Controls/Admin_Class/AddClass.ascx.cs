@@ -78,9 +78,9 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
 
             cm.ParentID = pid;
             
-            BLL.NewsClass.InitDefaultConfigs(ref cm);
+            //BLL.NewsClass.InitDefaultConfigs(ref cm);
 
- 
+            
             cm.SeoTitle = this.SeoTitle.Text.Trim();
             cm.SeoKeyWord = this.SeoKeyWord.Text.Trim();
             cm.SeoDescription = this.SeoDescription.Text.Trim();

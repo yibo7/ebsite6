@@ -80,7 +80,12 @@ namespace EbSite.Data.Interface
         Entity.ClassConfigs GeClassConfigsByClassID(int ClassID);
         List<Entity.ClassConfigs> GeClassConfigsByModuleId(Guid mid);
         void DeleteByClassID(int ClassID);
-
+		/// <summary>
+		/// 将某个设置更新为默认
+		/// </summary>
+		/// <param name="id"></param>
+		/// <param name="siteId"></param>
+		void UpdateDefault(int id,int siteId);
 
 	}
 }

@@ -172,7 +172,13 @@
                     </tr>
 
 
-
+                     <tr>
+                        <td>后台默认分页：            
+                        </td>
+                        <td>
+                            <XS:TextBoxVl ID="txtPageSize" ValidateType="匹配正整数" IsAllowNull="false" HintInfo="后台默认分页，如果不在模板中指定将使用这个分页数量" runat="server" Width="100"></XS:TextBoxVl>
+                        </td>
+                    </tr>
 
 
                     <tr>
@@ -209,7 +215,7 @@
                             <XS:CheckBox ID="cbIsMobileRedirect" runat="server" />(在移动设备下访问PC地址，自动适应移动页面内容)
                         </td>
                     </tr>
-
+                   
                     <tr>
                         <td>
                             <%=Resources.lang.EBBottomCopyright%>：            

@@ -49,7 +49,7 @@
                     <td>
                         <%=Resources.lang.EBIcon%>(16x16):
                     </td>
-                    <td>
+                    <td class="form-inline">
                        <XS:DropDownList ID="drpImg" onchange="imgchang()"  runat="server">
                             </XS:DropDownList>
 					    
@@ -60,8 +60,8 @@
                     <td>
                         <%=Resources.lang.EBTarget%>(16x16):
                     </td>
-                    <td>
-                        <XS:TextBox ID="txtTarget" CanBeNull=可为空 Width="80" HintTitle="提示" HintInfo="设置连接的target属性" runat="server"></XS:TextBox>
+                    <td class="form-inline">
+                        <XS:TextBox ID="txtTarget" CanBeNull=可为空 Width="150" HintTitle="提示" HintInfo="设置连接的target属性" runat="server"></XS:TextBox>
                             常用目标:<input type="radio"  id="mainbody" onclick="javascript:<%=txtTarget.ClientID %>.value='mainbody';" value="mainbody" />mainbody
                     </td>
                 </tr>

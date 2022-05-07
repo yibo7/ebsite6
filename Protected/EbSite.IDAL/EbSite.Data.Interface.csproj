@@ -135,7 +135,7 @@
     <Compile Include="Area.cs" />
     <Compile Include="CusstomFileds.cs" />
     <Compile Include="Exam\exam_answer.cs" />
-    <Compile Include="ClassSetConfig.cs" />
+    <Compile Include="--ClassSetConfig.cs" />
     <Compile Include="spiderlog.cs" />
     <Compile Include="uploadfiles.cs" />
     <Compile Include="NewsContentSplitTable.cs" />

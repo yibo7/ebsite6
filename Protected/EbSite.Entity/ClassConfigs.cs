@@ -22,13 +22,17 @@ namespace EbSite.Entity
 			base.InitData(this);
 			base.CurrentModel = this;
 		}
-        //protected override EbSite.Base.BLL.BllBase<classconfigs, int> Bll
-        //{
-        //    get
-        //    {
-        //        return BLL.classconfigs.Instance;
-        //    }
-        //}
+		/// <summary>
+		/// 配置名称 2022-5-6
+		/// </summary>
+		public string ConfigName { get; set; }
+		//protected override EbSite.Base.BLL.BllBase<classconfigs, int> Bll
+		//{
+		//    get
+		//    {
+		//        return BLL.classconfigs.Instance;
+		//    }
+		//}
 		#region Model
 		private string _contenthtmlname;
 		private string _classhtmlnamerule;
@@ -41,7 +45,7 @@ namespace EbSite.Entity
 		//private string _classid;
 		private DateTime _addtime;
         private int _siteid;
-        //private bool _isdefault;
+        private bool _isdefault;
 
         private Guid _classtemidmobile;
         private Guid _contenttemidmobile;
@@ -243,13 +247,13 @@ namespace EbSite.Entity
         ///// <summary>
         ///// 
         ///// </summary>
-        //public bool IsDefault
-        //{
-        //    set { _isdefault = value; }
-        //    get { return _isdefault; }
-        //}
-		#endregion Model
+        public bool IsDefault
+        {
+            set { _isdefault = value; }
+            get { return _isdefault; }
+        }
+        #endregion Model
 
-	}
+    }
 }
 

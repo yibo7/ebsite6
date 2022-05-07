@@ -232,6 +232,7 @@
     <Content Include="AdminHt\Admin_Sites.aspx" />
     <Content Include="AdminHt\Admin_Special.aspx" />
     <Content Include="AdminHt\ajaxget\wsapi.asmx" />
+    <Content Include="AdminHt\Controls\Admin_Class\ConfigToClass.ascx" />
     <Content Include="AdminHt\Controls\Admin_Member\MemberToGroup.ascx" />
     <Content Include="AdminHt\LogOut.aspx" />
     <Content Include="AdminHt\ChangePass.aspx" />
@@ -2462,6 +2463,13 @@
     <Compile Include="AdminHt\ajaxget\WsapiHelp\ClassInfo.cs" />
     <Compile Include="AdminHt\BaseMaster.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHt\Controls\Admin_Class\ConfigToClass.ascx.cs">
+      <DependentUpon>ConfigToClass.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHt\Controls\Admin_Class\ConfigToClass.ascx.designer.cs">
+      <DependentUpon>ConfigToClass.ascx</DependentUpon>
     </Compile>
     <Compile Include="AdminHt\Controls\Admin_Member\MemberToGroup.ascx.cs">
       <DependentUpon>MemberToGroup.ascx</DependentUpon>

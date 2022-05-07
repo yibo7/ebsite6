@@ -149,6 +149,8 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Configs
 
             IsAutoUpdateDomain.Checked = ConfigsControl.Instance.IsAutoUpdateDomain;
 
+            txtPageSize.Text = ConfigsControl.Instance.PageSize.ToString();
+
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -234,7 +236,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Configs
             ConfigsControl.Instance.IsOpenFileServer = cbIsOpenFileServer.Checked;
             ConfigsControl.Instance.FileServerUrl = txtFileServerUrl.Text;
             //ConfigsControl.Instance.CacheModel = int.Parse(this.rblCacheModel.SelectedValue);
-
+            ConfigsControl.Instance.PageSize = int.Parse(txtPageSize.Text);
             //模块重写目录 和 手机目录或子域 不能相同
             if (Base.Configs.ContentSet.ConfigsControl.Instance.MPath.Trim()+"/" == ConfigsControl.Instance.UserPath.Trim())
             {

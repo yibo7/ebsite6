@@ -87,7 +87,7 @@
   <ItemGroup>
     <Compile Include="Area.cs" />
     <Compile Include="ClassConfigs.cs" />
-    <Compile Include="ClassSetConfig.cs" />
+    <Compile Include="--ClassSetConfig.cs" />
     <Compile Include="CusstomFileds\Content.cs" />
     <Compile Include="CusstomFileds\Interface.cs" />
     <Compile Include="Exam\exam_answer.cs" />

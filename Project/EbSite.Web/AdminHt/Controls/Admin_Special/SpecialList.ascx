@@ -4,8 +4,8 @@
 
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div >
-                <h3>管理专题</h3>
+       <div class="boxheader">
+                <h3>专题管理</h3> 
             </div>
             <div  style="padding:0px !important">
                 

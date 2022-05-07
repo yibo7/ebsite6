@@ -49,14 +49,14 @@ namespace EbSite.Web.AdminHt
 
                 base.LoadAControl("MergeClassMore.ascx");
             }
-            else if (PageType == 5)//合并分类
+            else if (PageType == 5)//分类设置
             {
 
                 base.LoadAControl("ClassConfigs.ascx");
             }
-            else if (PageType == 6)//合并分类
+            else if (PageType == 6)//给分类选择配置
             {
-                base.LoadAControl("ClassConfigList.ascx");
+                base.LoadAControl("ConfigToClass.ascx");
             }
             else
             {

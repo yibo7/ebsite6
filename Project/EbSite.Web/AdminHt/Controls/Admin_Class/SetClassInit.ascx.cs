@@ -222,46 +222,40 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
 
         protected void btnClearClassConfig_Click(object sender, EventArgs e)
         {
-            Entity.ClassConfigs mdDefaultConfigs = BLL.ClassConfigs.Instance.GetClassConfigs(GetSiteID);
-            List<Entity.NewsClass> lst = BLL.NewsClass.GetNotConfigParent(GetSiteID);
-            foreach (var model in lst)
-            {
-                Entity.ClassSetConfig setConfig = new Entity.ClassSetConfig();
-                setConfig.ClassId = model.ID;
-                setConfig.ConfigId = mdDefaultConfigs.id;
-                BLL.ClassSetConfig.Instance.Add(setConfig);
-            }
+            //Entity.ClassConfigs mdDefaultConfigs = BLL.ClassConfigs.Instance.GetClassConfigs(GetSiteID);
+            //List<Entity.NewsClass> lst = BLL.NewsClass.GetNotConfigParent(GetSiteID);
+            //foreach (var model in lst)
+            //{
+            //    Entity.ClassSetConfig setConfig = new Entity.ClassSetConfig();
+            //    setConfig.ClassId = model.ID;
+            //    setConfig.ConfigId = mdDefaultConfigs.id;
+            //    BLL.ClassSetConfig.Instance.Add(setConfig);
+            //}
 
-            List<Entity.NewsClass> lstP = BLL.NewsClass.GetParentList(GetSiteID);
+            //List<Entity.NewsClass> lstP = BLL.NewsClass.GetParentList(GetSiteID);
 
-            foreach (var mdParent in lstP)
-            {
-                string Ids = BLL.NewsClass.GetSubIDs(mdParent.ID, GetSiteID);
-                if (!string.IsNullOrEmpty(Ids))
-                {
-                    List<Entity.NewsClass> lstSubs = BLL.NewsClass.GetNotConfigIds(Ids);
-                    foreach (var mdSub in lstSubs)
-                    {
-                        List<Entity.ClassSetConfig> pcfs = BLL.ClassSetConfig.Instance.GetListArray(1, "ClassId=" + mdParent.ID, "");
-                        if (pcfs.Count > 0)
-                        {
-                            Entity.ClassSetConfig pcf = pcfs[0];
-                            pcf.ClassId = mdSub.ID;
-                            pcf.id = 0;
-                            BLL.ClassSetConfig.Instance.Add(pcf);
+            //foreach (var mdParent in lstP)
+            //{
+            //    string Ids = BLL.NewsClass.GetSubIDs(mdParent.ID, GetSiteID);
+            //    if (!string.IsNullOrEmpty(Ids))
+            //    {
+            //        List<Entity.NewsClass> lstSubs = BLL.NewsClass.GetNotConfigIds(Ids);
+            //        foreach (var mdSub in lstSubs)
+            //        {
+            //            List<Entity.ClassSetConfig> pcfs = BLL.ClassSetConfig.Instance.GetListArray(1, "ClassId=" + mdParent.ID, "");
+            //            if (pcfs.Count > 0)
+            //            {
+            //                Entity.ClassSetConfig pcf = pcfs[0];
+            //                pcf.ClassId = mdSub.ID;
+            //                pcf.id = 0;
+            //                BLL.ClassSetConfig.Instance.Add(pcf);
 
-                        }
-                    }
-                }
+            //            }
+            //        }
+            //    }
                 
-            }
-
-           
-
-
-
-
-            //EbSite.BLL.ClassConfigs.Instance.DeleteByClassIDBySite(GetSiteID);
+            //}
+             
         }
         /// <summary>
         /// 

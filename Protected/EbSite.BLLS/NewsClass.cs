@@ -143,14 +143,14 @@ namespace EbSite.BLL
                 cfb.Save(newid, sd);
             }
 
-            if (ThisModel.ParentID == 0)
-            {
-                BLL.ClassConfigs.Instance.AddClassToDefault(newid, iClassModelId);
-            }
-            else
-            {
-                BLL.ClassConfigs.Instance.AddSubClassToParentConfig(ThisModel.ParentID, newid);
-            }
+            //if (ThisModel.ParentID == 0)
+            //{
+            //    BLL.ClassConfigs.Instance.AddClassToDefault(newid, iClassModelId);
+            //}
+            //else
+            //{
+            //    BLL.ClassConfigs.Instance.AddSubClassToParentConfig(ThisModel.ParentID, newid);
+            //}
 
             return newid;
             
@@ -359,8 +359,8 @@ namespace EbSite.BLL
                 //删除当前分类及其下的子分类，删除的同时删除与其相关内容，数据层实现
                 DbProviderCms.GetInstance().NewsClass_Delete(sAllIDs);
 
-                if(!string.IsNullOrEmpty(sAllIDs))
-                    ClassSetConfig.Instance.DeleteByClassIds(sAllIDs);
+                //if(!string.IsNullOrEmpty(sAllIDs))
+                //    ClassSetConfig.Instance.DeleteByClassIds(sAllIDs);
 
                 Host.CacheApp.InvalidateCache(cacheclass);
 

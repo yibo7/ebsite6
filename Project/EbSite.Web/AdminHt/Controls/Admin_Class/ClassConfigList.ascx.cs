@@ -15,11 +15,45 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
     {
         protected override string AddUrl
         {
-            get { throw new NotImplementedException(); }
+            get {
+                return "t=5";
+            }
+        }
+        public override string Permission
+        {
+            get
+            {
+                return "185";
+            }
+        }
+        public override string PermissionAddID
+        {
+            get
+            {
+                return "185";
+            }
+        }
+        /// <summary>
+        /// 修改数据的权限ID
+        /// </summary>
+        public override string PermissionModifyID
+        {
+            get
+            {
+                return "185";
+            }
         }
 
-       
-
+        /// <summary>
+        /// 删除数据的权限ID 这里用的是分类的
+        /// </summary>
+        public override string PermissionDelID
+        {
+            get
+            {
+                return "185";
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -27,105 +61,76 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
                
             }
 
-        }
-           
-
-        override protected void gdList_RowCommand(object sender, GridViewCommandEventArgs e)
+        } 
+        protected override void CopyData(object ID)
         {
-            base.gdList_RowCommand(sender, e);
-
-            if (Equals(e.CommandName, "addcontent"))
-            {
-                string id = e.CommandArgument.ToString();
-                Response.Redirect("Admin_Content.aspx?t=4&cid=" + id);
-
-            } 
+            int id = int.Parse(ID.ToString());
+            var model = BLL.ClassConfigs.Instance.GetEntity(id);
+            model.ConfigName = string.Concat(model.ConfigName, "-COPY");
+            model.IsDefault = false;
+            BLL.ClassConfigs.Instance.Add(model);
         }
-
-         
-
-        override protected void gdList_RowDataBound(object sender, GridViewRowEventArgs e)
+        override protected object SearchList(out int iCount)
         {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                //Entity.NewsClass drData = (Entity.NewsClass)e.Row.DataItem;
-                //Entity.ClassConfigs cf = BLL.ClassConfigs.Instance.GetClassConfigsByClassID(drData.ID);
-                //if (!cf.IsCanAddContent) //是否可以添加内容
-                //{
-                //    LinkButton drpCtrType = (LinkButton)e.Row.Cells[3].FindControl("lbAddcontent");
-                //    drpCtrType.Visible = false;
-                //    drpCtrType = (LinkButton)e.Row.Cells[3].FindControl("lbShowcontent");
-                //    drpCtrType.Visible = false;
-                //}
-                 
-            }
+            string key = ucToolBar.GetItemVal(txtKeyWord).Trim();
+            string sWhere = string.Format("ConfigName like '%{0}%'",key);
+            return BLL.ClassConfigs.Instance.GetListPages(pcPage.PageIndex, pcPage.PageSize, sWhere, "", out iCount, base.GetSiteID);
         }
 
-
-        /////////////////////////////
-
-        
-        //private bool IsLongClass = Base.Configs.SysConfigs.ConfigsControl.Instance.IsLongClass;
         override protected object LoadList(out int iCount)
-        {
-            return BLL.ClassConfigs.Instance.GetListPages(pcPage.PageIndex, pcPage.PageSize, "", "", out iCount);
+        { 
+            return BLL.ClassConfigs.Instance.GetListPages(pcPage.PageIndex, pcPage.PageSize, "", "", out iCount, base.GetSiteID);
         }
         protected override void Delete(object ID)
         {
             BLL.ClassConfigs.Instance.Delete(Core.Utils.ObjectToInt(ID));
         }
 
+        override protected void gdList_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            base.gdList_RowCommand(sender, e);
 
+            if (Equals(e.CommandName, "modifyCf"))
+            {
+                string id = e.CommandArgument.ToString();
+                Response.Redirect(string.Format("admin_class.aspx?t=5&id={0}", id));
 
+            }
+            else if (Equals(e.CommandName, "SetToDefault"))
+            {
+                string id = e.CommandArgument.ToString();
+                BLL.ClassConfigs.Instance.UpdateDefault(int.Parse(id), GetSiteID);
+                base.gdList_Bind();
+            } 
+        }
+        override protected void gdList_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                Entity.ClassConfigs cf = (Entity.ClassConfigs)e.Row.DataItem; 
+                if (cf.IsDefault) //系统默认的配置，不能删除
+                {
+                    LinkButton drpCtrType = (LinkButton)e.Row.Cells[2].FindControl("lbDelete");
+                    drpCtrType.Visible = false;
+                    LinkButton lbSetDefault = (LinkButton)e.Row.Cells[2].FindControl("lbSetDefault");
+                    lbSetDefault.Visible = false;
+                    
+                } 
+            }
+        }
         #region 工具栏的初始化
         protected System.Web.UI.WebControls.TextBox txtKeyWord = new System.Web.UI.WebControls.TextBox();
-        protected System.Web.UI.WebControls.DropDownList drpSearchTp = new System.Web.UI.WebControls.DropDownList();
-        protected System.Web.UI.WebControls.DropDownList drpLike = new System.Web.UI.WebControls.DropDownList();
         override protected void BindToolBar()
         {
 
-            base.BindToolBar(true, false, false, false, false);
+            base.BindToolBar(false, true, false, false, false);
             ucToolBar.AddLine();
 
             txtKeyWord.ID = "txtKeyWord";
-            ucToolBar.AddCtr(txtKeyWord);
+            ucToolBar.AddCtr(txtKeyWord);             
 
-            //string sFileds = Base.Configs.SysConfigs.ConfigsControl.Instance.AdminSearchClassFileds;
-            string sFileds = BLL.DataSettings.Category.Instance.GetConfigCurrent.AdminSearchFileds;
-            if (!string.IsNullOrEmpty(sFileds))
-            {
-                string[] Columns = sFileds.Split(',');
-
-                foreach (string sC in Columns)
-                {
-                    string[] OneItem = sC.Split('|');
-
-                    if (OneItem.Length == 2)
-                    {
-                        ListItem li = new ListItem(OneItem[1], OneItem[0]);
-
-                        drpSearchTp.Items.Add(li);
-                    }
-                }
-            }
-            drpSearchTp.ID = "drpSearchTp";
-            ucToolBar.AddCtr(drpSearchTp);
-
-            drpLike.ID = "drpLike";
-            ListItem liIt = new ListItem("准确", "1");
-            drpLike.Items.Add(liIt);
-            liIt = new ListItem("模糊", "2");
-            drpLike.Items.Add(liIt);
-            ucToolBar.AddCtr(drpLike);
-
-            base.ShowCustomSearch("查询");
-
-            //ucToolBar.AddBnt("高级", "images/MenuImg/Search-Add.gif", "", false, "OpenDialog_Save('divSearh',OnSearch)");
-
-            ucToolBar.AddLine();
-
-            ucToolBar.AddBnt("生成静态", string.Concat(IISPath, "images/Menus/ie.png"), "", false, "OpenDialog_SavePost('divMakeHtml',OnMakeClassHtml,true)", "生成静态页面，没有选择将生成全部");
-
+            base.ShowCustomSearch("查询");              
+ 
 
 
         }

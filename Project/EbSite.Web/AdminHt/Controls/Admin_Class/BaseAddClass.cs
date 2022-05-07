@@ -71,6 +71,9 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
                 return 0;
             }
         }
+        /// <summary>
+        /// 分类模型ID，添加分类时会传来分类模型的ID,才能展示输入控件
+        /// </summary>
         protected Guid Modelid
         {
             get

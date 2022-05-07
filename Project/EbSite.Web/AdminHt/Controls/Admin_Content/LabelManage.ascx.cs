@@ -16,7 +16,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Content
             {
 
                 IsMakeing();
-                txtLab.Text = string.Format("标签主要分为标签列表与标签结果页，<a target=\"_blank\" href=\"{0}\">点这里可以查看标签列表页</a> ",EbSite.Base.Host.Instance.TagsList(1));
+                txtLab.Text = string.Format("标签主要分为标签列表与标签结果页，<a target=\"_blank\" href=\"{0}\">点这里可以查看【标签列表页】</a> ",EbSite.Base.Host.Instance.TagsList(1));
             }
         }
         public override string Permission

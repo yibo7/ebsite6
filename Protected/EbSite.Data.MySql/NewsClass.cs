@@ -392,6 +392,11 @@ namespace EbSite.Data.MySql
             {
                 model.IsHtmlNameReWriteContent = Core.Utils.ConvertBool(dataReader["IsHtmlNameReWriteContent"].ToString());
             }
+
+            if (dataReader["ConfigId"].ToString() != "")
+            {
+                model.ConfigId = int.Parse(dataReader["ConfigId"].ToString());
+            }
             return model;
         }
 
@@ -643,44 +648,16 @@ namespace EbSite.Data.MySql
             if (!string.IsNullOrEmpty(strWhere))
                 strWhere = string.Concat(" AND ", strWhere);
 
+            //            StringBuilder strSql = new StringBuilder();
+            //            strSql.AppendFormat(@"SELECT a.* FROM {0}newsclass a 
+            //LEFT JOIN (SELECT * FROM {0}classsetconfig) b on a.id=b.ClassId
+            //LEFT JOIN (SELECT * FROM {0}classconfigs) c on b.ConfigId=c.id
+            //WHERE a.SiteId={6} AND  c.ClassModelID = '{1}' {5}  {2} LIMIT {3},{4} ", sPre, ClassModelId, sOrderBy, numStart, PageSize, strWhere, SiteID);
+
             StringBuilder strSql = new StringBuilder();
-            strSql.AppendFormat(@"SELECT a.* FROM {0}newsclass a 
-LEFT JOIN (SELECT * FROM {0}classsetconfig) b on a.id=b.ClassId
-LEFT JOIN (SELECT * FROM {0}classconfigs) c on b.ConfigId=c.id
+            strSql.AppendFormat(@"SELECT a.* FROM {0}newsclass a  
+LEFT JOIN (SELECT * FROM {0}classconfigs) c on a.ConfigId=c.id
 WHERE a.SiteId={6} AND  c.ClassModelID = '{1}' {5}  {2} LIMIT {3},{4} ", sPre, ClassModelId, sOrderBy, numStart, PageSize, strWhere, SiteID);
-
-            
-
-            //Entity.ClassConfigs mConfigs = null;
-            //mConfigs = EbSite.BLL.ClassConfigs.Instance.GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
-            //StringBuilder strSql = new StringBuilder();
-            //StringBuilder strSqlCount = new StringBuilder();
-            //strSql.AppendFormat("SELECT * from (select  IfNULL(b.ClassModelID,'{0}') as classmodelid , a.* from {1}NewsClass a LEFT JOIN {1}classconfigs b on a.id=b.ClassID where a.SiteID={2} and a.ParentID=0) as a ", mConfigs.ClassModelID, sPre, SiteID);
-            //strSqlCount.AppendFormat("SELECT count(*) from (select  IfNULL(b.ClassModelID,'{0}') as classmodelid , a.* from {1}NewsClass a LEFT JOIN {1}classconfigs b on a.id=b.ClassID where a.SiteID={2} and a.ParentID=0) as a ", mConfigs.ClassModelID, sPre, SiteID);
-
-            //if (!string.IsNullOrEmpty(sWhere))
-            //{
-            //    strSql.AppendFormat("where {0}  ", sWhere);
-            //    strSqlCount.AppendFormat(" where {0}  ", sWhere);
-            //}
-
-
-            //int iCount = -1;
-            //using (IDataReader dataReader = DbHelperCms.Instance.ExecuteReader(CommandType.Text, strSqlCount.ToString()))
-            //{
-            //    while (dataReader.Read())
-            //    {
-            //        iCount = int.Parse(dataReader[0].ToString());
-            //    }
-            //}
-            //RecordCount = iCount;
-            //if (PageIndex > 0)
-            //{
-            //    PageIndex--;
-            //}
-            //int numStart = PageIndex * PageSize;
-
-            //strSql.AppendFormat(" limit {0} ,{1}", numStart, PageSize);
 
             List<EbSite.Entity.NewsClass> list = new List<EbSite.Entity.NewsClass>();
 
@@ -692,10 +669,14 @@ WHERE a.SiteId={6} AND  c.ClassModelID = '{1}' {5}  {2} LIMIT {3},{4} ", sPre, C
                 }
             }
 
+            //            string sqlCount = string.Format(@"SELECT count(*) FROM {0}newsclass a 
+            //LEFT JOIN (SELECT * FROM {0}classsetconfig) b on a.id=b.ClassId
+            //LEFT JOIN (SELECT * FROM {0}classconfigs) c on b.ConfigId=c.id
+            //WHERE  a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId,SiteID);
+
             string sqlCount = string.Format(@"SELECT count(*) FROM {0}newsclass a 
-LEFT JOIN (SELECT * FROM {0}classsetconfig) b on a.id=b.ClassId
-LEFT JOIN (SELECT * FROM {0}classconfigs) c on b.ConfigId=c.id
-WHERE  a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId,SiteID);
+LEFT JOIN (SELECT * FROM {0}classconfigs) c on a.ConfigId=c.id
+WHERE  a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId, SiteID);
 
             int iCount = 0;
             using (IDataReader dataReader = DbHelperCms.Instance.ExecuteReader(CommandType.Text, sqlCount))
@@ -717,22 +698,21 @@ WHERE  a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId,SiteID);
         /// </summary>
         public List<EbSite.Entity.NewsClass> NewsClass_ModelIDGetListArray(string sField, string strWhere, int iTop, string OrderBy, int SiteID, Guid ClassModelId)
         {
-            string sFieldNewClass = "";
+            //string sFieldNewClass = "";
             string sTop = "";
 
             if (iTop > 0) sTop = string.Concat(" limit ", iTop);
             if (!string.IsNullOrEmpty(OrderBy)) OrderBy = string.Concat(" order by ", OrderBy);
             StringBuilder strSql = new StringBuilder();
 
+            //            strSql.AppendFormat(@"SELECT * FROM {0}newsclass a 
+            //LEFT JOIN (SELECT * FROM {0}classsetconfig) b on a.id=b.ClassId
+            //LEFT JOIN (SELECT * FROM {0}classconfigs) c on b.ConfigId=c.id
+            //WHERE a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId,SiteID);
 
-
-            //strSql.AppendFormat("SELECT * from (select  IfNULL(b.ClassModelID,'{0}') as classmodelid , a.* from {1}NewsClass a LEFT JOIN {1}classconfigs b on a.id=b.ClassID where a.SiteID={2} and a.parentid=0) as a ", ClassModelId, sPre, SiteID);
-            //strSql.AppendFormat(" where  classmodelid='{0}'", ClassModelId);
-
-            strSql.AppendFormat(@"SELECT * FROM {0}newsclass a 
-LEFT JOIN (SELECT * FROM {0}classsetconfig) b on a.id=b.ClassId
-LEFT JOIN (SELECT * FROM {0}classconfigs) c on b.ConfigId=c.id
-WHERE a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId,SiteID);
+            strSql.AppendFormat(@"SELECT * FROM {0}newsclass a  
+LEFT JOIN (SELECT * FROM {0}classconfigs) c on a.ConfigId=c.id
+WHERE a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId, SiteID);
 
             if (strWhere.Trim() != "")
             {
@@ -823,9 +803,9 @@ WHERE a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId,SiteID);
             //parameters[52].Value = model.PageSize;
             //parameters[53].Value = model.ModuleID;
 
-            strSql.Append("ClassName,OrderID,ParentID,HtmlName,Info,TitleStyle,SeoTitle,dayHits,weekHits,monthhits,lasthitstime,hits,SeoKeyWord,SeoDescription,OutLike,Annex1,Annex2,Annex3,Annex4,Annex5,Annex6,Annex7,Annex8,Annex9,Annex10,Annex11,Annex12,Annex13,Annex14,Annex15,Annex16,Annex17,CommentNum,FavorableNum,UserID,UserName,UserNiName,AddTime,IsUserTheme,IsAuditing,SiteID,RandNum,NumberTime,SubClassNum,ParentIDs,IsHtmlNameReWrite,ContentHtmlPath,IsHtmlNameReWriteContent)");
+            strSql.Append("ClassName,OrderID,ParentID,HtmlName,Info,TitleStyle,SeoTitle,dayHits,weekHits,monthhits,lasthitstime,hits,SeoKeyWord,SeoDescription,OutLike,Annex1,Annex2,Annex3,Annex4,Annex5,Annex6,Annex7,Annex8,Annex9,Annex10,Annex11,Annex12,Annex13,Annex14,Annex15,Annex16,Annex17,CommentNum,FavorableNum,UserID,UserName,UserNiName,AddTime,IsUserTheme,IsAuditing,SiteID,RandNum,NumberTime,SubClassNum,ParentIDs,IsHtmlNameReWrite,ContentHtmlPath,IsHtmlNameReWriteContent,ConfigId)");
             strSql.Append(" values (");
-            strSql.Append("?ClassName,?OrderID,?ParentID,?HtmlName,?Info,?TitleStyle,?SeoTitle,?dayHits,?weekHits,?monthhits,?lasthitstime,?hits,?SeoKeyWord,?SeoDescription,?OutLike,?Annex1,?Annex2,?Annex3,?Annex4,?Annex5,?Annex6,?Annex7,?Annex8,?Annex9,?Annex10,?Annex11,?Annex12,?Annex13,?Annex14,?Annex15,?Annex16,?Annex17,?CommentNum,?FavorableNum,?UserID,?UserName,?UserNiName,?AddTime,?IsUserTheme,?IsAuditing,?SiteID,?RandNum,?NumberTime,?SubClassNum,?ParentIDs,?IsHtmlNameReWrite,?ContentHtmlPath,?IsHtmlNameReWriteContent)");
+            strSql.Append("?ClassName,?OrderID,?ParentID,?HtmlName,?Info,?TitleStyle,?SeoTitle,?dayHits,?weekHits,?monthhits,?lasthitstime,?hits,?SeoKeyWord,?SeoDescription,?OutLike,?Annex1,?Annex2,?Annex3,?Annex4,?Annex5,?Annex6,?Annex7,?Annex8,?Annex9,?Annex10,?Annex11,?Annex12,?Annex13,?Annex14,?Annex15,?Annex16,?Annex17,?CommentNum,?FavorableNum,?UserID,?UserName,?UserNiName,?AddTime,?IsUserTheme,?IsAuditing,?SiteID,?RandNum,?NumberTime,?SubClassNum,?ParentIDs,?IsHtmlNameReWrite,?ContentHtmlPath,?IsHtmlNameReWriteContent,?ConfigId)");
             strSql.Append(";SELECT @@session.identity");
             MySqlParameter[] parameters = {
 					new MySqlParameter("?ClassName", MySqlDbType.VarChar,50),
@@ -878,9 +858,10 @@ WHERE a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId,SiteID);
                     new MySqlParameter("?IsHtmlNameReWrite",MySqlDbType.Int16,1),
 
                     new MySqlParameter("?ContentHtmlPath",MySqlDbType.VarChar,100),
-                    new MySqlParameter("?IsHtmlNameReWriteContent",MySqlDbType.Int16,1)
+                    new MySqlParameter("?IsHtmlNameReWriteContent",MySqlDbType.Int16,1),
+                    new MySqlParameter("?ConfigId",MySqlDbType.Int32,4),
 
-                    
+
                                         };
             parameters[0].Value = model.ClassName;
             parameters[1].Value = model.OrderID;
@@ -939,6 +920,8 @@ WHERE a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId,SiteID);
 
             parameters[46].Value = model.ContentHtmlPath;
             parameters[47].Value = model.IsHtmlNameReWriteContent;
+            
+            parameters[48].Value = model.ConfigId;
 
             object obj = DbHelperCmsWrite.Instance.ExecuteScalar(CommandType.Text, strSql.ToString(), parameters);
             if (obj == null)
@@ -1010,8 +993,9 @@ WHERE a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId,SiteID);
             strSql.Append("IsHtmlNameReWrite=?IsHtmlNameReWrite,");
 
             strSql.Append("ContentHtmlPath=?ContentHtmlPath,");
-            strSql.Append("IsHtmlNameReWriteContent=?IsHtmlNameReWriteContent");
-
+            strSql.Append("IsHtmlNameReWriteContent=?IsHtmlNameReWriteContent,");
+            strSql.Append("ConfigId=?ConfigId");
+            
             strSql.Append(" where ID=?ID ");
             MySqlParameter[] parameters = {
 					new MySqlParameter("?ID",  MySqlDbType.Int32,4),
@@ -1069,8 +1053,9 @@ WHERE a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId,SiteID);
                     new MySqlParameter("?IsHtmlNameReWrite",MySqlDbType.Int16,1),
 
                     new MySqlParameter("?ContentHtmlPath",MySqlDbType.VarChar,100),
-                    new MySqlParameter("?IsHtmlNameReWriteContent",MySqlDbType.Int16,1)
-                                        
+                    new MySqlParameter("?IsHtmlNameReWriteContent",MySqlDbType.Int16,1),
+                    new MySqlParameter("?ConfigId",MySqlDbType.Int32,4),
+
                                         };
             parameters[0].Value = model.ID;
             parameters[1].Value = model.ClassName;
@@ -1127,7 +1112,8 @@ WHERE a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId,SiteID);
 
             parameters[47].Value = model.ContentHtmlPath;
             parameters[48].Value = model.IsHtmlNameReWriteContent;
-            
+
+            parameters[49].Value = model.ConfigId;
 
             DbHelperCmsWrite.Instance.ExecuteNonQuery(CommandType.Text, strSql.ToString(), parameters);
         }

@@ -376,8 +376,8 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Content
                     md.SpecialClassID = specialClass.id;//iAddDataToSpecialByID;
                     Entity.NewsContent mdcontent = NewsContentInst.GetModel(nID, GetSiteID);
                     md.ClassID = mdcontent.ClassID;
-                    Entity.ClassConfigs cmd = BLL.ClassConfigs.Instance.GetClassConfigsByClassID(mdcontent.ClassID);
-                    if (!Equals(cmd, null))
+                    Entity.ClassConfigs cmd = BLL.ClassConfigs.Instance.GetByClassID(mdcontent.ClassID);
+                    if(!Equals(cmd, null))
                     {
                         md.ModelID = cmd.ContentModelID;
                     }

@@ -148,7 +148,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
             {
                 string id = e.CommandArgument.ToString();
 
-                Entity.ClassConfigs cmd = EbSite.BLL.ClassConfigs.Instance.GetClassConfigsByClassID(Convert.ToInt32(id));
+                Entity.ClassConfigs cmd = EbSite.BLL.ClassConfigs.Instance.GetByClassID(Convert.ToInt32(id));
                 if (!Equals(cmd, null))
                 {
                     Response.Redirect(string.Format("{0}&cid={1}&modelid={2}", GetMenuLink(0), id,cmd.ContentModelID));
@@ -220,7 +220,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 Entity.NewsClass drData = (Entity.NewsClass)e.Row.DataItem;
-                Entity.ClassConfigs cf = BLL.ClassConfigs.Instance.GetClassConfigsByClassID(drData.ID);
+                Entity.ClassConfigs cf = BLL.ClassConfigs.Instance.GetByClassID(drData.ID);
                 if (!cf.IsCanAddContent) //是否可以添加内容
                 {
                     LinkButton drpCtrType = (LinkButton)e.Row.Cells[3].FindControl("lbAddcontent");

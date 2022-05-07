@@ -10,13 +10,15 @@
         padding:0px;
         width:100%;
         min-width: 1200px;
-         
+       
     }
 
-     #vista_toolbar ul {
+        #vista_toolbar ul {
             border-top: 1px solid #dddddd;
             border-left: 1px solid #dddddd;
             border-right: 1px solid #dddddd;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
             background: #EBEBEB;
             float: left;
             line-height: 40px;

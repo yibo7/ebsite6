@@ -64,7 +64,7 @@ namespace EbSite.Base.ControlPage
                     this.pcPage.PageSize = this.iPageSize;
                 this.pcPage.Linktype = LinkType.Aspx;
             }
-
+            
             if (!base.IsPostBack && !IsListCtrNull)
             {
                 if (this.IsCurrentSearch)
@@ -369,7 +369,7 @@ namespace EbSite.Base.ControlPage
         {
             get
             {
-                return 20;
+                return ConfigsControl.Instance.PageSize;
             }
         }
         /// <summary>

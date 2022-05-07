@@ -73,8 +73,7 @@
                                         <XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="CopyClass"
                                             confirm="true" Text="复制"><img title="复制分类" src="<%=IISPath %>images/copy.gif" /></XS:LinkButton>
 
-                                        <a href="?t=5&id=<%#Eval("id") %>">
-                                            <img title="设置分类" src="<%=IISPath %>images/configs.gif" /></a>
+                                        <a href="javascript:configs(<%#Eval("id") %>)"><img title="设置分类" src="<%=IISPath %>images/configs.gif" /></a>
                                     </ItemTemplate>
                                 </asp:TemplateField> 
                                 <asp:BoundField HeaderText="分类ID" ItemStyle-Width="100" ReadOnly="true" DataField="id" />
@@ -164,7 +163,8 @@
         if (confirm('确认要生成页面吗？')) {
             $("#<%=btnMake.ClientID %>").click();
         }
-
-
+    }
+    function configs(cid) {
+        OpenIframe("?t=6&id=" + cid, "请选择分类设置后保存", "保存设置")
     }
 </script>
