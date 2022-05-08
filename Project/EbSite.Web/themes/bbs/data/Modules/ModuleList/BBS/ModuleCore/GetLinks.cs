@@ -56,7 +56,7 @@ namespace EbSite.Modules.BBS.ModuleCore
         /// <param name="IsReSendEmail">是否有人回复给我email提醒</param>
         /// <param name="UserID">帖子用户ID</param>
         /// <returns></returns>
-         public static string Reply(long postid, int siteid, object ReferenceID, int AllCount, int EndPageIndex, int IsReSendEmail, int UserID, int ClassID)
+         public static string Reply(long postid, int siteid, object ReferenceID, int AllCount, int EndPageIndex, long IsReSendEmail, int UserID, int ClassID)
          {
              string surl = string.Concat(EbSite.Base.Host.Instance.IISPath, "reply-", siteid, "-", postid, ".html?", "count=", AllCount, "&endindex=", EndPageIndex, "&rs=", IsReSendEmail, "&puid=", UserID, "&cid=", ClassID);
              if (!Equals(ReferenceID,null))
@@ -70,7 +70,7 @@ namespace EbSite.Modules.BBS.ModuleCore
              return string.Concat(EbSite.Base.Host.Instance.IISPath, "reply-", siteid, "-", postid, ".html?id=", id, "&cid=", ClassID);
          }
 
-         public static string Reply(long postid, int siteid, int AllCount, int EndPageIndex, int IsReSendEmail, int UserID,int ClassID)
+         public static string Reply(long postid, int siteid, int AllCount, int EndPageIndex, long IsReSendEmail, int UserID,int ClassID)
          {
              return Reply(postid, siteid, null, AllCount, EndPageIndex, IsReSendEmail, UserID, ClassID);
          }

@@ -383,8 +383,9 @@ namespace EbSite.Base
         /// <returns></returns>
         public static EbSite.BLL.NewsContentSplitTable GetNewsContentInst(int ClassID)
         {
-
-            return GetNewsContentInst(GetTableNameByClassID(ClassID));
+            if(ClassID>0)
+                return GetNewsContentInst(GetTableNameByClassID(ClassID));
+            return NewsContentInstDefault;
         }
 
         public static string GetRandICO()

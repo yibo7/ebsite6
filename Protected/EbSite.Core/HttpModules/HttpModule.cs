@@ -152,7 +152,7 @@ namespace EbSite.Core
                             }
                         }
 
-                    if (IsGoToReWrite(requestedPath))//过滤一些没必要的页面
+                        if (IsGoToReWrite(requestedPath))//过滤一些没必要的页面
                         {
 
                             if (requestedPath.EndsWith("/ebcss.ashx")) //目录文件样式
@@ -170,557 +170,555 @@ namespace EbSite.Core
                                 string sRwRulePage = string.Empty;
 
                                 string sRwPathName = string.Empty;
-                                int iRwClassId = 0;
-
-                                
+                                int iRwClassId = 0;                                
 
                                 if (EbSite.Base.Configs.ContentSet.ConfigsControl.Instance.SiteModule != 2)
                                     {
-                                        #region PC版地址重写
+                                            #region PC版地址重写
 
-                                if (UrlRules.ClassRuleHtmlNames.ContainsKey(requestedPath))//分类目录自定义重写
-                                {
-                                    int ClassId = UrlRules.ClassRuleHtmlNames[requestedPath];
-                                    int PageIndex = 1;
-                                    int Odb = 0;
-                                    sRealUrl = LinkClass.Instance.GetAspxInstance(SiteID).GetClassHref_OrderBy(ClassId, PageIndex, Odb);
-                                }
-                                else if (IsMatchClassUrlReWritPage(requestedPath, ref sRwRulePage, ref sRwPathName, ref iRwClassId)) //分类目录自定义重写-分页
-                                {
-                                    Match mc = Regex.Match(requestedPath, sRwRulePage);
-                                    int PageIndex = 1;
-                                    int Odb = 0;
-                                    if (mc.Success)
+                                    if (UrlRules.ClassRuleHtmlNames.ContainsKey(requestedPath))//分类目录自定义重写
                                     {
-                                        PageIndex = int.Parse(mc.Groups[1].Value);
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.ClassRule);
-                                        sRealUrl = LinkClass.Instance.GetAspxInstance(SiteID).GetClassHref_OrderBy(iRwClassId, PageIndex, Odb);
+                                        int ClassId = UrlRules.ClassRuleHtmlNames[requestedPath];
+                                        int PageIndex = 1;
+                                        int Odb = 0;
+                                        sRealUrl = LinkClass.Instance.GetAspxInstance(SiteID).GetClassHref_OrderBy(ClassId, PageIndex, Odb);
                                     }
-
-
-                                }
-
-                                else if (IsMatchReWrite(requestedPath, UrlRules.ClassRule)) //分类页
-                                {
-                                    int ClassId = 0;
-                                    int PageIndex = 1;
-                                    int Odb = 0;
-
-                                    Match mc = Regex.Match(requestedPath, UrlRules.ClassRule);
-                                    if (mc.Success)
+                                    else if (IsMatchClassUrlReWritPage(requestedPath, ref sRwRulePage, ref sRwPathName, ref iRwClassId)) //分类目录自定义重写-分页
                                     {
-                                        ClassId = int.Parse(mc.Groups[1].Value);
-                                        Odb = int.Parse(mc.Groups[2].Value);
-                                        PageIndex = int.Parse(mc.Groups[3].Value);
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.ClassRule);
-
-                                    }
-                                    sRealUrl = LinkClass.Instance.GetAspxInstance(SiteID)
-                                        .GetClassHref_OrderBy(ClassId, PageIndex, Odb);
-
-                                }
-                                else if (IsMatchReWrite(requestedPath, UrlRules.ContentRule)) //内容面页
-                                {
-                                    string ContentId = string.Empty;
-                                    int ClassID = 0;
-                                    string iPageIndex = "0";
-                                    Match mc = Regex.Match(requestedPath, UrlRules.ContentRule);
-                                    if (mc.Success)
-                                    {
-                                        string url = mc.Groups[0].Value;
-
-
-                                        if (Equals(requestedPath, url))
+                                        Match mc = Regex.Match(requestedPath, sRwRulePage);
+                                        int PageIndex = 1;
+                                        int Odb = 0;
+                                        if (mc.Success)
                                         {
-                                            ClassID = Core.Utils.StrToInt(mc.Groups[1].Value, 0);
-                                            ContentId = mc.Groups[2].Value;
-                                            iPageIndex = mc.Groups[3].Value;
-                                            //SiteID = GetSiteFolder(requestedPath, UrlRules.ContentRule);
+                                            PageIndex = int.Parse(mc.Groups[1].Value);
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.ClassRule);
+                                            sRealUrl = LinkClass.Instance.GetAspxInstance(SiteID).GetClassHref_OrderBy(iRwClassId, PageIndex, Odb);
                                         }
-                                        else //这种情况是可能出现的二级路重写，如abc/******.html
+
+
+                                    }
+
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.ClassRule)) //分类页
+                                    {
+                                        int ClassId = 0;
+                                        int PageIndex = 1;
+                                        int Odb = 0;
+
+                                        Match mc = Regex.Match(requestedPath, UrlRules.ClassRule);
+                                        if (mc.Success)
                                         {
-                                            SiteID = GetSiteFolder(requestedPath, UrlRules.ContentRule);
-                                            if (SiteID > 1)
+                                            ClassId = int.Parse(mc.Groups[1].Value);
+                                            Odb = int.Parse(mc.Groups[2].Value);
+                                            PageIndex = int.Parse(mc.Groups[3].Value);
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.ClassRule);
+
+                                        }
+                                        sRealUrl = LinkClass.Instance.GetAspxInstance(SiteID)
+                                            .GetClassHref_OrderBy(ClassId, PageIndex, Odb);
+
+                                    }
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.ContentRule)) //内容面页
+                                    {
+                                        string ContentId = string.Empty;
+                                        int ClassID = 0;
+                                        string iPageIndex = "0";
+                                        Match mc = Regex.Match(requestedPath, UrlRules.ContentRule);
+                                        if (mc.Success)
+                                        {
+                                            string url = mc.Groups[0].Value;
+
+
+                                            if (Equals(requestedPath, url))
                                             {
                                                 ClassID = Core.Utils.StrToInt(mc.Groups[1].Value, 0);
                                                 ContentId = mc.Groups[2].Value;
                                                 iPageIndex = mc.Groups[3].Value;
+                                                //SiteID = GetSiteFolder(requestedPath, UrlRules.ContentRule);
                                             }
-                                            else
+                                            else //这种情况是可能出现的二级路重写，如abc/******.html
                                             {
-                                                Match mc2 = Regex.Match(requestedPath, UrlRules.ContentCusttomRule);
-                                                if (mc2.Success)
+                                                SiteID = GetSiteFolder(requestedPath, UrlRules.ContentRule);
+                                                if (SiteID > 1)
                                                 {
                                                     ClassID = Core.Utils.StrToInt(mc.Groups[1].Value, 0);
                                                     ContentId = mc.Groups[2].Value;
                                                     iPageIndex = mc.Groups[3].Value;
-                                                    SiteID = GetSiteFolder(requestedPath, UrlRules.ContentCusttomRule);
-                                                    if (UrlRules.ClassRuleHtmlNameForContentPre2.ContainsKey(ClassID))
-                                                    {
-                                                        string rename = UrlRules.ClassRuleHtmlNameForContentPre2[ClassID];
-                                                        if (requestedPath.IndexOf(rename) > -1)
-                                                            sRealUrl =
-                                                                LinkContent.Instance.GetAspxInstance(SiteID)
-                                                                    .GetContentLink(ContentId, ClassID, iPageIndex);
-                                                    }
-                                                    else
-                                                    {
-                                                        ContentId = ""; //不让在下面的时候进去
-                                                    }
-
                                                 }
+                                                else
+                                                {
+                                                    Match mc2 = Regex.Match(requestedPath, UrlRules.ContentCusttomRule);
+                                                    if (mc2.Success)
+                                                    {
+                                                        ClassID = Core.Utils.StrToInt(mc.Groups[1].Value, 0);
+                                                        ContentId = mc.Groups[2].Value;
+                                                        iPageIndex = mc.Groups[3].Value;
+                                                        SiteID = GetSiteFolder(requestedPath, UrlRules.ContentCusttomRule);
+                                                        if (UrlRules.ClassRuleHtmlNameForContentPre2.ContainsKey(ClassID))
+                                                        {
+                                                            string rename = UrlRules.ClassRuleHtmlNameForContentPre2[ClassID];
+                                                            if (requestedPath.IndexOf(rename) > -1)
+                                                                sRealUrl =
+                                                                    LinkContent.Instance.GetAspxInstance(SiteID)
+                                                                        .GetContentLink(ContentId, ClassID, iPageIndex);
+                                                        }
+                                                        else
+                                                        {
+                                                            ContentId = ""; //不让在下面的时候进去
+                                                        }
+
+                                                    }
+                                                }
+
+                                            }
+
+
+
+                                        }
+                                        if (!string.IsNullOrEmpty(ContentId) &&
+                                            !UrlRules.ClassRuleHtmlNameForContentPre2.ContainsKey(ClassID) &&
+                                            string.IsNullOrEmpty(sRealUrl)) //如果包含，不能走这个规则
+                                        {
+                                            sRealUrl = LinkContent.Instance.GetAspxInstance(SiteID)
+                                                .GetContentLink(ContentId, ClassID, iPageIndex);
+                                        }
+
+
+                                    }
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.ContentCusttomRule))
+                                    //来自分类自定义内容面页url前缀，一级前缀重写，如abc-***.html
+                                    {
+
+
+                                        string ContentId = "0";
+                                        int ClassID = 0;
+                                        string iPageIndex = "0";
+                                        Match mc = Regex.Match(requestedPath, UrlRules.ContentCusttomRule);
+                                        if (mc.Success)
+                                        {
+                                            ClassID = Core.Utils.StrToInt(mc.Groups[1].Value, 0);
+                                            ContentId = mc.Groups[2].Value;
+                                            iPageIndex = mc.Groups[3].Value;
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.ContentCusttomRule);
+                                            if (UrlRules.ClassRuleHtmlNameForContentPre2.ContainsKey(ClassID))
+                                            {
+                                                string rename = UrlRules.ClassRuleHtmlNameForContentPre2[ClassID];
+                                                if (requestedPath.IndexOf(rename) > -1)
+                                                    sRealUrl =
+                                                        LinkContent.Instance.GetAspxInstance(SiteID)
+                                                            .GetContentLink(ContentId, ClassID, iPageIndex);
                                             }
 
                                         }
 
-
-
                                     }
-                                    if (!string.IsNullOrEmpty(ContentId) &&
-                                        !UrlRules.ClassRuleHtmlNameForContentPre2.ContainsKey(ClassID) &&
-                                        string.IsNullOrEmpty(sRealUrl)) //如果包含，不能走这个规则
+                                    //else if (IsMatchReWrite(requestedPath, UrlRules.ContentRuleDefault)) //内容面页默认
+                                    //{
+                                    //    string ContentId = "0";
+
+                                    //    Match mc = Regex.Match(requestedPath, UrlRules.ContentRuleDefault);
+                                    //    if (mc.Success)
+                                    //    {
+                                    //        ContentId = mc.Groups[1].Value;
+                                    //        SiteID = GetSiteFolder(requestedPath, UrlRules.ContentRuleDefault);
+                                    //    }
+                                    //    sRealUrl = LinkContent.Instance.GetAspxInstance(SiteID).GetContentLink(ContentId);
+                                    //}
+
+                                    else if (UrlRules.SpecialRuleHtmlNames.ContainsKey(requestedPath))//专题自定义重写
                                     {
-                                        sRealUrl = LinkContent.Instance.GetAspxInstance(SiteID)
-                                            .GetContentLink(ContentId, ClassID, iPageIndex);
+                                        int ClassId = UrlRules.SpecialRuleHtmlNames[requestedPath];
+                                        int PageIndex = 1;
+                                        sRealUrl = LinkSpecial.Instance.GetAspxInstance(SiteID).GetSpecialHref(ClassId, PageIndex);
                                     }
-
-
-                                }
-                                else if (IsMatchReWrite(requestedPath, UrlRules.ContentCusttomRule))
-                                //来自分类自定义内容面页url前缀，一级前缀重写，如abc-***.html
-                                {
-
-
-                                    string ContentId = "0";
-                                    int ClassID = 0;
-                                    string iPageIndex = "0";
-                                    Match mc = Regex.Match(requestedPath, UrlRules.ContentCusttomRule);
-                                    if (mc.Success)
+                                    else if (IsMatchSpecalUrlReWritPage(requestedPath, ref sRwRulePage, ref sRwPathName, ref iRwClassId)) //专题目录自定义重写-分页
                                     {
-                                        ClassID = Core.Utils.StrToInt(mc.Groups[1].Value, 0);
-                                        ContentId = mc.Groups[2].Value;
-                                        iPageIndex = mc.Groups[3].Value;
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.ContentCusttomRule);
-                                        if (UrlRules.ClassRuleHtmlNameForContentPre2.ContainsKey(ClassID))
+                                        Match mc = Regex.Match(requestedPath, sRwRulePage);
+                                        int PageIndex = 1;
+                                        if (mc.Success)
                                         {
-                                            string rename = UrlRules.ClassRuleHtmlNameForContentPre2[ClassID];
-                                            if (requestedPath.IndexOf(rename) > -1)
-                                                sRealUrl =
-                                                    LinkContent.Instance.GetAspxInstance(SiteID)
-                                                        .GetContentLink(ContentId, ClassID, iPageIndex);
+                                            PageIndex = int.Parse(mc.Groups[1].Value);
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.SpecialRule);
+                                            sRealUrl = LinkSpecial.Instance.GetAspxInstance(SiteID).GetSpecialHref(iRwClassId, PageIndex);
                                         }
 
+
                                     }
 
-                                }
-                                //else if (IsMatchReWrite(requestedPath, UrlRules.ContentRuleDefault)) //内容面页默认
-                                //{
-                                //    string ContentId = "0";
-
-                                //    Match mc = Regex.Match(requestedPath, UrlRules.ContentRuleDefault);
-                                //    if (mc.Success)
-                                //    {
-                                //        ContentId = mc.Groups[1].Value;
-                                //        SiteID = GetSiteFolder(requestedPath, UrlRules.ContentRuleDefault);
-                                //    }
-                                //    sRealUrl = LinkContent.Instance.GetAspxInstance(SiteID).GetContentLink(ContentId);
-                                //}
-
-                                else if (UrlRules.SpecialRuleHtmlNames.ContainsKey(requestedPath))//专题自定义重写
-                                {
-                                    int ClassId = UrlRules.SpecialRuleHtmlNames[requestedPath];
-                                    int PageIndex = 1;
-                                    sRealUrl = LinkSpecial.Instance.GetAspxInstance(SiteID).GetSpecialHref(ClassId, PageIndex);
-                                }
-                                else if (IsMatchSpecalUrlReWritPage(requestedPath, ref sRwRulePage, ref sRwPathName, ref iRwClassId)) //专题目录自定义重写-分页
-                                {
-                                    Match mc = Regex.Match(requestedPath, sRwRulePage);
-                                    int PageIndex = 1;
-                                    if (mc.Success)
+                                    //专题页
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.SpecialRule))
                                     {
-                                        PageIndex = int.Parse(mc.Groups[1].Value);
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.SpecialRule);
-                                        sRealUrl = LinkSpecial.Instance.GetAspxInstance(SiteID).GetSpecialHref(iRwClassId, PageIndex);
-                                    }
-
-
-                                }
-
-                                //专题页
-                                else if (IsMatchReWrite(requestedPath, UrlRules.SpecialRule))
-                                {
-                                    int ClassId = 0;
-                                    int PageIndex = 0;
-                                    Match mc = Regex.Match(requestedPath, UrlRules.SpecialRule);
-                                    if (mc.Success)
+                                        int ClassId = 0;
+                                        int PageIndex = 0;
+                                        Match mc = Regex.Match(requestedPath, UrlRules.SpecialRule);
+                                        if (mc.Success)
+                                        {
+                                            ClassId = int.Parse(mc.Groups[1].Value);
+                                            PageIndex = int.Parse(mc.Groups[2].Value);
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.SpecialRule);
+                                        }
+                                        sRealUrl = LinkSpecial.Instance.GetAspxInstance(SiteID)
+                                            .GetSpecialHref(ClassId, PageIndex);
+                                    } //表单
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.CustomFormRule))
                                     {
-                                        ClassId = int.Parse(mc.Groups[1].Value);
-                                        PageIndex = int.Parse(mc.Groups[2].Value);
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.SpecialRule);
-                                    }
-                                    sRealUrl = LinkSpecial.Instance.GetAspxInstance(SiteID)
-                                        .GetSpecialHref(ClassId, PageIndex);
-                                } //表单
-                                else if (IsMatchReWrite(requestedPath, UrlRules.CustomFormRule))
-                                {
 
-                                    string ModelID = "";
-                                    Match mc = Regex.Match(requestedPath, UrlRules.CustomFormRule);
-                                    if (mc.Success)
-                                    {
-                                        ModelID = mc.Groups[1].Value;
-                                        SiteID = int.Parse(mc.Groups[2].Value);
-                                        //SiteID = GetSiteFolder(requestPath, SpecialRule);
+                                        string ModelID = "";
+                                        Match mc = Regex.Match(requestedPath, UrlRules.CustomFormRule);
+                                        if (mc.Success)
+                                        {
+                                            ModelID = mc.Groups[1].Value;
+                                            SiteID = int.Parse(mc.Groups[2].Value);
+                                            //SiteID = GetSiteFolder(requestPath, SpecialRule);
+                                        }
+                                        sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).GetFormUrl(ModelID);
                                     }
-                                    sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).GetFormUrl(ModelID);
-                                }
-                                //所有标签列表页面
-                                else if (IsMatchReWrite(requestedPath, UrlRules.TagsRule))
-                                {
-                                    int TagPageIndex = 0;
-                                    Match mc = Regex.Match(requestedPath, UrlRules.TagsRule);
-                                    if (mc.Success)
+                                    //所有标签列表页面
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.TagsRule))
                                     {
-                                        TagPageIndex = int.Parse(mc.Groups[1].Value);
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.TagsRule);
-                                    }
+                                        int TagPageIndex = 0;
+                                        Match mc = Regex.Match(requestedPath, UrlRules.TagsRule);
+                                        if (mc.Success)
+                                        {
+                                            TagPageIndex = int.Parse(mc.Groups[1].Value);
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.TagsRule);
+                                        }
                                      
 
-                                    string tgvRealUrl = LinkTags.Instance.GetAspxInstance(SiteID).TagsList(TagPageIndex);
+                                        string tgvRealUrl = LinkTags.Instance.GetAspxInstance(SiteID).TagsList(TagPageIndex);
 
-                                    if (EbSite.BLL.Sites.Instance.GetLinkTypeTags(SiteID) == LinkType.AutoHtml)
-                                    {
-                                        string CacheUrl = string.Concat(AppStartInit.IISPath, AppStartInit.CacheFolder,
-                                            "tags/p", TagPageIndex, "s", SiteID, ".htm");
-                                        sRealUrl = EbSite.Base.Static.HtmlPool.GetCacheUrl(CacheUrl, tgvRealUrl);
-                                    }
-                                    else
-                                    {
-                                        sRealUrl = tgvRealUrl;
-                                    }
+                                        if (EbSite.BLL.Sites.Instance.GetLinkTypeTags(SiteID) == LinkType.AutoHtml)
+                                        {
+                                            string CacheUrl = string.Concat(AppStartInit.IISPath, AppStartInit.CacheFolder,
+                                                "tags/p", TagPageIndex, "s", SiteID, ".htm");
+                                            sRealUrl = EbSite.Base.Static.HtmlPool.GetCacheUrl(CacheUrl, tgvRealUrl);
+                                        }
+                                        else
+                                        {
+                                            sRealUrl = tgvRealUrl;
+                                        }
 
-                                }
-                                //标签搜索页--关键词
-                                else if (requestedPath.Equals(string.Concat(EbSite.Base.AppStartInit.IISPath,
-                                        Base.PageLink.GetBaseLinks.Get(SiteID).TagsSearchListLinkRw.ToLower())))
-                                {
-                                    sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).TagsSearchListLink;
+                                    }
+                                    //标签搜索页--关键词
+                                    else if (requestedPath.Equals(string.Concat(EbSite.Base.AppStartInit.IISPath,
+                                            Base.PageLink.GetBaseLinks.Get(SiteID).TagsSearchListLinkRw.ToLower())))
+                                    {
+                                        sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).TagsSearchListLink;
 
-                                } //标签搜索页--标签ID
-                                else if (IsMatchReWrite(requestedPath, UrlRules.TagsSearchRuleByID))
-                                {
-                                    int TagId = 0;
-                                    int PageIndex = 0;
-                                    Match mc = Regex.Match(requestedPath, UrlRules.TagsSearchRuleByID);
-                                    if (mc.Success)
+                                    } //标签搜索页--标签ID
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.TagsSearchRuleByID))
                                     {
-                                        TagId = int.Parse(mc.Groups[1].Value);
-                                        PageIndex = int.Parse(mc.Groups[2].Value);
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.TagsSearchRuleByID);
-                                    }
-                                    string tgvRealUrl = LinkTags.Instance.GetAspxInstance(SiteID).TagsSearchList(TagId, PageIndex);
+                                        int TagId = 0;
+                                        int PageIndex = 0;
+                                        Match mc = Regex.Match(requestedPath, UrlRules.TagsSearchRuleByID);
+                                        if (mc.Success)
+                                        {
+                                            TagId = int.Parse(mc.Groups[1].Value);
+                                            PageIndex = int.Parse(mc.Groups[2].Value);
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.TagsSearchRuleByID);
+                                        }
+                                        string tgvRealUrl = LinkTags.Instance.GetAspxInstance(SiteID).TagsSearchList(TagId, PageIndex);
 
-                                    if (EbSite.BLL.Sites.Instance.GetLinkTypeTags(SiteID) == LinkType.AutoHtml)
-                                    {
-                                        string CacheUrl = string.Concat(AppStartInit.IISPath, AppStartInit.CacheFolder,
-                                            "tagv/id", TagId, "p", PageIndex, "s", SiteID, ".htm");
-                                        sRealUrl = EbSite.Base.Static.HtmlPool.GetCacheUrl(CacheUrl, tgvRealUrl);
-                                    }
-                                    else
-                                    {
-                                        sRealUrl = tgvRealUrl;
-                                    }
+                                        if (EbSite.BLL.Sites.Instance.GetLinkTypeTags(SiteID) == LinkType.AutoHtml)
+                                        {
+                                            string CacheUrl = string.Concat(AppStartInit.IISPath, AppStartInit.CacheFolder,
+                                                "tagv/id", TagId, "p", PageIndex, "s", SiteID, ".htm");
+                                            sRealUrl = EbSite.Base.Static.HtmlPool.GetCacheUrl(CacheUrl, tgvRealUrl);
+                                        }
+                                        else
+                                        {
+                                            sRealUrl = tgvRealUrl;
+                                        }
 
-                                }
-                                else if (
-                                    requestedPath.Equals(
-                                        Base.PageLink.GetBaseLinks.Get(SiteID).LoginRw.ToLower())) //登录
-                                {
-                                    sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Login;
-                                }
-                                else if (
-                                    requestedPath.Equals(
-                                        Base.PageLink.GetBaseLinks.Get(SiteID).LostpasswordRw.ToLower()))
-                                //找加密
-                                {
-                                    sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Lostpassword;
-                                }
-                                else if (
-                                    requestedPath.Equals(
-                                        Base.PageLink.GetBaseLinks.Get(SiteID).RegRw.ToLower()))
-                                //注册
-                                {
-                                    sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Reg;
-                                }
-                                else if (
-                                    requestedPath.Equals(
-                                        Base.PageLink.GetBaseLinks.Get(SiteID)
-                                            .SearchRw.ToLower())) //搜索
-                                {
-                                    sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Search;
-                                }
-                                else if (
-                                    requestedPath.Equals(
-                                        Base.PageLink.GetBaseLinks.Get(SiteID)
-                                            .UhomeRw.ToLower())) //用户自助主页
-                                {
-                                    int sUserID = 0;
+                                    }
+                                    else if (
+                                        requestedPath.Equals(
+                                            Base.PageLink.GetBaseLinks.Get(SiteID).LoginRw.ToLower())) //登录
+                                    {
+                                        sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Login;
+                                    }
+                                    else if (
+                                        requestedPath.Equals(
+                                            Base.PageLink.GetBaseLinks.Get(SiteID).LostpasswordRw.ToLower()))
+                                    //找加密
+                                    {
+                                        sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Lostpassword;
+                                    }
+                                    else if (
+                                        requestedPath.Equals(
+                                            Base.PageLink.GetBaseLinks.Get(SiteID).RegRw.ToLower()))
+                                    //注册
+                                    {
+                                        sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Reg;
+                                    }
+                                    else if (
+                                        requestedPath.Equals(
+                                            Base.PageLink.GetBaseLinks.Get(SiteID)
+                                                .SearchRw.ToLower())) //搜索
+                                    {
+                                        sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Search;
+                                    }
+                                    else if (
+                                        requestedPath.Equals(
+                                            Base.PageLink.GetBaseLinks.Get(SiteID)
+                                                .UhomeRw.ToLower())) //用户自助主页
+                                    {
+                                        int sUserID = 0;
 
-                                    if (
-                                        !string.IsNullOrEmpty(
-                                            httpContext.Request.QueryString["uid"]))
-                                    {
-                                        sUserID =
-                                            int.Parse(httpContext.Request.QueryString["uid"]);
+                                        if (
+                                            !string.IsNullOrEmpty(
+                                                httpContext.Request.QueryString["uid"]))
+                                        {
+                                            sUserID =
+                                                int.Parse(httpContext.Request.QueryString["uid"]);
+                                        }
+                                        else
+                                        {
+                                            sUserID = EbSite.Base.AppStartInit.UserID;
+                                            // EbSite.Base.AppStartInit.UserID;
+                                        }
+                                        EbSite.Base.EntityAPI.MembershipUserEb mdUser =
+                                            EbSite.BLL.User.MembershipUserEb.Instance.GetEntity(
+                                                sUserID);
+                                        if (!string.IsNullOrEmpty(mdUser.SpaceThemePath))
+                                        {
+                                            sRealUrl =
+                                                string.Concat(EbSite.Base.AppStartInit.IISPath,
+                                                    "Home/themes/", mdUser.SpaceThemePath,
+                                                    "/uhome.aspx");
+                                        }
+                                        else
+                                        {
+                                            if (IsMyPlace(app)) //自己访问的自己
+                                            {
+                                                //如果不存在空间,指定到创建空间页面
+                                                httpContext.Response.Redirect(
+                                                    EbSite.BLL.MenusForUser.Instance
+                                                        .GetSpaceSettingUrl);
+                                            }
+                                            else //访问别人空间
+                                            {
+                                                EbSite.Base.AppStartInit.TipsPageRender(
+                                                    "空间没开通", "当前用户还没有创建空间",
+                                                    EbSite.Base.Host.Instance.Domain);
+                                            }
+
+                                            httpContext.Response.End();
+                                        }
+
+                                        //sRealUrl = GetLink.HrefFactory.GetInstance().Uhome;
                                     }
-                                    else
-                                    {
-                                        sUserID = EbSite.Base.AppStartInit.UserID;
-                                        // EbSite.Base.AppStartInit.UserID;
-                                    }
-                                    EbSite.Base.EntityAPI.MembershipUserEb mdUser =
-                                        EbSite.BLL.User.MembershipUserEb.Instance.GetEntity(
-                                            sUserID);
-                                    if (!string.IsNullOrEmpty(mdUser.SpaceThemePath))
+                                    else if (
+                                        requestedPath.Equals(
+                                            Base.PageLink.GetBaseLinks.Get(SiteID)
+                                                .UccIndexRw.ToLower())) //用户控制面板
                                     {
                                         sRealUrl =
-                                            string.Concat(EbSite.Base.AppStartInit.IISPath,
-                                                "Home/themes/", mdUser.SpaceThemePath,
-                                                "/uhome.aspx");
+                                            Base.PageLink.GetBaseLinks.Get(SiteID).UccIndex;
+
                                     }
-                                    else
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.errPage))
                                     {
-                                        if (IsMyPlace(app)) //自己访问的自己
+                                        string iId = "0";
+
+                                        Match mc = Regex.Match(requestedPath,
+                                            UrlRules.errPage);
+                                        if (mc.Success)
                                         {
-                                            //如果不存在空间,指定到创建空间页面
-                                            httpContext.Response.Redirect(
-                                                EbSite.BLL.MenusForUser.Instance
-                                                    .GetSpaceSettingUrl);
+                                            iId = mc.Groups[1].Value;
                                         }
-                                        else //访问别人空间
+                                        sRealUrl =
+                                            Base.PageLink.GetBaseLinks.Get(SiteID)
+                                                .GetErrPage(iId);
+                                    }
+                                    else if (
+                                        requestedPath.Equals(
+                                            Base.PageLink.GetBaseLinks.Get(SiteID)
+                                                .CustomSearchRw.ToLower())) //自定义搜索页
+                                    {
+                                        sRealUrl =
+                                            Base.PageLink.GetBaseLinks.Get(SiteID)
+                                                .CustomSearch;
+                                    }
+                                    else if (IsMatchReWrite(requestedPath,
+                                        UrlRules.IndexRule)) //首页分页列表情况
+                                    {
+                                        int PageIndex = 0;
+                                        Match mc = Regex.Match(requestedPath,
+                                            UrlRules.IndexRule);
+                                        if (mc.Success)
                                         {
-                                            EbSite.Base.AppStartInit.TipsPageRender(
-                                                "空间没开通", "当前用户还没有创建空间",
-                                                EbSite.Base.Host.Instance.Domain);
+                                            PageIndex = int.Parse(mc.Groups[1].Value);
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.IndexRule);
                                         }
-
-                                        httpContext.Response.End();
+                                        sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).IndexForPage(PageIndex);
                                     }
-
-                                    //sRealUrl = GetLink.HrefFactory.GetInstance().Uhome;
-                                }
-                                else if (
-                                    requestedPath.Equals(
-                                        Base.PageLink.GetBaseLinks.Get(SiteID)
-                                            .UccIndexRw.ToLower())) //用户控制面板
-                                {
-                                    sRealUrl =
-                                        Base.PageLink.GetBaseLinks.Get(SiteID).UccIndex;
-
-                                }
-                                else if (IsMatchReWrite(requestedPath, UrlRules.errPage))
-                                {
-                                    string iId = "0";
-
-                                    Match mc = Regex.Match(requestedPath,
-                                        UrlRules.errPage);
-                                    if (mc.Success)
+                                    else if (IsMatchReWrite(requestedPath,
+                                        UrlRules.sLoginBackBind))
+                                    //第三方登录回调地址
                                     {
-                                        iId = mc.Groups[1].Value;
-                                    }
-                                    sRealUrl =
-                                        Base.PageLink.GetBaseLinks.Get(SiteID)
-                                            .GetErrPage(iId);
-                                }
-                                else if (
-                                    requestedPath.Equals(
-                                        Base.PageLink.GetBaseLinks.Get(SiteID)
-                                            .CustomSearchRw.ToLower())) //自定义搜索页
-                                {
-                                    sRealUrl =
-                                        Base.PageLink.GetBaseLinks.Get(SiteID)
-                                            .CustomSearch;
-                                }
-                                else if (IsMatchReWrite(requestedPath,
-                                    UrlRules.IndexRule)) //首页分页列表情况
-                                {
-                                    int PageIndex = 0;
-                                    Match mc = Regex.Match(requestedPath,
-                                        UrlRules.IndexRule);
-                                    if (mc.Success)
-                                    {
-                                        PageIndex = int.Parse(mc.Groups[1].Value);
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.IndexRule);
-                                    }
-                                    sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).IndexForPage(PageIndex);
-                                }
-                                else if (IsMatchReWrite(requestedPath,
-                                    UrlRules.sLoginBackBind))
-                                //第三方登录回调地址
-                                {
-                                    string AppType = "";
-                                    Match mc = Regex.Match(requestedPath, UrlRules.sLoginBackBind);
-                                    if (mc.Success)
-                                    {
-                                        AppType = mc.Groups[1].Value;
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.SpecialRule);
-                                    }
-                                    sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).GetLoginApiBackUrl(AppType);
-                                }
-                                else if (requestedPath.Equals(Base.PageLink.GetBaseLinks.Get(SiteID).PaymentRw.ToLower()))
-                                //支付方式
-                                {
-                                    sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Payment;
-                                }
-                                else if (requestedPath.Equals(Base.PageLink.GetBaseLinks.Get(SiteID).DeliveryRw.ToLower()))
-                                //配送方式
-                                {
-                                    sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Delivery;
-                                }
-                                else if (requestedPath.Equals(Base.PageLink.GetBaseLinks.Get(SiteID).FrdlinkRw.ToLower()))
-                                //友情连接展示页
-                                {
-                                    sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Frdlink;
-                                }
-                                else if (requestedPath.Equals(Base.PageLink.GetBaseLinks.Get(SiteID).FrdlinkPostRw.ToLower()))
-                                //友情连接展示页
-                                {
-                                    sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).FrdlinkPost;
-                                }
-                                else if (requestedPath.Equals(Base.PageLink.GetBaseLinks.Get(SiteID).UserOnlineRw.ToLower()))//在线用户页
-                                {
-                                    sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).UserOnline;
-                                }
-                                else if (IsMatchReWrite(requestedPath, UrlRules.uinfoRule))
-                                //默认用户信息展示页，如果您还没有开通个人空间，点击用户连接时会连接到这个模板页面
-                                {
-                                    string UserID = "";
-                                    Match mc = Regex.Match(requestedPath, UrlRules.uinfoRule);
-                                    if (mc.Success)
-                                    {
-                                        UserID = mc.Groups[1].Value;
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.uinfoRule);
-
-                                    }
-                                    sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).GetUserInfo(UserID);
-
-                                }
-                                else if (IsMatchReWrite(requestedPath, UrlRules.voteviewRule))
-                                //投票展示页
-                                {
-                                    string voteid = "";
-                                    Match mc = Regex.Match(requestedPath, UrlRules.voteviewRule);
-                                    if (mc.Success)
-                                    {
-                                        voteid = mc.Groups[1].Value;
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.voteviewRule);
-
-                                    }
-                                    sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).GetVoteView(voteid);
-
-                                }
-                                else if (IsMatchReWrite(requestedPath, UrlRules.votepostRule))
-                                //投票提交页
-                                {
-                                    string voteid = "";
-                                    Match mc = Regex.Match(requestedPath, UrlRules.votepostRule);
-                                    if (mc.Success)
-                                    {
-                                        voteid = mc.Groups[1].Value;
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.votepostRule);
-
-                                    }
-                                    sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).GetVotePost(voteid);
-
-                                }
-
-                                else if (IsMatchReWrite(requestedPath, UrlRules.topRule))
-                                //数据排行榜页
-                                {
-                                    int toptype = 0;
-                                    int pageindex = 1;
-                                    Match mc = Regex.Match(requestedPath, UrlRules.topRule);
-                                    if (mc.Success)
-                                    {
-                                        toptype = int.Parse(mc.Groups[1].Value);
-                                        pageindex = int.Parse(mc.Groups[2].Value);
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.topRule);
-
-                                    }
-                                    sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).GetTop(toptype, pageindex);
-
-                                }
-                                else if (IsMatchReWrite(requestedPath, UrlRules.sUserAlbum))
-                                //个人收藏专辑
-                                {
-
-
-                                    int ClassId = 0;
-                                    int PageIndex = 0;
-                                    int uid = 0;
-                                    Match mc = Regex.Match(requestedPath, UrlRules.sUserAlbum);
-                                    if (mc.Success)
-                                    {
-                                        uid = int.Parse(mc.Groups[1].Value);
-                                        ClassId = int.Parse(mc.Groups[2].Value);
-                                        PageIndex = int.Parse(mc.Groups[3].Value);
-                                        SiteID = GetSiteFolder(requestedPath, UrlRules.sUserAlbum);
-                                    }
-                                    sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).UserAlbumHref(ClassId, PageIndex, uid);
-                                }
-                                else if (requestedPath.EndsWith(UrlRules.AllClassRule))
-                                //所有分类页
-                                {
-                                    SiteID = GetSiteFolder(requestedPath, UrlRules.AllClassRule);
-                                    sRealUrl = LinkClass.Instance.GetAspxInstance(SiteID).GetAllClassHref();
-                                }
-                                else if (IsMatchReWrite(requestedPath, UrlRules.discussRule))
-                                //评论
-                                {
-                                    //连接规则:评论类别ID-系统分类ID-内容ID-展示模板ID-站点ID-分内或内容标记-dc.aspx
-                                    Match mc = Regex.Match(requestedPath, UrlRules.discussRule);
-                                    if (mc.Success)
-                                    {
-                                        int sClassDataID = int.Parse(mc.Groups[1].Value);
-                                        int ClassID = int.Parse(mc.Groups[2].Value);
-                                        int ContentID = int.Parse(mc.Groups[3].Value);
-                                        int iDiscuzType = int.Parse(mc.Groups[4].Value);
-                                        SiteID = int.Parse(mc.Groups[5].Value);
-                                        int iPage = int.Parse(mc.Groups[6].Value);
-
-                                        //string sMark = mc.Groups[2].Value;
-
-
-                                        string temprule = "ask_";
-                                        if (iDiscuzType == 1)
-                                        //盖楼式评论
+                                        string AppType = "";
+                                        Match mc = Regex.Match(requestedPath, UrlRules.sLoginBackBind);
+                                        if (mc.Success)
                                         {
-                                            temprule = "discuss_";
+                                            AppType = mc.Groups[1].Value;
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.SpecialRule);
                                         }
-                                        else if (iDiscuzType == 2)
-                                        //好评系统
+                                        sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).GetLoginApiBackUrl(AppType);
+                                    }
+                                    else if (requestedPath.Equals(Base.PageLink.GetBaseLinks.Get(SiteID).PaymentRw.ToLower()))
+                                    //支付方式
+                                    {
+                                        sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Payment;
+                                    }
+                                    else if (requestedPath.Equals(Base.PageLink.GetBaseLinks.Get(SiteID).DeliveryRw.ToLower()))
+                                    //配送方式
+                                    {
+                                        sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Delivery;
+                                    }
+                                    else if (requestedPath.Equals(Base.PageLink.GetBaseLinks.Get(SiteID).FrdlinkRw.ToLower()))
+                                    //友情连接展示页
+                                    {
+                                        sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).Frdlink;
+                                    }
+                                    else if (requestedPath.Equals(Base.PageLink.GetBaseLinks.Get(SiteID).FrdlinkPostRw.ToLower()))
+                                    //友情连接展示页
+                                    {
+                                        sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).FrdlinkPost;
+                                    }
+                                    else if (requestedPath.Equals(Base.PageLink.GetBaseLinks.Get(SiteID).UserOnlineRw.ToLower()))//在线用户页
+                                    {
+                                        sRealUrl = Base.PageLink.GetBaseLinks.Get(SiteID).UserOnline;
+                                    }
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.uinfoRule))
+                                    //默认用户信息展示页，如果您还没有开通个人空间，点击用户连接时会连接到这个模板页面
+                                    {
+                                        string UserID = "";
+                                        Match mc = Regex.Match(requestedPath, UrlRules.uinfoRule);
+                                        if (mc.Success)
                                         {
-                                            temprule = "pj_";
-                                        }
-                                        else if (iDiscuzType == 3)
-                                        //一问一答
-                                        {
-                                            temprule = "ask_";
-                                        }
-                                        EbSite.Entity.Sites mdSite = EbSite.BLL.Sites.Instance.GetEntityCache(SiteID);
-                                        temprule = string.Concat(temprule, string.Format("{0}.aspx?cid={0}&classid={1}&site={2}&ipage={3}&contentid={4}", sClassDataID,
-                                                            ClassID,
-                                                            SiteID,
-                                                            iPage,
-                                                            ContentID));
-                                        sRealUrl = string.Concat(EbSite.Base.AppStartInit.IISPath, "themes/", mdSite.PageTheme, "/pages/", temprule);
+                                            UserID = mc.Groups[1].Value;
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.uinfoRule);
 
+                                        }
+                                        sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).GetUserInfo(UserID);
+
+                                    }
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.voteviewRule))
+                                    //投票展示页
+                                    {
+                                        string voteid = "";
+                                        Match mc = Regex.Match(requestedPath, UrlRules.voteviewRule);
+                                        if (mc.Success)
+                                        {
+                                            voteid = mc.Groups[1].Value;
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.voteviewRule);
+
+                                        }
+                                        sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).GetVoteView(voteid);
+
+                                    }
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.votepostRule))
+                                    //投票提交页
+                                    {
+                                        string voteid = "";
+                                        Match mc = Regex.Match(requestedPath, UrlRules.votepostRule);
+                                        if (mc.Success)
+                                        {
+                                            voteid = mc.Groups[1].Value;
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.votepostRule);
+
+                                        }
+                                        sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).GetVotePost(voteid);
 
                                     }
 
-                                }
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.topRule))
+                                    //数据排行榜页
+                                    {
+                                        int toptype = 0;
+                                        int pageindex = 1;
+                                        Match mc = Regex.Match(requestedPath, UrlRules.topRule);
+                                        if (mc.Success)
+                                        {
+                                            toptype = int.Parse(mc.Groups[1].Value);
+                                            pageindex = int.Parse(mc.Groups[2].Value);
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.topRule);
 
-                                #endregion
+                                        }
+                                        sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).GetTop(toptype, pageindex);
+
+                                    }
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.sUserAlbum))
+                                    //个人收藏专辑
+                                    {
+
+
+                                        int ClassId = 0;
+                                        int PageIndex = 0;
+                                        int uid = 0;
+                                        Match mc = Regex.Match(requestedPath, UrlRules.sUserAlbum);
+                                        if (mc.Success)
+                                        {
+                                            uid = int.Parse(mc.Groups[1].Value);
+                                            ClassId = int.Parse(mc.Groups[2].Value);
+                                            PageIndex = int.Parse(mc.Groups[3].Value);
+                                            SiteID = GetSiteFolder(requestedPath, UrlRules.sUserAlbum);
+                                        }
+                                        sRealUrl = LinkOrther.Instance.GetAspxInstance(SiteID).UserAlbumHref(ClassId, PageIndex, uid);
+                                    }
+                                    else if (requestedPath.EndsWith(UrlRules.AllClassRule))
+                                    //所有分类页
+                                    {
+                                        SiteID = GetSiteFolder(requestedPath, UrlRules.AllClassRule);
+                                        sRealUrl = LinkClass.Instance.GetAspxInstance(SiteID).GetAllClassHref();
+                                    }
+                                    else if (IsMatchReWrite(requestedPath, UrlRules.discussRule))
+                                    //评论
+                                    {
+                                        //连接规则:评论类别ID-系统分类ID-内容ID-展示模板ID-站点ID-分内或内容标记-dc.aspx
+                                        Match mc = Regex.Match(requestedPath, UrlRules.discussRule);
+                                        if (mc.Success)
+                                        {
+                                            int sClassDataID = int.Parse(mc.Groups[1].Value);
+                                            int ClassID = int.Parse(mc.Groups[2].Value);
+                                            int ContentID = int.Parse(mc.Groups[3].Value);
+                                            int iDiscuzType = int.Parse(mc.Groups[4].Value);
+                                            SiteID = int.Parse(mc.Groups[5].Value);
+                                            int iPage = int.Parse(mc.Groups[6].Value);
+
+                                            //string sMark = mc.Groups[2].Value;
+
+
+                                            string temprule = "ask_";
+                                            if (iDiscuzType == 1)
+                                            //盖楼式评论
+                                            {
+                                                temprule = "discuss_";
+                                            }
+                                            else if (iDiscuzType == 2)
+                                            //好评系统
+                                            {
+                                                temprule = "pj_";
+                                            }
+                                            else if (iDiscuzType == 3)
+                                            //一问一答
+                                            {
+                                                temprule = "ask_";
+                                            }
+                                            EbSite.Entity.Sites mdSite = EbSite.BLL.Sites.Instance.GetEntityCache(SiteID);
+                                            temprule = string.Concat(temprule, string.Format("{0}.aspx?cid={0}&classid={1}&site={2}&ipage={3}&contentid={4}", sClassDataID,
+                                                                ClassID,
+                                                                SiteID,
+                                                                iPage,
+                                                                ContentID));
+                                            sRealUrl = string.Concat(EbSite.Base.AppStartInit.IISPath, "themes/", mdSite.PageTheme, "/pages/", temprule);
+
+
+                                        }
+
+                                    }
+
+                                    #endregion
                                     }
 
                                 if (EbSite.Base.Configs.ContentSet.ConfigsControl.Instance.SiteModule!=1&&string.IsNullOrEmpty(sRealUrl))

@@ -23,8 +23,8 @@
 
             <asp:Repeater ID="repWebModel" runat="server">
                 <ItemTemplate>
-                    <li class="<%#Equals(Guid.Parse(Eval("id").ToString()),ModelID)?"active":"" %> tab">
-                        <a href="<%#GetUrl %>&modelid=<%#Eval("id") %>">
+                    <li class="nav-item">
+                        <a class="<%#Equals(Guid.Parse(Eval("id").ToString()),ModelID)?"active":"" %> nav-link" href="<%#GetUrl %>&modelid=<%#Eval("id") %>">
                             <span class="visible-xs"><i class="fa fa-tag"></i></span>
                             <span class="hidden-xs"><%#Eval("ModelName")%></span>
                         </a>
