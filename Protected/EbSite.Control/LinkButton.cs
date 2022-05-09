@@ -13,7 +13,7 @@ namespace EbSite.Control
     public class LinkButton : System.Web.UI.WebControls.LinkButton
     {
         private bool _confirm = false;
-        private bool _IsButton = false;
+        private bool _IsButton = true;
         /// <summary>
         /// 是否以按钮的样式显示
         /// </summary>
@@ -198,7 +198,7 @@ namespace EbSite.Control
             if (!string.IsNullOrEmpty(sOnClientClick)) this.OnClientClick = sOnClientClick;
             if (IsButton)
             {
-                this.CssClass = "AdminButton";
+                this.CssClass = "AdminLinkButton";
 
             }
         }

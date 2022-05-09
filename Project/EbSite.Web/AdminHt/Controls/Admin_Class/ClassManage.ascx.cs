@@ -170,16 +170,20 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
                 int id = int.Parse(e.CommandArgument.ToString());
                 Response.Redirect(string.Concat(GetUrl, "&", AddUrl, "&pid=", id));
             }
-            else if (Equals(e.CommandName, "CopyClass"))
-            {
-                string id = e.CommandArgument.ToString();
-                BLL.NewsClass.GetCopyClass(int.Parse(id));
-                //这里要刷新GridView
-                base.gdList_Bind();
+            //else if (Equals(e.CommandName, "CopyClass"))
+            //{
+            //    string id = e.CommandArgument.ToString();
+            //    BLL.NewsClass.GetCopyClass(int.Parse(id));
+            //    //这里要刷新GridView
+            //    base.gdList_Bind();
 
-            }
+            //}
         }
-
+        protected override void CopyData(object ID)
+        {
+            int id = int.Parse(ID.ToString());
+            BLL.NewsClass.GetCopyClass(id);
+        }
 
         protected void btnMake_Click(object sender, EventArgs e)
         {
@@ -244,14 +248,14 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
                     LinkButton wbCtrType = (LinkButton)e.Row.Cells[3].FindControl("lbAddsubclass");
                     wbCtrType.Text = string.Concat("添加", cf.SubClassAddName);
                 }
-                else
-                {
-                    LinkButton drpCtrType = (LinkButton)e.Row.Cells[3].FindControl("lbShowsubclass");
-                    drpCtrType.Text = string.Format("<img title=\"查看子分类\" src=\"{0}images/listsub.gif\" />", IISPath);
+                //else
+                //{
+                //    LinkButton drpCtrType = (LinkButton)e.Row.Cells[3].FindControl("lbShowsubclass");
+                //    drpCtrType.Text = string.Format("<img title=\"查看子分类\" src=\"{0}images/listsub.gif\" />", IISPath);
 
-                    LinkButton wbCtrType = (LinkButton)e.Row.Cells[3].FindControl("lbAddsubclass");
-                   wbCtrType.Text =  string.Format("<img title=\"添加子分类\" src=\"{0}images/addsub.gif\" />",IISPath);
-                }
+                //    LinkButton wbCtrType = (LinkButton)e.Row.Cells[3].FindControl("lbAddsubclass");
+                //   wbCtrType.Text =  string.Format("<img title=\"添加子分类\" src=\"{0}images/addsub.gif\" />",IISPath);
+                //}
                 if (!base.CurrentSite.IsClassContent)
                 {
                     LinkButton lbCtrType = (LinkButton)e.Row.Cells[3].FindControl("lbShowsubclass");

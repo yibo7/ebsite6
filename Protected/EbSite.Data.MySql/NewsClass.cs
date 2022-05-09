@@ -1137,10 +1137,10 @@ WHERE a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId, SiteID);
             DbHelperCmsWrite.Instance.ExecuteNonQuery(CommandType.Text, strSql.ToString());
 
             //删除与分类相关的分类配置
-             strSql = new StringBuilder();
-            strSql.AppendFormat("delete from {0}classsetconfig ", sPre);
-            strSql.Append(" where ID in(" + IDs + ")");
-            DbHelperCmsWrite.Instance.ExecuteNonQuery(CommandType.Text, strSql.ToString());
+            // strSql = new StringBuilder();
+            //strSql.AppendFormat("delete from {0}classsetconfig ", sPre);
+            //strSql.Append(" where ID in(" + IDs + ")");
+            //DbHelperCmsWrite.Instance.ExecuteNonQuery(CommandType.Text, strSql.ToString());
 
 
         }
@@ -1364,48 +1364,48 @@ WHERE a.SiteId={2} AND c.ClassModelID = '{1}'", sPre, ClassModelId, SiteID);
             }
         }
 
-        public List<EbSite.Entity.NewsClass> NewsClass_GetListArrayFormConfigId(int iConfigId)
-        {
+//        public List<EbSite.Entity.NewsClass> NewsClass_GetListArrayFormConfigId(int iConfigId)
+//        {
            
-            StringBuilder strSql = new StringBuilder();
+//            StringBuilder strSql = new StringBuilder();
 
-            strSql.AppendFormat(@"SELECT a.* FROM {0}newsclass a 
-LEFT JOIN (SELECT * FROM {0}classsetconfig) b on a.id=b.ClassId
-WHERE b.ConfigId = {1}", sPre, iConfigId); 
+//            strSql.AppendFormat(@"SELECT a.* FROM {0}newsclass a 
+//LEFT JOIN (SELECT * FROM {0}classsetconfig) b on a.id=b.ClassId
+//WHERE b.ConfigId = {1}", sPre, iConfigId); 
              
-            List<EbSite.Entity.NewsClass> list = new List<EbSite.Entity.NewsClass>();
-            using (IDataReader dataReader = DbHelperCms.Instance.ExecuteReader(CommandType.Text, strSql.ToString()))
-            {
-                while (dataReader.Read())
-                {
-                    list.Add(NewsClass_ReaderBind(dataReader));
-                }
-            }
-            return list;
-        }
+//            List<EbSite.Entity.NewsClass> list = new List<EbSite.Entity.NewsClass>();
+//            using (IDataReader dataReader = DbHelperCms.Instance.ExecuteReader(CommandType.Text, strSql.ToString()))
+//            {
+//                while (dataReader.Read())
+//                {
+//                    list.Add(NewsClass_ReaderBind(dataReader));
+//                }
+//            }
+//            return list;
+//        }
 
-        public List<EbSite.Entity.NewsClass> NewsClass_GetNotConfig(string sWhere)
-        {
-            string where = string.Empty;
-            StringBuilder strSql = new StringBuilder();
+//        public List<EbSite.Entity.NewsClass> NewsClass_GetNotConfig(string sWhere)
+//        {
+//            string where = string.Empty;
+//            StringBuilder strSql = new StringBuilder();
 
-            strSql.AppendFormat(@"SELECT * FROM {0}newsclass 
-WHERE id not in(SELECT ClassId FROM {0}classsetconfig)", sPre);
+//            strSql.AppendFormat(@"SELECT * FROM {0}newsclass 
+//WHERE id not in(SELECT ClassId FROM {0}classsetconfig)", sPre);
 
-            if (!string.IsNullOrEmpty(sWhere))
-                where = string.Concat(" AND ", sWhere);
-            strSql.Append(where);
+//            if (!string.IsNullOrEmpty(sWhere))
+//                where = string.Concat(" AND ", sWhere);
+//            strSql.Append(where);
 
-            List<EbSite.Entity.NewsClass> list = new List<EbSite.Entity.NewsClass>();
-            using (IDataReader dataReader = DbHelperCms.Instance.ExecuteReader(CommandType.Text, strSql.ToString()))
-            {
-                while (dataReader.Read())
-                {
-                    list.Add(NewsClass_ReaderBind(dataReader));
-                }
-            }
-            return list;
-        }
+//            List<EbSite.Entity.NewsClass> list = new List<EbSite.Entity.NewsClass>();
+//            using (IDataReader dataReader = DbHelperCms.Instance.ExecuteReader(CommandType.Text, strSql.ToString()))
+//            {
+//                while (dataReader.Read())
+//                {
+//                    list.Add(NewsClass_ReaderBind(dataReader));
+//                }
+//            }
+//            return list;
+//        }
         #endregion 写
 
     }

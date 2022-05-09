@@ -42,7 +42,7 @@
                             <asp:TemplateField HeaderText="操作">
                                 <ItemTemplate>
 
-                                    <a href='<%#EbSite.BLL.Remark.PageUrl(Convert.ToInt32( Eval("classid")),Convert.ToInt32( Eval("contentid"))) %>' target="_blank">进入页面</a>
+                                    <a class="AdminLinkButton" href='<%#EbSite.BLL.Remark.PageUrl(Convert.ToInt32( Eval("classid")),Convert.ToInt32( Eval("contentid"))) %>' target="_blank">进入页面</a>
                                     <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel" confirm="true" Text="删除" />
 
                                     <XS:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="ShowModel" Text="查看回复" />

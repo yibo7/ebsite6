@@ -40,7 +40,7 @@
                                     <asp:TemplateField HeaderText="操作">
                                     <ItemTemplate>
                                         
-                                        <a href="<%#GetTempListUrl(Eval("ThemePath").ToString()) %>">编辑模板</a>      
+                                        <a class="AdminLinkButton" href="<%#GetTempListUrl(Eval("ThemePath").ToString()) %>">编辑模板</a>      
 
                                     <XS:EasyuiDialog ID="wbModify" runat="server" Text="修改" Title="修改" />        
                                      <XS:LinkButton ID="lbDelete"  runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel"  Text="删除"></XS:LinkButton>

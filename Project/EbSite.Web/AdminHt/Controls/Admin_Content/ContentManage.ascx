@@ -2,8 +2,8 @@
     Inherits="EbSite.Web.AdminHt.Controls.Admin_Content.ContentManage" %>
 <%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
 
- <div class="container-fluid mt10">
-	<div class="row-fluid"> 
+<div class="container-fluid mt10">
+    <div class="row-fluid">
         <ul id="tagModels" class="nav nav-tabs">
             <asp:Repeater ID="repWebModel" runat="server">
                 <ItemTemplate>
@@ -22,10 +22,10 @@
             <div id="tg1" class="tab-pane active">
                 <XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
                 <div id="PagesMain">
-                    <table class="table table-hover" >
+                    <table class="table table-hover">
                         <XS:Repeater ID="rpList" runat="server">
                             <HeaderTemplate>
-                                <tr >
+                                <tr>
                                     <th scope="col">ID</th>
                                     <th scope="col">标题
                                     </th>
@@ -62,17 +62,11 @@
                                     </td>
                                     <td><%#Eval("UserNiName")%></td>
                                     <td><%#Eval("AddTime")%></td>
-                                    <td><span><a href='<%#string.Format("?t=4&id={0}&&modelid={1}",Eval("id"),ModelID)%>'>
-                                        <img title="编辑" src="<%=IISPath %>images/edit.gif" />
-                                    </a></span>
-                                        <span>
-                                            <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' OnClientClick="javascript:return confirm('您确定要删除该项么?')" CommandName="DeleteModel" Text="删除">
-                            <img title="删除内容" src="<%=IISPath %>images/delete.gif" />
-                                            </XS:LinkButton>
-                                        </span>
-                                        <span>
-                                            <XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="CopyModel" Text="复制"><img title="复制内容" src="<%=IISPath %>images/copy.gif" /></XS:LinkButton>
-                                        </span></td>
+                                    <td>
+                                        <a class="AdminLinkButton" href='<%#string.Format("?t=4&id={0}&&modelid={1}",Eval("id"),ModelID)%>'>编辑</a>
+                                        <XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="CopyModel" confirm="true" Text="复制" />
+                                        <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' OnClientClick="javascript:return confirm('您确定要删除该项么?')" CommandName="DeleteModel" Text="删除" />
+                                    </td>
                                     <td>
                                         <input name="ebcheckboxname" value="<%#Eval("ID")%>" type="checkbox" /></td>
 
@@ -82,10 +76,10 @@
                         </XS:Repeater>
                     </table>
                 </div>
-               
-                  <XS:PagesContrl ID="pcPage" Linktype="Aspx" runat="server" />
-               
-                
+
+                <XS:PagesContrl ID="pcPage" Linktype="Aspx" runat="server" />
+
+
             </div>
         </div>
     </div>
@@ -101,32 +95,32 @@
             </div>
             <div style="height: 100px;" class="modal-body">
                 <table>
-        <tr>
-            <td colspan="4">
-                <asp:Label ID="lbInfo" runat="server"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4">你可以输入以下内容ID范围，也可以选择指定内容(可多选)
-            </td>
-        </tr>
-        <tr>
-            <td>开始ID
-            </td>
-            <td>
-                <XS:TextBox ID="txtID" Width="50" runat="server">0</XS:TextBox>
-            </td>
-            <td>结束ID
-            </td>
-            <td>
-                <XS:TextBox ID="txtEndID" Width="50" HintInfo="如果不选择任何内容，将按起始ID生成" runat="server"></XS:TextBox>
-            </td>
-        </tr>
-    </table>
+                    <tr>
+                        <td colspan="4">
+                            <asp:Label ID="lbInfo" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">你可以输入以下内容ID范围，也可以选择指定内容(可多选)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>开始ID
+                        </td>
+                        <td>
+                            <XS:TextBox ID="txtID" Width="50" runat="server">0</XS:TextBox>
+                        </td>
+                        <td>结束ID
+                        </td>
+                        <td>
+                            <XS:TextBox ID="txtEndID" Width="50" HintInfo="如果不选择任何内容，将按起始ID生成" runat="server"></XS:TextBox>
+                        </td>
+                    </tr>
+                </table>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button"  class="btn btn-primary">生成(html静态页)</button>
+                <button type="button" class="btn btn-primary">生成(html静态页)</button>
             </div>
         </div>
     </div>
@@ -140,23 +134,23 @@
                 <h4 class="modal-title" id="myModalLabel">生成静态页面</h4>
             </div>
             <div style="height: 300px;" class="modal-body">
-                 没有扩展高级搜索
+                没有扩展高级搜索
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button"  class="btn btn-primary">搜索</button>
+                <button type="button" class="btn btn-primary">搜索</button>
             </div>
         </div>
     </div>
 </div>
- 
- 
+
+
 <XS:Button Style="display: none;" ID="btnMake" IsButton="true" runat="server" Text="生成(html静态页)"
     OnClick="btnMake_Click" />
 
 <script>
 
-    $(function() {
+    $(function () {
         var objTags = $("#tagModels li");
         if (objTags.length == 1) {
             objTags.remove();

@@ -7,11 +7,13 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace EbSite.Web.AdminHt {
-    
-    
-    public partial class PagesModules {
-        
+namespace EbSite.Web.AdminHt
+{
+
+
+    public partial class PagesModules
+    {
+
         /// <summary>
         /// Head1 控件。
         /// </summary>
@@ -20,25 +22,7 @@ namespace EbSite.Web.AdminHt {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
-        
-        /// <summary>
-        /// rpMenus 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::EbSite.Control.Repeater rpMenus;
-        
-        /// <summary>
-        /// ucPageTags 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::EbSite.Control.CustomTags ucPageTags;
-        
+
         /// <summary>
         /// form2 控件。
         /// </summary>
@@ -47,7 +31,16 @@ namespace EbSite.Web.AdminHt {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form2;
-        
+
+        /// <summary>
+        /// ucPageTags 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::EbSite.Control.CustomTags ucPageTags;
+
         /// <summary>
         /// ctphBody 控件。
         /// </summary>

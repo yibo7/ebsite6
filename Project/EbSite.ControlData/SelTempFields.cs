@@ -21,8 +21,9 @@ namespace EbSite.ControlData
         {
             
             this.Load += SelTempFields_Load;
-            this.IsModal = false;
-            this.IsFull = false;
+            this.IsDialog = true;//2022-5-9
+            //this.IsModal = false;
+            //this.IsFull = false;
         }
 
         private int _theretype;

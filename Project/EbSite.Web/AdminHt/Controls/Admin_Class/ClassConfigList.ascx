@@ -22,15 +22,10 @@
                 <asp:TemplateField HeaderText="操作">
                     <ItemTemplate>
                         
-                        <XS:LinkButton ID="lbModify" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="modifyCf">
-                            <span class="linkbtn">修改</span>
-                        </XS:LinkButton>                       
-                        <span class="linkbtn">
-                            <XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="copy" confirm="true" Text="复制" />
-                        </span>
-                        
-                        <XS:LinkButton ID="lbSetDefault" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="SetToDefault"  confirm="true"  ><span class="linkbtn">设为默认</span></XS:LinkButton>
-                        <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel" confirm="true" ><span class="linkbtn">删除</span></XS:LinkButton>
+                        <XS:LinkButton ID="lbModify" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="modifyCf" Text="修改" />  
+                        <XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="copy" confirm="true" Text="复制" />                       
+                        <XS:LinkButton ID="lbSetDefault" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="SetToDefault"   confirm="true" Text="设为默认" />
+                        <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel" confirm="true"  Text="删除" />
                     </ItemTemplate>
                 </asp:TemplateField>
 

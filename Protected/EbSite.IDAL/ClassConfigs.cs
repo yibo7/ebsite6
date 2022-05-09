@@ -76,17 +76,22 @@ namespace EbSite.Data.Interface
 	    bool IsHaveClassConfigs(int SiteID);
         //bool IsHaveClassConfigsByClassID(int ClassID);
 	    Entity.ClassConfigs GeClassConfigs(int SiteID);
-        void UpdateDefaultClassConfigs(Entity.ClassConfigs Model);
+        //void UpdateDefaultClassConfigs(Entity.ClassConfigs Model);
         Entity.ClassConfigs GeClassConfigsByClassID(int ClassID);
         List<Entity.ClassConfigs> GeClassConfigsByModuleId(Guid mid);
-        void DeleteByClassID(int ClassID);
+        //void DeleteByClassID(int ClassID);
 		/// <summary>
 		/// 将某个设置更新为默认
 		/// </summary>
 		/// <param name="id"></param>
 		/// <param name="siteId"></param>
 		void UpdateDefault(int id,int siteId);
-
+		/// <summary>
+		/// 获取某个站点下的默认配置Id
+		/// </summary>
+		/// <param name="siteId"></param>
+		/// <returns></returns>
+		int GetDefaultConfigId(int siteId);
 	}
 }
 

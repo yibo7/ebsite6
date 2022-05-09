@@ -5,20 +5,20 @@
        <div class="container-fluid mt10">
 	<div class="row-fluid"> 
             <ul class="nav nav-tabs">
-                <li class="active tab">
-                    <a href="#tg1" data-toggle="tab" aria-expanded="false">
+                <li class="nav-item">
+                    <a class="active nav-link" href="#tg1" data-toggle="tab" aria-expanded="false">
                         <span class="visible-xs"><i class="fa fa-cogs"></i></span>
                         <span class="hidden-xs">插件设置</span>
                     </a>
                 </li>
-                <li class="tab">
-                    <a href="#tg2" data-toggle="tab" aria-expanded="false">
+                <li class="nav-item">
+                    <a class="nav-link" href="#tg2" data-toggle="tab" aria-expanded="false">
                         <span class="visible-xs"><i class="fa fa-database"></i></span>
                         <span class="hidden-xs">数据列表</span>
                     </a>
                 </li>
-                <li class="tab">
-                    <a href="#tg3" data-toggle="tab" aria-expanded="false">
+                <li class="nav-item">
+                    <a class="nav-link" href="#tg3" data-toggle="tab" aria-expanded="false">
                         <span class="visible-xs"><i class="fa fa-lightbulb-o"></i></span>
                         <span class="hidden-xs">使用帮助</span>
                     </a>

@@ -8,109 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
     <meta name="author" content="Coderthemes">
-
-    <title>通用</title>
+    <title>模块</title>
 </head>
-<body class="fixed-left">
-     
-<style>
-    .tagtitle{ padding: 15px;}
-</style>
-    
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="col-md-2">
-            
-
-            <div class="row cbrowbox">
-                <div class="col-sm-12 col-md-12 ">
-                   
-                    <div class="content">
-                        <div class="panel-group">
-                            <div>
-                                 <strong><i class='glyphicon glyphicon-chevron-right'></i> <%=ModulsName %></strong>
-                            </div>
-                            
-                            <div class="panel-group mt10" id="accordion">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                                <i class='glyphicon glyphicon-th-large'></i> 模块功能
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseOne" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <ul class="nav nav-pills nav-stacked">
-                                            <XS:Repeater ID="rpMenus" runat="server">
-                                                <ItemTemplate>
-                                                    <li>
-                                                        <a href="<%#Eval("Url")%>"><%#Eval("PageName")%> </a>
-                                                    </li>
-                                                </ItemTemplate>
-                                            </XS:Repeater> 
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                                <i class='glyphicon glyphicon-wrench'></i> 基础配置
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseTwo" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <ul class="nav nav-pills nav-stacked">
-                                                <li>
-                                                    <a href="<%=AdminPath %>Admin_Modules.aspx?t=2&mid=<%=sModelID %>">模块设置</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<%=AdminPath %>Admin_Modules.aspx?t=1&mid=<%=sModelID %>">菜单设置</a>
-                                                </li>
-                                                <li>
-                                                    <a href="<%=AdminPath %>Admin_Modules.aspx?t=20&mid=<%=sModelID %>">权限管理</a>
-                                                </li>
-                                                <%-- <li>
-                                                    <a href="<%=AdminPath %>Admin_Modules.aspx?t=18&mid=<%=sModelID %>">模块升级</a>
-                                                </li>--%>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                         
-                            </div>
-                            
-                         
-                            </div>
-                        
-                    </div>
-                </div>
-            </div> 
-        </div>
-        <div class="col-md-10">
-            
-            <div class="row cbrowbox">
-                <div class="col-sm-12 col-md-12 ">
-                    <div>
-                        <h5> <!--目前CustomTags只有模块用到-->
-                            <XS:CustomTags ID="ucPageTags" CssClass="CustomPageTag" runat="server"></XS:CustomTags></h5>
-                    </div>
-                    <div class="content">
-                        <form id="form2" runat="server"> 
-                            <asp:ContentPlaceHolder ID="ctphBody" runat="server"></asp:ContentPlaceHolder>
-                     
-                        </form>
-                    </div>
-                </div>
-            </div>
-           
-        </div>
-      
-    </div>
-</div>
+<body>
+     <form id="form2" runat="server">
+        <XS:CustomTags ID="ucPageTags" CssClass="CustomPageTag" runat="server"></XS:CustomTags>
+        <asp:ContentPlaceHolder ID="ctphBody" runat="server"></asp:ContentPlaceHolder>
+    </form>
 </body>
 </html>

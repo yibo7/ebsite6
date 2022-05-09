@@ -209,42 +209,7 @@ namespace EbSite.Modules.BBS.ModuleCore.BLL
         public List<Entity.TopicReplies> GetListPagesCache(int PageIndex, int PageSize, string strWhere, string Fileds, string oderby, out int RecordCount, int classid)
         {
             return GetListPages( PageIndex,  PageSize,  strWhere,  Fileds,  oderby, out  RecordCount,  classid);
-
-            //List<Entity.TopicReplies> lstData = GetListPages(PageIndex, PageSize, strWhere, oderby, out RecordCount, classid);
-            //RecordCount = GetCountCache(strWhere, classid);
-            //return lstData;
-
-            //string rawKey = string.Concat("GlPages-", PageIndex, PageSize, strWhere, Fileds, oderby);
-            //string rawKeyCount = string.Concat("C-", rawKey);
-            //List<Entity.TopicReplies> lstData = base.GetCacheItem(rawKey) as List<Entity.TopicReplies>;
-            //int iRecordCount = -1;
-            //if (Equals(lstData, null))
-            //{
-            //    //从基类调用，激活事件
-            //    lstData = base.GetListPagesEv(PageIndex, PageSize, strWhere, Fileds, oderby, out  RecordCount);
-            //    if (!Equals(lstData, null))
-            //    {
-            //        base.AddCacheItem(rawKey, lstData);
-            //        base.AddCacheItem(rawKeyCount, RecordCount.ToString());
-            //    }
-            //}
-            //if (iRecordCount == -1)
-            //{
-            //    string sCount = base.GetCacheItem(rawKeyCount) as string;
-            //    if (!string.IsNullOrEmpty(sCount))
-            //    {
-            //        RecordCount = int.Parse(sCount);
-            //    }
-            //    else
-            //    {
-            //        RecordCount = GetCountCache(strWhere, classid);
-            //    }
-            //}
-            //else
-            //{
-            //    RecordCount = iRecordCount;
-            //}
-            //return lstData;
+             
         }
         /// <summary>
         /// 获得数据列表-分页

@@ -107,7 +107,10 @@ namespace EbSite.Modules.BBS.AdminPages.Controls.PostManage
         }
         override protected object LoadList(out int iCount)
         {
-            return ModuleCore.BLL.TopicReplies.Instance.GetListPages(pcPage.PageIndex, iPageSize, "DeleteFlag=0", "", out iCount, ClassID);
+            if(ClassID>0)
+                return ModuleCore.BLL.TopicReplies.Instance.GetListPages(pcPage.PageIndex, iPageSize, "DeleteFlag=0", "", out iCount, ClassID);
+            iCount = 0;
+            return null;
         }
         /// <summary>
         /// 重写简单查询条件

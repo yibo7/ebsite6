@@ -25,7 +25,7 @@
         
         <asp:TemplateField HeaderText="操作">
                     <ItemTemplate>        
-                          <a href="?t=12&id=<%#Eval("id") %>">详细</a>                  
+                          <a class="AdminLinkButton" href="?t=12&id=<%#Eval("id") %>">详细</a>                  
                           <XS:EasyuiDialog ID="EasyuiDialog1" runat="server" Width="500" Height="300" Href='<%# string.Concat("?t=3&u=",Eval("UserName"))%>' Text="分配会员组" SaveText="保存用户组" Title="分配会员组" />
                           <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("UserName") %>' CommandName="DeleteModel"
                         confirm="true" Text="删除"></XS:LinkButton>

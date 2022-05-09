@@ -4,14 +4,14 @@
 <div class="container-fluid mt10">
 	<div class="row-fluid"> 
         <ul class="nav nav-tabs">
-            <li class="active nav-item">
-                <a href="#tg1" data-toggle="tab" aria-expanded="false">
+            <li class="nav-item">
+                <a class="active nav-link" href="#tg1" data-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-bug"></i></span>
                     <span class="hidden-xs">选择分类生成采集接口地址</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#tg2" data-toggle="tab" aria-expanded="false">
+                <a class="nav-link" href="#tg2" data-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-legal"></i></span>
                     <span class="hidden-xs">字段附加说明</span>
                 </a>

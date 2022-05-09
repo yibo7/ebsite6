@@ -12,29 +12,29 @@ namespace EbSite.Web.AdminHt
 {
     public partial class PagesModules : BaseMaster
     { 
-        protected string GetRols
-        {
-            get
-            {
-                StringBuilder sb = new StringBuilder();
-                //EbSite.BLL.GetLink.HrefFactory.GetAspxInstance(GetSiteID).GetRemark()
-                foreach (string role in ap.Roles)
-                {
-                    sb.Append(role);
-                    sb.Append("|");
-                }
-                if (sb.Length > 1)
-                    sb.Remove(sb.Length - 1, 1);
-                if (sb.Length == 0) return "未分配角色";
-                return sb.ToString();
-            }
-        }
+        //protected string GetRols
+        //{
+        //    get
+        //    {
+        //        StringBuilder sb = new StringBuilder();
+        //        //EbSite.BLL.GetLink.HrefFactory.GetAspxInstance(GetSiteID).GetRemark()
+        //        foreach (string role in ap.Roles)
+        //        {
+        //            sb.Append(role);
+        //            sb.Append("|");
+        //        }
+        //        if (sb.Length > 1)
+        //            sb.Remove(sb.Length - 1, 1);
+        //        if (sb.Length == 0) return "未分配角色";
+        //        return sb.ToString();
+        //    }
+        //}
 
-        protected AdminPrincipal ap;
+        //protected AdminPrincipal ap;
 
         
-        public void MoneyOptionChanged(object sender, EventArgs e)
-        {
+        //public void MoneyOptionChanged(object sender, EventArgs e)
+        //{
             //if (!string.IsNullOrEmpty(drpSites.SelectedValue))
             //{
 
@@ -49,51 +49,51 @@ namespace EbSite.Web.AdminHt
 
             //    Base.Host.Instance.Tips("", "站点列表取值为空，操作错误");
             //}
-        }
-        protected string sModelID
-        {
-            get
-            {
-                if (!string.IsNullOrEmpty(Request["mid"]))
-                {
-                    return Request["mid"].Trim();
-                }
-                else
-                {
-                   Host.Instance.Tips("出错了", "找不到相应的模块目录！", "");
-                    return "";
-                }
-            }
-        }
-        protected Entity.Sites SiteModel;
-        protected string ModulsName=string.Empty;
+        //}
+        //protected string sModelID
+        //{
+        //    get
+        //    {
+        //        if (!string.IsNullOrEmpty(Request["mid"]))
+        //        {
+        //            return Request["mid"].Trim();
+        //        }
+        //        else
+        //        {
+        //           Host.Instance.Tips("出错了", "找不到相应的模块目录！", "");
+        //            return "";
+        //        }
+        //    }
+        //}
+        //protected Entity.Sites SiteModel;
+        //protected string ModulsName=string.Empty;
         protected void Page_Load(object sender, System.EventArgs e)
         {
             if (!IsPostBack)
             {
 
-                ap = AppStartInit.CheckAdmin();
-                //llRoles.Text = GetRols;
+                //ap = AppStartInit.CheckAdmin();
+                ////llRoles.Text = GetRols;
 
-                //rpTopMenus.ItemDataBound += new RepeaterItemEventHandler(rpTopMenus_ItemBound); 
-                //var pMenus = BLL.Menus.Instance.GetMenusByParentID(Guid.Empty, Base.Host.Instance.UserName);
-                SiteModel = Host.Instance.CurrentSite;
+                ////rpTopMenus.ItemDataBound += new RepeaterItemEventHandler(rpTopMenus_ItemBound); 
+                ////var pMenus = BLL.Menus.Instance.GetMenusByParentID(Guid.Empty, Base.Host.Instance.UserName);
+                //SiteModel = Host.Instance.CurrentSite;
 
-                ModulsName =  BLL.ModulesBll.Modules.Instance.GetModelName(new Guid(sModelID));
+                //ModulsName =  BLL.ModulesBll.Modules.Instance.GetModelName(new Guid(sModelID));
 
 
-                 List<ModulesPageModel> lstMenus = new List<ModulesPageModel>();
-                BLL.ModulesBll.MenusForAdminer mm = new MenusForAdminer(new Guid(sModelID));
+                // List<ModulesPageModel> lstMenus = new List<ModulesPageModel>();
+                //BLL.ModulesBll.MenusForAdminer mm = new MenusForAdminer(new Guid(sModelID));
               
-                List<ModulePageInfo> lstParent = mm.GetParentMenu(); 
+                //List<ModulePageInfo> lstParent = mm.GetParentMenu(); 
 
-                foreach (ModulePageInfo pageInfo in lstParent)
-                {
-                    lstMenus.Add(new ModulesPageModel(pageInfo.PageName, pageInfo.GetRealUrl()));
-                }
+                //foreach (ModulePageInfo pageInfo in lstParent)
+                //{
+                //    lstMenus.Add(new ModulesPageModel(pageInfo.PageName, pageInfo.GetRealUrl()));
+                //}
 
-                rpMenus.DataSource = lstMenus;
-                rpMenus.DataBind();
+                //rpMenus.DataSource = lstMenus;
+                //rpMenus.DataBind();
                  
 
                 //List<Entity.Sites> ls = BLL.Sites.Instance.FillList();
@@ -195,11 +195,11 @@ namespace EbSite.Web.AdminHt
         //    //此页面不需要PagesCustom,所以重写了此办法
         //}
 
-        protected void lbLogout_Click(object sender, EventArgs e)
-        {
-            BLL.User.UserIdentity.SignOutAdmin();
-            Base.AppStartInit.RedirectToIndex();
-        }
+        //protected void lbLogout_Click(object sender, EventArgs e)
+        //{
+        //    BLL.User.UserIdentity.SignOutAdmin();
+        //    Base.AppStartInit.RedirectToIndex();
+        //}
     }
 
     public class ModulesPageModel

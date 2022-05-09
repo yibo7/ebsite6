@@ -185,7 +185,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Component
                             if (x.Settings.Count == 0 || (x.Settings.Count == 1 && x.Settings[0] == null) || x.ShowSettings == false)
                                 sb.Append("<td>&nbsp;</td>");
                             else
-                                sb.Append("<td align='center'><a href='?t=1&ext=" + x.Name + "'>编辑</a></td>");
+                                sb.Append("<td><a class=\"AdminLinkButton\" href='?t=1&ext=" + x.Name + "'>编辑</a></td>");
                         }
                     }
                     sb.Append("<td><input  type=\"checkbox\"></td>");

@@ -315,7 +315,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Content
 
         protected override void CopyData(object ID)
         {
-            NewsContentInst.GetCopyClass(int.Parse(ID.ToString()), GetSiteID);
+            NewsContentInst.GetCopyContent(int.Parse(ID.ToString()), GetSiteID);
         }
 
         #region gdList事件扩展
@@ -340,14 +340,14 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Content
                 string id = e.CommandArgument.ToString();
                 Response.Redirect(string.Format("{0}&cid={1}", GetMenuLink(0), id));
             }
-            else if (Equals(e.CommandName, "CopyClass"))
-            {
-                string id = e.CommandArgument.ToString();
-                NewsContentInst.GetCopyClass(int.Parse(id), GetSiteID);
-                //这里要刷新GridView
-                base.gdList_Bind();
+            //else if (Equals(e.CommandName, "CopyClass"))
+            //{
+            //    string id = e.CommandArgument.ToString();
+            //    NewsContentInst.GetCopyClass(int.Parse(id), GetSiteID);
+            //    //这里要刷新GridView
+            //    base.gdList_Bind();
 
-            }
+            //}
         }
         #endregion 
 

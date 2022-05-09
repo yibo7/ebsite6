@@ -11,10 +11,12 @@
             <div class="content">
 				 <div id="PagesMain">
                 <div>
-                    <asp:PlaceHolder ID="phTools" runat="server"></asp:PlaceHolder>
-                    <XS:Button ID="bntQuery"  Width="50" runat="server" Text=" 查询 " OnClick="bntQuery_Click" />
+                    <asp:PlaceHolder ID="phTools" runat="server"></asp:PlaceHolder>                  
                            
                 </div> 
+                <div>
+                     <XS:Button ID="bntQuery"   runat="server" Text=" 查询 " OnClick="bntQuery_Click" />
+                </div>
                 <asp:PlaceHolder ID="phShowTable" runat="server">
                     <div style="text-align: left; padding: 8px;">
                         <asp:Literal ID="lbDefaultTips" runat="server"></asp:Literal>

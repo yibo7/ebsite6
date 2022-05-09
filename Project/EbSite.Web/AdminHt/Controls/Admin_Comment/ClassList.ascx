@@ -32,7 +32,7 @@
                                 <XS:EasyuiDialog ID="wbModify" runat="server" Text="修改" Title="修改" />
                                 <XS:LinkButton ID="lbDelete" Tips_Msg="删除此分类吗？同时删除其下的所有评价。" Visible='<%#!bool.Parse( Eval("IsSystem").ToString())%>'  runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel"
                                     Text="删除"></XS:LinkButton> 
-                               <a   href="Admin_Comment.aspx?t=3&id=<%#Eval("id") %> ">代码调用</a>
+                               <a class="AdminLinkButton"  href="Admin_Comment.aspx?t=3&id=<%#Eval("id") %> ">代码调用</a>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField ItemStyle-Width="30" HeaderText="<input id='chAll' onclick='on_check(this)'  type=checkbox />">

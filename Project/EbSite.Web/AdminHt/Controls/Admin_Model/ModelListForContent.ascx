@@ -22,7 +22,7 @@
                         confirm="true" Text="复制[新表存储]"></XS:LinkButton>   --%>               
                     <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel" Visible='<%#!bool.Parse(Eval("IsSystem").ToString()) %>'
                         confirm="true" Text="删除"></XS:LinkButton>
-                        <a href="<%#GetEditFiledUrl(Eval("id")) %>">编辑字段</a>
+                        <a class="AdminLinkButton" href="<%#GetEditFiledUrl(Eval("id")) %>">编辑字段</a>
                         <XS:EasyuiDialog  ID="edOrder" Width="500" runat="server" SaveText="保存结果"  Href='<%#GetOrderUrl(Eval("id")) %>' Text="字段排序" Title="字段排序" /> 
                                          </ItemTemplate>
                                    </asp:TemplateField> 

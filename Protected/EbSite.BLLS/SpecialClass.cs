@@ -742,29 +742,34 @@ namespace EbSite.BLL
 
         #region 复制类内容 杨欢乐 2011-10-26
 
-        public static Entity.SpecialClass GetCopyClass(int id, int SiteID)
+        public static Entity.SpecialClass GetCopySpecial(int id, int SiteID)
         {
 
             Entity.SpecialClass model = GetModel(id);
-            Entity.SpecialClass NewModel = new Entity.SpecialClass();
+            //Entity.SpecialClass NewModel = new Entity.SpecialClass();
 
-            NewModel.SpecialName = "复制" + model.SpecialName;
-            NewModel.Orderid = model.Orderid;
-            NewModel.Titletype = model.Titletype;
-            NewModel.Outlink = model.Outlink;
-            NewModel.HtmlName = model.HtmlName;
-            NewModel.ClassHtmlNameRule = model.ClassHtmlNameRule;
-            NewModel.SpecialTemID = model.SpecialTemID;
-            NewModel.SeoTitle = model.SeoTitle;
-            NewModel.SeoKeyWord = model.SeoKeyWord;
-            NewModel.SeoDescription = model.SeoDescription;
-            NewModel.ParentID = model.ParentID;
-            NewModel.RelateClassIDs = model.RelateClassIDs;
-            NewModel.SiteID = model.SiteID;
-            NewModel.SpecialTemIDMobile = model.SpecialTemIDMobile;
-            int sid = Add(NewModel, SiteID);
-            NewModel.id = sid;
-            return NewModel;
+            model.SpecialName = "复制" + model.SpecialName;
+
+            int sid = Add(model, SiteID);
+            model.id = sid;
+            return model;
+
+            //NewModel.Orderid = model.Orderid;
+            //NewModel.Titletype = model.Titletype;
+            //NewModel.Outlink = model.Outlink;
+            //NewModel.HtmlName = model.HtmlName;
+            //NewModel.ClassHtmlNameRule = model.ClassHtmlNameRule;
+            //NewModel.SpecialTemID = model.SpecialTemID;
+            //NewModel.SeoTitle = model.SeoTitle;
+            //NewModel.SeoKeyWord = model.SeoKeyWord;
+            //NewModel.SeoDescription = model.SeoDescription;
+            //NewModel.ParentID = model.ParentID;
+            //NewModel.RelateClassIDs = model.RelateClassIDs;
+            //NewModel.SiteID = model.SiteID;
+            //NewModel.SpecialTemIDMobile = model.SpecialTemIDMobile;
+            /*int sid = Add(model, SiteID);*/
+            //model.id = sid;
+            //return model;
         }
 
         #endregion

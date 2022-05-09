@@ -286,20 +286,20 @@ namespace EbSite.Control
                     }
                     else    //这里主要对bnt的设置
                     {
-                        string str = "";
+                        string strOnclick = "";
                         if (!string.IsNullOrEmpty(item.OnClientClick))
                         {
-                            str = string.Format("onclick=\"{0}\"", item.OnClientClick);
+                            strOnclick = string.Format("onclick=\"{0}\"", item.OnClientClick);
                         }
-                        string str2 = "#";
+                        string strHref = "#";
                         if (item.IsPostBack)
                         {
-                            str2 = "javascript: " + this.Page.ClientScript.GetPostBackEventReference(this, item.EventTag);
+                            strHref = "javascript: " + this.Page.ClientScript.GetPostBackEventReference(this, item.EventTag);
                         }
-                        string str3 = "";
+                        string sIsRight = "";
                         if (item.IsRight)
                         {
-                            str3 = "class=\"right\"";
+                            sIsRight = "class=\"right\"";
                         }
                         string strTips = "";
                         if (!string.IsNullOrEmpty(item.Tips))
@@ -308,7 +308,7 @@ namespace EbSite.Control
                             //strTips = string.Format("onmouseover=\"TipsAutoClose(this,'{0}')\"", item.Tips);
 
                         }
-                        output.Write(string.Format("<a {2} {0} href=\"{1}\" {3} {4} ><span>\r\n", new object[] { str, str2, str3, item.Attributes, strTips }));
+                        output.Write(string.Format("<a {2} {0} href=\"{1}\" {3} {4} ><span>\r\n", new object[] { strOnclick, strHref, sIsRight, item.Attributes, strTips }));
                         output.Write(string.Format("<img align=\"left\" src=\"{0}\" alt=\"{1}\" />{1}", item.Img, item.Text));
                         output.Write("\r\n</span></a>");
                     }

@@ -175,9 +175,9 @@ namespace EbSite.Data.Interface
 
         List<int> GetChildIDClass(int ParentID, int SiteID);
        List<Entity.NewsClass> GetChildClass(int ParentID, int SiteID);
-        List<EbSite.Entity.NewsClass> NewsClass_GetListArrayFormConfigId(int iConfigId);
+        //List<EbSite.Entity.NewsClass> NewsClass_GetListArrayFormConfigId(int iConfigId);
 
-        List<EbSite.Entity.NewsClass> NewsClass_GetNotConfig(string sWhere);
+        //List<EbSite.Entity.NewsClass> NewsClass_GetNotConfig(string sWhere);
 
     }
 }

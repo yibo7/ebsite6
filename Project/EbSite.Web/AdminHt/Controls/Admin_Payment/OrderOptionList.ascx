@@ -34,7 +34,7 @@
 			            </asp:TemplateField>
                         <asp:TemplateField HeaderText="操作">
 				            <ItemTemplate>
-                                <a href="<%=GetUrl %>&t=58&id=<%#Eval("ID") %>">编辑选项列表</a>
+                                <a class="AdminLinkButton" href="<%=GetUrl %>&t=58&id=<%#Eval("ID") %>">编辑选项列表</a>
                                 <XS:EasyuiDialog ID="wbModify" Title="修改" Text="修改" runat="server"/>&nbsp;&nbsp;
 					            <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("ID") %>' CommandName="DeleteModel" confirm="true" Text="删除"></XS:LinkButton>
 				            </ItemTemplate>

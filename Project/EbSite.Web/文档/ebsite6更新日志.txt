@@ -1,0 +1,23 @@
+﻿ 
+ebsite6更新日志:
+
+1.升级.net 框架为 4.8 
+
+2.升级MVC框架为5.2.8
+
+3.删除一些无用.net库
+
+4.升级前端js相关框架
+
+5.添加了上传控件WebUploaderFile，UploadImg及相关部件
+
+6.删除上传控件 UploadMobile,UpMediaFile
+
+7.删除表eb_classsetconfig
+
+8.为表eb_classconfigs添加字段ConfigName
+
+9.给eb_menus增加分类管理下的菜单【管理分类配置】
+
+10.重新改写分类配置程序
+

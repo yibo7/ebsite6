@@ -98,6 +98,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EasyuiDialog - 复制.cs" />
     <Compile Include="Upload\WebUploaderFile.cs" />
     <Compile Include="Upload\UploadImg.cs" />
     <Compile Include="UMEditor.cs" />

@@ -36,7 +36,7 @@
                 <ItemTemplate>
                   <XS:EasyuiDialog ID="wbModify" runat="server" Text="修改" Title="修改" />                    
                     <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel" confirm="true" Text="删除"></XS:LinkButton>
-                    <a target=_blank href="<%#Eval("Url") %>">访问模块</a>
+                    <a class="AdminLinkButton" target=_blank href="<%#Eval("Url") %>">访问模块</a>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="<input id='chAll' onclick='on_check(this)'  type=checkbox />">

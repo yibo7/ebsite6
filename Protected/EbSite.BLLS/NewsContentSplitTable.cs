@@ -1510,74 +1510,87 @@ namespace EbSite.BLL
 
 
         #region 复制类内容 杨欢乐 2011-10-26
-        public void GetCopyClass(int id, int SiteID)
+        public void GetCopyContent(int id, int SiteID)
         {
 
             Entity.NewsContent model = GetModel(id, SiteID);
-            Entity.NewsContent NewModel = new Entity.NewsContent();
+            model.NewsTitle = "复制" + model.NewsTitle;
+            model.hits = 0;//访问率(总)
+            model.IsGood = false;
+            model.dayHits = 0;//今日
+            model.weekHits = 0;//访问率(本周)
+            model.monthhits = 0;//访问率(本月)
+            model.lasthitstime = DateTime.Now;
+            model.TagIDs = "";
+            model.AddTime = DateTime.Now;
+
+            model.Advs = 0;//收藏 
+            model.CommentNum = 0;//评论
+            model.FavorableNum = 0; //好评 
+            model.RandNum = Core.Utils.GetRandNum();
+            model.NumberTime = Core.SqlDateTimeInt.GetSecond(model.AddTime);
+
+            Add(model);
+
+            //Entity.NewsContent NewModel = new Entity.NewsContent();
 
 
-            NewModel.SmallPic = model.SmallPic;
-            NewModel.NewsTitle = "复制" + model.NewsTitle;
-            NewModel.TitleStyle = model.TitleStyle;
-            NewModel.ClassID = model.ClassID;
-            NewModel.hits = 0;//访问率(总)
-            NewModel.IsGood = model.IsGood;
-            NewModel.ContentInfo = model.ContentInfo;
-            NewModel.dayHits = 0;//今日
-            NewModel.weekHits = 0;//访问率(本周)
-            NewModel.monthhits = 0;//访问率(本月)
-            NewModel.lasthitstime = model.lasthitstime;
-            NewModel.TagIDs = model.TagIDs;
-            NewModel.OrderID = model.OrderID;
-            NewModel.HtmlName = model.HtmlName;
-            NewModel.ContentHtmlNameRule = model.ContentHtmlNameRule;
-            NewModel.MarkIsMakeHtml = model.MarkIsMakeHtml;
-            NewModel.IsComment = model.IsComment;
-            NewModel.AddTime = model.AddTime;
-            NewModel.IsAuditing = model.IsAuditing;
-            NewModel.Annex1 = model.Annex1;
-            NewModel.Annex2 = model.Annex2;
-            NewModel.Annex3 = model.Annex3;
-            NewModel.Annex4 = model.Annex4;
-            NewModel.Annex5 = model.Annex5;
-            NewModel.Annex6 = model.Annex6;
-            NewModel.Annex7 = model.Annex7;
-            NewModel.Annex8 = model.Annex8;
-            NewModel.Annex9 = model.Annex9;
-            NewModel.Annex10 = model.Annex10;
+            //NewModel.SmallPic = model.SmallPic;
 
-            NewModel.Annex11 = model.Annex11;
-            NewModel.Annex12 = model.Annex12;
-            NewModel.Annex13 = model.Annex13;
-            NewModel.Annex14 = model.Annex14;
-            NewModel.Annex15 = model.Annex15;
-            NewModel.Annex16 = model.Annex16;
-            NewModel.Annex17 = model.Annex17;
-            NewModel.Annex18 = model.Annex18;
+            //NewModel.TitleStyle = model.TitleStyle;
+            //NewModel.ClassID = model.ClassID;
 
-            NewModel.Annex19 = model.Annex19;
-            NewModel.Annex20 = model.Annex20;
-            NewModel.Annex21 = model.Annex21;
-            NewModel.Annex22 = model.Annex22;
-            NewModel.Annex23 = model.Annex23;
-            NewModel.Annex24 = model.Annex24;
-            NewModel.Annex25 = model.Annex25;
+            //NewModel.ContentInfo = model.ContentInfo;
+
+            //NewModel.OrderID = model.OrderID;
+            //NewModel.HtmlName = model.HtmlName;
+            //NewModel.ContentHtmlNameRule = model.ContentHtmlNameRule;
+            //NewModel.MarkIsMakeHtml = model.MarkIsMakeHtml;
+            //NewModel.IsComment = model.IsComment;
+
+            //NewModel.IsAuditing = model.IsAuditing;
+            //NewModel.Annex1 = model.Annex1;
+            //NewModel.Annex2 = model.Annex2;
+            //NewModel.Annex3 = model.Annex3;
+            //NewModel.Annex4 = model.Annex4;
+            //NewModel.Annex5 = model.Annex5;
+            //NewModel.Annex6 = model.Annex6;
+            //NewModel.Annex7 = model.Annex7;
+            //NewModel.Annex8 = model.Annex8;
+            //NewModel.Annex9 = model.Annex9;
+            //NewModel.Annex10 = model.Annex10;
+
+            //NewModel.Annex11 = model.Annex11;
+            //NewModel.Annex12 = model.Annex12;
+            //NewModel.Annex13 = model.Annex13;
+            //NewModel.Annex14 = model.Annex14;
+            //NewModel.Annex15 = model.Annex15;
+            //NewModel.Annex16 = model.Annex16;
+            //NewModel.Annex17 = model.Annex17;
+            //NewModel.Annex18 = model.Annex18;
+
+            //NewModel.Annex19 = model.Annex19;
+            //NewModel.Annex20 = model.Annex20;
+            //NewModel.Annex21 = model.Annex21;
+            //NewModel.Annex22 = model.Annex22;
+            //NewModel.Annex23 = model.Annex23;
+            //NewModel.Annex24 = model.Annex24;
+            //NewModel.Annex25 = model.Annex25;
 
 
             //NewModel.ContentTemID = model.ContentTemID;
-            NewModel.Advs = 0;//收藏
-            NewModel.ClassName = model.ClassName;
-            NewModel.CommentNum = 0;//评论
-            NewModel.FavorableNum = 0; //好评
-            NewModel.UserID = model.UserID;
-            NewModel.UserNiName = model.UserNiName;
-            NewModel.UserName = model.UserName;
-            NewModel.SiteID = model.SiteID;
-            NewModel.RandNum = model.RandNum;
-            NewModel.NumberTime = model.NumberTime;
+            //model.Advs = 0;//收藏
+            ////NewModel.ClassName = model.ClassName;
+            //model.CommentNum = 0;//评论
+            //model.FavorableNum = 0; //好评
+            ////NewModel.UserID = model.UserID;
+            ////NewModel.UserNiName = model.UserNiName;
+            ////NewModel.UserName = model.UserName;
+            ////NewModel.SiteID = model.SiteID;
+            //model.RandNum = Core.Utils.GetRandNum();
+            //model.NumberTime = Core.SqlDateTimeInt.GetSecond(model.AddTime);
 
-            Add(NewModel);
+            //Add(model);
 
 
         }

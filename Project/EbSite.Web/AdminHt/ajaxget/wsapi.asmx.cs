@@ -71,7 +71,7 @@ namespace EbSite.Web.AdminHt.ajaxget
         [WebMethod]
         public JsonResponse CopySPClass(int cid,int sid)
         {
-            Entity.SpecialClass md = BLL.SpecialClass.GetCopyClass(cid,sid);
+            Entity.SpecialClass md = BLL.SpecialClass.GetCopySpecial(cid,sid);
             string sUrl = string.Format("Admin_Special.aspx?t=0&id={0}", md.id);
             return new JsonResponse { Message = "复制成功", Data = sUrl, Success = true };
         }

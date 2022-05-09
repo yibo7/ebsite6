@@ -28,7 +28,7 @@
                                    <asp:TemplateField HeaderText="操作">
                                          <ItemTemplate>
                                          <XS:EasyuiDialog ID="WinBox2" runat="server" Href='<%#ModifyUrl(Eval("TypeWidget"),Eval("DataID")) %>'  IsColseReLoad=false  Text="修改" Title="修改" />
-                                                    <a href='Admin_Ctr.aspx?t=9&type=<%#Eval("TypeWidget")%>&id=<%#Eval("DataID")%>'>预览</a>
+                                                    <a class="AdminLinkButton" href='Admin_Ctr.aspx?t=9&type=<%#Eval("TypeWidget")%>&id=<%#Eval("DataID")%>'>预览</a>
                                          <XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("DataID") %>' CommandName="CopyData"
                         confirm="true" Text="复制"></XS:LinkButton>
                                              <XS:LinkButton ID="lbDelete" Visible='<%#Eval("IsNoSysTem")%>' runat="server" CommandArgument='<%#Eval("DataID") %>' CommandName="DeleteModel"

@@ -20,14 +20,14 @@
                                    </asp:TemplateField>                             
                                      <asp:TemplateField HeaderText="操作">
                                          <ItemTemplate>       
-                                                <a href="?t=6&mid=<%#Eval("id") %>">管理内容</a>
-                                                 <a href="?t=8&id=<%#Eval("id") %>">编辑模板</a>
+                                                <a class="AdminLinkButton" href="?t=6&mid=<%#Eval("id") %>">管理内容</a>
+                                                 <a class="AdminLinkButton" href="?t=8&id=<%#Eval("id") %>">编辑模板</a>
                                                 <XS:EasyuiDialog ID="wbModify" runat="server" Text="修改" Title="修改" />    
                                                  <XS:LinkButton ID="lbCopy" runat="server"  CommandArgument='<%#Eval("id") %>' CommandName="CopyModel"
                         confirm="true" Text="复制"></XS:LinkButton>                      
                     <XS:LinkButton ID="lbDelete" runat="server" Visible='<%#!bool.Parse(Eval("IsSystem").ToString()) %>' CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel"
                         confirm="true" Text="删除"></XS:LinkButton>
-                        <a href="<%#GetEditFiledUrl(Eval("id")) %>">编辑字段</a>
+                        <a class="AdminLinkButton" href="<%#GetEditFiledUrl(Eval("id")) %>">编辑字段</a>
                                                  </ItemTemplate>
                                    </asp:TemplateField>  
                                     <asp:TemplateField ItemStyle-Width="30" HeaderText="<input id='chAll' onclick='on_check(this)'  type=checkbox />">

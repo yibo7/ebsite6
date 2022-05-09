@@ -73,10 +73,10 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Special
 
                 Response.Redirect(GetMenuLink(5)+"&id=" + id);
             }
-            else if (Equals(e.CommandName, "CopyClass"))
+            else if (Equals(e.CommandName, "CopySpecial"))
             {
                 string id = e.CommandArgument.ToString();
-                BLL.SpecialClass.GetCopyClass(int.Parse(id), base.GetSiteID);
+                BLL.SpecialClass.GetCopySpecial(int.Parse(id), base.GetSiteID);
                 //这里要刷新GridView
                 base.gdList_Bind();
 

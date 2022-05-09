@@ -24,27 +24,16 @@
 
                         <asp:TemplateField HeaderText="操作">
                             <ItemTemplate>
-                                <a href="<%# string.Concat("Admin_Special.aspx?t=0","&pid=",Eval("id"))%>">
-                                    <img title="添加子分类" src="<%=IISPath %>images/addsub.gif" />
-                                </a>
-                                <XS:LinkButton ID="LinkButton1" CommandArgument='<%#Eval("id") %>' CommandName="modify" Text="修改" confirm="false" runat="server">
-                                            <img title="编辑" src="<%=IISPath %>images/edit.gif" />
-                                </XS:LinkButton>
+                                <a class="AdminLinkButton"  href="<%# string.Concat("Admin_Special.aspx?t=0","&pid=",Eval("id"))%>">添加子专题</a>
 
-                                <XS:LinkButton ID="LinkButton4" CommandArgument='<%#Eval("id") %>' CommandName="showcontent" Text="查看内容" confirm="false" runat="server">
-                                             <img title="查看内容" src="<%=IISPath %>images/vcontent.gif" />
-                                </XS:LinkButton>
-                                <XS:LinkButton ID="LinkButton3" CommandArgument='<%#Eval("id") %>' CommandName="addcontent" Text="添加内容" confirm="false" runat="server">
-                                              <img title="添加内容" src="<%=IISPath %>images/addcontent.gif" />
-                                </XS:LinkButton>
+                                <XS:LinkButton ID="LinkButton1" CommandArgument='<%#Eval("id") %>' CommandName="modify" Text="修改"  runat="server" /> 
 
-                                <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel" onfirm="true" Text="删除">
-                                             <img title="删除" src="<%=IISPath %>images/delete.gif" />
-                                </XS:LinkButton>
+                                <XS:LinkButton ID="LinkButton4" CommandArgument='<%#Eval("id") %>' CommandName="showcontent" Text="查看内容" runat="server" /> 
+                                <XS:LinkButton ID="LinkButton3" CommandArgument='<%#Eval("id") %>' CommandName="addcontent" Text="添加内容" runat="server" /> 
 
-                                <XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="CopyClass" confirm="true" Text="复制">
-                                             <img title="复制" src="<%=IISPath %>images/copy.gif" />
-                                </XS:LinkButton>
+                                <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel" confirm="true" Text="删除" /> 
+
+                                <XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="CopySpecial" confirm="true" Text="复制" /> 
 
                             </ItemTemplate>
                         </asp:TemplateField>

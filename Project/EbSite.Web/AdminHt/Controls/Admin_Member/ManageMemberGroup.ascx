@@ -20,7 +20,7 @@
         
                         <asp:TemplateField HeaderText="<%$Resources:lang,EBOperation%>">
                                     <ItemTemplate>
-                                    <a href="?mpid=7d99f35a-fd5e-4f1d-a8c5-cd31579547a3&msid=d4119787-bbb8-49a8-819d-77c18836be13&rid=<%#Eval("id") %>">查看会员</a>
+                                    <a class="AdminLinkButton" href="?mpid=7d99f35a-fd5e-4f1d-a8c5-cd31579547a3&msid=d4119787-bbb8-49a8-819d-77c18836be13&rid=<%#Eval("id") %>">查看会员</a>
                                     <XS:EasyuiDialog ID="wbModify" SaveText="" runat="server" Text="修改" Title="修改" />
                                     <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel"
                                         confirm="true" Text="删除"></XS:LinkButton>

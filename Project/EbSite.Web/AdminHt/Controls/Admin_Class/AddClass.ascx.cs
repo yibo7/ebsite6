@@ -125,9 +125,17 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
             {
                 BLL.ClassModel.Instance.InitSaveCtr(ph, ref cm);
             }
-            if(!cbMore.Checked) //正常添加或修改
+            int ParentConfigId = 0;
+            if (pid > 0)
             {
-                int newid = BLL.NewsClass.AddBLL(cm, false, OldClassName, base.GetSiteID, Modelid);
+                Entity.NewsClass pmd = BLL.NewsClass.GetModel(pid);
+                ParentConfigId = pmd.ConfigId;
+            }
+            
+
+            if (!cbMore.Checked) //正常添加或修改
+            {
+                int newid = BLL.NewsClass.AddBLL(cm, ParentConfigId, OldClassName, base.GetSiteID, Modelid);
                 
                 //是不是还要更新子分类配置
 
@@ -146,7 +154,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
                             cm.ID = 0;
                             cm.ClassName = sClassName;
                             
-                            int newid = BLL.NewsClass.AddBLL(cm, false, OldClassName, base.GetSiteID, Modelid);
+                            int newid = BLL.NewsClass.AddBLL(cm, ParentConfigId, OldClassName, base.GetSiteID, Modelid);
                             //sbNewIds.Append(newid);
                             //sbNewIds.Append(",");
                         }

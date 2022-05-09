@@ -33,7 +33,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="操作">
                             <ItemTemplate>
-                                <a href="Admin_Plugins.aspx?t=1&id=<%#Eval("Name")%>">设置插件</a>
+                                <a class="AdminLinkButton" href="Admin_Plugins.aspx?t=1&id=<%#Eval("Name")%>">设置插件</a>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>

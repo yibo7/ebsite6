@@ -63,7 +63,7 @@ namespace EbSite.BLL
             string pis = "";
             if (model.ParentID != 0)
             {
-                List<Entity.NewsClass> lsParent = BLL.NewsClass.GetParents(model.ParentID);
+                List<Entity.NewsClass> lsParent = GetParents(model.ParentID);
                 foreach (var @class in lsParent)
                 {
                     pis += @class.ID + ",";
@@ -95,7 +95,7 @@ namespace EbSite.BLL
         }
 
 
-        static public int AddBLL(EbSite.Entity.NewsClass ThisModel, bool blConfigsToSub, string OldClassName, int SiteID,Guid iClassModelId)
+        static public int AddBLL(EbSite.Entity.NewsClass ThisModel, int ParentConfigId, string OldClassName, int SiteID,Guid iClassModelId)
         {
             int newid = 0;
             if (ThisModel.ID > 0) //修改分类
@@ -112,26 +112,19 @@ namespace EbSite.BLL
                 if (!Equals(OldClassName, ThisModel.ClassName)) //如果修改了分类名称，那么要同时更新内容表的ClassName字段
                 {
                     //未完成
-                }
-
-                //if (blConfigsToSub)//将相关配置更新到子分类
-                //{
-                //    //模板
-                //    BLL.NewsClass.UpdateTemToSubClass_Class(ThisModel, SiteID);
-                //    BLL.NewsClass.UpdateTemToSubClass_Content(ThisModel, SiteID);
-
-                //    //静态页面的命名规则
-                //    BLL.NewsClass.UpdateRuleToSub_Class(ThisModel, SiteID);
-                //    BLL.NewsClass.UpdateRuleToSub_Content(ThisModel, SiteID);
-                //    //模型
-                //    BLL.NewsClass.UpdateModelToSubClass(ThisModel);
-
-                //}
+                } 
             }
-
-            else    //添加一级分类
+            else  //添加分类
             {
                 ThisModel.OrderID = BLL.NewsClass.GetMaxOrderID(ThisModel.ParentID, SiteID) + 1;
+                if (ThisModel.ParentID == 0) //一级分类要获取默认分类设置
+                {
+                    ThisModel.ConfigId = BLL.ClassConfigs.Instance.GetDefaultConfigId(SiteID);
+                }
+                else
+                {
+                    ThisModel.ConfigId = ParentConfigId;
+                }
                 newid = Add(ThisModel, SiteID);
             }
 
@@ -1137,76 +1130,58 @@ namespace EbSite.BLL
         {
 
             Entity.NewsClass model = GetModel(id);
-            Entity.NewsClass NewModel = new Entity.NewsClass();
+            //Entity.NewsClass NewModel = new Entity.NewsClass();
 
-            NewModel.ClassName = "复制" + model.ClassName;
-            //NewModel.OrderID = model.OrderID-1;
-            NewModel.ParentID = model.ParentID;
-            NewModel.HtmlName = model.HtmlName;
-            NewModel.Info = model.Info;
-            NewModel.TitleStyle = model.TitleStyle;
-            //NewModel.ContentHtmlName = model.ContentHtmlName;
-            //NewModel.ClassHtmlNameRule = model.ClassHtmlNameRule;
-            NewModel.SeoTitle = model.SeoTitle;
-            NewModel.dayHits = model.dayHits;
-            NewModel.weekHits = model.weekHits;
-            NewModel.monthhits = model.monthhits;
-            NewModel.lasthitstime = model.lasthitstime;
-            NewModel.hits = model.hits;
-            NewModel.SeoKeyWord = model.SeoKeyWord;
-            NewModel.SeoDescription = model.SeoDescription;
-            NewModel.OutLike = model.OutLike;
-            //NewModel.IsCanAddContent = model.IsCanAddContent;
-            //NewModel.ContentModelID = model.ContentModelID;
-            //NewModel.ContentTemID = model.ContentTemID;
-            //NewModel.ClassTemID = model.ClassTemID;
-            //NewModel.ClassModelID = model.ClassModelID;
-            NewModel.Annex1 = model.Annex1;
-            NewModel.Annex2 = model.Annex2;
-            NewModel.Annex3 = model.Annex3;
-            NewModel.Annex4 = model.Annex4;
-            NewModel.Annex5 = model.Annex5;
-            NewModel.Annex6 = model.Annex6;
-            NewModel.Annex7 = model.Annex7;
-            NewModel.Annex8 = model.Annex8;
-            NewModel.Annex9 = model.Annex9;
-            NewModel.Annex10 = model.Annex10;
+            model.ClassName = "复制" + model.ClassName; 
+            
+            //NewModel.ParentID = model.ParentID;
+            //NewModel.HtmlName = model.HtmlName;
+            //NewModel.Info = model.Info;
+            //NewModel.TitleStyle = model.TitleStyle; 
+            //NewModel.SeoTitle = model.SeoTitle;
+            //NewModel.dayHits = model.dayHits;
+            //NewModel.weekHits = model.weekHits;
+            //NewModel.monthhits = model.monthhits;
+            //NewModel.lasthitstime = model.lasthitstime;
+            //NewModel.hits = model.hits;
+            //NewModel.SeoKeyWord = model.SeoKeyWord;
+            //NewModel.SeoDescription = model.SeoDescription;
+            //NewModel.OutLike = model.OutLike; 
+            //NewModel.Annex1 = model.Annex1;
+            //NewModel.Annex2 = model.Annex2;
+            //NewModel.Annex3 = model.Annex3;
+            //NewModel.Annex4 = model.Annex4;
+            //NewModel.Annex5 = model.Annex5;
+            //NewModel.Annex6 = model.Annex6;
+            //NewModel.Annex7 = model.Annex7;
+            //NewModel.Annex8 = model.Annex8;
+            //NewModel.Annex9 = model.Annex9;
+            //NewModel.Annex10 = model.Annex10;
 
-            NewModel.Annex11 = model.Annex11;
-            NewModel.Annex12 = model.Annex12;
-            NewModel.Annex13 = model.Annex13;
-            NewModel.Annex14 = model.Annex14;
-            NewModel.Annex15 = model.Annex15;
-            NewModel.Annex16 = model.Annex16;
-            NewModel.Annex17 = model.Annex17;
+            //NewModel.Annex11 = model.Annex11;
+            //NewModel.Annex12 = model.Annex12;
+            //NewModel.Annex13 = model.Annex13;
+            //NewModel.Annex14 = model.Annex14;
+            //NewModel.Annex15 = model.Annex15;
+            //NewModel.Annex16 = model.Annex16;
+            //NewModel.Annex17 = model.Annex17; 
+            //NewModel.CommentNum = model.CommentNum;
+            //NewModel.FavorableNum = model.FavorableNum;
+            //NewModel.UserID = model.UserID;
+            //NewModel.UserName = model.UserName;
+            //NewModel.UserNiName = model.UserNiName;
+            //NewModel.AddTime = model.AddTime; 
+            //NewModel.IsUserTheme = model.IsUserTheme;
+            //NewModel.IsAuditing = model.IsAuditing;
+            //NewModel.SiteID = model.SiteID;
+            //NewModel.RandNum = model.RandNum;
+            //NewModel.NumberTime = model.NumberTime;
+            //NewModel.ParentIDs = model.ParentIDs;
 
-            //NewModel.SubClassAddName = model.SubClassAddName;
-            //NewModel.SubClassTemID = model.SubClassTemID;
-            //NewModel.SubClassModelID = model.SubClassModelID;
-            //NewModel.SubDefaultContentModelID = model.SubDefaultContentModelID;
-            //NewModel.SubDefaultContentTemID = model.SubDefaultContentTemID;
-            //NewModel.SubIsCanAddSub = model.SubIsCanAddSub;
-            //NewModel.SubIsCanAddContent = model.SubIsCanAddContent;
-            //NewModel.IsCanAddSub = model.IsCanAddSub;
-            //NewModel.ListTemID = model.ListTemID;
-            NewModel.CommentNum = model.CommentNum;
-            NewModel.FavorableNum = model.FavorableNum;
-            NewModel.UserID = model.UserID;
-            NewModel.UserName = model.UserName;
-            NewModel.UserNiName = model.UserNiName;
-            NewModel.AddTime = model.AddTime;
-            //NewModel.PageSize = model.PageSize;
-            //NewModel.ModuleID = model.ModuleID;
-            NewModel.IsUserTheme = model.IsUserTheme;
-            NewModel.IsAuditing = model.IsAuditing;
-            NewModel.SiteID = model.SiteID;
-            NewModel.RandNum = model.RandNum;
-            NewModel.NumberTime = model.NumberTime;
-            NewModel.ParentIDs = model.ParentIDs;
-            int cid = Add(NewModel, NewModel.SiteID);
+            int cid = Add(model, model.SiteID);
 
-            NewModel.ID = cid;
-            return NewModel;
+            model.ID = cid;
+            return model;
 
             //要同时复制分类设置，未完成
 
@@ -1586,14 +1561,14 @@ namespace EbSite.BLL
          {
              return DbProviderCms.GetInstance().GetChildClass(ParentID,SiteID);
          }
-        static public List<Entity.NewsClass> GetNotConfigParent(int SiteId)
-        {
-            return DbProviderCms.GetInstance().NewsClass_GetNotConfig(string.Format("ParentID=0 And SiteId={0}", SiteId));
-        }
-        static public List<Entity.NewsClass> GetNotConfigIds(string ids)
-        {
-            return DbProviderCms.GetInstance().NewsClass_GetNotConfig("id in("+ ids + ")");
-        }
+        //static public List<Entity.NewsClass> GetNotConfigParent(int SiteId)
+        //{
+        //    return DbProviderCms.GetInstance().NewsClass_GetNotConfig(string.Format("ParentID=0 And SiteId={0}", SiteId));
+        //}
+        //static public List<Entity.NewsClass> GetNotConfigIds(string ids)
+        //{
+        //    return DbProviderCms.GetInstance().NewsClass_GetNotConfig("id in("+ ids + ")");
+        //}
 
 
 

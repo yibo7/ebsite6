@@ -31,10 +31,10 @@
         <asp:TemplateField HeaderText="<%$Resources:lang,
         EBRoleOp%>">
                     <ItemTemplate>
-                        <a Href='<%# string.Concat("?t=4&rid=",Eval("RoleID"))%>'>设置权限</a>
+                        <a class="AdminLinkButton" Href='<%# string.Concat("?t=4&rid=",Eval("RoleID"))%>'>设置权限</a>
                           <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("RoleID") %>' CommandName="DeleteModel"
                         confirm="true" Text="删除"></XS:LinkButton>
-                        <a Href='<%# string.Concat("?t=7&rid=",Eval("RoleID"))%>'>查看管理员</a>
+                        <a class="AdminLinkButton" Href='<%# string.Concat("?t=7&rid=",Eval("RoleID"))%>'>查看管理员</a>
                         
                     </ItemTemplate>
         </asp:TemplateField>

@@ -60,7 +60,7 @@
                     <td>
                         <XS:EasyuiDialog ID="WinBox3" IsColseReLoad="true" runat="server" Width="500" Height="345" SaveText="确认加款" Href='<%# string.Concat(GetUrl,"&t=1&id=",Eval("id"),"&um=",Convert.ToDecimal(Eval("Balance")) - Convert.ToDecimal(Eval("RequestBalance")),"&uid=", Eval("UserID"))%>'
                             Text="加款" Title="加款" /> 
-                         <a href='<%#string.Format("?t=4&uid={0}",Eval("UserID"))%>'>明细</a>
+                         <a class="AdminLinkButton" href='<%#string.Format("?t=4&uid={0}",Eval("UserID"))%>'>明细</a>
 
                          <XS:EasyuiDialog ID="EasyuiDialog1" IsColseReLoad="false" runat="server" SaveText="确认修改交易密码" Width="500" Height="345" Href='<%# string.Concat(GetUrl,"&t=2&id=",Eval("id"),"&uid=", Eval("UserID"))%>'
                             Text="修改交易密码" Title="修改交易密码" /> 

@@ -75,6 +75,7 @@ namespace EbSite.Control
             
             _WinBox.Width = 500;
             _WinBox.Height = 180;
+            _WinBox.IsDialog = true;
 
             Controls.Add(_txtRule);
             Controls.Add(_WinBox);

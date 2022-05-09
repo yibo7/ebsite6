@@ -304,45 +304,7 @@ namespace EbSite.BLL
 		#endregion  成员方法
 		
 		#region  自定义方法
-
-        //public Entity.ClassConfigs GetClassConfigs(int SiteID)
-        //{
-        //    string CacheKey = string.Concat("GetClassConfigs_", SiteID);
-        //    Entity.ClassConfigs md = Host.CacheApp.GetCacheItem<Entity.ClassConfigs>(CacheKey, CacheName); 
-        //    if (Equals(md,null))
-        //    {
-        //       md =  DbProviderCms.GetInstance().GeClassConfigs(SiteID);
-        //       if (!Equals(md, null))
-        //           Host.CacheApp.AddCacheItem(CacheKey, md, 1, ETimeSpanModel.T, CacheName);
-        //    }
-        //    return md;
-        //}
-
-     //   public bool IsHaveClassConfigs(int SiteID)
-	    //{
-     //       return DbProviderCms.GetInstance().IsHaveClassConfigs(SiteID);
-	    //}
-
-     //   public bool IsHaveClassConfigsByClassID(int ClassID)
-	    //{
-     //       Entity.ClassConfigs Model   DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassID);
-
-     //       //return DbProviderCms.GetInstance().IsHaveClassConfigsByClassID(ClassID);
-     //   }
-
-	    //public void UpdateDefaultClassConfigs(Entity.ClassConfigs Model)
-     //   {
-     //       if (IsHaveClassConfigs(Model.SiteID))
-     //       {
-     //           DbProviderCms.GetInstance().UpdateDefaultClassConfigs(Model);
-     //       }
-     //       else
-     //       {
-     //           Add(Model);
-     //       }
-     //   }
-
-	    
+		
 
         private static Dictionary<int, Guid> ClassTems = new Dictionary<int, Guid>();
         private static Dictionary<int, Guid> ContentTems = new Dictionary<int, Guid>();
@@ -523,194 +485,262 @@ namespace EbSite.BLL
 
             return md.SubClassModelID;
         }
-
-		//private Entity.ClassConfigs GetClassConfigsFromClassID(int ClassId)
-  //      {
-
-  //          string CacheKey = string.Concat("GeClassConfigsByClassID_", model.ConfigId);
-  //          Entity.ClassConfigs md = Host.CacheApp.GetCacheItem<Entity.ClassConfigs>(CacheKey, CacheName);
-  //          if (Equals(md, null))
-  //          {
-  //              md = DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassId);
-  //              if (!Equals(md, null))
-  //                  Host.CacheApp.AddCacheItem(CacheKey, md, 15, ETimeSpanModel.FZ, CacheName);
-  //          }
-  //          return md;
-  //      }
-
-        public Entity.ClassConfigs GetByClassID(int ClassId)
-        {
-			var model = NewsClass.GetModelByCache(ClassId); 
-			Entity.ClassConfigs mConfigs = GetEntity(model.ConfigId);
-			if (Equals(mConfigs, null))
-            {
-				throw new Exception(string.Format("分类ID为【{0}】找不到相应的配置，请在后台添加分类设置，并将其设置到此分类下", ClassId));
-			}
-
-            return mConfigs;
-        }
-
-        //public void DeleteByClassIDBySite(int SiteID)
-        //{
-        //     List<EbSite.Entity.NewsClass> lst =  BLL.NewsClass.GetListArr("", SiteID);
-
-        //    foreach (var newsClass in lst)
-        //    {
-        //           DeleteByClassID(newsClass.ID);
-        //    }
-        //}
-
-        //public void DeleteByClassID(int ClassID)
-        //{
-        //       base.InvalidateCache();
-        //        DbProviderCms.GetInstance().DeleteByClassID(ClassID);
-        //}
-
-        //public void UpdateClassConfigs(Entity.ClassConfigs Model,int iClassId,int iSiteId,bool isChangeRule,bool isAddNew,bool isUpdateToSub,bool isDefault,bool IsSetTo)
-        //   {
-        //    if (isDefault)//站点的默认分类设置，所以要设置站点ID
-        //    {
-        //        Model.SiteID = iSiteId;
-        //    }
-
-        //    if (isAddNew)
-        //    {
-        //           Model.SiteID = 0;
-        //           int cfid =  Add(Model);
-        //           EbSite.Entity.ClassSetConfig newConfig = new Entity.ClassSetConfig();
-        //        newConfig.ClassId = iClassId;
-        //        newConfig.ConfigId = cfid;
-        //           if (!IsSetTo)
-        //        {
-        //            BLL.ClassSetConfig.Instance.Add(newConfig);
-        //        }
-        //        else
-        //        {
-        //               BLL.ClassSetConfig.Instance.UpdateConfigId(newConfig);//更新条件是 ClassId,ConfigId
-        //           }
-        //    }
-        //    else
-        //    {
-        //           Update(Model);
-        //       }
-
-
-        //       //Entity.ClassConfigs mdOld = BLL.ClassConfigs.Instance.GetClassConfigsByClassID(iClassId);
-        //    //bool isChangeRule = !Equals(Model.ClassHtmlNameRule, mdOld.ClassHtmlNameRule);
-        //       if (isChangeRule)
-        //    {
-        //           //同时更新分类记录的
-        //          // List<Entity.NewsClass> mds = NewsClass.GetClassInIDs(Model.ClassID, Model.SiteID);
-        //           List<EbSite.Entity.NewsClass> mds = DbProviderCms.GetInstance().NewsClass_GetListArrayFormConfigId(Model.id);
-        //           foreach (var model in mds)
-        //           {
-        //               model.HtmlName = HtmlReNameRule.GetName(Model.ClassHtmlNameRule, model.ClassName);//从当前规则转换文件名
-        //               NewsClass.Update(model);
-        //           }
-
-        //       }
-
-
-        //       base.InvalidateCache();
-
-        //   }
-
-
-        //   private Entity.ClassConfigs GetClassConfigsFromClassID(int ClassId)
-        //   {
-        //       //public List<Entity.ClassConfigs> GeClassConfigsByModuleId(int mid)
-
-        //       string CacheKey = string.Concat("GeClassConfigsByClassID_", ClassId);
-        //       Entity.ClassConfigs md = Host.CacheApp.GetCacheItem<Entity.ClassConfigs>(CacheKey, CacheName);
-        //       if (Equals(md, null))
-        //       {
-        //           md = DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassId);
-        //           if (!Equals(md, null))
-        //               Host.CacheApp.AddCacheItem(CacheKey, md, 15, ETimeSpanModel.FZ, CacheName);
-        //       }
-        //       return md;
-        //   }
-
-        //public Entity.ClassConfigs GetClassConfigsByClassID(int ClassID)
-        //{
-
-        //       Entity.ClassConfigs mConfigs = GetClassConfigsFromClassID(ClassID); 
-        //       if (Equals(mConfigs, null))
-        //       {
-
-        //           mConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID); 
-        //           if (Equals(mConfigs, null))
-        //           {
-        //               throw new Exception(string.Format("当前站找不到默认分类设置数据，你登录后台切换到当前站点，执行以下操作即可正常访问:网站管理>分类管理>数据调整>更改分类默认设置>保存分类设置"));
-        //           }
-        //       } 
-
-        //       return mConfigs;
-        //   }
-
-        //public Entity.ClassConfigs GetClassConfigsByClassID(int ClassID,out bool IsDefault,out int UsedClassCount,out bool IsSetTo)
-        //{
-        //    IsSetTo = false;
-        //       IsDefault = false;
-        //       UsedClassCount = 0;
-        //       Entity.ClassConfigs mConfigs = GetClassConfigsFromClassID(ClassID);
-        //       Entity.ClassConfigs mDefaultConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
-        //       if (Equals(mConfigs, null))
-        //       {
-
-        //           mConfigs = mDefaultConfigs;
-        //           IsDefault = true;
-
-        //           if (Equals(mConfigs, null))
-        //           {
-        //               throw new Exception(string.Format("当前站找不到默认分类设置数据，你登录后台切换到当前站点，执行以下操作即可正常访问:网站管理>分类管理>数据调整>更改分类默认设置>保存分类设置"));
-        //           }
-        //       }
-        //       else
-        //       {
-        //           IsSetTo = true;
-        //           if (mConfigs.id == mDefaultConfigs.id)
-        //           {
-        //               IsDefault = true;
-        //           }
-        //           UsedClassCount = BLL.ClassSetConfig.Instance.GetCountByConfigId(mConfigs.id);
-
-        //       }
-
-        //       return mConfigs;
-
-        //       //if (IsHaveClassConfigsByClassID(ClassID))
-        //       //{
-        //       //    mConfigs = GeClassConfigsByClassID(ClassID);//DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassID);
-        //       //}
-        //       //else
-        //       //{
-        //       //    mConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
-
-        //       //    if (Equals(mConfigs, null))
-        //       //    {
-        //       //        throw new Exception(string.Format("当前站找不到默认分类设置数据，你登录后台切换到当前站点，执行以下操作即可正常访问:网站管理>分类管理>数据调整>更改分类默认设置>保存分类设置"));
-        //       //    }
-        //       //}
-        //       //return mConfigs;
-
-        //   }
-
-        /// <summary>
-        /// 获取分类模型一样的分类配置
-        /// </summary>
-        /// <param name="mid">分类模型Id</param>
-        /// <returns></returns>
-        public List<Entity.ClassConfigs> GeClassConfigsByModuleId(Guid mid)
-        {
-             return DbProviderCms.GetInstance().GeClassConfigsByModuleId(mid);
-        }
-
-		public void UpdateDefault(int id,int siteid)
-        {
+		/// <summary>
+		/// 获取分类模型一样的分类配置
+		/// </summary>
+		/// <param name="mid">分类模型Id</param>
+		/// <returns></returns>
+		public List<Entity.ClassConfigs> GeClassConfigsByModuleId(Guid mid)
+		{
+			return DbProviderCms.GetInstance().GeClassConfigsByModuleId(mid);
+		}
+		/// <summary>
+		/// 将某个设置更新为默认，将其他所有同站点下的配置设为非默认
+		/// </summary>
+		/// <param name="id"></param>
+		/// <param name="siteid"></param>
+		public void UpdateDefault(int id, int siteid)
+		{
 			DbProviderCms.GetInstance().UpdateDefault(id, siteid);
 			base.InvalidateCache();
 		}
+		
+
+		public Entity.ClassConfigs GetByClassID(int ClassId)
+        {          
+
+			string CacheKey = string.Concat("GetByClassID-", ClassId);
+			Entity.ClassConfigs mConfigs = Host.CacheApp.GetCacheItem<Entity.ClassConfigs>(CacheKey, CacheName);
+			if (mConfigs == null)
+			{ 
+				mConfigs = DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassId);
+
+				if (!Equals(mConfigs, null))
+                {
+					Host.CacheApp.AddCacheItem(CacheKey, mConfigs, 15, ETimeSpanModel.FZ, CacheName);
+                }
+                else
+                {
+					throw new Exception(string.Format("分类ID为【{0}】找不到相应的配置，请在后台添加分类设置，并将其设置到此分类下", ClassId));
+				}					
+			} 
+			return mConfigs;
+
+			//var model = NewsClass.GetModelByCache(ClassId);
+			//Entity.ClassConfigs mConfigs = GetEntity(model.ConfigId);
+
+			//if (Equals(mConfigs, null))
+			//         {
+			//	throw new Exception(string.Format("分类ID为【{0}】找不到相应的配置，请在后台添加分类设置，并将其设置到此分类下", ClassId));
+			//}
+		}
+		/// <summary>
+		/// 添加一级分类时要获取一个默认设置
+		/// </summary>
+		/// <param name="SiteId"></param>
+		/// <returns></returns>
+		public int GetDefaultConfigId(int SiteId)
+		{
+			return DbProviderCms.GetInstance().GetDefaultConfigId(SiteId);
+		}
+
+		//private Entity.ClassConfigs GetClassConfigsFromClassID(int ClassId)
+		//      {
+
+		//          string CacheKey = string.Concat("GeClassConfigsByClassID_", model.ConfigId);
+		//          Entity.ClassConfigs md = Host.CacheApp.GetCacheItem<Entity.ClassConfigs>(CacheKey, CacheName);
+		//          if (Equals(md, null))
+		//          {
+		//              md = DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassId);
+		//              if (!Equals(md, null))
+		//                  Host.CacheApp.AddCacheItem(CacheKey, md, 15, ETimeSpanModel.FZ, CacheName);
+		//          }
+		//          return md;
+		//      }
+
+		//public Entity.ClassConfigs GetClassConfigs(int SiteID)
+		//{
+		//    string CacheKey = string.Concat("GetClassConfigs_", SiteID);
+		//    Entity.ClassConfigs md = Host.CacheApp.GetCacheItem<Entity.ClassConfigs>(CacheKey, CacheName); 
+		//    if (Equals(md,null))
+		//    {
+		//       md =  DbProviderCms.GetInstance().GeClassConfigs(SiteID);
+		//       if (!Equals(md, null))
+		//           Host.CacheApp.AddCacheItem(CacheKey, md, 1, ETimeSpanModel.T, CacheName);
+		//    }
+		//    return md;
+		//}
+
+		//   public bool IsHaveClassConfigs(int SiteID)
+		//{
+		//       return DbProviderCms.GetInstance().IsHaveClassConfigs(SiteID);
+		//}
+
+		//   public bool IsHaveClassConfigsByClassID(int ClassID)
+		//{
+		//       Entity.ClassConfigs Model   DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassID);
+
+		//       //return DbProviderCms.GetInstance().IsHaveClassConfigsByClassID(ClassID);
+		//   }
+
+		//public void UpdateDefaultClassConfigs(Entity.ClassConfigs Model)
+		//   {
+		//       if (IsHaveClassConfigs(Model.SiteID))
+		//       {
+		//           DbProviderCms.GetInstance().UpdateDefaultClassConfigs(Model);
+		//       }
+		//       else
+		//       {
+		//           Add(Model);
+		//       }
+		//   }
+		//public void DeleteByClassIDBySite(int SiteID)
+		//{
+		//     List<EbSite.Entity.NewsClass> lst =  BLL.NewsClass.GetListArr("", SiteID);
+
+		//    foreach (var newsClass in lst)
+		//    {
+		//           DeleteByClassID(newsClass.ID);
+		//    }
+		//}
+
+		//public void DeleteByClassID(int ClassID)
+		//{
+		//       base.InvalidateCache();
+		//        DbProviderCms.GetInstance().DeleteByClassID(ClassID);
+		//}
+
+		//public void UpdateClassConfigs(Entity.ClassConfigs Model,int iClassId,int iSiteId,bool isChangeRule,bool isAddNew,bool isUpdateToSub,bool isDefault,bool IsSetTo)
+		//   {
+		//    if (isDefault)//站点的默认分类设置，所以要设置站点ID
+		//    {
+		//        Model.SiteID = iSiteId;
+		//    }
+
+		//    if (isAddNew)
+		//    {
+		//           Model.SiteID = 0;
+		//           int cfid =  Add(Model);
+		//           EbSite.Entity.ClassSetConfig newConfig = new Entity.ClassSetConfig();
+		//        newConfig.ClassId = iClassId;
+		//        newConfig.ConfigId = cfid;
+		//           if (!IsSetTo)
+		//        {
+		//            BLL.ClassSetConfig.Instance.Add(newConfig);
+		//        }
+		//        else
+		//        {
+		//               BLL.ClassSetConfig.Instance.UpdateConfigId(newConfig);//更新条件是 ClassId,ConfigId
+		//           }
+		//    }
+		//    else
+		//    {
+		//           Update(Model);
+		//       }
+
+
+		//       //Entity.ClassConfigs mdOld = BLL.ClassConfigs.Instance.GetClassConfigsByClassID(iClassId);
+		//    //bool isChangeRule = !Equals(Model.ClassHtmlNameRule, mdOld.ClassHtmlNameRule);
+		//       if (isChangeRule)
+		//    {
+		//           //同时更新分类记录的
+		//          // List<Entity.NewsClass> mds = NewsClass.GetClassInIDs(Model.ClassID, Model.SiteID);
+		//           List<EbSite.Entity.NewsClass> mds = DbProviderCms.GetInstance().NewsClass_GetListArrayFormConfigId(Model.id);
+		//           foreach (var model in mds)
+		//           {
+		//               model.HtmlName = HtmlReNameRule.GetName(Model.ClassHtmlNameRule, model.ClassName);//从当前规则转换文件名
+		//               NewsClass.Update(model);
+		//           }
+
+		//       }
+
+
+		//       base.InvalidateCache();
+
+		//   }
+
+
+		//   private Entity.ClassConfigs GetClassConfigsFromClassID(int ClassId)
+		//   {
+		//       //public List<Entity.ClassConfigs> GeClassConfigsByModuleId(int mid)
+
+		//       string CacheKey = string.Concat("GeClassConfigsByClassID_", ClassId);
+		//       Entity.ClassConfigs md = Host.CacheApp.GetCacheItem<Entity.ClassConfigs>(CacheKey, CacheName);
+		//       if (Equals(md, null))
+		//       {
+		//           md = DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassId);
+		//           if (!Equals(md, null))
+		//               Host.CacheApp.AddCacheItem(CacheKey, md, 15, ETimeSpanModel.FZ, CacheName);
+		//       }
+		//       return md;
+		//   }
+
+		//public Entity.ClassConfigs GetClassConfigsByClassID(int ClassID)
+		//{
+
+		//       Entity.ClassConfigs mConfigs = GetClassConfigsFromClassID(ClassID); 
+		//       if (Equals(mConfigs, null))
+		//       {
+
+		//           mConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID); 
+		//           if (Equals(mConfigs, null))
+		//           {
+		//               throw new Exception(string.Format("当前站找不到默认分类设置数据，你登录后台切换到当前站点，执行以下操作即可正常访问:网站管理>分类管理>数据调整>更改分类默认设置>保存分类设置"));
+		//           }
+		//       } 
+
+		//       return mConfigs;
+		//   }
+
+		//public Entity.ClassConfigs GetClassConfigsByClassID(int ClassID,out bool IsDefault,out int UsedClassCount,out bool IsSetTo)
+		//{
+		//    IsSetTo = false;
+		//       IsDefault = false;
+		//       UsedClassCount = 0;
+		//       Entity.ClassConfigs mConfigs = GetClassConfigsFromClassID(ClassID);
+		//       Entity.ClassConfigs mDefaultConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
+		//       if (Equals(mConfigs, null))
+		//       {
+
+		//           mConfigs = mDefaultConfigs;
+		//           IsDefault = true;
+
+		//           if (Equals(mConfigs, null))
+		//           {
+		//               throw new Exception(string.Format("当前站找不到默认分类设置数据，你登录后台切换到当前站点，执行以下操作即可正常访问:网站管理>分类管理>数据调整>更改分类默认设置>保存分类设置"));
+		//           }
+		//       }
+		//       else
+		//       {
+		//           IsSetTo = true;
+		//           if (mConfigs.id == mDefaultConfigs.id)
+		//           {
+		//               IsDefault = true;
+		//           }
+		//           UsedClassCount = BLL.ClassSetConfig.Instance.GetCountByConfigId(mConfigs.id);
+
+		//       }
+
+		//       return mConfigs;
+
+		//       //if (IsHaveClassConfigsByClassID(ClassID))
+		//       //{
+		//       //    mConfigs = GeClassConfigsByClassID(ClassID);//DbProviderCms.GetInstance().GeClassConfigsByClassID(ClassID);
+		//       //}
+		//       //else
+		//       //{
+		//       //    mConfigs = GetClassConfigs(EbSite.Base.Host.Instance.GetSiteID);
+
+		//       //    if (Equals(mConfigs, null))
+		//       //    {
+		//       //        throw new Exception(string.Format("当前站找不到默认分类设置数据，你登录后台切换到当前站点，执行以下操作即可正常访问:网站管理>分类管理>数据调整>更改分类默认设置>保存分类设置"));
+		//       //    }
+		//       //}
+		//       //return mConfigs;
+
+		//   }
+
+
 
 		///// <summary>
 		///// 添加一级分类时，为分类分配分类配置

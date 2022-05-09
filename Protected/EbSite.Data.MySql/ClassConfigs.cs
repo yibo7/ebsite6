@@ -352,7 +352,7 @@ namespace EbSite.Data.MySql
         public Entity.ClassConfigs GeClassConfigsByClassID(int ClassID)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.AppendFormat("SELECT * FROM {0}classconfigs a LEFT JOIN(SELECT * FROM {0}classsetconfig) b on a.id = b.ConfigId WHERE b.ClassId = {1}", sPre, ClassID);
+            strSql.AppendFormat("SELECT * FROM {0}classconfigs a LEFT JOIN(SELECT id,ConfigId FROM {0}newsclass) b on a.id = b.ConfigId WHERE b.id = {1}", sPre, ClassID);
            
             Entity.ClassConfigs model = null;
             using (IDataReader dataReader = DbHelperCms.Instance.ExecuteReader(CommandType.Text, strSql.ToString()))
@@ -363,25 +363,22 @@ namespace EbSite.Data.MySql
                 }
             }
             return model;
-
-
-            //       StringBuilder strSql = new StringBuilder();
-            //       strSql.AppendFormat("select " + sFieldClassConfigs + "  from {0}classconfigs ", sPre);
-            //       strSql.Append(" where ClassID=?ClassID ");
-            //       MySqlParameter[] parameters = {
-            //new MySqlParameter("?ClassID", MySqlDbType.Int32)};
-            //       parameters[0].Value = ClassID;
-            //       Entity.ClassConfigs model = null;
-            //       using (IDataReader dataReader = DbHelperCms.Instance.ExecuteReader(CommandType.Text, strSql.ToString(), parameters))
-            //       {
-            //           if (dataReader.Read())
-            //           {
-            //               model = ClassConfigs_ReaderBind(dataReader);
-            //           }
-            //       }
-            //       return model;
+             
         }
-
+        public int GetDefaultConfigId(int siteId)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.AppendFormat("select id  from {0}classconfigs where siteid={1} and IsDefault=1", sPre, siteId); 
+            int iId = 0;
+            using (IDataReader dataReader = DbHelperCms.Instance.ExecuteReader(CommandType.Text, strSql.ToString()))
+            {
+                while (dataReader.Read())
+                {
+                    iId = int.Parse(dataReader[0].ToString());
+                }
+            }
+            return iId;
+        }
         #endregion 读
 
         #region 写
@@ -491,9 +488,9 @@ namespace EbSite.Data.MySql
             strSql.Append("ClassTemIdMobile=?ClassTemIdMobile,");
             strSql.Append("ContentTemIdMobile=?ContentTemIdMobile,");
             strSql.Append("SiteID=?SiteID, ");
-            strSql.Append("ConfigName=?ConfigName");
+            strSql.Append("ConfigName=?ConfigName,");
 
-            strSql.Append("IsDefault=?IsDefault,");
+            strSql.Append("IsDefault=?IsDefault");
             //strSql.Append("ClassID=?ClassID");
             strSql.Append(" where id=?id ");
             MySqlParameter[] parameters = {
@@ -571,103 +568,103 @@ namespace EbSite.Data.MySql
 
             DbHelperCmsWrite.Instance.ExecuteNonQuery(CommandType.Text, strSql.ToString(), parameters);
         }
-        public void DeleteByClassID(int ClassID)
-        {
-            StringBuilder strSql = new StringBuilder();
-            strSql.AppendFormat("delete from {0}classconfigs ", sPre);
-            strSql.Append(" where ClassID=?ClassID ");
-            MySqlParameter[] parameters = {
-					new MySqlParameter("?ClassID", MySqlDbType.Int32)};
-            parameters[0].Value = ClassID;
-            DbHelperCmsWrite.Instance.ExecuteNonQuery(CommandType.Text, strSql.ToString(), parameters);
-        }
-        public void UpdateDefaultClassConfigs(Entity.ClassConfigs model)
-        {
-            StringBuilder strSql = new StringBuilder();
-            strSql.AppendFormat("update {0}classconfigs set ", sPre);
-            strSql.Append("ContentHtmlName=?ContentHtmlName,");
-            strSql.Append("ClassHtmlNameRule=?ClassHtmlNameRule,");
-            strSql.Append("IsCanAddContent=?IsCanAddContent,");
-            strSql.Append("ContentModelID=?ContentModelID,");
-            strSql.Append("ContentTemID=?ContentTemID,");
-            strSql.Append("ClassTemID=?ClassTemID,");
-            strSql.Append("ClassModelID=?ClassModelID,");
-            strSql.Append("SubClassAddName=?SubClassAddName,");
-            strSql.Append("SubClassTemID=?SubClassTemID,");
-            strSql.Append("SubClassModelID=?SubClassModelID,");
-            strSql.Append("SubDefaultContentModelID=?SubDefaultContentModelID,");
-            strSql.Append("SubDefaultContentTemID=?SubDefaultContentTemID,");
-            strSql.Append("SubIsCanAddSub=?SubIsCanAddSub,");
-            strSql.Append("SubIsCanAddContent=?SubIsCanAddContent,");
-            strSql.Append("IsCanAddSub=?IsCanAddSub,");
-            strSql.Append("ListTemID=?ListTemID,");
-            strSql.Append("PageSize=?PageSize,");
-            strSql.Append("ModuleID=?ModuleID,");
-            //strSql.Append("ClassID=?ClassID,");
-            strSql.Append("AddTime=?AddTime,");
-            strSql.Append("ClassTemIdMobile=?ClassTemIdMobile,");
-            strSql.Append("ContentTemIdMobile=?ContentTemIdMobile,");
-            strSql.Append("ConfigName=?ConfigName, ");
+     //   public void DeleteByClassID(int ClassID)
+     //   {
+     //       StringBuilder strSql = new StringBuilder();
+     //       strSql.AppendFormat("delete from {0}classconfigs ", sPre);
+     //       strSql.Append(" where ClassID=?ClassID ");
+     //       MySqlParameter[] parameters = {
+					//new MySqlParameter("?ClassID", MySqlDbType.Int32)};
+     //       parameters[0].Value = ClassID;
+     //       DbHelperCmsWrite.Instance.ExecuteNonQuery(CommandType.Text, strSql.ToString(), parameters);
+     //   }
+     //   public void UpdateDefaultClassConfigs(Entity.ClassConfigs model)
+     //   {
+     //       StringBuilder strSql = new StringBuilder();
+     //       strSql.AppendFormat("update {0}classconfigs set ", sPre);
+     //       strSql.Append("ContentHtmlName=?ContentHtmlName,");
+     //       strSql.Append("ClassHtmlNameRule=?ClassHtmlNameRule,");
+     //       strSql.Append("IsCanAddContent=?IsCanAddContent,");
+     //       strSql.Append("ContentModelID=?ContentModelID,");
+     //       strSql.Append("ContentTemID=?ContentTemID,");
+     //       strSql.Append("ClassTemID=?ClassTemID,");
+     //       strSql.Append("ClassModelID=?ClassModelID,");
+     //       strSql.Append("SubClassAddName=?SubClassAddName,");
+     //       strSql.Append("SubClassTemID=?SubClassTemID,");
+     //       strSql.Append("SubClassModelID=?SubClassModelID,");
+     //       strSql.Append("SubDefaultContentModelID=?SubDefaultContentModelID,");
+     //       strSql.Append("SubDefaultContentTemID=?SubDefaultContentTemID,");
+     //       strSql.Append("SubIsCanAddSub=?SubIsCanAddSub,");
+     //       strSql.Append("SubIsCanAddContent=?SubIsCanAddContent,");
+     //       strSql.Append("IsCanAddSub=?IsCanAddSub,");
+     //       strSql.Append("ListTemID=?ListTemID,");
+     //       strSql.Append("PageSize=?PageSize,");
+     //       strSql.Append("ModuleID=?ModuleID,");
+     //       //strSql.Append("ClassID=?ClassID,");
+     //       strSql.Append("AddTime=?AddTime,");
+     //       strSql.Append("ClassTemIdMobile=?ClassTemIdMobile,");
+     //       strSql.Append("ContentTemIdMobile=?ContentTemIdMobile,");
+     //       strSql.Append("ConfigName=?ConfigName, ");
 
-            strSql.Append("IsDefault=?IsDefault");
-            strSql.Append(" where SiteID=?SiteID ");
-            MySqlParameter[] parameters = {
-					new MySqlParameter("?ContentHtmlName", MySqlDbType.VarChar,100),
-					new MySqlParameter("?ClassHtmlNameRule", MySqlDbType.VarChar,100),
-					new MySqlParameter("?IsCanAddContent", MySqlDbType.Int16,4),
-					new MySqlParameter("?ContentModelID", MySqlDbType.VarChar,36),
-					new MySqlParameter("?ContentTemID", MySqlDbType.VarChar,36),
-					new MySqlParameter("?ClassTemID", MySqlDbType.VarChar,36),
-					new MySqlParameter("?ClassModelID", MySqlDbType.VarChar,36),
-					new MySqlParameter("?SubClassAddName", MySqlDbType.VarChar,50),
-					new MySqlParameter("?SubClassTemID", MySqlDbType.VarChar,36),
-					new MySqlParameter("?SubClassModelID", MySqlDbType.VarChar,36),
-					new MySqlParameter("?SubDefaultContentModelID", MySqlDbType.VarChar,36),
-					new MySqlParameter("?SubDefaultContentTemID", MySqlDbType.VarChar,36),
-					new MySqlParameter("?SubIsCanAddSub", MySqlDbType.Int16,2),
-					new MySqlParameter("?SubIsCanAddContent", MySqlDbType.Int16,2),
-					new MySqlParameter("?IsCanAddSub", MySqlDbType.Int16,2),
-					new MySqlParameter("?ListTemID", MySqlDbType.VarChar,36),
-					new MySqlParameter("?PageSize", MySqlDbType.Int16,3),
-					new MySqlParameter("?ModuleID", MySqlDbType.VarChar,36),
-					//new MySqlParameter("?ClassID", MySqlDbType.Int32,11),
-					new MySqlParameter("?AddTime", MySqlDbType.DateTime),
-					new MySqlParameter("?ClassTemIdMobile", MySqlDbType.VarChar,36),
-					new MySqlParameter("?ContentTemIdMobile", MySqlDbType.VarChar,36),
-                    new MySqlParameter("?SiteID", MySqlDbType.Int32,11),
-                    new MySqlParameter("?ConfigName", MySqlDbType.VarChar,300),
-                    new MySqlParameter("?IsDefault", MySqlDbType.Int16,4)
+     //       strSql.Append("IsDefault=?IsDefault");
+     //       strSql.Append(" where SiteID=?SiteID ");
+     //       MySqlParameter[] parameters = {
+					//new MySqlParameter("?ContentHtmlName", MySqlDbType.VarChar,100),
+					//new MySqlParameter("?ClassHtmlNameRule", MySqlDbType.VarChar,100),
+					//new MySqlParameter("?IsCanAddContent", MySqlDbType.Int16,4),
+					//new MySqlParameter("?ContentModelID", MySqlDbType.VarChar,36),
+					//new MySqlParameter("?ContentTemID", MySqlDbType.VarChar,36),
+					//new MySqlParameter("?ClassTemID", MySqlDbType.VarChar,36),
+					//new MySqlParameter("?ClassModelID", MySqlDbType.VarChar,36),
+					//new MySqlParameter("?SubClassAddName", MySqlDbType.VarChar,50),
+					//new MySqlParameter("?SubClassTemID", MySqlDbType.VarChar,36),
+					//new MySqlParameter("?SubClassModelID", MySqlDbType.VarChar,36),
+					//new MySqlParameter("?SubDefaultContentModelID", MySqlDbType.VarChar,36),
+					//new MySqlParameter("?SubDefaultContentTemID", MySqlDbType.VarChar,36),
+					//new MySqlParameter("?SubIsCanAddSub", MySqlDbType.Int16,2),
+					//new MySqlParameter("?SubIsCanAddContent", MySqlDbType.Int16,2),
+					//new MySqlParameter("?IsCanAddSub", MySqlDbType.Int16,2),
+					//new MySqlParameter("?ListTemID", MySqlDbType.VarChar,36),
+					//new MySqlParameter("?PageSize", MySqlDbType.Int16,3),
+					//new MySqlParameter("?ModuleID", MySqlDbType.VarChar,36),
+					////new MySqlParameter("?ClassID", MySqlDbType.Int32,11),
+					//new MySqlParameter("?AddTime", MySqlDbType.DateTime),
+					//new MySqlParameter("?ClassTemIdMobile", MySqlDbType.VarChar,36),
+					//new MySqlParameter("?ContentTemIdMobile", MySqlDbType.VarChar,36),
+     //               new MySqlParameter("?SiteID", MySqlDbType.Int32,11),
+     //               new MySqlParameter("?ConfigName", MySqlDbType.VarChar,300),
+     //               new MySqlParameter("?IsDefault", MySqlDbType.Int16,4)
 
-                                         };
-            parameters[0].Value = model.ContentHtmlName;
-            parameters[1].Value = model.ClassHtmlNameRule;
-            parameters[2].Value = model.IsCanAddContent;
-            parameters[3].Value = model.ContentModelID;
-            parameters[4].Value = model.ContentTemID;
-            parameters[5].Value = model.ClassTemID;
-            parameters[6].Value = model.ClassModelID;
-            parameters[7].Value = model.SubClassAddName;
-            parameters[8].Value = model.SubClassTemID;
-            parameters[9].Value = model.SubClassModelID;
-            parameters[10].Value = model.SubDefaultContentModelID;
-            parameters[11].Value = model.SubDefaultContentTemID;
-            parameters[12].Value = model.SubIsCanAddSub;
-            parameters[13].Value = model.SubIsCanAddContent;
-            parameters[14].Value = model.IsCanAddSub;
-            parameters[15].Value = model.ListTemID;
-            parameters[16].Value = model.PageSize;
-            parameters[17].Value = model.ModuleID;
-            //parameters[18].Value = model.ClassID;
-            parameters[18].Value = model.AddTime;
-            parameters[19].Value = model.ClassTemIdMobile;
-            parameters[20].Value = model.ContentTemIdMobile;
+     //                                    };
+     //       parameters[0].Value = model.ContentHtmlName;
+     //       parameters[1].Value = model.ClassHtmlNameRule;
+     //       parameters[2].Value = model.IsCanAddContent;
+     //       parameters[3].Value = model.ContentModelID;
+     //       parameters[4].Value = model.ContentTemID;
+     //       parameters[5].Value = model.ClassTemID;
+     //       parameters[6].Value = model.ClassModelID;
+     //       parameters[7].Value = model.SubClassAddName;
+     //       parameters[8].Value = model.SubClassTemID;
+     //       parameters[9].Value = model.SubClassModelID;
+     //       parameters[10].Value = model.SubDefaultContentModelID;
+     //       parameters[11].Value = model.SubDefaultContentTemID;
+     //       parameters[12].Value = model.SubIsCanAddSub;
+     //       parameters[13].Value = model.SubIsCanAddContent;
+     //       parameters[14].Value = model.IsCanAddSub;
+     //       parameters[15].Value = model.ListTemID;
+     //       parameters[16].Value = model.PageSize;
+     //       parameters[17].Value = model.ModuleID;
+     //       //parameters[18].Value = model.ClassID;
+     //       parameters[18].Value = model.AddTime;
+     //       parameters[19].Value = model.ClassTemIdMobile;
+     //       parameters[20].Value = model.ContentTemIdMobile;
             
-            parameters[21].Value = model.SiteID;
-            parameters[22].Value = model.ConfigName;
-            parameters[23].Value = model.IsDefault;
+     //       parameters[21].Value = model.SiteID;
+     //       parameters[22].Value = model.ConfigName;
+     //       parameters[23].Value = model.IsDefault;
 
-            DbHelperCmsWrite.Instance.ExecuteNonQuery(CommandType.Text, strSql.ToString(), parameters);
-        }
+     //       DbHelperCmsWrite.Instance.ExecuteNonQuery(CommandType.Text, strSql.ToString(), parameters);
+     //   }
 
         public void UpdateDefault(int id, int siteId)
         {

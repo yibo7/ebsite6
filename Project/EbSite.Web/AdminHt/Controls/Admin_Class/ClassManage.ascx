@@ -32,13 +32,11 @@
             <div id="tg1" class="tab-pane active">
 
                 <div id="listP">
-                    <div id="divNavClassToContent" visible="false" style="height: 28px; line-height: 28px; border: 1px solid #fff; background-color: #FDF4E3; font-size: 14px; font-weight: bold; width: 100%;" runat="server"></div>
-
                     <XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
+                   <div id="divNavClassToContent" class="ClassToContentNav" visible="false" runat="server"></div>
                     <XS:GridView ID="gdList" runat="server" DataKeyNames="id" AutoGenerateColumns="False">
                         <Columns>
-
-
+                             
                             <asp:TemplateField ItemStyle-CssClass="gvfisrtTD">
                                 <HeaderTemplate>
                                     <%=Resources.lang.EBClassName%>
@@ -56,25 +54,15 @@
                                     <%=Resources.lang.EBOperation%>
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                    <XS:LinkButton ID="lbAddsubclass" CommandArgument='<%#Eval("id") %>' CommandName="addsubclass" Text="添加子分类" confirm="false" runat="server"></XS:LinkButton>
-                                    <XS:LinkButton ID="lbShowsubclass" CommandArgument='<%#Eval("id") %>' CommandName="showsubclass" Text="查看子分类" confirm="false" runat="server"> </XS:LinkButton>
-                                    <a href='<%#string.Format("{0}&id={1}&pid={2}",GetMenuLink(3),Eval("id"),Eval("parentid"))%>'>
-                                        <img title="编辑" src="<%=IISPath %>images/edit.gif" /></a>
-                                    <XS:LinkButton ID="lbAddcontent" CommandArgument='<%#Eval("id") %>' CommandName="addcontent" Text="添加内容" confirm="false" runat="server">
-                            <img title="添加内容" src="<%=IISPath %>images/addcontent.gif" />
-                                    </XS:LinkButton>
-                                    <XS:LinkButton ID="lbShowcontent" CommandArgument='<%#Eval("id") %>' CommandName="showcontent" Text="查看内容" confirm="false" runat="server">
-                            <img title="查看内容" src="<%=IISPath %>images/vcontent.gif" />
-                                    </XS:LinkButton>
+                                    <XS:LinkButton ID="lbAddsubclass" CommandArgument='<%#Eval("id") %>' CommandName="addsubclass" Text="添加子分类" confirm="false" runat="server" />
+                                    <XS:LinkButton ID="lbShowsubclass" CommandArgument='<%#Eval("id") %>' CommandName="showsubclass" Text="查看子分类" confirm="false" runat="server" />
+                                    <a class="AdminLinkButton" href='<%#string.Format("{0}&id={1}&pid={2}",GetMenuLink(3),Eval("id"),Eval("parentid"))%>'>编辑</a>
+                                    <XS:LinkButton ID="lbAddcontent" CommandArgument='<%#Eval("id") %>' CommandName="addcontent" Text="添加内容" confirm="false" runat="server" />
+                                    <XS:LinkButton ID="lbShowcontent" CommandArgument='<%#Eval("id") %>' CommandName="showcontent" Text="查看内容" confirm="false" runat="server" />
 
-                                    <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel" confirm="true" Text="删除">
-                            <img title="删除分类" src="<%=IISPath %>images/delete.gif" />
-                                    </XS:LinkButton>
-                                    <XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="CopyClass"
-                                        confirm="true" Text="复制"><img title="复制分类" src="<%=IISPath %>images/copy.gif" /></XS:LinkButton>
-
-                                    <a href="javascript:configs(<%#Eval("id") %>)">
-                                        <img title="设置分类" src="<%=IISPath %>images/configs.gif" /></a>
+                                    <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel" confirm="true" Text="删除" />
+                                    <XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="copy" confirm="true" Text="复制" />
+                                    <a class="AdminLinkButton" href="javascript:configs(<%#Eval("id") %>)">设置分类</a>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:BoundField HeaderText="分类ID" ItemStyle-Width="100" ReadOnly="true" DataField="id" />

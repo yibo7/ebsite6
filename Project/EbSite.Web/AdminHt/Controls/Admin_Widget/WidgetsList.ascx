@@ -21,9 +21,9 @@
                         CommandName="DeleteModel" Text="删除"></XS:LinkButton>
                          <XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("DataID") %>' CommandName="CopyData"
                         confirm="true" Text="复制"></XS:LinkButton>
-                     <a target="_blank" href="<%# string.Concat(IISPath,"custompages/getctrhtml.aspx?widgetid=",Eval("DataID"))%>">实时预览</a>
-                    <a target="_blank" href="<%# string.Concat(IISPath,"widget/js/",Eval("DataID"),"/")%>">JsApi</a>
-                    <a target="_blank" href="<%# string.Concat(IISPath,"widget/txt/",Eval("DataID"),"/")%>">TxtApi</a>
+                     <a class="AdminLinkButton" target="_blank" href="<%# string.Concat(IISPath,"custompages/getctrhtml.aspx?widgetid=",Eval("DataID"))%>">实时预览</a>
+                    <a class="AdminLinkButton" target="_blank" href="<%# string.Concat(IISPath,"widget/js/",Eval("DataID"),"/")%>">JsApi</a>
+                    <a class="AdminLinkButton" target="_blank" href="<%# string.Concat(IISPath,"widget/txt/",Eval("DataID"),"/")%>">TxtApi</a>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="<input id='chAll' onclick='on_check(this)'  type=checkbox />">

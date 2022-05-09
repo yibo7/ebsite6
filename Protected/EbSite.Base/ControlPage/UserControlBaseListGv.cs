@@ -164,7 +164,7 @@ namespace EbSite.Base.ControlPage
                 EasyuiDialog wbModify = (EasyuiDialog)e.Item.FindControl("wbModify");
                 if (!object.Equals(wbModify, null))
                 {
-                    wbModify.LinkOnly = true;
+                    //wbModify.LinkOnly = true;
                     if (!string.IsNullOrEmpty(this.PermissionModifyID))
                     {
                         if (!IsHaveLimit(this.PermissionModifyID))
@@ -178,7 +178,7 @@ namespace EbSite.Base.ControlPage
                             if (!Equals(hfIDKey, null))
                             {
                                 wbModify.Href = GetMofifyUrl(hfIDKey.Value);
-                                wbModify.IsColseReLoad = true;
+                                //wbModify.IsColseReLoad = true;
                             }
 
 
@@ -194,7 +194,7 @@ namespace EbSite.Base.ControlPage
                 EasyuiDialog wbShow = (EasyuiDialog)e.Item.FindControl("wbShow");
                 if (!object.Equals(wbShow, null))
                 {
-                    wbShow.LinkOnly = true;
+                    //wbShow.LinkOnly = true;
                     System.Web.UI.WebControls.HiddenField hfIDKey = (System.Web.UI.WebControls.HiddenField)e.Item.FindControl("hfID");
                     if (!Equals(hfIDKey, null))
                     {
@@ -275,7 +275,7 @@ namespace EbSite.Base.ControlPage
                 EasyuiDialog wbModify = (EasyuiDialog)row.FindControl("wbModify");
                 if (!object.Equals(wbModify, null))
                 {
-                    wbModify.LinkOnly = true;//升级前端框架后，总是带来弹出窗口兼容的问题，所以统一去掉，有需要请在ui里添加
+                    //wbModify.LinkOnly = true;//升级前端框架后，总是带来弹出窗口兼容的问题，所以统一去掉，有需要请在ui里添加
                     if (!string.IsNullOrEmpty(this.PermissionModifyID))
                     {
                         if (!IsHaveLimit(this.PermissionModifyID))
@@ -287,7 +287,7 @@ namespace EbSite.Base.ControlPage
                             //string sIDName = gdList.DataKeyNames[0];
                             string sID = gdList.DataKeys[e.Row.RowIndex].Value.ToString();
                             wbModify.Href = GetMofifyUrl(sID);// string.Concat(GetUrl, "&", AddUrl, "&id=", sID);
-                            wbModify.IsColseReLoad = true;
+                            //wbModify.IsColseReLoad = true;
 
                         }
                     }
@@ -295,14 +295,14 @@ namespace EbSite.Base.ControlPage
                     {
                         wbModify.Visible = false;
                     }
-                    wbModify.IsFull = true;
+                    //wbModify.IsFull = true;
                 }
 
                 //检测是否有权限显示数据的按钮
                 EasyuiDialog wbShow = (EasyuiDialog)row.FindControl("wbShow");
                 if (!object.Equals(wbShow, null))
                 {
-                    wbShow.LinkOnly = true;//升级前端框架后，总是带来弹出窗口兼容的问题，所以统一去掉，有需要请在ui里添加
+                    //wbShow.LinkOnly = true;//升级前端框架后，总是带来弹出窗口兼容的问题，所以统一去掉，有需要请在ui里添加
                     string sID = gdList.DataKeys[e.Row.RowIndex].Value.ToString();
                     wbShow.Href = GetShowUrl(sID);// string.Concat(GetUrl, "&", ShowUrl, "&id=", sID);
                 }

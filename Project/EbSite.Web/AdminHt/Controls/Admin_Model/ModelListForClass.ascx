@@ -16,11 +16,11 @@
                     <asp:TemplateField HeaderText="<%$Resources:lang,EBOperation %>">
                         <ItemTemplate>
                             <XS:EasyuiDialog ID="wbModify" runat="server" Text="修改" Title="修改" />
-                            <span class="linkbtn"><XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="CopyModel"
-                                confirm="true" Text="复制"></XS:LinkButton></span>
+                            <XS:LinkButton ID="lbCopy" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="CopyModel"
+                                confirm="true" Text="复制"></XS:LinkButton>
                             <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' Visible='<%#!bool.Parse(Eval("IsSystem").ToString()) %>' CommandName="DeleteModel"
                                 confirm="true" Text="删除"></XS:LinkButton>
-                            <span class="linkbtn"><a href="<%#GetEditFiledUrl(Eval("id")) %>">编辑字段</a></span>
+                            <a class="AdminLinkButton" href="<%#GetEditFiledUrl(Eval("id")) %>">编辑字段</a>
                             <XS:EasyuiDialog ID="edOrder" runat="server" Href='<%#GetOrderUrl(Eval("id")) %>' SaveText="保存排序设置" Text="字段排序" Title="分类字段排序" />
                         </ItemTemplate>
                     </asp:TemplateField>

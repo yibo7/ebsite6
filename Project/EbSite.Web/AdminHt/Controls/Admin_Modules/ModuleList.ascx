@@ -27,7 +27,7 @@
                            <asp:BoundField DataField="Author" HeaderText="开发单位" ></asp:BoundField>            
                               <asp:TemplateField HeaderText="操作">
                                 <ItemTemplate>                
-                                <a href='?t=2&mid=<%#Eval("id")%>'>管理模块</a>
+                                <a class="AdminLinkButton" target="_blank" href='main_module.aspx?mid=<%#Eval("id")%>'>管理模块</a>
                                 <XS:EasyuiDialog ID="WinBox2" runat="server" Href='<%# string.Concat("?t=7&mid=",Eval("id"))%>'  Text="导出模块" Title="导出模块" />
                                  <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel"  Tips_Msg="模块删除中,请勿关闭窗口!" confirm="true" Text="卸载"></XS:LinkButton>
                                   <%#Equals(Eval("IsClose").ToString(), "True")?"<font color=red>模块已经关闭</font>":""%>

@@ -3,7 +3,7 @@
  
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+            <div class="boxheader">
                 <h3>蜘蛛管理</h3>
             </div>
             <div class="content">
@@ -27,14 +27,16 @@
                                                 <span>前7天(<font color="#ff0000">...</font>)</span>
                                                 <span>前30天(<font color="#ff0000">...</font>)</span>
                                             </div> 
-                                        <div>
-                                             <XS:EasyuiDialog ID="wbModify"  Title="修改数据" Text="修改" runat="server"/> 
-                                    <XS:LinkButton ID="lbDelete"  runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel"  Text="删除"></XS:LinkButton>
-                                        </div>
-                                   
+                                       
                                     
                                     </ItemTemplate>
                                 </asp:TemplateField>
+                                <asp:TemplateField  >
+                                        <ItemTemplate >                                        
+                                            <XS:EasyuiDialog ID="wbModify"  Title="修改数据" Text="修改" runat="server"/> 
+                                    <XS:LinkButton ID="lbDelete"  runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel"  Text="删除"></XS:LinkButton>
+                                        </ItemTemplate>
+                                    </asp:TemplateField> 
                                <asp:TemplateField ItemStyle-Width="30" HeaderText="<input id='chAll' onclick='on_check(this)'  type=checkbox />">
                                         <ItemTemplate >                                        
                                             <asp:CheckBox ID="Selector"   runat="server" />

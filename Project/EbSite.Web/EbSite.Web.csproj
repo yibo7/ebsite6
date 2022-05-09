@@ -427,6 +427,7 @@
     <Content Include="AdminHt\dialog\Controls\dialog\WidgetData.ascx" />
     <Content Include="AdminHt\dialog\seltempfields.aspx" />
     <Content Include="AdminHt\js\admin.js" />
+    <Content Include="AdminHt\main_module.aspx" />
     <Content Include="AdminHt\themes\ext.png" />
     <Content Include="AdminHt\themes\green\add.gif" />
     <Content Include="AdminHt\themes\green\back.gif" />
@@ -860,6 +861,7 @@
     <Content Include="themes\wenda\pages\muser.js" />
     <Content Include="themes\wenda\pages\top.inc" />
     <None Include="文档\bug.md" />
+    <Content Include="文档\ebsite6更新日志.txt" />
     <Content Include="文档\MVC模块与扩展API.txt" />
     <Content Include="文档\CMS表.txt" />
     <Content Include="文档\上传控件.txt" />
@@ -3511,6 +3513,13 @@
     <Compile Include="AdminHt\dialog\seltempfields.aspx.designer.cs">
       <DependentUpon>seltempfields.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminHt\main_module.aspx.cs">
+      <DependentUpon>main_module.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHt\main_module.aspx.designer.cs">
+      <DependentUpon>main_module.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminHt\PagesModules.master.cs">
       <DependentUpon>PagesModules.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5271,7 +5280,7 @@
     <Content Include="Pages\Remark.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="文档\皮肤样式\皮肤文档说明.txt" />
-    <Content Include="文档\更新日志.txt" />
+    <Content Include="文档\ebsite5更新日志.txt" />
     <Content Include="文档\安装说明.txt" />
     <Content Include="sound\call.wav" />
     <Content Include="sound\msg.wav" />
