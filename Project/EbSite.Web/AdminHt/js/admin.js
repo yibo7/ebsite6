@@ -4,42 +4,25 @@
 In.ready('customtags', function () {
     //执行代码
     //GetMenus("00000000-0000-0000-0000-000000000000");
+    if ($("#LeftMenuList").length > 0) {
+        var TopTags = new CustomTags();
+        TopTags.ParentObjName = "line";
+        TopTags.SubObj = "span";
+        TopTags.CurrentClassName = "current";
+        TopTags.ClassName = "";
 
-    var TopTags = new CustomTags();
-    TopTags.ParentObjName = "line";
-    TopTags.SubObj = "span";
-    TopTags.CurrentClassName = "current";
-    TopTags.ClassName = "";
+        TopTags.fun = OnMainTags; // function () { OnMainTags(this) };
 
-    TopTags.fun = OnMainTags; // function () { OnMainTags(this) };
+        TopTags.InitOnclickInTags();
 
-    TopTags.InitOnclickInTags();
-
-    TopTags.InitOnclick(0);
+        TopTags.InitOnclick(0);
+    }
+    
 
     $("[data-toggle='tooltip']").tooltip();
 
 });
-
-//function InitTags()
-//{
-    
-//    TopTags.ParentObjName = "mainTag";
-//    TopTags.SubObj = "div";
-//    TopTags.CurrentClassName = "hover";
-//    TopTags.ClassName = "";
-
-//    TopTags.fun = OnMainTags;// function () { OnMainTags(this) };
-
-//    TopTags.InitOnclickInTags();
-
-//    TopTags.InitOnclick(0);
-//    if ($("#havenewv").text() != "") {
-//        shake($("#havenewv"), "red", 10);
-//    }
-   
-      
-//}
+ 
 function OnMainTags(obj) {
     var lurl = $(obj).attr("lui");
     var rurl = $(obj).attr("rui");

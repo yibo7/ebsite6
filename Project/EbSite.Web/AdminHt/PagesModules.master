@@ -9,11 +9,15 @@
     <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
     <meta name="author" content="Coderthemes">
     <title>模块</title>
+     
 </head>
-<body>
-     <form id="form2" runat="server">
+<body style="padding: 20px;">
+
+    <form id="form2" runat="server">
         <XS:CustomTags ID="ucPageTags" CssClass="CustomPageTag" runat="server"></XS:CustomTags>
+
         <asp:ContentPlaceHolder ID="ctphBody" runat="server"></asp:ContentPlaceHolder>
+
     </form>
 </body>
 </html>

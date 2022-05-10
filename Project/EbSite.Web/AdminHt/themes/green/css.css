@@ -541,3 +541,17 @@ legend {
 	font-weight: bold;
 	width: 100%;
 }
+.tab-content {
+	background-color: #ffffff;
+	padding: 15px;
+	border-left: solid 1px #e4e4e4;
+	border-right: solid 1px #e4e4e4;
+	border-bottom: solid 1px #e4e4e4;
+}
+.card-box {
+	background-color: #ffffff;
+	padding: 15px;
+	border-left: solid 1px #e4e4e4;
+	border-right: solid 1px #e4e4e4;
+	border-bottom: solid 1px #e4e4e4; 
+}

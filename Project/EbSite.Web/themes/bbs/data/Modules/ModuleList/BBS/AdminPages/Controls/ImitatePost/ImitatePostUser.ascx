@@ -1,7 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ImitatePostUser.ascx.cs" Inherits="EbSite.Modules.BBS.AdminPages.Controls.ImitatePost.ImitatePostUser" %>
 <%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
+<div class="card-box" id="PagesMain">
+	
 <XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
-<div id="PagesMain">
 	<XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID" >
 		<Columns>
 			<asp:TemplateField HeaderText="用户名称">

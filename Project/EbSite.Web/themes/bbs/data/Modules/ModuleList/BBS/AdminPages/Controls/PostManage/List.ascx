@@ -1,8 +1,9 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="List.ascx.cs" Inherits="EbSite.Modules.BBS.AdminPages.Controls.PostManage.List" %>
 <%@ Import Namespace="EbSite.Modules.BBS" %>
 <%@ Register Assembly="EbSite.Control" Namespace="EbSite.Control" TagPrefix="XS" %>
-<XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
-<div id="PagesMain">
+
+<div class="card-box" id="PagesMain">
+	<XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
 	<XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID" >
 		<Columns>
 			 <asp:TemplateField HeaderText="序号"  ItemStyle-Width="50"  ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle" > 

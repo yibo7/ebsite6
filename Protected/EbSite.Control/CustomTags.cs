@@ -81,19 +81,19 @@ namespace EbSite.Control
         protected override void Render(HtmlTextWriter output)
         {
 
-            if (!string.IsNullOrEmpty(this.Title))
-            {
-                //output.Write(string.Format("<div class=\"TabsTitle\" ><span><img align=\"left\" src=\"{1}images/menus/arrow1.png\"  />{0}</span></div>", this.Title, Base.AppStartInit.IISPath));
-                output.Write("<div class='tagtitle'><i class='glyphicon glyphicon-chevron-right'></i> {0}</div>", this.Title);
+            //if (!string.IsNullOrEmpty(this.Title))
+            //{
+            //    //output.Write(string.Format("<div class=\"TabsTitle\" ><span><img align=\"left\" src=\"{1}images/menus/arrow1.png\"  />{0}</span></div>", this.Title, Base.AppStartInit.IISPath));
+            //    output.Write("<div class='boxheader'><h3>{0}</h3></div>", this.Title);
 
-            }
+            //}
                 
             if (this.Visible)
             {
                 List<TagsItemInfo> objA = this.BindList();
                 if (!object.Equals(objA, null))
                 {
-                    output.Write("<div class='row container'><div class='col-lg-12'><ul class='nav nav-tabs'>");
+                    output.Write("<div><ul class='nav nav-tabs'>");
 
                     foreach (TagsItemInfo info in objA)
                     {
@@ -102,9 +102,9 @@ namespace EbSite.Control
                         {
                             sUrl = "#";
                         }
-                        output.Write("<li class='{0}'><a href = '{1}' ><span class='visible-xs'><i class='fa fa-user'></i></span><span class='hidden-xs'>{2}</span></a></li> ", new object[] { this.GetClass(info.TagUrl, info.TagOrtherUrl),  sUrl, info.sText, info.Orther });
+                        output.Write("<li class='nav-item'><a class='{0} nav-link' href = '{1}' ><span class='visible-xs'><i class='fa fa-user'></i></span><span class='hidden-xs'>{2}</span></a></li> ", new object[] { this.GetClass(info.TagUrl, info.TagOrtherUrl),  sUrl, info.sText, info.Orther });
                     }
-                    output.Write("</ul></div></div>");
+                    output.Write("</ul></div>");
                 }
                 //if (!object.Equals(objA, null))
                 //{

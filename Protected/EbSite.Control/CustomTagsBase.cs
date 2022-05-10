@@ -170,7 +170,7 @@ namespace EbSite.Control
             get
             {
                  
-                return "active tab";
+                return "active";
             } 
         }
 

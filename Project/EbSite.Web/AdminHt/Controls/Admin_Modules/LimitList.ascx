@@ -7,14 +7,14 @@
 <div class="row">
     <div class="col-lg-12">
         <ul class="nav nav-tabs">
-            <li class="active tab">
-                <a href="#tg1" data-toggle="tab" aria-expanded="false">
+            <li class="nav-item">
+                <a class="active nav-link" href="#tg1" data-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">后台菜单权限</span>
                 </a>
             </li>
-            <li class="tab">
-                <a href="Admin_Modules.aspx?t=23&mid=<%=GetModuleID %>" >
+            <li class="nav-item">
+                <a class="nav-link"  href="Admin_Modules.aspx?t=23&mid=<%=GetModuleID %>" >
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">用户中心菜单权限</span>
                 </a>

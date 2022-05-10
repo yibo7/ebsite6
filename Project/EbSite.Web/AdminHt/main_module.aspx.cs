@@ -30,28 +30,14 @@ namespace EbSite.Web.AdminHt
                 }
             }
         }
-
-        protected string GetRols
-        {
-            get
-            {
-                StringBuilder sb = new StringBuilder();
-                //EbSite.BLL.GetLink.HrefFactory.GetAspxInstance(GetSiteID).GetRemark()
-                foreach (string role in ap.Roles)
-                {
-                    sb.Append(role);
-                    sb.Append("|");
-                }
-                if (sb.Length > 1)
-                    sb.Remove(sb.Length - 1, 1);
-                if (sb.Length == 0) return "未分配角色";
-                return sb.ToString();
-            }
-        }
+         
 
         protected AdminPrincipal ap;
         protected Entity.Sites SiteModel;
         protected string ModulsName = string.Empty;
+        protected string Producer = string.Empty;
+        protected string ProducerUrl = string.Empty;
+        protected string Version = string.Empty;
         protected override void OnPreInit(EventArgs e)
         {
             //此页面不需要PagesCustom,所以重写了此办法
@@ -62,9 +48,11 @@ namespace EbSite.Web.AdminHt
             {
                 ap = AppStartInit.CheckAdmin(); 
                 SiteModel = Host.Instance.CurrentSite;
-
-                ModulsName = BLL.ModulesBll.Modules.Instance.GetModelName(new Guid(sModelID));
-
+                var module = Modules.Instance.GetEntity(new Guid(sModelID));
+                ModulsName = module.ModuleName;
+                Producer = module.Author;
+                ProducerUrl = module.AuthorUrl;
+                Version = module.Version;
 
                 List<ModulesPageModel> lstMenus = new List<ModulesPageModel>();
                 BLL.ModulesBll.MenusForAdminer mm = new MenusForAdminer(new Guid(sModelID));
