@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
 
 
-    <div class="content" style="background-color:#FAFAFA" >
+    <div class="eb-content" style="background-color:#FAFAFA" >
 	            <asp:Repeater runat="server" ID="rpComment" EnableViewState="false" >
                 <ItemTemplate>
                     <div class="ifzx">

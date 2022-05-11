@@ -8,7 +8,7 @@
                 <h3>货到付款配置</h3>
             启用货到付款功能并不代表所有物流公司都支持货到付款，所以你还需要在配送方式里设置相应的配送方式是否支付货到付款选项及不同物流公司的货到付款费用
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
             <table>
                     <tr>

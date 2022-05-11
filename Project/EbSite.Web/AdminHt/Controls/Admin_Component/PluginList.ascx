@@ -8,7 +8,7 @@
                 <h3>动态组件管理</h3>
             动态组件是存放在根目录下App_Code\Plugins里的.cs文件,所以且有动态编译功能
             </div>
-            <div class="content">
+            <div class="eb-content">
                     <div id="lblErrorMsg" style="padding:5px; color:Red;" runat="server"></div>
                     <asp:Label ID="lblExtensions" runat="server" Text="未找到"></asp:Label>
             </div>

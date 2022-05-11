@@ -15,7 +15,7 @@
                 <h3>插入可引用字段</h3>
             将光标放到指定位置，点击可插入
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <asp:Repeater ID="rpGetExtList" runat="server">
                     <ItemTemplate>
                          

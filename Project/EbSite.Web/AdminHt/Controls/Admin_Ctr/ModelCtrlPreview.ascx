@@ -8,7 +8,7 @@
         <div class="boxheader">
                 <h3>预览控件</h3>
             </div>
-            <div class="content">				
+            <div class="eb-content">				
                 <XS:ExtensionsCtrls ID="ExtensionsCtrls"   runat="server"/>
                                     
                 <br><br>

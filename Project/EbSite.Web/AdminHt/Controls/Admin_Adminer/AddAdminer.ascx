@@ -9,7 +9,7 @@
                 <h3>添加管理员</h3>
             管理员的添加会同时生成一个注册会员
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <table class="TableList">
                 <tr>
                     <td>

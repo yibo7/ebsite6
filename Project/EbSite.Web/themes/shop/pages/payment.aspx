@@ -8,7 +8,7 @@
 </head>
 <body >
 <!--#include file="header.inc" -->
-<div class="content">
+<div class="eb-content">
     <input type="hidden" runat="server" id="hidorderinfo" />
    <div class="container">
         <div class="paypanel">

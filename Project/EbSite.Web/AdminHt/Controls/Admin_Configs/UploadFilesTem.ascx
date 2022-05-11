@@ -7,7 +7,7 @@
                 <h3>文件上传但未提交的记录</h3>
             这些记录为用户异步上传文件后，还没真正提交的数据，可视为垃圾文件，可定期清理
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <XS:ToolBar ID="ucToolBar" runat="server" />
                 <XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID">
                     <Columns>

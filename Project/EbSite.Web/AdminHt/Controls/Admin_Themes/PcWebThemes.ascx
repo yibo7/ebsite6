@@ -7,7 +7,7 @@
         <div class="boxheader">
                 <h3>当前站点为"<%=CurrentSite.SiteName %>"所使用皮肤为[<%=CurrentSite.PageTheme %>]</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				
     <input type="button"  class="btn btn-primary" onclick="location.href='<%=GetTempListUrl("") %>'" value="点击进入管理当前站点皮肤模板及样式"/>
             </div>
@@ -20,7 +20,7 @@
                 <h3>PC版前端所有皮肤</h3>
             为了安全起见,在这里的删除只是删除数据文件，没有真正删除皮肤刷新数据时将可还原，但如果有需要，请到网站根目录下的themes里删除对应的文件夹，然后刷新当前页面
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
                 <XS:GridView ID="gdList" runat="server"   AutoGenerateColumns="false" DataKeyNames="ID">
                               <Columns>

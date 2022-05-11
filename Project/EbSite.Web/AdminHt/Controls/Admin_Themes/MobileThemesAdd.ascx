@@ -7,7 +7,7 @@
         <div class="boxheader">
                 <h3>手机皮肤修改</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
                 <tr>
                     <td>

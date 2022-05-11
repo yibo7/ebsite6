@@ -52,7 +52,7 @@
         }
     </script>
     <!--#include file="header.inc"-->
-    <div class="content">
+    <div class="eb-content">
         <div class="container">
             <div class="navtitle">
                 <li style="font-size: 16px;"><b>

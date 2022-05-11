@@ -7,7 +7,7 @@
                 <h3>模型控件类型</h3>
             您可以查询相应模块下的控件,不输入描述将表出所选模块下的所有控件
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <XS:ToolBar ID="ucToolBar" runat="server"/>
                   <XS:GridView ID="gdList" runat="server" AutoGenerateColumns="False"  >
                               <Columns> 

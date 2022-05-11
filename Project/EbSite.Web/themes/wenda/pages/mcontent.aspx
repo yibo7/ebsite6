@@ -13,7 +13,7 @@
        
         <%=GetNav("-", true)%>
     </div>
-    <div class="content" style="width: 990px; margin: 8px auto;">
+    <div class="eb-content" style="width: 990px; margin: 8px auto;">
         <div class="c_left">
             <div class="l_top jg">
                 <div class="jguser">

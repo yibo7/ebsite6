@@ -4,11 +4,11 @@
 
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
-        <div>
+        <div class="boxheader">
                 <h3>管理插件</h3>
             插件也叫提供者程序，插件的开发来自第三方，使用过程中如果有问题请与开发商联系
             </div>
-            <div class="content">				
+            <div class="eb-content">				
                     <XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
                 <XS:GridView ID="gdList" runat="server"   AutoGenerateColumns="false" DataKeyNames="Name">
         <columns>

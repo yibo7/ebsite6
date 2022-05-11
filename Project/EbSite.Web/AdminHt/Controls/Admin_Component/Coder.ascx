@@ -19,7 +19,7 @@
                 <h3>查看组件代码</h3>
             为了安全，取消组件代码在线修改，如有需要请修改文件
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<asp:TextBox ID="txtTem"    TextMode="MultiLine" runat="server"/> 
             </div>
     </div>

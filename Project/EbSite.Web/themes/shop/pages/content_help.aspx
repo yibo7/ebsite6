@@ -10,7 +10,7 @@
 </head>
 <body>
     <!--#include file="header.inc"-->
-    <div class="content">
+    <div class="eb-content">
         <div class="container">
             <div class="helptop">
                 <li><b>АяжњжааФ</b> > <a href="<%=HostApi.GetContentLink(Model.ID,Model.HtmlName) %>"><%=Model.NewsTitle %></a> </li>

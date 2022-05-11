@@ -7,7 +7,7 @@
         <div class="boxheader">
                 <h3>会员级别管理</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
                 <XS:ToolBar ID="ucToolBar" runat="server" />
 				<XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="id">
                     <Columns>

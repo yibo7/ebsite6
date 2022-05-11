@@ -8,7 +8,7 @@
         <div class="boxheader">
                 <h3>后台加款操作</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
                     <tr>
                         <td colspan="3">

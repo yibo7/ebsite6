@@ -6,7 +6,7 @@
                 <h3>支付插件管理</h3>
             如果没有适合您的支付插件，请自行开发，到插件管理中安装
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="Name">
                     <Columns>
                         <asp:TemplateField HeaderText="序号" ItemStyle-Width="50" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Middle">

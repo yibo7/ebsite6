@@ -8,7 +8,7 @@
         <div class="boxheader">
                 <h3>添加/修改仓库</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <table>
                     <tr>
                         <td>

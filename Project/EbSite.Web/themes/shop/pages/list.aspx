@@ -11,7 +11,7 @@
 <body>
     <!--#include file="headernav.inc"-->
     <!----中间--->
-    <div class="content">
+    <div class="eb-content">
         <div class="container">
             <!---中间--->
             <div class="lstdata">

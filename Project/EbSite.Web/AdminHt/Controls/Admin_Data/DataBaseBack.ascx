@@ -139,7 +139,7 @@ function IsOver(OriginalRequest)
             <div class="boxheader">
                 <h3>数据库备份</h3>
             </div>
-            <div class="content">				
+            <div >				
                 <XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
                  <div class="table-responsive" id="PagesMain">
 

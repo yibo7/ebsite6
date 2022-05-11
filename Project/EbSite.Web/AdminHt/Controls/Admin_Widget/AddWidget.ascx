@@ -19,7 +19,7 @@
                 <h3>部件设置</h3>
              
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table><tr>
                         <td>
                             部件类型：
@@ -74,7 +74,7 @@
                 <h3>调用代码</h3>
             将此代码复制到模板中的相应位置
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <XS:TextBox ID="txtCode" Width="650"    runat="server"></XS:TextBox>
             </div>
     </div>

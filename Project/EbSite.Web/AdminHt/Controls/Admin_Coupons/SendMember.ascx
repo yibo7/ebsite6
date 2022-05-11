@@ -6,7 +6,7 @@
         <div class="boxheader">
                 <h3>发送给会员</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<asp:PlaceHolder ID="phCtrList" runat="server">
                        <table >
                                         <tr>

@@ -120,7 +120,7 @@
                <script src="/ajaxget/GetCount.ashx?cid=<%=Model.ClassID %>&id=<%=Model.ID %>&t=0" type='text/javascript' language="javascript"></script>
             </font>
             </div>
-        <div id="textbody" class="content"> 
+        <div id="textbody" class="eb-content"> 
             <%=Model.ContentInfo %>
         </div>
         

@@ -11,7 +11,7 @@
 <body>
     <!--#include file="header.inc"-->
     <!----中间--->
-    <div class="content">
+    <div class="eb-content">
         <div class="container i_one">
             <div class="con1l">
                 <XS:Widget ID="Widget3" WidgetName="首页所有商品分类" WidgetID="5e8263fb-3d3c-4b27-b945-43117c9d2211"

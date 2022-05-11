@@ -9,7 +9,7 @@
                 <h3>给用户组分配模块菜单权限</h3>
             操作流程:选择角色->分配权限
             </div>
-            <div class="content">
+            <div class="eb-content">
 				  <XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
                 
                 <XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="GroupName">

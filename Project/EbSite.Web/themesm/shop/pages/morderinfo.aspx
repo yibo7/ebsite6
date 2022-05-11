@@ -50,7 +50,7 @@
                 }
             </script>
 
-            <div class="content">
+            <div class="eb-content">
                 <div class="container">
                     <div class="navtitle"><li style="font-size: 16px;"><b><%=SiteName %></b>&nbsp;>&nbsp;订单中心</li></div>
                     <div class="bankimg ordrnum">

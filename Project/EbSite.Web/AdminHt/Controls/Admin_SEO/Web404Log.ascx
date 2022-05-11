@@ -8,7 +8,7 @@
                 <h3>网页访问错误记录</h3>
             要记录404日志请将404错误页面定向到网根目录下的errhttp.aspx页面,默认.net托管的404已经在web.config里开户,静态页请到iis里设置
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XS:GridView ID="gdList" runat="server"   AutoGenerateColumns="false" DataKeyNames="ID">
                               <Columns>
                                    <asp:TemplateField HeaderText="日志标题" ItemStyle-CssClass="gvfisrtTD" >

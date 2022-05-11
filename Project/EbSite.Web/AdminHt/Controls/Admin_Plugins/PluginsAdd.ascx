@@ -8,7 +8,7 @@
                 <h3>安装插件</h3>
             目前插件的安装包只支持.dll格式！
             </div>
-            <div class="content">
+            <div class="eb-content">
                 考虑到安全性问题，ebsite 6.0.0后不再提供在后台上传插件。 您可以手动将你的插件放到根目录下的/Plugins/里，系统会自动加载并运行。
                 
 				 <%--<table cellpadding="0"  cellspacing="0">

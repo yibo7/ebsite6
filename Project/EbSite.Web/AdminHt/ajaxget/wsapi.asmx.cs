@@ -9,6 +9,7 @@ using EbSite.BLL;
 using EbSite.Base.Json;
 using EbSite.Entity;
 using EbSite.Web.AdminHt.ajaxget.WsapiHelp;
+using EbSite.Base;
 
 namespace EbSite.Web.AdminHt.ajaxget
 {
@@ -39,8 +40,8 @@ namespace EbSite.Web.AdminHt.ajaxget
         [WebMethod]
         public JsonResponse ChangeSite(int siteid)
         {
-            Core.Utils.WriteCookie("adminsiteid", siteid.ToString());
-
+            //Core.Utils.WriteCookie("adminsiteid", siteid.ToString());
+            AppStartInit.ChangeSite(siteid.ToString());
             return new JsonResponse { Message = "站点切换成功", Success = true };
         }
         [WebMethod]

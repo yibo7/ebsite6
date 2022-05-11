@@ -7,7 +7,7 @@
         <div class="boxheader">
                 <h3>修改友情链接配置</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>       
      
             

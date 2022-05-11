@@ -7,7 +7,7 @@
                 <h3>已经保存的上传文件记录</h3>
             这些记录为用户异步上传文件后，并且正式提交的数据，这里的文件已经与内容关系使用，不是有必要请不要删除
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XS:ToolBar ID="ucToolBar" runat="server" />
                  <XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID">
                     <Columns>

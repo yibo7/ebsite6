@@ -7,7 +7,7 @@
         <div class="boxheader">
                 <h3>添加/修改 发货人信息</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<asp:PlaceHolder ID="phCtrList" runat="server">
    
                 <table>

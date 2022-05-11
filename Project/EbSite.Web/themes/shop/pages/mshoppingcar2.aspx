@@ -13,7 +13,7 @@
 <body>
     <div class="gtop">
         <!--#include file="headersmall.inc"-->
-        <div class="content">
+        <div class="eb-content">
             <div class="container">
                 <div class="top2bnr">
                     <li><a href="<%=base.HostApi.CurrentSiteUrl %>">

@@ -10,7 +10,7 @@
 
 <body >
  <!--#include file="header.inc"-->
- <div class="content" style="width: 990px; margin: 8px auto;">
+ <div class="eb-content" style="width: 990px; margin: 8px auto;">
         <div style="width:100%;" >
             <div class="l_top" style="padding: 10px; width:968px;">
                 <li class="f_s14">

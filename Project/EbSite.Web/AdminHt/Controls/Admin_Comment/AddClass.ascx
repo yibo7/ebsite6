@@ -6,7 +6,7 @@
         <div class="boxheader">
                 <h3>添加评论页</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table style="width:100%;">
                     <tr>                       
                         <td width="50" >

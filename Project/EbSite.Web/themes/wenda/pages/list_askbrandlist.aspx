@@ -12,7 +12,7 @@
 </head>
 <body>
     <!--#include file="header.inc"-->
-    <div class="content" style="width: 990px; margin: 8px auto;">
+    <div class="eb-content" style="width: 990px; margin: 8px auto;">
         <div class="c_left">
             <div class="l_top" style="padding: 10px 0px 10px 1px;">
                 <li class="f_s14">

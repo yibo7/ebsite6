@@ -7,7 +7,7 @@
                 <h3>自动缓存生成文件错误日志</h3>
             生成静态页面时如果发生未能成功生成的情况，将在这里记录下来，您可以再次生成
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XS:GridView ID="gdList" runat="server"   AutoGenerateColumns="false" DataKeyNames="ID">
                               <Columns>
                                    <asp:TemplateField HeaderText="日志标题" ItemStyle-CssClass="gvfisrtTD" >

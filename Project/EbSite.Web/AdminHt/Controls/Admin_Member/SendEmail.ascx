@@ -10,7 +10,7 @@
                 <h3>批量邮件发送</h3>
             请确保您已经安装邮件发送插件，建议安装官方邮件发送插件
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table class="TableList">
                 <tr>
                     <td>

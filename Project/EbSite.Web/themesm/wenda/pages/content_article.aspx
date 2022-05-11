@@ -16,7 +16,7 @@
         <%=GetNav("-", true)%>  
          <a id="push-right" class="selclass" >уб╫з</a>
     </div>
-    <div class="content"> 
+    <div class="eb-content"> 
                <%=ShowInfo%>
                
                 <br /><br /> 

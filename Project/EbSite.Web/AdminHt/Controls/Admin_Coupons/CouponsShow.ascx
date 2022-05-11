@@ -6,7 +6,7 @@
         <div class="boxheader">
                 <h3>优惠券明细</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table >
                 <tr>
                     <td align="right">优惠券名称:
@@ -73,7 +73,7 @@
         <div class="boxheader">
                 <h3>优惠券的操作记录</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table class="table">
                 <asp:Repeater runat="server" ID="RepItem">
                     <HeaderTemplate>

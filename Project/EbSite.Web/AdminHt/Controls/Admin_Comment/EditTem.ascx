@@ -17,7 +17,7 @@
         <div class="boxheader">
                 <h3>编辑模板</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<asp:TextBox ID="txtTem"   TextMode="MultiLine"   runat="server"></asp:TextBox> 
             </div>
     </div>

@@ -7,7 +7,7 @@
                 <h3>区域配置</h3>
             地区数据是一种常用的数据，这里设置好后，方便在其他模块开发时调用，也可直接调用扩展控件AreaLis
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<div id="PagesMain">
     <asp:Panel ID="PaneArea" runat="server">
         
@@ -81,7 +81,7 @@
         <div class="boxheader">
                 <h3>批量添加</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
                 请用","分开 如：石家庄，邢台
 				 <XS:TextBoxVl ID="AllAreaNames"  onkeydown="javascript:this.value=this.value.replace('，',',')" ValidationGroup="TbA" IsAllowNull="false" TextMode="MultiLine"
                     MsgErr="不能为空" runat="server" Width="600px" Height="100px"></XS:TextBoxVl>

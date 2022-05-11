@@ -9,7 +9,7 @@
         <div class="boxheader">
                 <h3>第一步:请选择源分类</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XSD:SelectClass ID="drpSoure" ApiFunctionName="GetSubClassForAddClass" Size="10" runat="server"></XSD:SelectClass>
             </div>
     </div>
@@ -19,7 +19,7 @@
         <div class="boxheader">
                 <h3>第二步:请选择目标分类</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				
                 <XSD:SelectClass ID="drpTarget" ApiFunctionName="GetSubClassForAddClass" Size="10" runat="server"></XSD:SelectClass>
             </div>
@@ -30,7 +30,7 @@
         <div class="boxheader">
                 <h3>第三步:选择移动方式并提交</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				    <%=Resources.lang.EBMobileWay %>:
 						            <XS:RadioButtonList ID="movetype" runat="server" RepeatColumns="1">
                                         <asp:ListItem Value="0" Text="<%$Resources:lang,EBAdjustOrderBf %>"></asp:ListItem>

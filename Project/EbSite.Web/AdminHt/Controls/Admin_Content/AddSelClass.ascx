@@ -8,7 +8,7 @@
                 <h3>第一步</h3>
             请选择分类然后点击[下一步] 进入内容添加页面
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<div class="selbox form-horizontal">
                <XSD:SelectClass ID="selClass" Size="30" runat="server"></XSD:SelectClass>
             </div>

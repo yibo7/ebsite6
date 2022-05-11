@@ -9,7 +9,7 @@
                 <h3>添加表单模型</h3>
             模板名称以form_并且后续为.aspx
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <table style="width:500px">
                     <tr>
                         <td>

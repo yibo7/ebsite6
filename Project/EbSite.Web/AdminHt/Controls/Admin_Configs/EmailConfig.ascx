@@ -5,7 +5,7 @@
         <div class="boxheader">
                 <h3>邮件设置</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
                     <tr>
                         <td>默认邮件发送插件：             
@@ -97,7 +97,7 @@
         <div class="boxheader">
                 <h3>邮件发送测试</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <div>
                     测试邮箱：<XS:TextBox ID="txtTestEmail" runat="server" Width="300" HintInfo="如abc@ebsite.net" HintShowType="down"></XS:TextBox>
                 </div>

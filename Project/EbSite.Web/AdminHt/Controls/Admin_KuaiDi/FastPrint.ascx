@@ -6,7 +6,7 @@
         <div class="boxheader">
                 <h3>快速打印</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<asp:PlaceHolder ID="phCtrList" runat="server">
     <div class="admin_toobar">
         <asp:Panel ID="Panel1" runat="server" Width="100%">

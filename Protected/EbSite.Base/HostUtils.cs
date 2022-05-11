@@ -144,29 +144,21 @@ namespace EbSite.Base
                     //Configs.SysConfigs.ConfigsControl.Instance.AdminPath
                     if (HttpContext.Current.Request.Path.ToLower().IndexOf(Configs.SysConfigs.ConfigsControl.Instance.AdminPath.ToLower()) > 0)
                     {
-                        string sSiteId = Core.Utils.GetCookie("adminsiteid");// HttpContext.Current.Session["adminsiteid"] as string;
-                        if (!string.IsNullOrEmpty(sSiteId))
-                            return Core.Utils.StrToInt(sSiteId, 1);
+                        //string sSiteId = Core.Utils.GetCookie("adminsiteid");
+                        if (!Equals(HttpContext.Current.Session, null))
+                        {
+                            string sSiteId = HttpContext.Current.Session["adminsiteid"] as string;
+                            if (!string.IsNullOrEmpty(sSiteId))
+                                return Core.Utils.StrToInt(sSiteId, 1);
+                        }
+                        else
+                        {
+                            return EbSite.BLL.Sites.Instance.GetFirstEntity.id;
+                        }
 
-                        //if (this.UserID > 0)
-                        //{
-                        //  return  EbSite.BLL.AdminUser.GetCurrentSiteID(this.UserID);
-                        //}
-                        //else
-                        //{
-                        //    return 1;
-                        //}
 
-                    }
-                    //else
-                    //{
-                    //    return 1;
-                    //}
-                }
-                //else
-                //{
-                //    return 1;
-                //}
+                    } 
+                } 
                return 1;
                 //return EbSite.BLL.Sites.Instance.GetFirstEntity.id;
             }

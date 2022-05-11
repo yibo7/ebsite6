@@ -9,7 +9,7 @@
 </head>
 <body>
     <!--#include file="header.inc"-->
-    <div class="content" style="width: 990px; margin: 8px auto;">
+    <div class="eb-content" style="width: 990px; margin: 8px auto;">
         <div class="c_left">
             <form id="Form1" runat="server">
                 <div class="l_top" style="padding: 10px; width: 731px;">

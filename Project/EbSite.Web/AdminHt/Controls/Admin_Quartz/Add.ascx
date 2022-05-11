@@ -7,7 +7,7 @@
         <div class="boxheader">
                 <h3>添加/修改计划任务</h3>
             </div>
-            <div class="content">
+            <div >
 				 <table >
                     <tr>
                         <td>

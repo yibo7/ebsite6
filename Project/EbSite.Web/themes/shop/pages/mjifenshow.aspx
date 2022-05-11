@@ -12,7 +12,7 @@
     <div id="centerbox">
         <!--#include file="headernav.inc" -->
         <!----ÖÐ¼ä--->
-        <div class="content">
+        <div class="eb-content">
             <div class="container">
                 <div class="jf_con">
                     <div class="jf_l fleft">

@@ -11,7 +11,7 @@
         <div class="boxheader">
                 <h3>前台搜索默认内容字段</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<div class="alert alert-info">为了优化查询速度有必要去除没必要的字段</div> 
             <table>
                     <tr>
@@ -51,7 +51,7 @@
         <div class="boxheader">
                 <h3>选择分表作为 搜索、排行、专题、标签 的数据源</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
                 
                 <tr>
@@ -81,7 +81,7 @@
         <div class="boxheader">
                 <h3>清理所有站点以外的无用内容</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <table>
                 
                 <tr>
@@ -102,7 +102,7 @@
         <div class="boxheader">
                 <h3>后台搜索字段</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
                 <tr>
                     <td>
@@ -134,7 +134,7 @@
         <div class="boxheader">
                 <h3>点击率归零</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
           
                 <tr>
@@ -172,7 +172,7 @@
         <div class="boxheader">
                 <h3>数据初始化</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
           
                
@@ -220,7 +220,7 @@
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
        
-            <div class="content">
+            <div class="eb-content">
 				<XS:Button ID="bntClearOutSiteContent"  runat="server" Confirm="true" HintInfo="不在所有站群内的内容,如:之前创建了站点添加了内容，站点删除后内容还保存在内容表，可以在这里清理" Text="清理垃圾内容" onclick="bntClearOutSiteContent_Click"   />  
             </div>
     </div>

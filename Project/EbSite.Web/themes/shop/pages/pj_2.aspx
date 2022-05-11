@@ -9,7 +9,7 @@
 </head>
 <body><link type="text/css" href="<%=EbSite.Base.Host.Instance.ThemePath %>pj/css.css" rel="stylesheet" />
     <!--#include file="header.inc"-->
-    <div class="content">
+    <div class="eb-content">
         <div class="container">
             <div style="float: left; width: 200px; height: 400px; margin-top: 5px;">
                 <div style="border: 1px solid #CCCCCC;">

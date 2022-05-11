@@ -6,7 +6,7 @@
         <div class="boxheader">
                 <h3>添加部件模板分类</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
                     <tr>
                         <td>

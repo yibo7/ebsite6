@@ -8,7 +8,7 @@
                 <h3>IIS日志管理</h3>
             请在iis的日志设置里将日志生成指定到本网站的根目录下的iislog/下即可统计日志数据,日志的后缀名必须为.log
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID">
                     <Columns>
                         <asp:TemplateField HeaderText="日志名称" ItemStyle-Width="150">

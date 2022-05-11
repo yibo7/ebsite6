@@ -8,7 +8,7 @@
         <div class="boxheader">
                 <h3>添加支付方式</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <table >
                     <tr>
                         <td>

@@ -9,7 +9,7 @@
         <div class="boxheader">
                 <h3>24小时来访分析</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				
 <div style="text-align: center; padding: 10px;">
     <input onclick="getVisitTimeData(1)" class="btn btn-primary" type="button" value="今天"/>

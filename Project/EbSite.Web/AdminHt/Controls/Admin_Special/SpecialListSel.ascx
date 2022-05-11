@@ -9,7 +9,7 @@
                 <h3>管理专题</h3>
             提示：这里最多展示5000列表，如果专题过大可以切换到<a href="Admin_Special.aspx?mpid=ce45900d-f3cd-4f03-839d-cbbe456a0607&msid=aa9847a5-7258-40d1-8b73-40caa1670c9b">表格模式来管理专题</a>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 
                 <div class="classtoolbar"></div>
             

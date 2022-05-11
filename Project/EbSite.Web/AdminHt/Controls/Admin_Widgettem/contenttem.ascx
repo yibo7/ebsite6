@@ -7,7 +7,7 @@
                 <h3>后台内容管理列表模板</h3>
              在后台的内容管理列表绑定出来的结果有时需要与相关的内容模型相关，比如商品类的内容模式需要在列表绑定出来商品图片与价格等信息，这样默认的列表模板不能满足时可以在这里定制
             </div>
-            <div class="content">
+            <div class="eb-content">
 				
                 <XS:ToolBar ID="ucToolBar" runat="server"/>
                  <XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID">

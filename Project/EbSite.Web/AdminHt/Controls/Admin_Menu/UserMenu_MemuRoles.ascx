@@ -7,7 +7,7 @@
         <div class="boxheader">
                 <h3>用户菜单权限管理</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				
             <XS:ToolBar ID="ucToolBar" runat="server"/>
                  <XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID">

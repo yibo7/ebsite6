@@ -11,7 +11,7 @@
        <XS:Widget ID="Widget1" WidgetName="ÊÖ»ú°æÊ×Ò³Í¼Æ¬ÇÐ»»"  WidgetID="450291f5-eabd-41cc-9c4b-45487e58da55" runat="server"/>
 
     </div>
-    <div style="margin-top: 5px;" class="content">
+    <div style="margin-top: 5px;" class="eb-content">
         <div class="w-home-search">
             <form action="<%=EbSite.Base.Host.Instance.MSearchRw %>" method="get">
             <input type="submit" value=" ËÑ Ë÷ " alog-alias="search">

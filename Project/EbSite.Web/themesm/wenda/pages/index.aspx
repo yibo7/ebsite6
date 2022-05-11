@@ -34,7 +34,7 @@
     <div class="w-navigator">
         <a href="<%=HostApi.MGetSpecialHref() %>">专题</a><b>|</b> <a href="<%=EbSite.Modules.Wenda.ModuleCore.GetLinks.MAskPost(GetSiteID) %>">提问</a><b>|</b> <a href="<%=HostApi.MUccIndexRw %>">我的中心<span class="unread"></span></a>
     </div>
-    <div style="margin-top: 5px;" class="content">
+    <div style="margin-top: 5px;" class="eb-content">
         <div class="w-home-search">
             <form action="<%=EbSite.Base.Host.Instance.MSearchRw %>" method="get">
             <input type="submit" value=" 搜 索 " alog-alias="search">
@@ -70,7 +70,7 @@
                                         <li><a href="<%#EbSite.Base.Host.Instance.MGetContentLink(Eval("ID")) %>">
                                             <dt>
                                                 <%#Eval("NewsTitle")%></dt>
-                                            <dd class="content">
+                                            <dd class="eb-content">
                                                 <%--  <%# EbSite.Core.UBB.ClearUBB(EbSite.Core.Strings.GetString.CutLen(Eval("ContentInfo").ToString(), 30))%>--%>
                                             </dd>
                                             <dd class="source">

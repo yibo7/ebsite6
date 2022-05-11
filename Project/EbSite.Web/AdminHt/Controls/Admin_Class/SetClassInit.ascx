@@ -8,7 +8,7 @@
         <div class="boxheader">
                 <h3>分类默认配置</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<div class="alert alert-info">默认添加分类时使用的设置</div>
                 <a class="btn btn-primary" href="Admin_Class.aspx?t=5&id=0">更改分类默认设置</a>
                 <XS:Button ID="btnClearClassConfig" runat="server" Text="刷新分类设置" HintInfo="比如采集过来的分类，将其实设置到默认分类设置，如果是子类即设置到所在父分类一样的配置" Tips_Msg="如果分类数据量大可能要比较长的时间" Confirm="True" OnClick="btnClearClassConfig_Click" />
@@ -22,7 +22,7 @@
         <div class="boxheader">
                 <h3>前台搜索默认分类字段</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<div class="alert alert-info">为了优化查询速度有必要去除没必要的字段</div>
                 <div>
                     <XS:CheckBoxList RepeatColumns="6" ID="drpClassFileds" runat="server">
@@ -41,7 +41,7 @@
         <div class="boxheader">
                 <h3>清理所有站点以外的无用分类</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <XS:Button ID="btnClearData" runat="server"
                     Text="开始清理" OnClick="btnClearData_Click" />
             </div>
@@ -54,7 +54,7 @@
         <div class="boxheader">
                 <h3>后台搜索字段</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <div class="alert alert-info">可以在这里自定义后台分类管理的搜索字段，格式 为 字段名称1｜显示名称2，字段名称2｜显示名称2</div>
                 <div>
                     <XS:TextBox ID="txtAdminSearchFileds" TextMode="MultiLine" Width="500" Height="100" runat="server"></XS:TextBox>
@@ -74,7 +74,7 @@
         <div class="boxheader">
                 <h3>点击率归零</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<div class="alert alert-info">由于本系统分类也可以当作内容使用，所以存在访问率，这里如果重置为零后将重新统计</div>
                 <div>
                     <XS:DropDownList ID="drpClassNumType" runat="server">
@@ -99,7 +99,7 @@
         <div class="boxheader">
                 <h3>数据初始化</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <div class="alert alert-info">同上</div>
                 <div>
                     <XS:Button ID="bntClassResetOrderID" runat="server" Confirm="true"
@@ -119,7 +119,7 @@
         <div class="boxheader">
                 <h3>整理每个分类所有父级</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<div class="alert alert-info">批量整理分类的父级分类 ParentIDs</div>
                 <div >
                     <XS:Button ID="btnClassSort" runat="server" Confirm="true"

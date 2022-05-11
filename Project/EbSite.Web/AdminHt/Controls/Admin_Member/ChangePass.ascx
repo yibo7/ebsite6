@@ -5,7 +5,7 @@
         <div class="boxheader">
                 <h3>修改密码</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <table class="TableList">
                     <tr>
                         <td>

@@ -30,7 +30,7 @@ body {font:12px/1.5  "宋体";color:#333}
 </style>
 </head>
 <body>
-<div class="content">
+<div class="eb-content">
    <div class="container">
 		<div class="w">
             <div class="logo"><img width="182" height="85" src="<%=ThemeCss%>images/logo.png"  /></div>

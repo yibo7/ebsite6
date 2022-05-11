@@ -7,7 +7,7 @@
         <div class="boxheader">
                 <h3>添加信息</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<asp:PlaceHolder ID="phCtrList" runat="server">
    <div id="content">
                     <div style="font-size: 16px; margin-left:300px; margin-bottom: 5px; color: red; width:100%;">[请在IE中编辑]</div>

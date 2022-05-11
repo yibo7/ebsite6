@@ -13,7 +13,7 @@
 <div class="row cbrowbox">
     <div class="col-sm-12 col-md-12 ">
         
-            <div class="content">
+            <div class="eb-content">
 				 <div class="selbox">
                 <XSD:SelectClass ID="selClass" ApiFunctionName="GetSubClassForAddClass" Size="30" runat="server"></XSD:SelectClass>
             </div>

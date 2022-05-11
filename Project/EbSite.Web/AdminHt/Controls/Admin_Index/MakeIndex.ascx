@@ -7,7 +7,7 @@
             <div class="boxheader">
                 <h3><%=Resources.lang.Menudd231a18%></h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XS:Button ID="bntSave" Text=" 立即生成首页 " runat="server" />
             <asp:Label ID="lbErr" runat="server"  ></asp:Label>
             </div>
@@ -20,7 +20,7 @@
         <div class="boxheader">
                 <h3>是否开启首页缓存</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 
             <XS:CheckBox ID="cbIsIndexCache"  HintInfo="在调试模式下为了能即时查看修改效果，可以设置为不启用"  Text="是否开启首页缓存" runat="server" />
                 <br />
@@ -35,7 +35,7 @@
         <div class="boxheader">
                 <h3>手机站点首页</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <div>
                 <a target="_blank" href="<%=HostApi.MobileBarcode%>">
                     <asp:Image ID="imgMobileIndexImg" runat="server" />

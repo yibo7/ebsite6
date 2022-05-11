@@ -9,7 +9,7 @@
                 采用搜索插件:<asp:Literal ID="llSearchPlugin" runat="server"></asp:Literal>
                 </div>
             </div>
-            <div class="content">
+            <div class="eb-content">
                 
 				<div>
                     输入需要分词的内容：

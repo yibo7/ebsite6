@@ -6,7 +6,7 @@
         <div class="boxheader">
                 <h3>[<asp:Label ID="lbUser" runat="server" Text="Label"></asp:Label>]享有的权限</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<asp:Literal ID="RoleList" runat="server"></asp:Literal>
             </div>
     </div>

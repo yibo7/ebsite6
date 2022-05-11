@@ -12,7 +12,7 @@
         <div class="boxheader">
                 <h3>表单模型字段管理</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table style="width: 100%">
                 <tr>
                     <td>

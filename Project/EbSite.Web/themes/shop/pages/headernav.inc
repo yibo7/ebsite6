@@ -1,5 +1,5 @@
 ﻿<!--#include file="header.inc"-->
-<div class="content">
+<div class="eb-content">
   <div class="container">
     <div class="shopnav">
       <%=GetNav(">") %>

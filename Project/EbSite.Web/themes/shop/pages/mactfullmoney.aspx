@@ -6,7 +6,7 @@
 <head id="Head1" runat="server"></head>
 <body>
    <!--#include file="headernav.inc"-->
-    <div  class="content">
+    <div  class="eb-content">
 	<div class="container">	
 		<div class="tuanprice w990">
 			<div class=" tpl" >

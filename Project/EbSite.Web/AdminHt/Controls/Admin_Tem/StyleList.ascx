@@ -13,7 +13,7 @@
             <asp:BoundField HeaderText="<%$Resources:lang,EBPath %>" DataField="UrlPath" />
             <asp:TemplateField HeaderText="<%$Resources:lang,EBOperation %>">
                 <ItemTemplate>
-                    <a href="<%# string.Concat(GetTabUrl,"&t=8&na="+Eval("Name"))%>">编辑样式</a>
+                    <a class="AdminLinkButton" href="<%# string.Concat(GetTabUrl,"&t=8&na="+Eval("Name"))%>">编辑样式</a>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>

@@ -13,7 +13,7 @@
                         <ItemTemplate>
                                 <li><a href="http://www.baidu.com">
                             <dt>谁知道前机盖撑杆，前平衡杆开口胶，后平衡杆开口胶，车型：韩国起亚索兰托，价格吗?</dt>
-                            <dd class="content">
+                            <dd class="eb-content">
                                 新华网深圳3月23日电（记者 赵瑞西）23日，深圳市南山区西里医院的大楼</dd>
                             <dd class="source">
                                 提问：新浪&nbsp;&nbsp;时间:2013-4-10 9:01:28</dd>

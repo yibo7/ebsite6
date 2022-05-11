@@ -434,18 +434,13 @@ namespace EbSite.Base
         static public void LoadEbBaseLinksAndTemp()
         {
             List<EbSite.Entity.Sites> sites = EbSite.BLL.Sites.Instance.FillList();
-
+            
             foreach (var site in sites)
             {
+                
                 if (!EbBaseLinks.ContainsKey(site.id))
                     EbBaseLinks.Add(site.id, new BaseLinks(site.id));
-
-                //if (!string.IsNullOrEmpty(site.PageTheme) && !EbTemplatesPCs.ContainsKey(site.PageTheme))
-                //    EbTemplatesPCs.Add(site.PageTheme, new TemplatesPC(site.PageTheme));
-
-                //if (!string.IsNullOrEmpty(site.MobileTheme) && !EbTemplatesMobiles.ContainsKey(site.MobileTheme))
-                //    EbTemplatesMobiles.Add(site.MobileTheme, new TemplatesMobile(site.MobileTheme));
-
+                
             }
 
 
@@ -703,26 +698,22 @@ namespace EbSite.Base
                    sbStartInitDataPC.Append("var SiteConfigs ={");
                    sbStartInitDataPC.Append("id: 1,");
                    sbStartInitDataPC.AppendFormat("UrlIISPath: \"{0}\",", IISPath);
-                     
                     sbStartInitDataPC.AppendFormat("UrlUcc: \"{0}\",", Base.Host.Instance.UccIndexRw);
                    sbStartInitDataPC.AppendFormat("UrlLogin: \"{0}\",", Base.Host.Instance.LoginRw);
-                   sbStartInitDataPC.AppendFormat("UrlLostpassword: \"{0}\",", Base.Host.Instance.LostpasswordRw);
-                   sbStartInitDataPC.AppendFormat("UrlReg: \"{0}\",", Base.Host.Instance.RegRw);
+                   sbStartInitDataPC.AppendFormat("UrlLostpassword: \"{0}\",", Base.Host.Instance.LostpasswordRw);  
+                    
+                    sbStartInitDataPC.AppendFormat("UrlReg: \"{0}\",", Base.Host.Instance.RegRw);
                    sbStartInitDataPC.AppendFormat("UrlSearch: \"{0}\",", Base.Host.Instance.SearchRw);
-                   sbStartInitDataPC.AppendFormat("Urluhome: \"{0}\",", Base.Host.Instance.UhomeRw);
-                   sbStartInitDataPC.AppendFormat("LogOut: \"{0}\",", Base.Host.Instance.LogOutRw);
+                   sbStartInitDataPC.AppendFormat("Urluhome: \"{0}\",", Base.Host.Instance.UhomeRw); 
+                    sbStartInitDataPC.AppendFormat("LogOut: \"{0}\",", Base.Host.Instance.LogOutRw);
                    sbStartInitDataPC.AppendFormat("DomainName: \"{0}\",",Base.Configs.SysConfigs.ConfigsControl.Instance.DomainName);
                    sbStartInitDataPC.AppendFormat("MobileIndex: \"{0}\",", UrlRules.sMIndexNoPram);
-                     
                     sbStartInitDataPC.AppendFormat("ThemePath: \"{0}\",", CurrentSite.ThemesPath(""));
                     sbStartInitDataPC.AppendFormat("IsShowSql: \"{0}\"", Configs.SysConfigs.ConfigsControl.Instance.IsOpenSql?"1":"0");
-
-                    sbStartInitDataPC.Append("};");
-
                     
-                   EbSite.Core.FSO.FObject.WriteFileUtf8(
-                       HttpContext.Current.Server.MapPath(string.Concat(IISPath, "js/init.js")),
-                       sbStartInitDataPC.ToString());
+                    sbStartInitDataPC.Append("};"); 
+
+                    EbSite.Core.FSO.FObject.WriteFileUtf8(HttpContext.Current.Server.MapPath(string.Concat(IISPath, "js/init.js")),sbStartInitDataPC.ToString());
                      
                    StringBuilder sbStartInitDataMobile = new StringBuilder();
                    sbStartInitDataMobile.Append("var SiteConfigs ={");
@@ -735,23 +726,20 @@ namespace EbSite.Base
                    sbStartInitDataMobile.AppendFormat("UrlSearch: \"{0}\",", Base.Host.Instance.MSearchRw);
                    sbStartInitDataMobile.AppendFormat("Urluhome: \"{0}\",", "");
                    sbStartInitDataMobile.AppendFormat("LogOut: \"{0}\",", Base.Host.Instance.MLogOutRw);
-                   sbStartInitDataMobile.AppendFormat("DomainName: \"{0}\",",
-                       Base.Configs.SysConfigs.ConfigsControl.Instance.DomainName);
+                   sbStartInitDataMobile.AppendFormat("DomainName: \"{0}\",",Base.Configs.SysConfigs.ConfigsControl.Instance.DomainName);
                      
                     sbStartInitDataMobile.AppendFormat("ThemePath: \"{0}\",", CurrentSite.MGetCurrentThemesPath());
                     sbStartInitDataPC.AppendFormat("IsShowSql: \"{0}\"", Configs.SysConfigs.ConfigsControl.Instance.IsOpenSql ? "1" : "0");
 
-                    sbStartInitDataMobile.Append("};");
-                    
+                    sbStartInitDataMobile.Append("};"); 
                     Core.FSO.FObject.WriteFileUtf8(HttpContext.Current.Server.MapPath(string.Concat(IISPath, "js/mobile/init.js")),sbStartInitDataMobile.ToString());
                }
                catch (Exception e)
                {
-                    Log.Factory.GetInstance().ErrorLog(string.Format("初始init.js文件发生错误,当前站点ID:{0},站点名称:{1},站点皮肤：{2}", GetSiteID,
-                       CurrentSite.SiteName, e.Message));
-                    //throw new Exception(string.Format("初始init.js文件发生错误,当前站点ID:{0},站点名称:{1},站点皮肤：{2}", GetSiteID,
-                    //   CurrentSite.SiteName, e.Message));
-               }
+                    string err = string.Format("初始init.js文件发生错误,当前站点ID:{0},站点名称:{1},错误：{2}", GetSiteID,CurrentSite.SiteName, e.Message);
+                    Log.Factory.GetInstance().ErrorLog(err);
+                    throw new Exception(err);
+                }
 
            }
            else
@@ -782,7 +770,20 @@ namespace EbSite.Base
                }
            }
        }
-
+        
+       public static void ChangeSite(string siteid)
+        {
+            if (HttpContext.Current != null)
+            {
+                HttpContext.Current.Session["adminsiteid"] = siteid;
+                //Core.Utils.WriteCookie("adminsiteid", siteid);
+            }
+            else
+            {
+                throw new Exception("切换点击发生错误:HttpContext.Current为 null");
+            }
+                
+        }
 
        public static void LoadPlugins()
        {

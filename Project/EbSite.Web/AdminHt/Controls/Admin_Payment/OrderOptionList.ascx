@@ -7,7 +7,7 @@
         <div class="boxheader">
                 <h3>管理订单选项</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				
                 <XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
                 <XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID" >

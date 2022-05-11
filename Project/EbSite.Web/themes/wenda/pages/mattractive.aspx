@@ -12,7 +12,7 @@
  <!--#include file="header.inc"-->
 
  
-<div class="content" style="width:990px; margin:0 auto">
+<div class="eb-content" style="width:990px; margin:0 auto">
  	
 	
 <!---中间开始--->

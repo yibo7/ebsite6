@@ -8,7 +8,7 @@
         <div class="boxheader">
                 <h3>报表配置</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <div id="PagesMain">
                 <div>
                     <asp:PlaceHolder ID="phTools" runat="server"></asp:PlaceHolder>                  

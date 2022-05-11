@@ -8,7 +8,7 @@
 </head>
 <body style="text-align:center;">
 <div class="usertop">
-    <div class="content" style="width:990px; margin:auto; padding-left:5px;">
+    <div class="eb-content" style="width:990px; margin:auto; padding-left:5px;">
     <div class="fLeft" >        
         <a href="<% =EbSite.Base.Host.Instance.IISPath%>">网站首页</a> | <a>联系我们</a> 
     </div>
@@ -19,12 +19,12 @@
 </div>
 <div style="width:auto; overflow:hidden;" >
 <form id="form1" runat="server">
-<div class="content" style="width:990px; margin:8px auto; overflow:hidden;margin-bottom:10px;">
+<div class="eb-content" style="width:990px; margin:8px auto; overflow:hidden;margin-bottom:10px;">
     <div class="fLeft" >        
         <img height="60"  src="<% =EbSite.Base.Host.Instance.ThemePath%>css/images/smalllogo.gif" />
     </div>
 </div>
-<div class="content" style="width:990px; margin:8px auto;">
+<div class="eb-content" style="width:990px; margin:8px auto;">
     <div class="fLeft" style="width:150px;" >
     
         <div class="u_leftptitile">

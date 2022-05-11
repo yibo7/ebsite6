@@ -6,7 +6,7 @@
 <head id="Head1"    runat="server"></head>
 <body> 
 <!--#include file="header.inc" -->
-    <div class="content">
+    <div class="eb-content">
         <h2> 共搜索到<strong><%=iSearchCount%></strong>条与<strong><%=KeyWord%></strong>相关的数据</h2>
         <div class="w-home-search">
             <form action="<%=EbSite.Base.Host.Instance.MSearchRw %>" method="get">

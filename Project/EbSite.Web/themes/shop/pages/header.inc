@@ -20,7 +20,7 @@
 
 </div>
 
-<div id="top_part3" class="content">
+<div id="top_part3" class="eb-content">
   <div class="container ">
     <a  href="<%=HostApi.GetAllClassHref() %>">
       <div class="bnr_fl">

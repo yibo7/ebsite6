@@ -8,7 +8,7 @@
                 <h3>线程池运行状态</h3>
             目前EbSite线程池只应用在静态页生成,邮件发送当中
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 
                     最大线程数:<%=EbSite.Base.ThreadPoolManager.GetMaxThreadCount()%>
                      &nbsp;&nbsp;&nbsp;&nbsp;

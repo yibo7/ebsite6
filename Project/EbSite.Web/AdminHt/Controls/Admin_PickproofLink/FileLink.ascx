@@ -6,7 +6,7 @@
         <div class="boxheader">
                 <h3>修改文件防盗配置</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
                 <tr>
                     <td>                    

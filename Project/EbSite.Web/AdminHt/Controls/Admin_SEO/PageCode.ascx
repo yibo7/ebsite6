@@ -9,7 +9,7 @@
             <h3>分页设置</h3>
             以下设置只是默认值，如果在模板的分页控件里指定分页数，将会替换掉这里的配置。
         </div>
-        <div class="content">
+        <div class="eb-content">
             <table>
                 <tr>
                     <td>

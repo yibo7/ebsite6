@@ -23,7 +23,7 @@
                       <a href="<%=HostApi.MUccUserInfoRw %>">
                           <img   src="<%=HostApi.AvatarBig(UserID) %>"/>
                             <dt><%=UserNiName%></dt>
-                            <dd class="content">
+                            <dd class="eb-content">
                               帐号:<%=UserName%>
                             </dd>
                             <dd class="source">积分：<%=Credits %>&nbsp;&nbsp;级别:<%=UserLevelName%></dd>

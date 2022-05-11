@@ -9,7 +9,7 @@
 </head>
 <body>
     <!--#include file="header.inc"-->
-    <div class="content">
+    <div class="eb-content">
         <div class="container">
             <div class="commpanel">
                 <div class="o-mt">

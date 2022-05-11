@@ -9,7 +9,7 @@
                 <h3>添加新部件</h3>
             选择以下部件类型,选择部件来源后选择查询，也可以在描述里写点关键词，然后点查询，可以检索不同来源的部件数据 
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XS:ToolBar ID="ucToolBar" runat="server"/>
                 <XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="typename"
                                    

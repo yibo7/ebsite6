@@ -6,7 +6,7 @@
         <div class="boxheader">
                 <h3>支付请求日志</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
                  <table class="table">
         <XS:Repeater ID="rpList" runat="server">

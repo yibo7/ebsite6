@@ -17,7 +17,7 @@
                 <h3>编辑模板</h3>
             模板编辑要小心，确定模板有没有被多个部件使用，修改后将全部覆盖,推荐另外自创一个自定义的部件模板。
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<asp:TextBox ID="txtTem"    TextMode="MultiLine" runat="server"/>
             </div>
     </div>

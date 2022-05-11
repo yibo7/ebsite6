@@ -6,7 +6,7 @@
                 <h3>常规日志</h3>
             此类日志为综合日志，在模块开发里调用的写日志接口写入的日志当归为此类
             </div>
-            <div class="content">
+            <div class="eb-content">
 				
                 <XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
                  <XS:GridView ID="gdList" runat="server"   AutoGenerateColumns="false" DataKeyNames="ID">

@@ -6,7 +6,7 @@
                 <h3>添加/修改菜单</h3>
             只能修改图标与重写目录
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table class="TableList">
                 <tr>
                     <td>

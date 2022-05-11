@@ -6,7 +6,7 @@
         <div class="boxheader">
                 <h3>模型控件分类管理</h3>
             </div>
-            <div class="content">				
+            <div class="eb-content">				
                 <XS:ToolBar ID="ucToolBar" runat="server"/>
                 <XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID">
                     <columns>

@@ -429,7 +429,6 @@ legend {
 .boxheader {
 	width: 100% !important;
 	/*border-bottom: 1px solid #dadada !important;*/
-	padding-bottom: 5px;
 	padding-top: 8px;
 }
  
@@ -554,4 +553,8 @@ legend {
 	border-left: solid 1px #e4e4e4;
 	border-right: solid 1px #e4e4e4;
 	border-bottom: solid 1px #e4e4e4; 
+}
+.eb-content {
+	padding-bottom: 10px;
+	padding-top: 10px;
 }

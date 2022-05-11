@@ -7,7 +7,7 @@
         <div class="boxheader">
                 <h3>配送区域管理</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				            
 <XS:ToolBar ID="ucToolBar" runat="server">
 </XS:ToolBar> 

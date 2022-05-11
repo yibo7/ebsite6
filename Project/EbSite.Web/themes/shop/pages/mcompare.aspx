@@ -14,7 +14,7 @@
         <!--#include file="header.inc" -->
     </div>
     <div style="clear: both;">
-        <div class="content">
+        <div class="eb-content">
             <div class="container">
                 <!--¿ªÊ¼-->
                 <div class="w" id="pcomprare">

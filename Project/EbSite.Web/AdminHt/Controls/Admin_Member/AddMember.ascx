@@ -8,7 +8,7 @@
         <div class="boxheader">
                 <h3>添加会员</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				  <table class="TableList">
                 <tr>
                     <td>

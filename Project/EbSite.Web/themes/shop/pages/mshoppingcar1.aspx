@@ -18,7 +18,7 @@
 <body>
     <div class="gtop">
         <!--#include file="headersmall.inc"-->
-        <div class="content">
+        <div class="eb-content">
             <div class="container">
                 <div class="top2bnr">
                     <li><a href="<%=HostApi.GetMainIndexHref(GetSiteID) %>">
@@ -37,7 +37,7 @@
             </div>
         </div>
     </div>
-    <div class="content">
+    <div class="eb-content">
         <div class="container">
             <div class="glst">
                 <asp:Repeater ID="repShoppingCart" runat="server">

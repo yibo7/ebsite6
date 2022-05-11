@@ -7,7 +7,7 @@
         <div class="boxheader">
                 <h3>后台修改交易密码</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				       
 <asp:PlaceHolder ID="phCtrList" runat="server">
                 <table>

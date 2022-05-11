@@ -31,7 +31,7 @@
                                    <asp:TemplateField HeaderText="<%$Resources:lang,EBOperation %>">
                                          <ItemTemplate>
                                                 
-                                                <a target="_blank" href="<%#GetEditUrl(Eval("id")) %>">编辑模板</a>
+                                                <a class="AdminLinkButton" target="_blank" href="<%#GetEditUrl(Eval("id")) %>">编辑模板</a>
                                                 <XS:EasyuiDialog ID="wbModify" runat="server" Text="修改" Title="修改" />                    
                                                 <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel" Visible='<%#Eval("IsNoSysTem")%>'
                                                     confirm="true" Text="删除"></XS:LinkButton>

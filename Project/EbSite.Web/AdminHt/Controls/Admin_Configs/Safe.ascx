@@ -7,7 +7,7 @@
                 <h3>密码的加密方式</h3>
             修改后会导致现在所有用户无法登录,如果您的网站已经有大量用户，请修改之前做相应处理
             </div>
-            <div class="content">
+            <div class="eb-content">
 				  <XS:RadioButtonList ID="rblPassType" RepeatColumns="2" runat="server" 
                         onselectedindexchanged="rblRequestModel_SelectedIndexChanged">
                         <asp:ListItem Value="0">MD5加密(MD5)</asp:ListItem>
@@ -24,7 +24,7 @@
         <div class="boxheader">
                 <h3>数据库相关</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
                    <tr>
                              <td>
@@ -44,7 +44,7 @@
         <div class="boxheader">
                 <h3>后台管理</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
         <tr>
                  <td>
@@ -74,7 +74,7 @@
         <div class="boxheader">
                 <h3>数据审核</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <table>
                   <tr>
                             <td>
@@ -103,7 +103,7 @@
         <div class="boxheader">
                 <h3>验证码</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
          <tr>
                     <td>
@@ -131,7 +131,7 @@
         <div class="boxheader">
                 <h3>日志开启</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <table>
                        <tr>
                     <td>
@@ -167,7 +167,7 @@
                 <h3>网站密钥</h3>
             修改密钥需要重新登录
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XS:TextBoxVL ID="txtPassKey" IsAllowNull="false" HintInfo="网站需要密码与解密的地方用到的密钥" runat="server" Width="200">KeyEbSite</XS:TextBoxVL>
             </div>
     </div>
@@ -178,7 +178,7 @@
         <div class="boxheader">
                 <h3>Web服务访问安全配置</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
                      <tr>    
               
@@ -206,7 +206,7 @@
                 <h3>发表内容免审核的用户级别</h3>
             在启用了内容审核功能后，某些用户可以不受此功能的限制,按Ctrl可以多选
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<asp:ListBox SelectionMode="Multiple" Width="200" Height="150" ID="lblUserleva1" runat="server"></asp:ListBox>
             </div>
     </div>
@@ -218,7 +218,7 @@
                 <h3>Editbox允许上传文件图片视频的用户级别</h3>
             前台要有使用editbox控件地方，只允许在此范围的用户群才可以上传图片,按Ctrl可以多选
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <asp:ListBox SelectionMode="Multiple" Width="200" Height="150" ID="lblUserleva2" runat="server"></asp:ListBox>
             </div>
     </div>
@@ -229,7 +229,7 @@
                 <h3>互动操作时间隔</h3>
             指发表评论，发表内容，搜索等操作的时间间隔，这里单位为分钟,0为不启用
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XS:TextBoxVL ID="txtPostTimeOut"  IsAllowNull="false" ValidateType="大于等于0整数包括0"  runat="server" Width="50">10</XS:TextBoxVL>分钟
             </div>
     </div>

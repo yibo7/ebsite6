@@ -37,7 +37,7 @@
         <!--#include file="nav.inc" -->
         
     </div>
-    <div style="margin-top: 5px;" class="content">
+    <div style="margin-top: 5px;" class="eb-content">
         <div class="w-home-search">
             <form action="<%=EbSite.Base.Host.Instance.MSearchRw %>" method="get">
             <input type="submit" value=" หั ห๗ " alog-alias="search">

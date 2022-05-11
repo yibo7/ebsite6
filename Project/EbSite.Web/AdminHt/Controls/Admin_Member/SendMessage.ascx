@@ -11,7 +11,7 @@
                 <h3>给用户发送手机短信</h3>
             请确保您已经安装手机短信发送插件，建议安装官方手机短信发送插件
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table class="TableList">
                 <tr>
                     <td>

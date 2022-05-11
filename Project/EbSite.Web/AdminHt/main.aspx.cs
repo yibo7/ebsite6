@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using EbSite.Base;
 using EbSite.Base.Configs.SysConfigs;
 using EbSite.BLL;
 using EbSite.Core;
@@ -38,12 +39,13 @@ namespace EbSite.Web.AdminHt
         {
             if(!string.IsNullOrEmpty(drpSites.SelectedValue))
             {
-                
+
                 //EbSite.BLL.AdminUser md = new AdminUser(base.UserName);
                 //md.CurrentSiteID = int.Parse(drpSites.SelectedValue);
                 //md.Update();
-                Core.Utils.WriteCookie("adminsiteid", drpSites.SelectedValue);
+                //Core.Utils.WriteCookie("adminsiteid", drpSites.SelectedValue);
                 //Session["adminsiteid"] = drpSites.SelectedValue;
+                AppStartInit.ChangeSite(drpSites.SelectedValue);
                 Response.Redirect(Request.RawUrl);
 
             }

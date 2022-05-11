@@ -8,7 +8,7 @@
                 <h3>安装模块</h3>
             目前模块的安装包只支持.rar与.zip两种格式，为方便模块开发，也可以单独加载一个.dll文件，可以从 <a href='http://www.ebsite.net' target=_blank><b>官方模块共享平台</b></a>下载更多安装包！
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <table cellpadding="0"  cellspacing="0">
                 <tr>
                         <td><%=Resources.lang.EBInstallPath %>:</td>

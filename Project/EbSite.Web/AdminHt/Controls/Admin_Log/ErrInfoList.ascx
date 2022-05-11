@@ -7,7 +7,7 @@
                 <h3>错误日志列表</h3>
             您可以通过定向到/err[id].aspx 来访问这个提示页面,其中 id 为记录的ID，如/err1.aspx
             </div>
-            <div class="content">
+            <div class="eb-content">
                 <XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
 				 <XS:GridView ID="gdList" runat="server" AutoGenerateColumns="false" DataKeyNames="ID">
                     <Columns>

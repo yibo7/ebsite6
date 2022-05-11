@@ -11,7 +11,7 @@
     <div id="page">
         <div class="cont">
            <!--#include file="header.inc" -->   
-           <div class="content">
+           <div class="eb-content">
             <div class="container">
                  <div style="margin:5px;padding:5px; width: 100%;text-align: center;">积分兑换</div>
                 <div class="tuanprice w990">

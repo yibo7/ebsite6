@@ -16,7 +16,7 @@
                 <h3>批量添加内容到专题</h3>
             将内容归类到专题有利于seo优化，在您创建好大量专题的而缺少人手添加内容到专题的情况下此功能大有用场,内容表中任何字段下的数据，只要包含或等于某个专题名称时，将其添加到此专题下来
             </div>
-            <div class="content"> 
+            <div class="eb-content"> 
                 <table>
                     <td>
                         <label><%=Resources.lang.EBContFldName%></label>
@@ -48,7 +48,7 @@
                 <h3>批量添加内容到专题（单个操作）</h3>
             将内容归类到专题有利于seo优化，在您创建好大量专题的而缺少人手添加内容到专题的情况下此功能大有用场,内容表中任何字段下的数据，只要包含或等于某个专题名称时，将其添加到此专题下来
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
                     <tr>
                         <td>
@@ -86,7 +86,7 @@
                 <h3>数据初始化</h3>
             此功能非常适用于新采集的数据，或从其他系统导入的数据，分类配置混乱的情况下使用
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<XS:Button ID="bntClassToDefault" runat="server" Confirm="true" Text="<%$Resources:lang,EBInitAllDefualt %>"
                             OnClick="bntClassToDefault_Click" />
                 <div class="mt10">
@@ -103,7 +103,7 @@
                 <h3>专题模板设置-PC电脑版</h3>
             选择专题分类同时修改其下的子专题模板
             </div>
-            <div class="content">
+            <div class="eb-content">
 				
                         <label>内容模板：</label>
                         <XS:DropDownList ID="drpTemPc" Width="200" runat="server">
@@ -126,7 +126,7 @@
                 <h3>专题模板设置-移动设备版</h3>
             选择专题分类同时修改其下的子专题模板
             </div>
-            <div class="content">
+            <div class="eb-content">
 			  <label>内容模板： </label>
                         <XSD:SpecialTempsMobile Width="200" ID="drpTemMobile" runat="server" />
                   <label> 选择专题分类： </label><br />

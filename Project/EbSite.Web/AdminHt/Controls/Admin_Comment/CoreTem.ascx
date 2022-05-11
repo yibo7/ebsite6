@@ -18,7 +18,7 @@
                 <h3>代码调用-Iframe模式</h3>
             根据自身需求，选择以下一种模式，复制代码到内容模板里的相应位置，如果不需要做SEO优化，建议使用Iframe模式，这样性能更佳
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<asp:TextBox ID="txtIframeCore"   TextMode="MultiLine"   runat="server"></asp:TextBox>
             </div>
     </div>
@@ -30,7 +30,7 @@
                 <h3>代码调用-当前代码模式</h3>
             有利于SEO,你可以编辑里面的模板，但带有ID的控件或方法请保留，并且ID名称不能更改
             </div>
-            <div class="content">				
+            <div class="eb-content">				
              <asp:TextBox ID="txtContentCore"   TextMode="MultiLine"   runat="server"></asp:TextBox>
             </div>
     </div>

@@ -13,7 +13,7 @@
        
         <%=GetNav("-", true)%>
     </div>
-    <div class="content" style="width: 990px; margin: 8px auto;">
+    <div class="eb-content" style="width: 990px; margin: 8px auto;">
         <div class="c_left">
             <h2 style="text-align: center"><%=Model.NewsTitle %></h2>
             <br /><br />

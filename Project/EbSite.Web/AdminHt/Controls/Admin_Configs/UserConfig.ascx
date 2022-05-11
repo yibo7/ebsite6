@@ -7,7 +7,7 @@
         <div class="boxheader">
                 <h3>用户相关的配置</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table>
                 <tr>
                     <td>

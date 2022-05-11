@@ -47,7 +47,7 @@
             <div class="boxheader">
                 <h3><i class="icon-spinner4 spinner"></i>系统运行状况</h3>
             </div>
-            <div class="content"> 
+            <div class="eb-content"> 
                 <asp:Label runat="server" ID="lbLastErr"></asp:Label>
             </div>
         </div>

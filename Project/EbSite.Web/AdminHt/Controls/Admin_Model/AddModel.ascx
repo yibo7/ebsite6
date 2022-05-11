@@ -10,7 +10,7 @@
         <div class="boxheader">
                 <h3>模型编辑</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				<table style="width: 100%">
                 <tr>
                     <td>

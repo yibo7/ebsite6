@@ -22,7 +22,7 @@
         <div class="boxheader">
                 <h3>模板名称</h3>
             </div>
-            <div class="content"> 
+            <div class="eb-content"> 
 		        <XS:TextBox ID="txtClassTitle" Width="200" runat="server"></XS:TextBox>
             </div>
     </div>
@@ -35,7 +35,7 @@
         <div class="boxheader">
                 <h3>编辑模板（列表+表头）</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 			    <div class="container-fluid mt10">
 	            <div class="row-fluid"> 
                         <ul class="nav nav-tabs">

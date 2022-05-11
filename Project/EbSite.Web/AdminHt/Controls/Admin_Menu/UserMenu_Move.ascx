@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-sm-12 col-md-12 ">
       
-            <div class="content">
+            <div class="eb-content">
 				<table cellspacing="0" cellpadding="4" width="100%" align="center">
                 <tr>
                     <td  style=" vertical-align:top" align="left" width="50%">

@@ -8,7 +8,7 @@
         <div class="boxheader">
                 <h3>计划任务(作业调度)管理</h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				
                 <XS:ToolBar ID="ucToolBar" runat="server"></XS:ToolBar>
                 <XS:GridView ID="gdList" runat="server"   AutoGenerateColumns="false" DataKeyNames="id">
@@ -51,7 +51,7 @@
                                     <XS:LinkButton ID="lbDelete" Visible='<%#Eval("IsNoSys") %>' runat="server" CommandArgument='<%#Eval("id") %>' CommandName="DeleteModel"  Text="删除"></XS:LinkButton>
                                     
                                     <XS:LinkButton ID="lbstop"  runat="server" CommandArgument='<%#Eval("id") %>' confirm="True"   CommandName="stop"  Text='<%#Equals(Eval("Status"),1)?"停止任务":"开启任务" %>'></XS:LinkButton> 
-                                    <a href='?t=2&id=<%#Eval("id") %>'>查看</a>
+                                    <a class="AdminLinkButton" href='?t=2&id=<%#Eval("id") %>'>查看</a>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                <asp:TemplateField ItemStyle-Width="30" HeaderText="<input id='chAll' onclick='on_check(this)'  type=checkbox />">

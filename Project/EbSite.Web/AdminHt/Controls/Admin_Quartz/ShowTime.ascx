@@ -5,7 +5,7 @@
         <div class="boxheader">
                 <h3>任务:<%=Model.TaskName %></h3>
             </div>
-            <div class="content">
+            <div class="eb-content">
 				 <div>
                创建时间:<%=Model.CreatedTime %>
             </div>
