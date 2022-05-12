@@ -549,15 +549,15 @@ namespace EbSite.BLL
             string sWhere = string.Format("ID IN(SELECT DISTINCT SpecialClassID  FROM {0}specialnews WHERE classid={1})", Base.Configs.BaseCinfigs.ConfigsControl.Instance.TablePrefix, ID);
             if (DataType == 1)
             {
-                sWhere = " AND TitleType<>''";
+                sWhere = string.Concat(sWhere, " AND TitleType<>'' ");
             }
             else if (DataType == 2)
             {
-                sWhere = " AND Info<>''";
+                sWhere = string.Concat(sWhere, " AND Info<>' '");
             }
             else if (DataType == 3)
             {
-                sWhere = " AND Info<>'' AND TitleType<>''";
+                sWhere = string.Concat(sWhere, " AND Info<>'' AND TitleType<>'' ");
             }
              
 
@@ -571,6 +571,8 @@ namespace EbSite.BLL
             {
                 sOrderBy = "orderid asc";
             }
+
+            //Log.Factory.GetInstance().InfoLog(sWhere);
 
             return DbProviderCms.GetInstance().SpecialClass_GetListArray(sWhere, iTop, sOrderBy, SiteID);
         }

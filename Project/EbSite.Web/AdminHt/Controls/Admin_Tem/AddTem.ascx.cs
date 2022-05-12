@@ -222,6 +222,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Tem
 
 
             }
+            Core.Utils.AppRestart();
             //base.ColseGreyBox(true);
         }
         private string Tem_HTML = "<%@ Page Language=\"C#\" AutoEventWireup=\"true\" Inherits=\"EbSite.Web.Pages.index\" %>\n\t<%@ Register Assembly=\"EbSite.Control\" Namespace=\"EbSite.Control\" TagPrefix=\"XS\" %>\n\t<%@ Import Namespace=\"EbSite.BLL.GetLink\"%>\n\t<%@ Register Assembly=\"EbSite.Control\" Namespace=\"EbSite.Control.xsPage\" TagPrefix=\"cc1\" %>\n\t<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n\t<html xmlns=\"http://www.w3.org/1999/xhtml\">\n\t<head runat=\"server\">\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=EmulateIE7\"/>\n\t</head>\n\t<body >\n\t\n\t内容\n\t\n\t<%=KeepUserState()%>\n\t</body>\n\t</html>";

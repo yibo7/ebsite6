@@ -77,7 +77,7 @@ namespace EbSite.Widgets.SpecialDh
                             if(ContentId>0)
                              rpSubSpecial.DataSource = BLL.SpecialClass.GetListByContentId(ContentId, cid, iDataType, iOrderBy, iTop,GetSiteID);
                         }
-                        else if (sType.Trim() == "-1")//自动适应专题ID //把所有专题都属于这个分类的给查出来 RelateClassIDs
+                        else if (sType.Trim() == "-1")//自动适应分类ID //把所有专题都属于这个分类的给查出来 RelateClassIDs
                         {
                             rpSubSpecial.DataSource = BLL.SpecialClass.GetListInAutoClassId(cid, iDataType, iOrderBy, iTop, GetSiteID);
                         }

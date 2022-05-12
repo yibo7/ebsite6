@@ -159,6 +159,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Model
                 bllModel.Save();
 
             }
+            Core.Utils.AppRestart();
             //base.ColseGreyBox(true);
         }
         /// <summary>

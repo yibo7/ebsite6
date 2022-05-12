@@ -501,6 +501,8 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\lostpassword.js" />
     <Content Include="js\plugin\blockui.min.js" />
+    <Content Include="js\plugin\infinitescroll\css.css" />
+    <Content Include="js\plugin\infinitescroll\js.js" />
     <Content Include="js\plugin\jquery-migrate-1.2.1.min.js" />
     <Content Include="js\tinybox\images\close.png" />
     <Content Include="js\tinybox\images\preload.gif" />
@@ -1541,7 +1543,6 @@
     <Content Include="js\plugin\CodeMirror\theme\neat.css" />
     <Content Include="js\plugin\CodeMirror\theme\night.css" />
     <Content Include="js\plugin\jquery.easing.js" />
-    <Content Include="js\plugin\jquery.infinitescroll.js" />
     <Content Include="js\plugin\jquery.isotope.js" />
     <Content Include="js\plugin\jquery.masonry.min.js" />
     <Content Include="js\plugin\jquery.scroll.js" />

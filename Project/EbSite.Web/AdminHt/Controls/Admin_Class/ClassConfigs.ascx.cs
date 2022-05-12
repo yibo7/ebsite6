@@ -145,8 +145,10 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
             {
                 EbSite.BLL.ClassConfigs.Instance.Add(Model);
             }
-            
+            Core.Utils.AppRestart();
             Response.Redirect(Request.RawUrl);
+
+            
         }
         override protected void InitDivsteptips()
         {

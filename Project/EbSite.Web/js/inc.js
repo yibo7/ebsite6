@@ -39,7 +39,8 @@ In.add('jqimpromptu', { path: SiteConfigs.UrlIISPath + 'js/plugin/impromptu.js',
 //轻量瀑布流插件 是isotope的简化版
 In.add('jqmasonry', { path: SiteConfigs.UrlIISPath + 'js/plugin/jquery.masonry.min.js', type: 'js', charset: 'utf-8' });
 //无刷新 无限加载 一般用来配合jqmasonry使用
-In.add('infinitescroll', { path: SiteConfigs.UrlIISPath + 'js/plugin/jquery.infinitescroll.js', type: 'js', charset: 'utf-8' });
+In.add('infinitescrollcss', { path: SiteConfigs.UrlIISPath + 'js/plugin/infinitescroll/css.css' });
+In.add('infinitescroll', { path: SiteConfigs.UrlIISPath + 'js/plugin/infinitescroll/js.js', type: 'js', charset: 'utf-8', rely: ['infinitescrollcss'] });
 
 //一个 jQuery 用来实现捕获各种滚动事件的插件，例如实现无翻页的内容浏览，或者固定某个元素不让滚动等等。支持主流浏览器版本
 In.add('jqwaypoints', { path: SiteConfigs.UrlIISPath + 'js/plugin/waypoints.min.js', type: 'js', charset: 'utf-8' });
