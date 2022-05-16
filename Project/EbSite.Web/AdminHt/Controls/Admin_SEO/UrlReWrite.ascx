@@ -11,13 +11,13 @@
 	<div class="row-fluid"> 
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a href="#tg1" class="nav-link active" data-toggle="tab" >
+                <a href="#tg1" class="nav-link active" data-bs-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-laptop"></i></span>
                     <span class="hidden-xs">PC版</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#tg2" class="nav-link" data-toggle="tab" >
+                <a href="#tg2" class="nav-link" data-bs-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-tablet"></i></span>
                     <span class="hidden-xs">手机版</span>
                 </a>

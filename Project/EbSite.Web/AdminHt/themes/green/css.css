@@ -23,6 +23,14 @@ body
 	color:#000000;
 	background:#F6F6F6 !important;
 }
+li {
+	list-style: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
 
 /*让图标360旋转*/
 @keyframes rotating{

@@ -53,7 +53,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" >复制链接代码</h5>
-        <button type="button" class="close" data-dismiss="modal" >
+        <button type="button" class="close" data-bs-dismiss="modal" >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -64,7 +64,7 @@
             </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button> 
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button> 
       </div>
     </div>
   </div>

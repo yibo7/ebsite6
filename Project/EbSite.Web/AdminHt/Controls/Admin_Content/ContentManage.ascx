@@ -90,7 +90,7 @@
     <div class="modal-dialog" style="width: 350px;">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title" id="myModalLabel">生成静态页面</h4>
             </div>
             <div style="height: 100px;" class="modal-body">
@@ -119,7 +119,7 @@
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal">关闭</button>
                 <button type="button" class="btn btn-primary">生成(html静态页)</button>
             </div>
         </div>
@@ -130,14 +130,14 @@
     <div class="modal-dialog" style="width: 500px;">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title" id="myModalLabel">生成静态页面</h4>
             </div>
             <div style="height: 300px;" class="modal-body">
                 没有扩展高级搜索
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal">关闭</button>
                 <button type="button" class="btn btn-primary">搜索</button>
             </div>
         </div>

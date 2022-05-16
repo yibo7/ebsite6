@@ -11,13 +11,13 @@
 	<div class="row-fluid"> 
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a href="#tg1" class="nav-link active" data-toggle="tab" >
+                <a href="#tg1" class="nav-link active" data-bs-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">添加/编辑用户组</span>
                 </a>
             </li>
-            <li class="tanav-item">
-                <a href="#tg2" class="nav-link" data-toggle="tab" >
+            <li class="nav-item">
+                <a href="#tg2" class="nav-link" data-bs-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">高级选项</span>
                 </a>

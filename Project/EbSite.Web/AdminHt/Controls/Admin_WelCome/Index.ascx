@@ -34,7 +34,7 @@
     <div  class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">添加菜单</h5>
-        <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close" data-bs-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
       </div>
       <div  class="modal-body">
                 <form class="form-inline">
@@ -50,7 +50,7 @@
                 </form>
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button> 
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button> 
           <XS:Button ID="btnAddMenuAdd" Text="添加菜单" class="btn btn-primary" runat="server" OnClick="btnAddMenu_Add"></XS:Button>        
       </div>
     </div>

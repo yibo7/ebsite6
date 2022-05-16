@@ -8,7 +8,7 @@
     <div class="col-lg-12">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="active nav-link" href="#tg1" data-toggle="tab" aria-expanded="false">
+                <a class="active nav-link" href="#tg1" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">后台菜单权限</span>
                 </a>

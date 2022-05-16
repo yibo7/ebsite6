@@ -40,13 +40,13 @@
 	            <div class="row-fluid"> 
                         <ul class="nav nav-tabs">
                             <li class="active tab">
-                                <a href="#tg1" data-toggle="tab" aria-expanded="false">
+                                <a href="#tg1" data-bs-toggle="tab" aria-expanded="false">
                                     <span class="visible-xs"><i class="fa fa-navicon"></i></span>
                                     <span class="hidden-xs">列表模板</span>
                                 </a>
                             </li>
                             <li class="tab">
-                                <a href="#tg2" data-toggle="tab" aria-expanded="false">
+                                <a href="#tg2" data-bs-toggle="tab" aria-expanded="false">
                                     <span class="visible-xs"><i class="fa fa-server"></i></span>
                                     <span class="hidden-xs">表头模板</span>
                                 </a>
@@ -83,7 +83,7 @@
     });
 
     var editor2 = null;
-    $('a[data-toggle="tab"]')
+    $('a[data-bs-toggle="tab"]')
         .on('shown.bs.tab',
             function (e) {
                 //e.target // 激活的标签页

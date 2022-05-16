@@ -4,13 +4,13 @@
     <div class="col-lg-12">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="active nav-link" href="#tg1" data-toggle="tab">
+                <a class="active nav-link" href="#tg1" data-bs-toggle="tab">
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">模块信息</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#tg2" data-toggle="tab">
+                <a class="nav-link" href="#tg2" data-bs-toggle="tab">
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">配置选项</span>
                 </a>

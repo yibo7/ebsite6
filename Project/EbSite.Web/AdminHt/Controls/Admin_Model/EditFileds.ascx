@@ -86,16 +86,16 @@
     <div class="modal-dialog" style="width: 800px;">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title" id="myModalLabel">添加字段</h4>
             </div>
             <div style="height: 500px;" class="modal-body">
                 <ul id="myTab" class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#tg1" data-toggle="tab">字段参数
+                        <a class="nav-link active" href="#tg1" data-bs-toggle="tab">字段参数
                         </a>
                     </li>
-                    <li class="nav-item"><a  class="nav-link" href="#tg2" data-toggle="tab">其他参数</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="#tg2" data-bs-toggle="tab">其他参数</a></li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane active" id="tg1">
@@ -172,7 +172,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal">关闭</button>
                 <button type="button" onclick="OnSaveFileds()" class="btn btn-primary">提交更改</button>
             </div>
         </div>

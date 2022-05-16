@@ -7,31 +7,31 @@
 	<div class="row-fluid"> 
         <ul class="nav nav-tabs">
             <li class="active nav-item">
-                <a class="nav-link active" href="#tg1" data-toggle="tab" >
+                <a class="nav-link active" href="#tg1" data-bs-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-cogs"></i></span>
                     <span class="hidden-xs">基础配置</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#tg2" data-toggle="tab" >
+                <a class="nav-link" href="#tg2" data-bs-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-tachometer"></i></span>
                     <span class="hidden-xs">性能相关的配置</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#tg3" data-toggle="tab">
+                <a class="nav-link" href="#tg3" data-bs-toggle="tab">
                     <span class="visible-xs"><i class="fa fa-group"></i></span>
                     <span class="hidden-xs">与开发者相关的配置</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#tg4" data-toggle="tab" >
+                <a class="nav-link" href="#tg4" data-bs-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-group"></i></span>
                     <span class="hidden-xs">手机短信配置</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#tg5" data-toggle="tab" >
+                <a class="nav-link" href="#tg5" data-bs-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-group"></i></span>
                     <span class="hidden-xs">文件服务器</span>
                 </a>

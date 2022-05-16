@@ -10,7 +10,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#tg2" data-toggle="tab" aria-expanded="false">
+                <a class="nav-link active" href="#tg2" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">用户中心菜单</span>
                 </a>
@@ -75,7 +75,7 @@
                 <!--窗体内容-->
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal">关闭</button>
             </div>
         </div>
     </div>

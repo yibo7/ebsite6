@@ -325,13 +325,13 @@ function OpenIframe(sUrl, sTitle, btnText) {
     sbHtml.Append("<div class='modal-content'>");
     sbHtml.Append("<div class='modal-header'>");
     sbHtml.Append("<h5 class='modal-title'>{0}</h5>");
-    sbHtml.Append("<button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'>&times;</span></button> ");
+    sbHtml.Append("<button type='button' class='btn-close' data-bs-dismiss='modal'></button> ");
     sbHtml.Append("</div>");
     sbHtml.Append("<div style='height:{3}px' class='modal-body'>");
     sbHtml.Append("<iframe id='flOpenIframe' src='{1}' width='100%' height='100%' frameborder='0'></iframe>");
     sbHtml.Append("</div>");
     sbHtml.Append("<div class='modal-footer'>");
-    sbHtml.Append("<button type='button' class='btn btn-default' data-dismiss='modal'>关闭</button>");
+    sbHtml.Append("<button type='button' class='btn btn-default' data-bs-dismiss='modal'>关闭</button>");
     if (btnText != "")
         sbHtml.Append("<button type='button'  class='btn btn-primary'>{2}</button>");
     sbHtml.Append("</div></div></div></div> ");

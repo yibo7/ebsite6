@@ -40,6 +40,7 @@ namespace EbSite.Web.AdminHt.Controls.Admin_Class
             var modelClass = BLL.NewsClass.GetModelByCache(classId);
             modelClass.ConfigId = selConfigId;
             BLL.NewsClass.Update(modelClass);
+            Core.Utils.AppRestart();
             //Response.Redirect(Request.RawUrl);
         }
          

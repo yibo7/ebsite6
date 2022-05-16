@@ -11,7 +11,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#tg2" data-toggle="tab" aria-expanded="false">
+                <a class="nav-link active" href="#tg2" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-user"></i></span>
                     <span class="hidden-xs">用户中心菜单权限</span>
                 </a>

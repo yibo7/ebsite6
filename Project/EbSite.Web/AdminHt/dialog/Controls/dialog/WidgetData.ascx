@@ -7,10 +7,10 @@
         <div class="card-box">
             <ul id="myTab" class="nav nav-tabs">
                 <li class="nav-item ">
-                    <a class="nav-link active" href="#tg1" data-toggle="tab">部件类别检索(所有)</a>
+                    <a class="nav-link active" href="#tg1" data-bs-toggle="tab">部件类别检索(所有)</a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#tg2" data-toggle="tab">当前站点下的模块部件</a></li>
-                <li class="nav-item"><a class="nav-link" href="#tg3" data-toggle="tab">当前站点部件</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tg2" data-bs-toggle="tab">当前站点下的模块部件</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tg3" data-bs-toggle="tab">当前站点部件</a></li>
             </ul>
             <div class="tab-content">
                 <div id="tg1" class="tab-pane active">

@@ -77,7 +77,7 @@ namespace EbSite.Base.Page
             //AddJavaScriptInclude(string.Concat(AdminPath, "themes/Ubold/js/jquery.min.js"));
 
             AddJavaScriptInclude(string.Concat(IISPath, "js/jquery.js"));
-            AddJavaScriptInclude(string.Concat(IISPath, "js/bootstrap.min.js"));
+            AddJavaScriptInclude(string.Concat(IISPath, "js/bootstrap/5/js/bootstrap.bundle.min.js"));
             AddJavaScriptInclude(string.Concat(IISPath, "js/init.js"));
             AddJavaScriptInclude(string.Concat(IISPath, "js/inc.js"));
             AddJavaScriptInclude(string.Concat(IISPath, "js/comm.js"));
@@ -172,7 +172,7 @@ namespace EbSite.Base.Page
             //AddStylesheetInclude(string.Concat(AppStartInit.AdminPath, "themes/Ubold/css/responsive.css"));
 
             //添加全局样式
-            AddStylesheetInclude(string.Concat(IISPath, "themes/bootstrap.min.css"));
+            AddStylesheetInclude(string.Concat(IISPath, "js/bootstrap/5/css/bootstrap.min.css"));
             if (!string.IsNullOrEmpty(CurrentSite.AdminTheme))
             {
                 //AddStylesheetInclude(string.Concat(AppStartInit.AdminPath, "themes/base.css"));

@@ -33,25 +33,25 @@
 	<div class="row-fluid"> 
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" href="#tg1" data-toggle="tab" aria-expanded="false">
+                <a class="nav-link active" href="#tg1" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa  fa-file-word-o"></i></span>
                     <span class="hidden-xs">编辑内容</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#tg2" data-toggle="tab" aria-expanded="false">
+                <a class="nav-link" href="#tg2" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-gear"></i></span>
                     <span class="hidden-xs">初始设置</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#tg3" data-toggle="tab" aria-expanded="false">
+                <a class="nav-link" href="#tg3" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-gears"></i></span>
                     <span class="hidden-xs">相关设置</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#tg4" data-toggle="tab" aria-expanded="false">
+                <a class="nav-link" href="#tg4" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-magic"></i></span>
                     <span class="hidden-xs">扩展功能</span>
                 </a>

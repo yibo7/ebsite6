@@ -7,7 +7,7 @@
                 <XS:Repeater ID="RepUserModel" runat="server">
                     <ItemTemplate>
                         <li class="nav-item" >
-                            <a class="nav-link <%#Equals( Container.ItemIndex+1,1)?"active":"" %>" href="#tg<%#Container.ItemIndex+1 %>" data-toggle="tab"><%#Eval("ModelName")%></a>
+                            <a class="nav-link <%#Equals( Container.ItemIndex+1,1)?"active":"" %>" href="#tg<%#Container.ItemIndex+1 %>" data-bs-toggle="tab"><%#Eval("ModelName")%></a>
                         </li>
                     </ItemTemplate>
                 </XS:Repeater>

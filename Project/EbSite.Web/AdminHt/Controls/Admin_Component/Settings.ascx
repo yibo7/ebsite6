@@ -7,13 +7,13 @@
 
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#tg1">
+                <a class="nav-link active" data-bs-toggle="tab" href="#tg1">
                     <span class="visible-xs"><i class="fa fa-edit"></i></span>
                     <span class="hidden-xs">参数设置</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tg2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tg2">
                     <span class="visible-xs"><i class="fa fa-database"></i></span>
                     <span class="hidden-xs">数据</span>
                 </a>

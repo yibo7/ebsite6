@@ -11,38 +11,38 @@
 	<div class="row-fluid"> 
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a href="#tg1" class="nav-link active" data-toggle="tab" aria-expanded="false">
+                <a href="#tg1" class="nav-link active" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="bi bi-home"></i></span>
                     <span class="hidden-xs">首页关键词</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#tg2" class="nav-link" data-toggle="tab" aria-expanded="false">
+                <a href="#tg2" class="nav-link" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-sitemap"></i></span>
                     <span class="hidden-xs">分类页关键词</span>
                 </a>
             </li> 
              <li class="nav-item">
-                <a href="#tg3" class="nav-link" data-toggle="tab" aria-expanded="false">
+                <a href="#tg3" class="nav-link" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-image"></i></span>
                     <span class="hidden-xs">专题页关键词</span>
                 </a>
             </li> 
             
              <li class="nav-item">
-                <a href="#tg4" class="nav-link" data-toggle="tab" aria-expanded="false">
+                <a href="#tg4" class="nav-link" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-book"></i></span>
                     <span class="hidden-xs">内容页关键词</span>
                 </a>
             </li> 
              <li class="nav-item">
-                <a href="#tg5" class="nav-link" data-toggle="tab" aria-expanded="false">
+                <a href="#tg5" class="nav-link" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-tags"></i></span>
                     <span class="hidden-xs">标签大全页关键词</span>
                 </a>
             </li> 
              <li class="nav-item">
-                <a href="#tg6" class="nav-link" data-toggle="tab" aria-expanded="false">
+                <a href="#tg6" class="nav-link" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-tag"></i></span>
                     <span class="hidden-xs">标签内容页关键词</span>
                 </a>

@@ -495,10 +495,10 @@
     <Content Include="contentmobile.aspx" />
     <Content Include="ddd.aspx" />
     <Content Include="errapp.aspx" />
+    <Content Include="favicon.ico" />
     <Content Include="images\kuaidi\kuaidi.css" />
     <Content Include="images\outlink.gif" />
     <Content Include="Jobs\EbSite.Jobs.dll" />
-    <Content Include="js\bootstrap.min.js" />
     <Content Include="js\lostpassword.js" />
     <Content Include="js\plugin\blockui.min.js" />
     <Content Include="js\plugin\infinitescroll\css.css" />
@@ -766,7 +766,6 @@
     <Content Include="themes\bbs\mvc\Shared\_Layout.cshtml" />
     <Content Include="themes\bbs\mvc\Web.config" />
     <Content Include="themes\bbs\mvc\_ViewStart.cshtml" />
-    <Content Include="themes\bootstrap.min.css" />
     <Content Include="themes\ebsite\css\images\logo.gif" />
     <Content Include="themes\ebsite\css\images\smalllogo.gif" />
     <Content Include="themes\ebsite\css\images\topbg2.png" />

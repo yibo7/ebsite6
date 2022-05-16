@@ -13,19 +13,19 @@
 	<div class="row-fluid"> 
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a href="#tg1" class="nav-link active" data-toggle="tab" >
+                <a href="#tg1" class="nav-link active" data-bs-toggle="tab" >
                     <span class="visible-xs"><i class="fa fa-database"></i></span>
                     <span class="hidden-xs">基本数据</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#tg2" data-toggle="tab" class="nav-link">
+                <a href="#tg2" data-bs-toggle="tab" class="nav-link">
                     <span class="visible-xs"><i class="fa fa-paw"></i></span>
                     <span class="hidden-xs">SEO优化设置</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#tg3" data-toggle="tab" aria-expanded="false" class="nav-link">
+                <a href="#tg3" data-bs-toggle="tab" aria-expanded="false" class="nav-link">
                     <span class="visible-xs"><i class="fa fa-qrcode"></i></span>
                     <span class="hidden-xs">可选设置</span>
                 </a>

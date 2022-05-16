@@ -8,13 +8,13 @@
 	<div class="row-fluid"> 
         <ul class="nav nav-tabs">
             <li class="active nav-item">
-                <a href="#tg1" class="nav-link active" data-toggle="tab" aria-expanded="false">
+                <a href="#tg1" class="nav-link active" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-sitemap"></i></span>
                     <span class="hidden-xs">网站地图更新设置</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#tg2" class="nav-link" data-toggle="tab" aria-expanded="false">
+                <a href="#tg2" class="nav-link" data-bs-toggle="tab" aria-expanded="false">
                     <span class="visible-xs"><i class="fa fa-square-o"></i></span>
                     <span class="hidden-xs">robots管理</span>
                 </a>
