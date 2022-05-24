@@ -58,9 +58,9 @@
                                         <%#GetCtrName(Eval("FieldControlTypeID"))%>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="<%$Resources:lang,EBOperation %>" ItemStyle-Width="80">
+                                <asp:TemplateField HeaderText="<%$Resources:lang,EBOperation %>" >
                                     <ItemTemplate>
-                                        <a onclick="ModifyFileds('<%#Eval("ColumFiledName")%>','<%#Eval("ColumShowName")%>','<%#Eval("FieldControlTypeID")%>','<%#Eval("IsShowUser")%>','<%#Eval("PlaceHolderID")%>','<%#Eval("IsOutFiled")%>','<%#Eval("IsReadOnly")%>','<%#Eval("DataTypeLen")%>','<%#Eval("DataType")%>')" href="#">修改</a>
+                                        <a class="AdminLinkButton" onclick="ModifyFileds('<%#Eval("ColumFiledName")%>','<%#Eval("ColumShowName")%>','<%#Eval("FieldControlTypeID")%>','<%#Eval("IsShowUser")%>','<%#Eval("PlaceHolderID")%>','<%#Eval("IsOutFiled")%>','<%#Eval("IsReadOnly")%>','<%#Eval("DataTypeLen")%>','<%#Eval("DataType")%>')" href="#">修改</a>
                                         <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("ColumFiledName") %>' CommandName="DeleteModel" confirm="true" Text="删除"></XS:LinkButton>
                                     </ItemTemplate>
                                 </asp:TemplateField>
@@ -83,11 +83,11 @@
 </div>
 
 <div class="modal" id="mdeditefi" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog" style="width: 800px;">
+    <div class="modal-dialog modal-lg" >
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">添加字段</h4>
+            <div class="modal-header"> 
+                <h5 class="modal-title" id="myModalLabel">添加字段</h5>
+                <button type='button' class='btn-close' data-bs-dismiss='modal'></button>
             </div>
             <div style="height: 500px;" class="modal-body">
                 <ul id="myTab" class="nav nav-tabs">

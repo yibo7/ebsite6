@@ -44,7 +44,7 @@
                             <asp:TemplateField HeaderText="操作">
                                 <ItemTemplate>
 
-                                    <XS:EasyuiDialog ID="WinBox8" SaveText="保存菜单配置" IsDialog="true" Width="500" runat="server" Href='<%# string.Concat("?t=14&id=",Eval("id"),"&mid=",GetModuleID,"&ctrPath=",Eval("FileName"))%>'
+                                    <XS:EasyuiDialog ID="WinBox8" SaveText="保存菜单配置"  IsDialog="true" Width="500" runat="server" Href='<%# string.Concat("?t=14&id=",Eval("id"),"&mid=",GetModuleID,"&ctrPath=",Eval("FileName"))%>'
                                         Text="加入到主菜单" Title="加入到主菜单" />
 
                                     <XS:LinkButton ID="lbRemove" runat="server" CommandArgument='<%#Eval("id") %>' CommandName="RemoveModel"

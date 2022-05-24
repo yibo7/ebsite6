@@ -36,15 +36,11 @@
     }
     #vista_toolbar li input {
        border:1px solid #E6E6E6;
-       height:35px;
-       line-height:35px;
         margin-top:1px;
     }
     #vista_toolbar li select {
        border:1px solid #E6E6E6;
        margin-top:1px;
-       height:35px;
-       line-height:35px;
     }
 
     /*#vista_toolbar a {

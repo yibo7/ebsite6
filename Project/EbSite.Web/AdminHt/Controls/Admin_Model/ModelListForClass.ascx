@@ -21,7 +21,7 @@
                             <XS:LinkButton ID="lbDelete" runat="server" CommandArgument='<%#Eval("id") %>' Visible='<%#!bool.Parse(Eval("IsSystem").ToString()) %>' CommandName="DeleteModel"
                                 confirm="true" Text="删除"></XS:LinkButton>
                             <a class="AdminLinkButton" href="<%#GetEditFiledUrl(Eval("id")) %>">编辑字段</a>
-                            <XS:EasyuiDialog ID="edOrder" runat="server" Href='<%#GetOrderUrl(Eval("id")) %>' SaveText="保存排序设置" Text="字段排序" Title="分类字段排序" />
+                            <XS:EasyuiDialog ID="edOrder" runat="server" Href='<%#GetOrderUrl(Eval("id")) %>' SaveText="保存排序设置" IsDialog="true" Text="字段排序" Title="分类字段排序" />
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField ItemStyle-Width="30" HeaderText="<input id='chAll' onclick='on_check(this)'  type=checkbox />">

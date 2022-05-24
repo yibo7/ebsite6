@@ -46,7 +46,7 @@
         EBIntegrationLowerL%>" />
                             <asp:TemplateField HeaderText="操作">
                                 <ItemTemplate>
-                                    <XS:EasyuiDialog ID="EasyuiDialog1" runat="server" SaveText="保存权限配置" Href='<%# string.Format("?t=24&mid={0}&rid={1}&name={2}",GetModuleID,Eval("id"),Eval("GroupName"))%>'
+                                    <XS:EasyuiDialog ID="EasyuiDialog1" runat="server" IsDialog="true" SaveText="保存权限配置" Href='<%# string.Format("?t=24&mid={0}&rid={1}&name={2}",GetModuleID,Eval("id"),Eval("GroupName"))%>'
                                         Text="分配权限" Title="分配权限" />
 
                                 </ItemTemplate>

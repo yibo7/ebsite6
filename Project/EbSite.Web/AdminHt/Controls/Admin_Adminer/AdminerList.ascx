@@ -29,8 +29,8 @@
         <asp:TemplateField HeaderText="<%$Resources:lang,EBUserOperation %>">
                     <ItemTemplate>
                            
-                          <XS:EasyuiDialog ID="WinBox2" runat="server" SaveText="保存"  Href='<%# string.Concat("?t=6&id=",Eval("UserID"))%>' Text="查看权限" Title="查看权限" />
-                          <XS:EasyuiDialog ID="EasyuiDialog1" runat="server" SaveText="保存" Href='<%# string.Concat("?t=2&uid=",Eval("UserName"))%>' Text="分配角色" Title="分配角色" />                             
+                          <XS:EasyuiDialog ID="WinBox2" runat="server" SaveText="保存" IsDialog="true"  Href='<%# string.Concat("?t=6&id=",Eval("UserID"))%>' Text="查看权限" Title="查看权限" />
+                          <XS:EasyuiDialog ID="EasyuiDialog1" runat="server" SaveText="保存"  Href='<%# string.Concat("?t=2&uid=",Eval("UserName"))%>' Text="分配角色" Title="分配角色" />                             
                     <XS:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("UserName") %>' CommandName="DeleteModel" confirm="true" Text="删除"></XS:LinkButton>
                     </ItemTemplate>
         </asp:TemplateField>
