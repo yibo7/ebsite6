@@ -79,12 +79,13 @@
         <div class="datalist">
              <XS:Widget ID="Widget4" WidgetName="排行数据-总排行"  WidgetID="c825775f-5a4b-45b4-8556-2edb65fc1000" runat="server"/>
         </div>
+        
          <div class="usr-title">
              最新注册
            
          </div>
-        <div class="usr-list">
-                          <XS:Widget ID="Widget5" WidgetName="最新注册用户"  WidgetID="db1da758-1a2c-4d48-91a7-d1a9e8e55070" runat="server"/>
+        <div>
+    <XS:Widget ID="Widget5" WidgetName="最新注册用户"  WidgetID="db1da758-1a2c-4d48-91a7-d1a9e8e55070" runat="server"/>
         </div>
         <div class="title"><a href="<%=HostApi.TagsList(1,GetSiteID) %>">热门标签</a>>></div>
         <div class="datalisttag">
